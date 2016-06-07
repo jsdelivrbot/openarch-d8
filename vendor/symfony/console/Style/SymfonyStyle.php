@@ -12,12 +12,12 @@
 namespace Symfony\Component\Console\Style;
 
 use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Exception\RuntimeException;
 use Symfony\Component\Console\Formatter\OutputFormatter;
 use Symfony\Component\Console\Helper\Helper;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Helper\SymfonyQuestionHelper;
 use Symfony\Component\Console\Helper\Table;
-use Symfony\Component\Console\Helper\TableCell;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -110,7 +110,7 @@ class SymfonyStyle extends OutputStyle
         $this->autoPrependBlock();
         $this->writeln(array(
             sprintf('<comment>%s</>', $message),
-            sprintf('<comment>%s</>', str_repeat('=', strlen($message))),
+            sprintf('<comment>%s</>', str_repeat('=', Helper::strlenWithoutDecoration($this->getFormatter(), $message))),
         ));
         $this->newLine();
     }
@@ -123,7 +123,7 @@ class SymfonyStyle extends OutputStyle
         $this->autoPrependBlock();
         $this->writeln(array(
             sprintf('<comment>%s</>', $message),
-            sprintf('<comment>%s</>', str_repeat('-', strlen($message))),
+            sprintf('<comment>%s</>', str_repeat('-', Helper::strlenWithoutDecoration($this->getFormatter(), $message))),
         ));
         $this->newLine();
     }
@@ -149,14 +149,22 @@ class SymfonyStyle extends OutputStyle
     {
         $this->autoPrependText();
 
-        if (!is_array($message)) {
-            $this->writeln(sprintf(' // %s', $message));
-
-            return;
+        $messages = is_array($message) ? array_values($message) : array($message);
+        foreach ($messages as $message) {
+            $this->writeln(sprintf(' %s', $message));
         }
+    }
 
-        foreach ($message as $element) {
-            $this->text($element);
+    /**
+     * {@inheritdoc}
+     */
+    public function comment($message)
+    {
+        $this->autoPrependText();
+
+        $messages = is_array($message) ? array_values($message) : array($message);
+        foreach ($messages as $message) {
+            $this->writeln(sprintf(' // %s', $message));
         }
     }
 
@@ -205,16 +213,7 @@ class SymfonyStyle extends OutputStyle
      */
     public function table(array $headers, array $rows)
     {
-        array_walk_recursive($headers, function (&$value) {
-            if ($value instanceof TableCell) {
-                $value = new TableCell(sprintf('<info>%s</>', $value), array(
-                    'colspan' => $value->getColspan(),
-                    'rowspan' => $value->getRowspan(),
-                ));
-            } else {
-                $value = sprintf('<info>%s</>', $value);
-            }
-        });
+        $headers = array_map(function ($value) { return sprintf('<info>%s</>', $value); }, $headers);
 
         $table = new Table($this);
         $table->setHeaders($headers);
@@ -371,7 +370,7 @@ class SymfonyStyle extends OutputStyle
     private function getProgressBar()
     {
         if (!$this->progressBar) {
-            throw new \RuntimeException('The ProgressBar is not started.');
+            throw new RuntimeException('The ProgressBar is not started.');
         }
 
         return $this->progressBar;

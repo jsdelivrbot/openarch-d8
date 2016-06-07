@@ -35,6 +35,9 @@ class PassConfig
     private $optimizationPasses;
     private $removingPasses;
 
+    /**
+     * Constructor.
+     */
     public function __construct()
     {
         $this->mergePass = new MergeExtensionConfigurationPass();
@@ -47,6 +50,7 @@ class PassConfig
             new CheckDefinitionValidityPass(),
             new ResolveReferencesToAliasesPass(),
             new ResolveInvalidReferencesPass(),
+            new AutowirePass(),
             new AnalyzeServiceReferencesPass(true),
             new CheckCircularReferencesPass(),
             new CheckReferenceValidityPass(),
@@ -54,8 +58,8 @@ class PassConfig
 
         $this->removingPasses = array(
             new RemovePrivateAliasesPass(),
-            new ReplaceAliasByActualDefinitionPass(),
             new RemoveAbstractDefinitionsPass(),
+            new ReplaceAliasByActualDefinitionPass(),
             new RepeatedPass(array(
                 new AnalyzeServiceReferencesPass(),
                 new InlineServiceDefinitionsPass(),
@@ -98,7 +102,8 @@ class PassConfig
             throw new InvalidArgumentException(sprintf('Invalid type "%s".', $type));
         }
 
-        $this->{$property}[] = $pass;
+        $passes = &$this->$property;
+        $passes[] = $pass;
     }
 
     /**

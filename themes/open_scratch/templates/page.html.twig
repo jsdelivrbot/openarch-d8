@@ -1,0 +1,53 @@
+<div class="layout-container">
+
+  <div class="layout-menubar">
+
+    <header class="region region-menubar" >
+      {{ page.header }}
+    </header>
+
+    <aside id="menubar-primary" class="region region-menubar" role="complementary">
+      {{ page.menubar_primary }}
+    </aside>
+
+    {% if page.menubar_secondary %}
+      <aside id="menubar-secondary" class="region region-menubar" role="complementary">
+        {{ page.menubar_secondary }}
+      </aside>
+    {% endif %}
+
+  </div>{# /.layout-menubar #}
+
+  <div class="layout-content">
+
+    {% if page.content_header %}
+      <div id="content-header" class="region region-content" role="contentinfo">
+        {{ page.content_header }}
+      </div>
+    {% endif %}
+
+    <main id="content" role="main">  
+
+      <div id="content-primary" class="region region-content">
+        {{ page.content_primary }}
+      </div>
+      
+      <div id="content-secondary" class="region region-content">
+        {{ page.content_secondary }}
+      </div>
+
+      <div id="content-tertiary" class="region region-content">
+        {{ page.content_tertiary }}
+      </div>
+
+    </main>
+
+    {% if page.footer %}
+      <footer  class="region region-content" role="contentinfo">
+        {{ page.footer }}
+      </footer>
+    {% endif %}
+
+  </div>{# /.layout-content #}
+
+</div>{# /.layout-container #}

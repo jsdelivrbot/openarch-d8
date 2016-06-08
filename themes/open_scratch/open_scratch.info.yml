@@ -5,3 +5,12 @@ core: 8.x
 libraries:
   - open_scratch/global-css
   - open_scratch/global-js
+regions:
+  header: 'Menubar header'
+  menubar_primary: 'Primary menubar'
+  menubar_secondary: 'Secondary menubar'
+  content_header: 'Content header'
+  content_primary: 'Main content'
+  content_secondary: 'Secondary content'
+  content_tertiary: 'Tertiary content'
+  footer: 'Page footer'

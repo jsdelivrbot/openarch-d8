@@ -1,0 +1,87 @@
+/* ==================================================================
+## defaults
+===================================================================== */
+$background-color: #fff;
+
+$base-font-family: Helvetica, Arial, sans-serif;
+
+
+$base-line-height: 18px;
+
+
+/* ==================================================================
+## Colors
+===================================================================== */
+
+/* Color Pallete */
+$base-font-color: #505050;
+$lighter-font-color: #777;
+$darker-font-color: #333;
+$darker-font-color: #000;
+$openorange-color: #ff9d00;
+$opengrey-color: #888;
+$link-font-color: #98a6bc;
+
+$pagetitle-font-color: 		$darker-font-color;
+$blocktitle-font-color: 	$darker-font-color;
+$title-font-color: 			$darker-font-color;
+$menu-font-color: 			$base-font-color;
+$manifesto-font-color: 		$lighter-font-color;
+$headline-font-color: 		$lighter-font-color;
+$fact-font-color: 			$base-font-color;
+$tags-font-color: #666;
+$ts-font-color: #999;
+$foot-font-color: $base-font-color;
+
+
+$title-link-color: $title-font-color;
+$tags-link-color: $link-font-color;
+$menu-link-color: $menu-font-color;
+
+$footer-bg-color: #333;
+
+
+/* ==================================================================
+## Fonts Size
+===================================================================== */
+
+/* Sizing Pallete */
+$base-font-size: 12px;
+
+$sitename-font-size: 15px;
+$pagetitle-font-size: 12px;
+$blocktitle-font-size: 12px;
+$facttitle-font-size: 11px;
+$title-font-size: 12px;
+$headline-font-size: 11px;
+$menu-font-size: 12px;
+$manifesto-font-size: $base-font-size;
+$fact-font-size: 11px;
+$ts-font-size: 10px;
+$tags-font-size: 10px;
+
+
+/* ==================================================================
+## Fonts Line Heights
+===================================================================== */
+
+$sitename-line-height: 16px;
+$pagetitle-line-height: base-line-height;
+$blocktitle-line-height: base-line-height;
+$title-line-height: 12px;
+$headline-line-height: 10px;
+$fact-line-height: 10px;
+$ts-line-height: 7px;
+$manifesto-line-height: 20px;
+$info-line-height: 14px;
+$tags-line-height: $base-line-height;
+
+
+/* ==================================================================
+## Grid
+===================================================================== */
+
+$total-cols             : 4;  
+$col-width              : 162px;  
+$gutter-width           : 40px;  
+$side-gutter-width      : $gutter-width; 

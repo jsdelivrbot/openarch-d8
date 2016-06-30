@@ -1,2 +1,206 @@
+/* ==================================================================
+## Menubar (Page Header)
+===================================================================== */
 
+#block-open-scratch-branding {
+	a{
+		font-weight: bold;
+		font-size: $sitename-font-size;
+		text-transform: uppercase;
+		color: $openorange-color;
+		text-decoration:none;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+}
 
+.menubar-content{
+
+	span, a, a:link, a:visited{
+		font-size: $menu-font-size;
+		color: $menu-font-color;
+		text-decoration:none;
+	}
+
+	a:hover{
+		text-decoration: none;
+	}
+
+	h2{
+		display:none;
+	}
+}
+
+/* ==================================================================
+## Main Content Header
+===================================================================== */
+
+.main-content-header {
+	h1, h2, h3, p, span, a, a:link, a:visited {
+		font-size: $pagetitle-font-size;
+		font-weight: heavy;
+		line-height: $pagetitle-line-height;
+		color: $pagetitle-font-color;
+		text-transform: uppercase;
+		text-decoration:none;
+	}
+	a:hover{
+			text-decoration: underline;
+		}
+}
+
+/* ==================================================================
+## Main Content
+===================================================================== */
+
+/* Page Title */
+.main-content {
+}
+	%title {
+		h1, h2, h3, span, a, a:link, a:visited {
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+	}
+
+	/* defined in block.html.twig */
+	.block-title{ 
+		@extend %title;
+		h2, span, a, a:link, a:visited {
+			font-size: $blocktitle-font-size;
+			line-height: $blocktitle-line-height;
+			color: $blocktitle-font-color;
+		}
+	}
+	
+	.slide-title{ 
+		@extend %title;
+		h3, span, a, a:link, a:visited {
+			font-size: $title-font-size;
+			line-height: $title-line-height;
+			color: $title-font-color;
+		}
+	}
+
+	.nodetitle{ 
+		@extend %title;
+		h3, span, a, a:link, a:visited {
+			font-size: $title-font-size;
+			line-height: $title-line-height;
+			color: $title-font-color;
+		}
+	}
+
+	.row-title{}
+
+	.headline{ 
+		@extend %title;
+		h3, span, a, a:link, a:visited {
+			font-size: $headline-font-size;
+			line-height: $headline-line-height;
+			color: $headline-font-color;
+			text-decoration: underline;
+		}
+	}
+
+/* override block title size for facts */
+#main-content-facts{
+	.block-title{ 
+		h2, span, a, a:link, a:visited {
+			font-size: $facttitle-font-size;
+		}
+	}
+}
+
+/* ==================================================================
+## bodies
+===================================================================== */
+
+p{
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	color: $base-font-color;
+}
+
+.menubar {
+	p {
+		font-size: $base-font-size;
+		line-height: $base-line-height;
+		color: $base-font-color;
+	}
+}
+
+.main-content {
+	p {
+		font-size: $base-font-size;
+		line-height: $base-line-height;
+		color: $base-font-color;
+	}
+}
+
+.manifesto p{
+	font-size: $manifesto-font-size;
+	line-height: $manifesto-line-height;
+	color: $manifesto-font-color;
+}
+
+/* ==================================================================
+## Tags
+===================================================================== */
+
+.tags{
+	span{
+		font-size: $tags-font-size;
+		line-height: $tags-line-height;
+		color: $tags-font-color;
+		text-transform: uppercase;
+		text-decoration:none;
+	}
+	a, a:link, a:visited{
+		font-size: $tags-font-size;
+		line-height: $tags-line-height;
+		color: $tags-link-color;
+		text-transform: uppercase;
+		text-decoration:none;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+}
+
+/* ==================================================================
+## Facts
+===================================================================== */
+
+.fact{
+
+	span, a, a:link, a:visited, .field-content{
+		font-size: $fact-font-size;
+		line-height: $fact-line-height;
+		color: $fact-font-color;
+		text-decoration:none;
+	}
+
+	a:hover{
+		text-decoration: none;
+	}
+}
+
+/* ==================================================================
+## Footer
+===================================================================== */
+
+.main-footer{
+	span, a, a:link, a:visited{
+		font-size: $menu-font-size;
+		color: $menu-font-color;
+		text-decoration:none;
+	}
+	h2{
+		display:none;
+	}
+}

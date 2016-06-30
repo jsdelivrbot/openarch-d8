@@ -1,0 +1,79 @@
+<div class="container">
+
+  <div class="wrapper menubar-wrapper clearfix">
+
+    <header class="region header menubar-header" >
+      {{ page.header }}
+    </header>
+
+    {% if page.menubar_primary %}
+      <aside id="menubar-content-primary" class="region menubar-content" role="complementary">
+        {{ page.menubar_primary }}
+      </aside>
+    {% endif %}
+
+    {% if page.menubar_secondary %}
+      <aside id="menubar-content-secondary" class="region menubar-content" role="complementary">
+        {{ page.menubar_secondary }} {# <span>CN | EN</span>  #} 
+      </aside>
+    {% endif %}
+
+  </div>{# /.layout-menubar #}
+
+  <div class="wrapper main-wrapper clearfix">
+
+    <div class="header main-header" role="contentinfo">
+      
+        {% if page.content_header_left %}
+          <div id="main-content-header-left" class="region main-content-header" role="contentinfo">
+            {{ page.content_header_left }}
+          </div>
+        {% endif %}
+
+        {% if page.content_header_right %}
+          <div id="main-content-header-right" class="region main-content-header" role="contentinfo">
+            {{ page.content_header_right }}
+          </div>
+        {% endif %}
+
+
+    </div>
+    
+    <main class="clearfix" role="main">  
+
+      {% if page.content_gallery %}
+        <div id="main-content-gallery" class="region main-content">
+          {{ page.content_gallery }}
+        </div>
+      {% endif %}
+
+      <div id="main-content-primary" class="region main-content">
+        {{ page.content_primary }}
+      </div>
+      
+      {% if page.content_relations %}
+        <div id="main-content-relations" class="region main-content">
+          {{ page.content_relations }}
+        </div>
+      {% endif %}
+
+      {% if page.content_facts %}
+        <div id="main-content-facts" class="region main-content">
+          {{ page.content_facts }}
+        </div>
+      {% endif %}
+
+    </main>
+
+    <footer class="region footer main-footer" role="contentinfo">
+      {{ page.footer }}
+    </footer>
+
+
+  </div>{# /.layout-content #}
+
+
+
+  
+
+</div>{# /.layout-container #}

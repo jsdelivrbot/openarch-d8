@@ -1,18 +1,282 @@
-/* wrapper for all page content */
-.layout-container {
-	margin: 0 auto; 
-	padding: 0; 
-	width: 800px;}
+/* ==================================================================
+## Grid
+===================================================================== */
+/*
 
-/* wrapper for content regions */
-.layout-content {
-	float: right;
-	width: 560px;
-	margin-top: 100px;}
+$susy: (
+  flow: rtl | ltr*
+  	ltr - Layout elements will flow from left to right.
+  	rtl - Layout elements will flow from right to left.
+  math: fluid* | static
+  	fluid - grid spans will be calculated relative to the container, and output as % values.
+  	static - grid values will be calculated as multiples of the column-width setting.
+  output: float | isolate
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 4,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+*/
+
+/* GLOBAL SUSY SETTINGS */
+
+$susy: (
+  /*flow: ltr,*/
+  /*math: fluid,*/
+  output: float,
+  gutter-position: inside,
+  /*container: auto,*/
+  /*container-position: center,*/
+  columns: 4,
+  gutters: 3/8,
+  /*column-width: false,*/
+  global-box-sizing: content-box,
+  /*last-flow: to,*/
+  debug: (
+    image: show-columns,
+    color: rgba(#AEEFF2, .15),
+    output: overlay,
+    toggle: top right,
+  )
+  /*use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )*/
+);
+
+/* GLOBAL SUSY SETTINGS */
+
+$susy-gallery: (
+  gutter-position: before,
+  columns: 4,
+  gutters: 3/16,
+  global-box-sizing: border-box
+);
+
+
+/* ==================================================================
+## Grid
+===================================================================== */
+
+/* wrapper for all page content */
+.container {
+	@include container;
+}
 
 /* wrapper for menubar regions */
-.layout-menubar {
-	width: 120px;
-	margin-right: 80px;
-	margin-top: 100px;
-	position: fixed;}
+.menubar-wrapper {
+
+	/*Why can't i include span(4) here????*/
+	background:white;
+	/*width:100%;*/
+	padding:12px 0;
+	/*position:fixed;
+	top:0;
+	left:0;*/
+	z-index:100;
+}
+
+	.menubar-header{
+		@include span(3 of 4);
+		float:left;
+	}
+
+	.menubar-content{
+
+	}
+
+	#menubar-content-primary{
+		/*display:none;*/
+	}
+
+	#menubar-content-secondary{
+		@include span(1 of 4 last);
+		float:right;
+
+		p, span, a{
+			text-align: right;
+		}
+	}
+
+
+/* wrapper for content regions */
+.main-wrapper {
+	
+	background:white;
+
+	
+
+		.views-field{
+			padding-bottom: 14px;
+		}
+
+		.slidetitle{
+			padding: 14px 0;
+		}
+
+		.views-field-body p{
+			margin: 0 0 14px 0;
+		}
+
+}
+
+	.main-header {
+
+		@include span(4);
+
+		padding: 12px 0;
+		margin-top:100px;
+	}
+
+		#main-content-header-left{
+			@include span(3 of 4);
+			float:left;
+		}
+
+		#main-content-header-right{
+			@include span(1 of 4 last);
+			float:right;
+
+			p, span, a{
+				text-align: right;
+			}
+		}
+
+	.main-content {
+		
+	}
+
+	#main-content-primary{
+
+		@include span(4);
+	}
+
+	#main-content-relations{
+
+		@include span(4);
+		@include clearfix;
+
+		.block-content, .block-title { 
+			padding-top: 14px;
+		}
+
+		.block{
+			border-top: 1px solid #666;	
+		}	
+
+		.gallery-list{
+
+			@include clearfix;
+			@include layout((
+				gutter-position: before,
+				columns: 4,
+				gutters: 3/16,
+				global-box-sizing: border-box
+			));
+
+		}
+
+		.gallery-list-item{
+
+			@include gallery(2 of 4);
+
+			background:#999;
+			margin-bottom: gutter(4);
+		}
+	}
+
+	#main-content-facts{
+
+		/*@include layout($susy);*/
+		@include layout((
+				gutter-position: inside,
+				columns: 4,
+				gutters: 3/8,
+				global-box-sizing: border-box
+			));
+		@include span(4);
+		@include clearfix;
+
+		.block-content, .block-title { 
+			padding-top: 14px;
+		}
+
+		.region{
+			border-top: 1px solid #666;	
+		}	
+
+		.region{
+
+			@include clearfix;
+			@include layout((
+				gutter-position: before,
+				columns: 4,
+				gutters: 3/16,
+				global-box-sizing: border-box
+			));
+
+		}
+
+		.block{
+
+			@include gallery(2 of 4);
+
+			background:#f3f3f3;
+			margin-bottom: gutter(4);
+		}
+	}
+
+	#main-content-gallery{
+
+		@include span(4);
+		@include clearfix;
+		
+		.gallery-list{
+
+			@include clearfix;
+			@include layout((
+				gutter-position: before,
+				columns: 4,
+				gutters: 3/16,
+				global-box-sizing: border-box
+			));
+
+		}
+
+		.gallery-list-item{
+
+			@include gallery(2 of 4);
+
+			background:#999;
+			margin-bottom: gutter(4);
+		}
+	}
+
+	.main-footer{
+
+		@include span(4);
+
+		background: $footer-bg-color;
+		width:100%;
+	}

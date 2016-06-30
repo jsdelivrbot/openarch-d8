@@ -153,7 +153,7 @@ $susy-overlay-grid-head-exists: false;
 
   $_color         : debug-get(color);
   $_trans         : transparent;
-  $_light         : lighten($_color, 15%);
+  $_light         : #AEEFF2; //lighten($_color, 15%);
 
   $_end           : 1 + $_gutters;
   $_after         : percentage(1/$_end);

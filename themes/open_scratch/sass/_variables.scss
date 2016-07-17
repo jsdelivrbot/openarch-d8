@@ -40,6 +40,13 @@ $menu-link-color: $menu-font-color;
 
 $footer-bg-color: #333;
 
+$slide-caption-font-color: $lighter-font-color;
+
+$table-font-color: $darker-font-color;
+
+
+$manifesto-title-font-color: $darker-font-color;
+
 
 /* ==================================================================
 ## Fonts Size
@@ -53,29 +60,58 @@ $pagetitle-font-size: 12px;
 $blocktitle-font-size: 12px;
 $facttitle-font-size: 11px;
 $title-font-size: 12px;
+$jobtitle-font-size: 12px;
 $headline-font-size: 11px;
+$events-headline-font-size: 12px;
 $menu-font-size: 12px;
 $manifesto-font-size: $base-font-size;
 $fact-font-size: 11px;
 $ts-font-size: 10px;
 $tags-font-size: 10px;
 
+$slide-caption-font-size: 11px;
+
+$table-font-size: 11px;
+
+$manifesto-title-font-size: 14px;
+
 
 /* ==================================================================
 ## Fonts Line Heights
 ===================================================================== */
+
+$base-title-line-height: 14px;
 
 $sitename-line-height: 16px;
 $pagetitle-line-height: base-line-height;
 $blocktitle-line-height: base-line-height;
 $title-line-height: 12px;
 $headline-line-height: 10px;
-$fact-line-height: 10px;
+$events-headline-line-height: 11px;
+$fact-line-height: 12px;
 $ts-line-height: 7px;
 $manifesto-line-height: 20px;
 $info-line-height: 14px;
 $tags-line-height: $base-line-height;
+$slide-caption-line-height: $base-line-height;
 
+$manifesto-title-line-height: $base-title-line-height;
+
+/* ==================================================================
+## Padding
+===================================================================== */
+
+$base-row-height: 42px;
+$base-row-pad: 14px;
+
+/* ==================================================================
+## Table
+===================================================================== */
+
+$table-row-height: $base-row-height;
+$table-col1-width: 20%;
+$table-col2-width: 70%;
+$table-col3-width: 10%;
 
 /* ==================================================================
 ## Grid
@@ -85,3 +121,4 @@ $total-cols             : 4;
 $col-width              : 162px;  
 $gutter-width           : 40px;  
 $side-gutter-width      : $gutter-width; 
+

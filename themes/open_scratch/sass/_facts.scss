@@ -1,0 +1,123 @@
+/*
+ * Factsheet Component (Block view)
+ *
+ * LAYOUT:
+ *
+ * factsheet--header
+ * factsheet--header-left
+ * factsheet--header-right
+ * factsheet--gallery
+ * factsheet--gallery-list (ul)
+ * factsheet--gallery-item (li)
+ *
+ * CONTENT:
+ *
+ * factsheet--title (h2)
+ *
+ *
+ */
+
+
+
+/* ==================================================================
+## Layout
+===================================================================== */
+
+/*@mixin gallery-list{
+
+    @include clearfix;
+    @include layout((
+        gutter-position: before,
+        columns: 4,
+        gutters: 3/16,
+        global-box-sizing: border-box
+    ));
+
+}
+
+@mixin gallery-list-item{
+
+    @include gallery(2 of 4);
+    margin-bottom: gutter(4);
+}*/
+
+
+/* .factsheet-gallery */
+#main-content-facts {}
+
+	.factsheet-gallery-container {
+
+		@include clearfix;
+		@include layout((
+			gutter-position: before,
+			columns: 4,
+			gutters: 3/16,
+			global-box-sizing: border-box
+		));
+
+	}
+
+		/*li.facts*/.factsheet-gallery-item{
+
+			@include gallery(2 of 4);
+    		margin-bottom: gutter(4);
+		}
+
+			.factsheet-header {
+
+				margin: $base-row-pad 0;
+			}
+
+			/* list of facts */
+			.factsheet-facts {
+
+				margin: $base-row-pad 0;
+			}
+
+
+/* ==================================================================
+## Theme
+===================================================================== */
+
+/*h2*/.factsheet-title{
+
+	@include base-title;
+	
+	font-size: $blocktitle-font-size;
+	line-height: $blocktitle-line-height;
+	color: $blocktitle-font-color;	
+
+}
+
+/*div*/.factsheet-fact{
+
+	p, span, a, a:link, a:visited {
+		font-size: $fact-font-size;
+		line-height: $fact-line-height;
+		color: $fact-font-color;
+		text-decoration:none;
+	}
+
+	a:hover{
+		text-decoration: none;
+	}
+
+}
+
+/* ==================================================================
+## Facts - tmp
+===================================================================== */
+
+/*.fact, .multifact{
+
+	p, span, a, a:link, a:visited, .field-content{
+		font-size: $fact-font-size;
+		line-height: $fact-line-height;
+		color: $fact-font-color;
+		text-decoration:none;
+	}
+
+	a:hover{
+		text-decoration: none;
+	}
+}*/

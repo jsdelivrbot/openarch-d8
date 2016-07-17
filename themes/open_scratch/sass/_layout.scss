@@ -87,14 +87,6 @@ $susy-gallery: (
 /* wrapper for menubar regions */
 .menubar-wrapper {
 
-	/*Why can't i include span(4) here????*/
-	background:white;
-	/*width:100%;*/
-	padding:12px 0;
-	/*position:fixed;
-	top:0;
-	left:0;*/
-	z-index:100;
 }
 
 	.menubar-header{
@@ -113,40 +105,16 @@ $susy-gallery: (
 	#menubar-content-secondary{
 		@include span(1 of 4 last);
 		float:right;
-
-		p, span, a{
-			text-align: right;
-		}
 	}
 
 
 /* wrapper for content regions */
 .main-wrapper {
-	
-	background:white;
-
-	
-
-		.views-field{
-			padding-bottom: 14px;
-		}
-
-		.slidetitle{
-			padding: 14px 0;
-		}
-
-		.views-field-body p{
-			margin: 0 0 14px 0;
-		}
 
 }
 
 	.main-header {
-
-		@include span(4);
-
-		padding: 12px 0;
-		margin-top:100px;
+		/*@include span(4);*/
 	}
 
 		#main-content-header-left{
@@ -157,6 +125,210 @@ $susy-gallery: (
 		#main-content-header-right{
 			@include span(1 of 4 last);
 			float:right;
+		}
+
+	.main-content {
+		
+	}
+
+	#main-content-slideshow{
+
+		.slide {
+			@include span(4);
+		}
+
+		.slide-title {
+			@include span(3 of 4);
+			float:left;
+		}
+
+		.arrow {
+			@include span(1 of 4 last);
+			float:right;
+		}
+
+		.slide-controls{
+			@include span(4);
+		}
+
+	}
+
+	#main-content-primary{
+		@include span(4);
+	}
+
+	/* adsf */
+	#main-content-relations{
+
+		@include span(4);
+		@include clearfix;	
+
+	}
+
+	#main-content-facts{
+
+		/*@include layout($susy);*/
+		@include layout((
+			gutter-position: inside,
+			columns: 4,
+			gutters: 3/8,
+			global-box-sizing: border-box
+		));
+
+		@include span(4);
+		@include clearfix;
+
+	}
+
+	#main-content-gallery{
+
+		@include clearfix;
+
+		@include layout((
+			gutter-position: inside,
+			columns: 4,
+			gutters: 3/8,
+			global-box-sizing: content-box
+		));
+
+		.region {
+			@include span(4);		
+		}
+		
+		.gallery-list{
+
+			@include clearfix;
+			@include layout((
+				gutter-position: before,
+				columns: 4,
+				gutters: 3/16,
+				global-box-sizing: border-box
+			));
+
+		}
+
+		.gallery-list-item{
+
+			@include gallery(2 of 4);
+			margin-bottom: gutter(4);
+		}
+	}
+
+	.main-footer{
+
+		@include clearfix;
+		@include layout((
+			gutter-position: inside,
+			columns: 4,
+			gutters: 3/8,
+			global-box-sizing: content-box
+		));
+		
+		/*background: $footer-bg-color;*/
+		/*width:100%;*/
+
+		.region{
+			@include span(4);
+			border-top: 1px solid #666;	
+			margin-top: 100px;
+		}
+
+		.block-content{
+			padding: 14px 0;
+		}
+	}
+
+/* ==================================================================
+## Modules
+===================================================================== */
+
+/* wrapper for all page content */
+.container {
+
+}
+
+/* wrapper for menubar regions */
+.menubar-wrapper {
+
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:100;
+	height: $base-row-height;
+
+	p, span, a{
+		line-height: $base-row-height;
+	}
+}
+
+	.menubar-header{
+		background:darkgrey;
+	}
+
+	.menubar-content{
+		background:grey;
+
+	}
+
+		#menubar-content-primary{
+			/*display:none;*/
+		}
+
+		#menubar-content-secondary{
+			p, span, a{
+				text-align: right;
+			}
+		}
+
+
+/* wrapper for content regions */
+.main-wrapper {
+	
+	background:white;
+
+		.views-field{
+			margin: $base-row-pad 0;
+		}
+
+		.views-field-title { 
+			margin: $base-row-pad 0;
+		}
+
+		.block-title, { 
+			margin: $base-row-pad 0;
+		}
+
+		.slidetitle { 
+			margin: $base-row-pad 0;
+		}
+
+		.views-field-body p{
+			margin: $base-row-pad 0;
+		}
+
+}
+
+	.main-header {
+
+		/*padding: $base-row-pad 0;*/
+		height: $base-row-height;
+		margin-top:142px;
+		
+
+		p, span, a{
+			line-height: $base-row-height;
+		}
+	}
+
+		#main-content-header-left{
+
+			background: lightgrey;
+		}
+
+		#main-content-header-right{
+
+			background: grey;
 
 			p, span, a{
 				text-align: right;
@@ -167,116 +339,110 @@ $susy-gallery: (
 		
 	}
 
-	#main-content-primary{
+	#main-content-slideshow{
 
-		@include span(4);
-	}
-
-	#main-content-relations{
-
-		@include span(4);
-		@include clearfix;
-
-		.block-content, .block-title { 
-			padding-top: 14px;
+		/* override */
+		.views-field{
+			margin: 0;
 		}
 
+		.slide-title {
+			height: base-row-height;
+		}
+
+		.arrow {
+			height: base-row-height;
+			text-align: right;
+		}
+
+		.slide-title a {
+			line-height: $base-row-height;
+		}
+
+		.arrow a {
+			line-height: $base-row-height;
+		}
+
+		.slide-controls{
+			height: $base-row-height;
+		}
+
+		.slide-controls span{
+			line-height: $base-row-height;
+		}
+
+	}
+
+	#main-content-primary{
+
 		.block{
+			/*border-top: 1px solid #999;*/	
+		}	
+
+		.views-row {
+			border-top: 1px solid #e1e1e1;
+		}
+
+		/* recent news temp overrides */
+		#block-open-scratch-views-block-recent-news-block-1{ 
+			
+			border-top: 1px solid #999;
+
+			.views-row {
+				border-top: none;
+			}
+		}
+
+	}
+
+	
+	#main-content-relations{
+
+		.block{
+			/*padding: 14px 0;*/
 			border-top: 1px solid #666;	
 		}	
 
-		.gallery-list{
-
-			@include clearfix;
-			@include layout((
-				gutter-position: before,
-				columns: 4,
-				gutters: 3/16,
-				global-box-sizing: border-box
-			));
-
-		}
-
-		.gallery-list-item{
-
-			@include gallery(2 of 4);
-
-			background:#999;
-			margin-bottom: gutter(4);
-		}
 	}
 
 	#main-content-facts{
 
-		/*@include layout($susy);*/
-		@include layout((
-				gutter-position: inside,
-				columns: 4,
-				gutters: 3/8,
-				global-box-sizing: border-box
-			));
-		@include span(4);
-		@include clearfix;
-
-		.block-content, .block-title { 
-			padding-top: 14px;
-		}
-
 		.region{
 			border-top: 1px solid #666;	
 		}	
 
-		.region{
-
-			@include clearfix;
-			@include layout((
-				gutter-position: before,
-				columns: 4,
-				gutters: 3/16,
-				global-box-sizing: border-box
-			));
-
-		}
-
 		.block{
 
-			@include gallery(2 of 4);
-
 			background:#f3f3f3;
-			margin-bottom: gutter(4);
 		}
+
 	}
+	
 
 	#main-content-gallery{
 
-		@include span(4);
-		@include clearfix;
+		.region {
+	
+		}
 		
 		.gallery-list{
-
-			@include clearfix;
-			@include layout((
-				gutter-position: before,
-				columns: 4,
-				gutters: 3/16,
-				global-box-sizing: border-box
-			));
 
 		}
 
 		.gallery-list-item{
 
-			@include gallery(2 of 4);
-
 			background:#999;
-			margin-bottom: gutter(4);
 		}
 	}
 
 	.main-footer{
 
-		@include span(4);
+		.region{
+			border-top: 1px solid #666;	
+			margin-top: 100px;
+		}
 
-		background: $footer-bg-color;
-		width:100%;
+		.block-content{
+			padding: 14px 0;
+		}
 	}

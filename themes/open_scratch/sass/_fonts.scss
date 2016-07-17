@@ -76,8 +76,17 @@
 			color: $blocktitle-font-color;
 		}
 	}
-	
-	.slide-title{ 
+
+	.manifesto-title{ 
+		@extend %title;
+		span, a, a:link, a:visited {
+			font-size: $manifesto-title-font-size;
+			line-height: $manifesto-title-line-height;
+			color: $manifesto-title-font-color;
+		}
+	}
+
+	.node-title{ 
 		@extend %title;
 		h3, span, a, a:link, a:visited {
 			font-size: $title-font-size;
@@ -86,10 +95,10 @@
 		}
 	}
 
-	.nodetitle{ 
+	.job-title{ 
 		@extend %title;
 		h3, span, a, a:link, a:visited {
-			font-size: $title-font-size;
+			font-size: $jobtitle-font-size;
 			line-height: $title-line-height;
 			color: $title-font-color;
 		}
@@ -107,12 +116,96 @@
 		}
 	}
 
+	.events-headline{ 
+		@extend %title;
+		h3, span, a, a:link, a:visited {
+			font-size: $events-headline-font-size;
+			line-height: $events-headline-line-height;
+			color: $headline-font-color;
+			text-decoration: underline;
+		}
+	}
+
+	.slide-caption{ 
+		@extend %title;
+		span, a, a:link, a:visited{
+			line-height: $slide-caption-line-height;
+			font-size: $slide-caption-font-size;
+			color: $slide-caption-font-color;
+		}
+	}
+
 /* override block title size for facts */
 #main-content-facts{
 	.block-title{ 
 		h2, span, a, a:link, a:visited {
 			font-size: $facttitle-font-size;
 		}
+	}
+}
+
+/* ==================================================================
+## table views
+===================================================================== */
+
+.views-table {
+
+	table {
+		width:100%;
+		display:table;
+		table-layout:fixed;
+	}
+
+	thead {
+		display: none;
+	}
+
+	tbody {
+		font-size: $table-font-size;
+		line-height: $table-row-height;
+		
+	}
+
+	span, a, a:link, a:visited {
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $table-font-color;
+	}
+
+	a:hover{
+		text-decoration: underline;
+	}
+
+	tr {
+		border-top: 1px solid #e1e1e1;		
+		height: $table-row-height;
+	}
+
+	td {
+		display: block;
+		/*white-space: nowrap;*/
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	td.year {
+		float: left;
+		width: $table-col1-width;
+		/*padding: 0 0 0 .2rem;*/
+	}
+
+	td.title {
+		float: left;
+		width: $table-col2-width;
+		text-align: right;
+		/*padding: 0 0 0 .2rem;*/
+	}
+
+	td.arrow {
+		float: right;
+		width: $table-col3-width;
+		text-align: right;
+		/*padding: 0 0 0 .2rem;*/
 	}
 }
 
@@ -172,23 +265,7 @@ p{
 	}
 }
 
-/* ==================================================================
-## Facts
-===================================================================== */
 
-.fact{
-
-	span, a, a:link, a:visited, .field-content{
-		font-size: $fact-font-size;
-		line-height: $fact-line-height;
-		color: $fact-font-color;
-		text-decoration:none;
-	}
-
-	a:hover{
-		text-decoration: none;
-	}
-}
 
 /* ==================================================================
 ## Footer

@@ -65,3 +65,31 @@ $base-font-size:16px;
     clear: both; 
   }
 }
+
+/* =======================================================================
+## ++ Grid
+========================================================================== */
+
+@mixin gallery-list {
+
+    @include clearfix;
+    @include layout((
+        gutter-position: before,
+        columns: 4,
+        gutters: 3/16,
+        global-box-sizing: border-box
+    ));
+
+}
+
+@mixin gallery-list-item {
+
+    @include gallery(2 of 4);
+    margin-bottom: gutter(4);
+}
+
+@mixin base-title {
+        
+    text-transform: uppercase;
+    text-decoration: none;
+}

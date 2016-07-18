@@ -48,23 +48,16 @@
 	/*.factsheet-gallery-container {*/
 	.region {
 
-		@include clearfix;
-		@include layout((
-			gutter-position: before,
-			columns: 4,
-			gutters: 3/16,
-			global-box-sizing: border-box
-		));
-
+		@include gallery-list;
 	}
 
 		/*li.*//*.factsheet-gallery-item{*/
 		.block {
 
-			@include gallery(2 of 4);
-    		margin-bottom: gutter(4);
+			@include gallery-list-item;
 		}
 
+}
 			.factsheet-header {
 
 				margin: $base-row-pad 0;
@@ -75,7 +68,7 @@
 
 				margin: $base-row-pad 0;
 			}
-}
+
 
 /* ==================================================================
 ## Theme
@@ -91,7 +84,11 @@
 
 }
 
-/*div*/.factsheet-fact{
+/*div*/.factsheet-facts{
+
+	div {
+		height: $fact-line-height;
+	}
 
 	p, span, a, a:link, a:visited {
 		font-size: $fact-font-size;

@@ -14,13 +14,13 @@ $base-line-height: 18px;
 ===================================================================== */
 
 /* Color Pallete */
-$base-font-color: #505050;
-$lighter-font-color: #777;
-$darker-font-color: #333;
-$darker-font-color: #000;
-$openorange-color: #ff9d00;
-$opengrey-color: #888;
-$link-font-color: #98a6bc;
+$base-font-color: 			#505050;
+$lighter-font-color: 		#777;
+$darker-font-color: 		333;
+$darker-font-color: 		#000;
+$openorange-color: 			#ff9d00;
+$opengrey-color: 			#888;
+$link-font-color: 			#98a6bc;
 
 $pagetitle-font-color: 		$darker-font-color;
 $blocktitle-font-color: 	$darker-font-color;
@@ -29,14 +29,14 @@ $menu-font-color: 			$base-font-color;
 $manifesto-font-color: 		$lighter-font-color;
 $headline-font-color: 		$lighter-font-color;
 $fact-font-color: 			$base-font-color;
-$tags-font-color: #666;
-$ts-font-color: #999;
-$foot-font-color: $base-font-color;
+$tags-font-color: 			#666;
+$ts-font-color: 			#999;
+$foot-font-color: 			$base-font-color;
 
 
-$title-link-color: $title-font-color;
-$tags-link-color: $link-font-color;
-$menu-link-color: $menu-font-color;
+$title-link-color: 			$title-font-color;
+$tags-link-color: 			$link-font-color;
+$menu-link-color: 			$menu-font-color;
 
 $footer-bg-color: #333;
 
@@ -80,7 +80,7 @@ $manifesto-title-font-size: 14px;
 ## Fonts Line Heights
 ===================================================================== */
 
-$base-title-line-height: 14px;
+$base-title-line-height: 16px;
 
 $sitename-line-height: 16px;
 $pagetitle-line-height: base-line-height;
@@ -88,7 +88,7 @@ $blocktitle-line-height: base-line-height;
 $title-line-height: 12px;
 $headline-line-height: 10px;
 $events-headline-line-height: 11px;
-$fact-line-height: 12px;
+$fact-line-height: 16px;
 $ts-line-height: 7px;
 $manifesto-line-height: 20px;
 $info-line-height: 14px;
@@ -102,7 +102,7 @@ $manifesto-title-line-height: $base-title-line-height;
 ===================================================================== */
 
 $base-row-height: 42px;
-$base-row-pad: 14px;
+$base-row-pad: 16px;
 
 /* ==================================================================
 ## Table

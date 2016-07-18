@@ -43,9 +43,10 @@
 
 
 /* .factsheet-gallery */
-#main-content-facts {}
+#main-content-facts {
 
-	.factsheet-gallery-container {
+	/*.factsheet-gallery-container {*/
+	.region {
 
 		@include clearfix;
 		@include layout((
@@ -57,7 +58,8 @@
 
 	}
 
-		/*li.facts*/.factsheet-gallery-item{
+		/*li.*//*.factsheet-gallery-item{*/
+		.block {
 
 			@include gallery(2 of 4);
     		margin-bottom: gutter(4);
@@ -73,7 +75,7 @@
 
 				margin: $base-row-pad 0;
 			}
-
+}
 
 /* ==================================================================
 ## Theme

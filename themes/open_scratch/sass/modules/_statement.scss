@@ -1,0 +1,44 @@
+/* ==================================================================
+ *
+ * statement (manifesto)
+ *
+===================================================================== */
+
+
+/* ==================================================================
+## Layout
+===================================================================== */
+
+.statement {}
+
+	.statement--title 	{	margin: $base-row-pad 0;	}
+	.statement--body p	{	margin: $base-row-pad 0;	}
+	.statement--more 	{	margin: $base-row-pad 0;	}
+
+
+/* ==================================================================
+## Typography
+===================================================================== */
+
+.title.statement--title { 
+
+	span, a, a:link, a:visited {
+
+		font-size: $manifesto-title-font-size;
+		line-height: $manifesto-title-line-height;
+		color: $manifesto-title-font-color;
+	}
+}
+
+.statement--body p {
+
+	/* p overrides */
+	font-size: $manifesto-font-size;
+	line-height: $manifesto-line-height;
+	color: $manifesto-font-color;
+}
+
+.more.statement--more {
+
+	/* subclass more link */
+}

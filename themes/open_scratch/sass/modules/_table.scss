@@ -1,0 +1,68 @@
+/* ==================================================================
+ *
+ * Table Base Style
+ *
+ * Perhaps this should be moved to _base.scss
+ *
+===================================================================== */
+
+/*.views-table {*/
+
+table {
+
+	width:100%;
+	display:table;
+	table-layout:fixed;
+
+	span, a, a:link, a:visited {
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $table-font-color;
+	}
+
+	a:hover{
+		text-decoration: underline;
+	}
+}
+
+	thead {
+		display: none;
+	}
+
+	tbody {
+		font-size: $table-font-size;
+		line-height: $table-row-height;
+		
+	}
+
+	tr {
+		border-top: 1px solid #e1e1e1;		
+		height: $table-row-height;
+	}
+
+	td {
+		display: block;
+		/*white-space: nowrap;*/
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+/*	td.year {
+		float: left;
+		width: $table-col1-width;
+
+	}
+
+	td.title {
+		float: left;
+		width: $table-col2-width;
+		text-align: right;
+
+	}
+
+	td.arrow {
+		float: right;
+		width: $table-col3-width;
+		text-align: right;
+
+	}*/

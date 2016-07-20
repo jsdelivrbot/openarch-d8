@@ -1,0 +1,58 @@
+/*
+ * Relations Component (Block view)
+ *
+ * LAYOUT:
+ *
+ * relations--header
+ * relations--header-left
+ * relations--header-right
+ * relations--gallery
+ * relations--gallery-list (ul)
+ * relations--gallery-item (li)
+ *
+ * CONTENT:
+ *
+ * relations--title (h2)
+ *
+ *
+ */
+
+
+/* ==================================================================
+## Layout
+===================================================================== */
+
+.relations {}
+
+	header {}
+
+		.relations--header-left 	{	margin: $base-row-pad 0;	}
+		.relations--header-right 	{	margin: $base-row-pad 0;	}
+
+	.relations-gallery {}
+
+		/*ul*/.gallery--container {}
+		/*li*/.gallery--item {}
+
+
+/* ==================================================================
+## Theme
+===================================================================== */
+
+.relations--header-left {}
+
+	.title.relations--title { /* subclass overrides for title */
+
+		h2, span, a, a:link, a:visited {
+
+			font-size: $blocktitle-font-size;
+			line-height: $blocktitle-line-height;
+			color: $blocktitle-font-color;
+		}
+	}
+
+.relations--header-right {}
+
+	.title.relations--icon{ /* subclass overrides for icon */
+
+	}

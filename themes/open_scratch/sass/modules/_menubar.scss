@@ -1,0 +1,60 @@
+/*
+ * Menubar Component
+ *
+ * LAYOUT:
+ *
+ *
+ *
+ * CONTENT:
+ *
+ *
+ *
+ */
+
+/* wrapper for menubar regions */
+.menubar-wrapper {
+
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:100;
+	height: $base-row-height;
+	background:white;
+
+	p, span, a{
+		line-height: $base-row-height;
+	}
+}
+
+	.menubar-header{
+		
+	}
+
+	.menubar-content{
+
+		span, a, a:link, a:visited{
+			font-size: $menu-font-size;
+			color: $menu-font-color;
+			text-decoration:none;
+		}
+
+		a:hover{
+			text-decoration: none;
+		}
+
+		h2{
+			display:none;
+		}
+	}
+
+	#menubar-content-primary{
+		/*display:none;*/
+	}
+
+	#menubar-content-secondary{
+		p, span, a{
+			text-align: right;
+		}
+	}
+

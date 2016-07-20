@@ -1,0 +1,26 @@
+/* ==================================================================
+## Menubar (Page Header)
+===================================================================== */
+
+.sitename {
+	a{
+		font-weight: bold;
+		font-size: $sitename-font-size;
+		text-transform: uppercase;
+		color: $openorange-color;
+		text-decoration:none;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+}
+
+.footer .sitename {
+	a{
+		font-weight: normal;
+		font-size: $sitename-font-size;
+		text-transform: uppercase;
+		color: lightgrey;
+		text-decoration:none;
+	}
+}

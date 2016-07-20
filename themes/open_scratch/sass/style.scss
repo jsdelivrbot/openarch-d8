@@ -2,23 +2,34 @@
 @import "susy";
 @import "su";
 
-
 /* Setup */
 @import "reset";
 @import "mixins";
 @import "variables";
 @import "fonts";
 @import "globals";
+
+/* layout */
 @import "layout";
 
-
-/* parts */
-@import "relations";
-@import "facts";
-@import "header";
+/* modules (ie components) */
+@import "./modules/tags";
+@import "./modules/title";
+@import "./modules/statement";
+@import "./modules/sitename";
+@import "./modules/gallery";
+@import "./modules/relations";
+@import "./modules/facts";
+@import "./modules/menubar";
+@import "./modules/toolbar";
+@import "./modules/slideshow";
+@import "./modules/card";
+@import "./modules/headlines";
+@import "./modules/teasers";
+@import "./modules/table";
+@import "./modules/projectstable";
+@import "./modules/menu";
+@import "./modules/footer";
+/*@import "header";
 @import "sidebar";
-@import "footer";
-
-
-
-
+@import "footer";*/

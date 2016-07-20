@@ -1,0 +1,33 @@
+/*
+ * Card Component: 
+ * A card has a title, some content, and some tags
+ *
+ * LAYOUT:
+ *
+ *
+ *
+ * CONTENT:
+ *
+ *
+ *
+ */
+
+/* layout */
+
+.card {}
+
+	.card--title {	margin: $base-row-pad 0;	}
+	.card--body p{	margin: $base-row-pad 0;	}
+	.card--tags {	margin: $base-row-pad 0;	}
+
+
+
+/* typogaphy */
+
+.card {}
+
+	.title.card--title {/**/}
+	.body.card--body p{/**/}
+	.tags.card--tags {/**/}
+
+

@@ -1,0 +1,56 @@
+/*
+ * Slideshow Component
+ *
+ * LAYOUT:
+ *
+ *
+ *
+ * CONTENT:
+ *
+ *
+ *
+ */
+
+	.slideshow{
+
+		/*.slidetitle { 
+			margin: $base-row-pad 0;
+		}*/
+		
+	}
+
+/*main*/
+
+ 	.slideshow{
+
+		/* override */
+		.views-field{
+			margin: 0;
+		}
+
+		.slide-title {
+			height: base-row-height;
+		}
+
+		.arrow {
+			height: base-row-height;
+			text-align: right;
+		}
+
+		.slide-title a {
+			line-height: $base-row-height;
+		}
+
+		.arrow a {
+			line-height: $base-row-height;
+		}
+
+		.slide-controls{
+			height: $base-row-height;
+		}
+
+		.slide-controls span{
+			line-height: $base-row-height;
+		}
+
+	}

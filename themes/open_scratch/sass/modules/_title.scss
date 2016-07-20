@@ -1,0 +1,75 @@
+/* ==================================================================
+## Main Content
+===================================================================== */
+
+/* Page Title */
+.main-content {
+}
+	%title {
+		h1, h2, h3, span, a, a:link, a:visited {
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+	}
+
+	.title {
+		h1, h2, h3, span, a, a:link, a:visited {
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: $title-font-size;
+			line-height: $title-line-height;
+			color: $title-font-color;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+	}
+
+	/* defined in block.html.twig */
+	.block-title{ 
+		@extend %title;
+		h2, span, a, a:link, a:visited {
+			font-size: $blocktitle-font-size;
+			line-height: $blocktitle-line-height;
+			color: $blocktitle-font-color;
+		}
+	}
+
+	
+
+	.node-title{ 
+		@extend %title;
+		h3, span, a, a:link, a:visited {
+			font-size: $title-font-size;
+			line-height: $title-line-height;
+			color: $title-font-color;
+		}
+	}
+
+	.job-title{ 
+		@extend %title;
+		h3, span, a, a:link, a:visited {
+			font-size: $jobtitle-font-size;
+			line-height: $title-line-height;
+			color: $title-font-color;
+		}
+	}
+
+	.row-title{}
+
+	
+
+	
+
+	.slide-caption{ 
+		@extend %title;
+		span, a, a:link, a:visited{
+			line-height: $slide-caption-line-height;
+			font-size: $slide-caption-font-size;
+			color: $slide-caption-font-color;
+		}
+	}
+

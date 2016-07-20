@@ -1,0 +1,51 @@
+/*
+ * Tags Component: 
+ *
+ * LAYOUT:
+ *
+ *
+ *
+ * CONTENT:
+ *
+ *
+ *
+ */
+
+/* ==================================================================
+## Tags Component
+===================================================================== */
+
+.tags, .more {
+
+	span{
+		font-size: $tags-font-size;
+		line-height: $tags-line-height;
+		color: $tags-font-color;
+		text-transform: uppercase;
+		text-decoration:none;
+	}
+
+	a, a:link, a:visited{
+		font-size: $tags-font-size;
+		line-height: $tags-line-height;
+		color: $tags-link-color;
+		text-transform: uppercase;
+		text-decoration:none;
+	}
+
+	a:hover{
+		text-decoration: underline;
+	}
+
+}
+
+.footnote {
+
+	p, span{
+		font-size: 11px;
+		line-height: 10px;
+		color: grey;
+		/*text-transform: uppercase;*/
+		text-decoration:none;
+	}
+}

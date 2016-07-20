@@ -120,3 +120,12 @@
 		text-decoration: none;
 	}
 }*/
+
+/* override block title size for facts */
+/*#main-content-facts{
+	.block-title{ 
+		h2, span, a, a:link, a:visited {
+			font-size: $facttitle-font-size;
+		}
+	}
+}*/

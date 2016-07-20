@@ -1,0 +1,78 @@
+/* ==================================================================
+ *
+ * Gallery
+ *
+===================================================================== */
+
+/*@mixin gallery-list{
+
+    @include clearfix;
+    @include layout((
+        gutter-position: before,
+        columns: 4,
+        gutters: 3/16,
+        global-box-sizing: border-box
+    ));
+
+}
+
+@mixin gallery-list-item{
+
+    @include gallery(2 of 4);
+    margin-bottom: gutter(4);
+}*/
+
+.gallery {}
+
+	.gallery--container{
+
+		@include gallery-list;
+	}
+
+	.gallery--item{
+
+		@include gallery-list-item;
+		background:#999;
+	}
+
+/* ==================================================================
+ *
+ * Relations Gallery
+ *
+===================================================================== */
+
+.relations-gallery {
+
+
+	/*ul*/.gallery--container{
+
+		/* overrides */
+	}
+
+		/*li*/.gallery--item{
+
+			/* overrides */
+		}
+	
+}
+
+/* ==================================================================
+ *
+ * Projects Gallery
+ *
+===================================================================== */
+
+.projects-gallery {
+
+
+	/*ul*/.gallery--container{
+
+		/* overrides */
+	}
+
+		/*li*/.gallery--item{
+
+			/* overrides */
+		}
+	
+}

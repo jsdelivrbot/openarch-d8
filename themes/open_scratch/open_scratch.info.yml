@@ -9,8 +9,8 @@ regions:
   header: 'Menubar header'
   menubar_primary: 'Primary menubar'
   menubar_secondary: 'Secondary menubar'
-  content_header_left: 'Left content header'
-  content_header_right: 'Right content header'
+  toolbar_left: "Left toolbar"
+  toolbar_right: "Right toolbar"
   content_slideshow: 'Media slideshow'
   content_primary: 'Main content'
   content_relations: 'Relations content'

@@ -1,0 +1,58 @@
+/*
+ * Toolbar Component
+ *
+ * LAYOUT:
+ *
+ *
+ *
+ * CONTENT:
+ *
+ *
+ *
+ */
+
+/*.main-wrapper {}*/
+
+	.toolbar {
+
+		/*padding: $base-row-pad 0;*/
+		height: $base-row-height;
+		margin-top:142px;
+		
+
+		p, span, a{
+			line-height: $base-row-height;
+		}
+	}
+
+		.toolbar-left{
+
+			/*background: lightgrey;*/
+		}
+
+		.toolbar-right{
+
+			/*background: grey;*/
+
+			p, span, a{
+				text-align: right;
+			}
+		}
+
+/* ==================================================================
+## Main Content Header
+===================================================================== */
+
+.toolbar {
+	h1, h2, h3, p, span, a, a:link, a:visited {
+		font-size: $pagetitle-font-size;
+		font-weight: heavy;
+		line-height: $pagetitle-line-height;
+		color: $pagetitle-font-color;
+		text-transform: uppercase;
+		text-decoration:none;
+	}
+	a:hover{
+			text-decoration: underline;
+		}
+}

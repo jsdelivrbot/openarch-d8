@@ -1,0 +1,82 @@
+
+
+/* ==================================================================
+## Projects Table subclass
+===================================================================== */
+
+.projects-table {
+
+	table {
+
+		td.year {
+			float: left;
+			width: $table-col1-width;
+		}
+
+		td.title {
+			float: left;
+			width: $table-col2-width;
+			text-align: right;
+		}
+
+		td.arrow {
+			float: right;
+			width: $table-col3-width;
+			text-align: right;
+		}
+	}
+}
+
+/* ==================================================================
+## Awards Table subclass
+===================================================================== */
+
+.awards-table {
+
+	table {
+
+		td.year {
+			float: left;
+			width: $table-col1-width;
+		}
+
+		td.title {
+			float: left;
+			width: $table-col2-width;
+			text-align: right;
+		}
+
+		td.arrow {
+			float: right;
+			width: $table-col3-width;
+			text-align: right;
+		}
+	}
+}
+
+/* ==================================================================
+## Press Table subclass
+===================================================================== */
+
+.press-table {
+
+	table {
+
+		td.year {
+			float: left;
+			width: $table-col1-width;
+		}
+
+		td.title {
+			float: left;
+			width: $table-col2-width;
+			text-align: right;
+		}
+
+		td.arrow {
+			float: right;
+			width: $table-col3-width;
+			text-align: right;
+		}
+	}
+}

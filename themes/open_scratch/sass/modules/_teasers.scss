@@ -1,0 +1,89 @@
+/* ==================================================================
+ *
+ * Teaser Listings
+ *
+===================================================================== */
+
+
+/* ==================================================================
+## Layout
+===================================================================== */
+
+.teasers {}
+
+	.teaser {border-top: 1px solid lightgrey;}
+	
+		.teaser--title 		{	margin: $base-row-pad 0;	}
+		.teaser--thumb 		{	margin: $base-row-pad 0;	}
+		.teaser--body p 	{	margin: $base-row-pad 0;	}
+		.teaser--tags 		{	margin: $base-row-pad 0;	}
+		.teaser--footnote	{	margin: $base-row-pad 0;	}
+
+
+/* ==================================================================
+## Typography
+===================================================================== */
+
+.teasers {}
+
+	.title.teaser--title 	{
+
+		/* subclass overrides */
+		h3, span, a, a:link, a:visited {
+
+			font-size: $base-font-size;
+			line-height: $base-line-height;
+			color: $base-font-color;
+			/*text-decoration: underline;*/
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+	}
+
+	.thumb.teaser--thumb 	{/* subclass overrides */}
+	.teaser--body 			{/* overrides */}
+	.tags.teaser--tags 		{/* subclass overrides */}
+
+
+/* ==================================================================
+ *
+ * Events listing (teasers)
+ *
+===================================================================== */
+
+.events-teasers {}
+
+	.events-teaser >
+
+		.teaser--title {
+
+			/* subclass overrides */
+			h3, span, a, a:link, a:visited {
+
+				text-decoration: underline;
+			}
+		}
+
+/* ==================================================================
+ *
+ * Jobs listing (teasers)
+ *
+===================================================================== */
+
+.jobs-teasers > 
+
+	footer {
+
+		border-top: 1px solid lightgrey;
+	}
+
+	.jobs-teaser >
+
+		.teaser--title {
+
+			/* title overrides */
+			h3, span, a, a:link, a:visited {
+
+			}
+		}

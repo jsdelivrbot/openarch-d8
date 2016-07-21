@@ -13,56 +13,54 @@ table {
 	width:100%;
 	display:table;
 	table-layout:fixed;
-
-	span, a, a:link, a:visited {
-		text-transform: uppercase;
-		text-decoration: none;
-		color: $table-font-color;
-	}
-
-	a:hover{
-		text-decoration: underline;
-	}
 }
 
 	thead {
+		
 		display: none;
 	}
 
 	tbody {
+
 		font-size: $table-font-size;
-		line-height: $table-row-height;
-		
+		text-transform: uppercase;	
 	}
 
 	tr {
-		border-top: 1px solid #e1e1e1;		
-		height: $table-row-height;
+
+		border-top: 1px solid #e1e1e1;	
+
+		&:hover {
+			background-color: #f5f5f5;
+		}	
 	}
 
 	td {
-		display: block;
-		/*white-space: nowrap;*/
+		/*display: block;*/
+		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
 
-/*	td.year {
-		float: left;
-		width: $table-col1-width;
+	/* make links in cells easily selectable */
+	td > a,
+	td > span,
+	td > time {
 
+		display: block;
+		height: $table-row-height;
+		line-height: $table-row-height;
+
+		text-decoration: none;
+		color: $table-font-color;
 	}
 
-	td.title {
-		float: left;
-		width: $table-col2-width;
-		text-align: right;
-
+	/*td*/.data.data--left {
+		float:left;
+		text-align:left;
 	}
 
-	td.arrow {
-		float: right;
-		width: $table-col3-width;
-		text-align: right;
-
-	}*/
+	/*td*/.data.data--right {
+		float:right;
+		text-align:right;
+	}

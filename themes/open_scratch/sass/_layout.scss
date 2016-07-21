@@ -48,14 +48,14 @@ $susy: (
   columns: 4,
   gutters: 3/8,
   /*column-width: false,*/
-  global-box-sizing: border-box,
+  global-box-sizing: border-box
   /*last-flow: to,*/
-  debug: (
+  /*debug: (
     image: show-columns,
     color: rgba(#AEEFF2, .15),
     output: overlay,
     toggle: top right,
-  )
+  )*/
   /*use-custom: (
     background-image: true,
     background-options: false,
@@ -81,7 +81,7 @@ $susy: (
 }
 
 	.menubar-header{
-		@include span(3 of 4);
+		@include span(2 of 4);
 		float:left;
 	}
 
@@ -90,7 +90,7 @@ $susy: (
 	}
 
 	#menubar-content-secondary{
-		@include span(1 of 4 last);
+		@include span(2 of 4 last);
 		float:right;
 	}
 
@@ -129,20 +129,10 @@ $susy: (
 			
 		}
 
-		.slide {background: lightgrey;}
-
-		.slide-title {
-			@include span(3 of 4);
-			float:left;
-		}
-
-		.arrow {
-			@include span(1 of 4 last);
-			float:right;
-		}
+		
 
 		.slide-controls{
-			@include span(4);
+			/*@include span(4);*/
 		}
 
 	}
@@ -154,7 +144,7 @@ $susy: (
 	#main-content-primary {
 
 		.card, .statement {
-			border-top: 1px solid #e1e1e1;
+			
 		}
 
 		/* recent news temp overrides */

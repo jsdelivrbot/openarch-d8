@@ -21,13 +21,13 @@
           </a>
         </li>
       {% endif %}
-      {% if items.current %}
+      {# {% if items.current %}
         <li>
           {% trans %}
             Page {{ items.current }}
           {% endtrans %}
         </li>
-      {% endif %}
+      {% endif %} #}
       {% if items.next %}
         <li>
           <a href="{{ items.next.href }}" title="{{ 'Go to next page'|t }}" rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}>

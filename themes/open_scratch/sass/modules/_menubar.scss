@@ -12,49 +12,51 @@
  */
 
 /* wrapper for menubar regions */
-.menubar-wrapper {
+.menubar {
 
 	width:100%;
 	position:fixed;
 	top:0;
 	left:0;
 	z-index:100;
-	height: $base-row-height;
 	background:white;
 
-	p, span, a{
-		line-height: $base-row-height;
-	}
 }
 
 	.menubar-header{
+
+		a, a:link, a:visited{
+			display: block;
+			height: $base-row-height;
+			line-height: $base-row-height;
+		}
+
+		a:hover{
+			text-decoration: none;
+		}
 		
 	}
 
-	.menubar-content{
+	.menubar-primary{
+		/*display:none;*/
+	}
 
-		span, a, a:link, a:visited{
-			font-size: $menu-font-size;
-			color: $menu-font-color;
-			text-decoration:none;
+	.menubar-secondary{
+		
+		/* debug */
+		background: #f5f5f5;
+
+		a, a:link, a:visited{
+			display: inline-block;
+			line-height: $base-row-height;
+			height: $base-row-height;
+			width: $base-row-height;
+			float:right;
 		}
 
 		a:hover{
 			text-decoration: none;
 		}
 
-		h2{
-			display:none;
-		}
-	}
-
-	#menubar-content-primary{
-		/*display:none;*/
-	}
-
-	#menubar-content-secondary{
-		p, span, a{
-			text-align: right;
-		}
 	}
 

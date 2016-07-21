@@ -26,11 +26,14 @@
 	}
 
 	a, a:link, a:visited{
+		display: inline-block;
 		font-size: $tags-font-size;
-		line-height: $tags-line-height;
+		line-height: $base-row-height;
+		height: $base-row-height;
 		color: $tags-link-color;
 		text-transform: uppercase;
 		text-decoration:none;
+		padding: 0 3px;
 	}
 
 	a:hover{

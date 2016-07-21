@@ -42,6 +42,7 @@ $footer-bg-color: #333;
 
 $slide-caption-font-color: $lighter-font-color;
 
+$table-title-font-color: $darker-font-color;
 $table-font-color: $darker-font-color;
 
 
@@ -53,13 +54,14 @@ $manifesto-title-font-color: $darker-font-color;
 ===================================================================== */
 
 /* Sizing Pallete */
-$base-font-size: 12px;
+$base-font-size: .9em;
 
 $sitename-font-size: 15px;
+$icon-font-size: 14px;
 $pagetitle-font-size: 12px;
 $blocktitle-font-size: 12px;
 $facttitle-font-size: 11px;
-$title-font-size: 12px;
+$title-font-size: 14px;
 $jobtitle-font-size: 12px;
 $headline-font-size: 11px;
 $events-headline-font-size: 12px;
@@ -71,6 +73,7 @@ $tags-font-size: 10px;
 
 $slide-caption-font-size: 11px;
 
+$table-title-font-size: 12px;
 $table-font-size: 11px;
 
 $manifesto-title-font-size: 14px;
@@ -80,11 +83,12 @@ $manifesto-title-font-size: 14px;
 ## Fonts Line Heights
 ===================================================================== */
 
-$base-title-line-height: 16px;
+$base-title-line-height: 1.5; /*16px;*/
 
 $sitename-line-height: 16px;
 $pagetitle-line-height: base-line-height;
 $blocktitle-line-height: base-line-height;
+$table-title-line-height: 12px;
 $title-line-height: 12px;
 $headline-line-height: 10px;
 $events-headline-line-height: 11px;

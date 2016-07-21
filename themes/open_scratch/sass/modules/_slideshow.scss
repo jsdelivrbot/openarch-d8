@@ -16,6 +16,28 @@
 		/*.slidetitle { 
 			margin: $base-row-pad 0;
 		}*/
+
+		.slide--container{
+			@include clearfix;
+	   		@include layout((
+		        gutter-position: before,
+		        columns: 4,
+		        gutters: 3/16,
+		        global-box-sizing: border-box
+    		));
+		}
+
+			.slide {background: lightgrey;}
+
+			.slide-title {
+				@include span(3 of 4);
+				float:left;
+			}
+
+			.arrow {
+				@include span(1 of 4 last);
+				float:right;
+			}
 		
 	}
 

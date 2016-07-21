@@ -4,79 +4,85 @@
 ## Projects Table subclass
 ===================================================================== */
 
-.projects-table {
+.projects-table {}
 
-	table {
+	table {}
 
-		td.year {
-			float: left;
+		td.data.projects--year {
 			width: $table-col1-width;
 		}
 
-		td.title {
-			float: left;
+		td.data.projects--name {
 			width: $table-col2-width;
-			text-align: right;
 		}
 
-		td.arrow {
-			float: right;
+		td.data.projects--year {
 			width: $table-col3-width;
-			text-align: right;
 		}
-	}
-}
+
 
 /* ==================================================================
 ## Awards Table subclass
 ===================================================================== */
 
-.awards-table {
+.title.awards--title {
 
-	table {
+	/*margin-bottom: $base-row-pad * 2;*/
+	width: 50%;
 
-		td.year {
-			float: left;
-			width: $table-col1-width;
-		}
-
-		td.title {
-			float: left;
-			width: $table-col2-width;
-			text-align: right;
-		}
-
-		td.arrow {
-			float: right;
-			width: $table-col3-width;
-			text-align: right;
-		}
+	h2, a {
+/*		text-transform: uppercase;
+		text-decoration: none;*/
+		font-size: $table-title-font-size;
+		line-height: $table-title-line-height;
+		color: $table-title-font-color;
 	}
+
 }
+
+.awards {
+
+	margin-bottom: 50px;
+
+	table {}
+
+		caption {
+			text-align: right;
+			/*border-bottom: 1px solid #999;*/
+		}
+
+		caption > time {
+
+			font-size: $title-font-size;
+			line-height: $title-line-height;
+			color: $title-font-color;
+		}
+}
+
+		tr {}
+
+		td.data.awards--name {
+			width: 90%;
+		}
+	
 
 /* ==================================================================
 ## Press Table subclass
 ===================================================================== */
 
-.press-table {
+.press-table {}
 
-	table {
+	table {}
 
-		td.year {
-			float: left;
+		/*td*/.data.press--year {
 			width: $table-col1-width;
 		}
 
-		td.title {
-			float: left;
+		/*td*/.data.press--name {
 			width: $table-col2-width;
 			text-align: right;
 		}
 
-		td.arrow {
-			float: right;
+		/*td*/.data.press--icon {
 			width: $table-col3-width;
-			text-align: right;
 		}
-	}
-}

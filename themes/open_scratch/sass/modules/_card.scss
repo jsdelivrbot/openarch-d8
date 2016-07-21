@@ -14,11 +14,15 @@
 
 /* layout */
 
-.card {}
+.card {
 
-	.card--title {	margin: $base-row-pad 0;	}
-	.card--body p{	margin: $base-row-pad 0;	}
-	.card--tags {	margin: $base-row-pad 0;	}
+	border-top: 1px solid #e1e1e1;
+}
+
+	.card--title 	{	margin: $base-row-pad 0;	}
+	.card--slide 	{	/**/	}
+	.card--body p 	{	margin: $base-row-pad 0;	}
+	.card--tags 	{	/**/	}
 
 
 
@@ -31,3 +35,16 @@
 	.tags.card--tags {/**/}
 
 
+
+/* card types (ie. subclasses) */
+
+.card.practice--card {}
+
+.card.profile--card { 
+
+	border: none;
+
+	.card--body{
+		margin-bottom: 50px;
+	} 
+}

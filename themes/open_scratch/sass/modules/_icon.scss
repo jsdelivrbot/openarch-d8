@@ -1,0 +1,19 @@
+/* ==================================================================
+## Menubar (Page Header)
+===================================================================== */
+
+.icon--container {}
+
+	.icon {
+		a, a:link, a:visited{
+
+			text-align:center;
+			font-size: $icon-font-size;
+			color: $menu-font-color;
+			text-decoration:none;
+			background: lightgrey;
+
+			&:hover {text-decoration: none;}
+		}
+	}
+

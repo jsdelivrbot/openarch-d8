@@ -11,7 +11,7 @@
  */
 #}
 {% spaceless %}
-  <select{{ attributes }}>
+  <select{{ attributes }} onchange="this.form.submit()">
     {% for option in options %}
       {% if option.type == 'optgroup' %}
         <optgroup label="{{ option.label }}">

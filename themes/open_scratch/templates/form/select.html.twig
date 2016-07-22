@@ -11,7 +11,8 @@
  */
 #}
 {% spaceless %}
-  <select{{ attributes }} onchange="this.form.submit()">
+  <span class="custom-dropdown custom-dropdown--white">
+  <select{{ attributes.addClass('custom-dropdown__select custom-dropdown__select--white') }} onchange="this.form.submit()">
     {% for option in options %}
       {% if option.type == 'optgroup' %}
         <optgroup label="{{ option.label }}">

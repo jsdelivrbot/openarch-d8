@@ -30,12 +30,12 @@
 			.slide {background: lightgrey;}
 
 			.slide-title {
-				@include span(3 of 4);
+				width: span(3 of 4);
 				float:left;
 			}
 
 			.arrow {
-				@include span(1 of 4 last);
+				width: span(1 of 4);
 				float:right;
 			}
 		

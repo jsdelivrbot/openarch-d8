@@ -8,16 +8,20 @@
 
 	table {}
 
-		td.data.projects--year {
+		td.data.projects--year,
+		td.data.projects--city {
 			width: $table-col1-width;
+			padding-left:1em;
 		}
 
 		td.data.projects--name {
 			width: $table-col2-width;
+			text-align: right;
 		}
 
-		td.data.projects--year {
+		td.data.projects--icon {
 			width: $table-col3-width;
+			text-align: center;
 		}
 
 

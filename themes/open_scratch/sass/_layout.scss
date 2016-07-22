@@ -107,12 +107,12 @@ $susy: (
 	}
 
 		.toolbar-left{
-			@include span(3 of 4);
+			@include span(2 of 4);
 			float:left;
 		}
 
 		.toolbar-right{
-			@include span(1 of 4 last);
+			@include span(2 of 4 last);
 			float:right;
 		}
 
@@ -129,10 +129,8 @@ $susy: (
 			
 		}
 
-		
-
 		.slide-controls{
-			/*@include span(4);*/
+			@include span(4);
 		}
 
 	}
@@ -187,7 +185,7 @@ $susy: (
 		@include clearfix;
 
 		.region{
-			border-top: 1px solid #666;	
+			border-top: 1px solid #e5e5e5;	
 		}	
 
 	}

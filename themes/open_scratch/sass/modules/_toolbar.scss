@@ -16,11 +16,10 @@
 	.toolbar {
 
 		/*padding: $base-row-pad 0;*/
-		height: $base-row-height;
 		margin-top:142px;
 		
-
 		p, span, a{
+			height: $base-row-height;
 			line-height: $base-row-height;
 		}
 	}
@@ -32,11 +31,14 @@
 
 		.toolbar-right{
 
-			/*background: grey;*/
+			/* debug */
+			/*background: #f5f5f5;*/
 
-			p, span, a{
-				text-align: right;
-			}
+		a, a:link, a:visited{
+			display: inline-block;
+			width: $base-row-height;
+			float:right;
+		}
 		}
 
 /* ==================================================================
@@ -44,15 +46,18 @@
 ===================================================================== */
 
 .toolbar {
+
 	h1, h2, h3, p, span, a, a:link, a:visited {
-		font-size: $pagetitle-font-size;
+		font-size: $toolbar-font-size;
 		font-weight: heavy;
 		line-height: $pagetitle-line-height;
 		color: $pagetitle-font-color;
 		text-transform: uppercase;
 		text-decoration:none;
 	}
+
 	a:hover{
-			text-decoration: underline;
-		}
+
+		text-decoration: underline;
+	}
 }

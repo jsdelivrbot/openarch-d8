@@ -11,9 +11,23 @@
 
 .headlines {}
 
-	.headlines--title 		{	margin: $base-row-pad 0;	}
-	.headlines--headline 	{	margin: $base-row-pad 0;	}
-	.headlines--more 		{	margin-top: $base-row-pad*2;	}
+	.headlines--title 		{	
+		margin: $base-row-pad 0;	
+	}
+
+	.headlines--headline 	{	
+		/*margin: $base-row-pad 0;*/	
+	    border-bottom: 1px solid #f1f1f1;
+		padding: $base-row-pad 0;
+
+		&:hover{
+			background: #e5e5e5;
+		}
+	}
+
+	.headlines--more 		{	
+		margin-top: $base-row-pad;	
+	}
 
 
 /* ==================================================================

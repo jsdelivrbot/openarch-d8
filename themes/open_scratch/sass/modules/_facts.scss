@@ -1,4 +1,5 @@
-/*
+/* ==================================================================
+ *
  * Factsheet Component (Block view)
  *
  * LAYOUT:
@@ -15,7 +16,7 @@
  * factsheet--title (h2)
  *
  *
- */
+===================================================================== */
 
 
 
@@ -103,29 +104,3 @@
 
 }
 
-/* ==================================================================
-## Facts - tmp
-===================================================================== */
-
-/*.fact, .multifact{
-
-	p, span, a, a:link, a:visited, .field-content{
-		font-size: $fact-font-size;
-		line-height: $fact-line-height;
-		color: $fact-font-color;
-		text-decoration:none;
-	}
-
-	a:hover{
-		text-decoration: none;
-	}
-}*/
-
-/* override block title size for facts */
-/*#main-content-facts{
-	.block-title{ 
-		h2, span, a, a:link, a:visited {
-			font-size: $facttitle-font-size;
-		}
-	}
-}*/

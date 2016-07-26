@@ -13,17 +13,41 @@ $base-line-height: 18px;
 ## Colors
 ===================================================================== */
 
-/* Color Pallete */
+/* constants */
 $base-font-color: 			#505050;
 $lighter-font-color: 		#777;
-$darker-font-color: 		333;
+$darker-font-color: 		#333;
 $darker-font-color: 		#000;
 $openorange-color: 			#ff9d00;
 $opengrey-color: 			#888;
 $link-font-color: 			#98a6bc;
 
+/* config */
 $pagetitle-font-color: 		$darker-font-color;
 $blocktitle-font-color: 	$darker-font-color;
+
+/* config */
+/* base */
+$base-title-font-color: 	$darker-font-color;
+$base-body-font-color: 		$base-font-color;
+$base-tag-font-color: red;
+$base-more-font-color: red;
+$base-cell-font-color: red;
+$base-icon-font-color: red;
+
+
+/* slideshow */
+
+$slide-icon-font-color: red;
+
+/* manifesto */
+$statement-title-font-color: red;
+$statement-body-font-color: red;
+$statement-more-font-color: red;
+
+/* recent news */
+
+
 $title-font-color: 			$darker-font-color;
 $menu-font-color: 			$base-font-color;
 $manifesto-font-color: 		$lighter-font-color;
@@ -35,15 +59,15 @@ $foot-font-color: 			$base-font-color;
 
 
 $title-link-color: 			$title-font-color;
-$tags-link-color: 			$link-font-color;
+
 $menu-link-color: 			$menu-font-color;
 
-$footer-bg-color: #333;
+$footer-bg-color: 			#333;
 
-$slide-caption-font-color: $lighter-font-color;
 
-$table-title-font-color: $darker-font-color;
-$table-font-color: $darker-font-color;
+
+$table-title-font-color: 	$darker-font-color;
+$table-font-color: 			$darker-font-color;
 
 
 $manifesto-title-font-color: $darker-font-color;
@@ -53,8 +77,18 @@ $manifesto-title-font-color: $darker-font-color;
 ## Fonts Size
 ===================================================================== */
 
-/* Sizing Pallete */
-$base-font-size: .9em;
+$base-h1-font-size:			1.2em;
+$base-h2-font-size:			1.0em;
+$base-h3-font-size:			0.9em;
+
+/* base */
+$base-font-size: 			.9em;
+$base-title-font-size: 		.9em;
+$base-body-font-size: 		red;
+$base-tag-font-size: 		red;
+$base-more-font-size: 		red;
+$base-cell-font-size: 		red;
+$base-icon-font-size: 		red;
 
 $sitename-font-size: 15px;
 $icon-font-size: 14px;
@@ -63,15 +97,15 @@ $blocktitle-font-size: 12px;
 $facttitle-font-size: 11px;
 $title-font-size: 14px;
 $jobtitle-font-size: 12px;
-$headline-font-size: 11px;
+
 $events-headline-font-size: 12px;
 $menu-font-size: 12px;
 $manifesto-font-size: 1.0em;
 $fact-font-size: 11px;
 $ts-font-size: 10px;
-$tags-font-size: 10px;
 
-$slide-caption-font-size: 11px;
+
+
 
 $table-title-font-size: 12px;
 $table-font-size: 11px;
@@ -92,13 +126,13 @@ $pagetitle-line-height: base-line-height;
 $blocktitle-line-height: base-line-height;
 $table-title-line-height: 12px;
 $title-line-height: 12px;
-$headline-line-height: 10px;
+
 $events-headline-line-height: 11px;
 $fact-line-height: 16px;
 $ts-line-height: 7px;
 $manifesto-line-height: 1.5;
 $info-line-height: 14px;
-$tags-line-height: $base-line-height;
+
 $slide-caption-line-height: $base-line-height;
 
 $manifesto-title-line-height: $base-title-line-height;

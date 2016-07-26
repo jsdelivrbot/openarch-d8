@@ -70,9 +70,21 @@ $base-font-size:16px;
 ## ++ Grid
 ========================================================================== */
 
-@mixin gallery-list {
+@mixin grid-minor-4col {
 
     @include clearfix;
+    @include layout((
+        gutter-position: before,
+        columns: 4,
+        gutters: 3/16,
+        global-box-sizing: border-box
+    ));
+
+}
+
+@mixin gallery-list {
+
+    
     @include layout((
         gutter-position: before,
         columns: 4,

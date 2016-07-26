@@ -1,78 +1,126 @@
-/*
- * Slideshow Component
+/* ==================================================================
  *
- * LAYOUT:
+ * 								Slideshow
  *
- *
- *
- * CONTENT:
- *
- *
- *
- */
+===================================================================== */
+ 
+/* ==================================================================
+## Config
+===================================================================== */
 
-	.slideshow{
+$slideshow-base-font-size:		1rem;
+$slide-titlebar-font-size: 		0.7em;
+$slide-titlebar-height:			$base-row-height;
+$slide-titlebar-font-color: 	$lighter-font-color;
 
-		/*.slidetitle { 
-			margin: $base-row-pad 0;
-		}*/
+/* ==================================================================
+## Layout
+===================================================================== */
 
-		.slide--container{
-			@include clearfix;
-	   		@include layout((
-		        gutter-position: before,
-		        columns: 4,
-		        gutters: 3/16,
-		        global-box-sizing: border-box
-    		));
-		}
+.slideshow {
 
-			.slide {background: lightgrey;}
+	&__slide{
 
-			.slide-title {
-				width: span(3 of 4);
-				float:left;
-			}
-
-			.arrow {
-				width: span(1 of 4);
-				float:right;
-			}
-		
 	}
 
-/*main*/
+		&__image {
 
- 	.slideshow{
-
-		/* override */
-		.views-field{
-			margin: 0;
 		}
 
-		.slide-title {
-			height: base-row-height;
+		&__titlebar { /*.titlebar*/
+
+			@include clearfix;
+
+   			@include layout((
+		        gutter-position: 	before,
+		        columns: 			8,
+		        gutters: 			3/8,
+		        global-box-sizing: 	border-box
+			));
 		}
 
-		.arrow {
-			height: base-row-height;
-			text-align: right;
+			&__title { /*.title*/
+				width: 	span(7 of 8);
+				float:	left;
+			}
+
+			&__icon{ /*.icon*/
+				width: 	span(1 of 8);
+				float:	right;
+			}
+
+}
+
+
+/* ==================================================================
+## Type
+===================================================================== */
+
+.slideshow{
+
+	font-size: 				$slideshow-base-font-size;
+
+	.views-field{			/* shame */
+		margin: 0;
+	}
+
+	&__titlebar { 			/*.titlebar*/
+		&:hover {
+			background:		#e5e5e5;
+		}
+	}
+
+		&__title {			/* .title subclass */
+			
 		}
 
-		.slide-title a {
-			line-height: $base-row-height;
+		&__title > a, 
+		&__title > a:link, 
+		&__title > a:visited {
+			display:		block;
+			font-size: 		$slide-titlebar-font-size;
+			color: 			$slide-titlebar-font-color;
+			height: 		$slide-titlebar-height;
+			line-height: 	$slide-titlebar-height;
 		}
 
-		.arrow a {
-			line-height: $base-row-height;
+		&__icon {			/* .title subclass */
+			&:hover {
+				background:	#e8e8e8;
+			}
+		}
+
+		&__icon > a {
+			display:		block;
+			height: 		$slide-titlebar-height;
+			line-height: 	$slide-titlebar-height;
 		}
 
 		.slide-controls{
-			height: $base-row-height;
+			height: 		$slide-titlebar-height;
 		}
 
 		.slide-controls span{
-			line-height: $base-row-height;
+			line-height: 	$slide-titlebar-height;
 		}
 
-	}
+}
+
+
+/* ==================================================================
+## Debug
+===================================================================== */
+
+/*.slideshow {
+
+	&__slide{			border: 1px solid red;
+	}	
+		&__image { 		background: lightgrey;	
+		}
+		&__titlebar { 	background: #e5e5e5;	
+		}
+			&__title {	background: grey;
+			}
+			&__icon {	background: darkgrey;
+			}
+}*/

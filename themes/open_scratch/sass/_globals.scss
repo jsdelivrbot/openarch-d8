@@ -1,19 +1,49 @@
 /* =======================================================================
 ## ++ Globals
 ========================================================================== */
-html{
-    font-size: 100%;
+html {
+  font-size: 17px;
+}
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
 }
 
 body{
+	/*font-size: 100%;*/
+	color: $base-font-color;	
+	/*line-height: 1.125em;*/ /* 16×1.125=18px */
     -webkit-font-smoothing: antialiased;
     font-family: $base-font-family;
-    background: #white;
+    /*background: #white;*/
 }
 
 *, *:before, *:after{
+	padding: 0;
+	margin: 0;
     box-sizing:border-box;
 }
+
+/* only apply font-size and line-height to elements so don't have issue w/ cascading sizes */
+p {
+	font-size: 		$base-font-size; 
+	line-height: 	$base-line-height;		
+}
+h1 {
+	font-size: 		$base-h1-font-size;
+	line-height: 	$base-line-height;	
+}
+h2 {
+	font-size: 		$base-h2-font-size;
+	line-height: 	$base-line-height;
+}
+h3 {
+	font-size: 		$base-h3-font-size;
+	line-height: 	$base-line-height;	
+}
+
 
 
 /* =======================================================================
@@ -27,7 +57,7 @@ body{
 }
 
 /* float clearing for IE7 */
-*+html .clearfix{
+* + html .clearfix{
  min-height: 1%;
 }
 

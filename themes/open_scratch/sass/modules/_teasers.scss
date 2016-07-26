@@ -87,3 +87,12 @@
 
 			}
 		}
+
+		.job-title{ 
+				/*@extend %title;*/
+				h3, span, a, a:link, a:visited {
+					font-size: $jobtitle-font-size;
+					line-height: $title-line-height;
+					color: $title-font-color;
+				}
+			}

@@ -6,51 +6,77 @@
 
 
 /* ==================================================================
+## Config
+===================================================================== */	
+
+$headlines-base-font-size:		1rem;
+$headline-font-size: 			0.8em;
+$headline-line-height: 			1.1;
+
+
+/* ==================================================================
 ## Layout
 ===================================================================== */
 
-.headlines {}
+.headlines {
 
-	.headlines--title 		{	
-		margin: $base-row-pad 0;	
+	&__title 		{	
+		margin: 			$base-row-pad 0;	
 	}
 
-	.headlines--headline 	{	
-		/*margin: $base-row-pad 0;*/	
-	    border-bottom: 1px solid #f1f1f1;
-		padding: $base-row-pad 0;
+	&__headline 	{	
+		/*margin: 			$base-row-pad 0;*/	
+	    border-bottom: 		1px solid #f1f1f1;
+		padding: 			$base-row-pad 0;
 
 		&:hover{
-			background: #e5e5e5;
+			background: 	#e5e5e5;
 		}
 	}
 
-	.headlines--more 		{	
-		margin-top: $base-row-pad;	
+	&__more 		{	
+		margin-top: 		$base-row-pad;	
 	}
-
+}
 
 /* ==================================================================
 ## Typography
 ===================================================================== */
 
-.title.headlines--title {
+.headlines {
 
-	/* title subclass overrides */
-}
+	&__title {
 
-.title.headlines--headline { 
+		/* title subclass overrides */
+	}
 
-	h3, span, a, a:link, a:visited {
+	&__headline { 
 
-		font-size: $headline-font-size;
-		line-height: $headline-line-height;
-		color: $headline-font-color;
-		text-decoration: underline;
+		a, a:link, a:visited {
+
+			font-size: 			$headline-font-size;
+			line-height: 		$headline-line-height;
+			color: 				$headline-font-color;
+			text-decoration: 	underline;
+		}
+	}
+
+	&__more {
+
+		/* more link subclass overrides */
 	}
 }
 
-.more.headlines--more {
+/* ==================================================================
+## Debug
+===================================================================== */	
 
-	/* more link subclass overrides */
-}
+/*.headlines {
+
+	border: 1px solid red;	
+	
+	&__title 	{	background: #e5e5e5;	}
+	&__headline	{	background: #e5e5e5;	}
+	&__more 	{	background: lightgrey;	}
+
+}*/

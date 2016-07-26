@@ -12,43 +12,53 @@
  */
 
 /* ==================================================================
+## Config
+===================================================================== */	
+
+$tags-font-size:		0.7em;
+$tags-link-color: 		$link-font-color;
+$tags-link-height:		$base-row-height;
+
+/* ==================================================================
 ## Tags Component
 ===================================================================== */
 
 .tags, .more {
 
-	span{
-		font-size: $tags-font-size;
-		line-height: $tags-line-height;
-		color: $tags-font-color;
-		text-transform: uppercase;
-		text-decoration:none;
-	}
+
+
+	/*span{
+		font-size: 			$tags-font-size;
+		line-height: 		$tags-link-height;
+		color: 				$tags-font-color;
+		text-transform: 	uppercase;
+		text-decoration:	none;
+	}*/
 
 	a, a:link, a:visited{
-		display: inline-block;
-		font-size: $tags-font-size;
-		line-height: $base-row-height;
-		height: $base-row-height;
-		color: $tags-link-color;
-		text-transform: uppercase;
-		text-decoration:none;
-		padding: 0 3px;
+		display: 			inline-block;
+		font-size: 			$tags-font-size;
+		line-height: 		$tags-link-height;
+		height: 			$tags-link-height;
+		color: 				$tags-link-color;
+		text-transform: 	uppercase;
+		text-decoration:	none;
+		padding: 			0 3px; /* horizontal space btn tags */
 	}
 
 	a:hover{
-		text-decoration: underline;
+		text-decoration: 	underline;
+		background: #e5e5e5;
 	}
 
 }
 
-.footnote {
+/*.footnote {
 
 	p, span{
-		font-size: 11px;
-		line-height: 10px;
-		color: grey;
-		/*text-transform: uppercase;*/
-		text-decoration:none;
+		font-size: 			11px;
+		line-height: 		10px;
+		color: 				grey;
+		text-decoration:	none;
 	}
-}
+}*/

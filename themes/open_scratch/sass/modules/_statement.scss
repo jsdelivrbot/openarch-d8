@@ -1,8 +1,25 @@
 /* ==================================================================
  *
+ *
  * statement (manifesto)
  *
+ *
 ===================================================================== */
+
+
+/* ==================================================================
+## Config
+===================================================================== */	
+
+$statement-base-font-size:		1rem;
+
+/*$statement-title-font-size	1em;*/
+/*$statement-title-line-height:	1.5;*/
+/*$statement-title-font-color:	$base-title-font-color;*/
+
+$statement-body-font-size:		1em;
+/*$statement-body-line-height:	1.5;
+$statement-body-font-color:		$base-body-font-color;*/
 
 
 /* ==================================================================
@@ -11,34 +28,50 @@
 
 .statement {}
 
-	.statement--title 	{	margin: $base-row-pad 0; display:none;	}
-	.statement--body p	{	margin: $base-row-pad $base-row-pad/2;	}
-	.statement--more 	{	margin-top: $base-row-pad*2;	}
+	.statement__title 	{	margin: $base-row-pad 0;	}
+	.statement__body p	{	margin: $base-row-pad $base-row-pad;	}
+	.statement__more 	{	margin-top: $base-row-pad*2;	}
 
 
 /* ==================================================================
 ## Typography
 ===================================================================== */
 
-.title.statement--title { 
+.statement {
 
-	span, a, a:link, a:visited {
+	font-size: 			$statement-base-font-size;
 
-		font-size: $manifesto-title-font-size;
-		line-height: $manifesto-title-line-height;
-		color: $manifesto-title-font-color;
+	&__title h2 { 
+
+		/*font-size: 		$statement-title-font-size;*/
+		/*line-height: 	$statement-title-line-height;*/
+		/*color: 			$statement-title-font-color;*/
+	}
+
+	&__body p {
+
+		/* p overrides */
+		font-size: 		$statement-body-font-size;
+		/*line-height: 	$statement-body-line-height;
+		color: 			$statement-body-font-color;*/
+		text-align:		justify;
+	}
+
+	&__more {
+
+		/* subclass more link */
 	}
 }
 
-.statement--body p {
+/* ==================================================================
+## Debug
+===================================================================== */	
 
-	/* p overrides */
-	font-size: $manifesto-font-size;
-	line-height: $manifesto-line-height;
-	color: $manifesto-font-color;
-}
+/*.statement {
 
-.more.statement--more {
+	&__slide	{	border: 1px solid red;	}	
+	&__title 	{	background: #e5e5e5;	}
+	&__body p	{	background: #e5e5e5;	}
+	&__more 	{	background: lightgrey;	}
 
-	/* subclass more link */
-}
+}*/

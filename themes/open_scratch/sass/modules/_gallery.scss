@@ -70,9 +70,11 @@
 		/* overrides */
 	}
 
-		/*li*/.gallery--item{
+		/*li*/.gallery--item > img{
 
 			/* overrides */
+			width:100%;
+			height:auto;
 		}
 	
 }

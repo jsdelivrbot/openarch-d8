@@ -23,8 +23,10 @@ $slide-titlebar-font-color: 	$lighter-font-color;
 
 	}
 
-		&__image {
+		&__image > img{
 
+			width:100%;
+			height:auto;
 		}
 
 		&__titlebar { /*.titlebar*/

@@ -1,6 +1,8 @@
 /* ==================================================================
  *
+ *
  * headlines card 
+ *
  *
 ===================================================================== */
 
@@ -9,32 +11,27 @@
 ## Config
 ===================================================================== */	
 
-$headlines-base-font-size:		1rem;
+/*$headlines-base-font-size:		1rem;
+
 $headline-font-size: 			0.8em;
-$headline-line-height: 			1.1;
+$headline-line-height: 			1.1;*/
 
 
 /* ==================================================================
-## Layout
+## Layout / Structure
 ===================================================================== */
 
 .headlines {
 
-	&__title 		{	
-		margin: 			$base-row-pad 0;	
-	}
-
-	&__headline 	{	
+	&__titlebar {	
 		/*margin: 			$base-row-pad 0;*/	
-	    border-bottom: 		1px solid #f1f1f1;
-		padding: 			$base-row-pad 0;
-
-		&:hover{
-			background: 	#e5e5e5;
-		}
 	}
 
-	&__more 		{	
+	&__teaser {	
+
+	}
+
+	&__tags {	
 		margin-top: 		$base-row-pad;	
 	}
 }
@@ -45,23 +42,32 @@ $headline-line-height: 			1.1;
 
 .headlines {
 
-	&__title {
+	/* 	
+		module-level styling
+		only font-size is specified at module level
+		and everything below it is relative to it
+	*/
+	
+	/*font-size:					$headlines-base-font-size;*/
+
+	/* 	
+		element-level styling
+		relative to module font-size
+	*/
+
+	&__titlebar {
 
 		/* title subclass overrides */
 	}
 
-	&__headline { 
+	&__teaser { 
 
-		a, a:link, a:visited {
+		/* teaser subclass overrides */
+		/*font-size: .88em;*/
 
-			font-size: 			$headline-font-size;
-			line-height: 		$headline-line-height;
-			color: 				$headline-font-color;
-			text-decoration: 	underline;
-		}
 	}
 
-	&__more {
+	&__tags {
 
 		/* more link subclass overrides */
 	}

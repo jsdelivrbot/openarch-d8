@@ -2,34 +2,44 @@
 ## Config
 ===================================================================== */	
 
-$title-font-size:		1em;
-$title-line-height:		1.5;
-$title-font-color:		$base-title-font-color;
+$titlebar-base-font-size:	1rem;
+
+$titlebar-font-size:		1em;
+$titlebar-line-height:		$base-row-height;
+$titlebar-font-color:		$base-title-font-color;
+$titlebar-row-height:		$base-row-height;
 
 
 /* ==================================================================
 ## Main Content
 ===================================================================== */
 
-.title {
+.titlebar {
 
-	h1, h2, h3 {
-		/*font-size: 		$title-font-size;*/
-		/*line-height: 		$title-line-height;*/
-		color: 				$title-font-color;
-		text-transform: 	uppercase;
-	}
-	
-	a, a:link, a:visited {
-		font-size: 			$title-font-size;
-		line-height: 		$title-line-height;
-		color: 				$title-font-color;
-		text-transform: 	uppercase;
-		text-decoration: 	none;
-	}
+	/* 	
+		module-level styling
+		only font-size is specified at module level
+		and everything below it is relative to it
+	*/
+	font-size:					$titlebar-base-font-size;
 
-	a:hover{
-		text-decoration: 	underline;
+	/* 	
+		element-level styling
+		relative to module font-size
+	*/
+	&__title {
+
+		h1, h2, h3 {
+			/*font-size: 		$titlebar-font-size;*/
+			line-height: 		$titlebar-row-height;
+			display: 			inline-block;
+			height: 			$titlebar-row-height;
+			color: 				$titlebar-font-color;
+			text-transform: 	uppercase;
+			text-decoration:	none;
+			padding: 			0 3px; /* horizontal space btn tags */
+		}
+
 	}
 }
 

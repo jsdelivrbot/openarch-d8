@@ -2,14 +2,19 @@
 ## ++ Globals
 ========================================================================== */
 html {
-  font-size: 17px;
+	font-size: 16px;
+
+	@include mobile{ /* max-width: 559px */
+    	font-size: 14px;
+    }
+    @include narrow{ /* all and (min-width: 560px) and (max-width: 850px) */
+    	font-size: 16px;
+    }
+    @include wide{ /* all and (min-width: 851px) */
+    	font-size: 18px;
+    }
 }
-@media (max-width: 900px) {
-  html { font-size: 15px; }
-}
-@media (max-width: 400px) {
-  html { font-size: 13px; }
-}
+
 
 body{
 	/*font-size: 100%;*/
@@ -29,21 +34,32 @@ body{
 /* only apply font-size and line-height to elements so don't have issue w/ cascading sizes */
 p {
 	font-size: 		$base-font-size; 
-	line-height: 	$base-line-height;		
+	line-height: 	$base-line-height;
+	padding: 		0 $base-pad-horiz;		
 }
 h1 {
 	font-size: 		$base-h1-font-size;
-	line-height: 	$base-line-height;	
+	line-height: 	$base-line-height;
+	padding: 		0 $base-pad-horiz;	
 }
 h2 {
 	font-size: 		$base-h2-font-size;
 	line-height: 	$base-line-height;
+	padding: 		0 $base-pad-horiz;
 }
 h3 {
 	font-size: 		$base-h3-font-size;
 	line-height: 	$base-line-height;	
+	padding: 		0 $base-pad-horiz;
 }
 
+a, a:link, a:visited {
+	color: 					$base-link-color;
+	text-decoration: 		underline;
+}
+a:hover{
+	text-decoration: 		underline;
+}
 
 
 /* =======================================================================

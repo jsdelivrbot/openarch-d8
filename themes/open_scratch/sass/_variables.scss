@@ -6,7 +6,7 @@ $background-color: #fff;
 $base-font-family: Helvetica, Arial, sans-serif;
 
 
-$base-line-height: 18px;
+$base-line-height: 1.5;
 
 
 /* ==================================================================
@@ -20,7 +20,7 @@ $darker-font-color: 		#333;
 $darker-font-color: 		#000;
 $openorange-color: 			#ff9d00;
 $opengrey-color: 			#888;
-$link-font-color: 			#98a6bc;
+$link-font-color: 			#777; /*#98a6bc;*/
 
 /* config */
 $pagetitle-font-color: 		$darker-font-color;
@@ -71,6 +71,8 @@ $table-font-color: 			$darker-font-color;
 
 
 $manifesto-title-font-color: $darker-font-color;
+
+$link-background-color:		#e5e5e5;
 
 
 /* ==================================================================
@@ -141,8 +143,10 @@ $manifesto-title-line-height: $base-title-line-height;
 ## Padding
 ===================================================================== */
 
-$base-row-height: 42px;
+$base-row-height: 3.75em; /* (16px x .7em) x 3.75 = 42px; */
 $base-row-pad: 16px;
+$base-elem-spacing: 16px; /*this should be rem not em AND should be susy calculated gallery gutter*/
+$base-pad-horiz: .25rem;
 
 /* ==================================================================
 ## Table

@@ -18,8 +18,8 @@ $statement-base-font-size:		1rem;
 /*$statement-title-font-color:	$base-title-font-color;*/
 
 $statement-body-font-size:		1em;
-/*$statement-body-line-height:	1.5;
-$statement-body-font-color:		$base-body-font-color;*/
+/*$statement-body-line-height:	1.5;*/
+/*$statement-body-font-color:	$base-body-font-color;*/
 
 
 /* ==================================================================
@@ -34,18 +34,19 @@ $statement-body-font-color:		$base-body-font-color;*/
 
 
 /* ==================================================================
-## Typography
+## Typography Overrides
 ===================================================================== */
 
 .statement {
 
 	font-size: 			$statement-base-font-size;
+}
 
 	&__title h2 { 
 
-		/*font-size: 		$statement-title-font-size;*/
+		/*font-size: 	$statement-title-font-size;*/
 		/*line-height: 	$statement-title-line-height;*/
-		/*color: 			$statement-title-font-color;*/
+		/*color: 		$statement-title-font-color;*/
 	}
 
 	&__body p {
@@ -57,11 +58,11 @@ $statement-body-font-color:		$base-body-font-color;*/
 		text-align:		justify;
 	}
 
-	&__more {
+	&__tags {
 
-		/* subclass more link */
+		/* subclass tags to override statement tags font size */
 	}
-}
+
 
 /* ==================================================================
 ## Debug

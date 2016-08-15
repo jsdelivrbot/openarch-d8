@@ -1,23 +1,22 @@
-/*
- * Tags Component: 
- *
- * LAYOUT:
+/* ==================================================================
  *
  *
- *
- * CONTENT:
- *
+ * tags
  *
  *
- */
+===================================================================== */
 
 /* ==================================================================
 ## Config
-===================================================================== */	
+===================================================================== */
 
-$tags-font-size:		0.7em;
-$tags-link-color: 		$link-font-color;
-$tags-link-height:		$base-row-height;
+$tags-base-font-size:			1rem;
+
+$tags-font-size:				0.8em;
+
+$tags-row-height:				$base-row-height; 	
+$tags-font-color: 				$link-font-color; 	
+$tags-background-color:			$link-background-color;
 
 /* ==================================================================
 ## Tags Component
@@ -25,32 +24,45 @@ $tags-link-height:		$base-row-height;
 
 .tags, .more {
 
+	/* 	
+		module-level styling
+		only font-size is specified at module level
+		and everything below it is relative to it
+	*/
+	font-size:					$tags-base-font-size;
 
+	/* 	
+		element-level styling
+		relative to module font-size
+	*/
+	&__tag{
 
-	/*span{
-		font-size: 			$tags-font-size;
-		line-height: 		$tags-link-height;
-		color: 				$tags-font-color;
-		text-transform: 	uppercase;
-		text-decoration:	none;
-	}*/
+		font-size: 				$tags-font-size;
+		line-height: 			$tags-row-height;
 
-	a, a:link, a:visited{
-		display: 			inline-block;
-		font-size: 			$tags-font-size;
-		line-height: 		$tags-link-height;
-		height: 			$tags-link-height;
-		color: 				$tags-link-color;
-		text-transform: 	uppercase;
-		text-decoration:	none;
-		padding: 			0 3px; /* horizontal space btn tags */
+		a, a:link, a:visited{
+			display: 			inline-block;
+			height: 			$tags-row-height;
+			color: 				$tags-font-color;
+			text-transform: 	uppercase;
+			text-decoration:	none;
+			padding: 			0 $base-pad-horiz; /* horizontal space btn tags */
+		}
+
+		a:hover{
+			text-decoration: 	underline;
+			background: 		$tags-background-color;
+		}
 	}
 
-	a:hover{
-		text-decoration: 	underline;
-		background: #e5e5e5;
-	}
+	&__tag--more{
 
+		/* override tag style for more link */
+		a, a:link, a:visited{
+			color: 				grey;
+			text-transform: 	none;
+		}
+	}
 }
 
 /*.footnote {

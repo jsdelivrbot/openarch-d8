@@ -6,18 +6,28 @@
 
 
 /* ==================================================================
+## Config
+===================================================================== */
+
+$teaser-font-size:			1rem;
+$teaser-line-height:		$base-line-height;
+$teaser-font-color:			$base-font-color;
+$teaser-elem-spacing:		$base-elem-spacing;
+
+/* ==================================================================
 ## Layout
 ===================================================================== */
 
 .teasers {}
 
-	.teaser {border-top: 1px solid lightgrey;}
+	.teaser {
 	
-		.teaser--title 		{	margin: $base-row-pad 0;	}
-		.teaser--thumb 		{	margin: $base-row-pad 0;	}
-		.teaser--body p 	{	margin: $base-row-pad 0;	}
-		.teaser--tags 		{	/*margin: $base-row-pad 0;*/	}
-		.teaser--footnote	{	margin: $base-row-pad 0;	}
+		&__title 		{	margin: $teaser-elem-spacing 0;	}
+		&__thumb 		{	margin: $teaser-elem-spacing 0;	}
+		&__body p 		{	margin: $teaser-elem-spacing 0;	}
+		&__tags 		{	/*margin: $base-row-pad 0;*/	}
+
+	}
 
 
 /* ==================================================================
@@ -26,24 +36,40 @@
 
 .teasers {}
 
-	.title.teaser--title 	{
+	.teaser {
 
-		/* subclass overrides */
-		h3, span, a, a:link, a:visited {
+		/* 	
+		module-level styling
+		typically only font-size is specified at module level
+		and em sizing below it is relative to it
+		*/
+		font-size:					$teaser-font-size;
 
-			font-size: $base-font-size;
-			line-height: $base-line-height;
-			color: $base-font-color;
-			/*text-decoration: underline;*/
+		&__title {
+
+			h2 { /* Overrided global h3 */ }
+			h3 { /* Overrided global h3 */ }
+
+			a, a:link, a:visited {
+
+				color: 					$teaser-font-color;
+				text-decoration: 		underline;
+				text-transform: 		uppercase;
+			}
+
+			a:hover{
+
+				text-decoration: 		underline;
+			}
 		}
-		a:hover{
-			text-decoration: underline;
-		}
+
+		&__thumb 		{/* subclass overrides */}
+		&__body 		{/* overrides */}
+		&__tags 		{/* subclass overrides */}
+
 	}
 
-	.thumb.teaser--thumb 	{/* subclass overrides */}
-	.teaser--body 			{/* overrides */}
-	.tags.teaser--tags 		{/* subclass overrides */}
+	
 
 
 /* ==================================================================

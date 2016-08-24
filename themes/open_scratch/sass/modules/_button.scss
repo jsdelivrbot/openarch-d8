@@ -1,0 +1,33 @@
+/* ==================================================================
+## Config
+===================================================================== */	
+
+/* button sizing is relative to container, ie. titlebar, toolbar, or tagline */
+
+
+
+$button-base-font-size:		1em;
+
+$button-pad-horiz:			$base-button-pad-horiz;
+$button-height:				$base-button-height;
+
+$button-bg-color:			#f9f9f9;
+$button-hover-bg-color:		#e5e5e5;
+
+/* ==================================================================
+## Main Content
+===================================================================== */
+
+.button{ /* button */
+
+	font-size: 				$button-base-font-size;
+
+	height: 				$button-height; /*35px;*/
+	padding-left: 			$button-pad-horiz; /*prev 1em*/
+
+	background:				$button-bg-color;
+
+	&:hover{
+		background:			$button-hover-bg-color;
+	}
+}

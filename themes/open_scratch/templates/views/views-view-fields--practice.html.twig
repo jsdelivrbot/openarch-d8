@@ -29,32 +29,35 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-<div class="teaser events__teaser border--top-ltgrey">
 
-	<div class="teaser__title">
-		<h3>{{ fields.title.content }}</h3>
-	</div>
+<div class="card practice__card border--top-ltgrey">
 
-	<div class="teaser__thumb">
+	<div class="card__slide">
 		{{ fields.field_thumbnail.content }}
 	</div>
 
-	<div class="teaser__body">
+	<div class="card__title">
+		<h3>{{ fields.title.content }}</h3>
+	</div>
+
+	<div class="card__body">
 		{{ fields.body.content }}
 	</div>
 
-	<div class="tagline teaser__tagline">
-		<div class="tags teaser__tags">
-			<span class="tags__tag">
-				{{ fields.type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_event_type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_event_city.content }}
-			</span>
+	{# <div class="tagline card__tagline">
+		<div class="tags card__tags">
+
+			<div class="tags__tag tags__tag--more">
+        <a>Awards</a>
+    	</div>
+    	<div class="tags__tag tags__tag--more">
+        <a>Press</a>
+    	</div>
+    	<div class="tags__tag tags__tag--more">
+        <a>People</a>
+    	</div>
+
 		</div>
-	</div>
+	</div> #}
 
 </div>

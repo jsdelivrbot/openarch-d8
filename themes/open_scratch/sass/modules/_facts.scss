@@ -1,105 +1,40 @@
 /* ==================================================================
  *
- * Factsheet Component (Block view)
- *
- * LAYOUT:
- *
- * factsheet--header
- * factsheet--header-left
- * factsheet--header-right
- * factsheet--gallery
- * factsheet--gallery-list (ul)
- * factsheet--gallery-item (li)
- *
- * CONTENT:
- *
- * factsheet--title (h2)
+ * Facts
  *
  *
 ===================================================================== */
 
+/* ==================================================================
+## Config
+===================================================================== */
 
+$fact-font-size: 				0.8em;
+$fact-line-height: 				1.4; 
+$fact-spacing:					1.3em;  /* magic number */
+/*$fact-font-color: 			$base-font-color;*/
 
 /* ==================================================================
 ## Layout
 ===================================================================== */
 
-/*@mixin gallery-list{
+.facts{
 
-    @include clearfix;
-    @include layout((
-        gutter-position: before,
-        columns: 4,
-        gutters: 3/16,
-        global-box-sizing: border-box
-    ));
+	font-size:					$fact-font-size;
 
-}
+	&__fact{
 
-@mixin gallery-list-item{
-
-    @include gallery(2 of 4);
-    margin-bottom: gutter(4);
-}*/
-
-
-/* .factsheet-gallery */
-#main-content-facts {
-
-	/*.factsheet-gallery-container {*/
-	.region {
-
-		@include gallery-list;
 	}
 
-		/*li.*//*.factsheet-gallery-item{*/
-		.block {
+	&__fact--multiline{
 
-			@include gallery-list-item;
-		}
-
-}
-			.factsheet-header {
-
-				margin: $base-row-pad 0;
-			}
-
-			/* list of facts */
-			.factsheet-facts {
-
-				margin: $base-row-pad 0;
-			}
-
-
-/* ==================================================================
-## Theme
-===================================================================== */
-
-/*h2*/.factsheet-title{
-
-	@include base-title;
-	
-	font-size: $blocktitle-font-size;
-	line-height: $blocktitle-line-height;
-	color: $blocktitle-font-color;	
-
-}
-
-/*div*/.factsheet-facts{
-
-	div {
-		height: $fact-line-height;
+		margin-top: 			$fact-spacing;
 	}
 
-	p, span, a, a:link, a:visited {
-		font-size: $fact-font-size;
-		line-height: $fact-line-height;
-		color: $fact-font-color;
-		text-decoration:none;
-	}
+	li {
 
-	a:hover{
-		text-decoration: none;
+		/* override global li line height */
+		line-height: 			$fact-line-height;
 	}
 
 }

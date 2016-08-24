@@ -1,24 +1,45 @@
+
 /* ==================================================================
-## Menubar (Page Header)
+## Config
+===================================================================== */
+
+/* sizing relative to containter, ie titlebar, toolbar, or tagline */
+
+$icon-size:						2.75em;
+$icon-spacing:					.5em;
+$icon-bg-color:					#f9f9f9;
+$icon-hover-bg-color:			#e5e5e5;
+
+/* ==================================================================
+## Type
 ===================================================================== */
 
 .icon--container {}
 
+	/*float:right;*/
+
 	.icon {
-		a {
 
-			/* debug */
-			/*background: lightgrey;*/
+		float:						right;
 
-			text-align:center;
-			font-size: $icon-font-size;
-			color: $menu-font-color;
-			text-decoration:none;
+		> a{
+
+			display: 				inline-block;
+
+			height:					$icon-size;
+			line-height: 			$icon-size;
+			width:					$icon-size;
+			margin-left: 			$icon-spacing;
+
+			text-align:				center; /* horiz align img */
+			background: 			$icon-bg-color;
 			
 			&:hover {
-				text-decoration: none;
-				background: #e5e5e5;
+				background: 		$icon-hover-bg-color;
+			}
+
+			> img {
+				vertical-align: 	middle; /* vertical align img */
 			}
 		}
 	}
-

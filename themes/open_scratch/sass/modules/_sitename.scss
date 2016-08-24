@@ -3,20 +3,40 @@
 ===================================================================== */
 
 .sitename {
+
+	/*white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;*/
+
 	a{
-		font-weight: bold;
-		font-size: $sitename-font-size;
-		text-transform: uppercase;
-		color: $openorange-color;
-		text-decoration:none;
+
+		font-size: 			$sitename-font-size;
+
+		display:			inline-block;
+		height:				2.75em;
+		line-height: 		2.75em;
+		
+		font-weight: 		bold;	
+		text-transform: 	uppercase;
+		color: 				$openorange-color;
+		text-decoration:	none;
 	}
+
 	a:hover{
+
 		text-decoration: none;
+	}
+
+	img {
+
+		vertical-align: middle;
 	}
 }
 
 .footer .sitename {
+
 	a{
+		
 		font-weight: normal;
 		font-size: $sitename-font-size;
 		text-transform: uppercase;

@@ -28,6 +28,22 @@
     @media all and (min-width: 851px){ @content; }
 }
 
+@mixin table-1-col{
+    @media all and (max-width: 350px){ @content; }
+}
+@mixin table-2-col{
+    @media all and (min-width: 351px) and (max-width: 550px){ @content; }
+}
+@mixin table-3-col{
+    @media all and (min-width: 551px) and (max-width: 650px){ @content; }
+}
+@mixin table-4-col{
+    @media all and (min-width: 651px) and (max-width: 850px){ @content; }
+}
+@mixin table-5-col{
+    @media all and (min-width: 851px){ @content; }
+}
+
 /* =======================================================================
 ## ++ Unit transform
 ========================================================================== */

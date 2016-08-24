@@ -29,32 +29,33 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-<div class="teaser events__teaser border--top-ltgrey">
 
-	<div class="teaser__title">
-		<h3>{{ fields.title.content }}</h3>
-	</div>
+<li class="facts__fact">
+	<span>{{ fields.field_task_year.label }}: {{ fields.field_task_year.content }}</span>
+</li>
 
-	<div class="teaser__thumb">
-		{{ fields.field_thumbnail.content }}
-	</div>
+<li class="facts__fact">
+	<span>{{ fields.field_task_city.label }}: {{ fields.field_task_city.content }}</span>
+</li>
 
-	<div class="teaser__body">
-		{{ fields.body.content }}
-	</div>
+<li class="facts__fact">
+	<span>{{ fields.field_task_size.label }}: {{ fields.field_task_size.content }}</span>
+</li>
 
-	<div class="tagline teaser__tagline">
-		<div class="tags teaser__tags">
-			<span class="tags__tag">
-				{{ fields.type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_event_type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_event_city.content }}
-			</span>
-		</div>
-	</div>
+<li class="facts__fact">
+	<span>{{ fields.field_task_site.label }}: {{ fields.field_task_site.content }}</span>
+</li>
 
-</div>
+<li class="facts__fact">
+	<span>{{ fields.field_task_type.label }}: {{ fields.field_task_type.content }}</span>
+</li>
+
+<li class="facts__fact">
+	<span>{{ fields.field_task_client.label }}: {{ fields.field_task_client.content }}</span>
+</li>
+
+<li class="facts__fact">
+	<span>{{ fields.field_task_status.label }}: {{ fields.field_task_status.content }}</span>
+</li>
+
+

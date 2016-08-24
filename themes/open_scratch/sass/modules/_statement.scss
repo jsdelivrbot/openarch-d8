@@ -18,8 +18,8 @@ $statement-base-font-size:		1rem;
 /*$statement-title-font-color:	$base-title-font-color;*/
 
 $statement-body-font-size:		1em;
-/*$statement-body-line-height:	1.5;*/
-/*$statement-body-font-color:	$base-body-font-color;*/
+$statement-body-line-height:	1.7;
+$statement-body-font-color:		$base-body-font-color;
 
 
 /* ==================================================================
@@ -40,7 +40,7 @@ $statement-body-font-size:		1em;
 .statement {
 
 	font-size: 			$statement-base-font-size;
-}
+
 
 	&__title h2 { 
 
@@ -49,12 +49,12 @@ $statement-body-font-size:		1em;
 		/*color: 		$statement-title-font-color;*/
 	}
 
-	&__body p {
+	&__body > p {
 
 		/* p overrides */
 		font-size: 		$statement-body-font-size;
-		/*line-height: 	$statement-body-line-height;
-		color: 			$statement-body-font-color;*/
+		line-height: 	$statement-body-line-height;
+		color: 			$statement-body-font-color;
 		text-align:		justify;
 	}
 
@@ -62,6 +62,7 @@ $statement-body-font-size:		1em;
 
 		/* subclass tags to override statement tags font size */
 	}
+}
 
 
 /* ==================================================================

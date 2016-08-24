@@ -104,6 +104,7 @@ $susy: (
 
 	.toolbar {
 		/*@include span(4);*/
+		margin-top:142px;
 	}
 
 		.toolbar-left{
@@ -115,8 +116,6 @@ $susy: (
 			@include span(2 of 4 last);
 			float:right;
 		}
-
-
 
 	.main-content {
 		
@@ -148,7 +147,7 @@ $susy: (
 		/* recent news temp overrides */
 		#block-open-scratch-views-block-recent-news-block-1{ 
 			
-			border-top: 1px solid #999;
+			border-top: 1px solid lightgrey;
 
 			.views-row {
 				border-top: none;
@@ -240,7 +239,8 @@ $susy: (
 		.region{
 			@include span(4);
 			border-top: 1px solid #666;	
-			margin-top: 100px;
+			margin-top: 140px;
+			padding-top: 140px;
 		}
 
 /*		.block-content{

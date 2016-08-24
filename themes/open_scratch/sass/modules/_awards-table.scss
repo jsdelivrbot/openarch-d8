@@ -1,0 +1,69 @@
+
+/* ==================================================================
+## Awards Table subclass
+===================================================================== */
+
+.title.awards--title {
+
+	width: 50%;
+
+	h2, a {
+		font-size: $table-title-font-size;
+		line-height: $table-title-line-height;
+		color: $table-title-font-color;
+	}
+
+}
+
+.awards {
+
+	margin-bottom: 50px;
+
+	table {}
+
+		caption {
+			text-align: right;
+
+		}
+
+		caption > time {
+
+			font-size: $title-font-size;
+			line-height: $title-line-height;
+			color: $title-font-color;
+		}
+}
+
+		tr {}
+
+		td.data.awards--name {
+			width: 90%;
+		}
+	
+.awards-table {
+
+	&__table {}
+
+		&__head {
+
+			@include table-1-col	{ 	display: none;	}
+			@include table-2-col	{ 	display: none;	}
+			@include table-3-col	{ 	display: table-row-group;	}
+		    @include table-4-col	{ 	display: table-row-group;	}
+		    @include table-5-col	{	display: table-row-group;	}
+		}
+
+		&__data-date {
+
+			@include table-1-col	{ 	display:none;	}
+			@include table-2-col	{ 	width: 13%;	}
+			@include table-3-col	{ 	width: 12%;	}
+		    @include table-4-col	{ 	width: 11%;	}
+		    @include table-5-col	{	width: 10%;	}
+		}
+		&__data-name {
+
+		}
+		
+		&__data-icon {}
+}

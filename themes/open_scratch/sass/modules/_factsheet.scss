@@ -1,0 +1,57 @@
+/* ==================================================================
+ *
+ * Factsheet Component (Block view)
+ *
+ * LAYOUT:
+ *
+ * factsheet--header
+ * factsheet--header-left
+ * factsheet--header-right
+ * factsheet--gallery
+ * factsheet--gallery-list (ul)
+ * factsheet--gallery-item (li)
+ *
+ * CONTENT:
+ *
+ * factsheet--title (h2)
+ *
+ *
+===================================================================== */
+
+/* ==================================================================
+## Config
+===================================================================== */
+
+$factsheet-base-font-size:			1rem;
+
+
+/* ==================================================================
+## Layout
+===================================================================== */
+
+.factsheet {
+
+	&__header 	{margin: $base-row-pad 0;}
+	&__facts 	{margin: $base-row-pad 0;}
+}
+
+
+/* ==================================================================
+## Theme
+===================================================================== */
+
+.factsheet {
+
+	/* 	
+	module-level styling
+	typically only font-size is specified at module level
+	and em sizing below it is relative to it
+	*/
+	font-size:					$factsheet-base-font-size;
+
+
+	&__header h3	{/* override global h3 */}
+	&__facts		{}
+
+}
+

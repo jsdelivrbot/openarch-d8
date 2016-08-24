@@ -29,32 +29,18 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-<div class="teaser events__teaser border--top-ltgrey">
-
-	<div class="teaser__title">
-		<h3>{{ fields.title.content }}</h3>
-	</div>
-
-	<div class="teaser__thumb">
-		{{ fields.field_thumbnail.content }}
-	</div>
-
-	<div class="teaser__body">
-		{{ fields.body.content }}
-	</div>
-
-	<div class="tagline teaser__tagline">
-		<div class="tags teaser__tags">
-			<span class="tags__tag">
-				{{ fields.type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_event_type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_event_city.content }}
-			</span>
-		</div>
-	</div>
-
-</div>
+<tr>
+	<td class="awards-table__data-date">
+		{{ fields.field_award_date.content }} 
+	</td>
+	<td class="awards-table__data-name">
+		{{ fields.title.content }} 
+	</td>
+	<td class="press-table__data-icon">
+		<div class="icon">
+			<a href="task/{{ nid }}">
+				<img src="{{ base_path ~ directory }}/images/arrow1-sml-12px.png">
+			</a>
+		</div>	
+	</td>
+</tr>

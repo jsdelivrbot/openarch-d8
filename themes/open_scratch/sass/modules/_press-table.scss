@@ -1,0 +1,43 @@
+/* ==================================================================
+ *
+ * Press Table Class
+ *
+ * Responsible for making press table responsive
+ *
+===================================================================== */
+
+/* ==================================================================
+## Config
+===================================================================== */
+
+/* ==================================================================
+## Layout
+===================================================================== */
+
+.press-table {
+
+	&__table {}
+
+		&__head {
+
+			@include table-1-col	{ 	display: none;	}
+			@include table-2-col	{ 	display: none;	}
+			@include table-3-col	{ 	display: table-row-group;	}
+		    @include table-4-col	{ 	display: table-row-group;	}
+		    @include table-5-col	{	display: table-row-group;	}
+		}
+
+		&__data-publication-date {
+
+			@include table-1-col	{ 	display:none;	}
+			@include table-2-col	{ 	width: 13%;	}
+			@include table-3-col	{ 	width: 12%;	}
+		    @include table-4-col	{ 	width: 11%;	}
+		    @include table-5-col	{	width: 10%;	}
+		}
+		&__data-name {
+
+		}
+		
+		&__data-icon {}
+}

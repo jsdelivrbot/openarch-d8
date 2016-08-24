@@ -78,3 +78,26 @@
 		}
 	
 }
+
+/* ==================================================================
+ *
+ * Factsheet Gallery
+ *
+===================================================================== */
+
+/* .factsheet-gallery */
+#main-content-facts {
+
+	/*.factsheet-gallery-container {*/
+	.region {
+
+		@include gallery-list;
+	}
+
+		/*li.*//*.factsheet-gallery-item{*/
+		.block {
+
+			@include gallery-list-item;
+		}
+
+}

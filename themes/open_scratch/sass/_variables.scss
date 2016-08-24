@@ -6,7 +6,7 @@ $background-color: #fff;
 $base-font-family: Helvetica, Arial, sans-serif;
 
 
-$base-line-height: 1.5;
+
 
 
 /* ==================================================================
@@ -52,7 +52,7 @@ $title-font-color: 			$darker-font-color;
 $menu-font-color: 			$base-font-color;
 $manifesto-font-color: 		$lighter-font-color;
 $headline-font-color: 		$lighter-font-color;
-$fact-font-color: 			$base-font-color;
+
 $tags-font-color: 			#666;
 $ts-font-color: 			#999;
 $foot-font-color: 			$base-font-color;
@@ -79,9 +79,12 @@ $link-background-color:		#e5e5e5;
 ## Fonts Size
 ===================================================================== */
 
-$base-h1-font-size:			1.2em;
-$base-h2-font-size:			1.0em;
-$base-h3-font-size:			0.9em;
+$base-h1-font-size:			1.2em; /*	sitename			*/
+$base-h2-font-size:			1.0em; /*	node titles 		*/
+$base-h3-font-size:			0.9em; /*	secondary titles 	*/
+$base-h4-font-size:			0.8em; /*	factsheet headers 	*/
+$base-h5-font-size:			0.8em; /*	factsheet multiline headers (ie. roles)		*/
+$base-h6-font-size:			0.8em; /*	factsheet facts		*/
 
 /* base */
 $base-font-size: 			.9em;
@@ -96,21 +99,21 @@ $sitename-font-size: 15px;
 $icon-font-size: 14px;
 $pagetitle-font-size: 12px;
 $blocktitle-font-size: 12px;
-$facttitle-font-size: 11px;
+/*$facttitle-font-size: 11px;*/
 $title-font-size: 14px;
 $jobtitle-font-size: 12px;
 
 $events-headline-font-size: 12px;
 $menu-font-size: 12px;
 $manifesto-font-size: 1.0em;
-$fact-font-size: 11px;
+
 $ts-font-size: 10px;
 
 
 
 
 $table-title-font-size: 12px;
-$table-font-size: 11px;
+
 
 $manifesto-title-font-size: 14px;
 
@@ -120,8 +123,8 @@ $toolbar-font-size: 12px;
 /* ==================================================================
 ## Fonts Line Heights
 ===================================================================== */
-
-$base-title-line-height: 1.5; /*16px;*/
+$base-line-height: 1.5;
+$base-title-line-height: 1.2; /*16px;*/
 
 $sitename-line-height: 16px;
 $pagetitle-line-height: base-line-height;
@@ -130,7 +133,7 @@ $table-title-line-height: 12px;
 $title-line-height: 12px;
 
 $events-headline-line-height: 11px;
-$fact-line-height: 16px;
+
 $ts-line-height: 7px;
 $manifesto-line-height: 1.5;
 $info-line-height: 14px;
@@ -147,6 +150,14 @@ $base-row-height: 3.75em; /* (16px x .7em) x 3.75 = 42px; */
 $base-row-pad: 16px;
 $base-elem-spacing: 16px; /*this should be rem not em AND should be susy calculated gallery gutter*/
 $base-pad-horiz: .25rem;
+
+/* ==================================================================
+## Buttons (icons, tags, dropdowns)
+===================================================================== */
+
+$base-button-pad-horiz:		1em;
+$base-button-height:		2.75em;
+$base-button-spacing:		0.5em;
 
 /* ==================================================================
 ## Table

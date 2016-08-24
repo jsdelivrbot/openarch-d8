@@ -5,9 +5,10 @@
 $titlebar-base-font-size:	1rem;
 
 $titlebar-font-size:		1em;
-$titlebar-line-height:		$base-row-height;
+$titlebar-line-height:		3.75em; /*$base-row-height;*/
 $titlebar-font-color:		$base-title-font-color;
-$titlebar-row-height:		$base-row-height;
+$titlebar-row-height:		3.75em;/* $base-row-height;*/
+$titlebar-title-spacing:	$base-elem-spacing;
 
 
 /* ==================================================================
@@ -27,13 +28,23 @@ $titlebar-row-height:		$base-row-height;
 		element-level styling
 		relative to module font-size
 	*/
+
+	@include clearfix;
+
+	@include layout((
+        gutter-position: 	before,
+        columns: 			8,
+        gutters: 			3/8,
+        global-box-sizing: 	border-box
+	));
+
 	&__title {
 
-		h1, h2, h3 {
+		h1, h2, h3, h4, h5, h6 {
 			/*font-size: 		$titlebar-font-size;*/
-			line-height: 		$titlebar-row-height;
 			display: 			inline-block;
 			height: 			$titlebar-row-height;
+			line-height: 		$titlebar-row-height;
 			color: 				$titlebar-font-color;
 			text-transform: 	uppercase;
 			text-decoration:	none;
@@ -41,7 +52,30 @@ $titlebar-row-height:		$base-row-height;
 		}
 
 	}
+
+	&__title--multiline {
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 			$titlebar-title-spacing 0;
+			color: 				$titlebar-font-color;
+			text-transform: 	uppercase;
+			text-decoration:	none;
+			padding: 			0 3px; /* horizontal space btn tags */
+		}
+	}
+
+	&__title,
+	&__title--multiline { /*.title*/
+		width: 	span(7 of 8);
+		float:	left;
+	}
+
+	&__icon{ /*.icon*/
+		width: 	span(1 of 8);
+		float:	right;
+	}
 }
+
 
 
 	

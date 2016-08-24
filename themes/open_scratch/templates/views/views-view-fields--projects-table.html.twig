@@ -29,32 +29,30 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-<div class="teaser events__teaser border--top-ltgrey">
-
-	<div class="teaser__title">
-		<h3>{{ fields.title.content }}</h3>
-	</div>
-
-	<div class="teaser__thumb">
-		{{ fields.field_thumbnail.content }}
-	</div>
-
-	<div class="teaser__body">
-		{{ fields.body.content }}
-	</div>
-
-	<div class="tagline teaser__tagline">
-		<div class="tags teaser__tags">
-			<span class="tags__tag">
-				{{ fields.type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_event_type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_event_city.content }}
-			</span>
+<tr>
+	<td class="projects-table__data-year">
+		{{ fields.field_task_year.content }} 
+	</td>
+	<td class="projects-table__data-city">
+		{{ fields.field_task_city.content }} 
+	</td>
+	<td class="projects-table__data-size">
+		{{ fields.field_task_size.content }} 
+	</td>
+	<td class="projects-table__data-type">
+		{{ fields.field_task_type.content }} 
+	</td>
+	<td class="projects-table__data-program">
+		{{ fields.field_task_program.content }} 
+	</td>
+	<td class="projects-table__data-name">
+		{{ fields.title.content }} 
+	</td>
+	<td class="projects-table__data-icon">
+		<div class="icon">
+			<a href="task/{{ nid }}">
+				<img src="{{ base_path ~ directory }}/images/arrow2-black-12px.png">
+			</a>
 		</div>
-	</div>
-
-</div>
+	</td>
+</tr>

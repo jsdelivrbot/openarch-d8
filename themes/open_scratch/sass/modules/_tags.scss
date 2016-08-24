@@ -10,26 +10,45 @@
 ## Config
 ===================================================================== */
 
-$tags-base-font-size:			1rem;
+$tagline-base-font-size:		.8rem;
+$tags-base-font-size:			1em;
+$tags-font-size:				1em;
 
-$tags-font-size:				0.8em;
 
-$tags-row-height:				$base-row-height; 	
-$tags-font-color: 				$link-font-color; 	
-$tags-background-color:			$link-background-color;
+$tagline-height:				$base-row-height;
+
+
+
+$tag-spacing:					$base-button-spacing;
+$tag-button-height:				$base-button-height;
+$tag-button-pad-horiz:			$base-button-pad-horiz;
+
+$tag-row-height:				$base-row-height; 	
+$tag-font-color: 				$link-font-color; 	
+
+$tag-bg-color:					#f9f9f9;
+$tag-hover-bg-color:			#e5e5e5;
 
 /* ==================================================================
 ## Tags Component
 ===================================================================== */
 
-.tags, .more {
+.tagline {
 
 	/* 	
 		module-level styling
 		only font-size is specified at module level
 		and everything below it is relative to it
 	*/
-	font-size:					$tags-base-font-size;
+	font-size:					$tagline-base-font-size;
+
+	height: 					$tagline-height;
+	line-height:  				$tagline-height;
+
+	/*background:	lightgrey;*/
+}
+
+.tags{ /* tag container */
 
 	/* 	
 		element-level styling
@@ -38,29 +57,37 @@ $tags-background-color:			$link-background-color;
 	&__tag{
 
 		font-size: 				$tags-font-size;
-		line-height: 			$tags-row-height;
+
+		float: 					left;
 
 		a, a:link, a:visited{
 			display: 			inline-block;
-			height: 			$tags-row-height;
-			color: 				$tags-font-color;
+			height: 			$tag-button-height;
+			line-height: 		$tag-button-height;
+			margin-right: 		$tag-spacing;			/* horiz space btw buttons */
+			padding: 			0 $tag-button-pad-horiz; 	/* horiz text padding */
+			color: 				$tag-font-color;
 			text-transform: 	uppercase;
 			text-decoration:	none;
-			padding: 			0 $base-pad-horiz; /* horizontal space btn tags */
+			background:			$tag-bg-color;	
+			
 		}
 
 		a:hover{
 			text-decoration: 	underline;
-			background: 		$tags-background-color;
+			background: 		$tag-hover-bg-color;
 		}
 	}
 
 	&__tag--more{
 
+		float:					right;
+
 		/* override tag style for more link */
 		a, a:link, a:visited{
 			color: 				grey;
 			text-transform: 	none;
+			margin-right: 		0;			/* horiz space btw buttons */
 		}
 	}
 }

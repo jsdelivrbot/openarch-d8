@@ -1,51 +1,49 @@
-/*
- * Toolbar Component
+/* ==================================================================
  *
- * LAYOUT:
+ * Toolbar
  *
+ * Perhaps this should be moved to _base.scss
  *
- *
- * CONTENT:
- *
- *
- *
- */
-
-/*.main-wrapper {}*/
-
-	.toolbar {
-
-		/*padding: $base-row-pad 0;*/
-		margin-top:142px;
-		
-		p, span, a{
-			height: $base-row-height;
-			line-height: $base-row-height;
-		}
-	}
-
-		.toolbar-left{
-
-			/*background: lightgrey;*/
-		}
-
-		.toolbar-right{
-
-			/* debug */
-			/*background: #f5f5f5;*/
-
-		a, a:link, a:visited{
-			display: inline-block;
-			width: $base-row-height;
-			float:right;
-		}
-		}
+===================================================================== */
 
 /* ==================================================================
-## Main Content Header
+## Config
+===================================================================== */
+
+$toolbar-base-font-size:	.8rem;
+$toolbar-height:			$base-row-height;
+
+
+/* ==================================================================
+## Layout
 ===================================================================== */
 
 .toolbar {
+
+	font-size: 			$toolbar-base-font-size;	
+	height: 			$toolbar-height;
+	line-height: 		$toolbar-height;
+	
+}
+
+	.toolbar-left{
+		/*background: lightgrey;*/
+	}
+
+	.toolbar-right{
+
+		/* debug */
+		/*background: #f5f5f5;*/
+		.icon--container {
+			float:right;
+		}
+	}
+
+/* ==================================================================
+## Type
+===================================================================== */
+
+/*.toolbar {
 
 	h1, h2, h3, p, span, a, a:link, a:visited {
 		font-size: $toolbar-font-size;
@@ -60,4 +58,8 @@
 
 		text-decoration: underline;
 	}
-}
+}*/
+
+/* ==================================================================
+## Debug
+===================================================================== */

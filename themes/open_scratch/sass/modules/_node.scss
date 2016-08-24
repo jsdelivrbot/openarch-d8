@@ -1,7 +1,7 @@
 /* ==================================================================
  *
- * Card Component: 
- * A card has a title, some content, and some tags
+ * node Component: 
+ * A node has a title, some content, and some tags
  *
  *
 ===================================================================== */
@@ -10,21 +10,19 @@
 ## Config
 ===================================================================== */
 
-$card-base-font-size:		1rem;
-/*$card-body-font-size:		1em;*/
+$node-base-font-size:		1rem;
+$node-body-font-size:		.9em;
 
 /* ==================================================================
 ## Layout
 ===================================================================== */
 
-.card {
+.node {
 
-	/*border-top: 1px solid #e1e1e1;*/
-
-	&__title 	{	margin: $base-row-pad 0;	}
+	&__title 	{	margin: $base-row-pad 0;	padding: 0 $base-pad-horiz;	}
 	&__slide 	{	/**/	}
-	&__body p 	{	margin: $base-row-pad 0;	}
-	&__tags 	{	margin: $base-row-pad 0;	}
+	&__body p 	{	margin: $base-row-pad 0;	padding: 0 $base-pad-horiz;	}
+	&__tags 	{	/**/	}
 }
 
 
@@ -33,29 +31,29 @@ $card-base-font-size:		1rem;
 ## Typography
 ===================================================================== */
 
-.card {
+.node {
 
 	/* 	
 		module-level styling
 		typically only font-size is specified at module level
 		and em sizing below it is relative to it
 	*/
-	font-size:				$card-base-font-size;
+	font-size:				$node-base-font-size;
 
 	&__title 	{	
 
-		/*font-size: 		$card-title-font-size;*/
-		/*line-height: 		$card-title-line-height;*/
-		/*color: 			$card-title-font-color;*/
+		/*font-size: 		$node-title-font-size;*/
+		/*line-height: 		$node-title-line-height;*/
+		/*color: 			$node-title-font-color;*/
 	}
 
 	&__slide 	{	/**/	}
 
 	&__body p 	{
 
-		/*font-size: 			$card-body-font-size;*/
-		/*line-height: 		$card-body-line-height;*/
-		/*color: 			$card-body-font-color;*/
+		font-size: 			$node-body-font-size;
+		/*line-height: 		$node-body-line-height;*/
+		/*color: 			$node-body-font-color;*/
 		text-align:			justify;
 	}
 
@@ -66,15 +64,15 @@ $card-base-font-size:		1rem;
 ## Temp Subclasses
 ===================================================================== */
 
-/* card types (ie. subclasses) */
+/* node types (ie. subclasses) */
 
-.card.practice--card {}
+.node.practice--node {}
 
-.card.profile--card { 
+.node.profile--node { 
 
 	border: none;
 
-	.card--body{
+	.node--body{
 		margin-bottom: 50px;
 	} 
 }

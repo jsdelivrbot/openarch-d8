@@ -28,7 +28,13 @@
 <div{{ attributes.addClass('block')}}>
   {{ title_prefix }}
   {% if label %}
-    <div class="block-title"><span><h2{{ title_attributes }}>{{ label }}</h2></span></div>
+    <div class="block-title">
+    	<div class="titlebar">
+    		<div class="titlebar__title--multiline">
+    			<h3{{ title_attributes }}>{{ label }}</h3>
+    		</div>
+    	</div>
+    </div>
   {% endif %}
   {{ title_suffix }}
   {% block content %}

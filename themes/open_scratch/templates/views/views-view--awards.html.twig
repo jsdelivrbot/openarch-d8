@@ -37,26 +37,19 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="headlines">
-
-    <div class="titlebar headlines__titlebar">
-      <div class="titlebar__title">
-        <h2>Recent News</h2>
-      </div>
-    </div>
-
-    <div class="teasers headlines__teasers">
-      {{ rows }}
-    </div>
-    
-    <div class="tagline headlines__tagline">
-      <div class="tags headlines__tags">
-        <div class="tags__tag tags__tag--more">
-          <a>More News & Events</a>
-        </span>
-      </div>
-    </div>
-
+  <div class="awards">
+    <table class="table awards-table__table">
+    	<thead class="awards-table__head">
+    		<tr>
+    			<th>Date</th>
+    			<th>Item</th>
+    			<th class="data--right">Links</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+      		{{ rows }}
+      	</tbody>
+    </table>
   </div>
 
   {{ feed_icons }}

@@ -37,23 +37,25 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="headlines">
+  <div class="statement">
 
-    <div class="titlebar headlines__titlebar">
-      <div class="titlebar__title">
-        <h2>Recent News</h2>
-      </div>
-    </div>
-
-    <div class="teasers headlines__teasers">
+    <div class="statement__body">
       {{ rows }}
     </div>
     
-    <div class="tagline headlines__tagline">
-      <div class="tags headlines__tags">
+    <div class="tagline statement__tagline">
+      <div class="tags statement__tags">
+        
+        {# <div class="tags__tag tags__tag--more">
+          <a>Press</a>
+        </div> 
         <div class="tags__tag tags__tag--more">
-          <a>More News & Events</a>
-        </span>
+          <a>People</a>
+        </div>  #} 
+        <div class="tags__tag tags__tag--more">
+          <a>More about Practice</a>
+        </div>  
+        
       </div>
     </div>
 

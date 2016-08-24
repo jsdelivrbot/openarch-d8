@@ -14,21 +14,26 @@
 
 /* modules (ie components) */
 @import "./modules/tags";
+@import "./modules/button";
 @import "./modules/icon";
 @import "./modules/title";
 @import "./modules/statement";
 @import "./modules/sitename";
 @import "./modules/gallery";
 @import "./modules/relations";
+@import "./modules/factsheet";
 @import "./modules/facts";
 @import "./modules/menubar";
 @import "./modules/toolbar";
 @import "./modules/slideshow";
 @import "./modules/card";
+@import "./modules/node";
 @import "./modules/headlines";
 @import "./modules/teasers";
 @import "./modules/table";
-@import "./modules/projectstable";
+@import "./modules/projects-table";
+@import "./modules/press-table";
+@import "./modules/awards-table";
 @import "./modules/menu";
 @import "./modules/footer";
 

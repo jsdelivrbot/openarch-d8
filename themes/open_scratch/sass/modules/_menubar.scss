@@ -1,42 +1,44 @@
-/*
- * Menubar Component
+/* ==================================================================
  *
- * LAYOUT:
+ * menubar
  *
+ * 
  *
- *
- * CONTENT:
- *
- *
- *
- */
+===================================================================== */
+
+/* ==================================================================
+## Config
+===================================================================== */
+
+$menubar-base-font-size:	1rem;
+$menubar-height:			$base-row-height;
+
+/* ==================================================================
+## Layout
+===================================================================== */
 
 /* wrapper for menubar regions */
 .menubar {
 
-	width:100%;
-	position:fixed;
-	top:0;
-	left:0;
-	z-index:100;
-	background:white;
+	font-size: 				$menubar-base-font-size;
+	
+	height: 				$menubar-height;
+	line-height: 			$menubar-height;
 
-	a, a:link, a:visited{
-		height: $base-row-height;
-		line-height: $base-row-height;
-	}
-
-	a:hover{
-		text-decoration: none;
-	}
+	/*
+		Fix menubar to top of screen
+	*/
+	width:					100%;
+	position:				fixed;
+	top:					0;
+	left:					0;
+	z-index:				100;
+	background:				white;
 
 }
 
 	.menubar-header{
 
-		a, a:link, a:visited{
-			display: block;
-		}
 	}
 
 	.menubar-primary{
@@ -44,17 +46,6 @@
 	}
 
 	.menubar-secondary{
-		
-		/* debug */
-		/*background: #f5f5f5;*/
-
-		a, a:link, a:visited{
-			display: inline-block;
-			width: $base-row-height;
-			float:right;
-		}
-
-
 
 	}
 

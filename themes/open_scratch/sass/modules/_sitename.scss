@@ -29,6 +29,12 @@
 	img {
 		height: 2.5em;
 		vertical-align: middle;
+
+		@include wide {
+			width: auto;
+			height:25px;
+		}
+
 	}
 }
 

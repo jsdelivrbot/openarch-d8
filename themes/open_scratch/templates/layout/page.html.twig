@@ -5,19 +5,19 @@
 
     <div class="menubar">
 
-      <header class="region header menubar-header" >
+      <header class="region header menubar__header" >
         {{ page.header }}
         
       </header>
 
       {% if page.menubar_primary %}
-        <aside id="menubar-content-primary" class="region menubar-content menubar-primary" role="complementary">
+        <aside id="menubar-content-primary" class="region menubar-content menubar__primary" role="complementary">
           {{ page.menubar_primary }}
         </aside>
       {% endif %}
 
       {% if page.menubar_secondary %}
-        <aside id="menubar-content-secondary" class="region menubar-content menubar-secondary" role="complementary">
+        <aside id="menubar-content-secondary" class="region menubar-content menubar__secondary" role="complementary">
           {{ page.menubar_secondary }} {# <span>CN | EN</span>  #} 
         </aside>
       {% endif %}

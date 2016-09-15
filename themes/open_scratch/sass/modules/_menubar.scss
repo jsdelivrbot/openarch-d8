@@ -11,7 +11,9 @@
 ===================================================================== */
 
 $menubar-base-font-size:	1rem;
-$menubar-height:			$base-row-height;
+$menubar-wide-font-size:	.75em;
+$menubar-row-height:		$base-row-height;
+$menubar-width:				100%;
 
 /* ==================================================================
 ## Layout
@@ -21,31 +23,104 @@ $menubar-height:			$base-row-height;
 .menubar {
 
 	font-size: 				$menubar-base-font-size;
+	line-height: 			$menubar-row-height;
 	
-	height: 				$menubar-height;
-	line-height: 			$menubar-height;
-
-	/*
-		Fix menubar to top of screen
-	*/
-	width:					100%;
-	position:				fixed;
-	top:					0;
-	left:					0;
-	z-index:				100;
-	background:				white;
-
+	/*@include layout($susy);*/
+	@include layout((
+		gutter-position: 	inside,
+		columns: 			4,
+		gutters: 			3/8,
+		global-box-sizing: 	border-box
+	));
 }
 
-	.menubar-header{
+@include mobile {
 
+	.menubar {
+
+		width:				$menubar-width;
+		height: 			$menubar-row-height;
+
+		&__header{
+			@include 		span(2 of 4);
+			float:			left;
+		}
+
+		&__primary{
+			display:		none;
+		}
+
+		&__secondary{
+			@include 		span(2 of 4 last);
+			float:			right;
+		}
 	}
+}
 
-	.menubar-primary{
-		/*display:none;*/
+@include narrow {
+
+	.menubar {
+
+		width:				$menubar-width;
+		height: 			$menubar-row-height;
+
+		&__header{
+			@include 		span(2 of 4);
+			float:			left;
+		}
+
+		&__primary{
+			display:		none;
+		}
+
+		&__secondary{
+			@include 		span(2 of 4 last);
+			float:			right;
+		}
 	}
+}
 
-	.menubar-secondary{
+@include wide {
 
+	.menubar {
+
+		font-size:			$menubar-wide-font-size;
+		width:				$menubar-width;
+		/*height: 			$menubar-row-height;*/
+
+		&__header{
+			@include 		span(full);
+			float:			none;
+		}
+
+		&__primary{
+			@include 		span(full);
+			float:			none;
+			padding-top:	$base-row-height;
+			padding-bottom:	$base-row-height;
+		}
+
+		&__secondary{
+			@include 		span(full);
+			float:			none;
+			height: 		auto;
+			overflow: 		auto;
+		}
 	}
+}
+
+	
+/* ==================================================================
+## Debug
+===================================================================== */	
+
+/*.menubar {
+
+	border: 1px solid red;	
+	
+	&__header 		{	background: #f5f5f5;	}
+	&__primary		{	background: #e5e5e5;	}
+	&__secondary 	{	background: lightgrey;	}
+
+}*/
 

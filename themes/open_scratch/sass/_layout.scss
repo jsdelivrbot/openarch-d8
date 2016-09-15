@@ -45,8 +45,8 @@ $susy: (
   gutter-position: inside,
   /*container: auto,*/
   /*container-position: center,*/
-  columns: 4,
-  gutters: 3/8,
+  columns: 12, /*4,*/
+  gutters: 36/8, /*3/8,*/
   /*column-width: false,*/
   global-box-sizing: border-box
   /*last-flow: to,*/
@@ -72,39 +72,75 @@ $susy: (
 
 /* wrapper for all page content */
 .container {
+
 	@include container;
 }
 
 /* wrapper for menubar regions */
 .menubar-wrapper {
 
+	z-index:			100;
+	background:			white;
+	
+
+	@include mobile {
+		position:		fixed;
+		width: 			100%;
+		top:			0;
+		left:			0;
+	}
+
+	@include narrow {
+		position:		fixed;
+		width: 			100%;
+		top:			0;
+		left:			0;
+	}
+
+	@include wide {
+
+		@include span(3 of 12);
+
+		position:		fixed;
+		/*width: 			200px;*/
+		height: 		100%;
+		padding-top:	200px;
+		top:			0;
+		left:			0;
+		/*left:			20px;*/
+		border-right:	1px solid #e1e1e1;
+	}
+
 }
 
-	.menubar-header{
-		@include span(2 of 4);
-		float:left;
-	}
-
-	#menubar-content-primary{
-		/*display:none;*/
-	}
-
-	#menubar-content-secondary{
-		@include span(2 of 4 last);
-		float:right;
-	}
+	
 
 
 /* wrapper for content regions */
 .main-wrapper {
 
+	margin-top:142px;
 	background:white;
+
+	@include wide {
+		/*margin-left: 250px;*/
+		margin-left: span(3 of 12);
+		@include span(9 of 12);
+	}
 
 }
 
 	.toolbar {
 		/*@include span(4);*/
-		margin-top:142px;
+
+		/*@include layout($susy);*/
+		@include layout((
+			gutter-position: inside,
+			columns: 4,
+			gutters: 3/8,
+			global-box-sizing: border-box
+		));
+		
 	}
 
 		.toolbar-left{
@@ -123,6 +159,14 @@ $susy: (
 
 	#main-content-slideshow{
 
+		/*@include layout($susy);*/
+		@include layout((
+			gutter-position: inside,
+			columns: 4,
+			gutters: 3/8,
+			global-box-sizing: border-box
+		));
+
 		.slides {
 			@include span(4);
 			
@@ -135,6 +179,15 @@ $susy: (
 	}
 
 	#main-content-primary{
+
+		/*@include layout($susy);*/
+		@include layout((
+			gutter-position: inside,
+			columns: 4,
+			gutters: 3/8,
+			global-box-sizing: border-box
+		));
+
 		@include span(4);
 	}
 
@@ -158,6 +211,14 @@ $susy: (
 
 	/* adsf */
 	#main-content-relations{
+
+		/*@include layout($susy);*/
+		@include layout((
+			gutter-position: inside,
+			columns: 4,
+			gutters: 3/8,
+			global-box-sizing: border-box
+		));
 
 		@include span(4);
 		@include clearfix;

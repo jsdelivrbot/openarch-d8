@@ -6,8 +6,8 @@
 /* sizing relative to containter, ie titlebar, toolbar, or tagline */
 
 $icon-size:						2.75em;
-$icon-spacing:					.5em;
-$icon-bg-color:					#f9f9f9;
+$icon-spacing:					0; /*.5em;*/
+$icon-bg-color:					none; /*#f9f9f9;*/
 $icon-hover-bg-color:			#e5e5e5;
 
 /* ==================================================================
@@ -41,5 +41,67 @@ $icon-hover-bg-color:			#e5e5e5;
 			> img {
 				vertical-align: 	middle; /* vertical align img */
 			}
-		}
+
+			> i {
+				vertical-align:  	middle;
+			}
+		}	
+
 	}
+
+/* ==================================================================
+## icon gallery
+===================================================================== */
+
+$icongal_base_font_size:	.65rem;
+$icongal_button_height:		$base_row_height;
+$icongal_icon_size:			1.1em;
+
+.icongallery-wrapper {
+	display: inline-block;
+	width: 100%;
+	vertical-align: middle;
+}
+
+.icongallery {
+
+	font-size:		$icongal_base_font_size;
+
+	&__container{
+
+		@include layout((
+	        gutter-position: 	before,
+	        columns: 			4,
+	        gutters: 			0,
+	        global-box-sizing: 	border-box
+    	));
+	}
+
+	&__item {
+
+		@include 		gallery(1 of 4);
+		line-height: 	$icongal_button_height;
+
+		> a {	
+
+			display: 				inline-block;
+			height:					100%;
+			width:					100%;
+			text-align:				center; /* horiz align img */
+			background: 			$icon-bg-color;
+			
+			&:hover {
+				background: 		$icon-hover-bg-color;
+			}
+
+			> img {
+				vertical-align: 	middle; /* vertical align img */
+			}
+
+			> i {
+				font-size:			$icongal_icon_size;
+				vertical-align:  	middle;
+			}
+		}	
+	}
+}

@@ -15,7 +15,7 @@ $tags-base-font-size:			1em;
 $tags-font-size:				1em;
 
 
-$tagline-height:				$base-row-height;
+$tagline-height:				$base-row-height*1.25;
 
 
 
@@ -74,7 +74,7 @@ $tag-hover-bg-color:			#e5e5e5;
 		}
 
 		a:hover{
-			text-decoration: 	underline;
+			text-decoration: 	none;
 			background: 		$tag-hover-bg-color;
 		}
 	}
@@ -85,9 +85,18 @@ $tag-hover-bg-color:			#e5e5e5;
 
 		/* override tag style for more link */
 		a, a:link, a:visited{
-			color: 				grey;
+			color: 				$tag-font-color;
 			text-transform: 	none;
 			margin-right: 		0;			/* horiz space btw buttons */
+		}
+
+		a:hover{
+			text-decoration: 	none;
+			background: 		$tag-hover-bg-color;
+		}
+
+		a::after{
+			content:	'\2003\2192';
 		}
 	}
 }

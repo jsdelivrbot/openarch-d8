@@ -24,10 +24,13 @@ $titlebar-title-spacing:	$base-elem-spacing;
 	*/
 	font-size:					$titlebar-base-font-size;
 
+
 	/* 	
 		element-level styling
 		relative to module font-size
 	*/
+	height: 			$titlebar-row-height;
+	line-height: 		$titlebar-row-height;
 
 	@include clearfix;
 

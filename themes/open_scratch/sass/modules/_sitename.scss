@@ -27,12 +27,20 @@
 	}
 
 	img {
-		height: 2.5em;
+		
+		width: auto;
 		vertical-align: middle;
 
-		@include wide {
-			width: auto;
-			height:25px;
+		@include mobile {
+			height: 25px;
+		}
+
+		@include narrow {
+			height: 30px;
+		}
+
+		@include wide {	
+			height: 30px;
 		}
 
 	}

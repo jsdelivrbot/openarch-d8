@@ -12,7 +12,7 @@
 
 $menubar-base-font-size:	1rem;
 $menubar-wide-font-size:	.75em;
-$menubar-row-height:		$base-row-height;
+$menubar-row-height:		$base-row-height*1.2;
 $menubar-width:				100%;
 
 /* ==================================================================
@@ -24,6 +24,7 @@ $menubar-width:				100%;
 
 	font-size: 				$menubar-base-font-size;
 	line-height: 			$menubar-row-height;
+	background-color:  		white;
 	
 	/*@include layout($susy);*/
 	@include layout((
@@ -37,6 +38,8 @@ $menubar-width:				100%;
 @include mobile {
 
 	.menubar {
+
+		position: fixed;
 
 		width:				$menubar-width;
 		height: 			$menubar-row-height;
@@ -61,6 +64,8 @@ $menubar-width:				100%;
 
 	.menubar {
 
+		position: fixed;
+
 		width:				$menubar-width;
 		height: 			$menubar-row-height;
 
@@ -84,27 +89,23 @@ $menubar-width:				100%;
 
 	.menubar {
 
-		font-size:			$menubar-wide-font-size;
+		/*position: absolute;*/ /*this doesn't work -> container doesn't hold icons*/
+
 		width:				$menubar-width;
-		/*height: 			$menubar-row-height;*/
+		height: 			$menubar-row-height;
 
 		&__header{
-			@include 		span(full);
-			float:			none;
+			@include 		span(2 of 4);
+			float:			left;
 		}
 
 		&__primary{
-			@include 		span(full);
-			float:			none;
-			padding-top:	$base-row-height;
-			padding-bottom:	$base-row-height;
+			display:		none;
 		}
 
 		&__secondary{
-			@include 		span(full);
-			float:			none;
-			height: 		auto;
-			overflow: 		auto;
+			@include 		span(2 of 4 last);
+			float:			right;
 		}
 	}
 }

@@ -1,0 +1,101 @@
+/* ==================================================================
+ *
+ * searchbar
+ *
+ * 
+ *
+===================================================================== */
+
+/* ==================================================================
+## Config
+===================================================================== */
+
+$searchbar-base-font-size:      1rem;
+$searchbar-input-height:        40px;
+$searchbar-width:               100%;
+
+$searchbar-input-bg-color:      #f9f9f9;
+$searchbar-hover-bg-color:      #e5e5e5;
+$searchbar-icon-color:          #333;
+$searchbar-input-color:         #333;
+$searchbar-placeholder-color:   #333;
+
+$searchbar-input-font-size:     8pt;
+
+/* ==================================================================
+## Layout
+===================================================================== */
+ 
+.searchbar-wrapper{ 
+  /*vertical-align:   middle;*/
+  width: 100%;
+  
+}
+
+.searchbar{
+
+  display:                  inline-block;
+  height:                   $searchbar-input-height;
+  line-height:              $searchbar-input-height;
+  width:                    100%;
+  vertical-align:           middle;
+  white-space:              nowrap;
+  position:                 relative;
+
+  &__icon{
+    
+    display:                inline-block;
+    position:               absolute;
+    height:                 $searchbar-input-height;
+    line-height:            $searchbar-input-height;
+    margin-left:            12px;     /* nudge icon off edge */
+    z-index:                1;
+    color:                  $searchbar-icon-color;
+    float:                  left;
+  }
+
+  &__icon > i {
+
+    font-size:              .75rem;
+    vertical-align:         middle;
+  }
+
+  &__input {
+
+    width:                  100%;
+    display:                inline-block;
+    height:                 $searchbar-input-height;
+    line-height:            $searchbar-input-height;
+    vertical-align:         middle;
+
+  }
+
+  &__input > input#search{
+
+      width:                  100%;
+      line-height:            $searchbar-input-height;
+      background:             $searchbar-input-bg-color;
+      border:                 none;
+      font-size:              $searchbar-input-font-size;
+      float:                  left;
+      color:                  $searchbar-input-color;
+      padding-left:           40px;
+      -webkit-border-radius:  5px;
+      -moz-border-radius:     5px;
+      border-radius:          5px;
+  }
+
+  &__input > input#search::-webkit-input-placeholder {
+     color: $searchbar-placeholder-color;
+  }
+  &__input > input#search:-moz-placeholder { /* Firefox 18- */
+     color: $searchbar-placeholder-color;  
+  }
+  &__input > input#search::-moz-placeholder {  /* Firefox 19+ */
+     color: $searchbar-placeholder-color;  
+  }
+  &__input > input#search:-ms-input-placeholder {  
+     color: $searchbar-placeholder-color;  
+  }
+
+}

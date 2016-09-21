@@ -105,13 +105,15 @@ $slide-titlebar-font-color: 	$lighter-font-color;
 		margin: 0;
 	}
 
+	&__image {}
+
 	&__titlebar { 			/*.titlebar*/
 		&:hover {
 			background:		#e5e5e5;
 		}
 	}
 
-		&__title {			/* .title subclass */
+		/*&__title {		
 			
 		}
 
@@ -125,7 +127,8 @@ $slide-titlebar-font-color: 	$lighter-font-color;
 			line-height: 	$slide-titlebar-height;
 		}
 
-		&__icon {			/* .title subclass */
+
+		&__icon {		
 			&:hover {
 				background:	#e8e8e8;
 			}
@@ -143,7 +146,7 @@ $slide-titlebar-font-color: 	$lighter-font-color;
 
 		.slide-controls span{
 			line-height: 	$slide-titlebar-height;
-		}
+		}*/
 
 }
 

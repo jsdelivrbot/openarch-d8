@@ -7,6 +7,9 @@ libraries:
   - open_scratch/global-js
 regions:
   header: 'Menubar header'
+  sidebar_top: 'top sidebar'
+  sidebar_middle: 'middle sidebar'
+  sidebar_bottom: 'bottom sidebar'
   menubar_primary: 'Primary menubar'
   menubar_secondary: 'Secondary menubar'
   toolbar_left: "Left toolbar"

@@ -11,9 +11,9 @@
 ## Config
 ===================================================================== */	
 
-/*$headlines-base-font-size:		1rem;
+$headlines-base-font-size:		1rem;
 
-$headline-font-size: 			0.8em;
+/*$headline-font-size: 			0.8em;
 $headline-line-height: 			1.1;*/
 
 
@@ -48,7 +48,7 @@ $headline-line-height: 			1.1;*/
 		and everything below it is relative to it
 	*/
 	
-	/*font-size:					$headlines-base-font-size;*/
+	font-size:					$headlines-base-font-size;
 
 	/* 	
 		element-level styling

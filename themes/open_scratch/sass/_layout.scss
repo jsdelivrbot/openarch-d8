@@ -77,24 +77,18 @@ $susy: (
 }
 
 /* wrapper for menubar regions */
-.menubar-wrapper {
+.sidebar-wrapper {
 
 	z-index:			100;
 	background:			white;
 	
 
 	@include mobile {
-		position:		fixed;
-		width: 			100%;
-		top:			0;
-		left:			0;
+		display:		none;
 	}
 
 	@include narrow {
-		position:		fixed;
-		width: 			100%;
-		top:			0;
-		left:			0;
+		display:		none;
 	}
 
 	@include wide {
@@ -104,7 +98,7 @@ $susy: (
 		position:		fixed;
 		/*width: 			200px;*/
 		height: 		100%;
-		padding-top:	200px;
+		/*padding-top:	200px;*/
 		top:			0;
 		left:			0;
 		/*left:			20px;*/
@@ -113,20 +107,45 @@ $susy: (
 
 }
 
-	
-
 
 /* wrapper for content regions */
 .main-wrapper {
 
-	margin-top:142px;
+	padding-top:200px;
 	background:white;
+	position: relative;
 
 	@include wide {
 		/*margin-left: 250px;*/
 		margin-left: span(3 of 12);
 		@include span(9 of 12);
 	}
+
+	main {
+		margin-bottom: 140px;
+	}
+
+}
+
+	/* wrapper for menubar regions */
+	.menubar-wrapper {
+
+		/*margin-top:142px;*/
+		background:white;
+		position: fixed;
+
+		@include wide {
+			/*margin-left: 250px;*/
+			margin-left: span(3 of 12);
+			@include span(9 of 12);
+		}
+
+		z-index:			100;
+		background:			white;
+		/*position:			absolute;*/
+		width: 				100%;
+		top:				0;
+		left:				0;
 
 }
 
@@ -200,7 +219,7 @@ $susy: (
 		/* recent news temp overrides */
 		#block-open-scratch-views-block-recent-news-block-1{ 
 			
-			border-top: 1px solid lightgrey;
+			border-top: 1px solid grey;
 
 			.views-row {
 				border-top: none;
@@ -284,7 +303,33 @@ $susy: (
 		}
 	}
 
-	.main-footer{
+	/* wrapper for menubar regions */
+	.footer-wrapper {
+
+		z-index:			100;
+		background:			white;
+		
+
+		@include mobile {
+			/*display:		none;*/
+		}
+
+		@include narrow {
+			/*display:		none;*/
+		}
+
+		@include wide {
+
+			/*display:		none;*/
+		}
+
+	}
+
+	main{}
+
+	footer.main-footer{
+
+		border-top: 1px solid #666;
 
 		@include clearfix;
 		@include layout((
@@ -294,14 +339,53 @@ $susy: (
 			global-box-sizing: content-box
 		));
 		
-		/*background: $footer-bg-color;*/
-		/*width:100%;*/
+		.footer__top{
 
-		.region{
+			@include wide {
+				display:		none;
+			}
+			
+			height:			$base-row-height;
+			line-height: 	$base-row-height;
+			/*@include span(4);*/
+		}
+
+		.footer__top-left{
+			/*height:			inherit;*/
+			display:		inline-block;
+			@include 		span(2 of 4);
+			/*float:			left;*/
+			vertical-align: middle;
+
+		}
+
+		.footer__top-right{
+			/*height:			inherit;*/
+			display:		inline-block;
+			@include 		span(2 of 4 last);
+			/*float:			right;*/
+			vertical-align: middle;
+			/*white-space:    nowrap;*/
+		}
+
+		.footer__middle{
+
+			@include wide {
+				display:		none;
+			}
+
 			@include span(4);
-			border-top: 1px solid #666;	
-			margin-top: 140px;
+				
+			/*margin-top: 140px;*/
 			padding-top: 140px;
+			padding-bottom: 140px;
+		}
+
+		.footer__bottom {
+
+			@include span(4);
+
+			/*border-top:		1px solid #e1e1e1;*/
 		}
 
 /*		.block-content{

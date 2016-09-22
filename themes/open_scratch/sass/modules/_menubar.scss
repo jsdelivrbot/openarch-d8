@@ -33,15 +33,8 @@ $menubar-width:				100%;
 		gutters: 			3/8,
 		global-box-sizing: 	border-box
 	));
-}
 
-@include mobile {
-
-	.menubar {
-
-		position: fixed;
-
-		width:				$menubar-width;
+	width:				$menubar-width;
 		height: 			$menubar-row-height;
 
 		&__header{
@@ -57,58 +50,8 @@ $menubar-width:				100%;
 			@include 		span(2 of 4 last);
 			float:			right;
 		}
-	}
 }
 
-@include narrow {
-
-	.menubar {
-
-		position: fixed;
-
-		width:				$menubar-width;
-		height: 			$menubar-row-height;
-
-		&__header{
-			@include 		span(2 of 4);
-			float:			left;
-		}
-
-		&__primary{
-			display:		none;
-		}
-
-		&__secondary{
-			@include 		span(2 of 4 last);
-			float:			right;
-		}
-	}
-}
-
-@include wide {
-
-	.menubar {
-
-		/*position: absolute;*/ /*this doesn't work -> container doesn't hold icons*/
-
-		width:				$menubar-width;
-		height: 			$menubar-row-height;
-
-		&__header{
-			@include 		span(2 of 4);
-			float:			left;
-		}
-
-		&__primary{
-			display:		none;
-		}
-
-		&__secondary{
-			@include 		span(2 of 4 last);
-			float:			right;
-		}
-	}
-}
 
 	
 /* ==================================================================

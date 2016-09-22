@@ -29,9 +29,9 @@ or the markdown files inside the `./docs` folder.
 
 ## Versions
 
-0.1.0
+#### 0.1.0
 
-release/commit date - 9.21.2016
+9.21.2016
 
 * Frontpage fully responsive. Position and size of text and elements adapts to all mobile device types and screen sizes. Still need to set max-width on desktop so layout doesn't stretch to fit full window size, but rather stops growing at ~1200px.
 * Sidebar added to show on wide breakpoint
@@ -44,9 +44,24 @@ release/commit date - 9.21.2016
 * enabled flexslider slideshow control with finger swipes for mobile devices 
 * Clickable regions bigger for easily clicking buttons and links with fingers.
 
-0.1.1
+#### 0.1.1
 
-* Added "wider" breakpoint, for min-width 1200px, see breakpoints.yml
+9.22.2016
+
+* Added "wider" breakpoint, for min-width 960px, see breakpoints.yml
 * Added "tiny" breakpoint, for max-width 350px, see breakpoints.yml
-* made thumbnail gallerys responsive as follows: use 1 col for tiny devices, 2 cols for mobile device, 3 for tablets/narrow and wide. Set gutter size to 1/2 of column size given 12 column layout. This is slightly smaller than what was specified in design mockup, but scales better for larger formats.
+* made thumbnail gallery column count responsive as follows: use 1 col for tiny devices, 2 cols for mobile device, 3 for tablets/narrow and wide. Set gutter size to 1/2 of column size given 12 column layout. This is slightly smaller than what was specified in design mockup, but scales better for larger formats. 
+* made thumnail gallery image size responsive so it fills column container as specified about at 1/2 column size for 12 column layout.
 * simplified html base font sizes for breakponits to the following: use 14px base font-size for tiny and mobile breakpoints, 16px for narrow and wide. This seems to work better because wide breakpoint pulls sidebar out and it is jarring for sidebar to pop out and text to resize at same time. 17px/18px base font size were too large for current layouts anyways.
+* removed extra padding on main content for wide (750px min) and wider (960px min) breakpoint
+* removed footer line if only copyright showing.
+* hide overflow for copyright notice
+
+#### TBD:
+
+* menu row height needs to resize responsively, too big at smallery breakpoints
+* add extra padding on main content for wider (960px min) breakpoint
+* remove tag icon @tiny
+* add more relations link under relations.
+* turn floating tags into gallery so they collapse better.
+* resize sidebar @wider breakpoint to 1/5 of 10 column grid.

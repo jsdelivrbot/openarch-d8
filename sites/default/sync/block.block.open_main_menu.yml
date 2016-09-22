@@ -1,0 +1,26 @@
+uuid: 515bbe33-35bf-4bff-9b03-9cd00344f4c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - open
+_core:
+  default_config_hash: 1FU1RttqG1SGozqLucR0x_MqKBclSQVhr-0SwIK5Zgs
+id: open_main_menu
+theme: open
+region: navbar
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main menu'
+  provider: system
+  label_display: 1
+  level: 1
+  depth: 1
+visibility: {  }

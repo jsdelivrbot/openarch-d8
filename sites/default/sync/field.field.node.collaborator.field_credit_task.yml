@@ -1,0 +1,26 @@
+uuid: 1955a835-7440-404d-a765-d3bb0c5687c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_credit_task
+    - node.type.collaborator
+    - node.type.task
+id: node.collaborator.field_credit_task
+field_name: field_credit_task
+entity_type: node
+bundle: collaborator
+label: Project
+description: 'Enter project'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      task: task
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,14 @@
+uuid: ac4104e2-c560-4635-a555-3f74bce72666
+langcode: en
+status: true
+dependencies: {  }
+name: temp_191px_
+label: 'Temp (186x186)'
+effects:
+  5f108a9a-a4da-451a-a2be-fb0cce29e87c:
+    uuid: 5f108a9a-a4da-451a-a2be-fb0cce29e87c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 186
+      height: 186

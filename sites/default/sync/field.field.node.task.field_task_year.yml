@@ -1,0 +1,21 @@
+uuid: d570de6a-34be-4991-8fdb-59b1dfefb912
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_year
+    - node.type.task
+  module:
+    - datetime
+id: node.task.field_task_year
+field_name: field_task_year
+entity_type: node
+bundle: task
+label: Year
+description: 'Enter project year.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

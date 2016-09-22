@@ -1,0 +1,30 @@
+uuid: a8af7192-e080-408b-a2c2-f803c00e49ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.task_slideshow
+  module:
+    - system
+    - views
+  theme:
+    - open_scratch
+id: views_block__task_slideshow_block_3
+theme: open_scratch
+region: content_slideshow
+weight: -26
+provider: null
+plugin: 'views_block:task_slideshow-block_3'
+settings:
+  id: 'views_block:task_slideshow-block_3'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/task/*'
+    negate: false
+    context_mapping: {  }

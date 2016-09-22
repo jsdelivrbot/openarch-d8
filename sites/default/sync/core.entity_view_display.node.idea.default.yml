@@ -1,0 +1,70 @@
+uuid: 04cfb401-2767-40ff-b9a5-7301925e627d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.idea.body
+    - field.field.node.idea.field_frontslide
+    - field.field.node.idea.field_idea_tags
+    - field.field.node.idea.field_idea_year
+    - field.field.node.idea.field_relation
+    - field.field.node.idea.field_thumbnail
+    - node.type.idea
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.idea.default
+targetEntityType: node
+bundle: idea
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_frontslide:
+    weight: 104
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_idea_tags:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_idea_year:
+    weight: 102
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_relation:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_thumbnail:
+    weight: 103
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 100
+hidden:
+  langcode: true

@@ -1,0 +1,19 @@
+uuid: 3094b9b8-df4b-42d2-a3ab-2d6acb994845
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_pub_author
+    - node.type.press
+id: node.press.field_press_pub_author
+field_name: field_press_pub_author
+entity_type: node
+bundle: press
+label: Author
+description: 'Enter author of publication (optional)'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

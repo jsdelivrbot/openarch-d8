@@ -82,6 +82,9 @@ $susy: (
 	z-index:			100;
 	background:			white;
 	
+	@include tiny {
+		display:		none;
+	}
 
 	@include mobile {
 		display:		none;
@@ -102,7 +105,21 @@ $susy: (
 		top:			0;
 		left:			0;
 		/*left:			20px;*/
-		border-right:	1px solid #e1e1e1;
+		border-right:	1px solid #f5f5f5;
+	}
+
+	@include wider {
+
+		@include span(3 of 12);
+
+		position:		fixed;
+		/*width: 			200px;*/
+		height: 		100%;
+		/*padding-top:	200px;*/
+		top:			0;
+		left:			0;
+		/*left:			20px;*/
+		border-right:	1px solid #f5f5f5;
 	}
 
 }
@@ -118,7 +135,15 @@ $susy: (
 	@include wide {
 		/*margin-left: 250px;*/
 		margin-left: span(3 of 12);
-		@include span(9 of 12);
+		/*@include span(9 of 12);*/
+		width: span(9 of 12 wide);
+	}
+
+	@include wider {
+		/*margin-left: 250px;*/
+		margin-left: span(3 of 12);
+		/*@include span(9 of 12);*/
+		width: span(9 of 12 wide);
 	}
 
 	main {
@@ -137,7 +162,15 @@ $susy: (
 		@include wide {
 			/*margin-left: 250px;*/
 			margin-left: span(3 of 12);
-			@include span(9 of 12);
+			/*@include span(9 of 12);*/
+			width: span(9 of 12 wide);
+		}
+
+		@include wider {
+			/*margin-left: 250px;*/
+			margin-left: span(3 of 12);
+			/*@include span(9 of 12);*/
+			width: span(9 of 12 wide);
 		}
 
 		z-index:			100;
@@ -329,7 +362,7 @@ $susy: (
 
 	footer.main-footer{
 
-		border-top: 1px solid #666;
+		
 
 		@include clearfix;
 		@include layout((
@@ -341,7 +374,12 @@ $susy: (
 		
 		.footer__top{
 
+			border-top: 1px solid #666;
+
 			@include wide {
+				display:		none;
+			}
+			@include wider {
 				display:		none;
 			}
 			
@@ -371,6 +409,10 @@ $susy: (
 		.footer__middle{
 
 			@include wide {
+				display:		none;
+			}
+
+			@include wider {
 				display:		none;
 			}
 

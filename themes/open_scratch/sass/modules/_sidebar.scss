@@ -33,6 +33,13 @@ $sidebar-footer-height: 	$base-row-height;
 	
 }
 
+@include tiny {
+
+	.sidebar {
+			display:		none;
+	}
+}
+
 @include mobile {
 
 	.sidebar {
@@ -76,6 +83,38 @@ $sidebar-footer-height: 	$base-row-height;
 }
 
 @include wide {
+
+	.sidebar {
+		
+		&__top{
+			font-size:		1rem;		/* need this to control searchbar region height */
+			position:		absolute;
+			top:			0;
+			left:			0;
+			height: 		$sidebar-header-height;
+			line-height: 	$sidebar-header-height;
+			width:			100%;
+			/*border-bottom:	1px solid #e1e1e1;*/
+		}
+
+		&__middle{
+			padding-top:	200px;
+			padding-bottom:	$base-row-height;
+		}
+
+		&__bottom{
+			position:		absolute;
+			left:			0;
+			bottom:			0;
+			height: 		$sidebar-footer-height;
+			line-height: 	$sidebar-footer-height;
+			width:			100%;
+			/*border-top:		1px solid #e1e1e1;*/
+		}
+	}
+}
+
+@include wider {
 
 	.sidebar {
 		

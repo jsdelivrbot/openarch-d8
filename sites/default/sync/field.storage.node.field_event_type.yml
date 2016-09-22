@@ -1,0 +1,36 @@
+uuid: 6e2ab0a1-8b2e-42f8-bdd1-436cbb4a3ae9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_event_type
+field_name: field_event_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Lecture
+      label: Lecture
+    -
+      value: Exhibition
+      label: Exhibition
+    -
+      value: Opening
+      label: Opening
+    -
+      value: Publication
+      label: Publication
+    -
+      value: other
+      label: other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+uuid: bb239e74-3efb-4cd8-a694-1bd6fd12cfa8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Image set'
+type: image_set
+description: 'A set of a images related to a project, sub-project, event, or idea.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

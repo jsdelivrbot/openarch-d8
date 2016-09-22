@@ -1,0 +1,30 @@
+uuid: f2bfcb8f-661c-4ca5-a490-66bba95c1cd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.awards
+  module:
+    - system
+    - views
+  theme:
+    - open_scratch
+id: views_block__awards_block_2
+theme: open_scratch
+region: content_primary
+weight: -22
+provider: null
+plugin: 'views_block:awards-block_2'
+settings:
+  id: 'views_block:awards-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /awards
+    negate: false
+    context_mapping: {  }

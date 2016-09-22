@@ -1,0 +1,22 @@
+uuid: 99c9222f-705c-4b9e-abe1-e335bdf1e75d
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - open_scratch
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: open_scratch_help
+theme: open_scratch
+region: '-1'
+weight: -21
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

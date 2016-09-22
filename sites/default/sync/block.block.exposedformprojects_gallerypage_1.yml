@@ -1,0 +1,29 @@
+uuid: 01dbce5e-8eac-445a-8ae4-466a82233772
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.projects_gallery
+  module:
+    - system
+    - views
+  theme:
+    - open_scratch
+id: exposedformprojects_gallerypage_1
+theme: open_scratch
+region: toolbar_left
+weight: -21
+provider: null
+plugin: 'views_exposed_filter_block:projects_gallery-page_1'
+settings:
+  id: 'views_exposed_filter_block:projects_gallery-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /projects/gallery
+    negate: false
+    context_mapping: {  }

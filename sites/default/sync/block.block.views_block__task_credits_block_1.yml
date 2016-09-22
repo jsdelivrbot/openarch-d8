@@ -1,0 +1,30 @@
+uuid: 15be5abf-f2ef-4b38-8970-a3bb55577e59
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.task_credits
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap
+id: views_block__task_credits_block_1
+theme: bootstrap
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:task_credits-block_1'
+settings:
+  id: 'views_block:task_credits-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/task/*'
+    negate: false
+    context_mapping: {  }

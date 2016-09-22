@@ -1,0 +1,16 @@
+uuid: 74ee8aee-bb8e-4c30-b4ac-ce98b462e3fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.task
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.task
+target_entity_type_id: node
+target_bundle: task
+default_langcode: site_default
+language_alterable: true

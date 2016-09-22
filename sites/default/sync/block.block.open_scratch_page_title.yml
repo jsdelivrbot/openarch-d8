@@ -1,0 +1,20 @@
+uuid: 8db20176-89b6-4845-9208-662b3a0a65c2
+langcode: en
+status: false
+dependencies:
+  theme:
+    - open_scratch
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: open_scratch_page_title
+theme: open_scratch
+region: '-1'
+weight: -18
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

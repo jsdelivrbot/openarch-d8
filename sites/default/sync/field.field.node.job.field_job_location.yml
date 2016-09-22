@@ -1,0 +1,23 @@
+uuid: a60ffb4b-3504-4f5c-a90a-4c4c6d5a0131
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_location
+    - node.type.job
+  module:
+    - options
+id: node.job.field_job_location
+field_name: field_job_location
+entity_type: node
+bundle: job
+label: 'Job location'
+description: 'Select location of job.'
+required: true
+translatable: true
+default_value:
+  -
+    value: Beijing
+default_value_callback: ''
+settings: {  }
+field_type: list_string

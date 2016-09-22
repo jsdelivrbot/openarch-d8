@@ -1,0 +1,21 @@
+uuid: 5f6619fe-bf98-4dcb-b3ea-de332b1371f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_idea_year
+    - node.type.idea
+  module:
+    - datetime
+id: node.idea.field_idea_year
+field_name: field_idea_year
+entity_type: node
+bundle: idea
+label: Year
+description: 'Enter year.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,22 @@
+uuid: 7aa69f6b-9b1c-49e1-ac7b-eb7a29629390
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.collaborator
+  module:
+    - text
+id: node.collaborator.body
+field_name: body
+entity_type: node
+bundle: collaborator
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,15 @@
+uuid: 5a693694-e159-4c45-bf2e-d6d241dde2b9
+langcode: en
+status: true
+dependencies: {  }
+name: iphone_6plus
+label: iphone_6plus
+effects:
+  5461a2a3-1555-4949-a3af-85129d1cc08d:
+    uuid: 5461a2a3-1555-4949-a3af-85129d1cc08d
+    id: image_scale
+    weight: 1
+    data:
+      width: 386
+      height: null
+      upscale: true

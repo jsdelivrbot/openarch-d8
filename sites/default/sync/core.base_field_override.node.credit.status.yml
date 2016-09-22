@@ -1,0 +1,22 @@
+uuid: 41ed9dc8-3196-40f3-97a1-3a2b94871ad2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.credit
+id: node.credit.status
+field_name: status
+entity_type: node
+bundle: credit
+label: 'Publishing status'
+description: 'A boolean indicating whether the node is published.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

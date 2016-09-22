@@ -1,0 +1,17 @@
+uuid: 52bf392b-9c4d-4767-8490-c8b37b6d7492
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Credit
+type: credit
+description: 'A project office credit. Enter role (e.g. "consultants") then assign person(s) to that role by adding additional. Do not use comma-separated list.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

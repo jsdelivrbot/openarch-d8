@@ -1,0 +1,35 @@
+uuid: fcae17dc-cc69-4a71-9928-136247867583
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about.body
+    - field.field.node.about.field_thumbnail
+    - node.type.about
+  module:
+    - image
+    - text
+    - user
+id: node.about.default
+targetEntityType: node
+bundle: about
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_thumbnail:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 100
+hidden:
+  langcode: true

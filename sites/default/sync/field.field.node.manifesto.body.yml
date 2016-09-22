@@ -1,0 +1,22 @@
+uuid: 2aafa93d-86a8-4cbb-ba55-e95f3ad4ae86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.manifesto
+  module:
+    - text
+id: node.manifesto.body
+field_name: body
+entity_type: node
+bundle: manifesto
+label: 'Manifesto Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

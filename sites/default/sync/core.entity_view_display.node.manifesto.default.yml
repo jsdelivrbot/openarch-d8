@@ -1,0 +1,25 @@
+uuid: 44ffd971-da83-4907-868d-c82654c2fbb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.manifesto.body
+    - node.type.manifesto
+  module:
+    - text
+    - user
+id: node.manifesto.default
+targetEntityType: node
+bundle: manifesto
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  langcode: true

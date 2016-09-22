@@ -1,0 +1,30 @@
+uuid: 85cb473c-1153-4426-a8c6-e91904d0bdb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.manifesto
+  module:
+    - system
+    - views
+  theme:
+    - open_scratch
+id: views_block__manifesto_block_2
+theme: open_scratch
+region: content_primary
+weight: -15
+provider: null
+plugin: 'views_block:manifesto-block_2'
+settings:
+  id: 'views_block:manifesto-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /emptypagetest
+    negate: false
+    context_mapping: {  }

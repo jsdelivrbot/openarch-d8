@@ -36,4 +36,4 @@ sites/simpletest
 # simpletest
 
 # Ignore local assets folder
-assets/
+/assets/

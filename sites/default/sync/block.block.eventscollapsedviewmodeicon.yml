@@ -1,0 +1,31 @@
+uuid: b67de7c6-f52f-4ecf-8584-0c2d58c5c501
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d831bc2b-935a-45f7-996e-9e631cd10e24'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_scratch
+id: eventscollapsedviewmodeicon
+theme: open_scratch
+region: toolbar_right
+weight: -24
+provider: null
+plugin: 'block_content:d831bc2b-935a-45f7-996e-9e631cd10e24'
+settings:
+  id: 'block_content:d831bc2b-935a-45f7-996e-9e631cd10e24'
+  label: 'Events collapsed (view mode icon)'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /events
+    negate: false
+    context_mapping: {  }

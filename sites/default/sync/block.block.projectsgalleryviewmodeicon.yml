@@ -1,0 +1,31 @@
+uuid: 98f179e3-43e9-4878-ac7d-cb03ab4e00e5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:fb736cbb-0abb-434b-80ca-628f79466e9f'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_scratch
+id: projectsgalleryviewmodeicon
+theme: open_scratch
+region: toolbar_right
+weight: -22
+provider: null
+plugin: 'block_content:fb736cbb-0abb-434b-80ca-628f79466e9f'
+settings:
+  id: 'block_content:fb736cbb-0abb-434b-80ca-628f79466e9f'
+  label: 'Projects gallery (view mode icon)'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /projects/gallery
+    negate: false
+    context_mapping: {  }

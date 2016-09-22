@@ -1,0 +1,16 @@
+uuid: 5bee8da0-11a1-4bc4-bd9b-5fae7ba1a623
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.collaborator
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.collaborator
+target_entity_type_id: node
+target_bundle: collaborator
+default_langcode: site_default
+language_alterable: true

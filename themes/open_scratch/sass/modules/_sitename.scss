@@ -31,6 +31,10 @@
 		width: auto;
 		vertical-align: middle;
 
+		@include tiny {
+			height: 20px;
+		}
+
 		@include mobile {
 			height: 25px;
 		}
@@ -41,6 +45,10 @@
 
 		@include wide {	
 			height: 30px;
+		}
+
+		@include wider {	
+			height: 35px;
 		}
 
 	}

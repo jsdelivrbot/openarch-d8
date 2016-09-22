@@ -1,0 +1,18 @@
+uuid: f94b432a-7102-4311-941c-7d2efa1c9679
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.award
+id: node.award.title
+field_name: title
+entity_type: node
+bundle: award
+label: 'Award title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

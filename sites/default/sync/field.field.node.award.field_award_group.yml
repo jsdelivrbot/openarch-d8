@@ -1,0 +1,21 @@
+uuid: b19766b4-1e4d-475f-b147-e9edb9b02435
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_award_group
+    - node.type.award
+  module:
+    - options
+id: node.award.field_award_group
+field_name: field_award_group
+entity_type: node
+bundle: award
+label: 'Award group'
+description: 'Select Award group if nec. (not required)'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

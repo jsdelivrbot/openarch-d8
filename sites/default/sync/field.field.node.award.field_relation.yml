@@ -1,0 +1,26 @@
+uuid: 5e1b94dd-b33c-439f-a2ae-084f709cf8b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relation
+    - node.type.award
+    - node.type.task
+id: node.award.field_relation
+field_name: field_relation
+entity_type: node
+bundle: award
+label: Relation
+description: 'Enter project given award.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      task: task
+    sort:
+      field: _none
+field_type: entity_reference

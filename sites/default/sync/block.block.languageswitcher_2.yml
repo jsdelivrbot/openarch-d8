@@ -1,0 +1,28 @@
+uuid: 744e0b61-c181-4a17-b051-797ea6623765
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - open_scratch
+id: languageswitcher_2
+theme: open_scratch
+region: menubar_secondary
+weight: -20
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility:
+  language:
+    id: language
+    langcodes:
+      en: en
+      zh-hans: zh-hans
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

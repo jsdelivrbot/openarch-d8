@@ -1,0 +1,31 @@
+uuid: b898e18c-5800-4aae-9b08-cc6710691893
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:d05ac40d-505d-4546-8bad-86df06592b4e'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_scratch
+id: viewmode
+theme: open_scratch
+region: '-1'
+weight: -5
+provider: null
+plugin: 'block_content:d05ac40d-505d-4546-8bad-86df06592b4e'
+settings:
+  id: 'block_content:d05ac40d-505d-4546-8bad-86df06592b4e'
+  label: 'View mode'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/projects/*\r\n/press"
+    negate: false
+    context_mapping: {  }

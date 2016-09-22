@@ -1,0 +1,23 @@
+uuid: ca17c5c5-5e72-4e69-ab89-11e8bcb2e13b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_size
+    - node.type.task
+id: node.task.field_task_size
+field_name: field_task_size
+entity_type: node
+bundle: task
+label: Size
+description: 'Enter total floor area in square meters.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

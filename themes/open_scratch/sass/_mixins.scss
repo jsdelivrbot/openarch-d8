@@ -18,14 +18,20 @@
     Make sure these match breakpoints in open_scratch.breakpoints.yml !!! 
 */ 
 
+@mixin tiny{
+    @media all and (max-width: 350px){ @content; }
+}
 @mixin mobile{
-    @media all and (max-width: 559px){ @content; }
+    @media all and (min-width: 351px) and (max-width: 559px){ @content; }
 }
 @mixin narrow{
-    @media all and (min-width: 560px) and (max-width: 850px){ @content; }
+    @media all and (min-width: 560px) and (max-width: 750px){ @content; }
 }
 @mixin wide{
-    @media all and (min-width: 851px){ @content; }
+    @media all and (min-width: 751px) and (max-width: 960px){ @content; }
+}
+@mixin wider{
+    @media all and (min-width: 961px){ @content; }
 }
 
 @mixin table-1-col{
@@ -98,9 +104,12 @@ $base-font-size:16px;
 
 }
 
-@mixin gallery-list {
+/* =======================================================================
+## ++ Gallery old
+========================================================================== */
 
-    
+@mixin gallery-list {
+  
     @include layout((
         gutter-position: before,
         columns: 4,
@@ -116,8 +125,63 @@ $base-font-size:16px;
     margin-bottom: gutter(4);
 }
 
-@mixin base-title {
-        
-    text-transform: uppercase;
-    text-decoration: none;
+/* =======================================================================
+## ++ Gallery new
+========================================================================== */
+
+@mixin gallery-container {
+
+    @include layout((
+        gutter-position: before,
+        columns: 12,
+        gutters: 1/2, 
+        global-box-sizing: border-box
+    ));
+
 }
+
+/*@mixin gallery-container-1-col {
+
+    @include layout(12 1 before border-box, true);
+}
+
+@mixin gallery-container-2-col {
+
+    @include layout(12 1 before border-box, true);
+}
+
+@mixin gallery-container-3-col {
+
+    @include layout(12 1/2 before border-box, true);
+}
+
+@mixin gallery-container-4-col {
+
+    @include layout(12 1/2 before border-box, true);
+}*/
+
+
+@mixin gallery-item-1-col {
+
+    @include gallery(12 of 12);
+    margin-bottom: gutter(12);
+}
+
+@mixin gallery-item-2-col {
+
+    @include gallery(6 of 12);
+    margin-bottom: gutter(12);
+}
+
+@mixin gallery-item-3-col {
+
+    @include gallery(4 of 12);
+    margin-bottom: gutter(12);
+}
+
+@mixin gallery-item-4-col {
+
+    @include gallery(3 of 12);
+    margin-bottom: gutter(12);
+}
+

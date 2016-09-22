@@ -1,0 +1,23 @@
+uuid: b779a85a-ba8e-4d55-aed0-c4191640498d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_award_link
+    - node.type.award
+  module:
+    - link
+id: node.award.field_award_link
+field_name: field_award_link
+entity_type: node
+bundle: award
+label: Link
+description: 'Enter optional external link.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

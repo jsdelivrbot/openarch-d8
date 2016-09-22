@@ -1,0 +1,30 @@
+uuid: d6f68742-0af5-4cf7-87e2-48e08a824bd5
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.task_relations
+  module:
+    - system
+    - views
+  theme:
+    - open_scratch
+id: open_scratch_views_block__task_relations_block_1
+theme: open_scratch
+region: '-1'
+weight: -8
+provider: null
+plugin: 'views_block:task_relations-block_1'
+settings:
+  id: 'views_block:task_relations-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/task/*'
+    negate: false
+    context_mapping: {  }

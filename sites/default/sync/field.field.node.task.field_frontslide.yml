@@ -1,0 +1,45 @@
+uuid: 6f0fe348-82c0-4f63-bc90-b99d64843bad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_frontslide
+    - node.type.task
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: node.task.field_frontslide
+field_name: field_frontslide
+entity_type: node
+bundle: task
+label: Frontslide
+description: 'Upload optional image for slideshow on front page'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

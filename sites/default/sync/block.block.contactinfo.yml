@@ -1,0 +1,31 @@
+uuid: ba6251d0-eb4d-4950-88a3-8f289653b541
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0439dce5-3c67-4ffb-a921-9bde3951b449'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_scratch
+id: contactinfo
+theme: open_scratch
+region: content_primary
+weight: -12
+provider: null
+plugin: 'block_content:0439dce5-3c67-4ffb-a921-9bde3951b449'
+settings:
+  id: 'block_content:0439dce5-3c67-4ffb-a921-9bde3951b449'
+  label: Contact
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false
+    context_mapping: {  }

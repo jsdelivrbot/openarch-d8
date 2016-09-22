@@ -1,0 +1,19 @@
+uuid: e3c765aa-788b-4972-a1d8-1e4b0f77c96e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_client
+    - node.type.task
+id: node.task.field_task_client
+field_name: field_task_client
+entity_type: node
+bundle: task
+label: Client
+description: 'Enter name of client.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

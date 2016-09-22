@@ -1,0 +1,29 @@
+uuid: cdbf4a4a-8916-41a3-966a-616c7854e6e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relation
+    - node.type.event
+    - node.type.idea
+    - node.type.task
+id: node.task.field_relation
+field_name: field_relation
+entity_type: node
+bundle: task
+label: Relation
+description: 'Enter related nodes. Click "add another item" for multiple nodes rather than a comma-separated list.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+      idea: idea
+      task: task
+    sort:
+      field: _none
+field_type: entity_reference

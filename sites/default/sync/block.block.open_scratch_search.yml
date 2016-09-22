@@ -1,0 +1,22 @@
+uuid: 104ea6b0-29f1-4eab-9ad0-0dc5b3057917
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - open_scratch
+_core:
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: open_scratch_search
+theme: open_scratch
+region: '-1'
+weight: -12
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

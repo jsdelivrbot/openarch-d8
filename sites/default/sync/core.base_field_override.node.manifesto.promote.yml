@@ -1,0 +1,22 @@
+uuid: e5c145ce-7802-44a0-b8f4-51981507e802
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.manifesto
+id: node.manifesto.promote
+field_name: promote
+entity_type: node
+bundle: manifesto
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

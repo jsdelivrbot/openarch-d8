@@ -1,0 +1,17 @@
+uuid: 438de9de-267b-46cc-9ab0-bafbe9f9d60a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Manifesto
+type: manifesto
+description: 'A public declaration of principles and intentions.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

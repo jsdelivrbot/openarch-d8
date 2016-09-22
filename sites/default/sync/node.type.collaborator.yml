@@ -1,0 +1,17 @@
+uuid: 094e610b-efac-48e8-b7f3-6de47ecc405f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Collaborator
+type: collaborator
+description: 'A project collaborator. Enter role (e.g. "consultants") then assign person(s) to that role by adding additional. Do not use comma-separated list.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

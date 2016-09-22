@@ -1,0 +1,42 @@
+uuid: 0e6e1e38-0866-4562-a0c2-1b8282624ffa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_task_type
+field_name: field_task_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Planning & Strategy'
+      label: 'Planning & Strategy'
+    -
+      value: Landscape
+      label: Landscape
+    -
+      value: Architecture
+      label: Architecture
+    -
+      value: 'Interior & Renovation'
+      label: 'Interior & Renovation'
+    -
+      value: Furniture
+      label: Furniture
+    -
+      value: Installation
+      label: Installation
+    -
+      value: other
+      label: other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

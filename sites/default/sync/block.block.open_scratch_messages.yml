@@ -1,0 +1,22 @@
+uuid: fc3659ab-ad6f-4f89-9cc1-7fd6b7b3739d
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - open_scratch
+_core:
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: open_scratch_messages
+theme: open_scratch
+region: '-1'
+weight: -10
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

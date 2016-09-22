@@ -26,13 +26,26 @@
 
 	.gallery--container{
 
-		@include gallery-list;
+		@include gallery-container;
+
+		/*@include tiny{		@include gallery-container-1-col;	}
+		@include mobile{	@include gallery-container-2-col;	}
+		@include narrow{	@include gallery-container-3-col;	}
+		@include wide{		@include gallery-container-3-col;	}
+		@include wider{		@include gallery-container-3-col;	}*/
 	}
 
 	.gallery--item{
 
-		@include gallery-list-item;
 		background:#999;
+
+		@include tiny{		@include gallery-item-1-col;	}
+		@include mobile{	@include gallery-item-2-col;	}
+		@include narrow{	@include gallery-item-3-col;	}
+		@include wide{		@include gallery-item-3-col;	}
+		@include wider{		@include gallery-item-3-col;	}
+
+		
 	}
 
 /* ==================================================================

@@ -1,0 +1,21 @@
+uuid: e22e4b1f-e5ab-4805-a1b9-633a74f9dbcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_program
+    - node.type.task
+  module:
+    - options
+id: node.task.field_task_program
+field_name: field_task_program
+entity_type: node
+bundle: task
+label: Program
+description: 'Select program.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

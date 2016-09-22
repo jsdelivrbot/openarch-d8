@@ -1,0 +1,21 @@
+uuid: 01d33714-1bdd-4d3b-981f-1f319d3f531e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_type
+    - node.type.press
+  module:
+    - options
+id: node.press.field_press_type
+field_name: field_press_type
+entity_type: node
+bundle: press
+label: Type
+description: 'Select type of publication.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

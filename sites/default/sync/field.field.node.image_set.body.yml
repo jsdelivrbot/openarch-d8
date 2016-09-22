@@ -1,0 +1,22 @@
+uuid: c7246189-9d42-427c-84cb-78700741fd76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.image_set
+  module:
+    - text
+id: node.image_set.body
+field_name: body
+entity_type: node
+bundle: image_set
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,20 @@
+uuid: 19365245-7328-44ea-8c81-cdecb0f78eb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_press_publication_issue
+field_name: field_press_publication_issue
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

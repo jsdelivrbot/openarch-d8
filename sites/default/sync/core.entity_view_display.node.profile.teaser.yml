@@ -1,0 +1,33 @@
+uuid: 2f49d5df-a3fb-435d-bb43-5e82dde870b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.profile.body
+    - field.field.node.profile.field_profile_email
+    - field.field.node.profile.field_profile_position
+    - field.field.node.profile.field_thumbnail
+    - node.type.profile
+  module:
+    - text
+    - user
+id: node.profile.teaser
+targetEntityType: node
+bundle: profile
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_profile_email: true
+  field_profile_position: true
+  field_thumbnail: true
+  langcode: true

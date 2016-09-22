@@ -1,0 +1,23 @@
+uuid: 7143183f-8276-4e4d-be53-b5cd3388f62c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_publication_issue
+    - node.type.press
+id: node.press.field_press_publication_issue
+field_name: field_press_publication_issue
+entity_type: node
+bundle: press
+label: 'Publication Issue'
+description: 'Enter publication issue number (optional)'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

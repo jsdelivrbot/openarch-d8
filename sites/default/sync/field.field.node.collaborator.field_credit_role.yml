@@ -1,0 +1,19 @@
+uuid: a041faed-d25f-430e-a754-a016beabb3fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_credit_role
+    - node.type.collaborator
+id: node.collaborator.field_credit_role
+field_name: field_credit_role
+entity_type: node
+bundle: collaborator
+label: Role
+description: 'Enter the role (e.g. "consultants" or "engineering consultant")'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

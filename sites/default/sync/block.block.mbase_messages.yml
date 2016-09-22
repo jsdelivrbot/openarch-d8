@@ -1,0 +1,22 @@
+uuid: d0b94432-32d6-4ce1-b022-e8ac1973dfe8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mbase
+_core:
+  default_config_hash: 1mdnSs3t3aS31A8FNWHNcdsmkwZeNfJvjighbCTD4MA
+id: mbase_messages
+theme: mbase
+region: header
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: cb926972-837c-4716-bb87-7d4a29c82890
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_target
+    - node.type.event
+    - node.type.idea
+    - node.type.image_set
+    - node.type.task
+id: node.image_set.field_image_target
+field_name: field_image_target
+entity_type: node
+bundle: image_set
+label: 'Image target'
+description: 'Select a project, idea or event that the image set belongs to.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+      idea: idea
+      task: task
+    sort:
+      field: _none
+field_type: entity_reference

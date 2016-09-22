@@ -1,0 +1,21 @@
+uuid: 698a8b26-2bcd-48ff-ae7b-5e605ce59209
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_publication_date
+    - node.type.press
+  module:
+    - datetime
+id: node.press.field_press_publication_date
+field_name: field_press_publication_date
+entity_type: node
+bundle: press
+label: 'Publication date'
+description: 'Enter date of publication.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

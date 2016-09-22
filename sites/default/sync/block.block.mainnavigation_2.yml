@@ -1,0 +1,24 @@
+uuid: 2b0d5884-127b-4e2a-94a3-71e162574b22
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - open_scratch
+id: mainnavigation_2
+theme: open_scratch
+region: sidebar_middle
+weight: -26
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

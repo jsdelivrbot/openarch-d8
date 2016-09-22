@@ -1,0 +1,19 @@
+uuid: 67544332-f9a4-4da0-a753-4a4e82d25744
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_award_country
+    - node.type.award
+id: node.award.field_award_country
+field_name: field_award_country
+entity_type: node
+bundle: award
+label: Country
+description: 'Enter country.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

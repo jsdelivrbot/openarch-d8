@@ -1,0 +1,27 @@
+uuid: 02a34185-0e32-4a60-9250-a0f585486808
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.manifesto.body
+    - node.type.manifesto
+  module:
+    - text
+    - user
+id: node.manifesto.teaser
+targetEntityType: node
+bundle: manifesto
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  langcode: true

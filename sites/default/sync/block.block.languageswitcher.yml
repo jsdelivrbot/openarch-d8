@@ -1,0 +1,25 @@
+uuid: 15e5c5c2-7adc-4f06-96f1-9110310c0ab4
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:4b58ad1b-40af-470f-bf89-16fe3800dfe9'
+  module:
+    - block_content
+  theme:
+    - open_scratch
+id: languageswitcher
+theme: open_scratch
+region: '-1'
+weight: -20
+provider: null
+plugin: 'block_content:4b58ad1b-40af-470f-bf89-16fe3800dfe9'
+settings:
+  id: 'block_content:4b58ad1b-40af-470f-bf89-16fe3800dfe9'
+  label: 'Language switcher'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

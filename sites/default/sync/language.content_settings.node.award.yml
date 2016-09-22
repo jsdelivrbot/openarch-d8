@@ -1,0 +1,16 @@
+uuid: c5bddabe-0e96-424e-88da-d34e8ebe18e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.award
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.award
+target_entity_type_id: node
+target_bundle: award
+default_langcode: site_default
+language_alterable: true

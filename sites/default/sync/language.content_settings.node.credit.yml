@@ -1,0 +1,16 @@
+uuid: bcc5d0e1-bfe1-464a-b231-323f859247f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.credit
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.credit
+target_entity_type_id: node
+target_bundle: credit
+default_langcode: site_default
+language_alterable: true

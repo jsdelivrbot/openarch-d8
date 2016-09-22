@@ -1,0 +1,33 @@
+uuid: 1579e0d0-da1f-4168-9039-89d8a181631f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.collaborator.body
+    - field.field.node.collaborator.field_credit_collaborators
+    - field.field.node.collaborator.field_credit_role
+    - field.field.node.collaborator.field_credit_task
+    - node.type.collaborator
+  module:
+    - text
+    - user
+id: node.collaborator.teaser
+targetEntityType: node
+bundle: collaborator
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_credit_collaborators: true
+  field_credit_role: true
+  field_credit_task: true
+  langcode: true

@@ -1,0 +1,25 @@
+uuid: 62468b53-baf9-4664-8740-c700b73cfc90
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:85847b70-27cf-4be1-acd3-dda741e43db9'
+  module:
+    - block_content
+  theme:
+    - open_scratch
+id: searchbar
+theme: open_scratch
+region: sidebar_top
+weight: -27
+provider: null
+plugin: 'block_content:85847b70-27cf-4be1-acd3-dda741e43db9'
+settings:
+  id: 'block_content:85847b70-27cf-4be1-acd3-dda741e43db9'
+  label: Searchbar
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 4d412a29-1f21-4301-bc5c-446b4a555958
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_site
+    - node.type.task
+id: node.task.field_task_site
+field_name: field_task_site
+entity_type: node
+bundle: task
+label: Site
+description: 'Enter area of site'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

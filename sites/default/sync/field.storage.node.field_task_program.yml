@@ -1,0 +1,72 @@
+uuid: ffe0a2c8-48a1-4034-aa4c-c9fa437c9d35
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_task_program
+field_name: field_task_program
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Culture
+      label: Culture
+    -
+      value: Park
+      label: Park
+    -
+      value: Education
+      label: Education
+    -
+      value: Institution
+      label: Institution
+    -
+      value: Exhibition
+      label: Exhibition
+    -
+      value: Hotel
+      label: Hotel
+    -
+      value: Infrastructure
+      label: Infrastructure
+    -
+      value: Library
+      label: Library
+    -
+      value: Masterplan
+      label: Masterplan
+    -
+      value: Mixed-Use
+      label: Mixed-Use
+    -
+      value: Museum
+      label: Museum
+    -
+      value: Office
+      label: Office
+    -
+      value: Preservation
+      label: Preservation
+    -
+      value: Retail
+      label: Retail
+    -
+      value: Residential
+      label: Residential
+    -
+      value: Sport
+      label: Sport
+    -
+      value: other
+      label: other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

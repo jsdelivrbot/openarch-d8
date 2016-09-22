@@ -1,0 +1,26 @@
+uuid: d45cd7de-13ae-4a5e-b759-51ef79a8ec43
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - open
+_core:
+  default_config_hash: mW2J6MaQqiUSg9tpqvBdJeh0rxPyIWVhNERWtyhRMKg
+id: open_account_menu
+theme: open
+region: leaderboard
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

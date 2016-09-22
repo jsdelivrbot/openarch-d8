@@ -1,0 +1,30 @@
+uuid: 3f1e8c0a-f2a4-4fd7-b03e-5bd7e9bebe6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_job_location
+field_name: field_job_location
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Beijing
+      label: Beijing
+    -
+      value: 'New Delhi'
+      label: 'New Delhi'
+    -
+      value: 'New York'
+      label: 'New York'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

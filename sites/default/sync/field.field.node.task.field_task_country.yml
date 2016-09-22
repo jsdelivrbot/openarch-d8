@@ -1,0 +1,19 @@
+uuid: b47f3d79-099e-4605-a8b1-450f73bd63ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_country
+    - node.type.task
+id: node.task.field_task_country
+field_name: field_task_country
+entity_type: node
+bundle: task
+label: Country
+description: 'Enter location (country) of project'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 6edfa0df-aecc-48ad-b385-77810b4c1a29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_publisher
+    - node.type.press
+id: node.press.field_press_publisher
+field_name: field_press_publisher
+entity_type: node
+bundle: press
+label: Publisher
+description: 'Enter publisher (optional)'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

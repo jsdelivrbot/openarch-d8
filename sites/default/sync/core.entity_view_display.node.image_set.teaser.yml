@@ -1,0 +1,31 @@
+uuid: aa33012d-674c-4463-81de-86a91b999855
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.image_set.body
+    - field.field.node.image_set.field_image_files
+    - field.field.node.image_set.field_image_target
+    - node.type.image_set
+  module:
+    - text
+    - user
+id: node.image_set.teaser
+targetEntityType: node
+bundle: image_set
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_image_files: true
+  field_image_target: true
+  langcode: true

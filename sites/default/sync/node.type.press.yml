@@ -1,0 +1,17 @@
+uuid: 0ba93dab-b645-4d72-b9bb-22dea22c3cba
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Press
+type: press
+description: 'Press coverage for a project.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

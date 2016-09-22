@@ -1,0 +1,27 @@
+uuid: 5cdc9a60-99d4-4a3a-b008-8857497a1866
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_file
+    - node.type.press
+  module:
+    - file
+id: node.press.field_press_file
+field_name: field_press_file
+entity_type: node
+bundle: press
+label: File
+description: 'Browse to pdf file and upload.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: press
+  file_extensions: 'txt pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

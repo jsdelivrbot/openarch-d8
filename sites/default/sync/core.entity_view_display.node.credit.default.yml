@@ -1,0 +1,49 @@
+uuid: 4b79f4be-6955-414a-9392-6dc1f56898d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.credit.body
+    - field.field.node.credit.field_credit_collaborators
+    - field.field.node.credit.field_credit_role
+    - field.field.node.credit.field_credit_task
+    - node.type.credit
+  module:
+    - text
+    - user
+id: node.credit.default
+targetEntityType: node
+bundle: credit
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_credit_collaborators:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_credit_role:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_credit_task:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  links:
+    weight: 100
+hidden:
+  langcode: true

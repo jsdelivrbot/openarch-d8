@@ -1,0 +1,19 @@
+uuid: 4eeefa01-e25e-43ea-9ee2-9f721e5b3040
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_idea_tags
+    - node.type.idea
+id: node.idea.field_idea_tags
+field_name: field_idea_tags
+entity_type: node
+bundle: idea
+label: Tags
+description: 'Add multiple tags by clicking "add another item". DO NOT enter comma-separated list.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

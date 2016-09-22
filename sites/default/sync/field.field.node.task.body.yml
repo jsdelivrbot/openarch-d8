@@ -1,0 +1,22 @@
+uuid: bdc7466b-0838-4ae2-a1b0-1fc0da7b9d7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.task
+  module:
+    - text
+id: node.task.body
+field_name: body
+entity_type: node
+bundle: task
+label: Body
+description: 'Project text'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

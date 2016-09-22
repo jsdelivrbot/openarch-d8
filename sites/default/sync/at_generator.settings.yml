@@ -1,0 +1,23 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 1
+  path: ''
+favicon:
+  use_default: 1
+  path: ''
+generate:
+  generate_friendly_name: open
+  generate_machine_name: open
+  generate_type: clone
+  generate_clone_source: open_theme
+  options:
+    generate_templates: 0
+    generate_uikit: 0
+    generate_color: 0
+    generate_themesettingsfile: 0
+    generate_description: 'adaptive theme for open'
+    generate_version: 8.0.0

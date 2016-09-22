@@ -1,0 +1,22 @@
+uuid: 535a43a9-63c1-4cce-a4c9-8cbe61d4ed3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - open
+_core:
+  default_config_hash: _xFzQLl2ZQui22QWKWi-d36MO4vdWtwkwDRZJ2OEhyM
+id: open_content
+theme: open
+region: content
+weight: 4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

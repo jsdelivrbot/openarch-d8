@@ -1,0 +1,19 @@
+uuid: 6e0aed80-96a4-43fc-891e-1713aae6fbaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_publication
+    - node.type.press
+id: node.press.field_press_publication
+field_name: field_press_publication
+entity_type: node
+bundle: press
+label: Publication
+description: 'Enter name of publication'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: 2415b826-a72c-49f9-b361-c9a237ce968b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.projects_table
+  module:
+    - system
+    - views
+  theme:
+    - open_scratch
+id: exposedformprojects_tablepage_1
+theme: open_scratch
+region: toolbar_left
+weight: -20
+provider: null
+plugin: 'views_exposed_filter_block:projects_table-page_1'
+settings:
+  id: 'views_exposed_filter_block:projects_table-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /projects/table
+    negate: false
+    context_mapping: {  }

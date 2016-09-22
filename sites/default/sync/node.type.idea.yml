@@ -1,0 +1,18 @@
+uuid: 6403979f-4e67-4020-bdb4-4fd22ac44d32
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Idea
+type: idea
+description: 'An idea is a textual speculation or sketch.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,22 @@
+uuid: 5766275e-531b-410d-9034-e7926f9adbc8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - open_scratch
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: open_scratch_content
+theme: open_scratch
+region: content_primary
+weight: -14
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

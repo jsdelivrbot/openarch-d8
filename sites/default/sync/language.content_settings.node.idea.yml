@@ -1,0 +1,16 @@
+uuid: 43066ad7-ea28-4a03-9ab3-f6581339cad5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.idea
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.idea
+target_entity_type_id: node
+target_bundle: idea
+default_langcode: site_default
+language_alterable: true

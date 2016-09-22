@@ -1,0 +1,17 @@
+uuid: 683a5dc7-7fa2-44ab-a53f-e3eec09ceb78
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Task
+type: task
+description: 'A project or sub-project'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

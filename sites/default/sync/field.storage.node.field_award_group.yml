@@ -1,0 +1,33 @@
+uuid: 16249a09-0950-40a6-8154-1d8f03dd307f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_award_group
+field_name: field_award_group
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'OPEN Architecture'
+      label: 'OPEN Architecture'
+    -
+      value: 'LI HU as partner-in-charge with Steven Holl Architects'
+      label: 'LI HU as partner-in-charge with Steven Holl Architects'
+    -
+      value: 'LI HU as Project Architect with Steven Holl Architects'
+      label: 'LI HU as Project Architect with Steven Holl Architects'
+    -
+      value: 'LI HU as Principal participant'
+      label: 'LI HU as Principal participant'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+uuid: 8383ae0e-a4b5-4227-a485-b6b4f8d62cbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.task_slideshow
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap
+id: views_block__task_slideshow_block_2
+theme: bootstrap
+region: content
+weight: -11
+provider: null
+plugin: 'views_block:task_slideshow-block_2'
+settings:
+  id: 'views_block:task_slideshow-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/task/*'
+    negate: false
+    context_mapping: {  }

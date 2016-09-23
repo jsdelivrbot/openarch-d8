@@ -53,6 +53,12 @@ In development...
 * removed footer line if only copyright showing.
 * hide overflow for copyright notice
 
+#### 1.1.2
+
+9.23.2016
+
+* made footer sticky, ie stick to bottom of page when there is not enough content to fill page. required use flexbox for variable height footer, so browser support might be an issue. technique adapted from https://css-tricks.com/couple-takes-sticky-footer/
+
 #### TBD:
 
 * menu row height needs to resize responsively, too big at smallery breakpoints

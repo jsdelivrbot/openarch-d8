@@ -1,6 +1,6 @@
 /* ==================================================================
  *
- * menubar
+ * header
  *
  * 
  *
@@ -19,13 +19,8 @@ $menubar-width:				100%;
 ## Layout
 ===================================================================== */
 
-/* wrapper for menubar regions */
-.menubar {
+.main-header-wrapper {
 
-	font-size: 				$menubar-base-font-size;
-	line-height: 			$menubar-row-height;
-	background-color:  		white;
-	
 	/*@include layout($susy);*/
 	@include layout((
 		gutter-position: 	inside,
@@ -34,26 +29,31 @@ $menubar-width:				100%;
 		global-box-sizing: 	border-box
 	));
 
-	width:				$menubar-width;
-		height: 			$menubar-row-height;
+	@include span(full);
+}
 
-		&__header{
-			@include 		span(2 of 4);
-			float:			left;
-		}
+.main-header { /* media */ 
 
-		&__primary{
-			display:		none;
-		}
+	font-size: 				$menubar-base-font-size;
+	line-height: 			$menubar-row-height;	
+	height: 				$menubar-row-height;
 
-		&__secondary{
-			@include 		span(2 of 4 last);
-			float:			right;
+	&__left { /* media__content */
+
+		> .block {
+			float: left;
 		}
+	}
+
+	&__right { /* media_imgR */
+
+		> .block {
+			float: right;
+		}
+	}
 }
 
 
-	
 /* ==================================================================
 ## Debug
 ===================================================================== */	

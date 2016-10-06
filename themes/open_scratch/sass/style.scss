@@ -4,6 +4,7 @@
 
 /* Setup */
 @import "reset";
+@import "breakpoints";
 @import "mixins";
 @import "variables";
 @import "globals";
@@ -11,34 +12,37 @@
 
 /* layout */
 @import "layout";
+@import "./layout/sidebar";
+@import "./layout/header";
+@import "./layout/toolbar";
+@import "./layout/slideshow";
+@import "./layout/footer";
 
 /* modules (ie components) */
 @import "./modules/tags";
 @import "./modules/button";
 @import "./modules/icon";
 @import "./modules/title";
-@import "./modules/statement";
 @import "./modules/sitename";
 @import "./modules/gallery";
-@import "./modules/relations";
-@import "./modules/factsheet";
 @import "./modules/facts";
-@import "./modules/sidebar";
-@import "./modules/menubar";
-@import "./modules/toolbar";
-@import "./modules/slideshow";
 @import "./modules/card";
+@import "./modules/media";
 @import "./modules/node";
-@import "./modules/headlines";
 @import "./modules/teasers";
 @import "./modules/table";
 @import "./modules/searchbar";
-@import "./modules/projects-table";
-@import "./modules/press-table";
-@import "./modules/awards-table";
 @import "./modules/menu";
-@import "./modules/footer";
+@import "./modules/slider";
 
-/*@import "header";
-@import "sidebar";
-@import "footer";*/
+/* blocks */
+@import "./blocks/statement";
+@import "./blocks/relations";
+@import "./blocks/factsheet";
+@import "./blocks/headlines";
+@import "./blocks/projects-table";
+@import "./blocks/press-table";
+@import "./blocks/awards-table";
+
+/* debug */
+@import "debug";

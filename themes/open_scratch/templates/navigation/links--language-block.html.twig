@@ -33,13 +33,6 @@
 #}
 
 {% if links -%}
-  {%- if heading -%}
-    {%- if heading.level -%}
-      <{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}</{{ heading.level }}>
-    {%- else -%}
-      <h2{{ heading.attributes }}>{{ heading.text }}</h2>
-    {%- endif -%}
-  {%- endif -%}
   <div{{ attributes.addClass('icon--container') }}>
     {%- for item in links -%}
       {# <div{{ item.attributes }}> #}

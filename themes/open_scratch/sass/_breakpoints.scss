@@ -1,0 +1,54 @@
+/* =======================================================================
+## ++ Media Queries Breakpoints
+========================================================================== */
+
+/* 
+    Used for media queries. 
+    Add these mixins in your normal scss flow.
+    
+    Eg.
+    .container{
+        width:1024px;
+        
+        @include tablets{
+            width:90%;
+        }
+    }
+
+    Make sure these match breakpoints in open_scratch.breakpoints.yml !!! 
+*/ 
+
+
+
+
+@mixin tiny{
+    @media all and (max-width: 350px){ @content; }
+}
+@mixin mobile{
+    @media all and (min-width: 351px) and (max-width: 559px){ @content; }
+}
+@mixin narrow{
+    @media all and (min-width: 560px) and (max-width: 750px){ @content; }
+}
+@mixin wide{
+    @media all and (min-width: 751px) and (max-width: 960px){ @content; }
+}
+@mixin wider{
+    @media all and (min-width: 961px){ @content; }
+}
+
+@mixin table-1-col{
+    @media all and (max-width: 350px){ @content; }
+}
+@mixin table-2-col{
+    @media all and (min-width: 351px) and (max-width: 550px){ @content; }
+}
+@mixin table-3-col{
+    @media all and (min-width: 551px) and (max-width: 650px){ @content; }
+}
+@mixin table-4-col{
+    @media all and (min-width: 651px) and (max-width: 850px){ @content; }
+}
+@mixin table-5-col{
+    @media all and (min-width: 851px){ @content; }
+}

@@ -57,16 +57,16 @@ $susy: (
   /*container: auto,*/
   /*container-position: center,*/
   columns: 12, /*4,*/
-  gutters: 1/8, /*36/8 3/8,*/
+  gutters: 36/8, /*3/8,*/
   /*column-width: false,*/
-  global-box-sizing: border-box,
+  global-box-sizing: border-box
   /*last-flow: to,*/
-  debug: (
+  /*debug: (
     image: show-columns,
     color: rgba(#AEEFF2, .15),
     output: overlay,
-    toggle: bottom right,
-  )
+    toggle: top right,
+  )*/
   /*use-custom: (
     background-image: true,
     background-options: false,
@@ -97,18 +97,51 @@ $susy: (
 }
 
 /* wrapper for menubar regions */
-.sidebar-layout {
+.sidebar-wrapper {
 
-	z-index:		200;
-	position:		fixed;
-	top:			0;
-	left:			0;
-	width:			25%; /* fallback */
-	height: 		100%;
+	z-index:			100;
+	background:			white;
+	
+	@include tiny {
+		display:		none;
+	}
 
+	@include mobile {
+		display:		none;
+	}
+
+	@include narrow {
+		display:		none;
+	}
+
+	@include wide {
+
+		@include span(3 of 12);
+
+		position:		fixed;
+		/*width: 			200px;*/
+		height: 		100%;
+		/*padding-top:	200px;*/
+		top:			0;
+		left:			0;
+		/*left:			20px;*/
+		border-right:	1px solid #f5f5f5;
+	}
+
+	@include wider {
+
+		@include span(3 of 12);
+
+		position:		fixed;
+		/*width: 			200px;*/
+		height: 		100%;
+		/*padding-top:	200px;*/
+		top:			0;
+		left:			0;
+		/*left:			20px;*/
+		border-right:	1px solid #f5f5f5;
+	}
 }
-
-
 
 
 /* wrapper for content regions */
@@ -127,30 +160,54 @@ $susy: (
 	background:white;
 	position: relative;
 
-	margin-left: 0%;
-	width:	100%;
+	@include wide {
+		/*margin-left: 250px;*/
+		margin-left: span(3 of 12);
+		/*@include span(9 of 12);*/
+		width: span(9 of 12 wide);
+	}
+
+	@include wider {
+		/*margin-left: 250px;*/
+		margin-left: span(3 of 12);
+		/*@include span(9 of 12);*/
+		width: span(9 of 12 wide);
+	}
 
 	main {
 		margin-bottom: 140px;
 	}
 }
 
-/* wrapper for menubar regions */
-.main-header-layout {
+	/* wrapper for menubar regions */
+	.menubar-wrapper {
 
-	z-index:			100;
-	position: 			fixed;
-	top:				0;
-	left:				0;
-	margin-left: 		0%; /* fallback */
-	width:				100%; /* fallback */
+		/*margin-top:142px;*/
+		background:white;
+		position: fixed;
+
+		@include wide {
+			/*margin-left: 250px;*/
+			margin-left: span(3 of 12);
+			/*@include span(9 of 12);*/
+			width: span(9 of 12 wide);
+		}
+
+		@include wider {
+			/*margin-left: 250px;*/
+			margin-left: span(3 of 12);
+			/*@include span(9 of 12);*/
+			width: span(9 of 12 wide);
+		}
+
+		z-index:			100;
+		background:			white;
+		/*position:			absolute;*/
+		width: 				100%;
+		top:				0;
+		left:				0;
 
 }
-
-
-
-
-
 
 	.toolbar-wrapper {
 		
@@ -440,7 +497,3 @@ $susy: (
 		padding: 14px 0;
 	}*/
 }
-
-
-
-

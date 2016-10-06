@@ -25,19 +25,6 @@
  * @see template_preprocess_block()
  */
 #}
-<div{{ attributes.addClass('block')}}>
-  {{ title_prefix }}
-  {% if label %}
-    <div class="block-title">
-    	<div class="titlebox">
-    		<div class="titlebox__title">
-    			<h3{{ title_attributes }}>{{ label }}</h3>
-    		</div>
-    	</div>
-    </div>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    <div class="block-content">{{ content }}</div>
-  {% endblock %}
+<div class="block language-switcher">
+    <div class="block-content icons">{{ content }}</div>
 </div>

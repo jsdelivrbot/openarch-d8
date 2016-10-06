@@ -8,11 +8,11 @@ $titlebar-font-size:		1em;
 $titlebar-line-height:		3.75em; /*$base-row-height;*/
 $titlebar-font-color:		$base-title-font-color;
 $titlebar-row-height:		3.75em;/* $base-row-height;*/
-$titlebar-title-spacing:	$base-elem-spacing;
+$titlebar-title-spacing:	$base-title-spacing;
 
 
 /* ==================================================================
-## Main Content
+## fixed height titlebar
 ===================================================================== */
 
 .titlebar {
@@ -52,6 +52,7 @@ $titlebar-title-spacing:	$base-elem-spacing;
 			text-transform: 	uppercase;
 			text-decoration:	none;
 			padding: 			0 3px; /* horizontal space btn tags */
+			/*overflow:			hidden;*/
 		}
 
 	}
@@ -61,7 +62,7 @@ $titlebar-title-spacing:	$base-elem-spacing;
 		h1, h2, h3, h4, h5, h6 {
 			margin: 			$titlebar-title-spacing 0;
 			color: 				$titlebar-font-color;
-			text-transform: 	uppercase;
+			text-transform: 	none;
 			text-decoration:	none;
 			padding: 			0 3px; /* horizontal space btn tags */
 		}
@@ -80,9 +81,127 @@ $titlebar-title-spacing:	$base-elem-spacing;
 }
 
 
+/* ==================================================================
+  flex height titlebox
+===================================================================== */
 
+$titlebox-title-spacing: 	$base-title-spacing;
+$magic-nudge:				.9em;
+
+.titlebox {
+
+	/* 	
+		module-level styling
+		only font-size is specified at module level
+		and everything below it is relative to it
+	*/
+
+	font-size:				$titlebar-base-font-size;
+	/*margin-bottom: 		$titlebox-title-spacing;*/
+	margin: $base-title-spacing 0;
+
+	/* 	
+		element-level styling
+		relative to module font-size
+	*/
+
+	@include clearfix;
+
+	@include layout((
+        gutter-position: 	before,
+        columns: 			8,
+        gutters: 			3/8,
+        global-box-sizing: 	border-box
+	));
+
+	&__title {
+
+		/*margin: 			$titlebox-title-spacing 0;*/
+
+		h1, h2, h3, h4, h5, h6 {		
+			color: 				$titlebar-font-color;
+			text-transform: 	none;
+			text-decoration:	none;
+			padding: 			0 3px; /* horizontal space btn tags */
+		}
+	}
+
+	&__title { /*.title*/
+
+		width: 	span(7 of 8);
+		float:	left;
+	}
+
+	&__icons { /*.icon*/
+
+				
+		/*margin-right:			.9em;*/ /* <-- magic number :( */
+
+		width: 	span(1 of 8);
+		float:	right;
+	}
+}
 	
 
 	
+/* ==================================================================
+  flex height titlebox
+===================================================================== */
 
+$titlebox-title-spacing: 	$base-title-spacing;
+$magic-nudge:				.9em;
+
+.bar {
+
+	/* 	
+		module-level styling
+		only font-size is specified at module level
+		and everything below it is relative to it
+	*/
+
+	font-size:				$titlebar-base-font-size;
+	/*margin-bottom: 		$titlebox-title-spacing;*/
+	margin: $base-title-spacing 0;
+
+	/* 	
+		element-level styling
+		relative to module font-size
+	*/
+
+	@include clearfix;
+
+	@include layout((
+        gutter-position: 	before,
+        columns: 			8,
+        gutters: 			3/8,
+        global-box-sizing: 	border-box
+	));
+
+	&__title {
+
+		/*margin: 			$titlebox-title-spacing 0;*/
+
+		h1, h2, h3, h4, h5, h6 {		
+			color: 				$titlebar-font-color;
+			text-transform: 	none;
+			text-decoration:	none;
+			padding: 			0 3px; /* horizontal space btn tags */
+		}
+	}
+
+	&__title { /*.title*/
+
+		width: 	span(7 of 8);
+		float:	left;
+	}
+
+	&__icons { /*.icon*/
+
+				
+		/*margin-right:			.9em;*/ /* <-- magic number :( */
+
+		width: 	span(1 of 8);
+		float:	right;
+	}
+}
 	

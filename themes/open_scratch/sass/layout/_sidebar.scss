@@ -1,0 +1,137 @@
+/* ==================================================================
+ *
+ * sidebar
+ *
+ * sidebar should fill its container ie width/height should be 100%
+ * so don't change width/height. let layout control that with 
+ * sidebar-wrapper. prefer to let 
+ *
+===================================================================== */
+
+/* ==================================================================
+## Config
+===================================================================== */
+
+$sidebar-base-font-size:	1rem;
+$sidebar-wide-font-size:	.75em;
+
+$sidebar-header-height:		$base-row-height*1.2;
+$sidebar-footer-height: 	$base-row-height;
+
+/* ==================================================================
+## Layout asdf
+===================================================================== */
+
+.sidebar-wrapper {
+
+	height: 100%;
+	
+	/*background:		white;*/
+
+	@include tiny {
+		padding: 0;
+		background: #333;
+	}
+
+	@include mobile {
+		padding: 0;
+		background: #333;
+	}
+
+	@include narrow {
+		padding: 0;
+		background: #333;
+	}
+
+	@include wide {
+
+		padding:		0 8%;
+	}
+
+	@include wider {
+
+		padding:		0 8%;
+	}
+
+}
+
+
+/* wrapper for sidebar regions */
+.sidebar {
+
+	font-size: 				$sidebar-base-font-size;
+	line-height: 			$sidebar-header-height;
+	width:					100%;	/* 100% of sidebar-wrapper */
+	height:					100%;
+	position:				relative;
+
+	&__top{
+		font-size:		1rem;		/* need this to control searchbar region height */
+		position:		absolute;
+		top:			0;
+		left:			0;
+		height: 		$sidebar-header-height;
+		line-height: 	$sidebar-header-height;
+		width:			100%;
+		/*border-bottom:	1px solid #e1e1e1;*/
+	}
+
+	&__middle{
+		padding-top:	200px;
+		padding-bottom:	$base-row-height;
+	}
+
+	&__bottom{
+		position:		absolute;
+		left:			0;
+		bottom:			0;
+		height: 		$sidebar-footer-height;
+		line-height: 	$sidebar-footer-height;
+		width:			100%;
+		/*border-top:		1px solid #e1e1e1;*/
+	}
+	
+}
+
+@include tiny {
+
+
+}
+
+@include mobile {
+
+
+}
+
+@include narrow {
+
+
+}
+
+@include wide {
+
+
+}
+
+@include wider {
+
+
+}
+
+	
+/* ==================================================================
+## Debug
+===================================================================== */	
+
+/*.sidebar {
+
+	border: 1px solid red;	
+	
+	&__header 		{	background: #f5f5f5;	}
+	&__primary		{	background: #e5e5e5;	}
+	&__secondary 	{	background: lightgrey;	}
+
+}*/
+
+
+

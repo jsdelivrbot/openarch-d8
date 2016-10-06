@@ -81,7 +81,7 @@ $link-background-color:		#e5e5e5;
 
 $base-h1-font-size:			1.2em; /*	sitename			*/
 $base-h2-font-size:			1.9em; /*	node titles 		*/
-$base-h3-font-size:			1.2em; /*	secondary titles 	*/
+$base-h3-font-size:			1.1em; /*	secondary titles 	*/
 $base-h4-font-size:			0.8em; /*	factsheet headers & headlines	*/
 $base-h5-font-size:			0.8em; /*	factsheet multiline headers (ie. roles)		*/
 $base-h6-font-size:			0.7em; /*	factsheet facts		*/
@@ -149,6 +149,7 @@ $manifesto-title-line-height: $base-title-line-height;
 $base-row-height: 3.75em; /* (16px x .7em) x 3.75 = 42px; */
 $base-row-pad: 16px;
 $base-elem-spacing: 16px; /*this should be rem not em AND should be susy calculated gallery gutter*/
+$base-title-spacing: 1.5em;
 $base-pad-horiz: .25rem;
 
 /* ==================================================================

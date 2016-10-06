@@ -108,13 +108,20 @@
 	/*.factsheet-gallery-container {*/
 	.region {
 
-		@include gallery-list;
+		/*@include gallery-list;*/
+		@include gallery-container;
 	}
 
 		/*li.*//*.factsheet-gallery-item{*/
 		.block {
 
-			@include gallery-list-item;
+			/*@include gallery-list-item;*/
+
+			@include tiny{		@include gallery-item-1-col;	}
+			@include mobile{	@include gallery-item-2-col;	}
+			@include narrow{	@include gallery-item-3-col;	}
+			@include wide{		@include gallery-item-3-col;	}
+			@include wider{		@include gallery-item-4-col;	}
 		}
 
 }

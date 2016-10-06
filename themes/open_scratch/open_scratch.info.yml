@@ -6,12 +6,11 @@ libraries:
   - open_scratch/global-css
   - open_scratch/global-js
 regions:
-  header: 'Menubar header'
-  sidebar_top: 'top sidebar'
-  sidebar_middle: 'middle sidebar'
-  sidebar_bottom: 'bottom sidebar'
-  menubar_primary: 'Primary menubar'
-  menubar_secondary: 'Secondary menubar'
+  header_left: 'Header Left'
+  header_right: 'Header Right'
+  sidebar_search: 'Sidebar search input'
+  sidebar_nav: 'Sidebar navigation menu'
+  sidebar_links: 'Sidebar links'
   toolbar_left: "Left toolbar"
   toolbar_right: "Right toolbar"
   content_slideshow: 'Media slideshow'

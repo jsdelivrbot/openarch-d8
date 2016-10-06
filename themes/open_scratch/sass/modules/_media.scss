@@ -1,0 +1,100 @@
+/* ==================================================================
+ *
+ * Card Component: 
+ *
+ * A card has a title, some content, and some tags. It is responsible
+ * for padding itself and spacing out its contents. Ideally card would
+ * not know what its contents are, but for now, it does...
+ *
+ * media is a layout class, should not include anything for anything
+ * except spacing
+ *
+===================================================================== */
+
+/* ==================================================================
+## Config
+===================================================================== */
+
+$base-media-spacing: 1.5em;
+
+/* ==================================================================
+## Layout
+===================================================================== */
+
+/*.card {
+
+	&__title 	{	margin: $base-row-pad 0;	}
+	&__slide 	{		}
+	&__body p 	{	margin: $base-row-pad 0;	}
+	&__tags 	{	margin: $base-row-pad 0;	}
+}*/
+
+
+
+/* ==================================================================
+## Typography
+===================================================================== */
+
+.media {
+
+	overflow:hidden; 
+	_overflow:visible; 
+	zoom:1;
+
+	/*margin-bottom: $base-row-pad;*/
+	/*padding: 	$media-spacing 0;*/
+
+	&__img	{
+
+		display:block; /* might have to move this to __img > img */
+		float: left;
+    	margin-right: 	$base-media-spacing;
+    	
+	}
+
+	&__imgR	{
+
+		display:block; /* might have to move this to __img > img */
+		float: right;
+    	margin-left: 	$base-media-spacing;
+    	
+	}
+
+	&__contents	{	
+
+		overflow:hidden; 
+		_overflow:visible; 
+		zoom:1;
+	}
+
+}
+
+
+/* ==================================================================
+## .mediaCard subclass overrides .media base class 
+===================================================================== */
+
+/* config */
+$mediaCard-spacing: 1.5em;
+
+/* layout */
+.mediaCard-wrapper {}
+
+/* subclass overrides */
+.mediaCard {
+
+	&__img	{
+    	margin-right: 	$mediaCard-spacing;  	
+	}
+
+	&__imgR	{
+    	margin-left: 	$mediaCard-spacing;   	
+	}
+
+	&__contents	{	
+
+	}
+
+}
+
+/* behavior - media*/

@@ -1,7 +1,10 @@
 /* ==================================================================
  *
  * Card Component: 
- * A card has a title, some content, and some tags
+ *
+ * A card has a title, some content, and some tags. It is responsible
+ * for padding itself and spacing out its contents. Ideally card would
+ * not know what its contents are, but for now, it does...
  *
  *
 ===================================================================== */
@@ -10,8 +13,10 @@
 ## Config
 ===================================================================== */
 
-$card-base-font-size:		1rem;
-/*$card-body-font-size:		1em;*/
+$card-base-font-size:			1rem;
+/*$card-body-font-size:			1em;*/
+$card-body-font-size--big:		1em;
+$card-body-line-height--big:	1.5;
 
 /* ==================================================================
 ## Layout
@@ -21,10 +26,12 @@ $card-base-font-size:		1rem;
 
 	/*border-top: 1px solid #e1e1e1;*/
 
-	&__title 	{	margin: $base-row-pad 0;	}
-	&__slide 	{	/**/	}
-	&__body p 	{	margin: $base-row-pad 0;	}
-	&__tags 	{	margin: $base-row-pad 0;	}
+	padding: 	$base-row-pad*.2 0; /* <-- magic number */
+
+	&__title 	{		}
+	&__slide 	{	margin: $base-title-spacing 0;	}
+	&__body p 	{		}
+	&__tags 	{		}
 }
 
 
@@ -51,12 +58,18 @@ $card-base-font-size:		1rem;
 
 	&__slide 	{	/**/	}
 
-	&__body p 	{
+	&__body > p {
 
-		/*font-size: 			$card-body-font-size;*/
+		/*font-size: 		$card-body-font-size;*/
 		/*line-height: 		$card-body-line-height;*/
 		/*color: 			$card-body-font-color;*/
 		text-align:			justify;
+	}
+
+	&__body--big > p {
+
+		font-size:			$card-body-font-size--big;
+		line-height:		$card-body-line-height--big;
 	}
 
 	&__tags 	{	/**/	}
@@ -68,13 +81,31 @@ $card-base-font-size:		1rem;
 
 /* card types (ie. subclasses) */
 
-.card.practice--card {}
+.card.card--practice {}
 
 .card.profile--card { 
 
 	border: none;
 
 	.card--body{
-		margin-bottom: 50px;
+		/*margin-bottom: 50px;*/
 	} 
+}
+
+.card.card--people {
+
+	.card__body > p {
+
+		/*font-size: 		$card-body-font-size;*/
+		line-height: 		1.2;
+		/*color: 			$card-body-font-color;*/
+	}
+}
+
+/* ==================================================================
+## Dev
+===================================================================== */
+
+.card {
+	/*background-color: #f5f5f5;*/
 }

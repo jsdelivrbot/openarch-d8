@@ -1,0 +1,81 @@
+/* ==================================================================
+ *
+ * menubar
+ *
+ * 
+ *
+===================================================================== */
+
+/* ==================================================================
+## Config
+===================================================================== */
+
+$menubar-base-font-size:	1rem;
+$menubar-wide-font-size:	.75em;
+$menubar-row-height:		$base-row-height*1.2;
+$menubar-width:				100%;
+
+/* ==================================================================
+## Layout
+===================================================================== */
+
+.main-header-wrapper {
+	z-index:			100;
+
+	/*@include layout($susy);*/
+	@include layout((
+		gutter-position: 	inside,
+		columns: 			4,
+		gutters: 			3/8,
+		global-box-sizing: 	border-box
+	));
+
+	@include span(full);
+}
+
+/* wrapper for menubar regions */
+.main-header {
+
+	font-size: 				$menubar-base-font-size;
+	line-height: 			$menubar-row-height;
+	background-color:  		white;
+	
+	
+
+	/*width:				$menubar-width;*/
+	height: 			$menubar-row-height;
+
+	&__left {
+		/*@include 		span(2 of 4);*/
+		/*float:			left;*/
+
+		> .block {
+			float: left;
+		}
+	}
+
+	&__right {
+		/*@include 		span(2 of 4 last);*/
+		/*float:			right;*/
+
+		> .block {
+			float: right;
+		}
+	}
+}
+
+
+/* ==================================================================
+## Debug
+===================================================================== */	
+
+/*.menubar {
+
+	border: 1px solid red;	
+	
+	&__header 		{	background: #f5f5f5;	}
+	&__primary		{	background: #e5e5e5;	}
+	&__secondary 	{	background: lightgrey;	}
+
+}*/
+

@@ -12,6 +12,7 @@
 #}
 {% spaceless %}
   <span class="custom-dropdown custom-dropdown--white">
+    <div class="icon icon--dropdown"><a><i class="fa fa-chevron-down" aria-hidden="true"></i></a></div>
     <select{{ attributes.addClass('button custom-dropdown__select custom-dropdown__select--white') }} onchange="this.form.submit()">
 
       {% for option in options %}
@@ -26,6 +27,8 @@
         {% endif %}
       {% endfor %}
 
+      
     </select>
+
   </span>
 {% endspaceless %}

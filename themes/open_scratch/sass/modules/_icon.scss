@@ -6,6 +6,7 @@
 /* sizing relative to containter, ie titlebar, toolbar, or tagline */
 
 $icon-size:						2.75em;
+$icon-size--sml:				1.2em;
 $icon-spacing:					0; /*.5em;*/
 $icon-bg-color:					none; /*#f9f9f9;*/
 $icon-hover-bg-color:			#e5e5e5;
@@ -43,10 +44,41 @@ $icon-hover-bg-color:			#e5e5e5;
 			}
 
 			> i {
-				vertical-align:  	middle;
+				color: #333;
+				/*vertical-align:  	middle;*/
+
+				&:hover{
+					color: black;
+				}
 			}
 		}	
 
+	}
+
+	.icon--sml {
+
+		> a {
+			height:					$icon-size--sml;
+			line-height: 			$icon-size--sml;
+			width:					$icon-size;
+
+			> i {
+				font-size: .9em;
+				color: lightgrey;
+					/*vertical-align:  	middle;*/
+
+					&:hover{
+						color: black;
+					}
+				}
+			}
+	}
+
+	.icon--dropdown {
+
+		position: absolute;
+		top:0;
+		left:0;
 	}
 
 /* ==================================================================

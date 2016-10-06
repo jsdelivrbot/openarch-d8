@@ -30,18 +30,36 @@
  */
 #}
 
-<div class="card people__card">
+<div class="card card--people media mediaCard border-top2-hairline">
 
-	<div class="card__slide">
-		{{ fields.field_thumbnail.content }}
+	<div class="media__img">
+
+		<div class="card__slide">
+			{{ fields.field_thumbnail.content }}
+		</div>
+
 	</div>
 
-	<div class="card__title">
-		<h3>{{ fields.title.content }}, {{ fields.field_profile_position.content }}</h3>
-	</div>
+	<div class="media__contents">
 
-	<div class="card__body">
-		{{ fields.body.content }}
+		<div class="titlebox card__title">
+
+			<div class="titlebox__title">
+				<h3>{{ fields.title.content }}</h3>
+			</div>
+
+			<div class="titlebox__icons">
+		        <div class="icon--container">
+		          	<div class="icon icon--sml"><a style="background:none"><i class="fa fa-envelope" aria-hidden="true"></i></a></div>
+		        </div>
+      		</div>
+
+		</div>
+
+		<div class="card__body">
+			{{ fields.body.content }}
+		</div>
+
 	</div>
 
 	{# <div class="tagline card__tagline">

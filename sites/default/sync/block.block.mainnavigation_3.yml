@@ -1,6 +1,6 @@
-uuid: 2b0d5884-127b-4e2a-94a3-71e162574b22
+uuid: 94ebd213-f8e2-4d7b-9d99-59f53679bb62
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.main
@@ -8,10 +8,10 @@ dependencies:
     - system
   theme:
     - open_scratch
-id: mainnavigation_2
+id: mainnavigation_3
 theme: open_scratch
-region: '-1'
-weight: -26
+region: sidebar_nav
+weight: -28
 provider: null
 plugin: 'system_menu_block:main'
 settings:

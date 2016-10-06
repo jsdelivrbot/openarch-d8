@@ -1,0 +1,24 @@
+uuid: a8c0c70f-ca0e-4b34-a706-a761b725a66b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - open_scratch
+id: tools
+theme: open_scratch
+region: sidebar_nav
+weight: -27
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

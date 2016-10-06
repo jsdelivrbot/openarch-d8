@@ -12,7 +12,7 @@ dependencies:
 id: viewmode
 theme: open_scratch
 region: '-1'
-weight: -5
+weight: -4
 provider: null
 plugin: 'block_content:d05ac40d-505d-4546-8bad-86df06592b4e'
 settings:

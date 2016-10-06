@@ -9,7 +9,7 @@ _core:
 id: open_scratch_local_tasks
 theme: open_scratch
 region: '-1'
-weight: -9
+weight: -8
 provider: null
 plugin: local_tasks_block
 settings:

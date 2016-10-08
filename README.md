@@ -72,6 +72,8 @@ In development...
 * add more relations link under relations.
 * turn floating tags into gallery so they collapse better.
 * resize sidebar @wider breakpoint to 1/5 of 10 column grid.
+* searchbar not quite centered vertically for some reason
+* remove social icons in sidebar for breakpoints where icons are visible in footer, ie tiny, mobile and narrow.
 
 #### ISSUES:
 

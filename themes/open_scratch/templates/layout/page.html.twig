@@ -1,8 +1,6 @@
 
 <div class="container slider">
 
-  {# <div class="slider"> #}
-
     <div class="layout sidebar-layout slider-drawer">
 
       <div class="wrapper sidebar-wrapper border--right-ltgrey bg--white">
@@ -76,84 +74,83 @@
               </aside>
 
           </div>
+
         </div>
 
     </div> {# end header-wrapper #}
 
-    <div class="wrapper main-wrapper slider-canvas clearfix">
+    <div class="layout main-content-layout slider-canvas clearfix">
 
-        <div class="wrapper toolbar-wrapper" role="contentinfo">
-          <div class="toolbar media">
-            {# <div class="media"> #}
+      <div class="wrapper toolbar-wrapper" role="contentinfo">
 
-            {% if page.toolbar_right %}
-              <div class="media__imgR" role="contentinfo">
-                {{ page.toolbar_right }} 
-              </div>
-            {% endif %}
+        <div class="toolbar media">
+          {# <div class="media"> #}
 
-            {% if page.toolbar_left %}
-              <div class="media__contents" role="contentinfo">
-                {{ page.toolbar_left }}
-              </div>
-            {% endif %}
-
-            {# </div> #}
-          </div>
-        </div>
-
-      
-      <main class="clearfix" role="main">  
-
-        {% if page.content_gallery %}
-          <div id="main-content-gallery" class="region main-content">
-            {{ page.content_gallery }}
-          </div>
-        {% endif %}
-
-        {% if page.content_slideshow %}
-          <div id="main-content-slideshow" class="region main-content slideshow">
-            {{ page.content_slideshow }}
-          </div>
-        {% endif %}
-
-        <div id="main-content-primary" class="region main-content">
-          {{ page.content_primary }}
-        </div>
-        
-        {% if page.content_relations %}
-          <div id="main-content-relations" class="region main-content">
-            {{ page.content_relations }}
-          </div>
-        {% endif %}
-
-        {% if page.content_facts %}
-          <div id="main-content-facts" class="region main-content">
-            <div class="gallery-container factsheet-gallery-container">
-              {{ page.content_facts }}
+          {% if page.toolbar_right %}
+            <div class="media__imgR" role="contentinfo">
+              {{ page.toolbar_right }} 
             </div>
+          {% endif %}
+
+          {% if page.toolbar_left %}
+            <div class="media__contents" role="contentinfo">
+              {{ page.toolbar_left }}
+            </div>
+          {% endif %}
+
+          {# </div> #}
+        </div>
+
+      </div> {# end toolbar-wrapper #}
+
+      <div class="wrapper main-content-wrapper bg--white">
+
+        <main class="main-content clearfix" role="main">  
+
+          {% if page.content_gallery %}
+            <div id="main-content-gallery" class="region main-content__gallery">
+              {{ page.content_gallery }}
+            </div>
+          {% endif %}
+
+          {% if page.content_slideshow %}
+            <div id="main-content-slideshow" class="region main-content__slideshow slideshow">
+              {{ page.content_slideshow }}
+            </div>
+          {% endif %}
+
+          <div id="main-content-primary" class="region main-content__primary">
+            {{ page.content_primary }}
           </div>
-        {% endif %}
+          
+          {% if page.content_relations %}
+            <div id="main-content-relations" class="region main-content__relations">
+              {{ page.content_relations }}
+            </div>
+          {% endif %}
 
-      </main>
+          {% if page.content_facts %}
+            <div id="main-content-facts" class="region main-content__facts">
+              <div class="gallery-container factsheet-gallery-container">
+                {{ page.content_facts }}
+              </div>
+            </div>
+          {% endif %}
 
-      <div class="wrapper footer-wrapper">
+        </main>
+
+      </div> {# end main-content-wrapper #}
+
+      <div class="wrapper main-footer-wrapper">
 
         <footer class="footer main-footer" role="contentinfo">
           
-            <aside id="footer-content-top" class="region footer-content footer__top" role="complementary">
+          <div id="footer-content-top" class="main-footer__top media border--top-ltgrey">
 
-              <div class="footer__top-left">
-                <div class="searchbar-wrapper">
-                  <div class="searchbar">
-                    <span class="searchbar__icon"><i class="fa fa-search"></i></span>
-                    <span class="searchbar__input"><input type="search" id="search" placeholder="Search..." /><span>
-                  </div>
-                </div>
-              </div>
+            <aside class="region main-header__right media__imgR" role="contentinfo">
 
-              <div class="footer__top-right">
-                <div class="icons">
+              <div class="block">
+                <div class="block-content icons">
                   <div class="icon--container">
                     <div class="icon"><a><i class="fa fa-weixin" aria-hidden="true"></i></a></div>
                     <div class="icon"><a><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
@@ -163,37 +160,72 @@
                 </div>
               </div>
 
-              {# {{ page.footer_top }} #}
+              {# {{ page.header_right }}  #}
             </aside>
 
-          {% if page.footer %}
-            <aside id="footer-content-middle" class="region footer-content footer__middle" role="complementary">
-              {{ page.footer }}
-            </aside>
-          {% endif %}
+            <aside class="region main-header__left media__contents" role="contentinfo">
 
-          <aside id="footer-content-bottom" class="footer-content footer__bottom" role="complementary">
-
-            <div class="titlebar copyright__titlebar">
-              <div class="region titlebar__title">
-                <h6 style="text-transform:none;">Copyright © 2011, OPEN Architecture. All Rights Reserved.</h6>
-              </div>
-              <div class="region titlebar__icon">
-                <div class="icon--container">
-                  <div class="icon"><a style="background:none"><i class="fa fa-github" aria-hidden="true"></i></a></div>
+              <div class="block">
+                <div class="block-content">
+                  <div class="searchbar-wrapper">
+                    <div class="searchbar">
+                      <span class="searchbar__icon"><i class="fa fa-search"></i></span>
+                      <span class="searchbar__input"><input type="search" id="search" placeholder="Search..." /><span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+
+              {# {{ page.header_left }} #}
+            </aside>
+
+            {# {{ page.footer_top }} #}
+          </div>
+
+          <div id="footer-content-middle" class="main-footer__middle">
+
+            <aside class="region" role="complementary">
+              {{ page.footer }}
+            </aside>
+
+          </div>
+
+          <div id="footer-content-bottom" class="main-footer__bottom">
+
+            <aside class="region" role="complementary" >
+
+              <div class="block">
+
+                <div class="block-contents">
+
+                  <div class="titlebar copyright__titlebar media">
+
+                    <div class="icons titlebar__icons media__imgR">
+                      <div class="icon--container">
+                        <div class="icon"><a style="background:none"><i class="fa fa-github" aria-hidden="true"></i></a></div>
+                      </div>
+                    </div>
+
+                    <div class="titlebar__title media__contents">
+                      <h6 style="text-transform:none;">Copyright © 2011, OPEN Architecture. All Rights Reserved.</h6>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </aside>
 
             {# {{ page.footer_bottom }} #} {# <span>CN | EN</span>  #} 
-          </aside>
+
+          </div>
 
         </footer>
 
-      </div>
+      </div> {# end footer-wrapper #}
 
     </div> {# end main-wrapper #}
-
-  {# </div> #}
 
 </div> {# end container #}

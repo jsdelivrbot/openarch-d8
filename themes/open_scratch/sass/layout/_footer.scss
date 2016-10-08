@@ -6,19 +6,90 @@
 .footer--searchbar		{	margin: $base-row-pad 0;	}
 
 /* ==================================================================
-## Footer
+ *
+ * footer
+ *
+ * 
+ *
 ===================================================================== */
 
-.main-footer>.region{
+/* ==================================================================
+## Config
+===================================================================== */
 
-	/*background: #333;*/
+$footer-base-font-size:		1rem;
 
-	/*span, a, a:link, a:visited{
-		font-size: $menu-font-size;
-		color: $menu-font-color;
-		text-decoration:none;
-	}
-	h2{
-		display:none;
-	}*/
+/* ==================================================================
+## Layout
+===================================================================== */
+
+.main-footer-wrapper {
+
+	/*@include layout($susy);*/
+	@include layout((
+		gutter-position: 	inside,
+		columns: 			4,
+		gutters: 			3/8,
+		global-box-sizing: 	border-box
+	));
+
+	@include span(full);
 }
+
+.main-footer { 
+
+	font-size: 				$main-base-font-size;
+
+	&__top {
+
+		height:			4.5em;
+		line-height: 	4.5em;
+
+		@include narrow {
+			display:		none;
+		}
+
+		@include wide {
+			display:		none;
+		}
+
+		@include wider {
+			display:		none;
+		}
+	}
+
+	&__middle {
+
+		padding-top: 140px;
+		padding-bottom: 140px;
+
+		@include narrow {
+			display:		none;
+		}
+
+		@include wide {
+			display:		none;
+		}
+
+		@include wider {
+			display:		none;
+		}
+	}
+
+	&__bottom {}
+}
+
+
+/* ==================================================================
+## Debug
+===================================================================== */	
+
+/*.menubar {
+
+	border: 1px solid red;	
+	
+	&__header 		{	background: #f5f5f5;	}
+	&__primary		{	background: #e5e5e5;	}
+	&__secondary 	{	background: lightgrey;	}
+
+}*/

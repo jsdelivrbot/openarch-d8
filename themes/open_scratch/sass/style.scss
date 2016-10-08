@@ -11,9 +11,10 @@
 @import "utils";
 
 /* layout */
-@import "layout";
+@import "./layout/layout";
 @import "./layout/sidebar";
 @import "./layout/header";
+@import "./layout/main";
 @import "./layout/toolbar";
 @import "./layout/slideshow";
 @import "./layout/footer";

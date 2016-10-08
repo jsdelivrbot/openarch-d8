@@ -1,6 +1,6 @@
 /* ==================================================================
  *
- * menubar
+ * main
  *
  * 
  *
@@ -10,17 +10,19 @@
 ## Config
 ===================================================================== */
 
-$menubar-base-font-size:	1rem;
-$menubar-wide-font-size:	.75em;
-$menubar-row-height:		$base-row-height*1.2;
-$menubar-width:				100%;
+$main-base-font-size:		1rem;
 
 /* ==================================================================
 ## Layout
 ===================================================================== */
 
-.main-header-wrapper {
-	z-index:			100;
+.main-content-wrapper {
+
+	padding-top:200px;
+	padding-bottom:140px;
+
+	/* flex main to fill vertical space for sticky footer */
+	flex: 1;
 
 	/*@include layout($susy);*/
 	@include layout((
@@ -33,35 +35,15 @@ $menubar-width:				100%;
 	@include span(full);
 }
 
-/* wrapper for menubar regions */
-.main-header {
+.main-content { 
 
-	font-size: 				$menubar-base-font-size;
-	line-height: 			$menubar-row-height;
-	background-color:  		white;
-	
-	
+	font-size: 				$main-base-font-size;
 
-	/*width:				$menubar-width;*/
-	height: 			$menubar-row-height;
-
-	&__left {
-		/*@include 		span(2 of 4);*/
-		/*float:			left;*/
-
-		> .block {
-			float: left;
-		}
-	}
-
-	&__right {
-		/*@include 		span(2 of 4 last);*/
-		/*float:			right;*/
-
-		> .block {
-			float: right;
-		}
-	}
+	&__gallery {}
+	&__slideshow {}
+	&__primary {}
+	&__relations {}
+	&__facts {}
 }
 
 
@@ -78,4 +60,3 @@ $menubar-width:				100%;
 	&__secondary 	{	background: lightgrey;	}
 
 }*/
-

@@ -37,12 +37,12 @@ $base-media-spacing: 1.5em;
 
 .media {
 
-	overflow:hidden; 
+	/*overflow:hidden; */
 	_overflow:visible; 
 	zoom:1;
 
 	/*margin-bottom: $base-row-pad;*/
-	/*padding: 	$media-spacing 0;*/
+	/*padding: 	$base-media-spacing 0;*/
 
 	&__img	{
 
@@ -81,7 +81,7 @@ $mediaCard-spacing: 1.5em;
 .mediaCard-wrapper {}
 
 /* subclass overrides */
-.mediaCard {
+.mediaCard.media {
 
 	&__img	{
     	margin-right: 	$mediaCard-spacing;  	
@@ -89,6 +89,38 @@ $mediaCard-spacing: 1.5em;
 
 	&__imgR	{
     	margin-left: 	$mediaCard-spacing;   	
+	}
+
+	&__contents	{	
+
+	}
+
+}
+
+/* behavior - media*/
+
+/* ==================================================================
+## .mediaTitle subclass overrides .media base class 
+===================================================================== */
+
+/* config */
+$mediaTitle-spacing: 1.5em;
+
+/* layout */
+.mediaTitle-wrapper {}
+
+/* subclass overrides */
+.mediaTitle.media {
+
+	overflow:			visible;
+	padding: 			$mediaTitle-spacing 0;
+
+	&__img	{
+    	margin-right: 	$mediaTitle-spacing;  	
+	}
+
+	&__imgR	{
+    	margin-left: 	$mediaTitle-spacing;   	
 	}
 
 	&__contents	{	

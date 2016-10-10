@@ -22,7 +22,7 @@ $teaser-elem-spacing:		$base-elem-spacing;
 
 	.teaser {
 	
-		&__title 		{	margin: $teaser-elem-spacing 0;	}
+		&__title 		{	padding: $teaser-elem-spacing 0;	}
 		&__thumb 		{	margin: $teaser-elem-spacing 0;	}
 		&__body p 		{	margin: $teaser-elem-spacing 0;	}
 		&__tags 		{	/*margin: $base-row-pad 0;*/	}

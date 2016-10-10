@@ -205,3 +205,63 @@ $magic-nudge:				.9em;
 	}
 }
 	
+/* ==================================================================
+  titlemedia
+===================================================================== */
+
+$titlebox-title-spacing: 	$base-title-spacing;
+$magic-nudge:				.9em;
+
+.titlemedia {
+
+	/* 	
+		module-level styling
+		only font-size is specified at module level
+		and everything below it is relative to it
+	*/
+
+	font-size:				$titlebar-base-font-size;
+	/*margin-bottom: 		$titlebox-title-spacing;*/
+	margin: $base-title-spacing 0;
+
+	/* 	
+		element-level styling
+		relative to module font-size
+	*/
+
+	@include clearfix;
+
+	@include layout((
+        gutter-position: 	before,
+        columns: 			8,
+        gutters: 			3/8,
+        global-box-sizing: 	border-box
+	));
+
+	&__title {
+
+		/*margin: 			$titlebox-title-spacing 0;*/
+
+		h1, h2, h3, h4, h5, h6 {		
+			color: 				$titlebar-font-color;
+			text-transform: 	none;
+			text-decoration:	none;
+			padding: 			0 3px; /* horizontal space btn tags */
+		}
+	}
+
+	&__title { /*.title*/
+
+		width: 	span(7 of 8);
+		float:	left;
+	}
+
+	&__icons { /*.icon*/
+
+				
+		/*margin-right:			.9em;*/ /* <-- magic number :( */
+
+		width: 	span(1 of 8);
+		float:	right;
+	}
+}

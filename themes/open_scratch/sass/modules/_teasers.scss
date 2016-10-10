@@ -47,8 +47,9 @@ $teaser-elem-spacing:		$base-elem-spacing;
 
 		&__title {
 
-			h2 { /* Overrided global h3 */ }
-			h3 { /* Overrided global h3 */ }
+			h2,
+			h3,
+			h4 
 
 			a, a:link, a:visited {
 

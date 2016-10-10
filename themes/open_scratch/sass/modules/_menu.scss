@@ -1,5 +1,5 @@
 
-.sidebar nav 	{	font-size: .85rem;	}
+.sidebar nav 	{	font-size: .95rem;	}
 .footer nav 	{	font-size: .95rem;	}
 
 .menu {
@@ -21,6 +21,7 @@
 		line-height: $table-row-height;
 		height: $table-row-height;
 		width:100%;
+		padding-left: 0;
 	}
 
 	li a:hover {
@@ -30,15 +31,33 @@
 	/* indent submenu items */
 	li ul li a {padding-left: 10px;}
 
-}
-
-nav{
-	span, a, a:link, a:visited{
+	/*span, a, a:link, a:visited{
 		
 		color: $menu-font-color;
 		text-decoration:none;
 	}
 	a:hover{
 		
-	}
+	} */
+
+	@include tiny   { li a {padding-left: 20px;} li ul li a {padding-left: 30px;} }
+	@include mobile { li a {padding-left: 20px;} li ul li a {padding-left: 30px;} }
+	@include narrow { li a {padding-left: 20px;} li ul li a {padding-left: 30px;} }
+	@include wide   {}
+	@include wider  {}
+}
+
+.sidebar .menu {
+
+	/*nav {
+		span, a, a:link, a:visited{
+			
+			color: $menu-font-color;
+			text-decoration:none;
+		}
+		a:hover{
+			
+		}
+	}*/
+
 }

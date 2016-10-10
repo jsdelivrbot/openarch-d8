@@ -27,8 +27,6 @@ In development...
 
 #### 0.1.0
 
-9.21.2016
-
 * Frontpage fully responsive. Position and size of text and elements adapts to all mobile device types and screen sizes. Still need to set max-width on desktop so layout doesn't stretch to fit full window size, but rather stops growing at ~1200px.
 * Sidebar added to show on wide breakpoint
 * menu link placeholder icon added to top-right next to language switcher links to collapse side bar. 
@@ -42,8 +40,6 @@ In development...
 
 #### 0.1.1
 
-9.22.2016
-
 * Added "wider" breakpoint, for min-width 960px, see breakpoints.yml
 * Added "tiny" breakpoint, for max-width 350px, see breakpoints.yml
 * made thumbnail gallery column count responsive as follows: use 1 col for tiny devices, 2 cols for mobile device, 3 for tablets/narrow and wide. Set gutter size to 1/2 of column size given 12 column layout. This is slightly smaller than what was specified in design mockup, but scales better for larger formats. 
@@ -55,14 +51,13 @@ In development...
 
 #### 1.1.2
 
-9.23.2016
-
 * made footer sticky, ie stick to bottom of page when there is not enough content to fill page. required use flexbox for variable height footer, so browser support might be an issue. technique adapted from https://css-tricks.com/couple-takes-sticky-footer/
 * made factsheet columns responsive to match grid used by relations, ie use 1 col for tiny devices, 2 cols for mobile device, 3 for tablets/narrow and wide, and 4 for wider (cur. 960-1200px). Set gutter size to 1/2 of column size given 12 column layout.
 * about/practice now supports multiple image slideshow with swipe functionality
 * made about/practice image size responsive
 * made people page layout responsive. Text body now moves to side of image @960px wide
 * added exposed sort to project/table page and placeholders for view mode.
+* improved the way recent news section rows wrap and icon alignment with top of multiline. 
 
 #### TBD:
 

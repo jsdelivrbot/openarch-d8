@@ -15,6 +15,7 @@ $searchbar-input-height:        40px;
 $searchbar-width:               100%;
 
 $searchbar-input-bg-color:      #f9f9f9;
+$searchbar-input-bg-color-inv:  #333;
 $searchbar-hover-bg-color:      #e5e5e5;
 $searchbar-icon-color:          #333;
 $searchbar-input-color:         #333;
@@ -29,9 +30,8 @@ $searchbar-input-font-size:     8pt;
 .searchbar-wrapper{ 
   /*vertical-align:   middle;*/
   width: 100%;
-  
 }
-
+ 
 .searchbar{
 
   display:                  inline-block;
@@ -50,7 +50,7 @@ $searchbar-input-font-size:     8pt;
     line-height:            $searchbar-input-height;
     margin-left:            12px;     /* nudge icon off edge */
     z-index:                1;
-    color:                  $searchbar-icon-color;
+    /*color:                  $searchbar-icon-color;*/
     float:                  left;
   }
 
@@ -78,24 +78,30 @@ $searchbar-input-font-size:     8pt;
       border:                 none;
       font-size:              $searchbar-input-font-size;
       float:                  left;
-      color:                  $searchbar-input-color;
+      /*color:                  $searchbar-input-color;*/
       padding-left:           40px;
       -webkit-border-radius:  5px;
       -moz-border-radius:     5px;
       border-radius:          5px;
+
+      @include tiny   { background: $searchbar-input-bg-color-inv; }
+      @include mobile { background: $searchbar-input-bg-color-inv; }
+      @include narrow { background: $searchbar-input-bg-color-inv; }
+      @include wide   {}
+      @include wider  {}
   }
 
-  &__input > input#search::-webkit-input-placeholder {
+  /*&__input > input#search::-webkit-input-placeholder {
      color: $searchbar-placeholder-color;
   }
-  &__input > input#search:-moz-placeholder { /* Firefox 18- */
+  &__input > input#search:-moz-placeholder { 
      color: $searchbar-placeholder-color;  
   }
-  &__input > input#search::-moz-placeholder {  /* Firefox 19+ */
+  &__input > input#search::-moz-placeholder {  
      color: $searchbar-placeholder-color;  
   }
   &__input > input#search:-ms-input-placeholder {  
      color: $searchbar-placeholder-color;  
-  }
+  }*/
 
 }

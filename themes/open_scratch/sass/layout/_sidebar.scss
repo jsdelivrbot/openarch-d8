@@ -25,22 +25,47 @@ $sidebar-footer-height: 	$base-row-height;
 .sidebar-wrapper {
 
 	height: 100%;
+
+	/*span, a, a:link, a:visited{
+		
+		color: $base-font-color;
+		text-decoration:none;
+	}
+	a:hover{
+		
+	}*/
+	
 	
 	/*background:		white;*/
 
 	@include tiny {
 		padding: 0;
+		.sidebar__top,
+		.sidebar__bottom {padding:	0 8%;}
 		background: #333;
+		.menu li { border-color: #5a5a5a; }
+		span, a, a:link, a:visited { color: $base-font-color-inv; }
+		a:hover {}
 	}
 
 	@include mobile {
 		padding: 0;
+		.sidebar__top,
+		.sidebar__bottom {padding:	0 8%;}
 		background: #333;
+		.menu li { border-color: #5a5a5a; }
+		span, a, a:link, a:visited{ color: $base-font-color-inv; }
+		a:hover{}
 	}
 
 	@include narrow {
 		padding: 0;
+		.sidebar__top,
+		.sidebar__bottom {padding:	0 8%;}
 		background: #333;
+		.menu li { border-color: #5a5a5a; }
+		span, a, a:link, a:visited{ color: $base-font-color-inv; }
+		a:hover{}
 	}
 
 	@include wide {

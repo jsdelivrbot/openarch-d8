@@ -38,7 +38,7 @@ In development...
 * enabled flexslider slideshow control with finger swipes for mobile devices 
 * Clickable regions bigger for easily clicking buttons and links with fingers.
 
-#### 0.1.1
+#### 0.2.0
 
 * Added "wider" breakpoint, for min-width 960px, see breakpoints.yml
 * Added "tiny" breakpoint, for max-width 350px, see breakpoints.yml
@@ -49,7 +49,7 @@ In development...
 * removed footer line if only copyright showing.
 * hide overflow for copyright notice
 
-#### 1.1.2
+#### 0.3.0
 
 * made footer sticky, ie stick to bottom of page when there is not enough content to fill page. required use flexbox for variable height footer, so browser support might be an issue. technique adapted from https://css-tricks.com/couple-takes-sticky-footer/
 * made factsheet columns responsive to match grid used by relations, ie use 1 col for tiny devices, 2 cols for mobile device, 3 for tablets/narrow and wide, and 4 for wider (cur. 960-1200px). Set gutter size to 1/2 of column size given 12 column layout.
@@ -58,6 +58,7 @@ In development...
 * made people page layout responsive. Text body now moves to side of image @960px wide
 * added exposed sort to project/table page and placeholders for view mode.
 * improved the way recent news section rows wrap and icon alignment with top of multiline. 
+* format sidebar for mobile/narrow breakpoints
 
 #### TBD:
 

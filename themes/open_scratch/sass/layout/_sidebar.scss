@@ -46,6 +46,7 @@ $sidebar-footer-height: 	$base-row-height;
 		.menu li { border-color: #5a5a5a; }
 		span, a, a:link, a:visited { color: $base-font-color-inv; }
 		a:hover {}
+		.searchbar__input > input#search { background: #333; }
 	}
 
 	@include mobile {
@@ -56,6 +57,7 @@ $sidebar-footer-height: 	$base-row-height;
 		.menu li { border-color: #5a5a5a; }
 		span, a, a:link, a:visited{ color: $base-font-color-inv; }
 		a:hover{}
+		.searchbar__input > input#search { background: #333; }
 	}
 
 	@include narrow {
@@ -66,6 +68,7 @@ $sidebar-footer-height: 	$base-row-height;
 		.menu li { border-color: #5a5a5a; }
 		span, a, a:link, a:visited{ color: $base-font-color-inv; }
 		a:hover{}
+		.searchbar__input > input#search { background: #333; }
 	}
 
 	@include wide {

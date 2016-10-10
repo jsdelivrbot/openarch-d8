@@ -78,17 +78,17 @@ $searchbar-input-font-size:     8pt;
       border:                 none;
       font-size:              $searchbar-input-font-size;
       float:                  left;
-      /*color:                  $searchbar-input-color;*/
+      color:                  $searchbar-input-color;
       padding-left:           40px;
       -webkit-border-radius:  5px;
       -moz-border-radius:     5px;
       border-radius:          5px;
 
-      @include tiny   { background: $searchbar-input-bg-color-inv; }
+      /*@include tiny   { background: $searchbar-input-bg-color-inv; }
       @include mobile { background: $searchbar-input-bg-color-inv; }
       @include narrow { background: $searchbar-input-bg-color-inv; }
       @include wide   {}
-      @include wider  {}
+      @include wider  {}*/
   }
 
   /*&__input > input#search::-webkit-input-placeholder {

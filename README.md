@@ -66,6 +66,10 @@ In development...
 change location of temp directory to site/default/files/tmp
 change permissions on files directory to 777
 
+#### 0.4.0
+
+* make press table responsive. 
+
 #### TBD:
 
 * menu row height needs to resize responsively, too big at smallery breakpoints
@@ -76,6 +80,9 @@ change permissions on files directory to 777
 * resize sidebar @wider breakpoint to 1/5 of 10 column grid.
 * searchbar not quite centered vertically for some reason
 * remove social icons in sidebar for breakpoints where icons are visible in footer, ie tiny, mobile and narrow.
+* refactor flexslider
+* people mediaCard.js only calls update on resize NOT page reload!
+* nothing to indicate what page your on
 
 #### ISSUES:
 

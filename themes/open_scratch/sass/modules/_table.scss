@@ -71,7 +71,13 @@ table {
 
 		width:100%;
 
-		display: 			inline-block;
+		/* get text overflow ellipses working */
+		/*display: 			inline-block;*/
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+
 		height: 			3em;
 		line-height: 		3em;
 

@@ -18,26 +18,51 @@
 
 	&__table {}
 
-		&__head {
-
-			@include table-1-col	{ 	display: none;	}
-			@include table-2-col	{ 	display: none;	}
-			@include table-3-col	{ 	display: table-row-group;	}
-		    @include table-4-col	{ 	display: table-row-group;	}
-		    @include table-5-col	{	display: table-row-group;	}
+		@include table-1-col {
+			&__head 					{ display: none; }
+			&__data-publication-date 	{ display: none; }
+			&__data-name				{ width: 70%; }
+			&__data-publication 		{ display: none; }
+			&__data-icon 				{ width: 30%;}
 		}
 
-		&__data-publication-date {
-
-			@include table-1-col	{ 	display:none;	}
-			@include table-2-col	{ 	width: 13%;	}
-			@include table-3-col	{ 	width: 12%;	}
-		    @include table-4-col	{ 	width: 11%;	}
-		    @include table-5-col	{	width: 10%;	}
+		@include table-2-col {
+			&__head 					{ display: none; }
+			&__data-publication-date 	{ width: 17%; }
+			&__data-name				{ width: 59%; }
+			&__data-publication 		{ display: none; }
+			&__data-icon 				{ width: 24%;}
 		}
-		&__data-name {
 
+		@include table-3-col {
+			&__head 					{ display: none; }
+			&__data-publication-date 	{ width: 12%; }
+			&__data-name				{ /**/ }
+			&__data-publication 		{ display: none; }
+			&__data-icon 				{ width: 17%;}
 		}
-		
-		&__data-icon {}
+
+		@include table-4-col {
+			&__head 					{ display: table-row-group; }
+			&__data-publication-date,
+			&__head-publication-date 	{ width: 12%; }
+			&__data-publication,
+			&__head-publication 		{ width: 18%; }
+			&__data-name,
+			&__head-name				{ /**/ }
+			&__data-icon,
+			&__head-icon 				{ width: 16%; }
+		}
+
+		@include table-5-col {
+			&__head 					{ display: table-row-group; }
+			&__data-publication-date,
+			&__head-publication-date 	{ width: 11%; }
+			&__data-publication,
+			&__head-publication 		{ width: 18%; }
+			&__data-name,
+			&__head-name				{ /**/ }
+			&__data-icon,
+			&__head-icon 				{ width: 15%; }
+		}
 }

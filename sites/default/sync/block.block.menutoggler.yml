@@ -1,0 +1,25 @@
+uuid: 8b285fbb-34c0-41f6-8acd-de1714fc745e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c4ffaa8f-2fe7-446a-a6e2-176dd33decdb'
+  module:
+    - block_content
+  theme:
+    - open_scratch
+id: menutoggler
+theme: open_scratch
+region: header_right
+weight: -29
+provider: null
+plugin: 'block_content:c4ffaa8f-2fe7-446a-a6e2-176dd33decdb'
+settings:
+  id: 'block_content:c4ffaa8f-2fe7-446a-a6e2-176dd33decdb'
+  label: 'Menu toggler'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

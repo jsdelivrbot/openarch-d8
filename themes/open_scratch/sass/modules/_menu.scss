@@ -1,3 +1,9 @@
+/* ==================================================================
+ *
+ * menu
+ *
+ *
+===================================================================== */
 
 .sidebar nav 	{	font-size: .95rem;	}
 .footer nav 	{	font-size: .95rem;	}
@@ -17,7 +23,6 @@
 	li a {
 		display: block;
 		white-space: nowrap;
-
 		line-height: $table-row-height;
 		height: $table-row-height;
 		width:100%;
@@ -47,17 +52,55 @@
 	@include wider  {}
 }
 
-.sidebar .menu {
+/* ==================================================================
+ *
+ * menuSidebar menu subclass
+ *
+ *
+===================================================================== */
 
-	/*nav {
-		span, a, a:link, a:visited{
-			
-			color: $menu-font-color;
-			text-decoration:none;
-		}
-		a:hover{
-			
-		}
-	}*/
+.menuSidebar.menu {
+
+	font-size: .95rem;
+
+	li {
+		
+		border-top: 1px solid #e9e9e9;
+
+		@include tiny   { background-color: red; }
+		@include mobile { background-color: red; }
+		@include narrow { background-color: red; }
+	}
+
+	li a:hover {
+
+		background-color: #f5f5f5;
+
+		@include tiny   { background-color: #f5f5f5; }
+		@include mobile { background-color: #f5f5f5; }
+		@include narrow { background-color: #f5f5f5; }
+	}
+
+	li a {
+
+		padding-left: 0;
+	}
+
+	li > ul a {
+
+		padding-left: 10px;
+	}
+
+				/*	{ li a {padding-left: 0 px;} li > ul a {padding-left: 10px;} } */
+	@include tiny   { li a {padding-left: 20px;} li > ul a {padding-left: 30px;} }
+	@include mobile { li a {padding-left: 20px;} li > ul a {padding-left: 30px;} }
+	@include narrow { li a {padding-left: 20px;} li > ul a {padding-left: 30px;} }
+	@include wide   {}
+	@include wider  {}
+
+}
+
+.menuFooter.menu {
+
 
 }

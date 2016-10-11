@@ -74,7 +74,7 @@ $searchbar-input-font-size:     8pt;
 
       width:                  100%;
       line-height:            $searchbar-input-height;
-      background:             $searchbar-input-bg-color;
+      background:             inherit; /*$searchbar-input-bg-color;*/
       border:                 none;
       font-size:              $searchbar-input-font-size;
       float:                  left;
@@ -104,4 +104,19 @@ $searchbar-input-font-size:     8pt;
      color: $searchbar-placeholder-color;  
   }*/
 
+}
+
+.searchbarSidebar.searchbar {
+
+    &__icon{
+    
+    }
+
+    &__input {
+
+    }
+
+    &__input > input#search{
+
+    }
 }

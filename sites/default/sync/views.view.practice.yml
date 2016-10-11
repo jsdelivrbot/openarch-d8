@@ -7,7 +7,9 @@ dependencies:
     - field.storage.node.field_thumbnail
     - image.style.iphone_6plus
     - node.type.about
+    - responsive_image.styles.narrow
   module:
+    - flexslider_fields
     - image
     - node
     - text
@@ -375,10 +377,12 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: flexslider_responsive
           settings:
-            image_style: iphone_6plus
+            optionset: default
+            responsive_image_style: narrow
             image_link: ''
+            caption: '0'
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -398,7 +402,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''

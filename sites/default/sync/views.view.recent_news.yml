@@ -673,7 +673,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<div class="more headlines__more"><span><a>more news & events   &gt;</a></span></div>'
+          content: 'More News & Events'
           plugin_id: text_custom
       empty: {  }
       relationships: {  }

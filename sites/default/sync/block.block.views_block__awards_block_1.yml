@@ -1,6 +1,6 @@
 uuid: 3c6bd163-8e5f-4368-9b46-f37e65afa816
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.awards
@@ -11,8 +11,8 @@ dependencies:
     - open_scratch
 id: views_block__awards_block_1
 theme: open_scratch
-region: content_primary
-weight: -23
+region: '-1'
+weight: -1
 provider: null
 plugin: 'views_block:awards-block_1'
 settings:

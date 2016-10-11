@@ -60,6 +60,12 @@ In development...
 * improved the way recent news section rows wrap and icon alignment with top of multiline. 
 * format sidebar for mobile/narrow breakpoints
 
+#### 0.3.1
+
+* fix Warning: mkdir(): Permission denied in Drupal\Component\PhpStorage\FileStorage->createDirectory() (line 165 of core/lib/Drupal/Component/PhpStorage/FileStorage.php)
+change location of temp directory to site/default/files/tmp
+change permissions on files directory to 777
+
 #### TBD:
 
 * menu row height needs to resize responsively, too big at smallery breakpoints

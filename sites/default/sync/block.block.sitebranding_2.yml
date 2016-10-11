@@ -1,15 +1,15 @@
-uuid: 6f1243d5-bc45-4396-b518-a64a6a1bf4fc
+uuid: c03d7635-7da7-4466-91ed-d1a65bee238b
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
     - open_scratch
-id: sitebranding
+id: sitebranding_2
 theme: open_scratch
-region: '-1'
-weight: -10
+region: header_left
+weight: -30
 provider: null
 plugin: system_branding_block
 settings:
@@ -17,7 +17,7 @@ settings:
   label: 'Site branding'
   provider: system
   label_display: '0'
-  use_site_logo: false
+  use_site_logo: true
   use_site_name: true
-  use_site_slogan: false
+  use_site_slogan: true
 visibility: {  }

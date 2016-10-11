@@ -1,30 +1,29 @@
-uuid: 50ff9c03-51d2-4500-b92f-ba94b894c1a7
+uuid: cf5f999b-42a9-4a3e-a6eb-a45edbc1bcd4
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - views.view.task_slideshow
+    - views.view.awards
   module:
     - system
     - views
   theme:
     - open_scratch
-id: open_scratch_views_block__task_slideshow_block_2
+id: exposedformawardspage_1
 theme: open_scratch
-region: '-1'
-weight: -5
+region: toolbar_left
+weight: -29
 provider: null
-plugin: 'views_block:task_slideshow-block_2'
+plugin: 'views_exposed_filter_block:awards-page_1'
 settings:
-  id: 'views_block:task_slideshow-block_2'
+  id: 'views_exposed_filter_block:awards-page_1'
   label: ''
   provider: views
   label_display: '0'
   views_label: ''
-  items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: '/task/*'
+    pages: /awards
     negate: false
     context_mapping: {  }

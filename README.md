@@ -70,6 +70,7 @@ change permissions on files directory to 777
 
 * make press table responsive. collapse content incrementally at smaller breakpoints, etc.
 * make awards table responsive. collapse content incrementally at smaller breakpoints, etc.
+* make projects table responsive. collapse content incrementally at smaller breakpoints, etc.
 
 #### TBD:
 
@@ -85,6 +86,11 @@ change permissions on files directory to 777
 * people mediaCard.js only calls update on resize NOT page reload!
 * nothing to indicate what page your on
 * speed up cache clearing - http://a-fro.com/speed-up-cache-clearing-on-drupal7
+* combine project pages & change views w/ajax or load both and switch w/js
+* according menu
+* replace font-awesome icons with custom icons.
+* edit links for admin
+* make event teasers media objects
 
 #### ISSUES:
 

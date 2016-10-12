@@ -38,10 +38,21 @@
 <div{{ attributes.addClass(classes) }}>
 
   <div class="projects-table">
-    <table class="projects-table__table">
+    <table class="table projects-table__table">
+      <thead class="projects-table__head">
+        <tr>
+          <th class="projects-table__head-year">Year</th>
+          <th class="projects-table__head-city">City</th>
+          <th class="projects-table__head-size">Size</th> 
+          <th class="projects-table__head-type">Type</th>
+          <th class="projects-table__head-program">Program</th>
+          <th class="projects-table__head-name">Name</th> 
+          <th class="projects-table__head-icon">Link</th>
+        </tr>
+      </thead>
     	<tbody>
-      		{{ rows }}
-      	</tbody>
+      	{{ rows }}
+      </tbody>
     </table>
   </div>
 

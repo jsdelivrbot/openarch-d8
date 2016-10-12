@@ -1,24 +1,30 @@
+open_scratch.tiny:
+  label: tiny
+  mediaQuery: 'all and (max-width: 350px)'
+  weight: 0
+  multipliers:
+    - 1x
 open_scratch.mobile:
   label: mobile
-  mediaQuery: 'all and (max-width: 559px)'
+  mediaQuery: 'all and (min-width: 351px) and (max-width: 559px)'
   weight: 0
   multipliers:
     - 1x
 open_scratch.narrow:
   label: narrow
-  mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
+  mediaQuery: 'all and (min-width: 560px) and (max-width: 750px)'
   weight: 1
   multipliers:
     - 1x
 open_scratch.wide:
   label: wide
-  mediaQuery: 'all and (min-width: 851px) and (max-width: 1200px)'
+  mediaQuery: 'all and (min-width: 751px) and (max-width: 960px)'
   weight: 2
   multipliers:
     - 1x
 open_scratch.wider:
   label: wide
-  mediaQuery: 'all and (min-width: 1201px)'
+  mediaQuery: 'all and (min-width: 961px)'
   weight: 2
   multipliers:
     - 1x

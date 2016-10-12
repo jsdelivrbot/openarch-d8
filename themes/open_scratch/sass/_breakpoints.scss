@@ -18,8 +18,7 @@
     Make sure these match breakpoints in open_scratch.breakpoints.yml !!! 
 */ 
 
-
-
+/* major breakpoints */
 
 @mixin tiny{
     @media all and (max-width: 350px){ @content; }
@@ -36,6 +35,8 @@
 @mixin wider{
     @media all and (min-width: 961px){ @content; }
 }
+
+/* breakpoints for tables */
 
 @mixin table-1-col{
     @media all and (max-width: 350px){ @content; }

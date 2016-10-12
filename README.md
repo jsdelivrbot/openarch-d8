@@ -68,7 +68,8 @@ change permissions on files directory to 777
 
 #### 0.4.0
 
-* make press table responsive. 
+* make press table responsive. collapse content incrementally at smaller breakpoints, etc.
+* make awards table responsive. collapse content incrementally at smaller breakpoints, etc.
 
 #### TBD:
 
@@ -83,6 +84,7 @@ change permissions on files directory to 777
 * refactor flexslider
 * people mediaCard.js only calls update on resize NOT page reload!
 * nothing to indicate what page your on
+* speed up cache clearing - http://a-fro.com/speed-up-cache-clearing-on-drupal7
 
 #### ISSUES:
 

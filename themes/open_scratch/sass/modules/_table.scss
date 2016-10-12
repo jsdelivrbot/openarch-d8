@@ -59,7 +59,8 @@ table {
 		height: 			$table-row-height;
 		line-height: 		$table-row-height;
 		vertical-align: 	middle;
-		padding-left: 		1em;
+		padding-left:		1em;
+		/*padding: 			0 1em;*/
 		text-align:			left;
 	}
 
@@ -98,6 +99,7 @@ table {
 	/*td*/.data--right {
 		/*float:right;*/
 		text-align:right;
+		padding-right: 1em;
 	}
 	
 

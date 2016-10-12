@@ -44,7 +44,7 @@
 
 	&__table {}
 
-		&__head {
+		/*&__head {
 
 			@include table-1-col	{ 	display: none;	}
 			@include table-2-col	{ 	display: none;	}
@@ -65,5 +65,37 @@
 
 		}
 		
-		&__data-icon {}
+		&__data-icon {}*/
+
+		&__head 		{ display: none; }
+
+		@include table-1-col {
+			&__data-date 	{ display: none; }
+			&__data-name	{ /*width: 70%;*/ }
+			&__data-icon 	{ width: 10%;}
+		}
+
+		@include table-2-col {
+			&__data-date 	{ width: 12%; }
+			&__data-name	{ /*width: 70%;*/ }
+			&__data-icon 	{ width: 14%;}
+		}
+
+		@include table-3-col {
+			&__data-date 	{ width: 8%; }
+			&__data-name	{ /*width: 70%;*/ }
+			&__data-icon 	{ width: 9%;}
+		}
+
+		@include table-4-col {
+			&__data-date 	{ width: 8%; }
+			&__data-name	{ /*width: 70%;*/ }
+			&__data-icon 	{ width: 9%;}
+		}
+
+		@include table-5-col {
+			&__data-date 	{ width: 8%; }
+			&__data-name	{ /*width: 70%;*/ }
+			&__data-icon 	{ width: 9%;}
+		}
 }

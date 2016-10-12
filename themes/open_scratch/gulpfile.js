@@ -23,11 +23,11 @@ gulp.task('uglify', function() {
 });
 
 gulp.task('watch', function(){
-    livereload.listen();
+    //livereload.listen();
 
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./lib/*.js', ['uglify']);
-    gulp.watch(['./css/style.css', './**/*.twig', './js/*.js'], function (files){
-        livereload.changed(files)
-    });
+    //gulp.watch(['./css/style.css', './**/*.twig', './js/*.js'], function (files){
+    //    livereload.changed(files)
+    //});
 });

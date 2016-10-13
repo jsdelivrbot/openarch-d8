@@ -71,6 +71,13 @@ change permissions on files directory to 777
 * make press table responsive. collapse content incrementally at smaller breakpoints, etc.
 * make awards table responsive. collapse content incrementally at smaller breakpoints, etc.
 * make projects table responsive. collapse content incrementally at smaller breakpoints, etc.
+* Add tag icon to events page 
+* Fix broken event tag
+* Added event type test content (removed dummy content)
+* Remove body field from Image Set Content type.
+* Add image set test content (removed dummy content)
+* Add translation=interface filter to projects table/gallery views
+* Fix Task Relation Gallery filter/context/reference set to correctly retrieve thumbnails for relations
 
 #### TBD:
 
@@ -91,10 +98,20 @@ change permissions on files directory to 777
 * replace font-awesome icons with custom icons.
 * edit links for admin
 * make event teasers media objects
+* permissions for admin, editor, staff
+* units on size and site
+* ask drupal community why references won't sync btw languages!!
+* task tags wrapping badly - fix
+* remove body field AND autofill title in image set content types
+* sidebar auto out 
+* make use of page and block view types consistent. (remember need page to use exposed filters)
+* empty facts not hidden, showing blank line with ":"
+* Credit should be
 
 #### ISSUES:
 
 * need to resolve issue with titlebar and titlebar--multiline inconsistant heights and icon misalignment
+* custom icons  break on chinese pages (presumable has to do with img src not accounting for "cn" in address) 
 
 ## Liscense
  

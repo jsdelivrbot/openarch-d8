@@ -81,29 +81,29 @@
 
     <div class="layout main-content-layout slider-canvas clearfix">
 
-      <div class="wrapper toolbar-wrapper" role="contentinfo">
-
-        <div class="toolbar media">
-          {# <div class="media"> #}
-
-          {% if page.toolbar_right %}
-            <div class="media__imgR" role="contentinfo">
-              {{ page.toolbar_right }} 
-            </div>
-          {% endif %}
-
-          {% if page.toolbar_left %}
-            <div class="media__contents" role="contentinfo">
-              {{ page.toolbar_left }}
-            </div>
-          {% endif %}
-
-          {# </div> #}
-        </div>
-
-      </div> {# end toolbar-wrapper #}
-
       <div class="wrapper main-content-wrapper bg--white">
+
+        <div class="wrapper toolbar-wrapper" role="contentinfo">
+
+          <div class="toolbar media">
+            {# <div class="media"> #}
+
+            {% if page.toolbar_right %}
+              <div class="media__imgR" role="contentinfo">
+                {{ page.toolbar_right }} 
+              </div>
+            {% endif %}
+
+            {% if page.toolbar_left %}
+              <div class="media__contents" role="contentinfo">
+                {{ page.toolbar_left }}
+              </div>
+            {% endif %}
+
+            {# </div> #}
+          </div>
+
+        </div> {# end toolbar-wrapper #}
 
         <main class="main-content clearfix" role="main">  
 

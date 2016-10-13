@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.image_set.body
     - field.field.node.image_set.field_image_files
     - field.field.node.image_set.field_image_target
     - image.style.thumbnail
@@ -11,20 +10,11 @@ dependencies:
   module:
     - image
     - path
-    - text
 id: node.image_set.default
 targetEntityType: node
 bundle: image_set
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 31
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
@@ -74,6 +64,8 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
   uid:
     type: entity_reference_autocomplete
     weight: 5

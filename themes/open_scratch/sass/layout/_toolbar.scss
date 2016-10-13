@@ -23,7 +23,8 @@ $toolbar-height:			$base-row-height;
 .toolbar-wrapper{
 
 	position:			relative;
-	@include 			layout($grid-4col);
+	/*@include 			layout($grid-4col);
+	@include 			span(4);*/
 }
 
 .toolbar {
@@ -33,9 +34,7 @@ $toolbar-height:			$base-row-height;
 	line-height: 		$toolbar-height;
 	position:			absolute;
 	top:				-$toolbar-height;
-	width:				100%;
-
-	@include span(4);
+	width:				100%;	
 
 }
 

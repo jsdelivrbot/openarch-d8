@@ -3,25 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.image_set.body
     - field.field.node.image_set.field_image_files
     - field.field.node.image_set.field_image_target
     - node.type.image_set
   module:
     - image
-    - text
     - user
 id: node.image_set.default
 targetEntityType: node
 bundle: image_set
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
   field_image_files:
     weight: 102
     label: above

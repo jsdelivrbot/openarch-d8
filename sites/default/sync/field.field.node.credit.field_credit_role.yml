@@ -1,4 +1,4 @@
-uuid: 287228eb-3807-429f-b04b-f6c556af25bf
+uuid: ad153de8-4f39-4862-ae7a-d820de90ad0d
 langcode: en
 status: true
 dependencies:
@@ -10,9 +10,9 @@ field_name: field_credit_role
 entity_type: node
 bundle: credit
 label: Role
-description: 'Enter the role (e.g. "consultants" or "engineering consultant")'
+description: 'Enter role, eg. consultant, etc.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

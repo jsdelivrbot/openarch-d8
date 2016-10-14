@@ -1,0 +1,45 @@
+uuid: 05253dbe-a2da-4a1d-9b23-529e748186db
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_task_team
+field_name: field_task_team
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Julia Mok'
+      label: 'Julia Mok'
+    -
+      value: 'Lu Chen'
+      label: 'Lu Chen'
+    -
+      value: 'Wang Jianling'
+      label: 'Wang Jianling'
+    -
+      value: 'Qi Zhengdong'
+      label: 'Qi Zhengdong'
+    -
+      value: 'Flavia Benec'
+      label: 'Flavia Benec'
+    -
+      value: 'Zhou Tingting'
+      label: 'Zhou Tingting'
+    -
+      value: 'Wang Tao'
+      label: 'Wang Tao'
+    -
+      value: Qingbo
+      label: Qingbo
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

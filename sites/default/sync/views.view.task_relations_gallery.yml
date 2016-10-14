@@ -716,18 +716,7 @@ display:
             label: ''
           granularity: second
       title: Relations
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content: "<div class=\"relations--header-left\"><div  class=\"title relations--title\"><span><h2>Relations</h2></span></div></div>\n<div class=\"relations--header-right\"><div  class=\"title relations--icon\"><span><a></a></span></div></div>"
-          plugin_id: text_custom
+      header: {  }
       footer: {  }
       empty: {  }
       relationships:
@@ -1058,7 +1047,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -2004,6 +1993,7 @@ display:
           admin_label: 'Task Referenced'
           required: false
           plugin_id: standard
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:

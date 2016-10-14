@@ -10,11 +10,13 @@ dependencies:
     - field.field.node.task.field_task_city
     - field.field.node.task.field_task_client
     - field.field.node.task.field_task_country
+    - field.field.node.task.field_task_principal
     - field.field.node.task.field_task_program
     - field.field.node.task.field_task_region
     - field.field.node.task.field_task_site
     - field.field.node.task.field_task_size
     - field.field.node.task.field_task_status
+    - field.field.node.task.field_task_team
     - field.field.node.task.field_task_type
     - field.field.node.task.field_task_year
     - field.field.node.task.field_thumbnail
@@ -79,6 +81,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_task_principal:
+    weight: 118
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_task_program:
     weight: 114
     label: above
@@ -110,6 +118,12 @@ content:
     type: number_integer
   field_task_status:
     weight: 115
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_task_team:
+    weight: 119
     label: above
     settings: {  }
     third_party_settings: {  }

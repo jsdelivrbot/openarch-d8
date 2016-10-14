@@ -1,0 +1,21 @@
+uuid: 2351c4cb-38d4-4c6f-8de8-0a3e97695684
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_team
+    - node.type.task
+  module:
+    - options
+id: node.task.field_task_team
+field_name: field_task_team
+entity_type: node
+bundle: task
+label: 'Project Team'
+description: 'Select one or more values from dropdown.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

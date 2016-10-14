@@ -194,6 +194,8 @@ $susy: (
 	/* adsf */
 	#main-content-relations{
 
+		
+
 		/*@include layout($susy);*/
 		/*@include layout((
 			gutter-position: inside,
@@ -207,7 +209,8 @@ $susy: (
 
 		.block{
 			/*padding: 14px 0;*/
-			border-top: 1px solid #666;	
+			/*border-top: 1px solid #666;*/	
+
 		}	
 
 	}

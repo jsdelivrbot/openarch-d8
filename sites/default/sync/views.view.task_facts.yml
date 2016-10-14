@@ -447,10 +447,10 @@ display:
           element_wrapper_type: div
           element_wrapper_class: factsheet-fact
           element_default_classes: false
-          empty: ''
-          hide_empty: true
+          empty: '-'
+          hide_empty: false
           empty_zero: false
-          hide_alter_empty: true
+          hide_alter_empty: false
           click_sort_column: value
           type: number_integer
           settings:
@@ -894,8 +894,8 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
-          hide_empty: true
+          empty: '-'
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -958,8 +958,8 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
-          hide_empty: true
+          empty: '-'
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -1021,8 +1021,8 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
-          hide_empty: true
+          empty: '-'
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -1084,8 +1084,8 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
-          hide_empty: true
+          empty: '-'
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -1148,8 +1148,8 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
-          hide_empty: true
+          empty: '-'
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -1212,8 +1212,8 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
-          hide_empty: true
+          empty: '-'
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -1274,8 +1274,8 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
-          hide_empty: true
+          empty: '-'
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -1337,8 +1337,8 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
-          hide_empty: true
+          empty: '-'
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value

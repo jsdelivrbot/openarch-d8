@@ -1,4 +1,4 @@
-uuid: 61d9ed47-bd3b-4654-827b-954b5a6aec8d
+uuid: c817589e-805d-4ce2-aed4-225da327f558
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ dependencies:
     - views
   theme:
     - open_scratch
-id: open_scratch_views_block__task_credits_block_1
+id: views_block__task_credits_block_1_2
 theme: open_scratch
 region: content_facts
-weight: -12
+weight: -28
 provider: null
 plugin: 'views_block:task_credits-block_1'
 settings:

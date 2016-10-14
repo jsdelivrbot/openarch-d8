@@ -78,6 +78,10 @@ change permissions on files directory to 777
 * Add image set test content (removed dummy content)
 * Add translation=interface filter to projects table/gallery views
 * Fix Task Relation Gallery filter/context/reference set to correctly retrieve thumbnails for relations
+* Make facts show as "-" when no value is entered in form
+* Add border top to factsheet
+* Move credit fields to task form
+* Adjust padding on relations gallery and factsheet
 
 #### TBD:
 
@@ -107,6 +111,7 @@ change permissions on files directory to 777
 * make use of page and block view types consistent. (remember need page to use exposed filters)
 * empty facts not hidden, showing blank line with ":"
 * Credit should be
+* NO fields should be set to "users may translate this field"
 
 #### ISSUES:
 

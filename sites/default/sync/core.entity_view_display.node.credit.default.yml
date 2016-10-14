@@ -22,7 +22,7 @@ content:
     third_party_settings: {  }
     type: string
   field_credit_role:
-    weight: 102
+    weight: 106
     label: above
     settings:
       link_to_entity: false

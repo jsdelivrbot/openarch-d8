@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.credit.field_credit_collaborators
-    - field.field.node.credit.field_credit_role
     - field.field.node.credit.field_credit_task
     - node.type.credit
   module:
@@ -19,6 +18,5 @@ content:
     weight: 100
 hidden:
   field_credit_collaborators: true
-  field_credit_role: true
   field_credit_task: true
   langcode: true

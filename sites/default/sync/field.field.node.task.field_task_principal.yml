@@ -1,0 +1,25 @@
+uuid: 3e3262a3-df78-43a9-83f9-83764a6f782b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_principal
+    - node.type.task
+  module:
+    - options
+id: node.task.field_task_principal
+field_name: field_task_principal
+entity_type: node
+bundle: task
+label: 'Principal in Charge'
+description: 'Select one or more values or leave default.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Li Hu'
+  -
+    value: 'Wenjing Huang'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

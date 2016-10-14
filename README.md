@@ -82,6 +82,7 @@ change permissions on files directory to 777
 * Add border top to factsheet
 * Move credit fields to task form
 * Adjust padding on relations gallery and factsheet
+* Add border below task factsheet
 
 #### TBD:
 
@@ -112,6 +113,7 @@ change permissions on files directory to 777
 * empty facts not hidden, showing blank line with ":"
 * Credit should be
 * NO fields should be set to "users may translate this field"
+* hide relation gallery at tiny breakpoint
 
 #### ISSUES:
 

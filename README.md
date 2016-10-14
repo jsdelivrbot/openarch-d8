@@ -84,6 +84,16 @@ change permissions on files directory to 777
 * Adjust padding on relations gallery and factsheet
 * Add border below task factsheet
 
+#### 0.4.1
+
+* Add translation=interface filter to events view
+* Delete Postcard event
+* Translate Test Events
+* Delete Collapse Events Toolbar icon
+* Add translation=interface filter to  Featured Work, Manifesto and Recent News.
+
+#### 0.4.2
+
 #### TBD:
 
 * menu row height needs to resize responsively, too big at smallery breakpoints
@@ -99,7 +109,7 @@ change permissions on files directory to 777
 * nothing to indicate what page your on
 * speed up cache clearing - http://a-fro.com/speed-up-cache-clearing-on-drupal7
 * combine project pages & change views w/ajax or load both and switch w/js
-* according menu
+* according menug
 * replace font-awesome icons with custom icons.
 * edit links for admin
 * make event teasers media objects

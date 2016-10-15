@@ -94,7 +94,20 @@ change permissions on files directory to 777
 
 #### 0.4.2
 
+* Give anonymous users access to empty page callbacks
+* Change front page from /emptypagetest to /
+* Adjust page restrictions for front page blocks to /
+
+#### 0.4 TBDS
+
+
+
 #### TBD:
+
+* accordian menu
+* sidebar auto out on wide breakpoints
+* persistant menu position on page change
+* people mediaCard.js only calls update on resize NOT page reload!
 
 * menu row height needs to resize responsively, too big at smallery breakpoints
 * add extra padding on main content for wider (960px min) breakpoint
@@ -105,11 +118,9 @@ change permissions on files directory to 777
 * searchbar not quite centered vertically for some reason
 * remove social icons in sidebar for breakpoints where icons are visible in footer, ie tiny, mobile and narrow.
 * refactor flexslider
-* people mediaCard.js only calls update on resize NOT page reload!
 * nothing to indicate what page your on
 * speed up cache clearing - http://a-fro.com/speed-up-cache-clearing-on-drupal7
 * combine project pages & change views w/ajax or load both and switch w/js
-* according menug
 * replace font-awesome icons with custom icons.
 * edit links for admin
 * make event teasers media objects
@@ -118,12 +129,14 @@ change permissions on files directory to 777
 * ask drupal community why references won't sync btw languages!!
 * task tags wrapping badly - fix
 * remove body field AND autofill title in image set content types
-* sidebar auto out 
 * make use of page and block view types consistent. (remember need page to use exposed filters)
 * empty facts not hidden, showing blank line with ":"
 * Credit should be
 * NO fields should be set to "users may translate this field"
 * hide relation gallery at tiny breakpoint
+* set permissions for anonomous user
+* remove core and vendor from repo, let composer manage them
+* consider replacing empty page callbacks with custom modules.
 
 #### ISSUES:
 

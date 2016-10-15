@@ -98,8 +98,6 @@ change permissions on files directory to 777
 * Change front page from /emptypagetest to /
 * Adjust page restrictions for front page blocks to /
 
-#### 0.4 TBDS
-
 
 
 #### TBD:

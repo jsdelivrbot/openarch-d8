@@ -102,6 +102,18 @@ change permissions on files directory to 777
 
 * change front page to /frontpage
 
+#### 0.4.4
+
+* Fix /people page so media format updates on doc ready AND window resize
+
+#### 0.4.5
+
+* Fix off-canvas sidebar menu
+* menu inits closed, ie off screen, for mobile/narrow breakpoints
+* menu inits open, ie on screen, for wide/wider breakpoints
+* menu closed after clicking menu item for mobile/narrow breakpoints
+* menu stays open after clicking menu item for wide/wider breeakpoints
+
 #### TBD:
 
 * accordian menu
@@ -137,6 +149,8 @@ change permissions on files directory to 777
 * set permissions for anonomous user
 * remove core and vendor from repo, let composer manage them
 * consider replacing empty page callbacks with custom modules.
+* get drush working on server already.
+* theme login page/process
 
 #### ISSUES:
 

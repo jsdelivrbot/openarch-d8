@@ -10,42 +10,77 @@
 
 MySlider = (function($) {
 
+	//hold state
+	var isOpen = (Breakpoint.isWide() || Breakpoint.isWider());
+	var isWide = (Breakpoint.isWide() || Breakpoint.isWider());
+
 	//cache dom
 	var $slider = $('.slider');
 	var $drawer = $('.slider-drawer');
 	var $canvas = $('.slider-canvas');
 
 	//bindings
-	$('.slider-toggler').click(function() {
-		toggle();
-	});
+	$(document).ready(function() { init() });
+    $(window).resize(function() { reset() });
+	$('.slider-toggler').click(function() { toggle() });
 
-	//private methods
+	function init() {}
+
 	function open() {
 
-		$slider.addClass('is-open');
-	}
+		//if has close, then it is wide breakpoint with drawer closed
+		if ($slider.hasClass('close')) { 
+			$slider.removeClass('close');
+		} else { 						
+			$slider.addClass('open'); 
+		}
+
+		isOpen = true;
+	};
 
 	function close() {
 
-		$slider.removeClass('is-open');
-	}
+		//if has open, then it is mobile breakpoint with drawer open
 
-	function isOpen() {
+		if ($slider.hasClass('open')) { 
+			$slider.removeClass('open'); 
+		} else { 
+			$slider.addClass('close'); 
+		}
 
-		return $slider.hasClass('is-open');
-	}
+		isOpen = false;
+	};
+
+	function reset() {
+
+		wasWide = isWide;
+    	isWide = (Breakpoint.isWide() || Breakpoint.isWider());
+
+    	if(!wasWide && isWide && !isOpen) { isOpen = true;}
+    	if(!wasWide && isWide && isOpen) { $slider.removeClass('open close'); isOpen = true;}
+    	if(wasWide && !isWide && !isOpen) { $slider.removeClass('open close'); }
+    	if(wasWide && !isWide && isOpen) { isOpen = false; }
+
+	};
+
+	function isitOpen() {
+
+		// return isOpen
+	};
+
 
 	//public methods
 	function toggle() {
 
-		isOpen() ? close() : open();
-	}
+		isOpen ? close() : open();
+
+	};
 
 	//public API
 	public_API = {
-		toggle: toggle
-	}
+		toggle: toggle,
+		isOpen: isOpen
+	};
 
 	return public_API
 

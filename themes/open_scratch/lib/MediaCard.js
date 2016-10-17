@@ -17,6 +17,11 @@ MediaCard = (function($) {
     //     }
     // });
 
+    $(document).ready(function() {
+
+        !Breakpoint.isWider() ? disableMedia() : enableMedia();
+    });
+
     $(window).resize(function() {
 
         Breakpoint.isWider() ? enableMedia() : disableMedia();

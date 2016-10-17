@@ -1,80 +1,131 @@
-.slider {}
+.slider {
 
-	.slider-drawer {
+	> .slider-drawer {
 
-	@include tiny {
-		width:			75%;
-	}
+		@include tiny {
+			width:			75%;
+			-webkit-transform: translateX(-100%);
+			transform: translateX(-100%);
+		}
 
-	@include mobile {
-		width:			50%;
-	}
+		@include mobile {
+			width:			50%;
+			-webkit-transform: translateX(-100%);
+			transform: translateX(-100%);
+		}
 
-	@include narrow {
-		width:		33%;
-	}
+		@include narrow {
+			width:			33%;
+			-webkit-transform: translateX(-100%);
+			transform: translateX(-100%);
+		}
 
-	@include wide {
-		width:			25%;
-	}
+		@include wide {
+			width:			25%;
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		}
 
-	@include wider {
-		width:			20%;
-	}
+		@include wider {
+			width:			20%;
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		}
 
-		-webkit-transform: translateX(-100%);
-		transform: translateX(-100%);
 		-webkit-transition: .3s ease all;
 		transition: .3s ease all;
-		/*-webkit-transition: 	width .3s ease;
-		transition: 			width .3s ease;*/
 	}
 
-	.slider-canvas {
+	> .slider-canvas {
 
-		margin-left: 0%;
-		width:	100%;
+		@include tiny {
+			margin-left: 0;
+			width:	100%;
+		}
+
+		@include mobile {
+			margin-left: 0;
+			width:	100%;
+		}
+
+		@include narrow {
+			margin-left: 0;
+			width:	100%;
+		}
+
+		@include wide {
+			margin-left: 25%;
+			width:	75%;
+		}
+
+		@include wider {
+			margin-left: 20%;
+			width:	80%;
+		}
 
 		-webkit-transition: 	width .3s ease, 
 								margin-left .3s ease;
 		transition: 			width .3s ease, 
 								margin-left .3s ease;
 	}
-
-.is-open > .slider-drawer { 
-
-	-webkit-transform: translateX(0);
-  	transform: translateX(0);
 }
 
-.is-open > .slider-canvas {
 
-	margin-left: 25%;
-	width:	75%;
+.close {
 
-	@include tiny {
-		margin-left: 0;
+	> .slider-drawer {
+
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+
+	}
+
+	> .slider-canvas {
+
+		margin-left: 0%;
 		width:	100%;
+
+	}
+}
+
+.open {
+
+	> .slider-drawer { 
+
+		-webkit-transform: translateX(0);
+	  	transform: translateX(0);
+
 	}
 
-	@include mobile {
-		margin-left: 0;
-		width:	100%;
-	}
+	> .slider-canvas {
 
-	@include narrow {
-		margin-left: 0;
-		width:	100%;
-	}
+		// margin-left: 25%;
+		// width:	75%;
 
-	@include wide {
-		margin-left: 25%;
-		width:	75%;
-	}
+		@include tiny {
+			// margin-left: 0;
+			// width:	100%;
+		}
 
-	@include wider {
-		margin-left: 20%;
-		width:	80%;
-	}
+		@include mobile {
+			// margin-left: 0;
+			// width:	100%;
+		}
 
+		@include narrow {
+			// margin-left: 0;
+			// width:	100%;
+		}
+
+		@include wide {
+			margin-left: 25%;
+			width:	75%;
+		}
+
+		@include wider {
+			margin-left: 20%;
+			width:	80%;
+		}
+
+	}
 }

@@ -44,6 +44,7 @@
 		@include narrow{	@include gallery-item-3-col;	}
 		@include wide{		@include gallery-item-3-col;	}
 		@include wider{		@include gallery-item-4-col;	}
+		@include widest{	@include gallery-item-4-col;	}
 
 		> img{
 
@@ -122,6 +123,7 @@
 			@include narrow{	@include gallery-item-3-col;	}
 			@include wide{		@include gallery-item-3-col;	}
 			@include wider{		@include gallery-item-4-col;	}
+			@include widest{	@include gallery-item-4-col;	}
 		}
 
 }

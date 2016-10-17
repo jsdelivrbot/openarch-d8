@@ -20,6 +20,9 @@ html {
     @include wider{ /* all and (min-width: 851px) */
     	font-size: 16px;
     }
+    @include widest{ /* all and (min-width: 851px) */
+    	font-size: 16px;
+    }
 }
 
 
@@ -30,7 +33,7 @@ body{
 	/*line-height: 1.125em;*/ /* 16×1.125=18px */
     -webkit-font-smoothing: antialiased;
     font-family: $base-font-family;
-    /*background: #white;*/
+    background: whitesmoke;
 }
 
 *, *:before, *:after{
@@ -66,7 +69,6 @@ h3 {	font-size: 	$base-h3-font-size;		}
 h4 {	font-size: 	$base-h4-font-size;		}
 h5 {	font-size: 	$base-h5-font-size;		}
 h6 {	font-size:	$base-h6-font-size;		}
-h7
 
 a, a:link, a:visited {
 	color: 				$link-font-color;

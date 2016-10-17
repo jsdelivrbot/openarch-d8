@@ -94,6 +94,7 @@ $susy: (
 	/*@include max-width {
 		width:1200px;
 	}*/
+	max-width:1200px;
 }
 
 /* wrapper for menubar regions */
@@ -106,6 +107,7 @@ $susy: (
 	width:			25%; /* fallback */
 	height: 		100%;
 
+	// max-width:		240px; /* .2 x 1200 */
 }
 
 
@@ -118,6 +120,8 @@ $susy: (
 	left:				0;
 	margin-left: 		0%; /* fallback */
 	width:				100%; /* fallback */
+
+	// max-width:			1200px; /* .8 x 1200 */
 
 }
 
@@ -135,6 +139,8 @@ $susy: (
 	position: relative; /* nec?? */
 	margin-left: 0%; /* fallback */
 	width:	100%; /* fallback */
+
+	// max-width:			1200px; /* .8 x 1200 */
 
 }
 

@@ -51,6 +51,11 @@
 			height: 35px;
 		}
 
+		@include widest {	
+			height: 35px;
+		}
+
+
 	}
 }
 

@@ -114,7 +114,12 @@ change permissions on files directory to 777
 * menu closed after clicking menu item for mobile/narrow breakpoints
 * menu stays open after clicking menu item for wide/wider breeakpoints
 
-#### TBD:
+#### 0.4.5
+
+* Fix max width behavior
+* Set max width to 1200px
+
+#### TBD
 
 * accordian menu
 * sidebar auto out on wide breakpoints
@@ -151,6 +156,7 @@ change permissions on files directory to 777
 * consider replacing empty page callbacks with custom modules.
 * get drush working on server already.
 * theme login page/process
+* github icon out of place for mobile breakpoint
 
 #### ISSUES:
 

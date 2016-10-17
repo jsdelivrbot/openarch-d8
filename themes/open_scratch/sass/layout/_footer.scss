@@ -56,6 +56,10 @@ $footer-base-font-size:		1rem;
 		@include wider {
 			display:		none;
 		}
+
+		@include widest {
+			display:		none;
+		}
 	}
 
 	&__middle {
@@ -72,6 +76,10 @@ $footer-base-font-size:		1rem;
 		}
 
 		@include wider {
+			display:		none;
+		}
+
+		@include widest {
 			display:		none;
 		}
 	}

@@ -32,6 +32,12 @@
 			transform: translateX(0);
 		}
 
+		@include widest {
+			width:			240px;
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		}
+
 		-webkit-transition: .3s ease all;
 		transition: .3s ease all;
 	}
@@ -63,6 +69,11 @@
 			width:	80%;
 		}
 
+		@include widest {
+			margin-left: 240px;
+			width:	960px;
+		}
+
 		-webkit-transition: 	width .3s ease, 
 								margin-left .3s ease;
 		transition: 			width .3s ease, 
@@ -82,8 +93,13 @@
 
 	> .slider-canvas {
 
-		margin-left: 0%;
+		margin-left: 0;
 		width:	100%;
+
+		@include widest {
+			margin-left: 0;
+			width:	1200px;
+		}
 
 	}
 }
@@ -125,6 +141,11 @@
 		@include wider {
 			margin-left: 20%;
 			width:	80%;
+		}
+
+		@include widest {
+			margin-left: 240px;
+			width:	960px;
 		}
 
 	}

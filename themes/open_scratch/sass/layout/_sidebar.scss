@@ -81,6 +81,11 @@ $sidebar-footer-height: 	$base-row-height;
 		padding:		0 8%;
 	}
 
+	@include widest {
+
+		padding:		0 8%;
+	}
+
 }
 
 

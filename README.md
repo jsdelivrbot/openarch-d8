@@ -114,22 +114,21 @@ change permissions on files directory to 777
 * menu closed after clicking menu item for mobile/narrow breakpoints
 * menu stays open after clicking menu item for wide/wider breeakpoints
 
-#### 0.4.5
+#### 0.4.6
 
 * Fix max width behavior
 * Set max width to 1200px
 
+#### 0.4.7
+
+* Reduced sidebar/footer nav to 1rem font-size to match content tables
+* 
+
 #### TBD
 
-* accordian menu
-* sidebar auto out on wide breakpoints
-* persistant menu position on page change
-* people mediaCard.js only calls update on resize NOT page reload!
-
-* menu row height needs to resize responsively, too big at smallery breakpoints
-* add extra padding on main content for wider (960px min) breakpoint
+* people thumbs should size to grid so width = sidebar width
 * remove tag icon @tiny
-* add more relations link under relations.
+* remove relation thumbs at tiny
 * turn floating tags into gallery so they collapse better.
 * resize sidebar @wider breakpoint to 1/5 of 10 column grid.
 * searchbar not quite centered vertically for some reason
@@ -157,11 +156,15 @@ change permissions on files directory to 777
 * get drush working on server already.
 * theme login page/process
 * github icon out of place for mobile breakpoint
+* develop vertical spacing strategy
+* reconsider adding extra padding on main content for wider (960px min) breakpoint
 
 #### ISSUES:
 
 * need to resolve issue with titlebar and titlebar--multiline inconsistant heights and icon misalignment
 * custom icons  break on chinese pages (presumable has to do with img src not accounting for "cn" in address) 
+* accordian menu not working
+* people mediaCard.js calls update on page load but not working as expected
 
 ## Liscense
  

@@ -37,8 +37,16 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="card card--task-main border-top-hairline">
-      {{ rows }}
+  <div class="card card--task-relations-gallery">
+    <div class="card__slide">
+
+      <div class="gallery relations-gallery">
+        <ul class="gallery--container">
+          {{ rows }}
+        </ul>
+      </div>
+      
+    </div>
   </div>
 
   {{ feed_icons }}

@@ -26,7 +26,7 @@ $card-body-line-height--big:	1.5;
 
 	/* border-top: 1px solid #e1e1e1; */
 
-	padding: 	$base-row-pad*.2 0; /* <-- magic number */
+	/*padding: 	$base-row-pad*.2 0;*/ /* <-- magic number */
 
 	&__header 	{		}
 	&__slide 	{	/*margin: $base-title-spacing 0;*/	}
@@ -143,6 +143,16 @@ $card-body-line-height--big:	1.5;
 .card.card--events {
 
 	max-width:750px;
+}
+
+.card.card--task-main {
+
+	max-width:750px;
+}
+
+.card.card--task-relations-gallery {
+
+	max-width: 750px;
 }
 
 /* ==================================================================

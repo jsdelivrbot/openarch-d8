@@ -29,21 +29,44 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-<div class="node task__node border-top-hairline">
+{# <div class="node task__node border-top-hairline"> #}
+{# <div class="card card--task-main border-top-hairline"> #}
 
-	<div class="node__title">
+	{# <div class="node__title">
 		<h2>{{ fields.title.content }}</h2>
+	</div> #}
+	<div class="card__header">
+
+		<div class="media mediaTitle">
+
+			<div class="media__imgR">
+				<div class="icons">
+			        <div class="icon--container">
+			          	<div class="icon icon--sml"><a style="background:none"><i></i></a></div>
+			        </div>
+		        </div>
+	  		</div>
+
+			<div class="media__contents">
+		    	<h2>{{ fields.title.content }}</h2>
+			</div>
+
+		</div>
+
 	</div>
 
-	<div class="node__thumb">
+	{# <div class="node__thumb">
 		{{ fields.field_thumbnail.content }}
-	</div>
+	</div> #}
 
-	<div class="node__body">
+	{# <div class="node__body">
+		{{ fields.body.content }}
+	</div> #}
+	<div class="card__body card__body--big">
 		{{ fields.body.content }}
 	</div>
 
-	<div class="tagline node__tagline">
+	{# <div class="tagline node__tagline">
 		<div class="tags node__tags">
 			<span class="tags__tag">
 				<div class="icon"><a><i class="fa fa-tag" aria-hidden="true"></i></a></div>
@@ -58,6 +81,24 @@
 				{{ fields.field_task_program.content }}
 			</span>
 		</div>
+	</div> #}
+	<div class="card__footer">
+		<div class="tagline teaser__tagline">
+			<div class="tags teaser__tags">
+				<span class="tags__tag">
+					<div class="icon"><a><i class="fa fa-tag" aria-hidden="true"></i></a></div>
+				</span>
+				<span class="tags__tag">
+					{{ fields.type.content }} 
+				</span>
+				<span class="tags__tag">
+					{{ fields.field_task_type.content }} 
+				</span>
+				<span class="tags__tag">
+					{{ fields.field_task_program.content }}
+				</span>
+			</div>
+		</div>
 	</div>
 
-</div>
+{# </div> #}

@@ -2,44 +2,57 @@
 
 	> .slider-drawer {
 
+		
+
 		@include tiny {
 			width:			75%;
 			-webkit-transform: translateX(-100%);
 			transform: translateX(-100%);
+			-webkit-transition: .3s ease all;
+			transition: .3s ease all;
 		}
 
 		@include mobile {
 			width:			50%;
 			-webkit-transform: translateX(-100%);
 			transform: translateX(-100%);
+			-webkit-transition: .3s ease all;
+			transition: .3s ease all;
 		}
 
 		@include narrow {
 			width:			33%;
 			-webkit-transform: translateX(-100%);
 			transform: translateX(-100%);
+			-webkit-transition: .3s ease all;
+			transition: .3s ease all;
 		}
 
 		@include wide {
 			width:			25%;
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
+			-webkit-transition: 0 ease all;
+			transition: 0 ease all;
 		}
 
 		@include wider {
 			width:			20%;
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
+			-webkit-transition: 0 ease all;
+			transition: 0 ease all;
 		}
 
 		@include widest {
-			width:			240px;
+			width:			15%; /*240px;*/
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
+			-webkit-transition: 0 ease all;
+			transition: 0 ease all;
 		}
 
-		-webkit-transition: .3s ease all;
-		transition: .3s ease all;
+		
 	}
 
 	> .slider-canvas {
@@ -70,14 +83,16 @@
 		}
 
 		@include widest {
-			margin-left: 240px;
-			width:	960px;
+			margin-left: 15%;
+			width:	85%;
+			/*margin-left: 240px;
+			width:	960px;*/
 		}
 
-		-webkit-transition: 	width .3s ease, 
-								margin-left .3s ease;
-		transition: 			width .3s ease, 
-								margin-left .3s ease;
+		-webkit-transition: 	width 0 ease, 
+								margin-left 0 ease;
+		transition: 			width 0 ease, 
+								margin-left 0 ease;
 	}
 }
 
@@ -96,10 +111,10 @@
 		margin-left: 0;
 		width:	100%;
 
-		@include widest {
+		/*@include widest {
 			margin-left: 0;
 			width:	1200px;
-		}
+		}*/
 
 	}
 }
@@ -144,8 +159,10 @@
 		}
 
 		@include widest {
-			margin-left: 240px;
-			width:	960px;
+			margin-left: 15%;
+			width:	85%;
+			/*argin-left: 240px;
+			width:	960px;*/
 		}
 
 	}

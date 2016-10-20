@@ -24,14 +24,14 @@ $card-body-line-height--big:	1.5;
 
 .card {
 
-	/*border-top: 1px solid #e1e1e1;*/
+	/* border-top: 1px solid #e1e1e1; */
 
 	padding: 	$base-row-pad*.2 0; /* <-- magic number */
 
-	&__title 	{		}
-	&__slide 	{	margin: $base-title-spacing 0;	}
+	&__header 	{		}
+	&__slide 	{	/*margin: $base-title-spacing 0;*/	}
 	&__body p 	{		}
-	&__tags 	{		}
+	&__footer 	{		}
 }
 
 
@@ -49,14 +49,40 @@ $card-body-line-height--big:	1.5;
 	*/
 	font-size:				$card-base-font-size;
 
-	&__title 	{	
+	&__header 	{	
 
 		/*font-size: 		$card-title-font-size;*/
 		/*line-height: 		$card-title-line-height;*/
 		/*color: 			$card-title-font-color;*/
 	}
 
+	&__header--headline {
+
+		text-decoration: 	underline;
+		text-transform: 	uppercase;
+	}
+
 	&__slide 	{	/**/	}
+
+	&__slide--small 	{	
+
+		@include tiny   { width: 100% }
+		@include mobile { width: 100% }
+		@include narrow { width: 66% }
+		@include wide   { width: 66% }
+		@include wider  { width: 50% }
+		@include widest	{ width: 50% }
+	}
+
+	&__slide--medium 	{	
+
+		@include tiny   { width: 100% }
+		@include mobile { width: 100% }
+		@include narrow { width: 100% }
+		@include wide   { width: 100% }
+		@include wider  { width: 75% }
+		@include widest	{ width: 75% }
+	}
 
 	&__body > p {
 
@@ -64,6 +90,7 @@ $card-body-line-height--big:	1.5;
 		/*line-height: 		$card-body-line-height;*/
 		/*color: 			$card-body-font-color;*/
 		text-align:			justify;
+
 	}
 
 	&__body--big > p {
@@ -72,7 +99,7 @@ $card-body-line-height--big:	1.5;
 		line-height:		$card-body-line-height--big;
 	}
 
-	&__tags 	{	/**/	}
+	&__footer 	{	/**/	}
 }
 
 /* ==================================================================
@@ -81,7 +108,18 @@ $card-body-line-height--big:	1.5;
 
 /* card types (ie. subclasses) */
 
-.card.card--practice {}
+.card--practice.card {
+
+	> .card__slide 	{	
+
+		/*margin-top: 0;*/
+	}
+
+	> .card__body {
+
+		max-width: 750px;
+	}
+}
 
 .card.profile--card { 
 
@@ -100,6 +138,11 @@ $card-body-line-height--big:	1.5;
 		line-height: 		1.2;
 		/*color: 			$card-body-font-color;*/
 	}
+}
+
+.card.card--events {
+
+	max-width:750px;
 }
 
 /* ==================================================================

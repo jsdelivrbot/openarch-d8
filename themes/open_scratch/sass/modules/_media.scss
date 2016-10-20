@@ -83,15 +83,16 @@ $mediaCard-spacing: 1.5em;
 /* subclass overrides */
 .mediaCard.media {
 
-	&__img	{
-    	margin-right: 	$mediaCard-spacing;  	
+	.media__img	{
+    	margin-right: 	$mediaCard-spacing;  
+    	margin-top:		$mediaCard-spacing;	
 	}
 
-	&__imgR	{
+	.media__imgR	{
     	margin-left: 	$mediaCard-spacing;   	
 	}
 
-	&__contents	{	
+	.media__contents	{	
 
 	}
 
@@ -104,7 +105,7 @@ $mediaCard-spacing: 1.5em;
 ===================================================================== */
 
 /* config */
-$mediaTitle-spacing: 1.5em;
+$mediaTitle-spacing: 1.2em;
 
 /* layout */
 .mediaTitle-wrapper {}
@@ -115,15 +116,15 @@ $mediaTitle-spacing: 1.5em;
 	overflow:			visible;
 	padding: 			$mediaTitle-spacing 0;
 
-	&__img	{
+	.media__img	{
     	margin-right: 	$mediaTitle-spacing;  	
 	}
 
-	&__imgR	{
+	.media__imgR	{
     	margin-left: 	$mediaTitle-spacing;   	
 	}
 
-	&__contents	{	
+	.media__contents	{	
 
 	}
 

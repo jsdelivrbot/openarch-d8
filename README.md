@@ -119,14 +119,18 @@ change permissions on files directory to 777
 * Fix max width behavior
 * Set max width to 1200px
 
-#### 0.4.7
+#### 0.5.0
 
 * Reduced sidebar/footer nav to 1rem font-size to match content tables
-* 
+* Add 750px max width slideshow to practice.
+* Remove global max-width.
+* Refactor card class to replace headlines, statement, practice, and event classes.
 
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
+* events thumbs should be one grid so widht = full width for mobile, and 2 or 3 x sidebar depending on breakpoint
+* press slideshow should be
 * remove tag icon @tiny
 * remove relation thumbs at tiny
 * turn floating tags into gallery so they collapse better.
@@ -165,6 +169,7 @@ change permissions on files directory to 777
 * custom icons  break on chinese pages (presumable has to do with img src not accounting for "cn" in address) 
 * accordian menu not working
 * people mediaCard.js calls update on page load but not working as expected
+* slider getting stuck in undefined state when drawer is open and window dragged from narrow to wide breakpoint.
 
 ## Liscense
  

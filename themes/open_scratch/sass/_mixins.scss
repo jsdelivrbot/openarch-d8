@@ -145,3 +145,9 @@ $grid-4col: (
     margin-bottom: gutter(12);
 }
 
+@mixin gallery-item-6-col {
+
+    @include gallery(2 of 12);
+    margin-bottom: gutter(12);
+}
+

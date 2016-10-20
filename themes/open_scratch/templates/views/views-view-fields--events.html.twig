@@ -29,34 +29,62 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-<div class="teaser events__teaser border--top-ltgrey">
+{# <div class="teaser events__teaser border--top-ltgrey"> #}
+<div class="card card--event border--top-ltgrey">
 
-	<div class="teaser__title">
+	{# <div class="teaser__title">
 		<h3>{{ fields.title.content }}</h3>
+	</div> #}
+	<div class="card__header card__header--headline">
+
+		<div class="media mediaTitle">
+
+			<div class="media__imgR">
+				<div class="icons">
+			        <div class="icon--container">
+			          	<div class="icon icon--sml"><a style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+			        </div>
+		        </div>
+	  		</div>
+
+			<div class="media__contents">
+		    	<h3>{{ fields.title.content }}</h4>
+			</div>
+
+		</div>
+
 	</div>
 
-	<div class="teaser__thumb">
+	{# <div class="teaser__thumb">
+		{{ fields.field_thumbnail.content }}
+	</div> #}
+	<div class="card__slide card__slide--small">
 		{{ fields.field_thumbnail.content }}
 	</div>
 
-	<div class="teaser__body">
+	{# <div class="teaser__body">
+		{{ fields.body.content }}
+	</div> #}
+	<div class="card__body">
 		{{ fields.body.content }}
 	</div>
 
-	<div class="tagline teaser__tagline">
-		<div class="tags teaser__tags">
-			<span class="tags__tag">
-				<div class="icon"><a><i class="fa fa-tag" aria-hidden="true"></i></a></div>
-			</span>
-			<span class="tags__tag">
-				{{ fields.type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_event_type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_event_city.content }}
-			</span>
+	<div class="card__footer">
+		<div class="tagline teaser__tagline">
+			<div class="tags teaser__tags">
+				<span class="tags__tag">
+					<div class="icon"><a><i class="fa fa-tag" aria-hidden="true"></i></a></div>
+				</span>
+				<span class="tags__tag">
+					{{ fields.type.content }} 
+				</span>
+				<span class="tags__tag">
+					{{ fields.field_event_type.content }} 
+				</span>
+				<span class="tags__tag">
+					{{ fields.field_event_city.content }}
+				</span>
+			</div>
 		</div>
 	</div>
 

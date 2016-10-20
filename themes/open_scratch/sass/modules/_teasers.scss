@@ -47,9 +47,9 @@ $teaser-elem-spacing:		$base-elem-spacing;
 
 		&__title {
 
-			h2,
+			/*h2,
 			h3,
-			h4 
+			h4 */
 
 			a, a:link, a:visited {
 
@@ -86,7 +86,7 @@ $teaser-elem-spacing:		$base-elem-spacing;
 		.teaser--title {
 
 			/* subclass overrides */
-			h3, span, a, a:link, a:visited {
+			h4, h3, span, a, a:link, a:visited {
 
 				text-decoration: underline;
 			}

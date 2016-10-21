@@ -379,7 +379,7 @@ display:
           click_sort_column: target_id
           type: flexslider_responsive
           settings:
-            optionset: default
+            optionset: flexslider_carousel_with_min_and_max_ranges
             responsive_image_style: narrow
             image_link: ''
             caption: '0'

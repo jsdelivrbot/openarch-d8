@@ -12,7 +12,7 @@ dependencies:
 id: open_scratch_views_block__task_slideshow_block_2
 theme: open_scratch
 region: '-1'
-weight: -5
+weight: 0
 provider: null
 plugin: 'views_block:task_slideshow-block_2'
 settings:

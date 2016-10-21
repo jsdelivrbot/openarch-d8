@@ -15,13 +15,13 @@ options:
   smoothHeight: false
   reverse: false
   slideshowSpeed: 7000
-  animationLoop: false
+  animationLoop: true
   randomize: false
   startAt: 0
-  itemWidth: 210
+  itemWidth: 750
   itemMargin: 5
-  minItems: 2
-  maxItems: 4
+  minItems: 1
+  maxItems: 3
   move: 0
   directionNav: true
   controlNav: '1'

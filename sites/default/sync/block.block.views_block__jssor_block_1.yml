@@ -12,7 +12,7 @@ dependencies:
 id: views_block__jssor_block_1
 theme: open_scratch
 region: '-1'
-weight: -3
+weight: 2
 provider: null
 plugin: 'views_block:jssor-block_1'
 settings:

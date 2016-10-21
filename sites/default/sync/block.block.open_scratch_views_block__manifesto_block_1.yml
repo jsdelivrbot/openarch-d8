@@ -12,7 +12,7 @@ dependencies:
 id: open_scratch_views_block__manifesto_block_1
 theme: open_scratch
 region: '-1'
-weight: -2
+weight: 3
 provider: null
 plugin: 'views_block:manifesto-block_1'
 settings:

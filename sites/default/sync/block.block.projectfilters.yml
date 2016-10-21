@@ -12,7 +12,7 @@ dependencies:
 id: projectfilters
 theme: open_scratch
 region: '-1'
-weight: -14
+weight: -11
 provider: null
 plugin: 'block_content:37bff7b7-975f-4f66-8ee2-e0ae401c5bc1'
 settings:

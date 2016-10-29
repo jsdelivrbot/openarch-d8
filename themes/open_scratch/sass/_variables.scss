@@ -15,7 +15,7 @@ $base-font-family: Helvetica, Arial, sans-serif;
 
 /* constants */
 $base-font-color: 			#333; /*#505050;*/
-$base-font-color-inv: 		#f5f5f5; /*#505050;*/
+$base-font-color-inv: 		#eee; /*#505050;*/
 $lighter-font-color: 		#777;
 $darker-font-color: 		#333;
 $darker-font-color: 		#000;
@@ -85,7 +85,7 @@ $base-h2-font-size:			1.9em; /*	node titles 		*/
 $base-h3-font-size:			1.1em; /*	secondary titles 	*/
 $base-h4-font-size:			0.9em; /*	factsheet headers & headlines	*/
 $base-h5-font-size:			0.8em; /*	factsheet multiline headers (ie. roles)		*/
-$base-h6-font-size:			0.7em; /*	factsheet facts		*/
+$base-h6-font-size:			0.8em; /*	factsheet facts		*/
 
 /* base */
 $base-font-size: 			.9em;
@@ -125,7 +125,7 @@ $toolbar-font-size: 12px;
 ## Fonts Line Heights
 ===================================================================== */
 $base-line-height: 1.5;
-$base-title-line-height: 1.2; /*16px;*/
+$base-title-line-height: 1.25; /* 1.25 x 3 = 3.75 */
 
 $sitename-line-height: 16px;
 $pagetitle-line-height: base-line-height;
@@ -144,28 +144,59 @@ $slide-caption-line-height: $base-line-height;
 $manifesto-title-line-height: $base-title-line-height;
 
 /* ==================================================================
-## Padding
+## Vertical Spacing
 ===================================================================== */
 
-$base-row-height: 3.75em; /* (16px x .7em) x 3.75 = 42px; */
-$base-row-pad: 16px;
-$base-elem-spacing: 16px; /*this should be rem not em AND should be susy calculated gallery gutter*/
-$base-title-spacing: 1.5em;
-$base-pad-horiz: .25rem;
+$base-row1-height: 		5.25rem; /* Site Header */
+$base-row2-height: 		3.75rem; /* Card Headers/Footers */ /* (16px x .7em) x 3.75 = 42px; */
+$base-row3-height: 		2.75rem; /* Table Rows */
+$base-button-height:	2.75rem; /* Icons, Tags, Buttons */
+$base-button-height-sml: 2.25rem; /* Icons, Tags, Buttons */
+$base-icon-height:		1rem; /* Icons, Tags, Buttons */
+$base-spacing: 			1.25rem;
+$base-spacing-sml: 		1.0rem;
+$base-spacing-big: 		1.5rem;
+
+/* ==================================================================
+## Horiz Spacing
+===================================================================== */
+
+$base-horiz-nudge: 		4px;	/* .25em */
+$base-horiz-pad: 		8px; 	/* .5em */
+$base-horiz-step:		16px; 	/* 1em */
+
+
+
+/* degraded */
+$base-pad-horiz: 		$base-horiz-nudge;
+$base-spacing-horiz: 	$base-horiz-pad;
+$base-button-pad:		$base-horiz-step;
+
+$base-spacing-vert: $base-spacing;
+$base-row-height: $base-row3-height;
+$base-row-pad: 1rem; /*16px;*/
+$base-elem-spacing: 1rem; /*16px;*/ /*this should be rem not em AND should be susy calculated gallery gutter*/
+
+/* ==================================================================
+## Titles
+===================================================================== */
+
+$base-title-height:	$base-row-height;
+$base-title-spacing: 1.5rem;
 
 /* ==================================================================
 ## Buttons (icons, tags, dropdowns)
 ===================================================================== */
 
-$base-button-pad-horiz:		1em;
-$base-button-height:		2.75em;
+
+$base-button-pad-horiz:		$base-button-pad;
 $base-button-spacing:		0.5em;
 
 /* ==================================================================
 ## Table
 ===================================================================== */
 
-$table-row-height: $base-row-height;
+$table-row-height: $base-row3-height;
 $table-col1-width: 20%;
 $table-col2-width: 70%;
 $table-col3-width: 10%;

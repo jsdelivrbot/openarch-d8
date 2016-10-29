@@ -15,8 +15,7 @@
 
 $card-base-font-size:			1rem;
 /*$card-body-font-size:			1em;*/
-$card-body-font-size--big:		1em;
-$card-body-line-height--big:	1.5;
+
 
 /* ==================================================================
 ## Layout
@@ -31,6 +30,7 @@ $card-body-line-height--big:	1.5;
 	&__header 	{		}
 	&__slide 	{	/*margin: $base-title-spacing 0;*/	}
 	&__body p 	{		}
+	&__body--big p	{ /*margin: $base-row-pad $base-row-pad;*/ }
 	&__footer 	{		}
 }
 
@@ -49,6 +49,17 @@ $card-body-line-height--big:	1.5;
 	*/
 	font-size:				$card-base-font-size;
 
+	overflow: hidden;
+	padding: 0;
+
+	&__item {
+
+	}
+
+	&__item--spaced 		{ margin: $base-spacing 0; }
+	&__item--spaced-more 	{ margin: $base-spacing-big 0; }
+	&__item--spaced-less 	{ margin: $base-spacing-sml 0; }
+
 	&__header 	{	
 
 		/*font-size: 		$card-title-font-size;*/
@@ -56,13 +67,20 @@ $card-body-line-height--big:	1.5;
 		/*color: 			$card-title-font-color;*/
 	}
 
-	&__header--headline {
+	/*&__header--headline {
 
 		text-decoration: 	underline;
 		text-transform: 	uppercase;
-	}
+	}*/
 
-	&__slide 	{	/**/	}
+	&__slide 	{	
+
+		img {
+
+			width:100%;
+			height:auto;
+		}
+	}
 
 	&__slide--small 	{	
 
@@ -71,7 +89,7 @@ $card-body-line-height--big:	1.5;
 		@include narrow { width: 66% }
 		@include wide   { width: 66% }
 		@include wider  { width: 50% }
-		@include widest	{ width: 50% }
+		@include widest	{ width: 75% }
 	}
 
 	&__slide--medium 	{	
@@ -89,17 +107,47 @@ $card-body-line-height--big:	1.5;
 		/*font-size: 		$card-body-font-size;*/
 		/*line-height: 		$card-body-line-height;*/
 		/*color: 			$card-body-font-color;*/
-		text-align:			justify;
+		/*text-align:			justify;*/
 
 	}
 
-	&__body--big > p {
+	/*&__body--big > p {
 
 		font-size:			$card-body-font-size--big;
 		line-height:		$card-body-line-height--big;
-	}
+	}*/
 
 	&__footer 	{	/**/	}
+}
+
+.card--flag {
+
+	.card__body { padding-right: $base-spacing; }
+	background: #f1f1f1;
+
+}
+
+.card--postit {
+
+	/*background: #f9f9f9;*/
+
+	@include tiny   {  }
+	@include mobile { width: 100% }
+	@include narrow { padding: 0 ($base-spacing*.5) }
+	@include wide   { padding: 0 ($base-spacing*.5) }
+	@include wider  { padding: 0 $base-spacing; }
+	@include widest	{ padding: 0 $base-spacing; }	
+}
+
+.card--subcard {
+
+	font-size: .9rem;
+}
+
+.card--supercard {
+
+	font-size: 1.1rem;
+	padding: ($base-spacing*.5) 0;
 }
 
 /* ==================================================================
@@ -132,6 +180,11 @@ $card-body-line-height--big:	1.5;
 
 .card.card--people {
 
+	.card__slide {
+
+		
+	}
+
 	.card__body > p {
 
 		/*font-size: 		$card-body-font-size;*/
@@ -142,18 +195,66 @@ $card-body-line-height--big:	1.5;
 
 .card.card--events {
 
-	max-width:750px;
+	/*max-width:750px;*/
+}
+
+.card.card--event {
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest	{ float: left; width: 50%; } 
 }
 
 .card.card--task-main {
 
-	max-width:750px;
+	/*max-width:750px;*/
+
+	@include widest	{ 
+		
+		.card__header { float:left; width: 50%; }	
+		.card__body { float:right; width:50%; padding: $base-spacing;}
+		.card__footer { float:left; width: 50%; }
+	}
 }
 
 .card.card--task-relations-gallery {
 
-	max-width: 750px;
+	
+
+	/*margin:		1.5em 0;*/	
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest	{ .card__body {display:none;} }
+
 }
+
+.card.card--relation {
+
+	clear: both;
+	overflow: auto;
+
+	.card__footer {
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+.card.card--manifesto {
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest	{ float: left; width: 50%; } 
+}
+	
 
 /* ==================================================================
 ## Dev

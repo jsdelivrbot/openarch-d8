@@ -31,7 +31,92 @@
 #}
 
 
-<li class="gallery--item">
+{# <li class="gallery__item">
   {{ fields.field_thumbnail.content }}
-</li>
+</li> #}
 
+<li class="gallery__item">
+
+  <div class="card card--flag card--relation media mediaCard">
+
+    <div class="media__img media__img--relation">
+
+      <div class="card__item card__slide">
+        <div class="thumb">{{ fields.field_thumbnail.content }}</div>
+      </div>
+
+    </div>
+
+    <div class="media__contents">
+
+      {# <div class="titlebox card__title">
+
+        <div class="titlebox__title">
+          <h3>{{ fields.title.content }}</h3>
+        </div>
+
+        <div class="titlebox__icons">
+          <div class="icon--container">
+              <a class="icon icon--img icon--collapsed icon--fit" style="background:none">
+                <img src="../{{ directory }}/images/ios7-arrow-thin-right.png">
+              </a>
+          </div>
+        </div>
+
+      </div> #}
+
+      <div class="card__item card__title">
+        
+        <div class="media mediaTitle">
+
+          {# <div class="media__imgR">
+              <a class="icon" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+          </div> #}
+          <div class="media__imgR">
+            <div class="ribbon">
+              <div class="ribbon__segments">
+                <div class="ribbon__segment">
+                  <a class="icon icon--sml" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="media__contents">
+              <h3 class="title">{{ fields.title.content }}</h3>
+          </div>
+
+        </div>
+         
+      </div>
+
+
+
+      <div class="card__item card__item--spaced-less card__body">
+        <div class="bd">{{ fields.body.content }}</div>
+      </div>
+
+      <div class="card__item card__footer">
+        <div class="ribbon">
+          <div class="ribbon__segments">
+            <span class="ribbon__segment--left">
+              <a class="icon icon--sml"><i class="fa fa-tag" aria-hidden="true"></i></a>
+            </span>
+            <span class="ribbon__segment--left">
+              <div class="tag tag--sml">{{ fields.type.content }}</div>
+            </span>
+            <span class="ribbon__segment--left">
+              <div class="tag tag--sml">{{ fields.field_task_type.content }}</div>
+            </span>
+            <span class="ribbon__segment--left">
+              <div class="tag tag--sml">{{ fields.field_task_program.content }}</div>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</li>

@@ -5,8 +5,8 @@
 
 /* sizing relative to containter, ie titlebar, toolbar, or tagline */
 
-$icon-size:						2.75em;
-$icon-size--sml:				1.2em;
+$icon-size:						$base-button-height;
+$icon-size--sml:				$base-icon-height;
 $icon-spacing:					0; /*.5em;*/
 $icon-bg-color:					none; /*#f9f9f9;*/
 $icon-hover-bg-color:			#e5e5e5;
@@ -15,56 +15,78 @@ $icon-hover-bg-color:			#e5e5e5;
 ## Type
 ===================================================================== */
 
-.icon--container {}
+.icons {
 
-	/*float:right;*/
+	/* apply global icon sizing, change to px to make size non-responsive */
+	font-size:	1rem;
 
-	.icon {
+	&__container {
 
-		float:						right;
-
-		> a{
-
-			display: 				inline-block;
-
-			height:					$icon-size;
-			line-height: 			$icon-size;
-			width:					$icon-size;
-			margin-left: 			$icon-spacing;
-
-			text-align:				center; /* horiz align img */
-			background: 			$icon-bg-color;
-			
-			&:hover {
-				background: 		$icon-hover-bg-color;
-			}
-
-			> img {
-				vertical-align: 	middle; /* vertical align img */
-			}
-
-			> i {
-				color: #333;
-				/*vertical-align:  	middle;*/
-
-				&:hover{
-					color: black;
-				}
-			}
-		}	
-
+		/* handle item overflow here*/
 	}
 
-	.icon--sml {
+		&__item {
 
-		> a {
-			height:					$icon-size--sml;
-			line-height: 			$icon-size--sml;
-			width:					$icon-size;
+			float:						right; /* fill container right to left */
+		}
+}
 
-			> i {
-				font-size: .9em;
-				color: lightgrey;
+			.icon { /*a*/
+
+				display: 				inline-block; /* height/width only work on a-link if inline-block */
+
+				height:					$icon-size;
+				line-height: 			$icon-size;
+				width:					$icon-size;
+				margin-left: 			$icon-spacing;
+
+				text-align:				center; /* horiz align img */
+				background: 			$icon-bg-color;
+				
+				&:hover {
+					background: 		$icon-hover-bg-color;
+				}
+
+				/*a {
+					display: 				inline-block;
+
+					height:					$icon-size;
+					line-height: 			$icon-size;
+					width:					$icon-size;
+					margin-left: 			$icon-spacing;
+
+					text-align:				center; 
+					background: 			$icon-bg-color;
+					
+					&:hover {
+						background: 		$icon-hover-bg-color;
+					}
+				}*/
+				
+				i {
+						
+					color: #333;
+						/*vertical-align:  	middle;*/
+
+					&:hover{
+						color: black;
+					}
+				}
+			}
+
+			.icon--img {
+
+				img {
+					vertical-align: 	middle; /* vertical align img */
+					/*height: 100%*/
+
+				}
+			}
+
+			.icon--fa {
+
+				i {
+					color: #333;
 					/*vertical-align:  	middle;*/
 
 					&:hover{
@@ -72,14 +94,68 @@ $icon-hover-bg-color:			#e5e5e5;
 					}
 				}
 			}
-	}
 
-	.icon--dropdown {
+			.icon--mat {
 
-		position: absolute;
-		top:0;
-		left:0;
-	}
+				i {
+
+					/*font-size: 24px;*/
+					vertical-align: middle;
+					line-height: inherit; /* override material-icons line-height that bumps vertical alignment down */
+				}
+			}	
+
+			.icon--rss {
+
+				font-size: .8em;
+			}
+
+			/*.icon--img {}
+			.icon--mat {}
+			.icon--fa {}*/
+
+			.icon--collapsed {
+
+					height:					$icon-size--sml;
+					line-height: 			$icon-size--sml;
+					width:					$icon-size;	
+			}
+
+			.icon--sml {
+				font-size: .9em;
+				height:					$base-button-height-sml;
+				line-height: 			$base-button-height-sml;
+				width:					$base-button-height-sml;
+			}
+
+			.icon--smlr {
+				font-size: .8em;
+			}
+
+			.icon--big {
+				font-size: 1.1em;
+			}
+
+			.icon--bigr {
+				font-size: 1.3em;
+			}
+
+			/* titlebox icons use this for now */
+			.icon--fit {
+				
+				img {
+					height: 100%;
+					width: auto;
+				}
+			}
+
+			.icon--dropdown {
+
+				position: absolute;
+				top:0;
+				left:0;
+			}
+
 
 /* ==================================================================
 ## icon gallery
@@ -136,4 +212,12 @@ $icongal_icon_size:			1.1em;
 			}
 		}	
 	}
+}
+
+/* ==================================================================
+## temp
+===================================================================== */
+
+.material-icons{
+	font-size: 18px;
 }

@@ -1,3 +1,10 @@
+/*
+
+this is a temp partial for card components with vertical stacked 
+layouts
+
+*/
+
 /* ==================================================================
 ## Config
 ===================================================================== */	
@@ -14,6 +21,64 @@ $titlebar-title-spacing:	$base-title-spacing;
 /* ==================================================================
 ## fixed height titlebar
 ===================================================================== */
+
+.title {
+
+	/*adsf*/
+}
+
+.title--primary { /* node title */
+
+	/* tbd */
+}
+
+.title--secondary { /* block title, eg. recent news */
+
+	text-transform: 	uppercase;
+}
+
+.title--headline {
+
+	text-decoration: 	underline;
+	text-transform: 	uppercase;
+}
+
+$card-body-font-size--big:		1.2em;
+$card-body-line-height--big:	1.7;
+
+.bd {
+
+	text-align:			justify;
+	/*margin:				$base-spacing 0;*/
+}
+
+.bd--bigtext {
+
+	font-size:			$card-body-font-size--big;
+	line-height:		$card-body-line-height--big;
+	margin: 			$base-spacing;
+}
+
+.bd--smltext {
+
+	font-size: .8rem;
+}
+
+/*.mm {}
+.mm--thumb {}
+.mm--slideshow {}
+.mm--video {}*/
+
+.thumb {
+
+	img {
+
+		width:100%;
+		height:auto;
+	}
+}
+
+
 
 .titlebar {
 
@@ -148,62 +213,7 @@ $magic-nudge:				.9em;
   flex height titlebox
 ===================================================================== */
 
-$titlebox-title-spacing: 	$base-title-spacing;
-$magic-nudge:				.9em;
 
-.bar {
-
-	/* 	
-		module-level styling
-		only font-size is specified at module level
-		and everything below it is relative to it
-	*/
-
-	font-size:				$titlebar-base-font-size;
-	/*margin-bottom: 		$titlebox-title-spacing;*/
-	margin: $base-title-spacing 0;
-
-	/* 	
-		element-level styling
-		relative to module font-size
-	*/
-
-	@include clearfix;
-
-	@include layout((
-        gutter-position: 	before,
-        columns: 			8,
-        gutters: 			3/8,
-        global-box-sizing: 	border-box
-	));
-
-	&__title {
-
-		/*margin: 			$titlebox-title-spacing 0;*/
-
-		h1, h2, h3, h4, h5, h6 {		
-			color: 				$titlebar-font-color;
-			text-transform: 	none;
-			text-decoration:	none;
-			padding: 			0 3px; /* horizontal space btn tags */
-		}
-	}
-
-	&__title { /*.title*/
-
-		width: 	span(7 of 8);
-		float:	left;
-	}
-
-	&__icons { /*.icon*/
-
-				
-		/*margin-right:			.9em;*/ /* <-- magic number :( */
-
-		width: 	span(1 of 8);
-		float:	right;
-	}
-}
 	
 /* ==================================================================
   titlemedia

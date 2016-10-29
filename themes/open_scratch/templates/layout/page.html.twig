@@ -85,22 +85,39 @@
 
         <div class="wrapper toolbar-wrapper" role="contentinfo">
 
-          <div class="toolbar media">
-            {# <div class="media"> #}
+          {# <div class="toolbar media">
 
             {% if page.toolbar_right %}
               <div class="media__imgR" role="contentinfo">
-                {{ page.toolbar_right }} 
+                
               </div>
             {% endif %}
 
             {% if page.toolbar_left %}
               <div class="media__contents" role="contentinfo">
+                {{ page.toolbar_right }} 
                 {{ page.toolbar_left }}
               </div>
             {% endif %}
 
-            {# </div> #}
+          </div> #}
+
+          <div class="toolbar ribbon">
+            <div class="ribbon__segments">
+
+              {% if page.toolbar_right %}
+                <div class="ribbon__segment" role="contentinfo">
+                  {{ page.toolbar_right }} 
+                </div>
+              {% endif %}
+
+              {% if page.toolbar_left %}
+                <div class="ribbon__segment--left" role="contentinfo">
+                  {{ page.toolbar_left }}
+                </div>
+              {% endif %}
+
+            </div>
           </div>
 
         </div> {# end toolbar-wrapper #}
@@ -131,8 +148,10 @@
 
           {% if page.content_facts %}
             <div id="main-content-facts" class="region main-content__facts border--top-grey border--bottom-ltgrey">
-              <div class="gallery-container factsheet-gallery-container">
-                {{ page.content_facts }}
+              <div class="card">
+                <div class="gallery-container factsheet-gallery-container">
+                  {{ page.content_facts }}
+                </div>
               </div>
             </div>
           {% endif %}

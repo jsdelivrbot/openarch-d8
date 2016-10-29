@@ -1,0 +1,29 @@
+/* bars have fixed height and full width and float contents left or right */
+
+/* ==================================================================
+## Config
+===================================================================== */
+
+$tagline-base-font-size:		.8rem;
+$tagline-height:				$base-row-height*1.25;
+
+.bar {
+
+	/* 	
+		module-level styling
+		only font-size is specified at module level
+		and everything below it is relative to it
+	*/
+	font-size:					$tagline-base-font-size;
+
+	height: 					$tagline-height;
+	line-height:  				$tagline-height;
+
+	/*&__contents {
+		float: left;
+	}
+
+	&__contents--right {
+		float: left;
+	}*/
+}

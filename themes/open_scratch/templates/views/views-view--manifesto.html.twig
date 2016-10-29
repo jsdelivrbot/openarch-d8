@@ -37,28 +37,9 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="statement">
-
-    <div class="statement__body">
+  {# <div class="statement"> #}
+  <div class="card card--manifesto">
       {{ rows }}
-    </div>
-    
-    <div class="tagline statement__tagline">
-      <div class="tags statement__tags">
-        
-        {# <div class="tags__tag tags__tag--more">
-          <a>Press</a>
-        </div> 
-        <div class="tags__tag tags__tag--more">
-          <a>People</a>
-        </div>  #} 
-        <div class="tags__tag tags__tag--more">
-          <a>More about Practice</a>
-        </div>  
-        
-      </div>
-    </div>
-
   </div>
 
   {{ feed_icons }}

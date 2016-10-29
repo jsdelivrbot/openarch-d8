@@ -51,7 +51,8 @@
     </div> #}
 
     <div class="card__header">
-      <div class="titlebar">
+
+      {# <div class="titlebar">
         <div class="titlebar__title">
           <h3>Recent News</h3>
         </div>
@@ -60,7 +61,26 @@
             <div class="icon"><a style="background:none"><i class="fa fa-rss" aria-hidden="true"></i></a></div>
           </div>
         </div>
-      </div>
+      </div> #}
+
+      <div class="ribbon">
+          <div class="ribbon__segments">
+
+            {# <div class="ribbon__segment--left">
+              <a class="icon icon--mat"><i class="fa fa-rss" aria-hidden="true"></i></a>
+            </div> #}
+
+            <div class="ribbon__segment--left">
+              <h4 class="title title--secondary inline-block">Recent News</h4>
+            </div>
+
+            {# <div class="ribbon__segment">
+              <a class="icon icon--mat icon--rss"><i class="fa fa-rss" aria-hidden="true"></i></a>
+            </div> #}
+
+          </div>
+        </div>
+
     </div>
 
     {# <div class="teasers headlines__teasers">
@@ -79,13 +99,26 @@
     </div> #}
 
     <div class="card__footer">
-      <div class="tagline">
-        <div class="tags">
-          <div class="tags__tag tags__tag--more">
-            <a>{{ 'More News & Events'|t }}</a>
-          </span>
+
+      {# <div class="bar"> #}
+
+        <div class="ribbon">
+          <div class="ribbon__segments">
+
+            <div class="ribbon__segment">
+
+              {# <div class="icon"><a><img src="{{ directory }}/images/ios7-arrow-thin-right.png"></a></div> #}
+              <a class="icon icon--mat"><i class="material-icons">arrow_forward</i></a>
+              {# <div class="icon"><a><i class="fa fa-angle-down" aria-hidden="true"></i></a></div> #}
+            
+            </div>
+
+          </div>
         </div>
-      </div>
+
+      {# </div> #}
+
+
     </div>
 
   </div>

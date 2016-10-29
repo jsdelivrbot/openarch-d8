@@ -52,11 +52,27 @@ $base-media-spacing: 1.5em;
     	
 	}
 
+	&__img--profile {
+
+		@include tiny   { width: span(6 of 12); }
+		@include mobile { width: span(6 of 12); }
+		@include narrow { width: span(4 of 12); }
+		@include wide   { width: span(4 of 12); }
+		@include wider	{ width: span(3 of 12); }
+		@include widest	{ width: span(2 of 12); }
+	}
+
+	&__img--relation {
+
+		@include wider	{ width: span(4 of 12); }
+		@include widest	{ width: span(6 of 12); }
+	}
+
 	&__imgR	{
 
 		display:block; /* might have to move this to __img > img */
 		float: right;
-    	margin-left: 	$base-media-spacing;
+    	padding-left: 	$base-media-spacing;
     	
 	}
 
@@ -78,22 +94,23 @@ $base-media-spacing: 1.5em;
 $mediaCard-spacing: 1.5em;
 
 /* layout */
-.mediaCard-wrapper {}
+.mediaCard-wrapper {
+
+	@include gallery-container;
+}
 
 /* subclass overrides */
 .mediaCard.media {
 
+	clear: both;
+	overflow: auto;
+	position: relative;	
+
 	.media__img	{
+
     	margin-right: 	$mediaCard-spacing;  
-    	margin-top:		$mediaCard-spacing;	
-	}
-
-	.media__imgR	{
-    	margin-left: 	$mediaCard-spacing;   	
-	}
-
-	.media__contents	{	
-
+    	/*padding-top:	$mediaCard-spacing;	
+    	padding-bottom:	$mediaCard-spacing;*/	
 	}
 
 }
@@ -105,7 +122,7 @@ $mediaCard-spacing: 1.5em;
 ===================================================================== */
 
 /* config */
-$mediaTitle-spacing: 1.2em;
+$mediaTitle-spacing: $base-spacing;
 
 /* layout */
 .mediaTitle-wrapper {}
@@ -116,12 +133,14 @@ $mediaTitle-spacing: 1.2em;
 	overflow:			visible;
 	margin: 			$mediaTitle-spacing 0;
 
-	.media__img	{
+	/*.media__img	{
     	margin-right: 	$mediaTitle-spacing;  	
-	}
+	}*/
 
 	.media__imgR	{
-    	margin-left: 	$mediaTitle-spacing;   	
+    	/*margin-left: 	$mediaTitle-spacing;*/   
+    	margin-top: (-$mediaTitle-spacing);	
+    	padding-right: 0.75rem;
 	}
 
 	.media__contents	{	

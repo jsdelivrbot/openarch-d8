@@ -15,8 +15,8 @@
 $sidebar-base-font-size:	1rem;
 /*$sidebar-wide-font-size:	.75em;*/
 
-$sidebar-header-height:		$base-row-height*1.2;
-$sidebar-footer-height: 	$base-row-height;
+$sidebar-header-height:		$base-row2-height;
+$sidebar-footer-height: 	$base-row2-height;
 
 /* ==================================================================
 ## Layout asdf
@@ -79,11 +79,15 @@ $sidebar-footer-height: 	$base-row-height;
 	@include wider {
 
 		padding:		0 8%;
+		/*background: #f9f9f9;*/
 	}
 
 	@include widest {
 
 		padding:		0 8%;
+		/*background: #333;
+		.menu li { border-color: #5a5a5a; }
+		span, a, a:link, a:visited{ color: $base-font-color-inv; }*/
 	}
 
 }

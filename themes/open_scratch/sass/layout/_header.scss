@@ -12,7 +12,7 @@
 
 $menubar-base-font-size:	1rem;
 $menubar-wide-font-size:	.75em;
-$menubar-row-height:		$base-row-height*1.2;
+$menubar-row-height:		$base-row1-height;
 $menubar-width:				100%;
 
 /* ==================================================================
@@ -50,6 +50,10 @@ $menubar-width:				100%;
 		> .block {
 			float: right;
 		}
+
+		/*.menu-toggler{
+			@include widest {display: none;}
+		}*/
 	}
 }
 

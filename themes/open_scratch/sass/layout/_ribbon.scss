@@ -1,0 +1,59 @@
+/* ==================================================================
+## Config
+===================================================================== */
+
+$ribbon-base-font-size:		1rem;
+$ribbon-height:				$base-row2-height;
+
+/* ==================================================================
+## 
+===================================================================== */
+
+.ribbon-wrapper {
+
+}
+
+.ribbon {
+
+	/* apply global icon sizing, change to px to make size non-responsive */
+	font-size:					$ribbon-base-font-size;
+
+	height: 					$ribbon-height;
+	line-height:  				$ribbon-height;
+	overflow: 					hidden;
+
+	&__segments {
+
+		/* handle item overflow here*/
+	}
+
+		&__segment {
+
+			float:						right; /* fill container right to left */
+		}
+
+		&__segment--left {
+
+			float:						left; /* fill container right to left */
+		}
+}
+
+.ribbon--sml {
+
+	font-size:					.9rem;
+	height: 					$base-row3-height;
+	line-height:  				$base-row3-height;
+	
+}
+
+.ribbon--big {
+
+	font-size:					1rem;
+	height: 					$base-row1-height;
+	line-height:  				$base-row1-height;
+	
+}
+
+
+
+

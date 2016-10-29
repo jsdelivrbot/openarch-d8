@@ -99,6 +99,10 @@ table {
 	/*td*/.data--right {
 		/*float:right;*/
 		text-align:right;
+		/*padding-right: 1em;*/
+	}
+
+	th.data--right {
 		padding-right: 1em;
 	}
 	
@@ -113,10 +117,12 @@ table {
 
 .views-exposed-form {
 
+	display: inline-block; 
+
 	/*margin: $base-row-pad 0;*/
 
 	.form-item {
-		line-height: $table-row-height;
+		line-height: $base-button-height;
 	}
 
 	label {
@@ -136,8 +142,8 @@ table {
 	}
 
 	option {
-		height: $table-row-height;
-		line-height: $table-row-height;
+		height: $base-button-height;
+		line-height: $base-button-height;
 	}
 }
 

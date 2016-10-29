@@ -29,6 +29,11 @@ $tag-font-color: 				$link-font-color;
 $tag-bg-color:					#f9f9f9;
 $tag-hover-bg-color:			#e5e5e5;
 
+$tags-font-size-sml:			.9rem;
+$tag-button-height-sml:			$base-button-height-sml;
+$tag-spacing-sml:				$base-button-spacing;	/* horiz space btw buttons */
+$tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
+
 /* ==================================================================
 ## Tags Component
 ===================================================================== */
@@ -48,7 +53,27 @@ $tag-hover-bg-color:			#e5e5e5;
 	/*background:	lightgrey;*/
 }
 
+.tagbox {
+
+	/* 	
+		module-level styling
+		only font-size is specified at module level
+		and everything below it is relative to it
+	*/
+	font-size:					$tagline-base-font-size;
+
+	/*height: 					$tagline-height;
+	line-height:  				$tagline-height;*/
+	margin: 1.5rem 0;
+
+	/*background:	lightgrey;*/
+}
+
 .tags{ /* tag container */
+
+	/* added for tagbox */
+	clear:both;
+	overflow:auto;
 
 	/* 	
 		element-level styling
@@ -77,6 +102,11 @@ $tag-hover-bg-color:			#e5e5e5;
 			text-decoration: 	none;
 			background: 		$tag-hover-bg-color;
 		}
+	}
+
+	&__tag--right{
+
+		float: right;
 	}
 
 	&__tag--more{
@@ -110,3 +140,49 @@ $tag-hover-bg-color:			#e5e5e5;
 		text-decoration:	none;
 	}
 }*/
+
+.tag {
+
+	font-size: 				$tags-font-size;
+
+	/*float: 					left;*/
+
+	a, a:link, a:visited{
+		display: 			inline-block;
+		height: 			$tag-button-height;
+		line-height: 		$tag-button-height;
+		margin-right: 		$tag-spacing;			/* horiz space btw buttons */
+		padding: 			0 $tag-button-pad-horiz; 	/* horiz text padding */
+		color: 				$tag-font-color;
+		text-transform: 	uppercase;
+		text-decoration:	none;
+		background:			$tag-bg-color;	
+		
+	}
+
+	a:hover{
+		text-decoration: 	none;
+		background: 		$tag-hover-bg-color;
+	}
+}
+
+.tag--sml {
+
+	font-size: 				$tags-font-size-sml;
+
+	/*float: 					left;*/
+
+	a, a:link, a:visited{
+		height: 			$tag-button-height-sml;
+		line-height: 		$tag-button-height-sml;
+		margin-right: 		$tag-spacing-sml;			/* horiz space btw buttons */
+		padding: 			0 $tag-button-pad-horiz-sml; 	/* horiz text padding */	
+	}
+
+}
+
+.label {
+
+	display: 			inline-block;
+	padding: 			0 $base-horiz-pad; /* horizontal space btn tags */
+}

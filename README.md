@@ -125,6 +125,7 @@ change permissions on files directory to 777
 * Add 750px max width slideshow to practice.
 * Remove global max-width.
 * Refactor card class to replace headlines, statement, practice, and event classes.
+* Fixed issue targeting media class in mediacard.js
 
 #### TBD
 
@@ -170,6 +171,7 @@ change permissions on files directory to 777
 * accordian menu not working
 * people mediaCard.js calls update on page load but not working as expected
 * slider getting stuck in undefined state when drawer is open and window dragged from narrow to wide breakpoint.
+* slider stuck in undef state when load page on wider, then drag to widest.
 
 ## Liscense
  

@@ -896,7 +896,7 @@ display:
         options:
           grouping: {  }
           flexslider: null
-          optionset: default
+          optionset: flexslider_carousel_with_min_and_max_ranges
           captionfield: ''
           id: ''
       defaults:

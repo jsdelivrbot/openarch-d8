@@ -125,10 +125,21 @@ change permissions on files directory to 777
 * Add 750px max width slideshow to practice.
 * Remove global max-width.
 * Refactor card class to replace headlines, statement, practice, and event classes.
-* Fixed issue targeting media class in mediacard.js
+* Fix issue targeting media class in mediacard.js
+* Insert icon placeholders
+* Fix alignment issue related to media titles
+* Experiment with wide screen responsive layout
+* Create ribbon class to handle single line footer/header bars
+* Adjust ribbon overflow so tags don't wrap, but instead collapse incrementally
+* Use ribbon and negative margin to align icons with media titles
+* Remove rss icon at recent news
+* Make profile images resize responsively
+* Add some more test content
+* Fix translation issue
+* Translate all test pages and some ui elements.
+* A lot of misc. refactoring to reduce code base and remove redundant classes
 
 #### TBD
-
 * people thumbs should size to grid so width = sidebar width
 * events thumbs should be one grid so widht = full width for mobile, and 2 or 3 x sidebar depending on breakpoint
 * press slideshow should be

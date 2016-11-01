@@ -127,6 +127,10 @@ change permissions on files directory to 777
 * Refactor card class to replace headlines, statement, practice, and event classes.
 * Fixed issue targeting media class in mediacard.js
 
+#### 0.5.1
+
+* Make selectable region larger on menu link
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

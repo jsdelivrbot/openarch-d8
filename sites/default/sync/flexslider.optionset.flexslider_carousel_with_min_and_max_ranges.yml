@@ -18,8 +18,8 @@ options:
   animationLoop: true
   randomize: false
   startAt: 0
-  itemWidth: 750
-  itemMargin: 5
+  itemWidth: 880
+  itemMargin: 2
   minItems: 1
   maxItems: 3
   move: 0

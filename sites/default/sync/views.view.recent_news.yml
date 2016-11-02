@@ -704,17 +704,19 @@ display:
           content: '<div class="title headlines__title"><h2>Recent News</h2></div>'
           plugin_id: text_custom
       footer:
-        area_text_custom:
-          id: area_text_custom
+        entity_menu_link_content:
+          id: entity_menu_link_content
           table: views
-          field: area_text_custom
+          field: entity_menu_link_content
           relationship: none
           group_type: group
           admin_label: ''
           empty: false
-          tokenize: false
-          content: 'More News & Events'
-          plugin_id: text_custom
+          tokenize: true
+          target: /practice
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
       empty: {  }
       relationships: {  }
       arguments: {  }

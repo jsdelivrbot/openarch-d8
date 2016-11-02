@@ -896,7 +896,7 @@ display:
         options:
           grouping: {  }
           flexslider: null
-          optionset: flexslider_carousel_with_min_and_max_ranges
+          optionset: default
           captionfield: ''
           id: ''
       defaults:
@@ -985,7 +985,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1049,7 +1049,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1114,7 +1114,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: "<div class=\"slideshow__image\">{{ field_frontslide }}</div>\n<div class=\"titlebar slideshow__titlebar\">\n<div class=\"titlebar__title\"><h6>{{ title }}</h6></div> \n</div>"

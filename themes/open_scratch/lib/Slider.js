@@ -11,8 +11,8 @@
 MySlider = (function($) {
 
 	//hold state
-	var isOpen = (Breakpoint.isWide() || Breakpoint.isWider());
-	var isWide = (Breakpoint.isWide() || Breakpoint.isWider());
+	var isOpen = (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest());
+	var isWide = (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest());
 
 	//cache dom
 	var $slider = $('.slider');
@@ -54,7 +54,7 @@ MySlider = (function($) {
 	function reset() {
 
 		wasWide = isWide;
-    	isWide = (Breakpoint.isWide() || Breakpoint.isWider());
+    	isWide = (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest());
 
     	if(!wasWide && isWide && !isOpen) { isOpen = true;}
     	if(!wasWide && isWide && isOpen) { $slider.removeClass('open close'); isOpen = true;}

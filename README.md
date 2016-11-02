@@ -142,6 +142,10 @@ change permissions on files directory to 777
 * Replace titlebar caption with ribbon
 * Add slide counter placeholder to caption
 
+#### 0.5.4
+
+* Make sidebar behavior active for widest breakpoint
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -131,6 +131,10 @@ change permissions on files directory to 777
 
 * Make selectable region larger on menu link
 
+#### 0.5.2
+
+* Fix broken frontpage internal links to practice and events
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -167,6 +171,7 @@ change permissions on files directory to 777
 * github icon out of place for mobile breakpoint
 * develop vertical spacing strategy
 * reconsider adding extra padding on main content for wider (960px min) breakpoint
+* multilingual logo -> http://drupal.stackexchange.com/questions/79033/proper-way-to-get-the-base-path-when-including-an-image-from-a-module
 
 #### ISSUES:
 

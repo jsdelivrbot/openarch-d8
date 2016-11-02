@@ -1,6 +1,21 @@
 <?php
 
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
 function open_scratch_preprocess(&$variables, $hook)
 {
+
+	// Inject the current language into every template to ease theme development.
+  	$variables['current_language'] = \Drupal::languageManager()->getCurrentLanguage();
+
     $variables['base_path'] = base_path();
+
+    // Inject a usable directory path.
+  	$variables['theme_path'] = base_path() . $variables['directory'];
+  	
+  	// Generate Url Strings
+  	$variables['practice_path'] = Url::fromUri('internal:/practice')->toString();
+    $variables['events_path'] = Url::fromUri('internal:/events')->toString();
+
 }

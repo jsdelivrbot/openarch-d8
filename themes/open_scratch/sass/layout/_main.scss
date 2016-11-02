@@ -32,18 +32,24 @@ $main-base-font-size:		1rem;
 		global-box-sizing: 	border-box
 	));
 
-	@include span(full);
+	
 }
 
 .main-content { 
 
 	font-size: 				$main-base-font-size;
+ 
+	&__gallery { @include span(full); }
 
-	&__gallery {}
-	&__slideshow {}
-	&__primary {}
-	&__relations {/*padding-bottom: $base-row-pad; padding-top: $base-row-pad*2;*/}
-	&__facts {/*padding-top: $base-row-pad;*/}
+	&__slideshow {
+
+		@include wide { @include span(full); }
+		@include wider { @include span(full); }
+	}
+
+	&__primary { @include span(full); }
+	&__relations { @include span(full); }
+	&__facts { @include span(full); }
 }
 
 

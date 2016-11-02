@@ -135,6 +135,13 @@ change permissions on files directory to 777
 
 * Fix broken frontpage internal links to practice and events
 
+#### 0.5.3
+
+* Adjust featured-work slideshow layout
+* Bleed edges on mobile/narrow breakpoints
+* Replace titlebar caption with ribbon
+* Add slide counter placeholder to caption
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -75,7 +75,7 @@ $card-base-font-size:			1rem;
 
 	&__slide 	{	
 
-		img {
+		img { /* moved to thumb */
 
 			width:100%;
 			height:auto;
@@ -255,6 +255,7 @@ $card-base-font-size:			1rem;
 	@include widest	{ float: left; width: 50%; } 
 }
 	
+.card.card--featured-work {}
 
 /* ==================================================================
 ## Dev

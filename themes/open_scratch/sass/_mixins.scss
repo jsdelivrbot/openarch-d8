@@ -101,6 +101,30 @@ $grid-4col: (
     margin-top: gutter(12);
 }
 
+@mixin gallery-container-snug {
+
+    @include layout((
+        gutter-position: before,
+        columns: 12,
+        gutters: 1/4, 
+        global-box-sizing: border-box
+    ));
+
+    margin-top: gutter(12);
+}
+
+@mixin gallery-container-tight {
+
+    @include layout((
+        gutter-position: before,
+        columns: 12,
+        gutters: 1/8, 
+        global-box-sizing: border-box
+    ));
+
+    margin-top: gutter(12);
+}
+
 /*@mixin gallery-container-1-col {
 
     @include layout(12 1 before border-box, true);

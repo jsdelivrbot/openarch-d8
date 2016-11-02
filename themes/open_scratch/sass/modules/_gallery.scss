@@ -27,6 +27,7 @@
 	&__container { /*ul*/
 
 		@include gallery-container;
+
 	}
 
 		&__item { /*li*/
@@ -64,6 +65,16 @@
 			&__item{
 
 				/* overrides */
+				@include wide	{ 
+
+					@include gallery-item-1-col;
+					clear: left !important;
+					/*margin: 0;
+					width: 100%;
+					float: none; */
+					/*margin-bottom: gutter(12);*/
+				}
+
 				@include wider	{ 
 
 					@include gallery-item-1-col;

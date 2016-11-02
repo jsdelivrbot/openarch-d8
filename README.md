@@ -146,6 +146,18 @@ change permissions on files directory to 777
 
 * Make sidebar behavior active for widest breakpoint
 
+#### 0.5.5
+
+* Change slideshow image width to 880px
+* Fix main toolbar margins
+* Adjust icon sizing
+* Hide tags in relation gallery at narrow bp
+* Reduce global font-size for narrow and wide
+* Adjust sidebar background color
+* Extend sidebar item border to edges
+* Adjust margins on main content
+* Remove menu button for wide, wider, widest breakpoints
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -123,7 +123,7 @@ $card-base-font-size:			1rem;
 .card--flag {
 
 	.card__body { padding-right: $base-spacing; }
-	background: #f1f1f1;
+	background: #fafafa;
 
 }
 
@@ -228,7 +228,7 @@ $card-base-font-size:			1rem;
 	@include tiny   {  }
 	@include mobile {  }
 	@include narrow {  }
-	@include wide   {  }
+	@include wide   { .card__footer{display:none;} }
 	@include wider  {  }
 	@include widest	{ .card__body {display:none;} }
 
@@ -237,7 +237,7 @@ $card-base-font-size:			1rem;
 .card.card--relation {
 
 	clear: both;
-	overflow: auto;
+	/*overflow: auto;*/
 
 	.card__footer {
 		position: absolute;

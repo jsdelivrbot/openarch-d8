@@ -77,12 +77,12 @@ MediaCard2 = (function($) {
 
     $(document).ready(function() {
 
-        !(Breakpoint.isWider() || Breakpoint.isWidest()) ? disableMedia() : enableMedia();
+        !(Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest()) ? disableMedia() : enableMedia();
     });
 
     $(window).resize(function() {
 
-        (Breakpoint.isWider() || Breakpoint.isWidest()) ? enableMedia() : disableMedia();
+        (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest()) ? enableMedia() : disableMedia();
 
         // if ( Breakpoint.isWider() ) {
         //     enableMedia();

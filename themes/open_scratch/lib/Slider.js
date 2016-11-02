@@ -11,8 +11,9 @@
 MySlider = (function($) {
 
 	//hold state
-	var isOpen = (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest());
-	var isWide = (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest());
+	var isOpen = (Breakpoint.isWide() || Breakpoint.isWider());
+	var isWide = (Breakpoint.isWide() || Breakpoint.isWider());
+	var isFull = (Breakpoint.isWidest())
 
 	//cache dom
 	var $slider = $('.slider');
@@ -24,7 +25,10 @@ MySlider = (function($) {
     $(window).resize(function() { reset() });
 	$('.slider-toggler').click(function() { toggle() });
 
-	function init() {}
+	function init() {
+
+		if(isFull) { $slider.addClass('close'); isOpen = false;}
+	}
 
 	function open() {
 
@@ -55,11 +59,15 @@ MySlider = (function($) {
 
 		wasWide = isWide;
     	isWide = (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest());
+    	wasFull = isFull;
+    	isFull = (Breakpoint.isWidest());
 
     	if(!wasWide && isWide && !isOpen) { isOpen = true;}
     	if(!wasWide && isWide && isOpen) { $slider.removeClass('open close'); isOpen = true;}
     	if(wasWide && !isWide && !isOpen) { $slider.removeClass('open close'); }
     	if(wasWide && !isWide && isOpen) { isOpen = false; }
+    	if(isFull) { $slider.addClass('close'); isOpen = false;}
+    	if(wasFull && !isFull) { $slider.removeClass('close'); isOpen = true;}
 
 	};
 

@@ -67,27 +67,36 @@ $sidebar-footer-height: 	$base-row2-height;
 		background: #333;
 		.menu li { border-color: #5a5a5a; }
 		span, a, a:link, a:visited{ color: $base-font-color-inv; }
-		a:hover{}
+		/*a:hover{}*/
+		.menu li a:hover { background-color: #5b5b5b;  }
 		/*.searchbar__input > input#search { background: #333; }*/
 	}
 
 	@include wide {
 
-		padding:		0 8%;
+		/*padding:		0 8%;*/
+		padding: 0;
+		.sidebar__top,
+		.sidebar__bottom {padding:	0 8%;}
+		background: #fcfcfc;
 	}
 
 	@include wider {
 
-		padding:		0 8%;
-		/*background: #f9f9f9;*/
+		/*padding:		0 8%;*/
+		padding: 0;
+		.sidebar__top,
+		.sidebar__bottom {padding:	0 8%;}
+		background: #fcfcfc;
 	}
 
 	@include widest {
 
-		padding:		0 8%;
-		/*background: #333;
-		.menu li { border-color: #5a5a5a; }
-		span, a, a:link, a:visited{ color: $base-font-color-inv; }*/
+		/*padding:		0 8%;*/
+		padding: 0;
+		.sidebar__top,
+		.sidebar__bottom {padding:	0 8%;}
+		background: #fcfcfc;
 	}
 
 }

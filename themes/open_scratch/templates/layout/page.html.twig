@@ -83,44 +83,48 @@
 
       <div class="wrapper main-content-wrapper bg--white">
 
-        <div class="wrapper toolbar-wrapper" role="contentinfo">
+        <div class="main-content__header">
 
-          {# <div class="toolbar media">
+          <div class="wrapper toolbar-wrapper" role="contentinfo">
 
-            {% if page.toolbar_right %}
-              <div class="media__imgR" role="contentinfo">
-                
-              </div>
-            {% endif %}
-
-            {% if page.toolbar_left %}
-              <div class="media__contents" role="contentinfo">
-                {{ page.toolbar_right }} 
-                {{ page.toolbar_left }}
-              </div>
-            {% endif %}
-
-          </div> #}
-
-          <div class="toolbar ribbon">
-            <div class="ribbon__segments">
+            {# <div class="toolbar media">
 
               {% if page.toolbar_right %}
-                <div class="ribbon__segment" role="contentinfo">
-                  {{ page.toolbar_right }} 
+                <div class="media__imgR" role="contentinfo">
+                  
                 </div>
               {% endif %}
 
               {% if page.toolbar_left %}
-                <div class="ribbon__segment--left" role="contentinfo">
+                <div class="media__contents" role="contentinfo">
+                  {{ page.toolbar_right }} 
                   {{ page.toolbar_left }}
                 </div>
               {% endif %}
 
-            </div>
-          </div>
+            </div> #}
 
-        </div> {# end toolbar-wrapper #}
+            <div class="toolbar ribbon">
+              <div class="ribbon__segments">
+
+                {% if page.toolbar_right %}
+                  <div class="ribbon__segment" role="contentinfo">
+                    {{ page.toolbar_right }} 
+                  </div>
+                {% endif %}
+
+                {% if page.toolbar_left %}
+                  <div class="ribbon__segment--left" role="contentinfo">
+                    {{ page.toolbar_left }}
+                  </div>
+                {% endif %}
+
+              </div>
+            </div>
+
+          </div> {# end toolbar-wrapper #}
+
+        </div>
 
         <main class="main-content clearfix" role="main">  
 
@@ -141,14 +145,14 @@
           </div>
           
           {% if page.content_relations %}
-            <div id="main-content-relations" class="region main-content__relations border--top-grey">
+            <div id="main-content-relations" class="region main-content__relations">
               {{ page.content_relations }}
             </div>
           {% endif %}
 
           {% if page.content_facts %}
-            <div id="main-content-facts" class="region main-content__facts border--top-grey border--bottom-ltgrey">
-              <div class="card">
+            <div id="main-content-facts" class="region main-content__facts">
+              <div class="card border--top-grey border--bottom-ltgrey">
                 <div class="gallery-container factsheet-gallery-container">
                   {{ page.content_facts }}
                 </div>
@@ -217,7 +221,7 @@
 
                 <div class="block-contents">
 
-                  <div class="titlebar copyright__titlebar media">
+                  {# <div class="titlebar copyright__titlebar media">
 
                     <div class="icons titlebar__icons media__imgR">
                       <div class="icon--container">
@@ -226,9 +230,19 @@
                     </div>
 
                     <div class="titlebar__title media__contents">
-                      <h6 style="text-transform:none;">Copyright © 2011, OPEN Architecture. All Rights Reserved.</h6>
+                      <h6 style="text-transform:none;">Copyright © 2011, OPEN Architecture.</h6>
                     </div>
 
+                  </div> #}
+                  <div class="ribbon">
+                    <div class="ribbon__segments">
+                      <span class="ribbon__segment">
+                        <a class="icon"><i class="fa fa-github" aria-hidden="true"></i></a>
+                      </span>
+                      <span class="ribbon__segment--left">
+                        <h6 class="label" style="text-transform:none;">Copyright © 2011, OPEN Architecture.</h6>
+                      </span>
+                    </div>
                   </div>
 
                 </div>

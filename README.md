@@ -158,6 +158,12 @@ change permissions on files directory to 777
 * Adjust margins on main content
 * Remove menu button for wide, wider, widest breakpoints
 
+#### 0.5.6
+
+* new press icons
+* remove link from press table title
+* fix award table link
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -195,6 +201,9 @@ change permissions on files directory to 777
 * develop vertical spacing strategy
 * reconsider adding extra padding on main content for wider (960px min) breakpoint
 * multilingual logo -> http://drupal.stackexchange.com/questions/79033/proper-way-to-get-the-base-path-when-including-an-image-from-a-module
+* install views infinite scroll for paging -> https://www.drupal.org/project/views_infinite_scroll
+* formate press table date
+* hide table link icons if no link
 
 #### ISSUES:
 

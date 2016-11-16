@@ -163,6 +163,7 @@ change permissions on files directory to 777
 * new press icons
 * remove link from press table title
 * fix award table link
+* adjust projects toolbar icon sizing
 
 #### TBD
 

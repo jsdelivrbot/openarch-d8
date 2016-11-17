@@ -55,8 +55,8 @@ Breakpoint = (function($) {
 		isMobile: makeBreak(351, 559),
 		isNarrow: makeBreak(560, 750),
 		isWide: makeBreak(751, 960),
-		isWider: makeBreak(961, 1199),
-		isWidest: makeBreak(1200, 100000)
+		isWider: makeBreak(961, 1920),
+		isWidest: makeBreak(1921, 100000)
 		// isTiny: isTiny,
 		// isMobile: isMobile,
 		// isNarrow: isNarrow,

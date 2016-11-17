@@ -24,8 +24,8 @@ $menubar-width:				100%;
 	/*@include layout($susy);*/
 	@include layout((
 		gutter-position: 	inside,
-		columns: 			4,
-		gutters: 			3/8,
+		columns: 			6,
+		gutters: 			1,
 		global-box-sizing: 	border-box
 	));
 

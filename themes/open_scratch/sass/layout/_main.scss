@@ -27,9 +27,15 @@ $main-base-font-size:		1rem;
 	/*@include layout($susy);*/
 	@include layout((
 		gutter-position: 	inside,
-		columns: 			6, 
-		gutters: 			1,
-		global-box-sizing: 	border-box
+		columns: 			12, 
+		gutters: 			2,
+		global-box-sizing: 	border-box,
+		debug: (
+		    image: show-columns,
+		    color: rgba(#AEEFF2, .15),
+		    output: overlay,
+		    toggle: bottom right,
+	    )
 	));
 
 	
@@ -57,6 +63,14 @@ $main-base-font-size:		1rem;
 	&__primary { @include span(full); }
 	&__relations { @include span(full); }
 	&__facts { @include span(full); }
+
+	/*@include wider {
+
+		&__slideshow { @include span(9 of 12); }
+		&__primary { @include span(9 of 12); }
+		&__relations { @include span(9 of 12); }
+		&__facts { @include span(9 of 12); }
+	}*/
 }
 
 

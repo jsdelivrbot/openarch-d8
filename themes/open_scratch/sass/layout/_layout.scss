@@ -91,10 +91,8 @@ $susy: (
 
 	@include container;
 
-	/*@include max-width {
-		width:1200px;
-	}*/
 	/*max-width:1200px;*/
+
 }
 
 /* wrapper for menubar regions */
@@ -122,6 +120,8 @@ $susy: (
 	width:				100%; /* fallback */
 
 	/*max-width:			1200px;*/ /* .8 x 1200 */
+
+	/*@include wider { position: relative; }*/
 
 }
 

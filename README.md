@@ -164,6 +164,11 @@ change permissions on files directory to 777
 * remove link from press table title
 * fix award table link
 * adjust projects toolbar icon sizing
+* adjusts header padding
+* add view mode icons to projects gallery
+* add projects view mode icon paths for links
+* disable widest breakpoint
+* set max width at 960px for now
 
 #### TBD
 

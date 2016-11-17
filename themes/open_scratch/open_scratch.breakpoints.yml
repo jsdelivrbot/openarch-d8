@@ -24,13 +24,13 @@ open_scratch.wide:
     - 1x
 open_scratch.wider:
   label: wider
-  mediaQuery: 'all and (min-width: 961px) and (max-width: 1199)'
+  mediaQuery: 'all and (min-width: 961px) and (max-width: 1920)'
   weight: 2
   multipliers:
     - 1x
 open_scratch.widest:
   label: widest
-  mediaQuery: 'all and (min-width: 1200px)'
+  mediaQuery: 'all and (min-width: 1921px)'
   weight: 2
   multipliers:
     - 1x

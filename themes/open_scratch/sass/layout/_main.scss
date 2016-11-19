@@ -18,8 +18,8 @@ $main-base-font-size:		1rem;
 
 .main-content-wrapper {
 
-	padding-top:200px;
-	padding-bottom:140px;
+	/*padding-top:200px;
+	padding-bottom:140px;*/
 
 	/* flex main to fill vertical space for sticky footer */
 	flex: 1;
@@ -37,13 +37,8 @@ $main-base-font-size:		1rem;
 		    toggle: bottom right,
 	    )
 	));
-
 	
 }
-
-
-
-	
 
 
 .main-content { 
@@ -64,13 +59,13 @@ $main-base-font-size:		1rem;
 	&__relations { @include span(full); }
 	&__facts { @include span(full); }
 
-	/*@include wider {
+	@include wider {
 
 		&__slideshow { @include span(9 of 12); }
 		&__primary { @include span(9 of 12); }
 		&__relations { @include span(9 of 12); }
 		&__facts { @include span(9 of 12); }
-	}*/
+	}
 }
 
 

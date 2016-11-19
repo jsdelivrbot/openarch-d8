@@ -15,7 +15,7 @@
 $sidebar-base-font-size:	1rem;
 /*$sidebar-wide-font-size:	.75em;*/
 
-$sidebar-header-height:		$base-row2-height;
+$sidebar-header-height:		$base-row1-height;
 $sidebar-footer-height: 	$base-row2-height;
 
 /* ==================================================================
@@ -112,6 +112,7 @@ $sidebar-footer-height: 	$base-row2-height;
 	position:				relative;
 
 	&__top{
+		
 		font-size:		1rem;		/* need this to control searchbar region height */
 		position:		absolute;
 		top:			0;
@@ -120,10 +121,35 @@ $sidebar-footer-height: 	$base-row2-height;
 		line-height: 	$sidebar-header-height;
 		width:			100%;
 		/*border-bottom:	1px solid #e1e1e1;*/
+
+		@include tiny {
+			line-height: 		$base-row2-height;	
+			height: 			$base-row2-height;
+		}
+		@include mobile {
+			line-height: 		$base-row2-height;	
+			height: 			$base-row2-height;
+		}
+		@include narrow {
+			line-height: 		$base-row1-height;	
+			height: 			$base-row1-height;
+		}
+		@include wide {
+			line-height: 		$base-row1-height;	
+			height: 			$base-row1-height;
+		}
+		@include wider {
+			line-height: 		$base-row0-height;	
+			height: 			$base-row0-height;
+		}
+		@include widest {
+			line-height: 		$base-row0-height;	
+			height: 			$base-row0-height;
+		}
 	}
 
 	&__middle{
-		padding-top:	200px;
+		/*padding-top:	200px;*/
 		padding-bottom:	$base-row-height;
 	}
 

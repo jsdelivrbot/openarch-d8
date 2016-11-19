@@ -37,13 +37,15 @@
 
 <li class="gallery__item">
 
-  <div class="card card--flag card--relation media mediaCard">
+  <div class="card card--flag relation media mediaCard"> {# class wrappers #}
 
-    <div class="media__img media__img--relation">
+    <div class="card__item relation__thumb media__img media__img--relation"> {# layout / width #}
 
-      <div class="card__item card__slide">
-        <div class="thumb">{{ fields.field_thumbnail.content }}</div>
-      </div>
+      {# <div class="card__item card__slide"> #} {# spacing / height #}
+
+        {{ fields.field_thumbnail.content }} {# img element #}
+
+      {# </div> #}
 
     </div>
 
@@ -65,7 +67,7 @@
 
       </div> #}
 
-      <div class="card__item card__title">
+      <div class="card__item relation__header">
         
         <div class="media mediaTitle">
 
@@ -77,7 +79,7 @@
               <div class="ribbon__segments">
                 <div class="ribbon__segment">
                   {# <a class="icon icon--sml" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a> #}
-                  <a class="icon icon--button-sml icon--big icon--mat" href="{{ events_path }}"><i class="material-icons">arrow_forward</i></a>
+                  <a class="icon icon--button-big icon--big icon--mat" href="{{ events_path }}"><i class="material-icons">arrow_forward</i></a>
                 </div>
               </div>
             </div>
@@ -91,13 +93,14 @@
          
       </div>
 
+      <div class="card__item card__item--spaced-less relation__body">
 
+        <div class="bd bd--smltext line-clamp">{{ fields.body.content }}</div>
 
-      <div class="card__item card__item--spaced-less card__body">
-        <div class="bd">{{ fields.body.content }}</div>
       </div>
 
-      <div class="card__item card__footer">
+      <div class="card__item relation__footer position--bottom">
+
         <div class="ribbon">
           <div class="ribbon__segments">
             <span class="ribbon__segment--left">
@@ -114,6 +117,7 @@
             </span>
           </div>
         </div>
+
       </div>
 
     </div>

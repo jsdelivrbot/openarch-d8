@@ -28,8 +28,8 @@ $footer-base-font-size:		1rem;
 	/*@include layout($susy);*/
 	@include layout((
 		gutter-position: 	inside,
-		columns: 			4,
-		gutters: 			3/8,
+		columns: 			12,
+		gutters: 			2,
 		global-box-sizing: 	border-box
 	));
 

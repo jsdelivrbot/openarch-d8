@@ -32,6 +32,7 @@ $card-base-font-size:			1rem;
 	&__body p 	{		}
 	&__body--big p	{ /*margin: $base-row-pad $base-row-pad;*/ }
 	&__footer 	{		}
+
 }
 
 
@@ -59,6 +60,7 @@ $card-base-font-size:			1rem;
 	&__item--spaced 		{ margin: $base-spacing 0; }
 	&__item--spaced-more 	{ margin: $base-spacing-big 0; }
 	&__item--spaced-less 	{ margin: $base-spacing-sml 0; }
+	&__item--spaced-most 	{ margin: $base-spacing-huge 0; }
 
 	&__header 	{	
 
@@ -108,7 +110,6 @@ $card-base-font-size:			1rem;
 		/*line-height: 		$card-body-line-height;*/
 		/*color: 			$card-body-font-color;*/
 		/*text-align:			justify;*/
-
 	}
 
 	/*&__body--big > p {
@@ -122,8 +123,8 @@ $card-base-font-size:			1rem;
 
 .card--flag {
 
-	.card__body { padding-right: $base-spacing; }
-	background: #fafafa;
+	/*.card__body { padding-right: $base-spacing; }
+	background: #fafafa;*/
 
 }
 
@@ -132,10 +133,10 @@ $card-base-font-size:			1rem;
 	/*background: #f9f9f9;*/
 
 	@include tiny   {  }
-	@include mobile { width: 100% }
-	@include narrow { padding: 0 ($base-spacing*.5) }
-	@include wide   { padding: 0 ($base-spacing*.5) }
-	@include wider  { padding: 0 $base-spacing; }
+	@include mobile { width: 100%; }
+	@include narrow { padding: 0 ($base-spacing*.5); }
+	@include wide   { padding: 0 ($base-spacing*.5); }
+	@include wider  { padding: 0 ($base-spacing*.5); }
 	@include widest	{ padding: 0 $base-spacing; }	
 }
 
@@ -222,28 +223,40 @@ $card-base-font-size:			1rem;
 
 .card.card--task-relations-gallery {
 
-	
-
 	/*margin:		1.5em 0;*/	
 	@include tiny   {  }
 	@include mobile {  }
 	@include narrow {  }
-	@include wide   { .card__footer{display:none;} }
+	@include wide   { .relation__footer {display:none;} }
 	@include wider  {  }
 	@include widest	{ .card__body {display:none;} }
 
 }
 
-.card.card--relation {
+/*.card.relation {}*/
 
-	clear: both;
-	/*overflow: auto;*/
+	.relation {
 
-	.card__footer {
-		position: absolute;
-		bottom: 0;
+		/*clear: both;*/
+		/*overflow: auto;*/
+
+		background: #fafafa;
+
+		&__thumb {
+
+			@include wide	{ width: span(4 of 12); }
+			@include wider	{ width: span(4 of 12); }
+			@include widest	{ width: span(6 of 12); }
+		}
+
+		&__header {}
+
+		&__body { padding-right: $base-button-height-big; }
+		
+		&__footer { display: none; }
+	
 	}
-}
+
 
 .card.card--manifesto {
 

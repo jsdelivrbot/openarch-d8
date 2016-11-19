@@ -53,16 +53,30 @@ $card-body-line-height--big:	1.7;
 	/*margin:				$base-spacing 0;*/
 }
 
-.bd--bigtext {
+.bd--bigtext > p {
 
-	font-size:			$card-body-font-size--big;
-	line-height:		$card-body-line-height--big;
+	font-size:			1.0rem;
+	line-height:		1.875rem;
 	margin: 			$base-spacing;
+
+	@include tiny {
+
+		font-size:			0.8rem;
+		line-height:		1.25rem;
+		margin: 			$base-spacing;
+	}
+	@include mobile {
+
+		font-size:			0.9rem;
+		line-height:		1.5rem;
+		margin: 			$base-spacing;
+	}
 }
 
-.bd--smltext {
+.bd--smltext > p {
 
-	font-size: .8rem;
+	font-size: .85rem;
+	line-height: 1.25rem;
 }
 
 /*.mm {}
@@ -72,12 +86,15 @@ $card-body-line-height--big:	1.7;
 
 .thumb {
 
-	img {
+	/*img {
 
 		width:100%;
 		height:auto;
-	}
+	}*/
 }
+
+.thumb--medium {}
+.thumb--small {}
 
 
 

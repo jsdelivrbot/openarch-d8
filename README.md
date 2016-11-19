@@ -170,6 +170,14 @@ change permissions on files directory to 777
 * disable widest breakpoint
 * set max width at 960px for now
 
+#### 0.5.7
+
+* rewrite media class
+* increase icon size and selectable region
+* increase header size
+* adjust config vars for better vertical spacing based on baseline grid
+* update searchbar position to align with header
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

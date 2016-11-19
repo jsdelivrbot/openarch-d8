@@ -64,8 +64,9 @@ $base-media-spacing: 1.5em;
 
 	&__img--relation {
 
+		/*@include wide	{ width: span(4 of 12); }
 		@include wider	{ width: span(4 of 12); }
-		@include widest	{ width: span(6 of 12); }
+		@include widest	{ width: span(6 of 12); }*/
 	}
 
 	&__imgR	{
@@ -122,31 +123,78 @@ $mediaCard-spacing: 1.5em;
 ===================================================================== */
 
 /* config */
-$mediaTitle-spacing: $base-spacing;
+$mediaTitle-spacing: 		$base-spacing;
+$mediaTitle-spacing-sml: 	$base-spacing-sml;
+$mediaTitle-spacing-big: 	$base-spacing-big;
 
 /* layout */
 .mediaTitle-wrapper {}
 
 /* subclass overrides */
-.mediaTitle.media {
+.media.mediaTitle {
 
 	overflow:			visible;
 	margin: 			$mediaTitle-spacing 0;
 
-	/*.media__img	{
-    	margin-right: 	$mediaTitle-spacing;  	
-	}*/
-
-	.media__imgR	{
-    	/*margin-left: 	$mediaTitle-spacing;*/   
+	.media__imgR	{   
     	margin-top: (-$mediaTitle-spacing);	
-    	padding-right: 0.75rem;
+    	/*padding-right: 0.75rem;*/
+
+    	height: $base-row2-height;
+		line-height: $base-row2-height;
 	}
 
 	.media__contents	{	
 
+		h1, h2, h3, h4, h5, h6 {
+
+			/*line-height: 1.25rem;*/
+			line-height: $base-row2-height - (2 * $mediaTitle-spacing);
+		}
 	}
 
+}
+
+.media.mediaTitle.mediaTitle--sml { /* use with ribbon--sml */
+
+	margin: 			$mediaTitle-spacing-sml 0;
+
+	.media__imgR	{   
+
+		margin-top: (-$mediaTitle-spacing-sml);
+		height: $base-row3-height;
+		line-height: $base-row3-height;
+	}
+
+	.media__contents	{	
+
+		h1, h2, h3, h4, h5, h6 {
+
+			/*line-height: 1.25rem;*/
+			line-height: $base-row3-height - (2 * $mediaTitle-spacing-sml);
+		}
+	}
+}
+
+.media.mediaTitle.mediaTitle--big { /* use with ribbon--big */
+
+	margin: 			$mediaTitle-spacing-big 0;
+
+	.media__imgR	{   
+
+		margin-top: (-$mediaTitle-spacing-big);
+		height: $base-row1-height;
+		line-height: $base-row1-height;
+	}
+
+	.media__contents	{	
+
+		h1, h2, h3, h4, h5, h6 {
+
+			/*line-height: 1.25rem;*/
+			line-height: $base-row1-height - (2 * $mediaTitle-spacing-big);
+		}
+	}
 }
 
 /* behavior - media*/

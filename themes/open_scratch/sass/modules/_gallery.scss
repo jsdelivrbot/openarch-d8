@@ -32,18 +32,14 @@
 
 		&__item { /*li*/
 
-			@include tiny{		@include gallery-item-1-col;	}
+			@include tiny{		@include gallery-item-2-col;	}
 			@include mobile{	@include gallery-item-2-col;	}
 			@include narrow{	@include gallery-item-3-col;	}
 			@include wide{		@include gallery-item-3-col;	}
-			@include wider{		@include gallery-item-4-col;	}
+			@include wider{		@include gallery-item-3-col;	}
 			@include widest{	@include gallery-item-6-col;	}
 
-			/*img {
-
-				width:100%;
-				height:auto;
-			}*/
+			
 		}
 }
 
@@ -140,11 +136,11 @@
 
 	.gallery--item {
 
-		@include tiny{		@include gallery-item-1-col;	}
+		@include tiny{		@include gallery-item-2-col;	}
 		@include mobile{	@include gallery-item-2-col;	}
 		@include narrow{	@include gallery-item-3-col;	}
 		@include wide{		@include gallery-item-3-col;	}
-		@include wider{		@include gallery-item-4-col;	}
+		@include wider{		@include gallery-item-3-col;	}
 		@include widest{	@include gallery-item-6-col;	}
 	}
 
@@ -186,7 +182,7 @@
 
 			/*@include gallery-list-item;*/
 
-			@include tiny{		@include gallery-item-1-col;	}
+			@include tiny{		@include gallery-item-2-col;	}
 			@include mobile{	@include gallery-item-2-col;	}
 			@include narrow{	@include gallery-item-3-col;	}
 			@include wide{		@include gallery-item-3-col;	}

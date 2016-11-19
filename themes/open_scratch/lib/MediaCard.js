@@ -60,7 +60,7 @@ MediaCard = (function($) {
 MediaCard2 = (function($) {
 
     //cache DOM
-    var $el = $('.card--relation');
+    var $el = $('.relation');
     var $media = $el;
     var $img = $el.find('.media__img');
     var $contents = $el.find('.media__contents');

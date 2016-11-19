@@ -3,7 +3,8 @@
 ===================================================================== */
 $background-color: #fff;
 
-$base-font-family: Helvetica, Arial, sans-serif;
+/*$base-font-family: Helvetica, Arial, sans-serif;*/
+$base-font-family: 'Raleway', sans-serif;
 
 
 
@@ -80,12 +81,12 @@ $link-background-color:		#e5e5e5;
 ## Fonts Size
 ===================================================================== */
 
-$base-h1-font-size:			1.2em; /*	sitename			*/
-$base-h2-font-size:			1.9em; /*	node titles 		*/
-$base-h3-font-size:			1.1em; /*	secondary titles 	*/
-$base-h4-font-size:			0.9em; /*	factsheet headers & headlines	*/
-$base-h5-font-size:			0.8em; /*	factsheet multiline headers (ie. roles)		*/
-$base-h6-font-size:			0.8em; /*	factsheet facts		*/
+$base-h1-font-size:			2.1rem; 	/*	6.25/3 	sitename			*/
+$base-h2-font-size:			1.67rem; 	/*	5/3 	node titles 		*/
+$base-h3-font-size:			1.0rem; 	/*	3.75/3 = 1.25 but little too big for underlined caps - secondary titles 	*/
+$base-h4-font-size:			0.84rem; 	/*	2.5/3 	factsheet headers & headlines	*/
+$base-h5-font-size:			0.84rem; 	/*	2.5/3 	factsheet multiline headers (ie. roles)		*/
+$base-h6-font-size:			0.80rem; 	/*	2.5/3 	factsheet facts		*/
 
 /* base */
 $base-font-size: 			.9em;
@@ -147,23 +148,26 @@ $manifesto-title-line-height: $base-title-line-height;
 ## Vertical Spacing
 ===================================================================== */
 
-$base-row1-height: 		5.25rem; /* Site Header */
+$base-row0-height: 		6.25rem; /* Site Header */
+$base-row1-height: 		5.0rem; /* Site Header */
 $base-row2-height: 		3.75rem; /* Card Headers/Footers */ /* (16px x .7em) x 3.75 = 42px; */
-$base-row3-height: 		2.75rem; /* Table Rows */
-$base-button-height:	2.75rem; /* Icons, Tags, Buttons */
-$base-button-height-sml: 2.25rem; /* Icons, Tags, Buttons */
+$base-row3-height: 		2.5rem; /* Table Rows */
+$base-button-height:	2.5rem; /* Icons, Tags, Buttons */
+$base-button-height-sml: 1.25rem; /* Icons, Tags, Buttons */
+$base-button-height-big: 3.75rem;
 $base-icon-height:		1rem; /* Icons, Tags, Buttons */
 $base-spacing: 			1.25rem;
-$base-spacing-sml: 		1.0rem;
-$base-spacing-big: 		1.5rem;
+$base-spacing-sml: 		0.84rem; /* 2.5/3 */
+$base-spacing-big: 		1.5rem;	 /* 5/3 */
+$base-spacing-huge: 	1.67rem;
 
 /* ==================================================================
 ## Horiz Spacing
 ===================================================================== */
 
-$base-horiz-nudge: 		4px;	/* .25em */
-$base-horiz-pad: 		8px; 	/* .5em */
-$base-horiz-step:		16px; 	/* 1em */
+$base-horiz-nudge: 		$base-spacing * 0.25;	/* .3rem ~ 5px, was 4px ~ .25em */
+$base-horiz-pad: 		$base-spacing * 0.5; 	/* .625rem ~ 10px, was 8px ~ .5em */
+$base-horiz-step:		$base-spacing; 			/* 1.25rem ~ 20px, was 16px 1em */
 
 
 
@@ -187,7 +191,6 @@ $base-title-spacing: 1.5rem;
 /* ==================================================================
 ## Buttons (icons, tags, dropdowns)
 ===================================================================== */
-
 
 $base-button-pad-horiz:		$base-button-pad;
 $base-button-spacing:		0.5em;

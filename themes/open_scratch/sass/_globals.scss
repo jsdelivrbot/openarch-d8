@@ -6,10 +6,10 @@ html {
 	font-size: 16px;
 
 	@include tiny{ /* max-width: 559px */
-    	font-size: 14px;
+    	font-size: 13px;
     }
 	@include mobile{ /* max-width: 559px */
-    	font-size: 14px;
+    	font-size: 13px;
     }
     @include narrow{ /* all and (min-width: 560px) and (max-width: 850px) */
     	font-size: 14px;
@@ -46,7 +46,7 @@ body{
 p {
 	font-size: 		$base-font-size; 
 	line-height: 	$base-line-height;
-	padding: 		0 $base-pad-horiz;	
+	/*padding: 		0 $base-pad-horiz;*/	
 	margin: 		$base-row-pad 0;	
 }
 
@@ -58,9 +58,13 @@ span {
 	/* only use for local styling */
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5 {
 	line-height: 	$base-title-line-height;
 	/*text-transform: uppercase;*/
+}
+
+h6 { /* facts */
+	line-height: 1.5;
 }
 
 h1 {	font-size: 	$base-h1-font-size;		}
@@ -76,6 +80,13 @@ a, a:link, a:visited {
 }
 a:hover{
 
+}
+
+/* responsive images */
+img {
+
+	width:100%;
+	height:auto;
 }
 
 

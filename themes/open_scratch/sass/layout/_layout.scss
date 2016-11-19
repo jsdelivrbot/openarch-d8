@@ -121,7 +121,7 @@ $susy: (
 
 	/*max-width:			1200px;*/ /* .8 x 1200 */
 
-	/*@include wider { position: relative; }*/
+	@include wider { position: relative; }
 
 }
 

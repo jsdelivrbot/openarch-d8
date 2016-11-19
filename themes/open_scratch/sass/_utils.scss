@@ -84,3 +84,58 @@ $base-icon-height:		1rem;
 $base-spacing: 			1.25rem;
 $base-spacing-sml: 		1.0rem;
 $base-spacing-big: 		1.5rem;*/
+
+.position--bottom 	{ position: absolute; bottom: 0; }
+.position--top 		{ position: absolute; top: 0; }
+
+.line-clamp > p {
+
+	display: block; /* Fallback for non-webkit */
+	display: -webkit-box;
+	/*max-width: 400px;*/
+	/*height: $font-size*$line-height*$lines-to-show;*/ /* Fallback for non-webkit */
+	/*margin: 0 auto;*/
+	/*font-size: $font-size;
+	line-height: $line-height;*/
+	width: 100%;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+
+$buffer-size-top: 		12.5rem; /*200px;*/
+$buffer-size-bottom:	8.75rem; /*140px;*/
+
+@include tiny {
+	.buffer--main-top 		{ padding-top:		$base-row2-height; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$base-row2-height; }
+}
+@include mobile {
+	.buffer--main-top 		{ padding-top:		$base-row2-height *3; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$base-row2-height *3; }
+}
+@include narrow {
+	.buffer--main-top 		{ padding-top:		$buffer-size-top; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$buffer-size-top; }
+}
+@include wide {
+	.buffer--main-top 		{ padding-top:		$buffer-size-top; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$buffer-size-top; }
+}
+@include wider {
+	.buffer--main-top 		{ padding-top:		$buffer-size-top; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$buffer-size-top + $base-row0-height; }
+}
+@include widest {
+	.buffer--main-top 		{ padding-top:		$buffer-size-top; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$buffer-size-top + $base-row0-height; }
+}
+

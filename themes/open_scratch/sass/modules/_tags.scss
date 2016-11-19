@@ -10,26 +10,19 @@
 ## Config
 ===================================================================== */
 
-$tagline-base-font-size:		.8rem;
-$tags-base-font-size:			1em;
-$tags-font-size:				1em;
+$tag-font-size:					$base-h4-font-size;
 
-
-$tagline-height:				$base-row-height*1.25;
-
-
-
-$tag-spacing:					$base-button-spacing;
+$tag-spacing:					0; /*$base-button-spacing;*/
 $tag-button-height:				$base-button-height;
-$tag-button-pad-horiz:			$base-button-pad-horiz;
+$tag-button-pad-horiz:			$base-horiz-pad;
 
 $tag-row-height:				$base-row-height; 	
 $tag-font-color: 				$link-font-color; 	
 
-$tag-bg-color:					#f9f9f9;
+$tag-bg-color:					white; /*#f9f9f9;*/
 $tag-hover-bg-color:			#e5e5e5;
 
-$tags-font-size-sml:			.9rem;
+$tag-font-size-sml:				$base-h6-font-size;
 $tag-button-height-sml:			$base-button-height-sml;
 $tag-spacing-sml:				$base-button-spacing;	/* horiz space btw buttons */
 $tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
@@ -38,116 +31,13 @@ $tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
 ## Tags Component
 ===================================================================== */
 
-.tagline {
-
-	/* 	
-		module-level styling
-		only font-size is specified at module level
-		and everything below it is relative to it
-	*/
-	font-size:					$tagline-base-font-size;
-
-	height: 					$tagline-height;
-	line-height:  				$tagline-height;
-
-	/*background:	lightgrey;*/
-}
-
-.tagbox {
-
-	/* 	
-		module-level styling
-		only font-size is specified at module level
-		and everything below it is relative to it
-	*/
-	font-size:					$tagline-base-font-size;
-
-	/*height: 					$tagline-height;
-	line-height:  				$tagline-height;*/
-	margin: 1.5rem 0;
-
-	/*background:	lightgrey;*/
-}
-
-.tags{ /* tag container */
-
-	/* added for tagbox */
-	clear:both;
-	overflow:auto;
-
-	/* 	
-		element-level styling
-		relative to module font-size
-	*/
-	&__tag{
-
-		font-size: 				$tags-font-size;
-
-		float: 					left;
-
-		a, a:link, a:visited{
-			display: 			inline-block;
-			height: 			$tag-button-height;
-			line-height: 		$tag-button-height;
-			margin-right: 		$tag-spacing;			/* horiz space btw buttons */
-			padding: 			0 $tag-button-pad-horiz; 	/* horiz text padding */
-			color: 				$tag-font-color;
-			text-transform: 	uppercase;
-			text-decoration:	none;
-			background:			$tag-bg-color;	
-			
-		}
-
-		a:hover{
-			text-decoration: 	none;
-			background: 		$tag-hover-bg-color;
-		}
-	}
-
-	&__tag--right{
-
-		float: right;
-	}
-
-	&__tag--more{
-
-		float:					right;
-
-		/* override tag style for more link */
-		a, a:link, a:visited{
-			color: 				$tag-font-color;
-			text-transform: 	none;
-			margin-right: 		0;			/* horiz space btw buttons */
-		}
-
-		a:hover{
-			text-decoration: 	none;
-			background: 		$tag-hover-bg-color;
-		}
-
-		a::after{
-			content:	'\2003\2192';
-		}
-	}
-}
-
-/*.footnote {
-
-	p, span{
-		font-size: 			11px;
-		line-height: 		10px;
-		color: 				grey;
-		text-decoration:	none;
-	}
-}*/
 
 .tag {
 
-	font-size: 				$tags-font-size;
-
-	/*float: 					left;*/
+	font-size: 				$tag-font-size;
 
 	a, a:link, a:visited{
+
 		display: 			inline-block;
 		height: 			$tag-button-height;
 		line-height: 		$tag-button-height;
@@ -156,8 +46,7 @@ $tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
 		color: 				$tag-font-color;
 		text-transform: 	uppercase;
 		text-decoration:	none;
-		background:			$tag-bg-color;	
-		
+		background:			$tag-bg-color;		
 	}
 
 	a:hover{
@@ -168,9 +57,7 @@ $tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
 
 .tag--sml {
 
-	font-size: 				$tags-font-size-sml;
-
-	/*float: 					left;*/
+	font-size: 				$tag-font-size-sml;
 
 	a, a:link, a:visited{
 		height: 			$tag-button-height-sml;

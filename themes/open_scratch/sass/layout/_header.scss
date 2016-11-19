@@ -12,7 +12,7 @@
 
 $menubar-base-font-size:	1rem;
 $menubar-wide-font-size:	.75em;
-$menubar-row-height:		$base-row1-height;
+$menubar-row-height:		$base-row0-height;
 $menubar-width:				100%;
 
 /* ==================================================================
@@ -24,8 +24,8 @@ $menubar-width:				100%;
 	/*@include layout($susy);*/
 	@include layout((
 		gutter-position: 	inside,
-		columns: 			6,
-		gutters: 			1,
+		columns: 			12,
+		gutters: 			2,
 		global-box-sizing: 	border-box
 	));
 
@@ -37,6 +37,31 @@ $menubar-width:				100%;
 	font-size: 				$menubar-base-font-size;
 	line-height: 			$menubar-row-height;	
 	height: 				$menubar-row-height;
+
+	@include tiny {
+		line-height: 		$base-row2-height;	
+		height: 			$base-row2-height;
+	}
+	@include mobile {
+		line-height: 		$base-row1-height;	
+		height: 			$base-row1-height;
+	}
+	@include narrow {
+		line-height: 		$base-row1-height;	
+		height: 			$base-row1-height;
+	}
+	@include wide {
+		line-height: 		$base-row1-height;	
+		height: 			$base-row1-height;
+	}
+	@include wider {
+		line-height: 		$base-row0-height;	
+		height: 			$base-row0-height;
+	}
+	@include widest {
+		line-height: 		$base-row0-height;	
+		height: 			$base-row0-height;
+	}
 
 	&__left { /* media__content */
 

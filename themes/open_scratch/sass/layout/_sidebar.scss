@@ -139,8 +139,8 @@ $sidebar-footer-height: 	$base-row2-height;
 			height: 			$base-row1-height;
 		}
 		@include wider {
-			line-height: 		$base-row0-height;	
-			height: 			$base-row0-height;
+			line-height: 		$base-row1-height;	
+			height: 			$base-row1-height;
 		}
 		@include widest {
 			line-height: 		$base-row0-height;	

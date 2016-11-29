@@ -26,15 +26,15 @@ $main-base-font-size:		1rem;
 
 	/*@include layout($susy);*/
 	@include layout((
-		gutter-position: 	inside,
+		gutter-position: 	before,
 		columns: 			12, 
-		gutters: 			2,
+		gutters: 			1,
 		global-box-sizing: 	border-box,
 		debug: (
 		    image: show-columns,
 		    color: rgba(#AEEFF2, .15),
 		    output: overlay,
-		    toggle: bottom right,
+		    toggle: top right,
 	    )
 	));
 	
@@ -45,19 +45,25 @@ $main-base-font-size:		1rem;
 
 	font-size: 				$main-base-font-size;
 
-	&__header { @include span(full); }
+	&__header { margin: 0 gutter(12); }
  
-	&__gallery { @include span(full); }
+	&__gallery { 
+		/*@include span(full);*/ 
+		margin: 0 gutter(12);
+	}
 
 	&__slideshow {
 
-		@include wide { @include span(full); }
-		@include wider { @include span(full); }
+		@include wide { margin: 0 gutter(12); }
+	
 	}
 
-	&__primary { @include span(full); }
-	&__relations { @include span(full); }
-	&__facts { @include span(full); }
+	&__primary { 
+		/*@include span(full);*/ 
+		margin: 0 gutter(12); 
+	}
+	&__relations { margin: 0 gutter(12); }
+	&__facts { margin: 0 gutter(12); }
 
 	@include wider {
 

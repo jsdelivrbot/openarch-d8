@@ -114,24 +114,24 @@ $buffer-size-bottom:	8.75rem; /*140px;*/
 	.buffer--side-top 		{ padding-top:		$base-row2-height; }
 }
 @include mobile {
-	.buffer--main-top 		{ padding-top:		$base-row2-height *3; }
+	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
 	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row2-height *3; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
 }
 @include narrow {
-	.buffer--main-top 		{ padding-top:		$buffer-size-top; }
+	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
 	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$buffer-size-top; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
 }
 @include wide {
-	.buffer--main-top 		{ padding-top:		$buffer-size-top; }
+	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
 	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$buffer-size-top; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
 }
 @include wider {
-	.buffer--main-top 		{ padding-top:		$buffer-size-top; }
+	.buffer--main-top 		{ padding-top:		$base-row1-height *2; }
 	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$buffer-size-top + $base-row0-height; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
 }
 @include widest {
 	.buffer--main-top 		{ padding-top:		$buffer-size-top; }

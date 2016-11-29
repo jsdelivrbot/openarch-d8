@@ -23,13 +23,25 @@ $menubar-width:				100%;
 
 	/*@include layout($susy);*/
 	@include layout((
-		gutter-position: 	inside,
+		gutter-position: 	before,
 		columns: 			12,
-		gutters: 			2,
+		gutters: 			1,
 		global-box-sizing: 	border-box
 	));
 
-	@include span(full);
+	/*@include span(full);*/
+	padding: 0 gutter(12);
+
+	@include tiny {
+		padding-right:		0;
+	}
+	@include mobile {
+		padding-right:		0;
+	}
+	@include narrow {
+		padding-right: 		($base-row1-height - $base-button-height-big)/2;	
+	}
+
 }
 
 .main-header { /* media */ 
@@ -55,8 +67,8 @@ $menubar-width:				100%;
 		height: 			$base-row1-height;
 	}
 	@include wider {
-		line-height: 		$base-row0-height;	
-		height: 			$base-row0-height;
+		line-height: 		$base-row1-height;	
+		height: 			$base-row1-height;
 	}
 	@include widest {
 		line-height: 		$base-row0-height;	

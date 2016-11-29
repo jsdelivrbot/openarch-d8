@@ -94,7 +94,7 @@ $grid-4col: (
     @include layout((
         gutter-position: before,
         columns: 12,
-        gutters: 1/2, 
+        gutters: 1, 
         global-box-sizing: border-box
     ));
 

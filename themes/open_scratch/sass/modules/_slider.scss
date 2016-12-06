@@ -1,5 +1,25 @@
 .slider {
 
+	/*@include layout((
+		gutter-position: 	inside-static,
+		columns: 			12, 
+		gutters: 			1,
+		global-box-sizing: 	border-box,
+		debug: (
+		    image: show-columns,
+		    color: rgba(#AEEFF2, .15),
+		    output: overlay,
+		    toggle: top right,
+	    ),
+	));*/
+
+	@include tiny {}
+	@include mobile {}
+	@include narrow {}
+	@include wide {}
+	@include wider {}
+	@include widest {}
+
 	> .slider-drawer {
 
 		
@@ -29,7 +49,8 @@
 		}
 
 		@include wide {
-			width:			25%;
+			/*width:			25%;*/
+			width: span(3 of 12 wide);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
 			-webkit-transition: 0 ease all;
@@ -77,6 +98,9 @@
 		@include wide {
 			margin-left: 25%;
 			width:	75%;
+
+			margin-left: span(3 of 12 wide);
+			width: span(9 of 12);
 		}
 
 		@include wider {

@@ -75,7 +75,6 @@
 			transition: 0 ease all;
 		}
 
-		
 	}
 
 	> .slider-canvas {
@@ -118,8 +117,9 @@
 			/*margin-left: 240px;
 			width:	960px;*/
 			
-			width: 1200px;
-			margin: 0 auto;
+			/*width: 1200px;*/
+			width: 100%;
+			/*margin: 0 auto;*/
 		}
 
 		-webkit-transition: 	width 0 ease, 
@@ -145,8 +145,10 @@
 		width:	100%;
 
 		@include widest {
-			width: 1200px;
-			margin: 0 auto;
+			/*width: 1200px;*/
+			/*margin: 0 auto;*/
+
+			width: 100%;
 		}
 
 	}

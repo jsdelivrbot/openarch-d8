@@ -39,6 +39,7 @@
 			@include wider{		@include gallery-item-3-col;	}
 			@include widest{	@include gallery-item-6-col;	}		
 		}
+
 }
 
 /* ==================================================================
@@ -85,10 +86,21 @@
 					/*margin: 0;
 					width: 100%;
 					float: none; */
-					@include gallery-item-3-col;
+					@include gallery-item-1-col;
+					clear: left !important;
 				}
 					
 			}
+
+			/*&__item:last-child {
+				margin-bottom: 0;
+			}*/
+
+			/* all elements in last row */
+			/*&__item:nth-child(Xn+1):nth-last-child(-n+X),
+				&__item:nth-child(Xn+1):nth-last-child(-n+X) ~ li {
+			    	margin-bottom: 0;
+			}*/
 
 			&__item--alt{
 
@@ -139,7 +151,12 @@
 		@include narrow{	@include gallery-item-3-col;	}
 		@include wide{		@include gallery-item-3-col;	}
 		@include wider{		@include gallery-item-3-col;	}
-		@include widest{	@include gallery-item-6-col;	}
+
+		@include widest{	
+			@include with-layout(12 1/2) {
+  				@include gallery-item-6-col;
+			}
+		}
 	}
 
 
@@ -185,7 +202,7 @@
 			@include narrow{	@include gallery-item-3-col;	}
 			@include wide{		@include gallery-item-3-col;	}
 			@include wider{		@include gallery-item-3-col;	}
-			@include widest{	@include gallery-item-4-col;	}
+			@include widest{	@include gallery-item-3-col;	}
 		}
 
 }

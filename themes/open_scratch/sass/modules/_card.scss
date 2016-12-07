@@ -55,12 +55,15 @@ $card-base-font-size:			1rem;
 
 	&__item {
 
+		overflow: hidden;
+
 	}
 
 	&__item--spaced 		{ margin: $base-spacing 0; }
 	&__item--spaced-more 	{ margin: $base-spacing-big 0; }
 	&__item--spaced-less 	{ margin: $base-spacing-sml 0; }
 	&__item--spaced-most 	{ margin: $base-spacing-huge 0; }
+	&__item--spaced-most-top { margin: $base-spacing-huge 0 0 0; }
 
 	&__header 	{	
 
@@ -134,10 +137,10 @@ $card-base-font-size:			1rem;
 
 	@include tiny   {  }
 	@include mobile { width: 100%; }
-	@include narrow { padding: 0 ($base-spacing*.5); }
-	@include wide   { padding: 0 ($base-spacing*.5); }
-	@include wider  { padding: 0 ($base-spacing*.5); }
-	@include widest	{ padding: 0 $base-spacing; }	
+	@include narrow { padding: 0; }
+	@include wide   { padding: 0; }
+	@include wider  { padding: 0; } /*padding: 0 ($base-spacing*.5);*/
+	@include widest	{ padding: 0; }	
 }
 
 .card--subcard {
@@ -148,7 +151,7 @@ $card-base-font-size:			1rem;
 .card--supercard {
 
 	font-size: 1.1rem;
-	padding: ($base-spacing*.5) 0;
+	/*padding: ($base-spacing*.5) 0;*/
 }
 
 /* ==================================================================
@@ -213,11 +216,38 @@ $card-base-font-size:			1rem;
 
 	/*max-width:750px;*/
 
+
 	@include widest	{ 
+
+		margin: $base-spacing-huge 0 0 0;
+
+		@include span(isolate 8 at 3 of 12); clear: left;
 		
-		.card__header { float:left; width: 50%; }	
-		.card__body { float:right; width:50%; padding: $base-spacing;}
-		.card__footer { float:left; width: 50%; }
+		.card__header { 
+			@include with-layout(12 1/2) {
+				@include span(first 3 of 8); 
+			}
+			/*margin-top: 2rem;*/ /* top align body with header */
+
+			/*float:left; width: 25%;*/ 
+		}	
+		.card__body { 
+			@include with-layout(12 1/2) {
+				@include span(last 5 of 8); 
+			}
+			float: right;  
+			/*margin-top: 1rem;*/ /* top align body with header */
+
+			/*float:right; width: 75%; padding: $base-spacing;*/
+		}
+		.card__footer { 
+			@include with-layout(12 1/2) {
+				@include span(last 5 of 8); 
+			}
+			clear: right; 
+			float: right; 
+
+			/*float:right; width: 25%;*/ }
 	}
 }
 
@@ -229,7 +259,32 @@ $card-base-font-size:			1rem;
 	@include narrow {  }
 	@include wide   { .relation__footer {display:none;} }
 	@include wider  {  }
-	@include widest	{ .card__body {display:none;} }
+
+	@include widest	{ 
+		/*.card__body {display:none;}*/ 
+
+		@include span(isolate 8 at 3 of 12); clear: left;
+
+		.card__header { 
+			@include with-layout(12 1/2) {
+				@include span(first 2 of 8); 
+			}
+			/*margin-top: 2rem;*/ /* top align body with header */
+
+			/*float:left; width: 25%;*/ 
+		}	
+		.card__body { 
+			@include with-layout(12 1/2) {
+				@include span(last 6 of 8); 
+			}
+			float: right;  
+			/*margin-top: 1rem;*/ /* top align body with header */
+
+			/*float:right; width: 75%; padding: $base-spacing;*/
+		}
+
+		border-top: none;
+	}
 
 }
 
@@ -240,13 +295,13 @@ $card-base-font-size:			1rem;
 		/*clear: both;*/
 		/*overflow: auto;*/
 
-		background: #fafafa;
+		background: white;
 
 		&__thumb {
 
 			@include wide	{ width: span(4 of 12); }
 			@include wider	{ width: span(4 of 12); }
-			@include widest	{ width: span(6 of 12); }
+			@include widest	{ width: span(4 of 12); }
 		}
 
 		&__header {}
@@ -269,6 +324,42 @@ $card-base-font-size:			1rem;
 }
 	
 .card.card--featured-work {}
+
+.card.card--factsheet {
+
+	@include tiny   { > .card__header { display: none; } }
+	@include mobile { > .card__header { display: none; } }
+	@include narrow { > .card__header { display: none; } }
+	@include wide   { > .card__header { display: none; } }
+	@include wider  { > .card__header { display: none; } }
+
+	@include widest	{ 
+		/*.card__body {display:none;}*/ 
+
+		@include span(isolate 8 at 3 of 12); clear: left;
+
+		> .card__header { 
+			@include with-layout(12 1/2) {
+				@include span(first 2 of 8); 
+			}
+			/*margin-top: 2rem;*/ /* top align body with header */
+
+			/*float:left; width: 25%;*/ 
+		}	
+		> .card__body { 
+			@include with-layout(12 1/2) {
+				@include span(last 6 of 8); 
+			}
+			float: right;  
+			/*margin-top: 1rem;*/ /* top align body with header */
+
+			/*float:right; width: 75%; padding: $base-spacing;*/
+		}
+
+		border-top: none;
+	}
+
+}
 
 /* ==================================================================
 ## Dev

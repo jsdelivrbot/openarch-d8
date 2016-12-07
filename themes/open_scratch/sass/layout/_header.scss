@@ -41,6 +41,9 @@ $menubar-width:				100%;
 	@include narrow {
 		padding-right: 		($base-row1-height - $base-button-height-big)/2;	
 	}
+	@include widest {
+		padding: 0 gutter(12 1/2);
+	}
 
 }
 
@@ -71,8 +74,8 @@ $menubar-width:				100%;
 		height: 			$base-row1-height;
 	}
 	@include widest {
-		line-height: 		$base-row0-height;	
-		height: 			$base-row0-height;
+		line-height: 		$base-row1-height;	
+		height: 			$base-row1-height;
 	}
 
 	&__left { /* media__content */

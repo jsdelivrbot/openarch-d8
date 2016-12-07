@@ -18,10 +18,10 @@ options:
   animationLoop: true
   randomize: false
   startAt: 0
-  itemWidth: 880
+  itemWidth: 568
   itemMargin: 2
   minItems: 1
-  maxItems: 3
+  maxItems: 2
   move: 0
   directionNav: true
   controlNav: '1'

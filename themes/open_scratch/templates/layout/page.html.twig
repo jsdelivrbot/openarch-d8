@@ -152,9 +152,16 @@
 
           {% if page.content_facts %}
             <div id="main-content-facts" class="region main-content__facts">
-              <div class="card border--top-grey border--bottom-ltgrey">
-                <div class="gallery-container factsheet-gallery-container">
-                  {{ page.content_facts }}
+              <div class="card card--factsheet border--top-grey border--bottom-ltgrey">
+                <div class="card__item card__item--spaced-most card__header">
+                  <div class="title title--secondary">
+                    <h3>Data</h3>
+                  </div>
+                </div>
+                <div class="card__item card__item--spaced-most-top card__body">
+                  <div class="gallery-container factsheet-gallery-container">
+                    {{ page.content_facts }}
+                  </div>
                 </div>
               </div>
             </div>

@@ -50,6 +50,8 @@ $main-base-font-size:		1rem;
 	&__gallery { 
 		/*@include span(full);*/ 
 		margin: 0 gutter(12);
+
+		@include widest { margin: 0 gutter(12 1/2);	}
 	}
 
 	&__slideshow {
@@ -61,6 +63,7 @@ $main-base-font-size:		1rem;
 	&__primary { 
 		/*@include span(full);*/ 
 		margin: 0 gutter(12); 
+		@include widest { margin: 0 gutter(12 1/2);	}
 	}
 	&__relations { margin: 0 gutter(12); }
 	&__facts { margin: 0 gutter(12); }
@@ -71,6 +74,15 @@ $main-base-font-size:		1rem;
 		&__primary { @include span(9 of 12); }
 		&__relations { @include span(9 of 12); }
 		&__facts { @include span(9 of 12); }
+	}
+
+	@include widest {
+
+		&__header 		{ margin: 0 gutter(12 1/2); }
+		&__slideshow 	{ margin: 0; }
+		&__primary 		{ margin: 0; padding: 0 gutter(12 1/2);/*@include span(isolate 8 at 3 of 12); clear: left;*/ }
+		&__relations 	{ clear: left; margin: 0; padding: 0 gutter(12 1/2); background: url('../images/ptgrid-4px-50pct.png'); /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
+		&__facts 		{ clear: left; margin: 0; padding: 0 gutter(12 1/2); /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
 	}
 }
 

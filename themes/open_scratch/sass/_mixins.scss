@@ -98,12 +98,12 @@ $grid-4col: (
         global-box-sizing: border-box
     ));
 
-    margin-top: gutter(12);
+    /*margin-top: gutter(12);*/
 }
 
 @mixin gallery-container-snug {
 
-    @include layout((
+    @include with-layout((
         gutter-position: before,
         columns: 12,
         gutters: 1/4, 
@@ -115,7 +115,7 @@ $grid-4col: (
 
 @mixin gallery-container-tight {
 
-    @include layout((
+    @include with-layout((
         gutter-position: before,
         columns: 12,
         gutters: 1/8, 

@@ -178,6 +178,16 @@ change permissions on files directory to 777
 * adjust config vars for better vertical spacing based on baseline grid
 * update searchbar position to align with header
 
+#### 0.6.0
+
+* implement task page layout for widest breakpoint
+* make slideshow two slides wide
+* adjust text size/layout for widest bp
+* move block-level positioning from main to card class
+* change widest bp to 1200px
+* reduce gutter size to 1/2 column width for widest bp
+* reduce header height and logo
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

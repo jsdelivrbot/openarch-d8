@@ -49,6 +49,10 @@ p {
 	/*padding: 		0 $base-pad-horiz;*/	
 	margin: 		$base-row-pad 0;	
 }
+p:first-child,
+p:last-child {
+	margin: 0;
+}
 
 li {
 	/*line-height: 	$base-line-height;*/

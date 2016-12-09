@@ -38,9 +38,15 @@
 <div{{ attributes.addClass(classes) }}>
 
   {# <div class="statement"> #}
-  <div class="card card--manifesto">
-      {{ rows }}
-  </div>
+	{# <div class="outer">
+	<div class="middle">
+	<div class="inner"> #}
+		<div class="card card--manifesto">
+		  {{ rows }}
+		</div>
+	{# </div>
+	</div>
+	</div> #}
 
   {{ feed_icons }}
 </div>

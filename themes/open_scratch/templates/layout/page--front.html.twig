@@ -61,7 +61,7 @@
 
     <div class="layout main-header-layout slider-canvas">
 
-        <div class="wrapper main-header-wrapper bg--white" role="contentinfo">
+        <div class="wrapper main-header-wrapper" role="contentinfo">
 
           <div class="main-header media">
 
@@ -81,101 +81,39 @@
 
     <div class="layout main-content-layout slider-canvas clearfix">
 
-      <div class="wrapper main-content-wrapper buffer--main-top buffer--main-bottom bg--white">
+      <div class="wrapper main-content-wrapper">
 
-        <div class="main-content__header">
 
-          <div class="wrapper toolbar-wrapper" role="contentinfo">
-
-            {# <div class="toolbar media">
-
-              {% if page.toolbar_right %}
-                <div class="media__imgR" role="contentinfo">
-                  
-                </div>
-              {% endif %}
-
-              {% if page.toolbar_left %}
-                <div class="media__contents" role="contentinfo">
-                  {{ page.toolbar_right }} 
-                  {{ page.toolbar_left }}
-                </div>
-              {% endif %}
-
-            </div> #}
-
-            <div class="toolbar ribbon">
-              <div class="ribbon__segments">
-
-                {% if page.toolbar_right %}
-                  <div class="ribbon__segment" role="contentinfo">
-                    {{ page.toolbar_right }} 
-                  </div>
-                {% endif %}
-
-                {% if page.toolbar_left %}
-                  <div class="ribbon__segment--left" role="contentinfo">
-                    {{ page.toolbar_left }}
-                  </div>
-                {% endif %}
-
-              </div>
-            </div>
-
-          </div> {# end toolbar-wrapper #}
-
-        </div>
 
         <main class="main-content clearfix" role="main">  
 
-          {% if page.content_gallery %}
-            <div id="main-content-gallery" class="region main-content__gallery">
-              {{ page.content_gallery }}
-            </div>
-          {% endif %}
-
-          {# <div id="fullpager"> #}
-          
-          {# <div class="section"> #}
           {% if page.content_slideshow %}
             <div id="main-content-slideshow" class="region main-content__slideshow slideshow">
               {{ page.content_slideshow }}
             </div>
           {% endif %}
-          {# </div> #}
 
-          {# <div class="section"> #}
-            <div id="main-content-primary" class="region main-content__primary">
-              {{ page.content_primary }}
-            </div>
-          {# </div> #}
+          <div id="fullpage">
 
-          {# </div> #}
-          
-          {% if page.content_relations %}
-            <div id="main-content-relations" class="region main-content__relations">
-              {{ page.content_relations }}
-            </div>
-          {% endif %}
-
-          {% if page.content_facts %}
-            <div id="main-content-facts" class="region main-content__facts">
-              <div class="card card--factsheet border--top-grey border--bottom-ltgrey">
-                <div class="card__item card__item--spaced-most card__header">
-                  <div class="title title--secondary">
-                    <h3>Data</h3>
-                  </div>
-                </div>
-                <div class="card__item card__item--spaced-most-top card__body">
-                  <div class="gallery-container factsheet-gallery-container">
-                    {{ page.content_facts }}
-                  </div>
-                </div>
+            <div class="section">
+              <div id="main-content-primary" class="region main-content__primary">
+                {{ page.content_primary }}
               </div>
             </div>
-          {% endif %}
+            
+            <div class="section">
+              {% if page.content_relations %}
+              <div id="main-content-relations" class="region main-content__relations">
+                {{ page.content_relations }}
+              </div>
+              {% endif %}
+            </div>
+
+          </div>
 
         </main>
+
+
 
       </div> {# end main-content-wrapper #}
 

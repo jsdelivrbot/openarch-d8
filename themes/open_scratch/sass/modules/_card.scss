@@ -320,10 +320,37 @@ $card-base-font-size:			1rem;
 	@include narrow {  }
 	@include wide   {  }
 	@include wider  {  }
-	@include widest	{ float: left; width: 50%; } 
+	@include widest	{ @include span(isolate 8 at 3 of 12); } 
+}
+
+.card.card--news {
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest	{ @include span(isolate 8 at 3 of 12); } 
 }
 	
-.card.card--featured-work {}
+.card.card--featured-work {
+
+	overflow: visible;
+	position: relative;
+	z-index: -1;
+
+	@include widest	{ 
+		/*.slideshow__caption {display: none;}*/
+		.slideshow__image img {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+			min-height: 100%;
+		}
+	}
+}
 
 .card.card--factsheet {
 

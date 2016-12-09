@@ -46,7 +46,7 @@
 
 .bg--white {
 
-	background: white;
+	/*background: white;*/
 }
 
 .hide {
@@ -142,3 +142,21 @@ $buffer-size-bottom:	8.75rem; /*140px;*/
 	.buffer--side-top 		{ padding-top:		$buffer-size-top + $base-row0-height; }
 }
 
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+  background: blue;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+  background: red;
+    margin-left: auto;
+    margin-right: auto; 
+}

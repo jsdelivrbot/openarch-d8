@@ -43,6 +43,7 @@ $menubar-width:				100%;
 	}
 	@include widest {
 		padding: 0 gutter(12 1/2);
+		/*background: none;*/
 	}
 
 }

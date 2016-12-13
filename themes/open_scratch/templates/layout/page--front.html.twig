@@ -81,8 +81,7 @@
 
     <div class="layout main-content-layout slider-canvas clearfix">
 
-      <div class="wrapper main-content-wrapper">
-
+      <div class="wrapper main-content-wrapper buffer--main-top buffer--main-bottom">
 
 
         <main class="main-content clearfix" role="main">  
@@ -93,7 +92,9 @@
             </div>
           {% endif %}
 
-          <div id="fullpage">
+          <div id="fullpage" class="fullpage">
+
+            {# <div class="section"></div> #}
 
             <div class="section">
               <div id="main-content-primary" class="region main-content__primary">
@@ -103,7 +104,7 @@
             
             <div class="section">
               {% if page.content_relations %}
-              <div id="main-content-relations" class="region main-content__relations">
+              <div id="main-content-relations" class="region main-content__primary">
                 {{ page.content_relations }}
               </div>
               {% endif %}

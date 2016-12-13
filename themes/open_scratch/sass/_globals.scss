@@ -23,6 +23,12 @@ html {
     @include widest{ /* all and (min-width: 851px) */
     	font-size: 18px;
     }
+
+
+    background: url('../images/grid-960-13col-grey.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
 }
 
 
@@ -42,13 +48,15 @@ body{
     box-sizing:border-box;
 }
 
-/* only apply font-size and line-height to elements so don't have issue w/ cascading sizes */
+/* only apply font-size and line-height to 
+elements so don't have issue w/ cascading sizes */
 p {
 	font-size: 		$base-font-size; 
 	line-height: 	$base-line-height;
 	/*padding: 		0 $base-pad-horiz;*/	
 	margin: 		$base-row-pad 0;	
 }
+
 p:first-child,
 p:last-child {
 	margin: 0;

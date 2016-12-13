@@ -36,19 +36,21 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  <div class="awards">
-    <table class="table awards-table__table">
-    	<thead class="awards-table__head">
-    		<tr>
-    			<th>Date</th>
-    			<th>Awards</th>
-    			<th class="data--right">Links</th>
-    		</tr>
-    	</thead>
-    	<tbody>
-      		{{ rows }}
-      	</tbody>
-    </table>
+  <div class="card card--awards">
+    <div class="card__item card__body">
+      <table class="table awards-table__table">
+      	<thead class="awards-table__head">
+      		<tr>
+      			<th>Date</th>
+      			<th>Awards</th>
+      			<th class="data--right">Links</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+        		{{ rows }}
+        	</tbody>
+      </table>
+    </div>
   </div>
 
   {{ feed_icons }}

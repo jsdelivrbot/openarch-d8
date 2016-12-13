@@ -35,7 +35,7 @@ $titlebar-title-spacing:	$base-title-spacing;
 .title--secondary { /* block title, eg. recent news */
 
 	text-transform: 	uppercase;
-	background:			white;
+	/*background:			white;*/
 }
 
 .title--headline {
@@ -70,6 +70,13 @@ $card-body-line-height--big:	1.7;
 
 		font-size:			0.9rem;
 		line-height:		1.5rem;
+		margin: 			$base-spacing;
+	}
+	@include widest {
+
+		font-size:			1.1rem;
+		line-height:		2.0rem;
+		font-weight:		bold; 
 		margin: 			$base-spacing;
 	}
 }

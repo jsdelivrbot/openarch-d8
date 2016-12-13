@@ -59,7 +59,7 @@ $base-media-spacing: 1.5em;
 		@include narrow { width: span(4 of 12); }
 		@include wide   { width: span(4 of 12); }
 		@include wider	{ width: span(3 of 12); }
-		@include widest	{ width: span(2 of 12); }
+		@include widest	{ width: span(3 of 12); }
 	}
 
 	&__img--relation {

@@ -45,6 +45,9 @@ $main-base-font-size:		1rem;
 
 	font-size: 				$main-base-font-size;
 
+
+	
+
 	&__header { margin: 0 gutter(12); }
  
 	&__gallery { 
@@ -81,7 +84,7 @@ $main-base-font-size:		1rem;
 		&__header 		{ margin: 0 gutter(12 1/2); }
 		&__slideshow 	{ margin: 0; }
 		&__primary 		{ margin: 0; padding: 0 gutter(12 1/2);/*@include span(isolate 8 at 3 of 12); clear: left;*/ }
-		&__relations 	{ clear: left; margin: 0; padding: 0 gutter(12 1/2); background: url('../images/ptgrid-4px-50pct.png'); /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
+		&__relations 	{ clear: left; margin: 0; padding: 0 gutter(12 1/2); /*background: url('../images/ptgrid-4px-50pct.png');*/ /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
 		&__facts 		{ clear: left; margin: 0; padding: 0 gutter(12 1/2); /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
 	}
 }

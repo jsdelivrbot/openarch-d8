@@ -122,6 +122,15 @@ $card-base-font-size:			1rem;
 	}*/
 
 	&__footer 	{	/**/	}
+ 
+}
+
+.card--10col {
+
+	@include widest	{ 
+		@include span(isolate 10 at 2 of 12);  
+		float: none;
+	}
 }
 
 .card--flag {
@@ -160,16 +169,40 @@ $card-base-font-size:			1rem;
 
 /* card types (ie. subclasses) */
 
-.card--practice.card {
+.card--practice-main.card {
 
-	> .card__slide 	{	
+	@include widest	{ 
 
-		/*margin-top: 0;*/
-	}
+		margin: $base-spacing-huge 0 0 0;
 
-	> .card__body {
+		@include span(isolate 8 at 3 of 12); clear: left;
+		
+		.card__header { 
+			@include with-layout(12 1/2) {
+				@include span(first 2 of 8); 
+			}
+			/*margin-top: 2rem;*/ /* top align body with header */
 
-		max-width: 750px;
+			/*float:left; width: 25%;*/ 
+		}	
+		.card__body { 
+			@include with-layout(12 1/2) {
+				@include span(last 6 of 8); 
+			}
+			float: right;  
+			/*margin-top: 1rem;*/ /* top align body with header */
+
+			/*float:right; width: 75%; padding: $base-spacing;*/
+		}
+		.card__footer { 
+			@include with-layout(12 1/2) {
+				@include span(last 6 of 8); 
+			}
+			clear: right; 
+			float: right; 
+
+			/*float:right; width: 25%;*/ 
+		}
 	}
 }
 
@@ -184,8 +217,7 @@ $card-base-font-size:			1rem;
 
 .card.card--people {
 
-	.card__slide {
-
+	.card__thumb {
 		
 	}
 
@@ -195,6 +227,11 @@ $card-base-font-size:			1rem;
 		line-height: 		1.2;
 		/*color: 			$card-body-font-color;*/
 	}
+
+	@include widest	{ 
+		@include span(isolate 8 at 3 of 12);  
+		float: none;
+	} 
 }
 
 .card.card--events {
@@ -209,7 +246,10 @@ $card-base-font-size:			1rem;
 	@include narrow {  }
 	@include wide   {  }
 	@include wider  {  }
-	@include widest	{ float: left; width: 50%; } 
+	@include widest	{ 
+		@include span(isolate 8 at 3 of 12);  
+		float: none;
+	} 
 }
 
 .card.card--task-main {
@@ -247,7 +287,8 @@ $card-base-font-size:			1rem;
 			clear: right; 
 			float: right; 
 
-			/*float:right; width: 25%;*/ }
+			/*float:right; width: 25%;*/ 
+		}
 	}
 }
 
@@ -320,7 +361,10 @@ $card-base-font-size:			1rem;
 	@include narrow {  }
 	@include wide   {  }
 	@include wider  {  }
-	@include widest	{ @include span(isolate 8 at 3 of 12); } 
+	@include widest	{ 
+		@include span(isolate 8 at 3 of 12); 
+		background: white;
+	} 
 }
 
 .card.card--news {
@@ -348,6 +392,12 @@ $card-base-font-size:			1rem;
 			width: 100%;
 			height: auto;
 			min-height: 100%;
+		}
+
+		.slideshow__caption {
+			position: fixed;
+			bottom: 0;
+			left: 0;
 		}
 	}
 }

@@ -2,9 +2,11 @@ global-css:
   css:
     theme:
       css/style.css: {}
+      css/jquery.fullPage.css: {}
       
 global-js:
   js:
     js/main.js: {}
+    js/jquery.fullPage.min.js: {}
   dependencies:
     - core/jquery

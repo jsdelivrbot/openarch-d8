@@ -22,6 +22,10 @@
 
 .border--bottom-grey {
 	border-bottom: 1px solid grey;
+
+	&:nth-child(1) {
+		border-top: 1px solid grey;
+	}
 }
 
 .border--bottom-ltgrey {
@@ -47,6 +51,11 @@
 .bg--white {
 
 	/*background: white;*/
+}
+
+.bg--dots {
+	
+	background: url('../images/ptgrid-4px-50pct.png');
 }
 
 .hide {
@@ -112,9 +121,9 @@ $buffer-size-top: 		12.5rem; /*200px;*/
 $buffer-size-bottom:	8.75rem; /*140px;*/
 
 @include tiny {
-	.buffer--main-top 		{ padding-top:		$base-row2-height; }
+	.buffer--main-top 		{ padding-top:		$base-row2-height *2; }
 	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row2-height; }
+	.buffer--side-top 		{ padding-top:		$base-row2-height *2; }
 }
 @include mobile {
 	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
@@ -137,9 +146,9 @@ $buffer-size-bottom:	8.75rem; /*140px;*/
 	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
 }
 @include widest {
-	.buffer--main-top 		{ padding-top:		$buffer-size-top; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$buffer-size-top + $base-row0-height; }
+	.buffer--main-top 		{ padding-top:		0; }
+	.buffer--main-bottom 	{ padding-bottom:	0; }
+	.buffer--side-top 		{ padding-top:		0; }
 }
 
 .outer {

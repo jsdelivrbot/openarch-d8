@@ -32,32 +32,45 @@
 
 <div class="card card--practice">
 
-	<div class="card__slide">
-		{{ fields.field_thumbnail.content }}
+	<div class="card card--practice-slideshow">
+		<div class="card__slide">
+			{{ fields.field_thumbnail.content }}
+		</div>
 	</div>
 
-	<div class="card__title">
+	{# <div class="card__title">
 		<h3>{{ fields.title.content }}</h3>
 	</div>
 
 	<div class="card__body card__body--big">
 		{{ fields.body.content }}
-	</div>
+	</div> #}
 
-	{# <div class="tagline card__tagline">
-		<div class="tags card__tags">
+	<div class="card card--practice-main">
 
-			<div class="tags__tag tags__tag--more">
-        <a>Awards</a>
-    	</div>
-    	<div class="tags__tag tags__tag--more">
-        <a>Press</a>
-    	</div>
-    	<div class="tags__tag tags__tag--more">
-        <a>People</a>
-    	</div>
+		<div class="card__item card__item--spaced-most card__header media mediaTitle mediaTitle--big">
+
+	  		{# <div class="media__imgR">
+	            <div class="ribbon ribbon--big">
+		            <div class="ribbon__segments">
+		                <div class="ribbon__segment">
+		                	<a class="icon icon--bigr" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+		                </div>
+		            </div>
+	            </div>
+	        </div> #}
+
+			<div class="media__contents">
+		    	<h2>About Us</h2>
+			</div>
 
 		</div>
-	</div> #}
+
+
+		<div class="card__item card__item--spaced-more card__body">
+			<div class="bd">{{ fields.body.content }}</div>
+		</div>
+
+	</div>
 
 </div>

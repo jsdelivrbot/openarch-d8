@@ -188,6 +188,14 @@ change permissions on files directory to 777
 * reduce gutter size to 1/2 column width for widest bp
 * reduce header height and logo
 
+#### 0.6.1
+
+* implement people page layout for widest layout
+* implement front page layout for widest layout
+* implement table page layouts for widest layout
+* implement people page layout for widest layout
+* implement practice page layout for widest layout
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

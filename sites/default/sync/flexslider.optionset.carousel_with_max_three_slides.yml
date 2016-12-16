@@ -1,16 +1,14 @@
-uuid: c81bd542-4436-4155-9003-59aa1e6b5944
+uuid: 7179b0d3-9e75-4c9b-b5f3-44c35594af77
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: mvZbfKqr-YM3s3aw0YQLUkIi5D9zrpWlg6g4hQ5P0Z4
-id: flexslider_carousel_with_min_and_max_ranges
-label: 'FlexSlider carousel with min and max ranges'
+id: carousel_with_max_three_slides
+label: 'Carousel with max three slides'
 options:
   animation: slide
   animationSpeed: 600
   direction: horizontal
-  slideshow: false
+  slideshow: true
   easing: swing
   smoothHeight: false
   reverse: false
@@ -18,10 +16,10 @@ options:
   animationLoop: true
   randomize: false
   startAt: 0
-  itemWidth: 750
+  itemWidth: 568
   itemMargin: 2
   minItems: 1
-  maxItems: 2
+  maxItems: 3
   move: 0
   directionNav: true
   controlNav: '1'
@@ -45,5 +43,5 @@ options:
   playText: Play
   pauseOnAction: true
   pauseOnHover: false
-  controlsContainer: .flex-control-nav-container
+  controlsContainer: ''
   manualControls: ''

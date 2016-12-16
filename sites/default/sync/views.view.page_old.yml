@@ -1,4 +1,4 @@
-uuid: a02f174f-e9d4-42f0-b8d5-08f2eaa635c6
+uuid: 7dad9439-65d0-4650-adbb-392b7b7d5a84
 langcode: en
 status: true
 dependencies:
@@ -18,8 +18,8 @@ dependencies:
     - options
     - text
     - user
-id: projects_gallery
-label: 'Projects gallery'
+id: page_old
+label: 'Page - old'
 module: views
 description: ''
 tag: ''
@@ -83,11 +83,11 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: ''
+          row_class: gallery--item
           default_row_class: false
           type: ul
-          wrapper_class: ''
-          class: ''
+          wrapper_class: 'gallery projects-gallery'
+          class: gallery--container
       row:
         type: fields
         options:
@@ -205,7 +205,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -873,59 +873,6 @@ display:
         enabled: true
       enabled: true
       exposed_block: true
-      style:
-        type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: false
-      defaults:
-        style: false
-        row: false
-      row:
-        type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - 'url.query_args:sort_by'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_task_city'
-        - 'config:field.storage.node.field_task_program'
-        - 'config:field.storage.node.field_task_type'
-        - 'config:field.storage.node.field_task_year'
-        - 'config:field.storage.node.field_thumbnail'
-  page_2:
-    display_plugin: page
-    id: page_2
-    display_title: Page-old
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: projects/gallery-old
-      menu:
-        type: none
-        title: 'Projects thumbs'
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: main
-        enabled: true
-      enabled: true
-      exposed_block: true
-      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

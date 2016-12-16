@@ -48,7 +48,7 @@ $base-media-spacing: 1.5em;
 
 		display:block; /* might have to move this to __img > img */
 		float: left;
-    	margin-right: 	$base-media-spacing;
+    	/*margin-right: 	$base-media-spacing;*/
     	
 	}
 
@@ -109,9 +109,8 @@ $mediaCard-spacing: 1.5em;
 
 	.media__img	{
 
-    	margin-right: 	$mediaCard-spacing;  
-    	/*padding-top:	$mediaCard-spacing;	
-    	padding-bottom:	$mediaCard-spacing;*/	
+    	/*margin-right: 	$mediaCard-spacing;*/  
+	
 	}
 
 }

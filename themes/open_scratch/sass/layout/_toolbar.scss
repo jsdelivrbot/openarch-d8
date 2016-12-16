@@ -25,6 +25,8 @@ $toolbar-height:			$base-row2-height;
 	position:			relative;
 	/*@include 			layout($grid-4col);
 	@include 			span(4);*/
+
+	/*@include wider  { @include span(first 7 of 9.5 wide); }*/
 }
 
 .toolbar {

@@ -79,6 +79,7 @@ $sidebar-footer-height: 	$base-row2-height;
 		.sidebar__top,
 		.sidebar__bottom {padding:	0 8%;}
 		/*background: #fcfcfc;*/
+
 	}
 
 	@include wider {
@@ -87,7 +88,7 @@ $sidebar-footer-height: 	$base-row2-height;
 		padding: 0;
 		.sidebar__top,
 		.sidebar__bottom {padding:	0 8%;}
-		background: #fcfcfc;
+		/*background: #fcfcfc;*/
 	}
 
 	@include widest {
@@ -188,6 +189,11 @@ $sidebar-footer-height: 	$base-row2-height;
 @include wider {
 
 
+}
+
+@include widest {
+
+	
 }
 
 	

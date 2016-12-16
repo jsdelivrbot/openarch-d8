@@ -1,5 +1,5 @@
 
-<div class="container slider">
+<div class="container slider grid-target">
 
     <div class="layout sidebar-layout slider-drawer">
 
@@ -113,11 +113,25 @@
                   </div>
                 {% endif %}
 
+                {% if page.toolbar_right %}
+                  <div class="ribbon__segment" role="contentinfo">
+                    <div class="label"><h6>Views</h6></div>
+                  </div>
+                {% endif %}
+
+                {% if page.toolbar_left %}
+                  <div class="ribbon__segment--left" role="contentinfo">
+                    <a class="icon icon--sml"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+                  </div>
+                {% endif %}
+
                 {% if page.toolbar_left %}
                   <div class="ribbon__segment--left" role="contentinfo">
                     {{ page.toolbar_left }}
                   </div>
                 {% endif %}
+
+                
 
               </div>
             </div>
@@ -252,7 +266,7 @@
                   <div class="ribbon ribbon--med">
                     <div class="ribbon__segments">
                       <span class="ribbon__segment">
-                        <a class="icon icon--fa icon--button-big"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        <a class="icon icon--fa icon--button-big grid-toggle"><i class="fa fa-github" aria-hidden="true"></i></a>
                       </span>
                       <span class="ribbon__segment--left">
                         <h6 class="label" style="text-transform:none;">Copyright © 2011, OPEN Architecture.</h6>

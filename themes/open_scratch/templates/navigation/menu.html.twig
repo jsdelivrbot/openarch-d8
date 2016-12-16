@@ -35,12 +35,26 @@
         <ul>
       {% endif %}
       {% for item in items %}
+        
         <li{{ item.attributes }}>
-          {{ link(item.title, item.url) }}
+
+          {% if menu_level == 0 and item.below %}
+            <input type="checkbox" id="{{ item.title }}" />
+            <label for="{{ item.title }}" >
+              {{ link(item.title, item.url) }}
+              <span class="icon icon--sml unchecked"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+              <span class="icon icon--sml checked"><i class="fa fa-angle-up" aria-hidden="true"></i></span>
+            </label>
+          {% else %}
+            {{ link(item.title, item.url) }}
+          {% endif %}
+          
           {% if item.below %}
             {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
           {% endif %}
+
         </li>
+        
       {% endfor %}
       </ul>
   {% endif %}

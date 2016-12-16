@@ -34,6 +34,29 @@ $footer-base-font-size:		1rem;
 	));
 
 	@include span(full);
+
+	padding: 0 gutter(12);
+
+	@include tiny {
+		padding: 0 0 0 gutter(13);
+		/*padding-right:		0;*/
+	}
+	@include mobile {
+		padding: 0 0 0 gutter(13);
+		/*padding-right:		0;*/
+	}
+	@include narrow {
+		padding-left: gutter(13);
+		padding-right: ($base-row1-height - $base-button-height-big)/2;	
+	}
+	@include wide {
+		padding: 0 gutter(10);
+	}
+	@include wider {}
+	@include widest {
+		padding: 0 gutter(19);
+		/*background: none;*/
+	}
 }
 
 .main-footer { 

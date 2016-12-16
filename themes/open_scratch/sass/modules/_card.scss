@@ -247,43 +247,79 @@ $card-base-font-size:			1rem;
 	@include wide   {  }
 	@include wider  {  }
 	@include widest	{ 
-		@include span(isolate 8 at 3 of 12);  
+		@include span(isolate 12 at 4 of 18 wider);   
 		float: none;
+		/*background: whitesmoke;*/
+
+		.card__header h3 { 
+			font-size: $base-h2-font-size;
+			line-height: 1.67rem !important;
+		}
+
+		.card__slide {
+			@include span(isolate 10 at 2 of 12); float: none;
+			margin-top: gutter(12) *.5;
+			margin-bottom: gutter(12) *.5;
+		}
+
+		.card__body { 
+			float: left; 
+
+			/*p {font-size: 1.2;}*/
+
+		}
+
+		.card__footer { float: left; }
 	} 
+}
+
+.card.card--task-slideshow {
+
+	@include wider {
+
+		@include span(first 9 of 12); clear: left;
+
+	}
 }
 
 .card.card--task-main {
 
 	/*max-width:750px;*/
 
+	@include wider {
+
+		@include span(first 9 of 12); clear: left;
+
+	}
+
 
 	@include widest	{ 
 
 		margin: $base-spacing-huge 0 0 0;
 
-		@include span(isolate 8 at 3 of 12); clear: left;
+		@include span(isolate 12 at 4 of 18); clear: left;
 		
 		.card__header { 
-			@include with-layout(12 1/2) {
-				@include span(first 3 of 8); 
-			}
+			/*@include with-layout(12 1/2) {*/
+				@include span(first 4 of 12); 
+			/*}*/
 			/*margin-top: 2rem;*/ /* top align body with header */
 
 			/*float:left; width: 25%;*/ 
 		}	
 		.card__body { 
-			@include with-layout(12 1/2) {
-				@include span(last 5 of 8); 
-			}
+			/*@include with-layout(12 1/2) {*/
+				@include span(last 8 of 12); 
+			/*}*/
 			float: right;  
 			/*margin-top: 1rem;*/ /* top align body with header */
 
 			/*float:right; width: 75%; padding: $base-spacing;*/
 		}
 		.card__footer { 
-			@include with-layout(12 1/2) {
-				@include span(last 5 of 8); 
-			}
+			/*@include with-layout(12 1/2) {*/
+				@include span(last 8 of 12); 
+			/*}*/
 			clear: right; 
 			float: right; 
 
@@ -299,25 +335,25 @@ $card-base-font-size:			1rem;
 	@include mobile {  }
 	@include narrow {  }
 	@include wide   { .relation__footer {display:none;} }
-	@include wider  {  }
+	@include wider  { @include span(first 9 of 12); clear: left; }
 
 	@include widest	{ 
 		/*.card__body {display:none;}*/ 
 
-		@include span(isolate 8 at 3 of 12); clear: left;
+		@include span(isolate 12 at 4 of 18); clear: left;
 
 		.card__header { 
-			@include with-layout(12 1/2) {
-				@include span(first 2 of 8); 
-			}
+			/*@include with-layout(12 1/2) {*/
+				@include span(first 3 of 12); 
+			/*}*/
 			/*margin-top: 2rem;*/ /* top align body with header */
 
 			/*float:left; width: 25%;*/ 
 		}	
 		.card__body { 
-			@include with-layout(12 1/2) {
-				@include span(last 6 of 8); 
-			}
+			/*@include with-layout(12 1/2) {*/
+				@include span(last 9 of 12); 
+			/*}*/
 			float: right;  
 			/*margin-top: 1rem;*/ /* top align body with header */
 
@@ -327,6 +363,20 @@ $card-base-font-size:			1rem;
 		border-top: none;
 	}
 
+}
+
+.card.card--projects-gallery {
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider {
+
+		/*@include span(first 7 of 9.5 wide); clear: left;*/
+
+	}
+	@include widest	{  }
 }
 
 /*.card.relation {}*/
@@ -340,9 +390,9 @@ $card-base-font-size:			1rem;
 
 		&__thumb {
 
-			@include wide	{ width: span(4 of 12); }
-			@include wider	{ width: span(4 of 12); }
-			@include widest	{ width: span(4 of 12); }
+			@include wide	{ width: span(3 of 9); margin-right: gutter(9);}
+			@include wider	{ width: span(2.5 of 7.5); margin-right: gutter(7.5);}
+			@include widest	{ width: span(3 of 9); margin-right: gutter(9); }
 		}
 
 		&__header {}
@@ -408,7 +458,11 @@ $card-base-font-size:			1rem;
 	@include mobile { > .card__header { display: none; } }
 	@include narrow { > .card__header { display: none; } }
 	@include wide   { > .card__header { display: none; } }
-	@include wider  { > .card__header { display: none; } }
+	@include wider  { 
+
+		> .card__header { display: none; } 
+		@include span(first 9 of 12); clear: left;
+	}
 
 	@include widest	{ 
 		/*.card__body {display:none;}*/ 

@@ -50,7 +50,7 @@
 
 .bg--white {
 
-	/*background: white;*/
+	background: white;
 }
 
 .bg--dots {
@@ -146,10 +146,14 @@ $buffer-size-bottom:	8.75rem; /*140px;*/
 	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
 }
 @include widest {
-	.buffer--main-top 		{ padding-top:		0; }
-	.buffer--main-bottom 	{ padding-bottom:	0; }
-	.buffer--side-top 		{ padding-top:		0; }
+	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
 }
+
+
+
+/* vertical center */
 
 .outer {
     display: table;

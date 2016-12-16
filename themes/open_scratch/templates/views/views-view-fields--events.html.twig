@@ -31,12 +31,13 @@
 #}
 {# <div class="teaser events__teaser border--top-ltgrey"> #}
 
+{# <div class="section"> #} {# data-anchor="{{ fields.title.label }}" #}
 <div class="card card--event border--top-ltgrey">
 
 	{# <div class="teaser__title">
 		<h3>{{ fields.title.content }}</h3>
 	</div> #}
-	<div class="card__header card__header--headline">
+	<div class="card__item card__header card__header--headline">
 
 		<div class="media mediaTitle">
 
@@ -69,7 +70,7 @@
 	{# <div class="teaser__thumb">
 		{{ fields.field_thumbnail.content }}
 	</div> #}
-	<div class="card__slide card__slide--small">
+	<div class="card__item card__slide card__slide--small">
 		{{ fields.field_thumbnail.content }}
 	</div>
 
@@ -99,7 +100,7 @@
 		</div>
 	</div> #}
 
-	<div class="card__footer">
+	<div class="card__item card__footer">
 		<div class="ribbon ribbon--med">
 			<div class="ribbon__segments">
 				<span class="ribbon__segment--left">
@@ -119,3 +120,4 @@
 	</div>
 
 </div>
+{# </div> #}

@@ -21,3 +21,22 @@
 /* temp */
 .flexslider { margin-bottom:0; }
 .flex-control-nav { display:none; }
+
+.grid-on {
+
+	background: url('../images/grid-960-13col-grey.png');
+    background-size: 100% 600%;
+    background-repeat: no-repeat;
+
+    @include wider {
+        background: url('../images/grid-16col.png');
+        background-size: 100% 600%;
+        background-repeat: no-repeat;
+    }
+
+    @include widest {
+    	background: url('../images/grid-19col-grey.png');
+    	background-size: 100% 600%;
+    	background-repeat: no-repeat;
+    }
+}

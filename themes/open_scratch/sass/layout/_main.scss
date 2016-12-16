@@ -12,6 +12,18 @@
 
 $main-base-font-size:		1rem;
 
+$susy-grid-9col: (
+  gutter-position: before,
+  columns: 13,
+  gutters: 1
+);
+
+$susy-grid-12col: (
+  gutter-position: before,
+  columns: 13,
+  gutters: 1
+);
+
 /* ==================================================================
 ## Layout
 ===================================================================== */
@@ -45,47 +57,48 @@ $main-base-font-size:		1rem;
 
 	font-size: 				$main-base-font-size;
 
+	&__header { margin: 0 gutter(13); }
+	/*&__gallery { margin: 0 gutter(13); }*/
+	&__slideshow { margin: 0; }
+	&__primary { margin: 0 gutter(13); }
+	&__relations { margin: 0 gutter(13); }
+	&__facts { margin: 0 gutter(13); }
 
-	
+	@inlude tiny {}
+	@include mobile {}
+	@include narrow {}
 
-	&__header { margin: 0 gutter(12); }
- 
-	&__gallery { 
-		/*@include span(full);*/ 
-		margin: 0 gutter(12);
+	@include wide {
 
-		@include widest { margin: 0 gutter(12 1/2);	}
+		&__header { margin: 0 gutter(10); }
+		&__slideshow { margin: 0 gutter(10); }
+		&__primary { margin: 0 gutter(10); }
+		&__relations { margin: 0 gutter(10); }
+		&__facts { margin: 0 gutter(10); }
 	}
-
-	&__slideshow {
-
-		@include wide { margin: 0 gutter(12); }
-	
-	}
-
-	&__primary { 
-		/*@include span(full);*/ 
-		margin: 0 gutter(12); 
-		@include widest { margin: 0 gutter(12 1/2);	}
-	}
-	&__relations { margin: 0 gutter(12); }
-	&__facts { margin: 0 gutter(12); }
 
 	@include wider {
 
-		&__slideshow { @include span(9 of 12); }
+		/*&__slideshow { @include span(9 of 12); }
 		&__primary { @include span(9 of 12); }
 		&__relations { @include span(9 of 12); }
-		&__facts { @include span(9 of 12); }
+		&__facts { @include span(9 of 12); }*/
+
+		&__header { margin: 0 gutter(13); }
+		&__slideshow { margin: 0 gutter(13); }
+		&__primary { margin: 0 gutter(13); }
+		&__relations { margin: 0 gutter(13); }
+		&__facts { margin: 0 gutter(13); }
 	}
 
 	@include widest {
 
-		&__header 		{ margin: 0 gutter(12 1/2); }
+		&__header 		{ margin: 0 gutter(19); }
+		/*&__gallery		{ margin: 0 gutter(13 1/2); }*/
 		&__slideshow 	{ margin: 0; }
-		&__primary 		{ margin: 0; padding: 0 gutter(12 1/2);/*@include span(isolate 8 at 3 of 12); clear: left;*/ }
-		&__relations 	{ clear: left; margin: 0; padding: 0 gutter(12 1/2); /*background: url('../images/ptgrid-4px-50pct.png');*/ /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
-		&__facts 		{ clear: left; margin: 0; padding: 0 gutter(12 1/2); /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
+		&__primary 		{ margin: 0; padding: 0 gutter(19);/*@include span(isolate 8 at 3 of 12); clear: left;*/ }
+		&__relations 	{ clear: left; margin: 0; padding: 0 gutter(19); /*background: url('../images/ptgrid-4px-50pct.png');*/ /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
+		&__facts 		{ clear: left; margin: 0; padding: 0 gutter(19); /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
 	}
 }
 

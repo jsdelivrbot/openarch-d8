@@ -236,12 +236,13 @@ change permissions on files directory to 777
 * install views infinite scroll for paging -> https://www.drupal.org/project/views_infinite_scroll
 * formate press table date
 * hide table link icons if no link
+* no buffer only only on front page at widest bp
 
 #### ISSUES:
 
 * need to resolve issue with titlebar and titlebar--multiline inconsistant heights and icon misalignment
 * custom icons  break on chinese pages (presumable has to do with img src not accounting for "cn" in address) 
-* accordian menu not working
+* accordian menu not working (see https://www.drupal.org/node/1543750)
 * people mediaCard.js calls update on page load but not working as expected
 * slider getting stuck in undefined state when drawer is open and window dragged from narrow to wide breakpoint.
 * slider stuck in undef state when load page on wider, then drag to widest.

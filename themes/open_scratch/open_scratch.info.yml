@@ -7,6 +7,7 @@ libraries:
   - open_scratch/global-js
 regions:
   header_left: 'Header Left'
+  header_middle: 'Header Middle'
   header_right: 'Header Right'
   sidebar_search: 'Sidebar search input'
   sidebar_nav: 'Sidebar navigation menu'

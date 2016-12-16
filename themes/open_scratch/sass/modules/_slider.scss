@@ -50,7 +50,7 @@
 
 		@include wide {
 			/*width:			25%;*/
-			width: span(3 of 12 wide);
+			width: span(3 of 13 wide);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
 			-webkit-transition: 0 ease all;
@@ -58,13 +58,14 @@
 		}
 
 		@include wider {
-			/*width:			20%;
+			/*width:			20%;*/
+			width: span(3 of 16 wide);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
 			-webkit-transition: 0 ease all;
-			transition: 0 ease all;*/
+			transition: 0 ease all;
 
-			width: 192px; /* 0.2 x 1200 */
+			/*width: 192px;*/ /* 0.2 x 1200 */
 		}
 
 		@include widest {
@@ -98,16 +99,19 @@
 			margin-left: 25%;
 			width:	75%;
 
-			margin-left: span(3 of 12 wide);
-			width: span(9 of 12);
+			margin-left: span(3 of 13 wide);
+			width: span(10 of 13);
 		}
 
 		@include wider {
 			/*margin-left: 20%;
 			width:	80%;*/
 
-			margin-left: 192px;
-			width: 768px;
+			/*margin-left: 192px;
+			width: 768px;*/
+
+			margin-left: span(3 of 16 wide);
+			width: span(13 of 16);
 		}
 
 		@include widest {

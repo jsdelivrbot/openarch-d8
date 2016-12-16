@@ -35,7 +35,17 @@
 			@include tiny{		@include gallery-item-2-col;	}
 			@include mobile{	@include gallery-item-2-col;	}
 			@include narrow{	@include gallery-item-3-col;	}
-			@include wide{		@include gallery-item-3-col;	}
+
+
+			@include wide{		
+				/*@include gallery-item-3-col;*/
+				@include with-layout(9 1) { 
+					@include gallery(3 of 9);
+    				margin-bottom: gutter(9);
+				}	
+			}
+
+
 			@include wider{		@include gallery-item-3-col;	}
 			@include widest{	@include gallery-item-6-col;	}		
 		}
@@ -136,31 +146,47 @@
  *
 ===================================================================== */
 
-.projects-gallery {
+.gallery--projects-gallery.gallery {
 
 
-	/*ul*/.gallery--container{
+	.gallery__container{ /*ul*/
 
 		/* overrides */
 	}
 
-	.gallery--item {
+	.gallery__item { /*li*/
 
 		@include tiny{		@include gallery-item-2-col;	}
 		@include mobile{	@include gallery-item-2-col;	}
 		@include narrow{	@include gallery-item-3-col;	}
-		@include wide{		@include gallery-item-3-col;	}
-		@include wider{		@include gallery-item-3-col;	}
+
+		@include wide{		
+			/*@include gallery-item-3-col;*/
+			@include with-layout(9 1) { 
+				@include gallery(3 of 9);
+				margin-bottom: gutter(9);
+			}	
+		}
+
+		@include wider{		
+			/*@include gallery-item-3-col;*/
+			@include with-layout(12 1) { 
+				@include gallery(3 of 12);
+				margin-bottom: gutter(12);
+			}	
+		}
 
 		@include widest{	
-			@include with-layout(12 1/2) {
-  				@include gallery-item-6-col;
+			@include with-layout(18 1) {
+  				/*@include gallery-item-6-col;*/
+  				@include gallery(3 of 18);
+   				margin-bottom: gutter(18);
 			}
 		}
 	}
 
 
-		/*li*/.gallery--item > img{
+		.gallery__item > img { /*li*/
 
 			/* overrides */
 			width:100%;
@@ -200,9 +226,27 @@
 			@include tiny{		@include gallery-item-2-col;	}
 			@include mobile{	@include gallery-item-2-col;	}
 			@include narrow{	@include gallery-item-3-col;	}
-			@include wide{		@include gallery-item-3-col;	}
-			@include wider{		@include gallery-item-3-col;	}
-			@include widest{	@include gallery-item-3-col;	}
+			@include wide{		
+				/*@include gallery-item-3-col;*/
+				@include with-layout(9 1) { 
+					@include gallery(3 of 9);
+					margin-bottom: gutter(9);
+				}	
+			}
+			@include wider{		
+				/*@include gallery-item-3-col;*/
+				@include with-layout(7.5 1) { 
+					@include gallery(2.5 of 7.5);
+					margin-bottom: gutter(7.5);
+				}	
+			}
+			@include widest{	
+				@include with-layout(9 1) {
+	  				/*@include gallery-item-6-col;*/
+	  				@include gallery(3 of 9);
+	   				margin-bottom: gutter(9);
+				}
+			}
 		}
 
 }

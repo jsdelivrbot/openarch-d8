@@ -53,20 +53,20 @@ $susy: (
   /*flow: ltr,*/
   /*math: fluid,*/
   output: float,
-  gutter-position: inside,
+  gutter-position: before,
   /*container: auto,*/
   /*container-position: center,*/
-  columns: 12, /*4,*/
-  gutters: 1, /*1/8 36/8 3/8,*/
+  columns: 13, /*4,*/
+  gutters: 1/2, /*1/8 36/8 3/8,*/
   /*column-width: false,*/
-  global-box-sizing: border-box,
+  global-box-sizing: border-box
   /*last-flow: to,*/
-  debug: (
+  /*debug: (
     image: show-columns,
     color: rgba(#AEEFF2, .5),
     output: overlay,
     toggle: bottom right,
-  )
+  )*/
   /*use-custom: (
     background-image: true,
     background-options: false,
@@ -106,6 +106,8 @@ $susy: (
 	height: 		100%;
 
 	/*max-width:		240px;*/ /* .2 x 1200 */
+
+	@include widest { display: none; }
 }
 
 

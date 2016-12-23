@@ -1,0 +1,14 @@
+uuid: 8bf07e54-72c1-4003-b9f1-6fbea83d9ea0
+langcode: en
+status: true
+dependencies: {  }
+name: open_thumb_mobile_x2
+label: OPEN_thumb_mobile_x2
+effects:
+  94d2ea12-b88f-45a0-8287-d568f6953047:
+    uuid: 94d2ea12-b88f-45a0-8287-d568f6953047
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 492
+      height: 492

@@ -1,0 +1,15 @@
+uuid: ed3554fb-68aa-4e5f-80fa-d2c30615c587
+langcode: en
+status: true
+dependencies: {  }
+name: open_full_widest_1
+label: OPEN_full_widest_1
+effects:
+  8f211bdb-fe98-4fe2-83eb-8ed3ee02e136:
+    uuid: 8f211bdb-fe98-4fe2-83eb-8ed3ee02e136
+    id: image_scale
+    weight: 1
+    data:
+      width: 1680
+      height: null
+      upscale: false

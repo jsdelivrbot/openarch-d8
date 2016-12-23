@@ -53,6 +53,13 @@ $card-base-font-size:			1rem;
 	overflow: hidden;
 	padding: 0;
 
+	/* clearfix */
+	/*&:after {
+		content: ""; 
+	    display: table;
+	    clear: both; 
+	}*/
+
 	&__item {
 
 		overflow: hidden;
@@ -63,6 +70,7 @@ $card-base-font-size:			1rem;
 	&__item--spaced-more 	{ margin: $base-spacing-big 0; }
 	&__item--spaced-less 	{ margin: $base-spacing-sml 0; }
 	&__item--spaced-most 	{ margin: $base-spacing-huge 0; }
+	&__item--spaced-dbl		{ margin: $base-spacing*2 0; }
 	&__item--spaced-most-top { margin: $base-spacing-huge 0 0 0; }
 
 	&__header 	{	
@@ -215,18 +223,26 @@ $card-base-font-size:			1rem;
 	} 
 }
 
-.card.card--people {
+.card.people {
 
-	.card__thumb {
+	&__thumb {
 		
 	}
 
-	.card__body > p {
+	&__body > p {
 
 		/*font-size: 		$card-body-font-size;*/
-		line-height: 		1.2;
+		/*line-height: 		1.2;*/
 		/*color: 			$card-body-font-color;*/
 	}
+
+	@include widest	{ 
+		@include span(isolate 8 at 3 of 12);  
+		float: none;
+	} 
+}
+
+.card.jobs {
 
 	@include widest	{ 
 		@include span(isolate 8 at 3 of 12);  
@@ -263,13 +279,12 @@ $card-base-font-size:			1rem;
 		}
 
 		.card__body { 
-			float: left; 
+			float: none; 
 
 			/*p {font-size: 1.2;}*/
-
 		}
 
-		.card__footer { float: left; }
+		.card__footer { float: none; }
 	} 
 }
 
@@ -277,7 +292,7 @@ $card-base-font-size:			1rem;
 
 	@include wider {
 
-		@include span(first 9 of 12); clear: left;
+		/*@include span(first 9 of 12); clear: left;*/
 
 	}
 }
@@ -331,11 +346,11 @@ $card-base-font-size:			1rem;
 .card.card--task-relations-gallery {
 
 	/*margin:		1.5em 0;*/	
-	@include tiny   {  }
-	@include mobile {  }
-	@include narrow {  }
-	@include wide   { .relation__footer {display:none;} }
-	@include wider  { @include span(first 9 of 12); clear: left; }
+	@include tiny   { .card__header {display:none;} }
+	@include mobile { .card__header {display:none;} }
+	@include narrow { .card__header {display:none;} }
+	@include wide   { .card__header, .relation__footer {display:none;} }
+	@include wider  { .card__header {display:none;} @include span(first 9 of 12); clear: left; }
 
 	@include widest	{ 
 		/*.card__body {display:none;}*/ 
@@ -391,7 +406,7 @@ $card-base-font-size:			1rem;
 		&__thumb {
 
 			@include wide	{ width: span(3 of 9); margin-right: gutter(9);}
-			@include wider	{ width: span(2.5 of 7.5); margin-right: gutter(7.5);}
+			@include wider	{ width: span(3 of 9); margin-right: gutter(9);}
 			@include widest	{ width: span(3 of 9); margin-right: gutter(9); }
 		}
 
@@ -404,7 +419,8 @@ $card-base-font-size:			1rem;
 	}
 
 
-.card.card--manifesto {
+.card.card--manifesto
+ {
 
 	@include tiny   {  }
 	@include mobile {  }
@@ -413,7 +429,25 @@ $card-base-font-size:			1rem;
 	@include wider  {  }
 	@include widest	{ 
 		@include span(isolate 8 at 3 of 12); 
-		background: white;
+		/*background: white;*/
+		/*clear: left;*/
+		float: none;
+	} 
+}
+
+
+.card.card--moremenu
+ {
+
+	@include tiny   { display: none; }
+	@include mobile { display: none; }
+	@include narrow { display: none; }
+	@include wide   { display: none; }
+	@include wider  { display: none; }
+	@include widest	{ 
+		@include span(isolate 8 at 3 of 12); 
+/*		clear: left;*/
+		float: none;
 	} 
 }
 
@@ -490,6 +524,19 @@ $card-base-font-size:			1rem;
 		border-top: none;
 	}
 
+}
+
+.card.card--video-player {
+
+	/*overflow: hidden;
+    background: #333;*/
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest	{ @include span(isolate 8 at 3 of 12); } 
 }
 
 /* ==================================================================

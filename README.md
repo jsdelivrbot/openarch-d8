@@ -190,11 +190,29 @@ change permissions on files directory to 777
 
 #### 0.6.1
 
-* implement people page layout for widest layout
-* implement front page layout for widest layout
-* implement table page layouts for widest layout
-* implement people page layout for widest layout
-* implement practice page layout for widest layout
+* implement people page layout for widest breakpoint
+* implement front page layout for widest breakpoint
+* implement table page layouts for widest breakpoint
+* implement people page layout for widest breakpoint
+* implement practice page layout for widest breakpoint
+
+#### 0.6.2
+
+* implement events page layout for widest breakpoint
+
+#### 0.6.3
+
+* fix breakpoint descrepencies btw css, js, and drupul
+* add 10 image styles for responsive task images
+
+#### 0.6.4
+
+* add support for embedded video
+* add multimedia task page
+* add video listing
+* make video listing items expandable
+* change base font and sizing
+* remove buffer from front page
 
 #### TBD
 
@@ -237,6 +255,12 @@ change permissions on files directory to 777
 * formate press table date
 * hide table link icons if no link
 * no buffer only only on front page at widest bp
+* remove unused image styles
+* fix recent news styling of borders, etc.
+* delete unused/old themes
+* try to rename open_scratch theme to open_theme or just open
+* document necessity of importing images at 16:10 and leave border for diagrams so they don't get cropped.
+* document import images at 2560, possibly 3840
 
 #### ISSUES:
 

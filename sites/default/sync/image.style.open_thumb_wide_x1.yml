@@ -1,0 +1,14 @@
+uuid: ef1c9548-2ffd-4bba-ba52-f2511c5e6d5b
+langcode: en
+status: true
+dependencies: {  }
+name: open_thumb_wide_x1
+label: OPEN_thumb_wide_x1
+effects:
+  15a25241-5b4c-4c41-ba6a-34dbddde2350:
+    uuid: 15a25241-5b4c-4c41-ba6a-34dbddde2350
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 194
+      height: 194

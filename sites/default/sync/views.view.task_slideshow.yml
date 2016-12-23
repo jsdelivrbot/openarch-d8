@@ -4,14 +4,15 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_image_files
-    - image.style.flexslider_full
     - image.style.iphone_6plus
     - node.type.image_set
     - node.type.task
+    - responsive_image.styles.task_image
   module:
     - flexslider_views
     - image
     - node
+    - responsive_image
     - user
     - views_slideshow
 id: task_slideshow
@@ -328,6 +329,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: 'Wrong way to filter. Don''t use this block.'
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -511,6 +513,7 @@ display:
           required: false
           plugin_id: standard
       display_description: 'Views Slideshow slideshow block.'
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -625,9 +628,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: responsive_image
           settings:
-            image_style: flexslider_full
+            responsive_image_style: task_image
             image_link: content
           group_column: ''
           group_columns: {  }

@@ -24,10 +24,10 @@
     @media all and (max-width: 350px){ @content; }
 }
 @mixin mobile{
-    @media all and (min-width: 351px) and (max-width: 559px){ @content; }
+    @media all and (min-width: 351px) and (max-width: 560px){ @content; }
 }
 @mixin narrow{
-    @media all and (min-width: 560px) and (max-width: 750px){ @content; }
+    @media all and (min-width: 561px) and (max-width: 750px){ @content; }
 }
 @mixin wide{
     @media all and (min-width: 751px) and (max-width: 960px){ @content; }

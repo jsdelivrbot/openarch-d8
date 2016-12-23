@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.task.body
+    - field.field.node.task.field_featured_work
     - field.field.node.task.field_frontslide
     - field.field.node.task.field_relation
     - field.field.node.task.field_task_address
@@ -38,6 +39,14 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+  field_featured_work:
+    weight: 120
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
   field_frontslide:
     weight: 103
     label: above

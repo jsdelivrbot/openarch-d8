@@ -1,0 +1,14 @@
+uuid: 9254dade-5bfa-4794-94d7-8844c95756f6
+langcode: en
+status: true
+dependencies: {  }
+name: open_img_narrow_x1
+label: OPEN_img_narrow_x1
+effects:
+  6fde8ab3-9de4-4d44-89f7-576b8376fbae:
+    uuid: 6fde8ab3-9de4-4d44-89f7-576b8376fbae
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 750
+      height: 450

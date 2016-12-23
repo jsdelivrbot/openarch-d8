@@ -1,0 +1,15 @@
+uuid: 78df011e-f190-4df0-bee2-21075d06469c
+langcode: en
+status: true
+dependencies: {  }
+name: open_event_widest_3
+label: OPEN_event_widest_3
+effects:
+  466f6342-ae98-4f15-94a8-ce3a682ce86f:
+    uuid: 466f6342-ae98-4f15-94a8-ce3a682ce86f
+    id: image_scale
+    weight: 1
+    data:
+      width: 1315
+      height: 822
+      upscale: true

@@ -41,11 +41,19 @@ $icon-hover-bg-color:			#e5e5e5;
 				margin-left: 			$icon-spacing;
 
 				text-align:				center; /* horiz align img */
+
 				background: 			$icon-bg-color;
-				
-				&:hover {
-					background: 		$icon-hover-bg-color;
+
+				i {	
+					color: #ccc;
 				}
+
+				&:hover {
+					/*background: 		$icon-hover-bg-color;*/
+
+					> i { color: black; }
+				}
+
 
 				/*a {
 					display: 				inline-block;
@@ -63,14 +71,14 @@ $icon-hover-bg-color:			#e5e5e5;
 					}
 				}*/
 				
-				i {
-						
-					color: #333;
-						/*vertical-align:  	middle;*/
+				
+			}
 
-					&:hover{
-						color: black;
-					}
+			.icon--white {
+				background: 			white;
+
+				&:hover {
+					background: 		#e5e5e5;
 				}
 			}
 
@@ -86,14 +94,13 @@ $icon-hover-bg-color:			#e5e5e5;
 
 			.icon--fa {
 
-				i {
+				/*i {
 					color: #333;
-					/*vertical-align:  	middle;*/
 
 					&:hover{
 						color: black;
 					}
-				}
+				}*/
 			}
 
 			.icon--mat {

@@ -1,0 +1,79 @@
+uuid: 1f7659c9-4d82-48ee-9338-ad7b18f39b51
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.open_event_mobile_x1
+    - image.style.open_event_moble_x2
+    - image.style.open_event_narrow_x1
+    - image.style.open_event_narrow_x2
+    - image.style.open_event_tiny_x1
+    - image.style.open_event_wide_x1
+    - image.style.open_event_wide_x2
+    - image.style.open_event_wider_x1
+    - image.style.open_event_wider_x2
+    - image.style.open_event_widest_1
+    - image.style.open_event_widest_2
+    - image.style.open_event_widest_3
+  theme:
+    - open_scratch
+id: event_image
+label: 'Event image'
+image_style_mappings:
+  -
+    breakpoint_id: open_scratch.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_event_wide_x1
+  -
+    breakpoint_id: open_scratch.wide
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_event_wide_x2
+  -
+    breakpoint_id: open_scratch.wider
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_event_wider_x1
+  -
+    breakpoint_id: open_scratch.wider
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_event_wider_x2
+  -
+    breakpoint_id: open_scratch.widest
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 50vw
+      sizes_image_styles:
+        - open_event_widest_1
+        - open_event_widest_2
+        - open_event_widest_3
+  -
+    breakpoint_id: open_scratch.narrow
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_event_narrow_x1
+  -
+    breakpoint_id: open_scratch.narrow
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_event_narrow_x2
+  -
+    breakpoint_id: open_scratch.tiny
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_event_tiny_x1
+  -
+    breakpoint_id: open_scratch.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_event_mobile_x1
+  -
+    breakpoint_id: open_scratch.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_event_moble_x2
+breakpoint_group: open_scratch
+fallback_image_style: open_event_tiny_x1

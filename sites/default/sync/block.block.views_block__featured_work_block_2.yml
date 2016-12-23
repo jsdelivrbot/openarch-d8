@@ -12,7 +12,7 @@ dependencies:
 id: views_block__featured_work_block_2
 theme: open_scratch
 region: '-1'
-weight: -22
+weight: -23
 provider: null
 plugin: 'views_block:featured_work-block_2'
 settings:

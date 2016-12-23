@@ -1,0 +1,14 @@
+uuid: 5147c873-b91d-4221-ba77-830bd0285f46
+langcode: en
+status: true
+dependencies: {  }
+name: open_img_tiny_x1
+label: OPEN_img_tiny_x1
+effects:
+  104670a7-0328-4866-89db-592831c15d98:
+    uuid: 104670a7-0328-4866-89db-592831c15d98
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 280

@@ -71,6 +71,10 @@ $tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
 .label {
 
 	display: 			inline-block;
-	padding: 			0 $base-horiz-pad; /* horizontal space btn tags */
+	padding: 			0 $base-horiz-step; /* horizontal space btn tags */
 	text-transform: 	uppercase;
+
+	/* this shouldn't be needed as long as ribbon has height set */
+	/*height: 			$tag-button-height;
+	line-height: 		$tag-button-height;*/
 }

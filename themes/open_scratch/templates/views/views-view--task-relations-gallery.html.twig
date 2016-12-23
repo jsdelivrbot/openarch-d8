@@ -37,13 +37,14 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="card card--supercard card--task-relations-gallery border--top-grey">
-    {# <div class="card__slide"> #}
+  <div class="card card--supercard card--task-relations-gallery spaced">
+    
     <div class="card__item card__item--spaced-most card__header">
       <div class="title title--secondary">
         <h3>Relations</h3>
       </div>
     </div>
+
     <div class="card__item card__item--spaced-most-top card__body">
       <div class="gallery galleryRelations">
         <ul class="gallery__container">
@@ -52,7 +53,21 @@
       </div>
     </div>
 
-    {# </div> #}
+    <div class="card__item card__footer">
+
+        <div class="ribbon">
+          <div class="ribbon__segments">
+            <div class="ribbon__segment">
+              {# <div class="icon"><a><img src="{{ directory }}/images/ios7-arrow-thin-right.png"></a></div> #}
+              {# <div class="icon"><a><i class="fa fa-angle-down" aria-hidden="true"></i></a></div> #}
+              {# <a class="icon icon--mat" href="{{ base_path ~ current_language.getID() }}/practice"><i class="material-icons">arrow_forward</i></a> #}
+              <a class="icon icon--bigr icon--mat icon--button-big icon--white" href="{{ events_path }}"><i class="material-icons">arrow_forward</i></a> 
+            </div>
+          </div>
+        </div>
+
+    </div>
+
   </div>
 
   {{ feed_icons }}

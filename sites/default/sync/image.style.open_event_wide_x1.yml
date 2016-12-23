@@ -1,0 +1,15 @@
+uuid: 9858f7d9-fa74-4494-b4a2-3b718fb3a611
+langcode: en
+status: true
+dependencies: {  }
+name: open_event_wide_x1
+label: OPEN_event_wide_x1
+effects:
+  826be86a-585b-421a-add0-601ded3cc940:
+    uuid: 826be86a-585b-421a-add0-601ded3cc940
+    id: image_scale
+    weight: 1
+    data:
+      width: 422
+      height: 422
+      upscale: false

@@ -1,0 +1,30 @@
+uuid: c6624eb6-10e8-4a65-b67e-d375a107bdb9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_video_type
+field_name: field_video_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Exhibition
+      label: Exhibition
+    -
+      value: 'Competition Entry'
+      label: 'Competition Entry'
+    -
+      value: Other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

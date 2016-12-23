@@ -1,0 +1,130 @@
+{#
+/**
+ * @file
+ * Theme override to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ */
+#}
+{# <div class="node task__node border-top-hairline"> #}
+{# <div class="card card--task-main border-top-hairline"> #}
+
+	{# <div class="node__title">
+		<h2>{{ fields.title.content }}</h2>
+	</div> #}
+	<div class="card__item card__item--spaced-most card__header media mediaTitle mediaTitle--big">
+
+		{# <div class="media mediaTitle"> #}
+
+			{# <div class="media__imgR">
+				<div class="icons">
+			        <div class="icon--container">
+			          	<div class="icon icon--sml"><a style="background:none"><i></i></a></div>
+			        </div>
+		        </div>
+	  		</div> #}
+
+	  		<div class="media__imgR">
+	            <div class="ribbon ribbon--big">
+		            <div class="ribbon__segments">
+		                <div class="ribbon__segment">
+		                	<a class="icon icon--bigr" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+		                </div>
+		            </div>
+	            </div>
+	        </div>
+
+			<div class="media__contents">
+		    	<h2>{{ fields.title.content }}</h2>
+			</div>
+
+		{# </div> #}
+
+	</div>
+
+	{# <div class="node__thumb">
+		{{ fields.field_thumbnail.content }}
+	</div> #}
+
+	{# <div class="node__body">
+		{{ fields.body.content }}
+	</div> #}
+	<div class="card__item card__item--spaced-more card__body">
+		<div class="bd">{{ fields.body.content }}</div>
+	</div>
+
+	{# <div class="tagline node__tagline">
+		<div class="tags node__tags">
+			<span class="tags__tag">
+				<div class="icon"><a><i class="fa fa-tag" aria-hidden="true"></i></a></div>
+			</span>
+			<span class="tags__tag">
+				{{ fields.type.content }} 
+			</span>
+			<span class="tags__tag">
+				{{ fields.field_task_type.content }} 
+			</span>
+			<span class="tags__tag">
+				{{ fields.field_task_program.content }}
+			</span>
+		</div>
+	</div> #}
+	{# <div class="card__footer">
+		<div class="tagline teaser__tagline">
+			<div class="tags teaser__tags">
+				<span class="tags__tag">
+					<div class="icon"><a><i class="fa fa-tag" aria-hidden="true"></i></a></div>
+				</span>
+				<span class="tags__tag">
+					{{ fields.type.content }} 
+				</span>
+				<span class="tags__tag">
+					{{ fields.field_task_type.content }} 
+				</span>
+				<span class="tags__tag">
+					{{ fields.field_task_program.content }}
+				</span>
+			</div>
+		</div>
+	</div> #}
+	
+	<div class="card__item card__footer">
+        <div class="ribbon ribbon--med">
+          <div class="ribbon__segments">
+            <span class="ribbon__segment--left">
+              <a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a>
+            </span>
+            <span class="ribbon__segment--left">
+              <div class="tag">{{ fields.type.content }}</div>
+            </span>
+            <span class="ribbon__segment--left">
+              <div class="tag">{{ fields.field_video_type.content }}</div>
+            </span>
+          </div>
+        </div>
+      </div>
+
+{# </div> #}

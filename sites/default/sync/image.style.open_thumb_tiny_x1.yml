@@ -1,0 +1,14 @@
+uuid: e2dd97dd-f2dd-4f14-97b4-82b370ffb031
+langcode: en
+status: true
+dependencies: {  }
+name: open_thumb_tiny_x1
+label: OPEN_thumb_tiny_x1
+effects:
+  cfacac12-b338-47ed-a878-698922ea5e6b:
+    uuid: cfacac12-b338-47ed-a878-698922ea5e6b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 154
+      height: 154

@@ -1,0 +1,14 @@
+uuid: 1cf22418-8e01-4f01-bf32-687edd16f061
+langcode: en
+status: true
+dependencies: {  }
+name: open_img_mobile_x2
+label: OPEN_img_mobile_x2
+effects:
+  6fe4b676-57a2-4585-8d07-f4b0834ae709:
+    uuid: 6fe4b676-57a2-4585-8d07-f4b0834ae709
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1120
+      height: 840

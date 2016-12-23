@@ -1,0 +1,15 @@
+uuid: dd1ca20b-36f6-4813-8368-1e5d262832cb
+langcode: en
+status: true
+dependencies: {  }
+name: open_event_mobile_x1
+label: OPEN_event_mobile_x1
+effects:
+  839d18f2-8721-4129-8b10-624d7a415023:
+    uuid: 839d18f2-8721-4129-8b10-624d7a415023
+    id: image_scale
+    weight: 1
+    data:
+      width: 515
+      height: null
+      upscale: false

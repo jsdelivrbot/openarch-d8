@@ -1,0 +1,14 @@
+uuid: fb22924f-185e-4299-a3df-ee32ba3465fd
+langcode: en
+status: true
+dependencies: {  }
+name: open_thumb_widest_3
+label: OPEN_thumb_widest_3
+effects:
+  94ae6e32-3f96-42b7-a3d3-bfa91071a58a:
+    uuid: 94ae6e32-3f96-42b7-a3d3-bfa91071a58a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 346
+      height: 346

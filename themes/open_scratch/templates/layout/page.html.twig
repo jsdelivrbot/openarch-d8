@@ -1,9 +1,9 @@
 
 <div class="container slider grid-target">
 
-    <div class="layout sidebar-layout slider-drawer">
+    <div class="layout sidebar-layout slider-drawer drop--right">
 
-      <div class="wrapper sidebar-wrapper border--right-ltgrey bg--white">
+      <div class="wrapper sidebar-wrapper">
 
         <div class="sidebar">
 
@@ -17,7 +17,9 @@
                     <span class="searchbar__icon"><i class="fa fa-search"></i></span>
                     <span class="searchbar__input"><input type="search" id="search" placeholder="Search..." /><span>
                   </div>
-                </div>  
+                </div> 
+                {# <div class="tag"><h2>Search...</h2></div> #}
+
 
               </aside>
 
@@ -79,7 +81,7 @@
 
     </div> {# end header-wrapper #}
 
-    <div class="layout main-content-layout slider-canvas clearfix">
+    <div class="layout main-content-layout slider-canvas">
 
       <div class="wrapper main-content-wrapper buffer--main-top buffer--main-bottom bg--white">
 
@@ -140,7 +142,7 @@
 
         </div>
 
-        <main class="main-content clearfix" role="main">  
+        <main class="main-content" role="main">  
 
           {% if page.content_gallery %}
             <div id="main-content-gallery" class="region main-content__gallery">
@@ -174,7 +176,7 @@
 
           {% if page.content_facts %}
             <div id="main-content-facts" class="region main-content__facts">
-              <div class="card card--factsheet border--top-grey border--bottom-ltgrey">
+              <div class="card card--factsheet border--bottom-ltgrey">
                 <div class="card__item card__item--spaced-most card__header">
                   <div class="title title--secondary">
                     <h3>Data</h3>

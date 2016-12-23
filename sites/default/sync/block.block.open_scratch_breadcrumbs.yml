@@ -11,7 +11,7 @@ _core:
 id: open_scratch_breadcrumbs
 theme: open_scratch
 region: '-1'
-weight: -25
+weight: -26
 provider: null
 plugin: system_breadcrumb_block
 settings:

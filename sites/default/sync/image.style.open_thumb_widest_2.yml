@@ -1,0 +1,14 @@
+uuid: 2c1d84f6-cab4-498d-aed5-8d7908c7895e
+langcode: en
+status: true
+dependencies: {  }
+name: open_thumb_widest_2
+label: OPEN_thumb_widest_2
+effects:
+  febedb47-91bf-4e19-96f1-4db05fc1753c:
+    uuid: febedb47-91bf-4e19-96f1-4db05fc1753c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 277
+      height: 277

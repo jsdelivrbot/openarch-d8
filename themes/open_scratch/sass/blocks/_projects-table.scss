@@ -8,7 +8,7 @@
 
 	&__table{}
 
-		&__data-year{
+		/*&__data-year{
 
 			@include table-1-col	{ 	display:none;	}
 			@include table-2-col	{ 	width: 10%;	}
@@ -69,7 +69,7 @@
 			@include table-3-col	{ 	width: 8%;	}
 		    @include table-4-col	{ 	width: 7%;	}
 		    @include table-5-col	{	width: 5%;	}			
-		}
+		}*/
 
 		@include table-1-col {
 			&__head				{ display: none; }

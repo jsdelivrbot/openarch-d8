@@ -1,6 +1,6 @@
 uuid: 315e607c-dae6-4d6d-8edd-1bda80b9628e
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.featured_work
@@ -11,8 +11,8 @@ dependencies:
     - open_scratch
 id: views_block__featured_work_block_3
 theme: open_scratch
-region: content_slideshow
-weight: -29
+region: '-1'
+weight: 4
 provider: null
 plugin: 'views_block:featured_work-block_3'
 settings:

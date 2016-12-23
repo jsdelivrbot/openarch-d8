@@ -28,8 +28,8 @@ settings:
   file_directory: thumbnails
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 690x420
-  min_resolution: 160x160
+  max_resolution: ''
+  min_resolution: ''
   alt_field: true
   alt_field_required: true
   title_field: false

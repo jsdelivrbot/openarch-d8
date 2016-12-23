@@ -68,15 +68,33 @@ $card-body-line-height--big:	1.7;
 	}
 	@include mobile {
 
-		font-size:			0.9rem;
+		font-size:			1.0rem;
 		line-height:		1.5rem;
+		margin: 			$base-spacing;
+	}
+	@include narrow {
+
+		font-size:			1.15rem;
+		line-height:		1.875rem;
+		margin: 			$base-spacing;
+	}
+	@include wide {
+
+		font-size:			1.15rem;
+		line-height:		1.875rem;
+		margin: 			$base-spacing;
+	}
+	@include wider {
+
+		font-size:			1.15rem;
+		line-height:		2.0rem;
 		margin: 			$base-spacing;
 	}
 	@include widest {
 
-		font-size:			1.1rem;
+		font-size:			1.15rem;
 		line-height:		2.0rem;
-		font-weight:		bold; 
+		/*font-weight:		bold;*/ 
 		margin: 			$base-spacing;
 	}
 }

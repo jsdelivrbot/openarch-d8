@@ -4,6 +4,14 @@
 	border-bottom: 1px solid #f1f1f1;
 }
 
+.border-top {
+	border-top: 1px solid black;
+}
+
+.border-bottom {
+	border-bottom: 1px solid black;
+}
+
 .border-top-hairline {
 	border-top: 1px solid #f1f1f1;
 }
@@ -22,14 +30,29 @@
 
 .border--bottom-grey {
 	border-bottom: 1px solid grey;
+}
+
+/* factsheet */
+.border--bottom-ltgrey {
+	border-bottom: 1px solid lightgrey;
+}
+
+.border--topbottom-grey {
+	border-bottom: 1px solid grey;
 
 	&:nth-child(1) {
 		border-top: 1px solid grey;
 	}
 }
 
-.border--bottom-ltgrey {
+/* recent news */
+.border--topbottom-ltgrey {
+
 	border-bottom: 1px solid lightgrey;
+
+	&:nth-child(1) {
+		border-top: 1px solid lightgrey;
+	}
 }
 
 .border--top-ltgrey {
@@ -48,14 +71,26 @@
 	}
 }
 
+.drop--right{
+
+	/*box-shadow: -1px 0 13px 0px #999;*/
+	/*box-shadow: -1px -6px 8px 0px #999;*/
+	box-shadow: 1px 0px 8px 0px #999
+}
+
 .bg--white {
 
-	background: white;
+	/*background: white;*/
 }
 
 .bg--dots {
 	
 	background: url('../images/ptgrid-4px-50pct.png');
+}
+
+.bg--lines {
+	
+	background: url('../images/hatch2x4.png');
 }
 
 .hide {
@@ -81,12 +116,16 @@
 .step--right 	{ padding-right: $base-horiz-step; }
 
 
-.space 			{ margin: $base-spacing 0; }
-.space--less 	{ margin: $base-spacing-sml 0; }
-.space--more 	{ margin: $base-spacing-big 0; }
+.spaced 		{ margin: $base-spacing 0; }
+.spaced--less 	{ margin: $base-spacing-sml 0; }
+.spaced--more 	{ margin: $base-spacing-big 0; }
+.spaced--most 	{ margin: $base-spacing-big 0; }
+.spaced--dbl 	{ margin: $base-spacing*2 0; }
+.pspaced 		{ padding: $base-spacing 0; }
 
 .clr-margin--top	{ margin-top: 0; }
 .clr-margin--bottom	{ margin-bottom: 0; }
+
 
 /*$base-row1-height: 		3.75rem; 
 $base-row2-height: 		3.75rem; 
@@ -172,4 +211,11 @@ $buffer-size-bottom:	8.75rem; /*140px;*/
   background: red;
     margin-left: auto;
     margin-right: auto; 
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+.overflow-visible {
+	overflow: visible;
 }

@@ -1,0 +1,14 @@
+uuid: 9322efcd-abf2-4a57-ad48-60f5caae4cd9
+langcode: en
+status: true
+dependencies: {  }
+name: open_img_widest_1
+label: OPEN_img_widest_1
+effects:
+  d40dba72-e5be-4126-9ffc-80e8b84dc8c8:
+    uuid: d40dba72-e5be-4126-9ffc-80e8b84dc8c8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 820
+      height: 410

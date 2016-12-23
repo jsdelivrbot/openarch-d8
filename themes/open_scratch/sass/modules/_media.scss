@@ -58,8 +58,8 @@ $base-media-spacing: 1.5em;
 		@include mobile { width: span(6 of 12); }
 		@include narrow { width: span(4 of 12); }
 		@include wide   { width: span(4 of 12); }
-		@include wider	{ width: span(3 of 12); }
-		@include widest	{ width: span(3 of 12); }
+		@include wider	{ width: span(3 of 12); margin-right: gutter(12);}
+		@include widest	{ width: span(3 of 12); margin-right: gutter(12); }
 	}
 
 	&__img--relation {

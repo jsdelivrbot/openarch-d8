@@ -1,0 +1,15 @@
+uuid: 97ed9bd6-fb75-4568-8606-1075101d9ea6
+langcode: en
+status: true
+dependencies: {  }
+name: open_event_tiny_x1
+label: OPEN_event_tiny_x1
+effects:
+  6ac58d92-3add-4f02-ad50-47e775aaed52:
+    uuid: 6ac58d92-3add-4f02-ad50-47e775aaed52
+    id: image_scale
+    weight: 1
+    data:
+      width: 322
+      height: null
+      upscale: false

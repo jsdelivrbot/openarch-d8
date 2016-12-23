@@ -57,12 +57,14 @@ $susy-grid-12col: (
 
 	font-size: 				$main-base-font-size;
 
-	&__header { margin: 0 gutter(13); }
-	/*&__gallery { margin: 0 gutter(13); }*/
-	&__slideshow { margin: 0; }
-	&__primary { margin: 0 gutter(13); }
-	&__relations { margin: 0 gutter(13); }
-	&__facts { margin: 0 gutter(13); }
+	> * { clear: left; overflow: hidden;}
+
+	&__header { padding: 0 gutter(13); }
+	/*&__gallery { padding: 0 gutter(13); }*/
+	&__slideshow { padding: 0; }
+	&__primary { padding: 0 gutter(13); }
+	&__relations { padding: 0 gutter(13); }
+	&__facts { padding: 0 gutter(13); }
 
 	@inlude tiny {}
 	@include mobile {}
@@ -70,11 +72,11 @@ $susy-grid-12col: (
 
 	@include wide {
 
-		&__header { margin: 0 gutter(10); }
-		&__slideshow { margin: 0 gutter(10); }
-		&__primary { margin: 0 gutter(10); }
-		&__relations { margin: 0 gutter(10); }
-		&__facts { margin: 0 gutter(10); }
+		&__header { padding: 0 gutter(10); }
+		&__slideshow { padding: 0; /*margin: 0 gutter(10);*/ }
+		&__primary { padding: 0 gutter(10); }
+		&__relations { padding: 0 gutter(10); }
+		&__facts { padding: 0 gutter(10); }
 	}
 
 	@include wider {
@@ -84,21 +86,21 @@ $susy-grid-12col: (
 		&__relations { @include span(9 of 12); }
 		&__facts { @include span(9 of 12); }*/
 
-		&__header { margin: 0 gutter(13); }
-		&__slideshow { margin: 0 gutter(13); }
-		&__primary { margin: 0 gutter(13); }
-		&__relations { margin: 0 gutter(13); }
-		&__facts { margin: 0 gutter(13); }
+		&__header { padding: 0 gutter(13); }
+		&__slideshow { padding: 0; /*padding: 0 gutter(13);*/ }
+		&__primary { padding: 0 gutter(13); }
+		&__relations { padding: 0 gutter(13); }
+		&__facts { padding: 0 gutter(13); }
 	}
 
 	@include widest {
 
-		&__header 		{ margin: 0 gutter(19); }
+		&__header 		{ padding: 0 gutter(19); }
 		/*&__gallery		{ margin: 0 gutter(13 1/2); }*/
-		&__slideshow 	{ margin: 0; }
-		&__primary 		{ margin: 0; padding: 0 gutter(19);/*@include span(isolate 8 at 3 of 12); clear: left;*/ }
-		&__relations 	{ clear: left; margin: 0; padding: 0 gutter(19); /*background: url('../images/ptgrid-4px-50pct.png');*/ /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
-		&__facts 		{ clear: left; margin: 0; padding: 0 gutter(19); /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
+		&__slideshow 	{ padding: 0; background: #333; /*overflow:hidden;*/}
+		&__primary 		{ padding: 0; padding: 0 gutter(19);/*@include span(isolate 8 at 3 of 12); clear: left;*/ }
+		&__relations 	{ /*clear: left;*/ margin: 0; padding: 0 gutter(19); /*background: url('../images/ptgrid-4px-50pct.png');*/ /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
+		&__facts 		{ /*clear: left;*/ margin: 0; padding: 0 gutter(19); /*@include span(isolate 8 at 3 of 12); clear: left;*/ }
 	}
 }
 

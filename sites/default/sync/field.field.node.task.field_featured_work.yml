@@ -1,0 +1,38 @@
+uuid: 220a030b-136f-40f7-be93-2dc9e2b936e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_work
+    - node.type.task
+  module:
+    - image
+id: node.task.field_featured_work
+field_name: field_featured_work
+entity_type: node
+bundle: task
+label: 'Featured work'
+description: 'Upload optional image for slideshow on front page'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: frontslides
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

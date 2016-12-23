@@ -30,10 +30,10 @@ MyFullpage = (function($) {
             //Navigation
             menu: '#menu',
             lockAnchors: false,
-            anchors:['firstPage', 'secondPage'],
+            anchors:['firstPage', 'secondPage', 'thirdPage'],
             navigation: false,
             navigationPosition: 'left',
-            navigationTooltips: ['OPEN Manifesto', 'Recent News'],
+            navigationTooltips: ['Featured Work', 'OPEN Manifesto', 'Recent News'],
             showActiveTooltip: false,
             slidesNavigation: true,
             slidesNavPosition: 'bottom',
@@ -41,7 +41,7 @@ MyFullpage = (function($) {
             //Scrolling
             css3: true,
             scrollingSpeed: 700,
-            autoScrolling: true,
+            autoScrolling: false,
             fitToSection: false,
             fitToSectionDelay: 1000,
             scrollBar: true,
@@ -79,7 +79,7 @@ MyFullpage = (function($) {
             fixedElements: '#header, .footer',
             responsiveWidth: 0,
             responsiveHeight: 0,
-            responsiveSlides: false,
+            responsiveSlides: true,
 
             //Custom selectors
             sectionSelector: '.section',

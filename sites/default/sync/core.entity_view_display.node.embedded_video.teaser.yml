@@ -1,0 +1,27 @@
+uuid: 01fe9897-1019-4efe-aac6-958e5df43f96
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.embedded_video.body
+    - node.type.embedded_video
+  module:
+    - text
+    - user
+id: node.embedded_video.teaser
+targetEntityType: node
+bundle: embedded_video
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  langcode: true

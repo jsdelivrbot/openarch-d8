@@ -9,7 +9,7 @@ _core:
 id: open_scratch_page_title
 theme: open_scratch
 region: '-1'
-weight: -15
+weight: -16
 provider: null
 plugin: page_title_block
 settings:

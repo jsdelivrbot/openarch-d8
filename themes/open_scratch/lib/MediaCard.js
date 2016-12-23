@@ -2,7 +2,7 @@
 MediaCard = (function($) {
 
     //cache DOM
-    var $el = $('.card--people');
+    var $el = $('.mediaCard');
     var $media = $el;
     var $img = $el.find('.media__img');
     var $contents = $el.find('.media__contents');

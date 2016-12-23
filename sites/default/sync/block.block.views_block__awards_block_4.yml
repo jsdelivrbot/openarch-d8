@@ -12,7 +12,7 @@ dependencies:
 id: views_block__awards_block_4
 theme: open_scratch
 region: '-1'
-weight: -26
+weight: -27
 provider: null
 plugin: 'views_block:awards-block_4'
 settings:

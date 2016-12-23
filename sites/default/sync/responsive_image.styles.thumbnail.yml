@@ -1,0 +1,75 @@
+uuid: fb354eee-106e-47dc-9fbf-ef0e7eec214a
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.open_thumb_mobile_x1
+    - image.style.open_thumb_mobile_x2
+    - image.style.open_thumb_tiny_x1
+    - image.style.open_thumb_wide_x1
+    - image.style.open_thumb_wide_x2
+    - image.style.open_thumb_widest_1
+    - image.style.open_thumb_widest_2
+    - image.style.open_thumb_widest_3
+  theme:
+    - open_scratch
+id: thumbnail
+label: Thumbnail
+image_style_mappings:
+  -
+    breakpoint_id: open_scratch.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_thumb_wide_x1
+  -
+    breakpoint_id: open_scratch.wide
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_thumb_wide_x2
+  -
+    breakpoint_id: open_scratch.wider
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_thumb_wide_x1
+  -
+    breakpoint_id: open_scratch.wider
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_thumb_wide_x2
+  -
+    breakpoint_id: open_scratch.widest
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 13.5vw
+      sizes_image_styles:
+        - open_thumb_widest_1
+        - open_thumb_widest_2
+        - open_thumb_widest_3
+  -
+    breakpoint_id: open_scratch.narrow
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_thumb_mobile_x1
+  -
+    breakpoint_id: open_scratch.narrow
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_thumb_mobile_x2
+  -
+    breakpoint_id: open_scratch.tiny
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_thumb_tiny_x1
+  -
+    breakpoint_id: open_scratch.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_thumb_mobile_x1
+  -
+    breakpoint_id: open_scratch.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_thumb_mobile_x2
+breakpoint_group: open_scratch
+fallback_image_style: open_thumb_tiny_x1

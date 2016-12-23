@@ -148,6 +148,12 @@
 		margin-left: 0;
 		width:	100%;
 
+		@include wider {
+
+			margin-left: span(3 of 16 wide);
+			width: span(13 of 16);
+		}
+
 		@include widest {
 			/*width: 1200px;*/
 			/*margin: 0 auto;*/

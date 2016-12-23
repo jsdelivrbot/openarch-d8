@@ -1,0 +1,15 @@
+uuid: 166930d7-aa9c-4e77-82c5-6dbcef0f699a
+langcode: en
+status: true
+dependencies: {  }
+name: open_event_moble_x2
+label: OPEN_event_moble_x2
+effects:
+  0b68a357-64d3-4eec-82fa-2eaaf0535e0a:
+    uuid: 0b68a357-64d3-4eec-82fa-2eaaf0535e0a
+    id: image_scale
+    weight: 1
+    data:
+      width: 1030
+      height: null
+      upscale: false

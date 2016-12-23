@@ -9,7 +9,7 @@ dependencies:
     - field.storage.node.field_event_type
     - field.storage.node.field_thumbnail
     - node.type.event
-    - responsive_image.styles.narrow
+    - responsive_image.styles.event_image
   module:
     - datetime
     - flexslider_fields
@@ -521,7 +521,7 @@ display:
           type: flexslider_responsive
           settings:
             optionset: default
-            responsive_image_style: narrow
+            responsive_image_style: event_image
             image_link: ''
             caption: '0'
           group_column: ''

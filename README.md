@@ -214,6 +214,17 @@ change permissions on files directory to 777
 * change base font and sizing
 * remove buffer from front page
 
+#### 0.6.5
+
+* remove body field from award type
+* remove menu option from award form
+* add awards view filter (translation language = interface language selected for page)
+* remove url alias and sticky options from award form display
+* fixed awards external link icon translation issue by replacing {{ directory }} variable with custom defined {{ theme_path }}.
+* add awards content
+* add sort by date to awards
+* fix awards external link (theme degug text breaking it now)
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -261,6 +272,10 @@ change permissions on files directory to 777
 * try to rename open_scratch theme to open_theme or just open
 * document necessity of importing images at 16:10 and leave border for diagrams so they don't get cropped.
 * document import images at 2560, possibly 3840
+* add editor permission
+* change raster icons to vector
+* external link on awards list should only show if link exists.
+* external link on awards list not working
 
 #### ISSUES:
 
@@ -270,6 +285,8 @@ change permissions on files directory to 777
 * people mediaCard.js calls update on page load but not working as expected
 * slider getting stuck in undefined state when drawer is open and window dragged from narrow to wide breakpoint.
 * slider stuck in undef state when load page on wider, then drag to widest.
+* awards icon is not displaying for cn 
+* awards language filter not working, all translations show up
 
 ## Liscense
  

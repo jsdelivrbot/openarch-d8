@@ -201,7 +201,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -245,8 +245,8 @@ display:
           type: link
           settings:
             trim_length: 80
-            url_only: false
-            url_plain: false
+            url_only: true
+            url_plain: true
             rel: '0'
             target: '0'
           group_column: ''
@@ -513,6 +513,19 @@ display:
           reduce_duplicates: false
           plugin_id: list_field
       sorts:
+        field_award_date_value:
+          id: field_award_date_value
+          table: node__field_award_date
+          field: field_award_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: day
+          plugin_id: datetime
         created:
           id: created
           table: node_field_data
@@ -1005,6 +1018,46 @@ display:
               3: {  }
           reduce_duplicates: false
           plugin_id: list_field
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
       filter_groups:
         operator: AND
         groups:

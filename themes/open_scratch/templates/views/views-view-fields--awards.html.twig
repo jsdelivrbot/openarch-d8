@@ -35,12 +35,14 @@
 	</td>
 	<td class="awards-table__data-name">
 		<h7>{{ fields.title.content }}</h7>
+		{# <h7>{{ fields.field_award_link.content }}</h7> #}
 	</td>
 	<td class="awards-table__data-icon data--right">
 		<div class="icon--container">
 	    	{# <div > #}
-	    		<a class="icon icon--img" href="task/{{ nid }}">
-	    			<img src="{{ directory }}/images/arrow1-sml-12px.png">
+	    		{# <a class="icon icon--img" href="http://www.google.com"> #}
+	    		<a class="icon icon--img" href="{{ fields.field_award_link.content }}">
+	    			<img src="{{ theme_path }}/images/arrow1-sml-12px.png">
 	    			{# <i class="fa fa-external-link" aria-hidden="true"></i> #}
 	    		</a>
 	    	{# </div> #}

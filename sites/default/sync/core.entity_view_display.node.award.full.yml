@@ -1,0 +1,73 @@
+uuid: e9121217-63d9-4e52-94d2-8b0ff9c10190
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.award.field_award_country
+    - field.field.node.award.field_award_date
+    - field.field.node.award.field_award_group
+    - field.field.node.award.field_award_link
+    - field.field.node.award.field_relation
+    - node.type.award
+  module:
+    - datetime
+    - link
+    - options
+    - user
+id: node.award.full
+targetEntityType: node
+bundle: award
+mode: full
+content:
+  field_award_country:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_award_date:
+    weight: 3
+    label: above
+    settings:
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_plain
+  field_award_group:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_award_link:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_relation:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  langcode:
+    type: language
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+  links:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

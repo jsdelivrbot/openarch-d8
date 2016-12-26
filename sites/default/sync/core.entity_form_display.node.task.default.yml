@@ -42,25 +42,25 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 6
     settings: {  }
     third_party_settings: {  }
   field_featured_work:
-    weight: 26
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_frontslide:
-    weight: 9
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_relation:
-    weight: 24
+    weight: 22
     settings:
       match_operator: CONTAINS
       size: 60
@@ -68,84 +68,84 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
   field_task_address:
-    weight: 13
+    weight: 11
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_task_city:
-    weight: 12
+    weight: 10
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_task_client:
-    weight: 21
+    weight: 19
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_task_country:
-    weight: 15
+    weight: 13
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_task_principal:
-    weight: 22
+    weight: 20
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_task_program:
-    weight: 19
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_task_region:
-    weight: 14
+    weight: 12
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_task_site:
-    weight: 17
+    weight: 15
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
   field_task_size:
-    weight: 16
+    weight: 14
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
   field_task_status:
-    weight: 20
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-  field_task_team:
-    weight: 23
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-  field_task_type:
     weight: 18
     settings: {  }
     third_party_settings: {  }
     type: options_select
+  field_task_team:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_task_type:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   field_task_year:
-    weight: 11
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
   field_thumbnail:
-    weight: 10
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -153,23 +153,23 @@ content:
     type: image_image
   langcode:
     type: language_select
-    weight: 1
+    weight: 0
     settings: {  }
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 4
+    weight: 7
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60

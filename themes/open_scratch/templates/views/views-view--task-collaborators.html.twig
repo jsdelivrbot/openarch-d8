@@ -37,31 +37,32 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-{# <div class="task-credits">
-	<div class="factsheet">
+  {# <div class="task-credits">
+  	<div class="factsheet">
 
-		<div class="factsheet__header">
-			<h4>Credits</h4>
-		</div>
+  		<div class="factsheet__header">
+  			<h4>Credits</h4>
+  		</div>
 
-		<div class="facts factsheet__facts">
-      		{{ rows }}
-      	</div>
+  		<div class="facts factsheet__facts">
+        		{{ rows }}
+        	</div>
 
-	</div>
-</div> #}
+  	</div>
+  </div> #}
 
-<div class="card card--postit card--facts">
+  <div class="card card--postit card--facts">
 
-  <div class="card__item card__header">
-    <h3 class="title title--secondary">Collaborators</h3>
+    <div class="card__item card__header">
+      <h3 class="title title--secondary">Collaborators</h3>
+    </div>
+
+    <div class="card__item card__item--spaced card__body">
+      {# <ul class="list">{{ rows }}</ul> #}
+      {{ rows }}
+    </div>
+
   </div>
-
-  <div class="card__item card__item--spaced card__body">
-    <ul class="list">{{ rows }}</ul>
-  </div>
-
-</div>
 
   {{ feed_icons }}
 </div>

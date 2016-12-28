@@ -3,25 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.collaborator.body
     - field.field.node.collaborator.field_credit_collaborators
     - field.field.node.collaborator.field_credit_role
     - field.field.node.collaborator.field_credit_task
     - node.type.collaborator
   module:
-    - text
     - user
 id: node.collaborator.default
 targetEntityType: node
 bundle: collaborator
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
   field_credit_collaborators:
     weight: 104
     label: above

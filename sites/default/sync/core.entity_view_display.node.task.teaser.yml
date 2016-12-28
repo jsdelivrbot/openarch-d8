@@ -1,21 +1,23 @@
 uuid: d0dc0366-0664-41f2-bafe-e7cf89a6e09d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.task.body
-    - field.field.node.task.field_frontslide
+    - field.field.node.task.field_featured_work
     - field.field.node.task.field_relation
     - field.field.node.task.field_task_address
     - field.field.node.task.field_task_city
     - field.field.node.task.field_task_client
     - field.field.node.task.field_task_country
+    - field.field.node.task.field_task_principal
     - field.field.node.task.field_task_program
     - field.field.node.task.field_task_region
     - field.field.node.task.field_task_site
     - field.field.node.task.field_task_size
     - field.field.node.task.field_task_status
+    - field.field.node.task.field_task_team
     - field.field.node.task.field_task_type
     - field.field.node.task.field_task_year
     - field.field.node.task.field_thumbnail
@@ -38,17 +40,19 @@ content:
   links:
     weight: 100
 hidden:
-  field_frontslide: true
+  field_featured_work: true
   field_relation: true
   field_task_address: true
   field_task_city: true
   field_task_client: true
   field_task_country: true
+  field_task_principal: true
   field_task_program: true
   field_task_region: true
   field_task_site: true
   field_task_size: true
   field_task_status: true
+  field_task_team: true
   field_task_type: true
   field_task_year: true
   field_thumbnail: true

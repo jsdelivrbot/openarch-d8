@@ -345,12 +345,14 @@ $card-base-font-size:			1rem;
 
 .card.card--task-relations-gallery {
 
+	.card__footer{display:none;} 
+
 	/*margin:		1.5em 0;*/	
-	@include tiny   { .card__header {display:none;} }
-	@include mobile { .card__header {display:none;} }
-	@include narrow { .card__header {display:none;} }
-	@include wide   { .card__header, .relation__footer {display:none;} }
-	@include wider  { .card__header {display:none;} @include span(first 9 of 12); clear: left; }
+	@include tiny   { /*.card__header {display:none;} */}
+	@include mobile { /*.card__header {display:none;}*/ }
+	@include narrow { /*.card__header {display:none;} */}
+	@include wide   { /*.card__header, */.relation__footer {display:none;} }
+	@include wider  { /*.card__header {display:none;}*/ @include span(first 9 of 12); clear: left; }
 
 	@include widest	{ 
 		/*.card__body {display:none;}*/ 

@@ -1,0 +1,23 @@
+uuid: a41b1c14-8014-47a6-a7e0-4d61ee00b419
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_group
+    - node.type.task
+  module:
+    - options
+id: node.task.field_task_group
+field_name: field_task_group
+entity_type: node
+bundle: task
+label: 'Task group'
+description: 'Leave default for OPEN work or change for Pre-OPEN.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'OPEN Work'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

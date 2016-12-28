@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.node.task.body
     - field.field.node.task.field_featured_work
-    - field.field.node.task.field_frontslide
     - field.field.node.task.field_relation
     - field.field.node.task.field_task_address
     - field.field.node.task.field_task_city
     - field.field.node.task.field_task_client
+    - field.field.node.task.field_task_collabs
     - field.field.node.task.field_task_country
+    - field.field.node.task.field_task_credits
+    - field.field.node.task.field_task_group
     - field.field.node.task.field_task_principal
     - field.field.node.task.field_task_program
     - field.field.node.task.field_task_region
@@ -52,13 +54,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-  field_frontslide:
-    weight: 3
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
   field_relation:
     weight: 22
     settings:
@@ -88,6 +83,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_task_collabs:
+    weight: 21
+    settings:
+      rows: 8
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
   field_task_country:
     weight: 13
     settings:
@@ -95,8 +97,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_task_principal:
+  field_task_credits:
     weight: 20
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_task_group:
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -129,11 +138,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-  field_task_team:
-    weight: 21
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   field_task_type:
     weight: 16
     settings: {  }
@@ -145,7 +149,7 @@ content:
     third_party_settings: {  }
     type: datetime_default
   field_thumbnail:
-    weight: 2
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -176,6 +180,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_task_principal: true
+  field_task_team: true
   path: true
   promote: true
   sticky: true

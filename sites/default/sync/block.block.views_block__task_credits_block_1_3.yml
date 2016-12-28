@@ -1,0 +1,30 @@
+uuid: 2eaba747-ecff-41ed-949d-be57c2c13a39
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.task_credits
+  module:
+    - system
+    - views
+  theme:
+    - open_scratch
+id: views_block__task_credits_block_1_3
+theme: open_scratch
+region: content_facts
+weight: -31
+provider: null
+plugin: 'views_block:task_credits-block_1'
+settings:
+  id: 'views_block:task_credits-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/task/*'
+    negate: false
+    context_mapping: {  }

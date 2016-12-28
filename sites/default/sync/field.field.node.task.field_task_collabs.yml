@@ -1,0 +1,19 @@
+uuid: bfea7142-fe08-4eeb-bb1a-f2a916b58ec3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_collabs
+    - node.type.task
+id: node.task.field_task_collabs
+field_name: field_task_collabs
+entity_type: node
+bundle: task
+label: Collaborators
+description: 'Enter List of Collaborators.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

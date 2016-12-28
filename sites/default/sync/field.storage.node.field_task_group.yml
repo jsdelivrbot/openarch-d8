@@ -1,0 +1,27 @@
+uuid: 4ec27bbb-4414-434b-a70b-ef0a8edf9031
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_task_group
+field_name: field_task_group
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'OPEN Work'
+      label: 'OPEN Work'
+    -
+      value: 'Pre - OPEN Work'
+      label: 'Pre - OPEN Work'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+uuid: 7d4ae4cf-04e4-48c7-b0ff-83136dd38cc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.task_collaborators
+  module:
+    - system
+    - views
+  theme:
+    - open_scratch
+id: views_block__task_collaborators_block_1_2
+theme: open_scratch
+region: content_facts
+weight: -30
+provider: null
+plugin: 'views_block:task_collaborators-block_1'
+settings:
+  id: 'views_block:task_collaborators-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/task/*'
+    negate: false
+    context_mapping: {  }

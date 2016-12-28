@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.node.task.body
     - field.field.node.task.field_featured_work
-    - field.field.node.task.field_frontslide
     - field.field.node.task.field_relation
     - field.field.node.task.field_task_address
     - field.field.node.task.field_task_city
     - field.field.node.task.field_task_client
+    - field.field.node.task.field_task_collabs
     - field.field.node.task.field_task_country
+    - field.field.node.task.field_task_credits
+    - field.field.node.task.field_task_group
     - field.field.node.task.field_task_principal
     - field.field.node.task.field_task_program
     - field.field.node.task.field_task_region
@@ -22,10 +24,11 @@ dependencies:
     - field.field.node.task.field_task_year
     - field.field.node.task.field_thumbnail
     - node.type.task
+    - responsive_image.styles.task_image
   module:
     - datetime
-    - image
     - options
+    - responsive_image
     - text
     - user
 id: node.task.default
@@ -36,81 +39,91 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 3
     settings: {  }
     third_party_settings: {  }
   field_featured_work:
-    weight: 120
+    weight: 2
     label: above
     settings:
-      image_style: ''
+      responsive_image_style: task_image
       image_link: ''
     third_party_settings: {  }
-    type: image
-  field_frontslide:
-    weight: 103
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
+    type: responsive_image
   field_relation:
-    weight: 117
+    weight: 17
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   field_task_address:
-    weight: 108
+    weight: 6
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_task_city:
-    weight: 107
+    weight: 5
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_task_client:
-    weight: 116
+    weight: 14
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_task_collabs:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
   field_task_country:
-    weight: 110
+    weight: 8
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_task_credits:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_task_group:
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_task_principal:
-    weight: 118
+    weight: 15
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
   field_task_program:
-    weight: 114
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
   field_task_region:
-    weight: 109
+    weight: 7
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_task_site:
-    weight: 112
+    weight: 10
     label: above
     settings:
       thousand_separator: ''
@@ -118,7 +131,7 @@ content:
     third_party_settings: {  }
     type: number_integer
   field_task_size:
-    weight: 111
+    weight: 9
     label: above
     settings:
       thousand_separator: ''
@@ -126,25 +139,25 @@ content:
     third_party_settings: {  }
     type: number_integer
   field_task_status:
-    weight: 115
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
   field_task_team:
-    weight: 119
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
   field_task_type:
-    weight: 113
+    weight: 11
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
   field_task_year:
-    weight: 105
+    weight: 4
     label: above
     settings:
       format_type: medium
@@ -152,14 +165,23 @@ content:
     third_party_settings: {  }
     type: datetime_default
   field_thumbnail:
-    weight: 104
+    weight: 1
     label: above
     settings:
-      image_style: ''
+      responsive_image_style: task_image
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
+  langcode:
+    type: language
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
   links:
-    weight: 100
-hidden:
-  langcode: true
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

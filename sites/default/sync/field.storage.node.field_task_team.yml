@@ -35,6 +35,27 @@ settings:
     -
       value: Qingbo
       label: Qingbo
+    -
+      value: 'Thomas Batzenschlager'
+      label: 'Thomas Batzenschlager'
+    -
+      value: 'Wu Lan'
+      label: 'Wu Lan'
+    -
+      value: 'John Lim'
+      label: 'John Lim'
+    -
+      value: 'Zhao Yao'
+      label: 'Zhao Yao'
+    -
+      value: 'Ge Ruishi'
+      label: 'Ge Ruishi'
+    -
+      value: 'Sigmund Lerner'
+      label: 'Sigmund Lerner'
+    -
+      value: 'Zhu Deshun'
+      label: 'Zhu Deshun'
   allowed_values_function: ''
 module: options
 locked: false

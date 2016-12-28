@@ -11,7 +11,7 @@ dependencies:
 id: mainnavigation_2
 theme: open_scratch
 region: '-1'
-weight: -17
+weight: -19
 provider: null
 plugin: 'system_menu_block:main'
 settings:

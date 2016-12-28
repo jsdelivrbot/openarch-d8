@@ -225,6 +225,15 @@ change permissions on files directory to 777
 * add sort by date to awards
 * fix awards external link (theme degug text breaking it now)
 
+#### 0.6.6
+
+* change credits to plain text field
+* hide relations block if no results
+* change rendering language on task facts view block to "interface text language selected for page"
+* add task content
+* add task group field
+* 
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -276,6 +285,11 @@ change permissions on files directory to 777
 * change raster icons to vector
 * external link on awards list should only show if link exists.
 * external link on awards list not working
+* remove all custom display settings (teaser, full, etc) from bottom of content type > manage display.
+* make sure all imported images go into raw_images/Y-m
+* handle case when there are no relations for task
+* implement text trimmed/summary with more button
+* 
 
 #### ISSUES:
 

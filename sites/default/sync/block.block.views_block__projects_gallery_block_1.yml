@@ -12,7 +12,7 @@ dependencies:
 id: views_block__projects_gallery_block_1
 theme: open_scratch
 region: '-1'
-weight: -11
+weight: -12
 provider: null
 plugin: 'views_block:projects_gallery-block_1'
 settings:

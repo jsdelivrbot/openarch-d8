@@ -1,0 +1,19 @@
+uuid: dbc0353b-6371-4f19-8b01-342c58746b83
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_task_collabs
+field_name: field_task_collabs
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

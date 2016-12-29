@@ -83,8 +83,8 @@ $link-background-color:		#e5e5e5;
 ## Fonts Size
 ===================================================================== */
 
-$base-h1-font-size:			2.1rem; 	/*	6.25/3 	sitename			*/
-$base-h2-font-size:			1.67rem; 	/*	5/3 	node titles 		*/
+$base-h1-font-size:			1.67rem; 	/*  2.1rem;  */ /*	5/3 	node titles 		*/	/*	6.25/3 	node title			*/
+$base-h2-font-size:			1.25rem; 	/*  headlines */
 $base-h3-font-size:			1.0rem; 	/*	3.75/3 = 1.25 but little too big for underlined caps - secondary titles 	*/
 $base-h4-font-size:			0.84rem; 	/*	2.5/3 	factsheet headers & headlines	*/
 $base-h5-font-size:			0.84rem; 	/*	2.5/3 	factsheet multiline headers (ie. roles)		*/
@@ -127,7 +127,9 @@ $toolbar-font-size: 12px;
 ## Fonts Line Heights
 ===================================================================== */
 $base-line-height: 1.5;
-$base-title-line-height: 1.25; /* 1.25 x 3 = 3.75 */
+$base-line-height-title: 1.25; /* 1.25 x 3 = 3.75 */
+$base-line-height-single: 1;
+$base-line-height-dbl: 2;
 
 $sitename-line-height: 16px;
 $pagetitle-line-height: base-line-height;
@@ -143,7 +145,7 @@ $info-line-height: 14px;
 
 $slide-caption-line-height: $base-line-height;
 
-$manifesto-title-line-height: $base-title-line-height;
+$manifesto-title-line-height: $base-line-height-title;
 
 /* ==================================================================
 ## Vertical Spacing

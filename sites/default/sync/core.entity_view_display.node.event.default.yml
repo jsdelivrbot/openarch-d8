@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_event_city
     - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_date_to
     - field.field.node.event.field_event_type
     - field.field.node.event.field_frontslide
     - field.field.node.event.field_relation
@@ -37,6 +38,14 @@ content:
     type: string
   field_event_date:
     weight: 104
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_event_date_to:
+    weight: 108
     label: above
     settings:
       format_type: medium

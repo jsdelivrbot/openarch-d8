@@ -11,10 +11,10 @@ id: node.event.field_event_date
 field_name: field_event_date
 entity_type: node
 bundle: event
-label: Date
-description: ''
-required: false
-translatable: true
+label: 'From Date'
+description: 'Enter required from date.'
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

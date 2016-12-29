@@ -65,21 +65,17 @@ span {
 	/* only use for local styling */
 }
 
-h1,h2,h3,h4,h5 {
-	line-height: 	$base-title-line-height;
+h1,h2,h3,h4,h5,h6 {
+	line-height: 	$base-line-height-title;
 	/*text-transform: uppercase;*/
 }
 
-h6 { /* facts */
-	line-height: 1.5;
-}
-
 h1 {	font-size: 	$base-h1-font-size;		}
-h2 {	font-size: 	$base-h2-font-size;		}
+h2 {	font-size: 	$base-h2-font-size;	line-height: $base-line-height-single; } /* task/event titles */
 h3 {	font-size: 	$base-h3-font-size;		}
 h4 {	font-size: 	$base-h4-font-size;		}
 h5 {	font-size: 	$base-h5-font-size;		}
-h6 {	font-size:	$base-h6-font-size;		}
+h6 {	font-size:	$base-h6-font-size;	line-height: $base-line-height; } /* facts */
 
 a, a:link, a:visited {
 	color: 				$link-font-color;

@@ -232,7 +232,11 @@ change permissions on files directory to 777
 * change rendering language on task facts view block to "interface text language selected for page"
 * add task content
 * add task group field
-* 
+
+#### 0.6.7
+
+* add event to date
+* increase headline font size and line height
 
 #### TBD
 
@@ -289,7 +293,9 @@ change permissions on files directory to 777
 * make sure all imported images go into raw_images/Y-m
 * handle case when there are no relations for task
 * implement text trimmed/summary with more button
-* 
+* login form needs work
+* make sure non-translatable field are marked non-translatable
+* max-char len for text fields should be more reasonable.
 
 #### ISSUES:
 

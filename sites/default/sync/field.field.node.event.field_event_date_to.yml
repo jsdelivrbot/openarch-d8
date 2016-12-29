@@ -1,0 +1,21 @@
+uuid: 91553915-5ba7-4cee-9547-beb95a855c00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_date_to
+    - node.type.event
+  module:
+    - datetime
+id: node.event.field_event_date_to
+field_name: field_event_date_to
+entity_type: node
+bundle: event
+label: 'To Date'
+description: 'Enter optional to date'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

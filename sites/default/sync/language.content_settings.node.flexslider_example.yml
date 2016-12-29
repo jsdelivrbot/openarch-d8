@@ -1,0 +1,16 @@
+uuid: f714a090-e796-45d1-8cf9-321a4d4e90fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.flexslider_example
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.flexslider_example
+target_entity_type_id: node
+target_bundle: flexslider_example
+default_langcode: site_default
+language_alterable: false

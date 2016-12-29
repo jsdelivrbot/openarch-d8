@@ -1,0 +1,22 @@
+uuid: eeebc5b5-7df9-48e0-97e6-698dfce1ab94
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.jssor_slider
+id: node.jssor_slider.promote
+field_name: promote
+entity_type: node
+bundle: jssor_slider
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

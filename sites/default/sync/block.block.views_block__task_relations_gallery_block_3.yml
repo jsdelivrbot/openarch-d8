@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/task/*\r\n/media/*"
+    pages: "/task/*\r\n/media/*\r\n/event/*"
     negate: false
     context_mapping: {  }

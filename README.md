@@ -238,6 +238,10 @@ change permissions on files directory to 777
 * add event to date
 * increase headline font size and line height
 
+#### 0.6.8
+
+* fix duplication of relations issue
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

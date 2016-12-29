@@ -1,0 +1,18 @@
+uuid: 318ad683-1e1e-466c-ac41-07d00760d227
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.flexslider_example
+id: node.flexslider_example.changed
+field_name: changed
+entity_type: node
+bundle: flexslider_example
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

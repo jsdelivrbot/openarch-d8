@@ -9,6 +9,8 @@ dependencies:
     - field.storage.node.field_thumbnail
     - image.style.temp_191px_
     - node.type.embedded_video
+    - node.type.event
+    - node.type.idea
     - node.type.task
   module:
     - image
@@ -661,6 +663,8 @@ display:
           operator: in
           value:
             embedded_video: embedded_video
+            event: event
+            idea: idea
             task: task
           group: 1
           exposed: false
@@ -2616,6 +2620,11 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: field
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          plugin_id: custom
       rendering_language: '***LANGUAGE_entity_translation***'
       style:
         type: default

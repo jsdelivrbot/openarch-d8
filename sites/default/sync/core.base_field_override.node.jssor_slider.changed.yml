@@ -1,0 +1,18 @@
+uuid: 24f977a9-d29e-451e-b72c-f24139cf7799
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.jssor_slider
+id: node.jssor_slider.changed
+field_name: changed
+entity_type: node
+bundle: jssor_slider
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

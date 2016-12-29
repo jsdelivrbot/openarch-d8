@@ -15,13 +15,14 @@ bundle: embedded_video
 label: Relation
 description: 'Related content.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
+      embedded_video: embedded_video
       idea: idea
       task: task
       video: video

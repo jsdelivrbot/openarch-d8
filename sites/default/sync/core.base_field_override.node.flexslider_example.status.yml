@@ -1,0 +1,22 @@
+uuid: 0ce178fe-8bc4-4460-9ea9-adbf6591d3d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.flexslider_example
+id: node.flexslider_example.status
+field_name: status
+entity_type: node
+bundle: flexslider_example
+label: 'Publishing status'
+description: 'A boolean indicating whether the node is published.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

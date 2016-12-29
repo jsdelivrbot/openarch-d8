@@ -1,0 +1,22 @@
+uuid: ede55b3b-5f4a-49ba-b901-470366efda98
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.jssor_slider
+id: node.jssor_slider.sticky
+field_name: sticky
+entity_type: node
+bundle: jssor_slider
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

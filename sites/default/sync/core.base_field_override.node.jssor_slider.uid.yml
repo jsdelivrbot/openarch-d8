@@ -1,0 +1,20 @@
+uuid: ae9484d2-4638-4a02-bbb0-c9a672f1f413
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.jssor_slider
+id: node.jssor_slider.uid
+field_name: uid
+entity_type: node
+bundle: jssor_slider
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

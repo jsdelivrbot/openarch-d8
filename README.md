@@ -242,6 +242,12 @@ change permissions on files directory to 777
 
 * fix duplication of relations issue
 
+#### 0.6.9
+
+* add views infinite scroll module
+* enable infites scroll for project gallery and events
+* fix infite scroll / flexslider bug
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -311,6 +317,7 @@ change permissions on files directory to 777
 * slider stuck in undef state when load page on wider, then drag to widest.
 * awards icon is not displaying for cn 
 * awards language filter not working, all translations show up
+* views infite scroll not working with flexslider ( temp fix -> added flexslider function to infinite-scroll.js as suggested here -> https://www.drupal.org/node/2317319) but need to make this more robust so update doesn't break it again.
 
 ## Liscense
  

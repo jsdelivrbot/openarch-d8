@@ -32,7 +32,49 @@
 {# <div class="teaser events__teaser border--top-ltgrey"> #}
 
 {# <div class="section"> #} {# data-anchor="{{ fields.title.label }}" #}
-<div class="card video border--top-ltgrey expandable">
+<li class="gallery__item">
+
+	{# <div class="overlay"> #}
+
+		<div class="card__item card__slide">
+			{{ fields.field_video_embed.content }} {# img element #}
+		</div>
+		<div class="card__item card__header">
+
+			<div class="media mediaTitle">
+
+		  		<div class="media__imgR">
+		            <div class="ribbon ribbon--med">
+				      	<div class="ribbon__segments">
+					      	<div class="ribbon__segment">
+				    			<a class="icon icon--bigr icon--mat icon--button-big" href="{{ practice_path }}"><i class="material-icons">arrow_forward</i></a>	
+						    </div>
+					      	{# <div class="ribbon__segment">
+				      			<div class="label">more</div>
+							</div>  #} 	
+						</div>
+				    </div>
+		        </div>
+
+				<div class="media__contents">
+			    	<h3 class="title title--bold">
+			    		{{ fields.title.content }}
+			    	</h3>
+					<h6>
+						{{ fields.type.content }}{{ fields.field_video_type.content }}
+					</h6>
+				</div>
+
+			</div>
+
+		</div>
+
+	{# </div> #}
+
+</li>
+
+
+{# <div class="card video border--top-ltgrey expandable">
 	
 	<input type="checkbox" id="{{ fields.title.content|striptags }}" />
 	<label for="{{ fields.title.content|striptags }}">
@@ -92,5 +134,5 @@
 
 	</div>
 
-</div>
-{# </div> #}
+</div> #}
+

@@ -258,6 +258,13 @@ change permissions on files directory to 777
 * replace translation filter with interface rendering language for project table/gallery views.
 * fix task slideshow image duplication issue
 
+#### 0.6.10
+
+* create updated video gallery
+* change icon hover color to orange
+* add bold title class for videos
+* bleed video gallery on tiny,mobile,narrow breakpoints
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

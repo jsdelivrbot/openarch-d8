@@ -231,6 +231,67 @@
 	
 }
 
+.gallery--videos.gallery {
+
+	.gallery__container{ /*ul*/
+
+		/* overrides */
+		/*@include tiny {		margin-top: gutter(12); }
+		@include mobile {	margin-top: gutter(12); }
+		@include narrow {	margin-top: gutter(12); }
+		@include wide { 	margin-top: gutter(9); }*/
+		@include wider { 	margin-top: gutter(12); }
+		@include widest { 	margin-top: gutter(12); }
+		@include full { 	margin-top: gutter(18); }
+
+	}
+
+	.gallery__item { /*li*/
+
+		@include tiny{		@include gallery-item-1-col; clear: left !important; margin-bottom: 0;}
+		@include mobile{	@include gallery-item-1-col; clear: left !important; margin-bottom: 0;	}
+		@include narrow{	@include gallery-item-1-col; clear: left !important; margin-bottom: 0;	}
+		@include wide{	@include gallery-item-1-col; clear: left !important; margin-bottom: 0; }
+
+		@include wider{		
+			/*@include gallery-item-3-col;*/
+			@include with-layout(12 1) { 
+				@include gallery(6 of 12);
+				/*margin-bottom: gutter(12);*/
+				margin-bottom: 0;
+			}	
+		}
+
+		@include widest{	
+			@include with-layout(12 1) {
+  				/*@include gallery-item-6-col;*/
+  				@include gallery(6 of 12);
+   				/*margin-bottom: gutter(12);*/
+   				margin-bottom: 0;
+			}
+		}
+
+		@include full{	
+			@include with-layout(18 1) {
+  				/*@include gallery-item-6-col;*/
+  				@include gallery(6 of 18);
+   				/*margin-bottom: gutter(18);*/
+   				margin-bottom: 0;
+			}
+		}
+	}
+
+
+		.gallery__item > img,
+		.gallery__item > .overlay { /*li*/
+
+			/* overrides */
+			width:100%;
+			height:auto;
+		}
+	
+}
+
 .overlay {
 
 	position: relative;

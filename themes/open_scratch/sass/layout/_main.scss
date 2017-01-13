@@ -98,9 +98,10 @@ $susy-grid-12col: (
 	&__relations { padding: 0 gutter(13); }
 	&__facts { padding: 0 gutter(13); }
 
-	@inlude tiny {}
-	@include mobile {}
-	@include narrow {}
+	/* bleed videos and correct header */
+	@include tiny 	{ &__primary { .videos { margin: 0 gutter(13)*-1 0 gutter(13)*-1; } .videos .card__header { padding: 0 0 0 gutter(13); } } }
+	@include mobile { &__primary { .videos { margin: 0 gutter(13)*-1 0 gutter(13)*-1; } .videos .card__header { padding: 0 0 0 gutter(13); } } }
+	@include narrow { &__primary { .videos { margin: 0 gutter(13)*-1 0 gutter(13)*-1; } .videos .card__header { padding: 0 0 0 gutter(13); } } }
 
 	@include wide {
 

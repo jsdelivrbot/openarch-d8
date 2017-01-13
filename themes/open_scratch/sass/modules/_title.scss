@@ -52,6 +52,11 @@ $titlebar-title-spacing:	$base-title-spacing;
 	}*/
 }
 
+.title--bold {
+	text-transform: 	uppercase;
+	font-weight: bold;
+}
+
 $card-body-font-size--big:		1.2em;
 $card-body-line-height--big:	1.7;
 

@@ -416,7 +416,8 @@ $card-base-font-size:			1rem;
 	} 
 }
 
-.card.projects-gallery {
+.card.projects-gallery,
+.card.videos {
 
 	@include widest	{ 
 		@include card-layout-vert;  
@@ -456,14 +457,14 @@ $card-base-font-size:			1rem;
 	
 }
 
-.card.events,
-.card.videos {
+/*.card.videos,*/
+.card.events {
 	@include widest	{ @include card-layout-vert; }
 	@include full { @include card-layout-horiz; }
 }
 
-.card.event,
-.card.video {
+/*.card.videos,*/
+.card.event {
 	@include widest	{ @include card-type-12col; }
 	@include full { @include card-type-12col; }
 }

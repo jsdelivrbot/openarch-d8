@@ -2,26 +2,17 @@
 @import "susy";
 @import "su";
 
-/* Setup */
+/* Base */
 @import "reset";
 @import "breakpoints";
 @import "mixins";
 @import "variables";
+
+/* atoms (elements, atomc classes, etc) */
 @import "globals";
 @import "utils";
 
-/* layout */
-@import "./layout/layout";
-@import "./layout/sidebar";
-@import "./layout/header";
-@import "./layout/main";
-@import "./layout/toolbar";
-@import "./layout/slideshow";
-@import "./layout/footer";
-@import "./layout/bar";
-@import "./layout/ribbon";
-
-/* modules (ie components) */
+/* Modules (reusable components) */
 @import "./modules/tags";
 @import "./modules/button";
 @import "./modules/icon";
@@ -38,8 +29,9 @@
 @import "./modules/menu";
 @import "./modules/slider";
 @import "./modules/flexslider";
+@import "./modules/fullpage";
 
-/* blocks */
+/* Cards (Blocks, Views, Rows) */
 @import "./blocks/statement";
 @import "./blocks/relations";
 @import "./blocks/factsheet";
@@ -47,6 +39,17 @@
 @import "./blocks/projects-table";
 @import "./blocks/press-table";
 @import "./blocks/awards-table";
+
+/* layout (Layout and Regions) */
+@import "./layout/layout";
+@import "./layout/sidebar";
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/toolbar";
+@import "./layout/slideshow";
+@import "./layout/footer";
+@import "./layout/bar";
+@import "./layout/ribbon";
 
 /* debug */
 @import "debug";

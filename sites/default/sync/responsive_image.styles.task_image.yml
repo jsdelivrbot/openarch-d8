@@ -8,46 +8,51 @@ dependencies:
     - image.style.open_img_narrow_x1
     - image.style.open_img_narrow_x2
     - image.style.open_img_tiny_x1
-    - image.style.open_img_wide_x1
+    - image.style.open_img_wide_x1_1
+    - image.style.open_img_wide_x1_2
     - image.style.open_img_wide_x2
-    - image.style.open_img_widest_1
-    - image.style.open_img_widest_2
-    - image.style.open_img_widest_3
+    - image.style.open_img_wider_x1
+    - image.style.open_img_wider_x2
+    - image.style.open_img_widest_x1
   theme:
     - open_scratch
 id: task_image
 label: 'Task image'
 image_style_mappings:
   -
-    breakpoint_id: open_scratch.wide
+    breakpoint_id: open_scratch.wider
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: open_img_wide_x1
+    image_mapping: open_img_wider_x1
   -
-    breakpoint_id: open_scratch.wide
+    breakpoint_id: open_scratch.wider
     multiplier: 2x
     image_mapping_type: image_style
-    image_mapping: open_img_wide_x2
+    image_mapping: open_img_wider_x2
   -
-    breakpoint_id: open_scratch.wider
+    breakpoint_id: open_scratch.wide
     multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: open_img_wide_x1
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - open_img_wide_x1_1
+        - open_img_wide_x1_2
   -
-    breakpoint_id: open_scratch.wider
+    breakpoint_id: open_scratch.wide
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: open_img_wide_x2
   -
     breakpoint_id: open_scratch.widest
     multiplier: 1x
-    image_mapping_type: sizes
-    image_mapping:
-      sizes: 50vw
-      sizes_image_styles:
-        - open_img_widest_1
-        - open_img_widest_2
-        - open_img_widest_3
+    image_mapping_type: image_style
+    image_mapping: open_img_widest_x1
+  -
+    breakpoint_id: open_scratch.full
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_img_widest_x1
   -
     breakpoint_id: open_scratch.narrow
     multiplier: 1x
@@ -74,4 +79,4 @@ image_style_mappings:
     image_mapping_type: image_style
     image_mapping: open_img_mobile_x2
 breakpoint_group: open_scratch
-fallback_image_style: open_img_narrow_x1
+fallback_image_style: open_img_tiny_x1

@@ -21,6 +21,7 @@ $ribbon-height:				$base-row2-height;
 	/*height: 					$ribbon-height;
 	line-height:  				$ribbon-height;*/
 	overflow: 					hidden;
+	 
 
 	&__segments {
 
@@ -35,6 +36,12 @@ $ribbon-height:				$base-row2-height;
 		&__segment--left {
 
 			float:						left; /* fill container right to left */
+		}
+
+		&__segment--center{
+
+			float:						none; /* fill container right to left */
+			text-align: 				center;
 		}
 }
 

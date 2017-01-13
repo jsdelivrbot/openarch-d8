@@ -1,0 +1,33 @@
+.fullpage {
+
+	&__asset {
+		@include tiny { display: none !important;}
+		@include mobile { display: none !important; }
+		@include narrow { display: none !important; }
+		@include wide { display: none !important; }
+		@include wider { display: none !important; }
+	}
+	&__section {
+
+	}
+	&__pager--up,
+	&__pager--down {
+		position: absolute;
+    	width: 100%;
+	}
+	&__pager--up {
+		top: 0;
+	}
+	&__pager--down {
+    	bottom: 0;
+	}
+	/*&__pager--black {
+		background: rgba(17, 17, 17, 0.9);
+	}
+	&__pager--white {
+		background: rgba(255, 255, 255, 1);
+	}
+	&__pager--orange {
+		background: rgba(235, 97, 0, 0.9);
+	}*/	
+}

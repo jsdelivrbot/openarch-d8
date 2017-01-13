@@ -52,6 +52,10 @@
 		}
 
 		@include widest {	
+			height: 30px;
+		}
+
+		@include full {	
 			height: 34px;
 		}
 

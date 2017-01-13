@@ -20,5 +20,15 @@ jQuery(document).ready(function($){
         $('.main-content-wrapper').removeClass('buffer--main-top buffer--main-bottom');
     }
 
+    $(function() {
+        // var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+        // var pgurl = window.location.pathname.substr(1);
+        $('.icon').each(function(){
+            if($(this).attr("href") == window.location.pathname.substr(0)) {
+                $(this).addClass("active");
+            }
+        })
+    });
+
 });
 

@@ -101,7 +101,7 @@ $grid-4col: (
     /*margin-top: gutter(12);*/
 }
 
-@mixin gallery-container-snug {
+/*@mixin gallery-container-snug {
 
     @include with-layout((
         gutter-position: before,
@@ -123,7 +123,7 @@ $grid-4col: (
     ));
 
     margin-top: gutter(12);
-}
+}*/
 
 /*@mixin gallery-container-1-col {
 

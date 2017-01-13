@@ -19,7 +19,7 @@ field_name: field_thumbnail
 entity_type: node
 bundle: about
 label: Thumbnail
-description: 'Upload thumbnail image.'
+description: 'Upload one or more images.'
 required: false
 translatable: true
 default_value: {  }
@@ -28,7 +28,7 @@ settings:
   file_directory: thumbnails
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 690x420
+  max_resolution: ''
   min_resolution: ''
   alt_field: true
   alt_field_required: true

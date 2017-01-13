@@ -15,7 +15,7 @@ bundle: image_set
 label: 'Image target'
 description: 'Select a project, idea or event that the image set belongs to.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -27,4 +27,6 @@ settings:
       task: task
     sort:
       field: _none
+    auto_create: false
+    auto_create_bundle: event
 field_type: entity_reference

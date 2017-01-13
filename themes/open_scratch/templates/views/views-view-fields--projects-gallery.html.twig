@@ -29,8 +29,20 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
+{# {{ dump(fields) }} #}
 <li class="gallery__item">
 
-	{{ fields.field_thumbnail.content }} {# img element #}
+	<div class="overlay">
+		<div class="overlay__under">
+			{{ fields.field_thumbnail.content }} {# img element #}
+		</div>
+		<a href="../task/{{ fields.nid.content|striptags }}" class="overlay__over showable__container">
+			<p class="showable__contents">
+	    		{{ fields.title.content }}
+	    		{% if fields.field_task_city.content is not empty %}/ {{ fields.field_task_city.content }}{% endif %}
+	    		{% if fields.field_task_year.content is not empty %}({{ fields.field_task_year.content }}){% endif %}
+	    	</p>
+		</a>
+	</div>
 
 </li>

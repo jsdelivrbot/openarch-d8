@@ -40,11 +40,11 @@
           {% if item.link['#title'] == "English" %}
             {% set a = item.link %}
             {% set a = a|merge({'#title': "EN" }) %}
-            <div class="icon icon--button-big language--icon">{{a}}</div>
+            <div class="icon icon--button-big language--icon english">{{a}}</div>
           {% elseif item.link['#title'] == "Chinese, Simplified" %}
             {% set a = item.link %}
             {% set a = a|merge({'#title': "中文" }) %}
-            <div class="icon icon--button-big language--icon">{{a}}</div>
+            <div class="icon icon--button-big language--icon chinese">{{a}}</div>
           {% endif %}
         {%- else -%}
           {{ item.text }}

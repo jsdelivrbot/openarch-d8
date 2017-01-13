@@ -19,10 +19,9 @@
 	@include wide {}
 	@include wider {}
 	@include widest {}
+	@include full {}
 
 	> .slider-drawer {
-
-		
 
 		@include tiny {
 			width:			75%;
@@ -69,6 +68,14 @@
 		}
 
 		@include widest {
+			width:			15%; /*240px;*/
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+			-webkit-transition: 0 ease all;
+			transition: 0 ease all;
+		}
+
+		@include full {
 			width:			15%; /*240px;*/
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
@@ -161,6 +168,13 @@
 			width: 100%;
 		}
 
+		@include full {
+			/*width: 1200px;*/
+			/*margin: 0 auto;*/
+
+			width: 100%;
+		}
+
 	}
 }
 
@@ -176,21 +190,21 @@
 	> .slider-canvas {
 
 		// margin-left: 25%;
-		// width:	75%;
+		// width: 75%;
 
 		@include tiny {
 			// margin-left: 0;
-			// width:	100%;
+			// width: 100%;
 		}
 
 		@include mobile {
 			// margin-left: 0;
-			// width:	100%;
+			// width: 100%;
 		}
 
 		@include narrow {
 			// margin-left: 0;
-			// width:	100%;
+			// width: 100%;
 		}
 
 		@include wide {
@@ -204,6 +218,13 @@
 		}
 
 		@include widest {
+			margin-left: 15%;
+			width:	85%;
+			/*argin-left: 240px;
+			width:	960px;*/
+		}
+
+		@include full {
 			margin-left: 15%;
 			width:	85%;
 			/*argin-left: 240px;

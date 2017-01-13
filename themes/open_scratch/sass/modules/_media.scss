@@ -60,6 +60,7 @@ $base-media-spacing: 1.5em;
 		@include wide   { width: span(4 of 12); }
 		@include wider	{ width: span(3 of 12); margin-right: gutter(12);}
 		@include widest	{ width: span(3 of 12); margin-right: gutter(12); }
+		@include full	{ width: span(3 of 12); margin-right: gutter(12); }
 	}
 
 	&__img--relation {
@@ -143,7 +144,9 @@ $mediaTitle-spacing-big: 	$base-spacing-big;
 		line-height: $base-row2-height;
 	}
 
-	.media__contents	{	
+	.media__contents	{
+
+		margin-right: 33%;	
 
 		h1, h2, h3, h4, h5, h6 {
 

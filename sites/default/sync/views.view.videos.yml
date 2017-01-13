@@ -584,10 +584,10 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_event_type_value:
-          id: field_event_type_value
-          table: node__field_event_type
-          field: field_event_type_value
+        field_video_type_value:
+          id: field_video_type_value
+          table: node__field_video_type
+          field: field_video_type_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -596,12 +596,12 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_event_type_value_op
-            label: 'Type (field_event_type)'
+            operator_id: field_video_type_value_op
+            label: 'Type (field_video_type)'
             description: ''
             use_operator: false
-            operator: field_event_type_value_op
-            identifier: field_event_type_value
+            operator: field_video_type_value_op
+            identifier: field_video_type_value
             required: false
             remember: false
             multiple: false
@@ -689,6 +689,10 @@ display:
       display_extenders: {  }
       css_class: ''
       use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -722,6 +726,7 @@ display:
         menu_name: main
         enabled: true
       exposed_block: true
+      rendering_language: '***LANGUAGE_entity_translation***'
     cache_metadata:
       max-age: -1
       contexts:

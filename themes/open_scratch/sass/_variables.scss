@@ -22,7 +22,7 @@ $base-font-color-inv: 		#eee; /*#505050;*/
 $lighter-font-color: 		#777;
 $darker-font-color: 		#333;
 $darker-font-color: 		#000;
-$openorange-color: 			#ff9d00;
+$openorange-color: 			#eb6100;
 $opengrey-color: 			#888;
 $link-font-color: 			#333; /*#777;*/ /*#98a6bc;*/
 
@@ -154,7 +154,7 @@ $manifesto-title-line-height: $base-line-height-title;
 $base-row0-height: 		6.25rem; /* Site Header */
 $base-row1-height: 		5.0rem; /* Site Header */
 $base-row2-height: 		3.75rem; /* Card Headers/Footers */ /* (16px x .7em) x 3.75 = 42px; */
-$base-row3-height: 		2.5rem; /* Table Rows */
+$base-row3-height: 		2.5rem; /* Table Rows, menu rows */
 $base-button-height:	2.5rem; /* Icons, Tags, Buttons */
 $base-button-height-sml: 1.25rem; /* Icons, Tags, Buttons */
 $base-button-height-big: 3.75rem;
@@ -195,8 +195,8 @@ $base-title-spacing: 1.5rem;
 ## Buttons (icons, tags, dropdowns)
 ===================================================================== */
 
-$base-button-pad-horiz:		$base-button-pad;
-$base-button-spacing:		0.5em;
+$base-button-pad-horiz:		$base-horiz-step;
+$base-button-spacing:		$base-horiz-nudge;
 
 /* ==================================================================
 ## Table

@@ -15,15 +15,17 @@ html {
     	font-size: 14px;
     }
     @include wide{ /* all and (min-width: 851px) */
-    	font-size: 14px;
+    	font-size: 15px;
     }
     @include wider{ /* all and (min-width: 851px) */
     	font-size: 16px;
     }
     @include widest{ /* all and (min-width: 851px) */
+    	font-size: 16px;
+    }
+    @include full{ /* all and (min-width: 851px) */
     	font-size: 18px;
     }
-    
 }
 
 
@@ -34,7 +36,7 @@ body{
 	/*line-height: 1.125em;*/ /* 16×1.125=18px */
     -webkit-font-smoothing: antialiased;
     font-family: $base-font-family;
-    /*background: whitesmoke;*/
+    /*background: #333;*/
 }
 
 *, *:before, *:after{

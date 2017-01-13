@@ -29,6 +29,7 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
+{#  {{ dump(view.result|length) }} #}
 <div class="slideshow">
 
 	<div class="slideshow__image">
@@ -49,7 +50,7 @@
 					<div class="label"><h6>{{ fields.title.content }}</h6></div> 
 				</span>
 				<span class="ribbon__segment">
-					<div class="label"><h4>3/12</h4></div>
+					<div class="label"><h4>{{ fields.counter.content }}/ {{ view.result|length }}</h4></div>
 				</span>
 
 			</div>

@@ -25,11 +25,14 @@ $footer-base-font-size:		1rem;
 
 .main-footer-wrapper {
 
+	/* temp fix to override width 100% set somewhere */
+	width: initial !important;
+
 	/*@include layout($susy);*/
 	@include layout((
-		gutter-position: 	inside,
+		gutter-position: 	before,
 		columns: 			12,
-		gutters: 			2,
+		gutters: 			1,
 		global-box-sizing: 	border-box
 	));
 
@@ -52,8 +55,14 @@ $footer-base-font-size:		1rem;
 	@include wide {
 		padding: 0 gutter(10);
 	}
-	@include wider {}
+	@include wider {
+		padding: 0 gutter(13);
+	}
 	@include widest {
+		padding: 0; margin: 0 span(3 of 19 wide); /*padding: 0 gutter(19);*/
+		/*background: none;*/
+	}
+	@include full {
 		padding: 0 gutter(19);
 		/*background: none;*/
 	}
@@ -85,6 +94,9 @@ $footer-base-font-size:		1rem;
 		@include widest {
 			display:		none;
 		}
+		@include full {
+			display:		none;
+		}
 	}
 
 	&__middle {
@@ -107,6 +119,9 @@ $footer-base-font-size:		1rem;
 		}
 
 		@include widest {
+			display:		none;
+		}
+		@include full {
 			display:		none;
 		}
 	}

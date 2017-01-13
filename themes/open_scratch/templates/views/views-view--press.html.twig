@@ -37,20 +37,22 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="press">
-    <table class="table press-table__table">
-    	<thead class="press-table__head">
-    		<tr>
-    			<th class="press-table__head-publication-date">Date</th>
-          <th class="press-table__head-publication">Publication</th>
-    			<th class="press-table__head-name">Title</th> 
-    			<th class="press-table__head-icon data--right">Links</th>
-    		</tr>
-    	</thead>
-    	<tbody>
-      		{{ rows }}
-      	</tbody>
-    </table>
+  <div class="card press spaced--more">
+    <div class="card__item card__body">
+      <table class="table press-table__table">
+      	<thead class="press-table__head">
+      		<tr>
+      			<th class="press-table__head-publication-date">Date</th>
+            <th class="press-table__head-publication">Publication</th>
+      			<th class="press-table__head-name">Title</th> 
+      			<th class="press-table__head-icon data--right">Links</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+        	{{ rows }}
+        </tbody>
+      </table>
+    </div>
   </div>
 
   {{ feed_icons }}

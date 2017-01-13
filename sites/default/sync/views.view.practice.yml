@@ -7,7 +7,7 @@ dependencies:
     - field.storage.node.field_thumbnail
     - image.style.iphone_6plus
     - node.type.about
-    - responsive_image.styles.narrow
+    - responsive_image.styles.task_image
   module:
     - flexslider_fields
     - image
@@ -380,7 +380,7 @@ display:
           type: flexslider_responsive
           settings:
             optionset: carousel_with_max_three_slides
-            responsive_image_style: narrow
+            responsive_image_style: task_image
             image_link: ''
             caption: '0'
           group_column: ''

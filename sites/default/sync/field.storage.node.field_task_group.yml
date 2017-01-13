@@ -15,8 +15,11 @@ settings:
       value: 'OPEN Work'
       label: 'OPEN Work'
     -
-      value: 'Pre - OPEN Work'
-      label: 'Pre - OPEN Work'
+      value: 'OPEN Ideas'
+      label: 'OPEN Ideas'
+    -
+      value: 'Pre - OPEN'
+      label: 'Pre - OPEN'
   allowed_values_function: ''
 module: options
 locked: false

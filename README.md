@@ -248,6 +248,16 @@ change permissions on files directory to 777
 * enable infites scroll for project gallery and events
 * fix infite scroll / flexslider bug
 
+#### 0.6.10
+
+* fix pager for featured work slideshow
+* add ideas listing
+* add task group to task
+* add views sort / filters
+* update toolbar style
+* replace translation filter with interface rendering language for project table/gallery views.
+* fix task slideshow image duplication issue
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -306,6 +316,28 @@ change permissions on files directory to 777
 * login form needs work
 * make sure non-translatable field are marked non-translatable
 * max-char len for text fields should be more reasonable.
+* add press/awards relations to task pages
+* delete unused styles (image styles, responsive style, flexslider optionsets, etc.)
+* how to best deal with slider drawer/canvase for wide,wider,widest,full?
+* get rid of mediaCard on people page
+* remove duplication in sidebar__top and main-header  
+* add if toolbar conditional
+* multimedia could be removed, just use task views
+* card relation inconsistent with structure
+* allow upscaling of images!
+* redo icons
+* combine projects gallery and table into single view and use js to switch between them.
+* sort out button/select/dropdown mess
+* remove translation language filter from view. instead set rendering language to interface language. NO, thats not right. Should filter for translation language = interface, then render language = row content!! This is causing issue when list fields are exposed filters so moving that to issues.
+* make sure publish status is active filter for all views. OR maybe remove this for performance.
+* go thru all content types and verify right fields are translatable.
+* break up page.html.twig, extract blocks, etc...
+* consolidate icon and icongallery classes
+* Tooltips!!!
+* remove max image size constraints on images
+* justify people text and probably all body texts.
+* give each thumbnail flexslider slideshow random delay/speed (see [here](http://stackoverflow.com/questions/28854459/how-to-randomize-slideshow-speed-in-flexslider?rq=1) and [here](http://stackoverflow.com/questions/13269438/flexslider-different-slideshow-speed-on-each-slide))
+* add 1.5x multipliers for mobile (supports android)
 
 #### ISSUES:
 
@@ -318,6 +350,7 @@ change permissions on files directory to 777
 * awards icon is not displaying for cn 
 * awards language filter not working, all translations show up
 * views infite scroll not working with flexslider ( temp fix -> added flexslider function to infinite-scroll.js as suggested here -> https://www.drupal.org/node/2317319) but need to make this more robust so update doesn't break it again.
+* Should filter for translation language = interface, then render language = row content!! This is causing issue with projects table/gallery when task group list field is exposed filters AND same list field is NOT translatable. Changing to translatable solve (but then task group discrep can arrise and shouldn't be translatable anyway). Removing translation language filter from view and instead setting rendering language to interface language also solves (but this SHOULD create duplicates in thumb gallery). WRONG Again, correct behavior SHOULD ACTUALLY be to NOT filter by translation AND render by interface BECAUSE, then if you having translated a node, it will STILL show up in listing!!! So real issue seems to be exposed list field causing duplicates. For now, can 
 
 ## Liscense
  

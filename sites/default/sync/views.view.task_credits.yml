@@ -426,7 +426,7 @@ display:
         title: false
         fields: false
       title: Credits
-      rendering_language: '***LANGUAGE_language_interface***'
+      rendering_language: '***LANGUAGE_entity_translation***'
       fields:
         field_task_credits:
           id: field_task_credits
@@ -493,6 +493,7 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'

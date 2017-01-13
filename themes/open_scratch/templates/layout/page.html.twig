@@ -1,20 +1,20 @@
 
 <div class="container slider grid-target">
 
-    <div class="layout sidebar-layout slider-drawer drop--right">
+    <div class="layout sidebar-layout slider-drawer bg--white drop--right">
 
       <div class="wrapper sidebar-wrapper">
 
         <div class="sidebar">
 
-            <div class="sidebar__top">
+            <div class="region sidebar__top">
 
-              <aside class="region sidebar-search" role="complementary">
+              <aside class="card sidebar-search" role="complementary">
 
                 {# {{ page.sidebar_search }} #}
                 <div class="searchbar-wrapper">
                   <div class="searchbar">
-                    <span class="searchbar__icon"><i class="fa fa-search"></i></span>
+                    {# <span class="searchbar__icon"><i class="fa fa-search"></i></span> #}
                     <span class="searchbar__input"><input type="search" id="search" placeholder="Search..." /><span>
                   </div>
                 </div> 
@@ -25,9 +25,9 @@
 
             </div>
 
-            <div class="sidebar__middle buffer--side-top">
+            <div class="region sidebar__middle buffer--side-top">
 
-              <aside class="region sidebar-nav" role="complementary">
+              <aside class="card sidebar-nav" role="complementary">
 
                 {{ page.sidebar_nav }}
 
@@ -35,9 +35,9 @@
 
             </div>
      
-            <div class="sidebar__bottom">
+            <div class="region sidebar__bottom">
 
-              <aside class="region sidebar-links" role="complementary">
+              <aside class="card sidebar-links" role="complementary">
 
                 {# {{ page.sidebar_links }} #} {# <span>CN | EN</span>  #} 
                 <div class="icongallery-wrapper">
@@ -61,88 +61,126 @@
       
     </div> {# end sidebar-layout #}
 
+    <div class="layout bg-layout bg--ltwhitesmoke slider-canvas">
+      <div class="region bg drop--lr bg--white">
+        {# <div class="card bg">
+        </div> #}
+      </div>
+    </div>
+
     <div class="layout main-header-layout slider-canvas">
 
-        <div class="wrapper main-header-wrapper bg--white" role="contentinfo">
+      <div class="wrapper main-header-wrapper region bg--white" role="contentinfo">
 
-          <div class="main-header media">
+        <div class="card main-header media">
 
-              <aside class="region main-header__right media__imgR" role="contentinfo">
-                {{ page.header_right }} 
-              </aside>
+          <aside class="main-header__right media__imgR" role="contentinfo">
+            {{ page.header_right }} 
+          </aside>
 
-              <aside class="region main-header__left media__contents" role="contentinfo">
-                {{ page.header_left }}
-              </aside>
-
-          </div>
+          <aside class="main-header__left media__contents" role="contentinfo">
+            {{ page.header_left }}
+          </aside>
 
         </div>
+
+      </div>
 
     </div> {# end header-wrapper #}
 
     <div class="layout main-content-layout slider-canvas">
 
-      <div class="wrapper main-content-wrapper buffer--main-top buffer--main-bottom bg--white">
+      <div class="wrapper main-content-wrapper "> {# buffer--main-top buffer--main-bottom #}
 
-        <div class="main-content__header">
+        <div class="region main-content__buffer buffer-top bg--white"></div>
 
-          <div class="wrapper toolbar-wrapper" role="contentinfo">
+        <div class="region main-content__header">
 
-            {# <div class="toolbar media">
+          <div class="peekable">
 
-              {% if page.toolbar_right %}
-                <div class="media__imgR" role="contentinfo">
-                  
-                </div>
-              {% endif %}
+            <input type="checkbox" id="toolbar" />
 
-              {% if page.toolbar_left %}
-                <div class="media__contents" role="contentinfo">
-                  {{ page.toolbar_right }} 
-                  {{ page.toolbar_left }}
-                </div>
-              {% endif %}
+            <div class="wrapper toolbar-wrapper peekable-target" role="contentinfo">
 
-            </div> #}
-
-            <div class="toolbar ribbon">
-              <div class="ribbon__segments">
+              {# <div class="toolbar media">
 
                 {% if page.toolbar_right %}
-                  <div class="ribbon__segment" role="contentinfo">
+                  <div class="media__imgR" role="contentinfo">
+                    
+                  </div>
+                {% endif %}
+
+                {% if page.toolbar_left %}
+                  <div class="media__contents" role="contentinfo">
                     {{ page.toolbar_right }} 
-                  </div>
-                {% endif %}
-
-                {% if page.toolbar_right %}
-                  <div class="ribbon__segment" role="contentinfo">
-                    <div class="label"><h6>Views</h6></div>
-                  </div>
-                {% endif %}
-
-                {% if page.toolbar_left %}
-                  <div class="ribbon__segment--left" role="contentinfo">
-                    <a class="icon icon--sml"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
-                  </div>
-                {% endif %}
-
-                {% if page.toolbar_left %}
-                  <div class="ribbon__segment--left" role="contentinfo">
                     {{ page.toolbar_left }}
                   </div>
                 {% endif %}
 
-                
+              </div> #}
+
+              <div class="card toolbar ribbon ribbon--big">
+                <div class="ribbon__segments">
+
+                  {% if page.toolbar_right %}
+                    <div class="ribbon__segment" role="contentinfo">
+                      {{ page.toolbar_right }} 
+                    </div>
+                  {% endif %}
+
+                  {# {% if page.toolbar_right %}
+                    <div class="ribbon__segment" role="contentinfo">
+                      <div class="label"><h3>Views</h3></div>
+                    </div>
+                  {% endif %} #}
+
+                  
+
+                  {% if page.toolbar_left %}
+                    <div class="ribbon__segment--left">
+                          <a class="icon icon--fa" style="background:none"><i class="fa fa-filter" aria-hidden="true"></i></a>
+                      </div>
+                    <div class="ribbon__segment--left" role="contentinfo">
+                      {{ page.toolbar_left }}
+                    </div>
+                  {% endif %}
+    
+                </div>
+              </div>
+
+            </div> {# end toolbar-wrapper #}
+
+            <label for="toolbar">
+
+              <div class="wrapper toolbar-toggle-wrapper peekable-toggle">
+
+                <div class="card toolbar-toggle ribbon ribbon--big">
+                  <div class="ribbon__segments">
+
+                    {# {% if page.toolbar_right %} #}
+                      <div class="ribbon__segment--center">
+                          <a class="icon icon--fa icon--button-big toolbar-toggle-icon unchecked" style="background:none"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                          <a class="icon icon--fa icon--button-big toolbar-toggle-icon checked" style="background:none"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                      </div>
+                    {# {% endif %} #}
+
+                  </div>
+                </div>
+
+                <div class="card toolbar-screen bg--white border--top-ltgrey ribbon ribbon--big">
+                </div>
 
               </div>
-            </div>
 
-          </div> {# end toolbar-wrapper #}
+            </label>
+
+          </div>
 
         </div>
 
-        <main class="main-content" role="main">  
+        <main class="main-content" role="main"> 
+
+
 
           {% if page.content_gallery %}
             <div id="main-content-gallery" class="region main-content__gallery">
@@ -154,14 +192,14 @@
           
           {# <div class="section"> #}
           {% if page.content_slideshow %}
-            <div id="main-content-slideshow" class="region main-content__slideshow slideshow">
+            <div id="main-content-slideshow" class="region main-content__slideshow slideshow bg--dark">
               {{ page.content_slideshow }}
             </div>
           {% endif %}
           {# </div> #}
 
           {# <div class="section"> #}
-            <div id="main-content-primary" class="region main-content__primary">
+            <div id="main-content-primary" class="region main-content__primary bg--white">
               {{ page.content_primary }}
             </div>
           {# </div> #}
@@ -169,17 +207,17 @@
           {# </div> #}
           
           {% if page.content_relations %}
-            <div id="main-content-relations" class="region main-content__relations bg--lines">
+            <div id="main-content-relations" class="region main-content__relations minh--1sp bg--lines">
               {{ page.content_relations }}
             </div>
           {% endif %}
 
           {% if page.content_facts %}
-            <div id="main-content-facts" class="region main-content__facts bg--dark">
-              <div class="card card--factsheet border--bottom-ltgrey">
+            <div id="main-content-facts" class="region main-content__facts bg--white">
+              <div class="card factsheet">
                 <div class="card__item card__item--spaced-most card__header">
                   <div class="title title--secondary">
-                    <h3>Data</h3>
+                    <h2>Data</h2>
                   </div>
                 </div>
                 <div class="card__item card__item--spaced-most-top card__body">
@@ -193,52 +231,58 @@
 
         </main>
 
+        <div class="region main-content__buffer buffer-bottom bg--white"></div>
+
       </div> {# end main-content-wrapper #}
 
-      <div class="wrapper main-footer-wrapper bg--white">
+      <div class="wrapper main-footer-wrapper region bg--white">
 
-        <footer class="footer main-footer" role="contentinfo">
+        <footer class="card footer main-footer" role="contentinfo">
           
           <div id="footer-content-top" class="main-footer__top media border--top-ltgrey">
 
-            <aside class="region main-header__right media__imgR" role="contentinfo">
+            <div>
 
-              <div class="block">
-                <div class="block-content icons">
-                  <div class="icon--container">
-                    <div class="icon"><a><i class="fa fa-weixin" aria-hidden="true"></i></a></div>
-                    <div class="icon"><a><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
-                    <div class="icon"><a><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
-                    <div class="icon"><a><i class="fa fa-rss" aria-hidden="true"></i></a></div>
-                  </div>
-                </div>
-              </div>
+              <aside class="main-header__right media__imgR" role="contentinfo">
 
-              {# {{ page.header_right }}  #}
-            </aside>
-
-            <aside class="region main-header__left media__contents" role="contentinfo">
-
-              <div class="block">
-                <div class="block-content">
-                  <div class="searchbar-wrapper">
-                    <div class="searchbar">
-                      <span class="searchbar__icon"><i class="fa fa-search"></i></span>
-                      <span class="searchbar__input"><input type="search" id="search" placeholder="Search..." /><span>
+                <div class="block">
+                  <div class="block-content icons">
+                    <div class="icon--container">
+                      <div class="icon"><a><i class="fa fa-weixin" aria-hidden="true"></i></a></div>
+                      <div class="icon"><a><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+                      <div class="icon"><a><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+                      <div class="icon"><a><i class="fa fa-rss" aria-hidden="true"></i></a></div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {# {{ page.header_left }} #}
-            </aside>
+                {# {{ page.header_right }}  #}
+              </aside>
+
+              <aside class="main-header__left media__contents" role="contentinfo">
+
+                <div class="block">
+                  <div class="block-content">
+                    <div class="searchbar-wrapper">
+                      <div class="searchbar">
+                        {# <span class="searchbar__icon"><i class="fa fa-search"></i></span> #}
+                        <span class="searchbar__input"><input type="search" id="search" placeholder="Search..." /><span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {# {{ page.header_left }} #}
+              </aside>
+
+            </div>
 
             {# {{ page.footer_top }} #}
           </div>
 
           <div id="footer-content-middle" class="main-footer__middle">
 
-            <aside class="region" role="complementary">
+            <aside role="complementary">
               {{ page.footer }}
             </aside>
 
@@ -246,7 +290,7 @@
 
           <div id="footer-content-bottom" class="main-footer__bottom">
 
-            <aside class="region" role="complementary" >
+            <aside role="complementary" >
 
               <div class="block">
 
@@ -271,7 +315,7 @@
                         <a class="icon icon--fa icon--button-big grid-toggle"><i class="fa fa-github" aria-hidden="true"></i></a>
                       </span>
                       <span class="ribbon__segment--left">
-                        <h6 class="label" style="text-transform:none;">Copyright © 2011, OPEN Architecture.</h6>
+                        <h6 class="label label--nopad" style="text-transform:none;">Copyright © 2011, OPEN Architecture.</h6>
                       </span>
                     </div>
                   </div>

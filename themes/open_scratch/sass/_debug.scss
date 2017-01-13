@@ -2,21 +2,31 @@
 ## Debug
 ===================================================================== */
 
-/*.layout {
+.layout {
 
-	border: solid 1px #333;	
+	/*border: solid 1px #333;	*/
+   /* background: whitesmoke;*/
+   /*background: rgba(237,242,246,.3);*/ /*#edf2f6;*/
+   /*background: white;*/
 
 }
-*/
-/*.region {
 
-	border: solid 1px #ccc;	
+.region {
 
-}*/
-/*.card {
+	/*border: solid 1px blue;	*/
+    /*background: rgba(255,255,255,.8);*/ /*white;*/
+    /*box-shadow: 1px 0px 8px 0px #999;*/
+    @include widest {
+        /*border-right: 1px solid #ccc;
+        border-left: 1px solid #ccc;*/
+        /*box-shadow: 7px 0 8px -9px #999, -7px 0 8px -9px #999;*/
+    }
 
-	border: solid 1px red;
-}*/
+}
+.card {
+
+	/*border: solid 1px red;*/
+}
 
 /* temp */
 .flexslider { margin-bottom:0; }
@@ -38,5 +48,11 @@
     	background: url('../images/grid-19col-grey.png');
     	background-size: 100% 600%;
     	background-repeat: no-repeat;
+    }
+
+    @include full {
+        background: url('../images/grid-19col-grey.png');
+        background-size: 100% 600%;
+        background-repeat: no-repeat;
     }
 }

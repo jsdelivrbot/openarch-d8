@@ -32,29 +32,36 @@
 #}
 {%
   set classes = [
-    dom_id ? 'js-view-dom-id-' ~ dom_id,
+	dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="projects-table">
-    <table class="table projects-table__table">
-      <thead class="projects-table__head">
-        <tr>
-          <th class="projects-table__head-year"><h7>Year</h7></th>
-          <th class="projects-table__head-city"><h7>City</h7></th>
-          <th class="projects-table__head-size"><h7>Size</h7></th> 
-          <th class="projects-table__head-type"><h7>Type</h7></th>
-          <th class="projects-table__head-program"><h7>Program</h7></th>
-          <th class="projects-table__head-name"><h7>Name</h7></th> 
-          <th class="projects-table__head-icon data--right"><h7>Link</h7></th>
-        </tr>
-      </thead>
-    	<tbody>
-      	{{ rows }}
-      </tbody>
-    </table>
-  </div>
+<div class="card projects-table spaced--more">
+	<div class="card__body">
+
+		<table class="table projects-table__table">
+
+			<thead class="projects-table__head">
+				<tr>
+					<th class="projects-table__head-year"><h7>Year</h7></th>
+					<th class="projects-table__head-city"><h7>City</h7></th>
+					<th class="projects-table__head-size"><h7>Size</h7></th> 
+					<th class="projects-table__head-type"><h7>Type</h7></th>
+					<th class="projects-table__head-program"><h7>Program</h7></th>
+					<th class="projects-table__head-name"><h7>Name</h7></th> 
+					<th class="projects-table__head-icon data--right"><h7>Link</h7></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{{ rows }}
+			</tbody>
+
+		</table>
+		
+	</div>
+</div>
 
   {{ feed_icons }}
 </div>

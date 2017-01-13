@@ -40,7 +40,7 @@ $sidebar-footer-height: 	$base-row2-height;
 
 	@include tiny {
 		padding: 0;
-		.sidebar__top,
+		/*.sidebar__top,*/
 		.sidebar__bottom {padding:	0 8%;}
 		/*background: #333;
 		.menu li { border-color: #5a5a5a; }
@@ -51,7 +51,7 @@ $sidebar-footer-height: 	$base-row2-height;
 
 	@include mobile {
 		padding: 0;
-		.sidebar__top,
+		/*.sidebar__top,*/
 		.sidebar__bottom {padding:	0 8%;}
 		/*background: #333;
 		.menu li { border-color: #5a5a5a; }
@@ -62,8 +62,8 @@ $sidebar-footer-height: 	$base-row2-height;
 
 	@include narrow {
 		padding: 0;
-		.sidebar__top,
-		.sidebar__bottom {padding:	0 8%;}
+		/*.sidebar__top,*/
+		.sidebar__bottom {padding:	0 10%;}
 /*		background: #333;
 		.menu li { border-color: #5a5a5a; }
 		span, a, a:link, a:visited{ color: $base-font-color-inv; }
@@ -75,8 +75,8 @@ $sidebar-footer-height: 	$base-row2-height;
 
 		/*padding:		0 8%;*/
 		padding: 0;
-		.sidebar__top,
-		.sidebar__bottom {padding:	0 8%;}
+		/*.sidebar__top,*/
+		.sidebar__bottom {padding:	0 10%;}
 		/*background: #fcfcfc;*/
 
 	}
@@ -85,8 +85,8 @@ $sidebar-footer-height: 	$base-row2-height;
 
 		/*padding:		0 8%;*/
 		padding: 0;
-		.sidebar__top,
-		.sidebar__bottom {padding:	0 8%;}
+		/*.sidebar__top,*/
+		.sidebar__bottom {padding:	0 10%;}
 		/*background: #fcfcfc;*/
 	}
 
@@ -94,8 +94,17 @@ $sidebar-footer-height: 	$base-row2-height;
 
 		/*padding:		0 8%;*/
 		padding: 0;
-		.sidebar__top,
-		.sidebar__bottom {padding:	0 8%;}
+		/*.sidebar__top,*/
+		.sidebar__bottom {padding:	0 10%;}
+		background: #fcfcfc;
+	}
+
+	@include full {
+
+		/*padding:		0 8%;*/
+		padding: 0;
+		/*.sidebar__top,*/
+		.sidebar__bottom {padding:	0 10%;}
 		background: #fcfcfc;
 	}
 
@@ -127,8 +136,8 @@ $sidebar-footer-height: 	$base-row2-height;
 			height: 			$base-row2-height;
 		}
 		@include mobile {
-			line-height: 		$base-row2-height;	
-			height: 			$base-row2-height;
+			line-height: 		$base-row1-height;	
+			height: 			$base-row1-height;
 		}
 		@include narrow {
 			line-height: 		$base-row1-height;	
@@ -143,6 +152,10 @@ $sidebar-footer-height: 	$base-row2-height;
 			height: 			$base-row1-height;
 		}
 		@include widest {
+			line-height: 		$base-row0-height;	
+			height: 			$base-row0-height;
+		}
+		@include full {
 			line-height: 		$base-row0-height;	
 			height: 			$base-row0-height;
 		}

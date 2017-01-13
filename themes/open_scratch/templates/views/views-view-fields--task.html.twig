@@ -35,6 +35,7 @@
 	{# <div class="node__title">
 		<h2>{{ fields.title.content }}</h2>
 	</div> #}
+	{# {{ dump(fields.field_task_city ) }} #}
 	<div class="card__item card__item--spaced-most card__header media mediaTitle mediaTitle--big">
 
 		{# <div class="media mediaTitle"> #}
@@ -58,7 +59,12 @@
 	        </div>
 
 			<div class="media__contents">
-		    	<h2>{{ fields.title.content }}</h2>
+		    	<h1>
+		    		{{ fields.title.content }}
+		    		{# {% if fields.field_task_city.content is not empty %}, {{ fields.field_task_city.content }}{% endif %}
+		    		{% if fields.field_task_country.content is not empty %}, {{ fields.field_task_country.content }}{% endif %}
+		    		{% if fields.field_task_year.content is not empty %}, {{ fields.field_task_year.content }}{% endif %} #}
+		    	</h1>
 			</div>
 
 		{# </div> #}

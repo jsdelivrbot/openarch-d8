@@ -2,28 +2,45 @@ MyFullpage = (function($) {
 
     //hold state
     var isWidest = (Breakpoint.isWidest());
+    var isFull = (Breakpoint.isFull());
 
     //cache DOM
     var $el = $('.fullpage');
+    var $header = $('.main-header');
+    var $nameplate = $('.nameplate');
+    var $manifesto = $('.manifesto');
+    var $news = $('.recent-news');
 
     $(document).ready(function() {
 
         // init();
-        if (Breakpoint.isWidest() && (window.location.pathname == "/" || window.location.pathname == "/openarch-d8/")) { init(); }
-        if (Breakpoint.isWidest() && (window.location.pathname == "/events" || window.location.pathname == "/openarch-d8/events")) { initHoriz(); }
+        if ((Breakpoint.isFull() || Breakpoint.isWidest())
+            && (window.location.pathname == "/" || window.location.pathname == "/openarch-d8/")) { 
+                    init(); 
+            }
+        // if (Breakpoint.isWidest() 
+        //     && (window.location.pathname == "/events" || window.location.pathname == "/openarch-d8/events")) { initHoriz(); }
     });
 
     $(window).resize(function() {
 
         wasWidest = isWidest;
+        wasFull = isFull;
         isWidest = (Breakpoint.isWidest());
+        isFull = (Breakpoint.isFull());
+        onFrontPage = window.location.pathname == "/" || window.location.pathname == "/openarch-d8/";
 
-        if(!wasWidest && isWidest) { init() }
-        if(wasWidest && !isWidest) { destroy() }
+        if(onFrontPage && (!(wasWidest || wasFull) && (isWidest || isFull))) { init() }
+        if(onFrontPage && ((wasWidest || wasFull) && !(isWidest || isFull))) { destroy() }
+
+        // if(!wasFull && isFull) { init() }
+        // if(wasFull && !isFull) { destroy() }
         
     });
 
     function init() {
+
+        $header.hide();
 
         $('#fullpage').fullpage({
 
@@ -44,7 +61,7 @@ MyFullpage = (function($) {
             autoScrolling: false,
             fitToSection: false,
             fitToSectionDelay: 1000,
-            scrollBar: true,
+            scrollBar: false,
             easing: 'easeInOutCubic',
             easingcss3: 'ease',
             loopBottom: false,
@@ -73,23 +90,43 @@ MyFullpage = (function($) {
             //Design
             controlArrows: true,
             verticalCentered: true,
-            sectionsColor : [ 'rgba(255,255,255,.1)', 'rgba(255,255,255,.9)'],
+            sectionsColor : [ 'rgba(255,255,255,.1)', 'rgba(235, 97, 0, 0.9)', 'rgba(255,255,255,.8)'],
             paddingTop: '0',
             paddingBottom: '0',
-            fixedElements: '#header, .footer',
+            // fixedElements: '.section__header, .section__footer',
             responsiveWidth: 0,
             responsiveHeight: 0,
-            responsiveSlides: true,
+            responsiveSlides: false,
 
             //Custom selectors
-            sectionSelector: '.section',
-            slideSelector: '.slide',
+            sectionSelector: '.fullpage__section',
+            slideSelector: '.fullpage__slide',
 
             lazyLoading: false,
 
             //events
-            onLeave: function(index, nextIndex, direction){},
-            afterLoad: function(anchorLink, index){},
+            onLeave: function(index, nextIndex, direction){
+                if (index == 3){
+                    $header.fadeOut();
+                }
+                if (index == 1){
+                    $nameplate.fadeOut();
+                }
+                // if (index == 2){
+                //     $manifesto.fadeOut();
+                // }
+            },
+            afterLoad: function(anchorLink, index){
+                if (index == 3){
+                    $header.fadeIn();
+                }
+                if (index == 1){
+                    $nameplate.fadeIn();
+                }
+                // if (index == 2){
+                //     $manifesto.fadeIn();
+                // }
+            },
             afterRender: function(){},
             afterResize: function(){},
             afterResponsive: function(isResponsive){},

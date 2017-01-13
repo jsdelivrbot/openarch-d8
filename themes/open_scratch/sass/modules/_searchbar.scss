@@ -10,18 +10,18 @@
 ## Config
 ===================================================================== */
 
-$searchbar-base-font-size:      1rem;
-$searchbar-input-height:        40px;
+$searchbar-base-font-size:      1.1rem; /*$base-h3-font-size;*//*1rem;*/
+$searchbar-input-height:        $base-row1-height; /*40px;*/
 $searchbar-width:               100%;
 
-$searchbar-input-bg-color:      #f9f9f9;
+$searchbar-input-bg-color:      #f7f7f7;
 $searchbar-input-bg-color-inv:  #333;
 $searchbar-hover-bg-color:      #e5e5e5;
 $searchbar-icon-color:          #333;
 $searchbar-input-color:         #333;
 $searchbar-placeholder-color:   #333;
 
-$searchbar-input-font-size:     9pt;
+$searchbar-input-font-size:     $base-h3-font-size;
 
 /* ==================================================================
 ## Layout
@@ -32,7 +32,7 @@ $searchbar-input-font-size:     9pt;
   width: 100%;
 }
  
-.searchbar{
+.searchbar{              
 
   display:                  inline-block;
   height:                   $searchbar-input-height;
@@ -72,14 +72,18 @@ $searchbar-input-font-size:     9pt;
 
   &__input > input#search{
 
+      font-family:            $base-font-family !important;
+      font-size:              $searchbar-input-font-size !important;
+      color:                  $searchbar-input-color !important;
+      font-weight:           bold !important;
+      border:                 none !important;
+      
       width:                  100%;
       line-height:            $searchbar-input-height;
-      background:             inherit; /*$searchbar-input-bg-color;*/
-      border:                 none;
-      font-size:              $searchbar-input-font-size;
+      background:             inherit; 
       float:                  left;
-      color:                  $searchbar-input-color;
-      padding-left:           40px;
+      
+      padding-left:           gutter(3.5 1);
       -webkit-border-radius:  5px;
       -moz-border-radius:     5px;
       border-radius:          5px;
@@ -91,7 +95,21 @@ $searchbar-input-font-size:     9pt;
       @include wider  {}*/
   }
 
-  /*&__input > input#search::-webkit-input-placeholder {
+  /* remove glowing blue border on focus */
+  &__input > input:focus {
+    outline:none;
+  }
+
+  /* remove input "x" reset button */
+  &__input > input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+  &__input > input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+  &__input > input[type="search"]::-webkit-search-decoration,
+  &__input > input[type="search"]::-webkit-search-cancel-button,
+  &__input > input[type="search"]::-webkit-search-results-button,
+  &__input > input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+  /* placeholder text color */
+  &__input > input#search::-webkit-input-placeholder {
      color: $searchbar-placeholder-color;
   }
   &__input > input#search:-moz-placeholder { 
@@ -102,7 +120,7 @@ $searchbar-input-font-size:     9pt;
   }
   &__input > input#search:-ms-input-placeholder {  
      color: $searchbar-placeholder-color;  
-  }*/
+  }
 
 }
 

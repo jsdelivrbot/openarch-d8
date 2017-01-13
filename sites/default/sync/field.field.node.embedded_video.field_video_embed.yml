@@ -14,7 +14,7 @@ bundle: embedded_video
 label: 'Video url'
 description: 'Url of video hosted on supported third-party site.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

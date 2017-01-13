@@ -20,5 +20,8 @@ function open_scratch_preprocess(&$variables, $hook)
     $variables['projects_gallery_path'] = Url::fromUri('internal:/projects/gallery')->toString();
     $variables['projects_table_path'] = Url::fromUri('internal:/projects/table')->toString();
     $variables['projects_teasers_path'] = Url::fromUri('internal:/projects/teasers')->toString();
+    $variables['task_path'] = Url::fromUri('internal:/task')->toString();
 
 }
+
+//kint($variables);

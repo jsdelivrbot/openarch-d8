@@ -11,7 +11,7 @@ $button-base-font-size:		.8em;
 $button-pad-horiz:			$base-button-pad-horiz;
 $button-height:				$base-button-height;
 
-$button-bg-color:			white; /*#f9f9f9;*/
+$button-bg-color:			#f5f5f5; /*#f9f9f9;*/
 $button-hover-bg-color:		#e5e5e5;
 
 /* ==================================================================
@@ -20,12 +20,15 @@ $button-hover-bg-color:		#e5e5e5;
 
 .button{ /* button */
 
-	font-size: 				$button-base-font-size;
+	/*font-size: 				$button-base-font-size;*/
 
 	height: 				$button-height; /*35px;*/
-	padding-left: 			$button-pad-horiz; /*prev 1em*/
+	padding-left: 			$base-button-pad-horiz; /*prev 1em*/
+	padding-right: 			$base-button-pad-horiz;
+	margin-right: 			$base-button-spacing;
+	/*margin-left:			$base-button-spacing;*/
 
-	background:				$button-bg-color;
+	/*background:				$button-bg-color;*/
 
 	&:hover{
 		background:			$button-hover-bg-color;

@@ -20,15 +20,15 @@ entity_type: node
 bundle: image_set
 label: 'Image files'
 description: 'Upload one or more images. click "add another item" for next image, browse to image, then click "upload". Do this for each subsequent image.'
-required: false
-translatable: true
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: imagesets
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 690x420
+  max_resolution: ''
   min_resolution: ''
   alt_field: true
   alt_field_required: true
@@ -36,7 +36,7 @@ settings:
   title_field_required: false
   default_image:
     uuid: ''
-    alt: ''
+    alt: '[site:name] - [current-page:title]'
     title: ''
     width: null
     height: null

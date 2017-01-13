@@ -43,6 +43,13 @@ $titlebar-title-spacing:	$base-title-spacing;
 
 	text-decoration: 	underline;
 	text-transform: 	uppercase;
+
+	/*@include widest {
+	    margin-right: 33%
+	}
+	@include full {
+	    margin-right: 33%
+	}*/
 }
 
 $card-body-font-size--big:		1.2em;
@@ -93,8 +100,17 @@ $card-body-line-height--big:	1.7;
 	}
 	@include widest {
 
-		font-size:			1.15rem;
+		font-size:			1.25rem;
 		line-height:		2.0rem;
+		color:				white;
+		/*font-weight:		bold;*/ 
+		margin: 			$base-spacing;
+	}
+	@include full {
+
+		font-size:			1.25rem;
+		line-height:		2.0rem;
+		color:				white;
 		/*font-weight:		bold;*/ 
 		margin: 			$base-spacing;
 	}

@@ -103,6 +103,7 @@ $card-base-font-size:			1rem;
 		@include wide   { width: 66% }
 		@include wider  { width: 66% }
 		@include widest	{ width: 75% }
+		@include full	{ width: 75% }
 	}
 
 	&__slide--medium 	{	
@@ -113,6 +114,7 @@ $card-base-font-size:			1rem;
 		@include wide   { width: 100% }
 		@include wider  { width: 75% }
 		@include widest	{ width: 75% }
+		@include full	{ width: 75% }
 	}
 
 	&__body > p {
@@ -172,274 +174,357 @@ $card-base-font-size:			1rem;
 }
 
 /* ==================================================================
-## Temp Subclasses
+## card types (ie. subclasses) - CARD-GRID-3COL
 ===================================================================== */
 
-/* card types (ie. subclasses) */
+/* 
+ * card--task-main 
+ */
+@mixin card-layout-horiz { 
 
-.card--practice-main.card {
+	@include span(isolate 12 at 4 of 18); 
+	clear: left;
+	float: none;
+}
 
-	@include widest	{ 
+@mixin card-layout-vert { 
 
-		margin: $base-spacing-huge 0 0 0;
+	padding: 0 gutter(13);
+	clear: left;
+	float: none;
+}
 
-		@include span(isolate 8 at 3 of 12); clear: left;
-		
-		.card__header { 
-			@include with-layout(12 1/2) {
-				@include span(first 2 of 8); 
-			}
-			/*margin-top: 2rem;*/ /* top align body with header */
-
-			/*float:left; width: 25%;*/ 
-		}	
-		.card__body { 
-			@include with-layout(12 1/2) {
-				@include span(last 6 of 8); 
-			}
-			float: right;  
-			/*margin-top: 1rem;*/ /* top align body with header */
-
-			/*float:right; width: 75%; padding: $base-spacing;*/
-		}
-		.card__footer { 
-			@include with-layout(12 1/2) {
-				@include span(last 6 of 8); 
-			}
-			clear: right; 
-			float: right; 
-
-			/*float:right; width: 25%;*/ 
-		}
+@mixin card-type-3col { 
+	
+	> .card__header { 
+		@include span(first 4 of 12); 
+	}	
+	> .card__body { 
+		@include span(last 8 of 12); 
+		float: right;  
+	}
+	> .card__footer { 
+		@include span(last 8 of 12); 
+		clear: right; 
+		float: right; 
 	}
 }
 
-.card.profile--card { 
+@mixin card-type-4col { 
 
-	border: none;
+	> .card__header { 
+		@include span(first 3 of 12); 
+	}	
+	> .card__body { 
+		@include span(last 9 of 12); 
+		float: right;  
+	}
+	> .card__footer { 
+		@include span(last 9 of 12); 
+		clear: right; 
+		float: right; 
+	}
+}
 
-	.card--body{
-		/*margin-bottom: 50px;*/
+@mixin card-type-12col	{ /* events, videos */
+
+	.card__header h2 { 
+		/*font-size: $base-h2-font-size;
+		line-height: 1.67rem !important;*/
+		/*margin-right: span(3 of 12);*/
+	}
+
+	.card__slide {
+		@include span(isolate 10 at 2 of 12); float: none;
+		margin-top: gutter(12);
+		margin-bottom: gutter(12);
+	}
+
+	.card__body { 
+		float: none; 
+	}
+
+	.card__footer { 
+		float: none; 
+	}
+}
+
+.card.manifesto {
+
+	@include widest	{ 
+		> .card__header { display: none; }
+		> .card__footer { display: none; }  
+		@include card-layout-vert;
+		/*@include span(isolate 8 at 3 of 12); 
+		float: none;*/
 	} 
+	@include full { 
+		> .card__header { display: none; } 
+		> .card__footer{ display: none; } 
+		@include card-layout-horiz;
+		/*@include span(isolate 8 at 3 of 12); 
+		float: none;*/
+	} 
+}
+
+
+.card.recent-news {
+
+	@include widest	{ 
+		> .card__header {  }
+		> .card__footer { display: none; }  
+		@include card-layout-vert;
+		/*@include span(isolate 8 at 3 of 12); 
+		float: none;*/
+	} 
+	@include full { 
+		> .card__header {  } 
+		> .card__footer{ display: none; } 
+		@include card-layout-horiz;
+		@include card-type-4col;
+		/*@include span(isolate 8 at 3 of 12); 
+		float: none;*/
+	} 
+}
+
+/*.card.card--news {
+
+	@include widest	{ @include span(isolate 8 at 3 of 12); } 
+	@include full	{ @include span(isolate 8 at 3 of 12); } 
+}*/
+
+.card.task-main { /* card--basic */
+
+	@include wider {
+		/*@include span(first 9 of 12); clear: left;*/
+	}
+	@include widest	{ 
+		@include card-layout-vert;
+		@include card-type-3col;
+		margin-bottom: $base-spacing-sml;
+		margin-top: $base-spacing-sml;
+	}
+	@include full { 
+		@include card-layout-horiz;
+		@include card-type-3col;
+		margin-bottom: $base-spacing-huge;
+		margin-top: $base-spacing-huge;
+	}
+}
+
+.card.task-relations-gallery {
+
+	.card__footer{display:none;} 
+
+	/*
+	@include tiny   {  }
+	@include mobile { }
+	@include narrow { }
+	@include wide   { }
+	*/
+	@include wider  {  
+		@include card-type-4col;
+	}
+	@include widest	{ 
+		@include card-layout-vert;
+		@include card-type-4col;
+		border-top: none;
+		margin-bottom: $base-spacing-sml;
+		margin-top: $base-spacing-sml;
+	}
+	@include full { 
+		@include card-layout-horiz;
+		@include card-type-4col;
+		border-top: none;
+		margin-bottom: $base-spacing-huge;
+		margin-top: $base-spacing-huge;
+	}
+}
+
+.card.factsheet {
+
+	@include tiny   { > .card__header { display: none; } }
+	@include mobile { > .card__header { display: none; } }
+	@include narrow { > .card__header { display: none; } }
+	@include wide   { /*> .card__header { display: none; }*/ }
+	@include wider  {  
+		@include card-type-4col;
+	}
+	@include widest	{ 
+		@include card-layout-vert;
+		@include card-type-4col;
+		border-top: none;
+		/*margin-bottom: $base-spacing-sml;
+		margin-top: $base-spacing-sml;*/
+	}
+	@include full { 
+		@include card-layout-horiz;
+		@include card-type-4col;
+		border-top: none;
+		/*margin-bottom: $base-spacing-sml;*/
+		margin-top: $base-spacing-sml;
+	}
+
+}
+
+.card.facts {
+
+	/*.card__item { float: none; }*/
+}
+
+.card.practice {
+
+	&__slideshow {}
+	&__main {
+
+		@include widest	{ 
+			margin-top: $base-spacing-huge;
+			@include card-layout-vert;
+			@include card-type-4col;
+		}
+		@include full { 
+			margin-top: $base-spacing-huge;
+			@include card-layout-horiz;
+			@include card-type-4col;
+		}
+	}
 }
 
 .card.people {
 
-	&__thumb {
+	@include widest	{ 
+		@include card-layout-vert;  
+		float: none;
+	} 
+	@include full	{ 
+		@include card-layout-horiz;  
+		float: none;
+	} 
+}
+
+.card.press,
+.card.awards,
+.card.projects-table {
+
+	@include widest	{ 
+		@include card-layout-vert;  
+		float: none;
+	} 
+	@include full	{ 
+		/*@include card-layout-horiz;  
+		float: none;*/
+	} 
+}
+
+.card.projects-gallery {
+
+	@include widest	{ 
+		@include card-layout-vert;  
+		float: none;
+	} 
+	@include full	{ 
 		
-	}
-
-	&__body > p {
-
-		/*font-size: 		$card-body-font-size;*/
-		/*line-height: 		1.2;*/
-		/*color: 			$card-body-font-color;*/
-	}
-
-	@include widest	{ 
-		@include span(isolate 8 at 3 of 12);  
-		float: none;
 	} 
 }
 
-.card.jobs {
+.card.toolbar {
 
 	@include widest	{ 
-		@include span(isolate 8 at 3 of 12);  
+		@include card-layout-vert;  
 		float: none;
 	} 
-}
-
-.card.card--events {
-
-	/*max-width:750px;*/
-}
-
-.card.card--event {
-
-	@include tiny   {  }
-	@include mobile {  }
-	@include narrow {  }
-	@include wide   {  }
-	@include wider  {  }
-	@include widest	{ 
-		@include span(isolate 12 at 4 of 18 wider);   
-		float: none;
-		/*background: whitesmoke;*/
-
-		.card__header h3 { 
-			font-size: $base-h2-font-size;
-			line-height: 1.67rem !important;
-		}
-
-		.card__slide {
-			@include span(isolate 10 at 2 of 12); float: none;
-			margin-top: gutter(12) *.5;
-			margin-bottom: gutter(12) *.5;
-		}
-
-		.card__body { 
-			float: none; 
-
-			/*p {font-size: 1.2;}*/
-		}
-
-		.card__footer { float: none; }
-	} 
-}
-
-.card.card--task-slideshow {
-
-	@include wider {
-
-		/*@include span(first 9 of 12); clear: left;*/
-
-	}
-}
-
-.card.card--task-main {
-
-	/*max-width:750px;*/
-
-	@include wider {
-
-		@include span(first 9 of 12); clear: left;
-
-	}
-
-
-	@include widest	{ 
-
-		margin: $base-spacing-huge 0 0 0;
-
-		@include span(isolate 12 at 4 of 18); clear: left;
+	@include full	{ 
 		
-		.card__header { 
-			/*@include with-layout(12 1/2) {*/
-				@include span(first 4 of 12); 
-			/*}*/
-			/*margin-top: 2rem;*/ /* top align body with header */
-
-			/*float:left; width: 25%;*/ 
-		}	
-		.card__body { 
-			/*@include with-layout(12 1/2) {*/
-				@include span(last 8 of 12); 
-			/*}*/
-			float: right;  
-			/*margin-top: 1rem;*/ /* top align body with header */
-
-			/*float:right; width: 75%; padding: $base-spacing;*/
-		}
-		.card__footer { 
-			/*@include with-layout(12 1/2) {*/
-				@include span(last 8 of 12); 
-			/*}*/
-			clear: right; 
-			float: right; 
-
-			/*float:right; width: 25%;*/ 
-		}
-	}
+	} 
 }
 
-.card.card--task-relations-gallery {
+.card.main-header,
+.card.main-footer {
 
-	.card__footer{display:none;} 
-
-	/*margin:		1.5em 0;*/	
-	@include tiny   { /*.card__header {display:none;} */}
-	@include mobile { /*.card__header {display:none;}*/ }
-	@include narrow { /*.card__header {display:none;} */}
-	@include wide   { /*.card__header, */.relation__footer {display:none;} }
-	@include wider  { /*.card__header {display:none;}*/ @include span(first 9 of 12); clear: left; }
+	overflow: visible; /* don't hide dropdown submenu */
 
 	@include widest	{ 
-		/*.card__body {display:none;}*/ 
-
-		@include span(isolate 12 at 4 of 18); clear: left;
-
-		.card__header { 
-			/*@include with-layout(12 1/2) {*/
-				@include span(first 3 of 12); 
-			/*}*/
-			/*margin-top: 2rem;*/ /* top align body with header */
-
-			/*float:left; width: 25%;*/ 
-		}	
-		.card__body { 
-			/*@include with-layout(12 1/2) {*/
-				@include span(last 9 of 12); 
-			/*}*/
-			float: right;  
-			/*margin-top: 1rem;*/ /* top align body with header */
-
-			/*float:right; width: 75%; padding: $base-spacing;*/
-		}
-
-		border-top: none;
-	}
-
+		@include card-layout-vert;  
+		clear: left;
+	} 
+	@include full { 
+		
+	} 
 }
 
-.card.card--projects-gallery {
-
-	@include tiny   {  }
-	@include mobile {  }
-	@include narrow {  }
-	@include wide   {  }
-	@include wider {
-
-		/*@include span(first 7 of 9.5 wide); clear: left;*/
-
-	}
-	@include widest	{  }
+.card.nameplate {
+	
 }
+
+.card.events,
+.card.videos {
+	@include widest	{ @include card-layout-vert; }
+	@include full { @include card-layout-horiz; }
+}
+
+.card.event,
+.card.video {
+	@include widest	{ @include card-type-12col; }
+	@include full { @include card-type-12col; }
+}
+
+.card.task-slideshow {
+	@include widest	{ /*@include card-layout-vert;*/ }
+	@include full { }	
+}
+
+.card.video-player {
+
+	/*overflow: hidden;*/
+    /*background: #333;*/
+	@include widest	{/* @include card-layout-vert;*/  } 
+	@include full	{ @include card-layout-horiz;  } 
+}
+
+.card.jobs,
+.card.contact-info {
+
+	@include widest	{ @include card-layout-vert;  } 
+	@include full	{ @include card-layout-horiz;  } 
+}
+
+.card.job {}
+
+/* ==================================================================
+## card types (ie. subclasses) - CARD--XXX
+===================================================================== */
+
+.card.profile--card { 
+	border: none;
+}
+
 
 /*.card.relation {}*/
 
-	.relation {
+.card.relation {
 
-		/*clear: both;*/
-		/*overflow: auto;*/
+	/*clear: both;*/
+	/*overflow: auto;*/
 
-		background: white;
+	background: white;
 
-		&__thumb {
+	.relation__thumb {
 
-			@include wide	{ width: span(3 of 9); margin-right: gutter(9);}
-			@include wider	{ width: span(3 of 9); margin-right: gutter(9);}
-			@include widest	{ width: span(3 of 9); margin-right: gutter(9); }
-		}
-
-		&__header {}
-
-		&__body { padding-right: $base-button-height-big; }
-		
-		&__footer { display: none; }
-	
+		@include wide	{ width: span(3 of 9); margin-right: gutter(9); }
+		@include wider	{ width: span(3 of 9); margin-right: gutter(9); }
+		@include widest	{ width: span(3 of 9); margin-right: gutter(9); }
+		@include full	{ width: span(3 of 9); margin-right: gutter(9); }
 	}
 
+	.relation__header {}
 
-.card.card--manifesto
- {
+	.relation__body { padding-right: $base-button-height-big; }
+	
+	.relation__footer { display: none; }
 
-	@include tiny   {  }
-	@include mobile {  }
-	@include narrow {  }
-	@include wide   {  }
-	@include wider  {  }
-	@include widest	{ 
-		@include span(isolate 8 at 3 of 12); 
-		/*background: white;*/
-		/*clear: left;*/
-		float: none;
-	} 
 }
 
-
-.card.card--moremenu
- {
+.card.card--moremenu {
 
 	@include tiny   { display: none; }
 	@include mobile { display: none; }
@@ -448,20 +533,15 @@ $card-base-font-size:			1rem;
 	@include wider  { display: none; }
 	@include widest	{ 
 		@include span(isolate 8 at 3 of 12); 
-/*		clear: left;*/
+		float: none;
+	} 
+	@include full	{ 
+		@include span(isolate 8 at 3 of 12); 
 		float: none;
 	} 
 }
 
-.card.card--news {
 
-	@include tiny   {  }
-	@include mobile {  }
-	@include narrow {  }
-	@include wide   {  }
-	@include wider  {  }
-	@include widest	{ @include span(isolate 8 at 3 of 12); } 
-}
 	
 .card.card--featured-work {
 
@@ -470,6 +550,23 @@ $card-base-font-size:			1rem;
 	z-index: -1;
 
 	@include widest	{ 
+		
+		.slideshow__image img {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+			min-height: 100%;
+		}
+
+		.slideshow__caption {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	@include full	{ 
 		/*.slideshow__caption {display: none;}*/
 		.slideshow__image img {
 			position: fixed;
@@ -488,58 +585,9 @@ $card-base-font-size:			1rem;
 	}
 }
 
-.card.card--factsheet {
 
-	@include tiny   { > .card__header { display: none; } }
-	@include mobile { > .card__header { display: none; } }
-	@include narrow { > .card__header { display: none; } }
-	@include wide   { > .card__header { display: none; } }
-	@include wider  { 
 
-		> .card__header { display: none; } 
-		@include span(first 9 of 12); clear: left;
-	}
 
-	@include widest	{ 
-		/*.card__body {display:none;}*/ 
-
-		@include span(isolate 8 at 3 of 12); clear: left;
-
-		> .card__header { 
-			@include with-layout(12 1/2) {
-				@include span(first 2 of 8); 
-			}
-			/*margin-top: 2rem;*/ /* top align body with header */
-
-			/*float:left; width: 25%;*/ 
-		}	
-		> .card__body { 
-			@include with-layout(12 1/2) {
-				@include span(last 6 of 8); 
-			}
-			float: right;  
-			/*margin-top: 1rem;*/ /* top align body with header */
-
-			/*float:right; width: 75%; padding: $base-spacing;*/
-		}
-
-		border-top: none;
-	}
-
-}
-
-.card.card--video-player {
-
-	/*overflow: hidden;
-    background: #333;*/
-
-	@include tiny   {  }
-	@include mobile {  }
-	@include narrow {  }
-	@include wide   {  }
-	@include wider  {  }
-	@include widest	{ @include span(isolate 8 at 3 of 12); } 
-}
 
 /* ==================================================================
 ## Dev

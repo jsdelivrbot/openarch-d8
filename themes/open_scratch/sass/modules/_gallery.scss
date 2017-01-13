@@ -47,7 +47,8 @@
 
 
 			@include wider{		@include gallery-item-3-col;	}
-			@include widest{	@include gallery-item-6-col;	}		
+			@include widest{	@include gallery-item-6-col;	}	
+			@include full{	@include gallery-item-6-col;	}	
 		}
 
 }
@@ -99,6 +100,16 @@
 					@include gallery-item-1-col;
 					clear: left !important;
 				}
+
+				@include full	{ 
+
+					/*clear susy*/
+					/*margin: 0;
+					width: 100%;
+					float: none; */
+					@include gallery-item-1-col;
+					clear: left !important;
+				}
 					
 			}
 
@@ -132,6 +143,15 @@
 					float: none; */
 					@include gallery-item-3-col;
 				}
+
+				@include full	{ 
+
+					/*clear susy*/
+					/*margin: 0;
+					width: 100%;
+					float: none; */
+					@include gallery-item-3-col;
+				}
 					
 			}
 	}
@@ -146,12 +166,19 @@
  *
 ===================================================================== */
 
-.projects-gallery.gallery {
-
+.gallery--full.gallery {
 
 	.gallery__container{ /*ul*/
 
 		/* overrides */
+		@include tiny {		margin-top: gutter(12); }
+		@include mobile {	margin-top: gutter(12); }
+		@include narrow {	margin-top: gutter(12); }
+		@include wide { 	margin-top: gutter(9); }
+		@include wider { 	margin-top: gutter(12); }
+		@include widest { 	margin-top: gutter(12); }
+		@include full { 	margin-top: gutter(18); }
+
 	}
 
 	.gallery__item { /*li*/
@@ -177,6 +204,14 @@
 		}
 
 		@include widest{	
+			@include with-layout(12 1) {
+  				/*@include gallery-item-6-col;*/
+  				@include gallery(3 of 12);
+   				margin-bottom: gutter(12);
+			}
+		}
+
+		@include full{	
 			@include with-layout(18 1) {
   				/*@include gallery-item-6-col;*/
   				@include gallery(3 of 18);
@@ -186,7 +221,8 @@
 	}
 
 
-		.gallery__item > img { /*li*/
+		.gallery__item > img,
+		.gallery__item > .overlay { /*li*/
 
 			/* overrides */
 			width:100%;
@@ -194,6 +230,65 @@
 		}
 	
 }
+
+.overlay {
+
+	position: relative;
+
+	&__under {
+
+		/*position: absolute;
+	    top: 0;*/
+	    /*height: inherit;
+	    z-index: 99;
+	    background: red;
+	    opacity: .9;*/
+	}
+
+	&__over {
+		position: absolute;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;    
+	    z-index: 100;
+	    
+	    > p {
+	    	width: 100%;
+	    	height: 100%;
+	    	padding: 10px;
+	    	font-size: .9rem;
+	    	background: white;
+	    	opacity: .7;
+	    	display: none;
+	    	justify-content: center;
+  			flex-direction: column;
+  			text-align: center;
+  		}
+	}
+
+	&__over:hover {
+
+		> p {
+			display: flex;
+		}
+	}
+}
+
+/*.showable {
+
+	&__contents {
+
+		display: none;
+	}
+
+	&__container:hover {
+
+		> &__contents {
+
+			display: initial;
+		}
+	}
+}*/
 
 /* ==================================================================
  *
@@ -241,6 +336,13 @@
 				}	
 			}
 			@include widest{	
+				@include with-layout(9 1) {
+	  				/*@include gallery-item-6-col;*/
+	  				@include gallery(3 of 9);
+	   				margin-bottom: gutter(9);
+				}
+			}
+			@include full{	
 				@include with-layout(9 1) {
 	  				/*@include gallery-item-6-col;*/
 	  				@include gallery(3 of 9);

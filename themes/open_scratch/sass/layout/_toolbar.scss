@@ -12,24 +12,37 @@
 ## Config
 ===================================================================== */
 
-$toolbar-base-font-size:	.75rem;
-$toolbar-height:			$base-row2-height;
+$toolbar-base-font-size:	1rem;
+$toolbar-height:			$base-row1-height;
 
 
 /* ==================================================================
 ## Layout
 ===================================================================== */
 
-.toolbar-wrapper{
+.toolbar-wrapper,
+.toolbar-toggle-wrapper {
 
 	position:			relative;
 	/*@include 			layout($grid-4col);
 	@include 			span(4);*/
 
 	/*@include wider  { @include span(first 7 of 9.5 wide); }*/
+	pointer-events: none;
+	a,
+	.ribbon__segment,
+	.ribbon__segment--left,
+	.ribbon__segment--right { 
+		pointer-events: visible; 
+	}
+	
 }
 
-.toolbar {
+.toolbar,
+.toolbar-toggle {
+
+		/* clearfix to prevent header region collapse w/out overflow hidden b/c that would clip dropdown menu */
+	@include clearfix;
 
 	font-size: 			$toolbar-base-font-size;	
 	height: 			$toolbar-height;
@@ -37,6 +50,23 @@ $toolbar-height:			$base-row2-height;
 	position:			absolute;
 	top:				-$toolbar-height;
 	width:				100%;	
+
+	/*background: whitesmoke;*/
+
+}
+
+.toolbar-screen {
+
+		/* clearfix to prevent header region collapse w/out overflow hidden b/c that would clip dropdown menu */
+	@include clearfix;
+	
+	height: 			$toolbar-height;
+	line-height: 		$toolbar-height;
+	position:			absolute;
+	top:				0;
+	width:				100%;	
+
+	background: white;
 
 }
 

@@ -19,18 +19,19 @@ MediaCard = (function($) {
 
     $(document).ready(function() {
 
-        !(Breakpoint.isWider() || Breakpoint.isWidest()) ? disableMedia() : enableMedia();
+        !(Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? disableMedia() : enableMedia();
     });
 
     $(window).resize(function() {
 
-        (Breakpoint.isWider() || Breakpoint.isWidest()) ? enableMedia() : disableMedia();
+        (Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? enableMedia() : disableMedia();
 
         // if ( Breakpoint.isWider() ) {
         //     enableMedia();
         // } else {
         //     disableMedia();
         // }
+
     });
     
     //public methods
@@ -47,7 +48,7 @@ MediaCard = (function($) {
         $img.addClass('media__img');
         $contents.addClass('media__contents');
     }
-    
+
     //public API
     public_API = { 
         disableMedia: disableMedia,
@@ -77,12 +78,12 @@ MediaCard2 = (function($) {
 
     $(document).ready(function() {
 
-        !(Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest()) ? disableMedia() : enableMedia();
+        !(Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? disableMedia() : enableMedia();
     });
 
     $(window).resize(function() {
 
-        (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest()) ? enableMedia() : disableMedia();
+        (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? enableMedia() : disableMedia();
 
         // if ( Breakpoint.isWider() ) {
         //     enableMedia();

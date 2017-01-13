@@ -108,13 +108,14 @@ $susy: (
 	/*max-width:		240px;*/ /* .2 x 1200 */
 
 	@include widest { display: none; }
+	@include full { display: none; }
 }
 
 
 /* wrapper for menubar regions */
 .main-header-layout {
 
-	z-index:			100;
+	z-index:			1000;
 	position: 			fixed;
 	top:				0;
 	left:				0;

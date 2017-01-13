@@ -1,6 +1,6 @@
 
 /* ==================================================================
-## Config
+## icon Config
 ===================================================================== */
 
 /* sizing relative to containter, ie titlebar, toolbar, or tagline */
@@ -8,6 +8,8 @@
 $icon-size:						$base-button-height;
 $icon-size--sml:				$base-icon-height;
 $icon-spacing:					0; /*.5em;*/
+$icon-color:					#777;
+$icon-color-hover:				black;
 $icon-bg-color:					none; /*#f9f9f9;*/
 $icon-hover-bg-color:			#e5e5e5;
 
@@ -45,13 +47,18 @@ $icon-hover-bg-color:			#e5e5e5;
 				background: 			$icon-bg-color;
 
 				i {	
-					color: #ccc;
+					color: 				$icon-color;
 				}
 
 				&:hover {
 					/*background: 		$icon-hover-bg-color;*/
 
-					> i { color: black; }
+					> i { color: 		$icon-color-hover; }
+				}
+
+				&.active {
+
+					> i { color: 		$icon-color-hover; }
 				}
 
 
@@ -74,11 +81,25 @@ $icon-hover-bg-color:			#e5e5e5;
 				
 			}
 
-			.icon--white {
-				background: 			white;
+			.icon.icon--white {
+
+				> i { color: 		#ddd; }
 
 				&:hover {
-					background: 		#e5e5e5;
+
+					> i { color: 		white; }
+				}
+			}
+
+			.icon.icon--white-on-orange {
+
+				background: 		$openorange-color;
+				> i { color: 		#ddd; }
+
+				&:hover {
+
+					background: 	$openorange-color;
+					> i { color: 	white; }
 				}
 			}
 
@@ -186,7 +207,7 @@ $icon-hover-bg-color:			#e5e5e5;
 
 $icongal_base_font_size:	.65rem;
 $icongal_button_height:		$base_row_height;
-$icongal_icon_size:			1.1em;
+$icongal_icon_size:			1.2em;
 
 .icongallery-wrapper {
 	display: inline-block;
@@ -222,7 +243,8 @@ $icongal_icon_size:			1.1em;
 			background: 			$icon-bg-color;
 			
 			&:hover {
-				background: 		$icon-hover-bg-color;
+
+				> i { color: 		$icon-color-hover; }
 			}
 
 			> img {
@@ -231,11 +253,19 @@ $icongal_icon_size:			1.1em;
 
 			> i {
 				font-size:			$icongal_icon_size;
+				color: 				$icon-color;
 				vertical-align:  	middle;
 			}
+
+
 		}	
 	}
 }
+
+
+				
+
+				
 
 /* ==================================================================
 ## temp

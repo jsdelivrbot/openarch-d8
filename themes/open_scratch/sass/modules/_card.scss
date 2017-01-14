@@ -187,6 +187,27 @@ $card-base-font-size:			1rem;
 	float: none;
 }
 
+@mixin card-layout-horiz-left { 
+
+	@include span(15 of 18); 
+	clear: left;
+	float: none;
+}
+
+@mixin card-layout-horiz-wider { 
+
+	@include span(isolate 14 at 3 of 18); 
+	clear: left;
+	float: none;
+}
+
+@mixin card-layout-horiz-widest { 
+
+	@include span(isolate 16 at 2 of 18); 
+	clear: left;
+	float: none;
+}
+
 @mixin card-layout-vert { 
 
 	padding: 0 gutter(13);
@@ -226,6 +247,22 @@ $card-base-font-size:			1rem;
 	}
 }
 
+@mixin card-type-5col { 
+
+	> .card__header { 
+		@include span(first 3 of 15); 
+	}	
+	> .card__body { 
+		@include span(last 12 of 15); 
+		float: right;  
+	}
+	> .card__footer { 
+		@include span(last 12 of 15); 
+		clear: right; 
+		float: right; 
+	}
+}
+
 @mixin card-type-12col	{ /* events, videos */
 
 	.card__header h2 { 
@@ -248,6 +285,8 @@ $card-base-font-size:			1rem;
 		float: none; 
 	}
 }
+
+
 
 .card.manifesto {
 
@@ -402,7 +441,20 @@ $card-base-font-size:			1rem;
 	} 
 }
 
-.card.press,
+.card.press {
+
+	@include widest	{ 
+		@include card-layout-vert;  
+		float: none;
+	} 
+	@include full	{ 
+		@include card-layout-horiz-left;
+		@include card-type-5col;
+		/*@include card-layout-horiz-widest;  
+		float: none;*/
+	} 
+}
+
 .card.awards,
 .card.projects-table {
 
@@ -469,7 +521,8 @@ $card-base-font-size:			1rem;
 	@include full { @include card-type-12col; }
 }
 
-.card.task-slideshow {
+.card.task-slideshow,
+.card.press-slideshow {
 	@include widest	{ /*@include card-layout-vert;*/ }
 	@include full { }	
 }

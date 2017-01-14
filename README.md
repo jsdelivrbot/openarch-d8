@@ -258,12 +258,22 @@ change permissions on files directory to 777
 * replace translation filter with interface rendering language for project table/gallery views.
 * fix task slideshow image duplication issue
 
-#### 0.6.10
+#### 0.6.11
 
 * create updated video gallery
 * change icon hover color to orange
 * add bold title class for videos
 * bleed video gallery on tiny,mobile,narrow breakpoints
+
+#### 0.6.12
+
+* update press page to include slideshow
+* add press to image set reference type list
+* remove press from image set ref type list
+* delete unused/old task slideshow block views
+* add press slideshow view
+* add optional image files field to press
+* modify table at full breakpoint
 
 #### TBD
 

@@ -11,7 +11,7 @@ id: node.press.field_press_file
 field_name: field_press_file
 entity_type: node
 bundle: press
-label: File
+label: PDF
 description: 'Browse to pdf file and upload.'
 required: false
 translatable: false
@@ -19,7 +19,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: press
-  file_extensions: 'txt pdf'
+  file_extensions: pdf
   max_filesize: ''
   description_field: false
   handler: 'default:file'

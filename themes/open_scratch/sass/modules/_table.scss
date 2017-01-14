@@ -33,6 +33,11 @@ table {
 
 		font-size: $table-head-font-size; 
 		text-transform: uppercase;
+
+		@include full {
+
+			font-size: $base-h3-font-size;
+		}
 	}
 
 	tbody {
@@ -47,6 +52,15 @@ table {
 
 		&:hover {
 			background-color: #f5f5f5;
+		}
+
+		@include full {
+
+			border-bottom: none;	
+
+			&:hover {
+				background-color: white;
+			}
 		}	
 	}
 
@@ -59,9 +73,23 @@ table {
 		height: 			$table-row-height;
 		line-height: 		$table-row-height;
 		vertical-align: 	middle;
-		padding-left:		1em;
+		padding-left:		1rem;
 		/*padding: 			0 1em;*/
 		text-align:			left;
+	}
+
+	th {
+		@include full {
+			height: 			$base-row2-height;
+			line-height: 		$base-row2-height;
+		}
+	}
+
+	td {
+		@include full {
+			height: 			$base-row4-height;
+			line-height: 		$base-row4-height;
+		}
 	}
 
 	/* make links in cells easily selectable */
@@ -79,8 +107,8 @@ table {
 		text-overflow: ellipsis;
 
 
-		height: 			3em;
-		line-height: 		3em;
+		height: 			3rem;
+		line-height: 		3rem;
 
 		text-decoration: none;
 		color: $table-font-color;
@@ -99,12 +127,13 @@ table {
 	/*td*/.data--right {
 		/*float:right;*/
 		text-align:right;
-		/*padding-right: 1em;*/
+		padding-right: 1rem;
 	}
 
 	th.data--right {
-		padding-right: 1em;
+		padding-right: 1rem;
 	}
+
 	
 
 /* ==================================================================

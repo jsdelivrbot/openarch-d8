@@ -1,0 +1,15 @@
+uuid: 0e011715-e95d-48e9-a364-620534dd0197
+langcode: en
+status: true
+dependencies: {  }
+name: open_press_mobile_x2
+label: OPEN_press_mobile_x2
+effects:
+  36c7b152-ff4e-4780-9aa1-5b42518aa956:
+    uuid: 36c7b152-ff4e-4780-9aa1-5b42518aa956
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 496
+      upscale: false

@@ -92,13 +92,13 @@ $base-h6-font-size:			0.80rem; 	/*	2.5/3 	factsheet facts		*/
 $base-h7-font-size:			0.75rem;	/*  3.75/5  menus and tables */
 
 /* base */
-$base-font-size: 			1.0em;
-$base-title-font-size: 		.9em;
-$base-body-font-size: 		red;
+$base-font-size: 			.9rem;
+$base-title-font-size: 		.9rem;
+/*$base-body-font-size: 		red;
 $base-tag-font-size: 		red;
 $base-more-font-size: 		red;
 $base-cell-font-size: 		red;
-$base-icon-font-size: 		red;
+$base-icon-font-size: 		red;*/
 
 $sitename-font-size: 15px;
 $icon-font-size: 14px;
@@ -155,9 +155,9 @@ $base-row0-height: 		6.25rem; /* Site Header */
 $base-row1-height: 		5.0rem; /* Site Header */
 $base-row2-height: 		3.75rem; /* Card Headers/Footers */ /* (16px x .7em) x 3.75 = 42px; */
 $base-row3-height: 		2.5rem; /* Table Rows, menu rows */
-$base-row4-height:		1.5rem; /* Compress tables @full */
+$base-row4-height:		2.0rem; /* Compress tables @full */
 $base-button-height:	2.5rem; /* Icons, Tags, Buttons */
-$base-button-height-sml: 1.25rem; /* Icons, Tags, Buttons */
+$base-button-height-sml: 2.0rem; /* Icons, Tags, Buttons */
 $base-button-height-big: 3.75rem;
 $base-icon-height:		1rem; /* Icons, Tags, Buttons */
 $base-spacing: 			1.25rem;
@@ -196,7 +196,7 @@ $base-title-spacing: 1.5rem;
 ## Buttons (icons, tags, dropdowns)
 ===================================================================== */
 
-$base-button-pad-horiz:		$base-horiz-step;
+$base-button-pad-horiz:		$base-horiz-pad;
 $base-button-spacing:		$base-horiz-nudge;
 
 /* ==================================================================

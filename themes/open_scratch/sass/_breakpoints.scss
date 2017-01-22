@@ -57,5 +57,6 @@
     @media all and (min-width: 651px) and (max-width: 850px){ @content; }
 }
 @mixin table-5-col{
-    @media all and (min-width: 851px){ @content; }
+    @media all and (min-width: 851px) { @content; }
 }
+

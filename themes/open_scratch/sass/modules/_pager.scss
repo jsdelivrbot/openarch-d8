@@ -1,0 +1,35 @@
+.pager { /* nav */
+
+	display: inline-block;
+
+	&__items { /* ul */
+
+	}
+		&__item { /* li */
+
+			float: left;
+
+			> a {
+
+				/*display: 				inline-block;*/ 
+				padding-left: 			$base-button-pad-horiz; /*prev 1em*/
+				padding-right: 			$base-button-pad-horiz;
+				color: 					#555;
+
+			}
+
+			&:hover {
+
+				> a { color: 			$openorange-color; }
+			}
+
+			&.is-active {
+
+				> a { 
+					color: 				black; 
+					text-decoration: 	underline;
+				}
+			}
+		}
+	
+}

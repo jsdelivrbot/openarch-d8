@@ -31,28 +31,31 @@
 #}
 <tr>
 	<td class="projects-table__data-year">
-		<h7>{{ fields.field_task_year.content }}</h7>
+		<span>{{ fields.field_task_year.content }}</span>
 	</td>
 	<td class="projects-table__data-city">
-		<h7>{{ fields.field_task_city.content }}</h7>
+		<span>{{ fields.field_task_city.content }}</span>
 	</td>
 	<td class="projects-table__data-size">
-		<h7>{{ fields.field_task_size.content }}</h7>
+		<span>{{ fields.field_task_size.content }}</span>
 	</td>
 	<td class="projects-table__data-type">
-		<h7>{{ fields.field_task_type.content }}</h7>
+		<span>{{ fields.field_task_type.content }}</span>
 	</td>
 	<td class="projects-table__data-program">
-		<h7>{{ fields.field_task_program.content }}</h7>
+		<span>{{ fields.field_task_program.content }}</span>
 	</td>
 	<td class="projects-table__data-name">
-		<h7>{{ fields.title.content }}</h7>
+		<span>{{ fields.title.content }}</span>
 	</td>
 	<td class="projects-table__data-icon data--right">
 		<div class="icon--container">
-			<a class="icon icon--img" href="../task/{{ fields.nid.content|striptags }}">
+			{# <a class="icon icon--sml icon--button-sml icon--img" href="../task/{{ fields.nid.content|striptags }}">
 				<img src="../{{ directory }}/images/arrow2-black-12px.png">
-			</a>
+			</a> #}
+			
+			<a class="icon icon--fa icon--bigr icon--button-sml" style="background:none"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			{# <a class="icon icon--mat icon--button-sml" href="../task/{{ fields.nid.content|striptags }}"><i class="material-icons">arrow_forward</i></a> #}
 		</div>
 	</td>
 </tr>

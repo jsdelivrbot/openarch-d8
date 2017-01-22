@@ -15,16 +15,16 @@ html {
     	font-size: 14px;
     }
     @include wide{ /* all and (min-width: 851px) */
-    	font-size: 15px;
+    	font-size: 14px;
     }
     @include wider{ /* all and (min-width: 851px) */
-    	font-size: 16px;
+    	font-size: 15px;
     }
     @include widest{ /* all and (min-width: 851px) */
-    	font-size: 16px;
+    	font-size: 15px;
     }
     @include full{ /* all and (min-width: 851px) */
-    	font-size: 18px;
+    	font-size: 16px;
     }
 }
 
@@ -51,7 +51,8 @@ p {
 	font-size: 		$base-font-size; 
 	line-height: 	$base-line-height;
 	/*padding: 		0 $base-pad-horiz;*/	
-	margin: 		$base-row-pad 0;	
+	margin: 		$base-row-pad 0;
+	text-align:		justify;	
 }
 
 p:first-child,
@@ -72,8 +73,9 @@ h1,h2,h3,h4,h5,h6 {
 	/*text-transform: uppercase;*/
 }
 
+/*  */
 h1 {	font-size: 	$base-h1-font-size;		}
-h2 {	font-size: 	$base-h2-font-size;	line-height: $base-line-height-single; } /* task/event titles */
+h2 {	font-size: 	$base-h2-font-size;	/*line-height: $base-line-height-single;*/ } /* task/event titles */
 h3 {	font-size: 	$base-h3-font-size;		}
 h4 {	font-size: 	$base-h4-font-size;		}
 h5 {	font-size: 	$base-h5-font-size;		}

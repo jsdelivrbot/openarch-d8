@@ -49,21 +49,32 @@ $susy-grid-12col: (
 		    toggle: top right,
 	    )
 	));
-	
 }
 
-.bg-layout {
-	z-index:			-1000;
+.bg-screen {
+	z-index:			100000;
 	position: 			fixed;
 	top:				0;
 	left:				0;
 	width:				100%;
+	height:  			100vh;
+	pointer-events:  	none;
 }
-	.bg {
-		height: 100vh;	
+
+.bg-layout {
+	/*z-index:			10000;*/
+	position: 			fixed;
+	top:				-10vh;
+	left:				0;
+	width:				100%;
+	pointer-events:  	none;
+}
+	.bg-page {
+		pointer-events:  	none;
+		height: 120vh;	
 		background: white;
-		border-right: 1px solid #ccc;
-        border-left: 1px solid #ccc;
+		/*border-right: 1px solid #ddd;
+        border-left: 1px solid #ddd;*/
 		@inlude tiny { padding: 0 gutter(13); }
 		@include mobile { padding: 0 gutter(13); }
 		@include narrow { padding: 0 gutter(13); }

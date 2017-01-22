@@ -2,7 +2,10 @@
 ## Debug
 ===================================================================== */
 
+/*.layout, .region {pointer-events: none;}*/
+
 .layout {
+
 
 	/*border: solid 1px #333;	*/
    /* background: whitesmoke;*/
@@ -34,24 +37,43 @@
 
 .grid-on {
 
-	background: url('../images/grid-960-13col-grey.png');
+    /* tiny, mobile */
+	background: url('../images/grid-mobile-red.png');
+    opacity: .5;
     background-size: 100% 600%;
     background-repeat: no-repeat;
 
+    @include narrow {
+        background: url('../images/grid-narrow-red.png');
+        opacity: .5;
+        background-size: 100% 600%;
+        background-repeat: no-repeat;
+    }
+
+    @include wide {
+        background: url('../images/grid-wide-red.png');
+        opacity: .5;
+        background-size: 100% 600%;
+        background-repeat: no-repeat;
+    }
+
     @include wider {
-        background: url('../images/grid-16col.png');
+        background: url('../images/grid-wider-red.png');
+        opacity: .5;
         background-size: 100% 600%;
         background-repeat: no-repeat;
     }
 
     @include widest {
-    	background: url('../images/grid-19col-grey.png');
+    	background: url('../images/grid-widest-red.png');
+        opacity: .5;
     	background-size: 100% 600%;
     	background-repeat: no-repeat;
     }
 
     @include full {
-        background: url('../images/grid-19col-grey.png');
+        background: url('../images/grid-widest-red.png');
+        opacity: .5;
         background-size: 100% 600%;
         background-repeat: no-repeat;
     }

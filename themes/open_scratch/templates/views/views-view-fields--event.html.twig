@@ -32,7 +32,7 @@
 {# <div class="teaser events__teaser border--top-ltgrey"> #}
 
 {# <div class="section"> #} {# data-anchor="{{ fields.title.label }}" #}
-<div class="card event border--top-ltgrey">
+<div class="card event border--top">
 
 	<div class="card__item card__header card__header--headline">
 
@@ -56,19 +56,46 @@
 
 	</div>
 
-	<div class="card__item card__slide card__slide--small">
+	<div class="card__item card__slide">
 		{{ fields.field_thumbnail.content }}
 	</div>
 
-	<div class="card__item card__item--spaced card__body">
+	{# <div class="card__item card__item--spaced card__body">
 		{{ fields.body.content }}
-	</div>
+	</div> #}
+	<div class="card__item card__body">
+			<div class="bd--smltext lc--3 spaced">{{ fields.body.content }}</div>
+			<ul class="list facts spaced">
+
+				<li class="facts__fact">
+					<h4>Date: {{ fields.field_event_date.content }} - {{ fields.field_event_date_to.content }}</h4>
+				</li>
+
+				<li class="facts__fact">
+					<h4>Time: {{ fields.field_time.content }}</h4>
+				</li>
+
+				<li class="facts__fact">
+					<h4>City: {{ fields.field_event_city.content }}</h4>
+				</li>
+
+				<li class="facts__fact">
+					<h4>Address:</h4>
+				</li>
+
+				<li class="facts__fact">
+					<h4>{{ fields.field_address.content }}</h4>
+				</li>
+
+			</ul>
+		</div>
 
 	<div class="card__item card__footer">
 		<div class="ribbon ribbon--med">
 			<div class="ribbon__segments">
 				<span class="ribbon__segment--left">
-					<a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a>
+					{# <a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a> #}
+					<a class="icon icon--mat"><i class="material-icons">label</i></a>
 				</span>
 				<span class="ribbon__segment--left">
 					<div class="tag">{{ fields.type.content }}</div> 

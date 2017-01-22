@@ -17,24 +17,39 @@
 .sidebar nav 	{	font-size: 1rem;	}
 .footer nav 	{	font-size: 1rem;	}
 
+.sidebar .menu {
+
+	/* borders */
+	li {
+		border-bottom: 1px solid whitesmoke;
+		&:nth-child(1) {
+			border-top: 1px solid whitesmoke;
+		}
+	}
+	li ul li {
+		border-bottom: none;
+		border-top: 1px solid whitesmoke;
+	}
+}
+
 .menu {
 
 	font-size: $base-h3-font-size; /*.75em;*/
-	font-weight: bold;
+	/*font-weight: bold;*/
 
 	ul {
 		/* */
 	}
 
-	li {
-		/*border-top: 1px solid #f1f1f1;*/
+	.icon {
+		float: right;
 	}
 
 	li a {
 		display: block;
 		white-space: nowrap;
-		line-height: 	$table-row-height;
-		height: 		$table-row-height;
+		line-height: 	$base-row2-height;
+		height: 		$base-row2-height;
 		/*width:100%;*/
 		padding-left: 0;
 	}
@@ -44,7 +59,11 @@
 	}
 
 	/* indent submenu items */
-	li ul li a {padding-left: gutter(3.5 1);}
+	li ul li a {
+		padding-left: gutter(3.5 1);
+	}
+
+	
 
 	/*span, a, a:link, a:visited{
 		
@@ -72,8 +91,8 @@
 
 	ul li label {
 		display: block;
-		line-height: 	$table-row-height;
-		height: 		$table-row-height;
+		line-height: 	$base-row2-height;
+		height: 		$base-row2-height;
 		cursor: pointer;
 	}
 
@@ -83,8 +102,8 @@
 
 	ul li label a {
 		display: initial;
-		line-height: 	$table-row-height;
-		height: 		$table-row-height;
+		line-height: 	$base-row2-height;
+		height: 		$base-row2-height;
 	}
 
 	ul li input[type='checkbox'] ~ ul {
@@ -328,7 +347,7 @@
 		}*/
 
 		input[type='checkbox'] ~ label:hover i{
-			color: black;
+			color: $openorange-color;
 		}
 
 		.expandable-body {
@@ -337,11 +356,11 @@
 
 		input[type='checkbox'] ~ .expandable-body {
 			/*display: none;*/
-			max-height: 700px;
+			max-height: 0;
 		}
 
 		input[type='checkbox']:checked ~ .expandable-body {
-			max-height: 0;
+			max-height: 550px;
 		}
 
 
@@ -390,7 +409,7 @@
 		max-height: 900px;
 	}
 	input[type='checkbox']:checked ~ .moreable-body {
-		max-height: 450px;
+		max-height: 0;
 	}
 
 	input[type='checkbox'] ~ label .icon.unchecked {
@@ -425,7 +444,7 @@
 
 	.peekable-target > .toolbar {
 		/*display: none;*/
-		transition: top 0.4s;
+		transition: top 0.4s, opacity 0.4s;
 	}
 
 	input[type='checkbox'] ~ label > .peekable-toggle {
@@ -438,12 +457,14 @@
 	input[type='checkbox'] ~ .peekable-target > .toolbar{
 		/*display: none;*/
 		top: 0;
+		opacity: 0;
 		/*max-height: 700px;*/
 	}
 	input[type='checkbox']:checked ~ .peekable-target > .toolbar{
 		/*max-height: 0;*/
 		/*display: inherit;*/
 		top: -$base-row1-height;
+		opacity: 1;
 	}
 
 	input[type='checkbox'] ~ label .icon.unchecked {

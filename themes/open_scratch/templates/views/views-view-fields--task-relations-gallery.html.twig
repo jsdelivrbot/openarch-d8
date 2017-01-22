@@ -30,7 +30,7 @@
  */
 #}
 
-
+{# {{ dump(fields) }} #}
 {# <li class="gallery__item">
   {{ fields.field_thumbnail.content }}
 </li> #}
@@ -39,7 +39,7 @@
 
   <div class="card card--flag relation media mediaCard"> {# class wrappers #}
 
-    <div class="card__item relation__thumb media__img media__img--relation"> {# layout / width #}
+    <div class="card__item card__slide relation__thumb media__img media__img--relation"> {# layout / width #}
 
       {# <div class="card__item card__slide"> #} {# spacing / height #}
 
@@ -67,7 +67,7 @@
 
       </div> #}
 
-      <div class="card__item relation__header">
+      <div class="card__item card__header relation__header">
         
         <div class="media mediaTitle">
 
@@ -93,32 +93,32 @@
          
       </div>
 
-      <div class="card__item relation__body">
+      <div class="card__item card__body relation__body">
 
-        <div class="bd bd--smltext line-clamp">{{ fields.body.content }}</div>
+        <div class="bd bd--smltext lc--4">{{ fields.body.content }}</div>
 
       </div>
 
-      {# <div class="card__item relation__footer position--bottom">
+      <div class="card__item card__footer relation__footer position--bottom">
 
-        <div class="ribbon">
+        <div class="ribbon ribbon--med">
           <div class="ribbon__segments">
-            <span class="ribbon__segment--left">
+            {# <span class="ribbon__segment--left">
               <a class="icon icon--sml"><i class="fa fa-tag" aria-hidden="true"></i></a>
-            </span>
+            </span> #}
             <span class="ribbon__segment--left">
-              <div class="tag tag--sml">{{ fields.type.content }}</div>
-            </span>
-            <span class="ribbon__segment--left">
-              <div class="tag tag--sml">{{ fields.field_task_type.content }}</div>
-            </span>
-            <span class="ribbon__segment--left">
-              <div class="tag tag--sml">{{ fields.field_task_program.content }}</div>
+              <div class="label label--nopad">
+                <h6>
+                  {{ fields.type_1.content }}
+                  , {{ fields.field_task_type.content }}    
+                  , {{ fields.field_task_program.content }}
+                </h6>
+              </div>
             </span>
           </div>
         </div>
 
-      </div> #}
+      </div>
 
     </div>
 

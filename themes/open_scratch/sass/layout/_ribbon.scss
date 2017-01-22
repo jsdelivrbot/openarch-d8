@@ -16,7 +16,7 @@ $ribbon-height:				$base-row2-height;
 .ribbon {
 
 	/* apply global icon sizing, change to px to make size non-responsive */
-	font-size:					$ribbon-base-font-size;
+	/*font-size:					$ribbon-base-font-size;*/
 
 	/*height: 					$ribbon-height;
 	line-height:  				$ribbon-height;*/
@@ -47,7 +47,7 @@ $ribbon-height:				$base-row2-height;
 
 .ribbon--sml {
 
-	font-size:					.9rem;
+	/*font-size:					.9rem;*/
 	height: 					$base-row3-height;
 	line-height:  				$base-row3-height;
 	
@@ -55,17 +55,18 @@ $ribbon-height:				$base-row2-height;
 
 .ribbon--med {
 
-	font-size:					1rem;
+	/*font-size:					1rem;*/
 	height: 					$base-row2-height;
 	line-height:  				$base-row2-height;
 }
 
 .ribbon--big {
 
-	font-size:					1rem;
+	/*font-size:					1rem;*/
 	height: 					$base-row1-height;
 	line-height:  				$base-row1-height;	
 }
+
 
 
 

@@ -36,23 +36,47 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  <div class="card awards spaced--more">
-    <div class="card__item card__body">
-      <div class="card__item card__body">
-        <table class="table awards-table__table">
-        	<thead class="awards-table__head">
-        		<tr>
-        			<th>Date</th>
-        			<th>Awards</th>
-        			<th class="data--right">Links</th>
-        		</tr>
-        	</thead>
-        	<tbody>
-          		{{ rows }}
-          	</tbody>
-        </table>
+  <div class="card awards">
+
+    <div class="card__item card__header">
+      <div class="ribbon ribbon--med">
+        <div class="ribbon__segments">
+          <div class="ribbon__segment--left">
+            {# <h3 class="title title--secondary inline-block">Awards</h3> #}
+            <div class="label"><span class="title ttitle projects-table__title inline-block">List of Awards </span></div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="card__item card__body">
+      <table class="table awards-table__table">
+      	<thead class="awards-table__head">
+      		<tr>
+      			<th class="awards-table__head-date"><span>Date</span></th>
+      			<th class="awards-table__head-name"><span>Awards</span></th>
+      			<th class="awards-table__head-icon data--right"><span>Links</span></th>
+      		</tr>
+      	</thead>
+      	<tbody>
+        		{{ rows }}
+        	</tbody>
+      </table>
+    </div>
+
+    <div class="card__item border--bottom card__footer">
+      <div class="ribbon ribbon--big">
+          <div class="ribbon__segments">
+            <div class="ribbon__segment--left">
+              <div>
+                {{more}}
+                {{pager}}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
   </div>
 
   {{ feed_icons }}

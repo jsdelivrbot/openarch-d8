@@ -1,0 +1,75 @@
+/*
+ * People (Block view)
+ *
+ * LAYOUT:
+ *
+ * relations--header
+ * relations--header-left
+ * relations--header-right
+ * relations--gallery
+ * relations--gallery-list (ul)
+ * relations--gallery-item (li)
+ *
+ * CONTENT:
+ *
+ * relations--title (h2)
+ *
+ * <div class="card people">
+ *	 <div class="card__item card__slide people__thumb"></div>
+ *	 <div class="card__item card__header people__title"></div>
+ *	 <div class="card__item card__body people__body"></div>
+ *   <div class="card__item card__footer"></div>
+ * </div>
+ *
+ */
+
+
+/* ==================================================================
+## Layout
+===================================================================== */
+
+.card.peoples {
+	/* layout card */
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest	{ 
+
+		margin-left: gutter(13);
+		margin-right: gutter(13);
+		clear: left; 
+		float: none;
+	} 
+	@include full	{ 
+
+		@include span(isolate 15 at 4 of 18);  
+		float: none;
+	} 
+}
+
+.card.people {
+
+	
+
+	/* layout card items */
+	.card {
+		&__item {}
+		&__header {}
+		&__slide {}
+		&__body {
+
+			width: 100%;
+			@include tiny   {  }
+			@include mobile {  }
+			@include narrow {  }
+			@include wide   {  }
+			@include wider  { /*width: span(8 of 9);*/ }
+			@include widest	{ /*width: span(8 of 9);*/ }
+			@include full 	{ width: span(9 of 12); }
+		}
+		&__footer {}
+	}
+
+}

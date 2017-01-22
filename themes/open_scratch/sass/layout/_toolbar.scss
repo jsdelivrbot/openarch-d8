@@ -12,9 +12,8 @@
 ## Config
 ===================================================================== */
 
-$toolbar-base-font-size:	1rem;
+$toolbar-base-font-size:	$base-h4-font-size;
 $toolbar-height:			$base-row1-height;
-
 
 /* ==================================================================
 ## Layout
@@ -23,6 +22,7 @@ $toolbar-height:			$base-row1-height;
 .toolbar-wrapper,
 .toolbar-toggle-wrapper {
 
+	/*z-index: -100000;*/
 	position:			relative;
 	/*@include 			layout($grid-4col);
 	@include 			span(4);*/
@@ -46,6 +46,7 @@ $toolbar-height:			$base-row1-height;
 
 	font-size: 			$toolbar-base-font-size;	
 	height: 			$toolbar-height;
+	text-transform:  	uppercase;
 	line-height: 		$toolbar-height;
 	position:			absolute;
 	top:				-$toolbar-height;
@@ -66,7 +67,8 @@ $toolbar-height:			$base-row1-height;
 	top:				0;
 	width:				100%;	
 
-	background: white;
+	/*z-index: -10000;*/
+	/*background: white;*/
 
 }
 

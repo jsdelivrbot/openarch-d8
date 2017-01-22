@@ -171,13 +171,13 @@
 	.gallery__container{ /*ul*/
 
 		/* overrides */
-		@include tiny {		margin-top: gutter(12); }
+		/*@include tiny {		margin-top: gutter(12); }
 		@include mobile {	margin-top: gutter(12); }
 		@include narrow {	margin-top: gutter(12); }
 		@include wide { 	margin-top: gutter(9); }
 		@include wider { 	margin-top: gutter(12); }
 		@include widest { 	margin-top: gutter(12); }
-		@include full { 	margin-top: gutter(18); }
+		@include full { 	margin-top: gutter(18); }*/
 
 	}
 
@@ -240,9 +240,9 @@
 		@include mobile {	margin-top: gutter(12); }
 		@include narrow {	margin-top: gutter(12); }
 		@include wide { 	margin-top: gutter(9); }*/
-		@include wider { 	margin-top: gutter(12); }
+		/*@include wider { 	margin-top: gutter(12); }
 		@include widest { 	margin-top: gutter(12); }
-		@include full { 	margin-top: gutter(18); }
+		@include full { 	margin-top: gutter(18); }*/
 
 	}
 
@@ -292,6 +292,82 @@
 	
 }
 
+.gallery--books.gallery {
+
+	ul {
+
+		/* overrides */
+		/*@include tiny {		margin-top: gutter(12); }
+		@include mobile {	margin-top: gutter(12); }
+		@include narrow {	margin-top: gutter(12); }
+		@include wide { 	margin-top: gutter(9); }*/
+		/*@include wider { 	margin-top: gutter(12); }
+		@include widest { 	margin-top: gutter(12); }
+		@include full { 	margin-top: gutter(18); }*/
+
+	}
+
+	li {
+
+		@include tiny{		
+			@include gallery-item-1-col; clear: left !important; margin-bottom: 0;
+		}
+
+		@include mobile{	
+			@include gallery-item-1-col; clear: left !important; margin-bottom: 0;	
+		}
+
+		@include narrow{	
+			@include with-layout(12 .05) { 
+				@include gallery(4 of 12);
+				/*margin-bottom: gutter(12);*/
+				margin-bottom: 0;
+			}
+		}
+
+		@include wide{	
+			@include with-layout(12 .05) { 
+					@include gallery(4 of 12);
+					/*margin-bottom: gutter(12);*/
+					margin-bottom: 0;
+				}
+		}
+
+		@include wider{	
+			@include with-layout(12 .05) { 
+					@include gallery(3 of 12);
+					/*margin-bottom: gutter(12);*/
+					margin-bottom: 0;
+				}
+		}
+
+		@include widest{	
+			@include with-layout(12 .25) { 
+					@include gallery(3 of 12);
+					/*margin-bottom: gutter(12);*/
+					margin-bottom: 0;
+				}
+		}
+
+		@include full{	
+			@include with-layout(12 .05) { 
+					@include gallery(3 of 15);
+					/*margin-bottom: gutter(12);*/
+					margin-bottom: 0;
+				}
+		}
+	}
+
+
+		li > img {
+
+			/* overrides */
+			width:100%;
+			height:auto;
+		}
+	
+}
+
 .overlay {
 
 	position: relative;
@@ -318,8 +394,9 @@
 	    	height: 100%;
 	    	padding: 10px;
 	    	font-size: .9rem;
-	    	background: white;
-	    	opacity: .7;
+	    	background: $openorange-color;
+	    	color: white;
+	    	opacity: .8;
 	    	display: none;
 	    	justify-content: center;
   			flex-direction: column;

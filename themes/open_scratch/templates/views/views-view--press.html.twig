@@ -39,15 +39,16 @@
 
   <div class="card press spaced--more">
 
-    <div class="card__item card__header card__item--spaced">
+    <div class="card__item card__header">
 
-      {# <div class="ribbon ribbon--med">
+      <div class="ribbon ribbon--big">
         <div class="ribbon__segments">
-          <div class="ribbon__segment--left"> #}
-            <h3 class="title title--secondary inline-block">List of Publications</h3>
-          {# </div>
+          <div class="ribbon__segment--left">
+            {# <h3 class="title title--secondary inline-block">List of Publications</h3> #}
+            <div class="label"><span class="title ttitle projects-table__title inline-block">List of Publications</span></div>
+          </div>
         </div>
-      </div> #}
+      </div>
 
     </div>
 
@@ -66,6 +67,18 @@
         </tbody>
       </table>
     </div>
+
+    <div class="card__item border--bottom card__footer">
+      <div class="ribbon ribbon--big">
+          <div class="ribbon__segments">
+            <div class="ribbon__segment--left">
+              {{more}}
+              {{pager}}
+            </div>
+          </div>
+        </div>
+    </div>
+
   </div>
 
   {{ feed_icons }}

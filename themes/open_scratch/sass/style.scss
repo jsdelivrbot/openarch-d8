@@ -30,6 +30,7 @@
 @import "./modules/slider";
 @import "./modules/flexslider";
 @import "./modules/fullpage";
+@import "./modules/pager";
 
 /* Cards (Blocks, Views, Rows) */
 @import "./blocks/statement";
@@ -39,6 +40,8 @@
 @import "./blocks/projects-table";
 @import "./blocks/press-table";
 @import "./blocks/awards-table";
+@import "./blocks/people";
+@import "./blocks/task";
 
 /* layout (Layout and Regions) */
 @import "./layout/layout";

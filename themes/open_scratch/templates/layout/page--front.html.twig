@@ -1,7 +1,7 @@
 
 <div class="container slider">
 
-    <div class="layout sidebar-layout slider-drawer drop--right">
+    <div class="layout sidebar-layout slider-drawer "> {# drop--right #}
 
       <div class="wrapper sidebar-wrapper bg--white">
 
@@ -14,7 +14,7 @@
                 {# {{ page.sidebar_search }} #}
                 <div class="searchbar-wrapper">
                   <div class="searchbar">
-                    <span class="searchbar__icon"><i class="fa fa-search"></i></span>
+                    {# <span class="searchbar__icon"><i class="fa fa-search"></i></span> #}
                     <span class="searchbar__input"><input type="search" id="search" placeholder="Search..." /><span>
                   </div>
                 </div>  
@@ -26,9 +26,7 @@
             <div class="sidebar__middle buffer--side-top">
 
               <aside class="region sidebar-nav" role="complementary">
-
                 {{ page.sidebar_nav }}
-
               </aside>
 
             </div>
@@ -58,6 +56,8 @@
       </div> {# end sidebar-wrapper #}
       
     </div> {# end sidebar-layout #}
+
+    <div class="bg-screen grid-target"></div>
 
     <div class="layout main-header-layout slider-canvas">
 
@@ -104,11 +104,11 @@
                   </div>                
                 </div>
 
-                <div class="fullpage__asset fullpage__pager--down bg--orange">
+                <div class="fullpage__asset fullpage__pager--down bg--white op--9">
                   <div class="ribbon">
                     <div class="ribbon__segments">
                         <div class="ribbon__segment--center">
-                            <a href="#secondPage" class="icon icon--mat icon--bigr icon--white-on-orange icon--button-big unchecked" style="background:none">
+                            <a href="#secondPage" class="icon icon--mat icon--bigr icon--button-big unchecked" style="background:none">
                               <i class="material-icons">arrow_downward</i>
                             </a>
                         </div>
@@ -119,26 +119,16 @@
               {% endif %}
             </div>
 
-            <div class="fullpage__section bg--orange c--white">
-
-              {# <div class="section__pager--up">
-                <div class="ribbon__segments">
-                    <div class="ribbon__segment--center">
-                        <a class="icon icon--fa icon--bigr icon--white icon--button-big unchecked" style="background:none">
-                          <i class="fa fa-angle-up" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-              </div> #}
+            <div class="fullpage__section--hidden bg--manifesto"> 
 
               <div id="main-content-primary" class="region main-content__primary overflow-hidden">
                 {{ page.content_primary }}              
               </div>
 
-              <div class="fullpage__asset fullpage__pager--down bg--white">
+              <div class="fullpage__asset fullpage__pager--down">
                 <div class="ribbon__segments">
                     <div class="ribbon__segment--center">
-                        <a href="#thirdPage" class="icon icon--mat icon--bigr icon--button-big unchecked" style="background:none">
+                        <a href="#thirdPage" class="icon icon--white icon--mat icon--bigr icon--button-big unchecked" style="background:none">
                           <i class="material-icons">arrow_downward</i>
                         </a>
                     </div>
@@ -147,9 +137,9 @@
 
             </div>
             
-            <div class="fullpage__section bg--white">
+            <div class="fullpage__section bg--recent-news">
 
-                <div id="main-content-relations" class="region main-content__primary overflow-hidden">
+                <div id="main-content-relations" class="region main-content__primary bg--white overflow-hidden">
                   {{ page.content_relations }}
                 </div>
 

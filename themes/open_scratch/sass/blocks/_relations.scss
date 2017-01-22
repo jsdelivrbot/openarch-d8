@@ -22,7 +22,7 @@
 ## Layout
 ===================================================================== */
 
-.relations {}
+/*.relations {}
 
 	header {}
 
@@ -31,17 +31,17 @@
 
 	.relations-gallery {}
 
-		/*ul*/.gallery--container {}
-		/*li*/.gallery--item {}
+		.gallery--container {}
+		.gallery--item {}*/
 
 
 /* ==================================================================
 ## Theme
 ===================================================================== */
 
-.relations--header-left {}
+/*.relations--header-left {}
 
-	.title.relations--title { /* subclass overrides for title */
+	.title.relations--title { 
 
 		h2, span, a, a:link, a:visited {
 
@@ -53,6 +53,161 @@
 
 .relations--header-right {}
 
-	.title.relations--icon{ /* subclass overrides for icon */
+	.title.relations--icon{ 
 
+	}*/
+
+
+@mixin card-layout-vert { 
+
+	padding-left: gutter(13);
+	padding-right: gutter(13);
+	clear: left;
+	float: none;
+}
+@mixin card-type-4col { 
+
+	> .card__header { 
+		@include span(first 3 of 12); 
+	}	
+	> .card__body { 
+		@include span(last 9 of 12); 
+		float: right;  
 	}
+	> .card__footer { 
+		@include span(last 9 of 12); 
+		clear: right; 
+		float: right; 
+	}
+}
+
+.card.relations {
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest {
+		padding-left: gutter(13);
+		padding-right: gutter(13);
+		clear: left;
+		float: none; 
+		border-top: none;
+		margin-bottom: $base-spacing-sml;
+		margin-top: $base-spacing-sml; 
+	}
+	@include full   { 
+		@include span(isolate 12 at 4 of 18);
+		border-top: none;
+		margin-bottom: $base-spacing-huge;
+		margin-top: $base-spacing-huge; 
+	}
+
+	> .card {
+
+		&__header { 
+			@include span(full);
+			float: none; 
+		}	
+		&__body { 
+			@include span(full);
+			float: none; 
+		}
+		&__footer { 
+			display:none;
+			@include span(full);
+			float: none;
+		}
+	
+		@include tiny   {  }
+		@include mobile {  }
+		@include narrow {  }
+		@include wide   {  }
+		@include wider  {  
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); 
+				clear: right; 
+				float: right; 
+			}
+		}
+		@include widest	{ 
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); 
+				clear: right; 
+				float: right; 
+			}		
+		}
+		@include full { 
+			
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); 
+				clear: right; 
+				float: right; 
+			}		
+		}
+	}
+}
+
+.card.relation {
+
+	/*clear: both;*/
+	/*overflow: auto;*/
+
+	background: white;
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest {  }
+	@include full 	{ background: whitesmoke; }
+
+	.card {
+
+		&__slide {
+
+			@include tiny   {  }
+			@include mobile {  }
+			@include narrow {  }
+			@include wide	{ width: span(3 of 9); margin-right: gutter(9); }
+			@include wider	{ width: span(3 of 9); margin-right: gutter(9); }
+			@include widest	{ width: span(3 of 9); margin-right: gutter(9); }
+			@include full	{ width: span(3 of 9); margin-right: gutter(9); }
+		}
+
+		&__header {}
+
+		&__body { 
+			> .bd { width: span(5 of 6); }
+			/*padding-right: $base-button-height-big;*/
+		}
+		
+		&__footer { 
+			display: none; 
+			@include full	{ display: initial; }
+		}
+	}
+}

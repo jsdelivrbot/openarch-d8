@@ -1,6 +1,6 @@
 .fullpage {
 
-	&__asset {
+	&__asset { /* hide this when not in fullpage mode */
 		@include tiny { display: none !important;}
 		@include mobile { display: none !important; }
 		@include narrow { display: none !important; }
@@ -9,6 +9,10 @@
 	}
 	&__section {
 
+	}
+	&__section--hidden { /* hide these during fullpage */
+		@include widest { display: none; }
+		@include full { display: none; }
 	}
 	&__pager--up,
 	&__pager--down {

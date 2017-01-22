@@ -1,7 +1,7 @@
 
-<div class="container slider grid-target">
+<div class="container slider">
 
-    <div class="layout sidebar-layout slider-drawer bg--white drop--right">
+    <div class="layout sidebar-layout slider-drawer bg--white"> {# drop--right #}
 
       <div class="wrapper sidebar-wrapper">
 
@@ -61,8 +61,10 @@
       
     </div> {# end sidebar-layout #}
 
-    <div class="layout bg-layout bg--ltwhitesmoke slider-canvas">
-      <div class="region bg drop--lr bg--white">
+    <div class="bg-screen grid-target"></div>
+
+    <div class="layout bg-layout slider-canvas"> {# bg--ltwhitesmoke #}
+      <div class="region bg-page drop--lr"> {#  #}
         {# <div class="card bg">
         </div> #}
       </div>
@@ -92,7 +94,9 @@
 
       <div class="wrapper main-content-wrapper "> {# buffer--main-top buffer--main-bottom #}
 
-        <div class="region main-content__buffer buffer-top bg--white"></div>
+        <div class="region main-content__buffer">
+          <div class="card buffer-top"></div>
+        </div>
 
         <div class="region main-content__header">
 
@@ -138,8 +142,8 @@
 
                   {% if page.toolbar_left %}
                     <div class="ribbon__segment--left">
-                          <a class="icon icon--fa" style="background:none"><i class="fa fa-filter" aria-hidden="true"></i></a>
-                      </div>
+                      <a class="icon icon--fa" style="background:none"><i class="fa fa-filter" aria-hidden="true"></i></a>
+                    </div>
                     <div class="ribbon__segment--left" role="contentinfo">
                       {{ page.toolbar_left }}
                     </div>
@@ -167,7 +171,7 @@
                   </div>
                 </div>
 
-                <div class="card toolbar-screen bg--white border--top-ltgrey ribbon ribbon--big">
+                <div class="card toolbar-screen ribbon ribbon--big">
                 </div>
 
               </div>
@@ -199,7 +203,7 @@
           {# </div> #}
 
           {# <div class="section"> #}
-            <div id="main-content-primary" class="region main-content__primary bg--white">
+            <div id="main-content-primary" class="region main-content__primary border--top">
               {{ page.content_primary }}
             </div>
           {# </div> #}
@@ -207,17 +211,17 @@
           {# </div> #}
           
           {% if page.content_relations %}
-            <div id="main-content-relations" class="region main-content__relations minh--1sp bg--lines">
+            <div id="main-content-relations" class="region main-content__relations minh--1sp border--top">
               {{ page.content_relations }}
             </div>
           {% endif %}
 
           {% if page.content_facts %}
-            <div id="main-content-facts" class="region main-content__facts bg--white">
+            <div id="main-content-facts" class="region main-content__facts border--top">
               <div class="card factsheet">
                 <div class="card__item card__item--spaced-most card__header">
                   <div class="title title--secondary">
-                    <h2>Data</h2>
+                    <h3>Data</h3>
                   </div>
                 </div>
                 <div class="card__item card__item--spaced-most-top card__body">
@@ -231,11 +235,13 @@
 
         </main>
 
-        <div class="region main-content__buffer buffer-bottom bg--white"></div>
+        <div class="region main-content__buffer buffer-bottom">
+
+        </div>
 
       </div> {# end main-content-wrapper #}
 
-      <div class="wrapper main-footer-wrapper region bg--white">
+      <div class="wrapper main-footer-wrapper region ">
 
         <footer class="card footer main-footer" role="contentinfo">
           

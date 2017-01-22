@@ -90,7 +90,8 @@ MyFullpage = (function($) {
             //Design
             controlArrows: true,
             verticalCentered: true,
-            sectionsColor : [ 'rgba(255,255,255,.1)', 'rgba(235, 97, 0, 0.9)', 'rgba(255,255,255,.8)'],
+            // sectionsColor : [ 'rgba(255,255,255,.1)', 'rgba(235, 97, 0, 0.9)', 'rgb(255,255,255)'],
+            sectionsColor : [ 'rgba(255,255,255,.1)', 'rgb(255,255,255)'],
             paddingTop: '0',
             paddingBottom: '0',
             // fixedElements: '.section__header, .section__footer',
@@ -106,26 +107,22 @@ MyFullpage = (function($) {
 
             //events
             onLeave: function(index, nextIndex, direction){
-                if (index == 3){
+                if (index == 2){
                     $header.fadeOut();
                 }
                 if (index == 1){
                     $nameplate.fadeOut();
                 }
-                // if (index == 2){
-                //     $manifesto.fadeOut();
-                // }
+
             },
             afterLoad: function(anchorLink, index){
-                if (index == 3){
+                if (index == 2){
                     $header.fadeIn();
                 }
                 if (index == 1){
                     $nameplate.fadeIn();
                 }
-                // if (index == 2){
-                //     $manifesto.fadeIn();
-                // }
+
             },
             afterRender: function(){},
             afterResize: function(){},

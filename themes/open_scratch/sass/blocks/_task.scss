@@ -1,0 +1,109 @@
+@mixin card-layout-vert { 
+
+	padding-left: gutter(13);
+	padding-right: gutter(13);
+	clear: left;
+	float: none;
+}
+@mixin card-type-4col { 
+
+	> .card__header { 
+		@include span(first 3 of 12); 
+	}	
+	> .card__body { 
+		@include span(last 9 of 12); 
+		float: right;  
+	}
+	> .card__footer { 
+		@include span(last 9 of 12); 
+		clear: right; 
+		float: right; 
+	}
+}
+
+.card.task-main { /* card--basic */
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest { 
+		padding-left: gutter(13);
+		padding-right: gutter(13);
+		clear: left;
+		float: none;
+		margin-bottom: $base-spacing-sml;
+		margin-top: $base-spacing-sml;
+	}
+	@include full   { 
+		/*@include span(isolate 12 at 4 of 18);*/
+		margin-bottom: $base-spacing-huge;
+		margin-top: $base-spacing-huge; 
+	}
+
+	> .card {
+
+		&__header { 
+			@include span(full);
+			float: none; 
+		}	
+		&__body { 
+			@include span(full);
+			float: none; 
+		}
+		&__footer { 
+			@include span(full);
+			float: none;
+		}
+
+		@include wide {
+			&__header {  }	
+			&__body {
+				/*> .bd { width: span(8 of 9 wide); } */
+			}
+			&__footer {  }
+		}
+
+		@include wider {
+			&__header {  }	
+			&__body {
+				> .bd { width: span(11 of 12); } 
+			}
+			&__footer {  }
+		}
+
+		@include widest	{ 
+
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); 
+				clear: right; 
+				float: right; 
+			}			
+		}
+
+		@include full { 
+
+			&__header { 
+				@include span(first 6 of 18); 
+			}	
+			&__body { 
+				@include span(last 12 of 18);  
+				float: right; 
+				> .bd { width: span(9 of 12); } 
+			}
+			&__footer { 
+				@include span(last 12 of 18); 
+				clear: right; 
+				float: right; 
+			}			
+		}
+	}
+}

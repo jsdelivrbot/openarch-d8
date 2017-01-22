@@ -120,6 +120,8 @@ $sidebar-footer-height: 	$base-row2-height;
 	height:					100%;
 	position:				relative;
 
+	border-right: 1px solid #ddd;
+
 	&__top{
 		
 		font-size:		1rem;		/* need this to control searchbar region height */

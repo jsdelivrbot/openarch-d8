@@ -31,20 +31,20 @@
 #}
 <tr>
 	<td class="awards-table__data-date">
-		<h7>{{ fields.field_award_date.content }}</h7>
+		<span>{{ fields.field_award_date.content }}</span>
 	</td>
 	<td class="awards-table__data-name">
-		<h7>{{ fields.title.content }}</h7>
-		{# <h7>{{ fields.field_award_link.content }}</h7> #}
+		<span>{{ fields.title.content }}</span>
+		{# <span>{{ fields.field_award_link.content }}</span> #}
 	</td>
 	<td class="awards-table__data-icon data--right">
 		<div class="icon--container">
 	    	{# <div > #}
 	    		{# <a class="icon icon--img" href="http://www.google.com"> #}
-	    		<a class="icon icon--img" href="{{ fields.field_award_link.content }}">
+	    		{# <a class="icon icon--img" href="{{ fields.field_award_link.content }}">
 	    			<img src="{{ theme_path }}/images/arrow1-sml-12px.png">
-	    			{# <i class="fa fa-external-link" aria-hidden="true"></i> #}
-	    		</a>
+	    		</a> #}
+	    		<a class="icon icon--big icon--button-sml icon--mat" href="{{ events_path }}"><i class="material-icons">call_made</i></a>
 	    	{# </div> #}
 	    </div>
 	</td>

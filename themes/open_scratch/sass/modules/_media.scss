@@ -60,7 +60,7 @@ $base-media-spacing: 1.5em;
 		@include wide   { width: span(4 of 12); }
 		@include wider	{ width: span(3 of 12); margin-right: gutter(12);}
 		@include widest	{ width: span(3 of 12); margin-right: gutter(12); }
-		@include full	{ width: span(3 of 12); margin-right: gutter(12); }
+		@include full	{ width: span(3 of 15); margin-right: gutter(15); }
 	}
 
 	&__img--relation {
@@ -125,7 +125,7 @@ $mediaCard-spacing: 1.5em;
 /* config */
 $mediaTitle-spacing: 		$base-spacing;
 $mediaTitle-spacing-sml: 	$base-spacing-sml;
-$mediaTitle-spacing-big: 	$base-spacing-big;
+$mediaTitle-spacing-big: 	$base-spacing-huge;
 
 /* layout */
 .mediaTitle-wrapper {}

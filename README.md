@@ -274,6 +274,12 @@ change permissions on files directory to 777
 * add press slideshow view
 * add optional image files field to press
 * modify table at full breakpoint
+ 
+#### 0.6.13
+
+* change recent events font-size /background
+* make recent events expandable 3 items
+* create book content type fields
 
 #### TBD
 
@@ -355,6 +361,13 @@ change permissions on files directory to 777
 * justify people text and probably all body texts.
 * give each thumbnail flexslider slideshow random delay/speed (see [here](http://stackoverflow.com/questions/28854459/how-to-randomize-slideshow-speed-in-flexslider?rq=1) and [here](http://stackoverflow.com/questions/13269438/flexslider-different-slideshow-speed-on-each-slide))
 * add 1.5x multipliers for mobile (supports android)
+* convert press type to publication. (prob too late for that)
+* icon class should not use em for font-size.
+* change all link fields to field_link.
+* event node page relations duplicates.
+* delete fields from page content type, or prob should just delete content type.
+* update responsive image sizes for events wider/widest/full
+* consider fullpage slideshow at node page? then smaller responsive images sizes...
 
 #### ISSUES:
 
@@ -368,6 +381,8 @@ change permissions on files directory to 777
 * awards language filter not working, all translations show up
 * views infite scroll not working with flexslider ( temp fix -> added flexslider function to infinite-scroll.js as suggested here -> https://www.drupal.org/node/2317319) but need to make this more robust so update doesn't break it again.
 * Should filter for translation language = interface, then render language = row content!! This is causing issue with projects table/gallery when task group list field is exposed filters AND same list field is NOT translatable. Changing to translatable solve (but then task group discrep can arrise and shouldn't be translatable anyway). Removing translation language filter from view and instead setting rendering language to interface language also solves (but this SHOULD create duplicates in thumb gallery). WRONG Again, correct behavior SHOULD ACTUALLY be to NOT filter by translation AND render by interface BECAUSE, then if you having translated a node, it will STILL show up in listing!!! So real issue seems to be exposed list field causing duplicates. For now, can 
+* frontpage not working in chinese
+
 
 ## Liscense
  

@@ -8,7 +8,7 @@
 $icon-size:						$base-button-height;
 $icon-size--sml:				$base-icon-height;
 $icon-spacing:					0; /*.5em;*/
-$icon-color:					#333;
+$icon-color:					#555;
 $icon-color-hover:				$openorange-color;
 $icon-bg-color:					none; /*#f9f9f9;*/
 $icon-hover-bg-color:			#e5e5e5;
@@ -58,7 +58,7 @@ $icon-hover-bg-color:			#e5e5e5;
 
 				&.active {
 
-					> i { color: 		$icon-color-hover; }
+					> i { color: 		black; }
 				}
 
 
@@ -81,6 +81,10 @@ $icon-hover-bg-color:			#e5e5e5;
 				
 			}
 
+			.icon--pull-left {
+				margin-left: $icon-size*(-0.33);
+			}
+
 			.icon.icon--white {
 
 				> i { color: 		#ddd; }
@@ -88,6 +92,16 @@ $icon-hover-bg-color:			#e5e5e5;
 				&:hover {
 
 					> i { color: 		white; }
+				}
+			}
+
+			.icon.icon--ltgrey {
+
+				> i { color: 		#eee; }
+
+				&:hover {
+
+					> i { color: 		black; }
 				}
 			}
 

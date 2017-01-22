@@ -38,10 +38,23 @@
 <div{{ attributes.addClass(classes) }}>
 
   <div class="card jobs">
+
+    <div class="card__header">
+
+      <div class="ribbon ribbon--med">
+        <div class="ribbon__segments">
+          <div class="ribbon__segment--left">
+            <h3 class="title title--secondary inline-block">Job Openings</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
     <div class="card__item card__body">
       {{ rows }}
     </div>
-    <div class="card__item pspaced card__footer border--top-grey">
+    <div class="card__item pspaced card__footer border--top">
       <div class="bd--smltext">
         <p>{{ footer }}</p>
       </div>

@@ -37,20 +37,31 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-<div class="card projects-table spaced--more">
+<div class="card projects-table">
+
+	<div class="card__item card__header projects-table__header">
+      <div class="ribbon ribbon--med">
+        <div class="ribbon__segments">
+          <div class="ribbon__segment--left">
+            <div class="label"><span class="title ttitle projects-table__title inline-block">List of Works </span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 	<div class="card__body">
 
 		<table class="table projects-table__table">
 
-			<thead class="projects-table__head">
+			<thead>
 				<tr>
-					<th class="projects-table__head-year"><h7>Year</h7></th>
-					<th class="projects-table__head-city"><h7>City</h7></th>
-					<th class="projects-table__head-size"><h7>Size</h7></th> 
-					<th class="projects-table__head-type"><h7>Type</h7></th>
-					<th class="projects-table__head-program"><h7>Program</h7></th>
-					<th class="projects-table__head-name"><h7>Name</h7></th> 
-					<th class="projects-table__head-icon data--right"><h7>Link</h7></th>
+					<th class="projects-table__head-year"><span>Year</span></th>
+					<th class="projects-table__head-city"><span>City</span></th>
+					<th class="projects-table__head-size"><span>Size</span></th> 
+					<th class="projects-table__head-type"><span>Type</span></th>
+					<th class="projects-table__head-program"><span>Program</span></th>
+					<th class="projects-table__head-name"><span>Name</span></th> 
+					<th class="projects-table__head-icon data--right"><span>Link</span></th>
 				</tr>
 			</thead>
 
@@ -60,6 +71,16 @@
 
 		</table>
 		
+	</div>
+	<div class="card__item border--bottom card__footer">
+		<div class="ribbon ribbon--big">
+        <div class="ribbon__segments">
+          <div class="ribbon__segment--left">
+            {{more}}
+            {{pager}}
+          </div>
+        </div>
+      </div>
 	</div>
 </div>
 

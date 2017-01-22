@@ -4,12 +4,35 @@
 	border-bottom: 1px solid #f1f1f1;
 }
 
-.border-top {
-	border-top: 1px solid black;
+.border-top,
+.border--top {
+	border-top: 1px solid #eee;
+}
+.border-bottom,
+.border--bottom {
+	border-bottom: 1px solid #eee;
 }
 
-.border-bottom {
-	border-bottom: 1px solid black;
+
+/*.border--bottom {
+	border-bottom: 1px solid #333;
+}*/
+
+/* recent news items */
+.border--tb,
+.border--tb-blk {
+	border-top: 1px solid #eee;
+
+	&:nth-last-child(1) {
+		border-bottom: 1px solid #eee;
+	}
+}
+.border--tb-ltgrey {
+	border-top: 1px solid lightgrey;
+
+	&:nth-last-child(1) {
+		border-bottom: 1px solid lightgrey;
+	}
 }
 
 .border-top-hairline {
@@ -66,6 +89,9 @@
 .border--right-ltgrey {
 	border-right: 1px solid #f5f5f5;
 }
+.border--right-hairline {
+	border-right: 1px solid whitesmoke;
+}
 
 .collapse-first-pad > p {
 
@@ -86,17 +112,24 @@
 
 .drop--left{
 	/*border-left: 1px solid #ccc;*/
-	box-shadow: -7px 0 8px -9px #999;
+	box-shadow: -8px 0 8px -9px #555;
 }
 
 .drop--lr {
-	box-shadow: 7px 0 8px -9px #999, -7px 0 8px -9px #999;
+	box-shadow: 8px 0 8px -9px #555, -8px 0 8px -9px #555;
 }
 
 .bg--ltwhitesmoke {background: #f9f9f9;}
 .bg--white {background: white;}
 .bg--dark { background: #333;}
-.bg--orange { background: $openorange-color;}
+.bg--orange { background: $openorange-color; /*opacity: .9;*/}
+.bg--ltgrey { background: #eee; }
+
+.op--9 { opacity: 0.9; }
+.op--8 { opacity: 0.8; }
+.op--7 { opacity: 0.7; }
+.op--6 { opacity: 0.6; }
+.op--5 { opacity: 0.5; }
 
 .c--orange { color: $openorange-color; }
 .c--white { color: white; }
@@ -110,6 +143,16 @@
 .bg--lines {
 	
 	background: url('../images/hatch2x4.png');
+}
+
+.bg--manifesto {
+	background: url('../images/hatch2x4.png');
+	@include widest {
+		background: $openorange-color;
+	}
+	@include full {
+		background: $openorange-color;
+	}
 }
 
 .bg--lines-orange {
@@ -143,9 +186,11 @@
 .spaced 		{ margin: $base-spacing 0; }
 .spaced--less 	{ margin: $base-spacing-sml 0; }
 .spaced--more 	{ margin: $base-spacing-big 0; }
-.spaced--most 	{ margin: $base-spacing-big 0; }
+.spaced--most 	{ margin: $base-spacing-huge 0; }
 .spaced--dbl 	{ margin: $base-spacing*2 0; }
 .pspaced 		{ padding: $base-spacing 0; }
+.pspaced--less 	{ padding: $base-spacing-sml 0; }
+.pspaced--top 	{ padding-top: $base-spacing; }
 
 .minh--hsp 	{ min-height: $base-spacing*.5; }
 .minh--1sp 	{ min-height: $base-spacing; }
@@ -170,7 +215,7 @@ $base-spacing-big: 		1.5rem;*/
 .position--bottom 	{ position: absolute; bottom: 0; }
 .position--top 		{ position: absolute; top: 0; }
 
-.line-clamp > p {
+/*bd*/.line-clamp > p {
 
 	display: block; /* Fallback for non-webkit */
 	display: -webkit-box;
@@ -187,77 +232,44 @@ $base-spacing-big: 		1.5rem;*/
 
 }
 
-$buffer-size-top: 		12.5rem; /*200px;*/
-$buffer-size-bottom:	8.75rem; /*140px;*/
+/*bd*/.lc--4 > p {
 
-@include tiny {
-	.buffer--main-top 		{ padding-top:		$base-row2-height *2; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row2-height *2; }
-}
-@include mobile {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
-@include narrow {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
-@include wide {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
-@include wider {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *2; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
-@include widest {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
-@include full {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
+	display: block; /* Fallback for non-webkit */
+	display: -webkit-box;
+	/*max-width: 400px;*/
+	/*height: $font-size*$line-height*$lines-to-show;*/ /* Fallback for non-webkit */
+	/*margin: 0 auto;*/
+	/*font-size: $font-size;
+	line-height: $line-height;*/
+	width: 100%;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
 }
 
-/* buffer class */
-@include tiny {
-	.buffer-top 			{ height:	$base-row2-height *2; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include mobile {
-	.buffer-top 			{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include narrow {
-	.buffer-top 		 	{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include wide {
-	.buffer-top 		 	{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include wider {
-	.buffer-top 			{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include widest {
-	.buffer-top 			{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include full {
-	.buffer-top 			{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
+/*bd*/.lc--3 > p {
+
+	display: block; /* Fallback for non-webkit */
+	display: -webkit-box;
+	/*max-width: 400px;*/
+	/*height: $font-size*$line-height*$lines-to-show;*/ /* Fallback for non-webkit */
+	/*margin: 0 auto;*/
+	/*font-size: $font-size;
+	line-height: $line-height;*/
+	width: 100%;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
 }
 
 
 
+
+.aft--arrow-r:after { content:"\27F6"; }
 
 
 
@@ -290,5 +302,6 @@ $buffer-size-bottom:	8.75rem; /*140px;*/
 .overflow-vis {
 	overflow: visible;
 }
+
 
 

@@ -1,31 +1,33 @@
-uuid: 5af700e5-fb74-4cf8-b8bf-b15793e06ed7
+uuid: f9dd10b7-9229-4a78-ab7d-49e951a9dc05
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - field.field.node.page.field_image_files
-    - field.field.node.page.field_link
-    - field.field.node.page.field_press_publication_date
-    - field.field.node.page.field_press_publisher
-    - field.field.node.page.field_product_dimensions
-    - field.field.node.page.field_publication_country
-    - field.field.node.page.field_publication_editor
-    - field.field.node.page.field_publication_format
-    - field.field.node.page.field_publication_isbn
-    - field.field.node.page.field_publication_language
+    - field.field.node.book.body
+    - field.field.node.book.field_book_type
+    - field.field.node.book.field_image_files
+    - field.field.node.book.field_link
+    - field.field.node.book.field_press_pub_author
+    - field.field.node.book.field_press_publication_date
+    - field.field.node.book.field_press_publisher
+    - field.field.node.book.field_product_dimensions
+    - field.field.node.book.field_publication_country
+    - field.field.node.book.field_publication_designer
+    - field.field.node.book.field_publication_editor
+    - field.field.node.book.field_publication_format
+    - field.field.node.book.field_publication_isbn
+    - field.field.node.book.field_publication_language
+    - field.field.node.book.field_publication_pages
     - image.style.thumbnail
-    - node.type.page
+    - node.type.book
   module:
     - datetime
     - image
     - link
     - text
-_core:
-  default_config_hash: KSvzyFhdLuxniTsunUnUfpfMmod2l57GibtVjL8ymHM
-id: node.page.default
+id: node.book.default
 targetEntityType: node
-bundle: page
+bundle: book
 mode: default
 content:
   body:
@@ -38,9 +40,14 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+  field_book_type:
     weight: 15
     settings: {  }
     third_party_settings: {  }
+    type: options_select
   field_image_files:
     weight: 2
     settings:
@@ -49,33 +56,47 @@ content:
     third_party_settings: {  }
     type: image_image
   field_link:
-    weight: 13
+    weight: 16
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+  field_press_pub_author:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_press_publication_date:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
   field_press_publisher:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_product_dimensions:
-    weight: 12
+    weight: 14
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_publication_country:
-    weight: 8
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_publication_designer:
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -89,26 +110,38 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_publication_format:
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_publication_isbn:
-    weight: 9
+    weight: 10
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_publication_language:
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
+  field_publication_pages:
+    weight: 13
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
   langcode:
     type: language_select
     weight: 0
     settings: {  }
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 18
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -117,9 +150,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 14
+    weight: 20
     settings:
       match_operator: CONTAINS
       size: 60
@@ -128,4 +165,3 @@ content:
 hidden:
   path: true
   promote: true
-  sticky: true

@@ -1,0 +1,19 @@
+uuid: e6fe81ca-3002-42df-958f-327ed97ae81b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_publisher
+    - node.type.book
+id: node.book.field_press_publisher
+field_name: field_press_publisher
+entity_type: node
+bundle: book
+label: Publisher
+description: Publisher
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

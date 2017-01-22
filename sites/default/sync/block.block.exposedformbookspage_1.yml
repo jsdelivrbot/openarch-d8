@@ -1,30 +1,29 @@
-uuid: 1cea775b-6edd-4548-b37c-b439b1f23b18
+uuid: 743fd56b-057d-4f72-8b5d-3dc4efcb6d3b
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - views.view.featured_work
+    - views.view.books
   module:
     - system
     - views
   theme:
     - open_scratch
-id: views_block__featured_work_block_1_2
+id: exposedformbookspage_1
 theme: open_scratch
-region: '-1'
-weight: -26
+region: toolbar_left
+weight: -33
 provider: null
-plugin: 'views_block:featured_work-block_1'
+plugin: 'views_exposed_filter_block:books-page_1'
 settings:
-  id: 'views_block:featured_work-block_1'
+  id: 'views_exposed_filter_block:books-page_1'
   label: ''
   provider: views
   label_display: '0'
   views_label: ''
-  items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: /emptypagetest
+    pages: /books
     negate: false
     context_mapping: {  }

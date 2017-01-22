@@ -1,0 +1,17 @@
+uuid: ab11bd32-40e2-4af1-8f92-4bee0ae98bba
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Book
+type: book
+description: 'A book.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

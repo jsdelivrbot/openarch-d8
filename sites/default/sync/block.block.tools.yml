@@ -1,6 +1,6 @@
 uuid: a8c0c70f-ca0e-4b34-a706-a761b725a66b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.tools
@@ -10,8 +10,8 @@ dependencies:
     - open_scratch
 id: tools
 theme: open_scratch
-region: sidebar_nav
-weight: -27
+region: '-1'
+weight: 3
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

@@ -1,0 +1,19 @@
+uuid: d4b88af3-7c98-4c7c-ae52-f71398a4ff06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_editor
+    - node.type.book
+id: node.book.field_publication_editor
+field_name: field_publication_editor
+entity_type: node
+bundle: book
+label: Editor
+description: 'Publication editor.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

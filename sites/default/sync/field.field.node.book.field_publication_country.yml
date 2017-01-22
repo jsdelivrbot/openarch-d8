@@ -1,0 +1,19 @@
+uuid: c9b017e1-b473-4aeb-8398-6714d12cd1fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_country
+    - node.type.book
+id: node.book.field_publication_country
+field_name: field_publication_country
+entity_type: node
+bundle: book
+label: 'Publication country'
+description: 'Publication country.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

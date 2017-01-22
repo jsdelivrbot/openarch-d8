@@ -1,0 +1,21 @@
+uuid: a4e9d9c6-8ce4-4e88-b674-8191cfc9193d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_product_dimensions
+field_name: field_product_dimensions
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

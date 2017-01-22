@@ -1,0 +1,27 @@
+uuid: 0cd35390-a5d1-46c4-94bb-a5c46179dc4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_publication_language
+field_name: field_publication_language
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: English
+      label: English
+    -
+      value: Mandarin
+      label: Mandarin
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

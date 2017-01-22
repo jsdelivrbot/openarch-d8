@@ -1,20 +1,24 @@
-uuid: 8047c84d-12df-44b5-a9be-2a9adc41816f
+uuid: fb5b8d35-3c79-46da-bcbc-deb5fe797fdb
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - field.field.node.page.field_image_files
-    - field.field.node.page.field_link
-    - field.field.node.page.field_press_publication_date
-    - field.field.node.page.field_press_publisher
-    - field.field.node.page.field_product_dimensions
-    - field.field.node.page.field_publication_country
-    - field.field.node.page.field_publication_editor
-    - field.field.node.page.field_publication_format
-    - field.field.node.page.field_publication_isbn
-    - field.field.node.page.field_publication_language
-    - node.type.page
+    - field.field.node.book.body
+    - field.field.node.book.field_book_type
+    - field.field.node.book.field_image_files
+    - field.field.node.book.field_link
+    - field.field.node.book.field_press_pub_author
+    - field.field.node.book.field_press_publication_date
+    - field.field.node.book.field_press_publisher
+    - field.field.node.book.field_product_dimensions
+    - field.field.node.book.field_publication_country
+    - field.field.node.book.field_publication_designer
+    - field.field.node.book.field_publication_editor
+    - field.field.node.book.field_publication_format
+    - field.field.node.book.field_publication_isbn
+    - field.field.node.book.field_publication_language
+    - field.field.node.book.field_publication_pages
+    - node.type.book
   module:
     - datetime
     - image
@@ -22,21 +26,25 @@ dependencies:
     - options
     - text
     - user
-_core:
-  default_config_hash: oZ-7vpIJxjxL2up9B5KrJGD0lazQ9aN0P-fIPo6OrSU
-id: node.page.default
+id: node.book.default
 targetEntityType: node
-bundle: page
+bundle: book
 mode: default
 content:
   body:
     label: hidden
     type: text_default
-    weight: 100
+    weight: 101
     settings: {  }
     third_party_settings: {  }
+  field_book_type:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_image_files:
-    weight: 112
+    weight: 104
     label: above
     settings:
       image_style: ''
@@ -44,7 +52,7 @@ content:
     third_party_settings: {  }
     type: image
   field_link:
-    weight: 108
+    weight: 105
     label: above
     settings:
       trim_length: 80
@@ -54,8 +62,15 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+  field_press_pub_author:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_press_publication_date:
-    weight: 110
+    weight: 107
     label: above
     settings:
       format_type: medium
@@ -63,7 +78,7 @@ content:
     third_party_settings: {  }
     type: datetime_default
   field_press_publisher:
-    weight: 111
+    weight: 112
     label: above
     settings:
       link_to_entity: false
@@ -77,39 +92,54 @@ content:
     third_party_settings: {  }
     type: string
   field_publication_country:
-    weight: 103
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_designer:
+    weight: 115
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_publication_editor:
-    weight: 102
+    weight: 103
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_publication_format:
-    weight: 105
+    weight: 110
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
   field_publication_isbn:
-    weight: 104
+    weight: 111
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_publication_language:
-    weight: 107
+    weight: 108
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+  field_publication_pages:
+    weight: 114
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
   links:
-    weight: 101
+    weight: 100
 hidden:
   langcode: true

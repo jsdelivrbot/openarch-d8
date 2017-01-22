@@ -58,23 +58,23 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 20
+          items_per_page: 15
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ⟵
+            next: ⟶
+            first: ⇤
+            last: ⇥
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
+            items_per_page_options_all: true
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
           quantity: 9
       style:
         type: table

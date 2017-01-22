@@ -1,0 +1,21 @@
+uuid: 1e3db1e9-aace-48e3-a324-6db90551fcf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_format
+    - node.type.book
+  module:
+    - options
+id: node.book.field_publication_format
+field_name: field_publication_format
+entity_type: node
+bundle: book
+label: 'Publication format'
+description: 'Publication format.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

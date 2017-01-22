@@ -1,0 +1,27 @@
+uuid: 8e5f82c4-6ba2-4a91-9ad4-3629a70da933
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_book_type
+field_name: field_book_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'On OPEN'
+      label: 'On OPEN'
+    -
+      value: 'By OPEN'
+      label: 'By OPEN'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

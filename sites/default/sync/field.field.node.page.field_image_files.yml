@@ -1,18 +1,18 @@
-uuid: bb025d88-2254-4766-9c15-554b1a4d7928
+uuid: 1bc89cfb-2976-440f-94d7-93987365cea9
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_image_files
-    - node.type.press
+    - node.type.page
   module:
     - image
-id: node.press.field_image_files
+id: node.page.field_image_files
 field_name: field_image_files
 entity_type: node
-bundle: press
+bundle: page
 label: Images
-description: 'Upload one or more images. click "add another item" for next image, browse to image, then click "upload". Do this for each subsequent image.'
+description: 'Images of selected pages.'
 required: false
 translatable: false
 default_value: {  }
@@ -23,8 +23,8 @@ settings:
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
-  alt_field_required: true
+  alt_field: true
+  alt_field_required: false
   title_field: false
   title_field_required: false
   default_image:

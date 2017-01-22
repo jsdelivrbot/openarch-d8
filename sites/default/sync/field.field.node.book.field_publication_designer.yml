@@ -1,0 +1,19 @@
+uuid: 179c5bb3-f459-4be7-9e10-e841fbc1a4bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_designer
+    - node.type.book
+id: node.book.field_publication_designer
+field_name: field_publication_designer
+entity_type: node
+bundle: book
+label: 'Publication designer'
+description: 'Publication graphic designer.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

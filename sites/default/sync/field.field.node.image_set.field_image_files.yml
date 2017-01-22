@@ -6,14 +6,7 @@ dependencies:
     - field.storage.node.field_image_files
     - node.type.image_set
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
 id: node.image_set.field_image_files
 field_name: field_image_files
 entity_type: node

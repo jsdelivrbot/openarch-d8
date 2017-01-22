@@ -1,0 +1,23 @@
+uuid: 52202002-0308-4f03-b07d-ff1b30c103e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_language
+    - node.type.book
+  module:
+    - options
+id: node.book.field_publication_language
+field_name: field_publication_language
+entity_type: node
+bundle: book
+label: 'Publication language'
+description: 'Publication language.'
+required: false
+translatable: false
+default_value:
+  -
+    value: Mandarin
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -66,14 +66,10 @@ $card-base-font-size:			1rem;
 
 	@include widest {
 
-		
-
 	}
 
 	&__item {
-
 		overflow: hidden;
-
 	}
 
 	&__item--spaced 		{ margin: $base-spacing 0; }
@@ -83,18 +79,9 @@ $card-base-font-size:			1rem;
 	&__item--spaced-dbl		{ margin: $base-spacing*2 0; }
 	&__item--spaced-most-top { margin: $base-spacing-huge 0 0 0; }
 
-	&__header 	{	
-
-		/*font-size: 		$card-title-font-size;*/
-		/*line-height: 		$card-title-line-height;*/
-		/*color: 			$card-title-font-color;*/
+	&__header 	{
+		
 	}
-
-	/*&__header--headline {
-
-		text-decoration: 	underline;
-		text-transform: 	uppercase;
-	}*/
 
 	&__slide 	{
 
@@ -105,6 +92,14 @@ $card-base-font-size:			1rem;
 			width:100%;
 			height:auto;
 		}
+	}
+
+	&__body  {
+
+	}
+
+	&__footer 	{
+
 	}
 
 	/*&__slide--small 	{	
@@ -129,21 +124,7 @@ $card-base-font-size:			1rem;
 		@include full	{ width: 75% }
 	}*/
 
-	&__body > p {
-
-		/*font-size: 		$card-body-font-size;*/
-		/*line-height: 		$card-body-line-height;*/
-		/*color: 			$card-body-font-color;*/
-		/*text-align:			justify;*/
-	}
-
-	/*&__body--big > p {
-
-		font-size:			$card-body-font-size--big;
-		line-height:		$card-body-line-height--big;
-	}*/
-
-	&__footer 	{	/**/	}
+	
 
 	
  
@@ -555,6 +536,74 @@ $card-base-font-size:			1rem;
 	} 
 }
 
+.card.coverage {
+
+	/*.card__header { display: initial; }*/
+
+	@include tiny {
+		display: none;
+	}
+	@include mobile {
+		display: none;
+	}
+	@include narrow {
+		display: none;
+	}
+	@include wide {
+		display: none;
+	}
+	@include wider {
+		display: none;
+	}
+	@include widest {
+		display: none;
+		padding-left: gutter(13);
+		padding-right: gutter(13);
+		clear: left;
+		float: none; 
+		border-top: none;
+	}
+	@include full {
+		display: none;
+		@include span(isolate 12 at 4 of 18);
+	}
+
+	.card {
+		
+		@include widest	{ 
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); 
+				clear: right; 
+				float: right; 
+			}	
+		} 
+		@include full	{ 
+
+			
+
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); 
+				clear: right; 
+				float: right; 
+			}
+		} 
+	}
+}
+
 .card.projects-gallery,
 .card.videos {
 
@@ -607,7 +656,9 @@ $card-base-font-size:			1rem;
 	/*@include widest	{ @include card-type-12col; }
 	@include full { @include card-type-12col; }*/
 
-	.card__slide	{	
+	.card__slide	{
+
+		/*overflow: visible;*/ /* so slideshow works with varying height slides */
 
 		@include tiny   { width: 100% }
 		@include mobile { width: 100% }
@@ -637,7 +688,7 @@ $card-base-font-size:			1rem;
 	/*overflow: hidden;*/
     /*background: #333;*/
 	@include widest	{/* @include card-layout-vert;*/  } 
-	@include full	{ @include span(isolate 12 at 4 of 18);  } 
+	@include full	{ @include span(isolate 11 at 4.5 of 19 wider);  } 
 }
 
 .card.jobs,

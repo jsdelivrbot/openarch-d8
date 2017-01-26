@@ -18,14 +18,18 @@ jQuery(document).ready(function($){
         $('.main-content-wrapper').removeClass('buffer--main-top buffer--main-bottom');
     }
 
-    // remove buffer from frontpage for widest breakpoint
-    if (window.location.pathname == "/openarch-d8/practice" 
-            || window.location.pathname == "/openarch-d8/projects/gallery"
-            || window.location.pathname == "/openarch-d8/videos"
-            || window.location.pathname == "/openarch-d8/press"
-            ) {
-        $('.main-content__primary').removeClass('border--top');
-    }
+    // remove top border from a few pages
+    $(function() {
+        var parsed_path = window.location.pathname.split('/');
+        var rel_path = parsed_path[parsed_path.length - 1]
+        if (rel_path == "practice" 
+                || rel_path == "gallery"
+                || rel_path == "videos"
+                || rel_path == "press"
+                ) {
+            $('.main-content__primary').removeClass('border--top');
+        }
+    })
 
     $(function() {
         // var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
@@ -39,6 +43,19 @@ jQuery(document).ready(function($){
 
     // expand first element in expandable list
     $(".expandable input:checkbox:first").attr('checked', true);
+
+    // all <a> tags containing a certain rel=""
+    $("a[rel~='keep-params']").click(function(e) {
+        e.preventDefault();
+
+        var params = window.location.search,
+            dest = $(this).attr('href') + params;
+
+        // timeout for browser bugs
+        window.setTimeout(function() {
+            window.location.href = dest;
+        }, 100);
+    });
 
 });
 

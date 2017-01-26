@@ -351,7 +351,7 @@
 		}
 
 		.expandable-body {
-			transition: max-height 0.5s;
+			transition: max-height 1.5s;
 		}
 
 		input[type='checkbox'] ~ .expandable-body {
@@ -360,9 +360,8 @@
 		}
 
 		input[type='checkbox']:checked ~ .expandable-body {
-			max-height: 550px;
+			max-height: 750px;
 		}
-
 
 		input[type='checkbox'] ~ label .icon.unchecked {
 			display: inline-block;

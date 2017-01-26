@@ -17,10 +17,11 @@ $tag-button-height:				$base-button-height;
 $tag-button-pad-horiz:			$base-horiz-pad;
 
 $tag-row-height:				$base-row-height; 	
-$tag-font-color: 				$link-font-color; 	
+$tag-font-color: 				inherit;
+$tag-hover-font-color:			$openorange-color; 	
 
-$tag-bg-color:					white; /*#f9f9f9;*/
-$tag-hover-bg-color:			#e5e5e5;
+$tag-bg-color:					inherit; /*#f9f9f9;*/
+$tag-hover-bg-color:			inherit; /*#e5e5e5;*/
 
 $tag-font-size-sml:				$base-h6-font-size;
 $tag-button-height-sml:			$base-button-height-sml;
@@ -51,6 +52,7 @@ $tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
 
 	a:hover{
 		text-decoration: 	none;
+		color: 				$tag-hover-font-color;
 		background: 		$tag-hover-bg-color;
 	}
 }

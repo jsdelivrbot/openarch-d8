@@ -114,6 +114,25 @@ $menubar-width:				100%;
 			float: right;
 		}
 
+		.menu-toggler{
+			@include wide {display: none;}
+			@include wider {display: none;}
+			@include widest {display: none;}
+			@include full {display: none;}
+		}
+	}
+
+	&__center { /* media_imgR */
+
+		> nav {
+			width: 100%;
+			text-align: 				center;
+		}
+
+		> nav > .block {
+			display: inline-block;
+		}
+
 		.menu {
 			@include tiny { display: none; }
 			@include mobile { display: none; }
@@ -123,14 +142,7 @@ $menubar-width:				100%;
 			@include widest {}
 			@include full {}
 
-		}
-
-		.menu-toggler{
-			@include wide {display: none;}
-			@include wider {display: none;}
-			@include widest {display: none;}
-			@include full {display: none;}
-		}
+		}	
 	}
 }
 

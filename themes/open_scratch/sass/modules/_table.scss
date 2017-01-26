@@ -32,7 +32,7 @@ table {
 
 	.ttitle {
 
-		font-size: $base-h5-font-size;
+		font-size: $base-h3-font-size;
 
 		@include tiny {}
 		@include mobile {}
@@ -44,26 +44,26 @@ table {
 	}
 	thead {
 
-		font-size: $base-h6-font-size; 
+		font-size: $base-h5-font-size; 
 		
 		@include tiny {}
 		@include mobile {}
 		@include narrow {}
 		@include wide {}
-		@include wider {}
+		@include wider { font-size: $base-h6-font-size; }
 		@include widest { font-size: $base-h5-font-size; }
 		@include full { font-size: $base-h3-font-size; }
 	}
 
 	tbody {
 
-		font-size: $base-h6-font-size; 
+		font-size: $base-h5-font-size; 
 
 		@include tiny {}
 		@include mobile {}
 		@include narrow {}
 		@include wide {}
-		@include wider {}
+		@include wider { font-size: $base-h6-font-size; }
 		@include widest { font-size: $base-h5-font-size; }
 		@include full { font-size: $base-h7-font-size; }
 
@@ -83,17 +83,9 @@ table {
 			border-bottom: 1px solid whitesmoke;
 		}
 
-		&:hover {
-			background-color: #f5f5f5;
-		}
-
 		@include full {
 
 			border: none !important;	
-
-			&:hover {
-				background-color: #f5f5f5;
-			}
 		}
 	}
 
@@ -267,14 +259,16 @@ table {
 }*/
 
 .custom-dropdown > select {
-	font-size: inherit;
+	font-size: .95rem; /*$base-h4-font-size;*/
+	text-transform: uppercase;
+	color: inherit; 
 	background: none;
 }
 
 .custom-dropdown__select > option{
 	/*font-size: 1em;*/
 	/*background-color: #fff;*/
-	color: #333;  
+	color: inherit;  
 }
 
 @supports (pointer-events: none) and

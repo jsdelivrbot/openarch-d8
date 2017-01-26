@@ -86,7 +86,7 @@ $link-background-color:		#e5e5e5;
 $base-h1-font-size:			1.67rem; 	/*  2.1rem;  */ /*	5/3 	node titles 		*/	/*	6.25/3 	node title			*/
 $base-h2-font-size:			1.25rem; 	/*  headlines */
 $base-h3-font-size:			1.0rem; 	/*	3.75/3 = 1.25 but little too big for underlined caps - secondary titles 	*/
-$base-h4-font-size:			0.84rem; 	/*	2.5/3 	factsheet headers & headlines	*/
+$base-h4-font-size:			0.9rem; 	/*	2.5/3 	factsheet headers & headlines	*/
 $base-h5-font-size:			0.84rem; 	/*	2.5/3 	factsheet multiline headers (ie. roles)		*/
 $base-h6-font-size:			0.80rem; 	/*	2.5/3 	factsheet facts		*/
 $base-h7-font-size:			0.75rem;	/*  3.75/5  menus and tables */
@@ -161,9 +161,9 @@ $base-button-height-sml: 2.0rem; /* Icons, Tags, Buttons */
 $base-button-height-big: 3.75rem;
 $base-icon-height:		1rem; /* Icons, Tags, Buttons */
 $base-spacing: 			1.25rem;
-$base-spacing-sml: 		0.84rem; /* 2.5/3 */
+$base-spacing-sml: 		0.83rem; /* 2.5/3 */
 $base-spacing-big: 		1.5rem;	 /* 5/3 */
-$base-spacing-huge: 	1.67rem; 
+$base-spacing-huge: 	1.67rem; /* 1.66 + .84 = 2.5! */
 
 /* ==================================================================
 ## Horiz Spacing

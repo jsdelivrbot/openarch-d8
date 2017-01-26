@@ -30,7 +30,7 @@
  */
 #}
 
-<div class="card pspaced--less people media mediaCard moreable border--tb-blk">
+<div class="card pspaced people media mediaCard moreable border--tb-blk">
 
 	<input type="checkbox" id="{{ fields.title.content|striptags }}" />
 		
@@ -38,7 +38,7 @@
 
 		<div class="media__img media__img--profile">
 
-			<div class="card__item spaced--most people__thumb">
+			<div class="card__item spaced people__thumb">
 				<div class="thumb">{{ fields.field_thumbnail.content }}</div>
 			</div>
 
@@ -46,13 +46,13 @@
 
 		<div class="media__contents">
 
-			<div class="card__item spaced--more card__header people__title"> {# media mediaTitle   #}     
+			<div class="card__item spaced--more card__header people__title"> {# media mediaTitle #}
 
 		          {# <div class="media__imgR">
-		            <div class="ribbon ribbon--big">
+		            <div class="ribbon">
 		              <div class="ribbon__segments">
 		                <div class="ribbon__segment">
-		                  <a class="icon icon--smlr" style="background:none"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+		                	<a class="icon icon--fa icon--button-big icon--big" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
 		                </div>
 		              </div>
 		            </div>
@@ -65,7 +65,7 @@
 		    </div>
 
 			<div class="card__item spaced card__body people__body">
-				{{ fields.body.content }}
+				<div class="bd bd--smltext">{{ fields.body.content }}</div>
 			</div>
 
 			<div class="card__item card__footer">

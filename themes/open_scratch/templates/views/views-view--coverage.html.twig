@@ -36,24 +36,50 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-	<div class="card peoples">
 
-    <div class="card__item card__header spaced">
-      <div class="ribbon ribbon--med">
+  <div class="card coverage">
+
+    <div class="card__item card__header">
+
+      <div class="ribbon ribbon--big">
         <div class="ribbon__segments">
           <div class="ribbon__segment--left">
-            <h3 class="title title--secondary tt--u fw--b inline-block">People</h3>
+            {# <h3 class="title title--secondary inline-block">List of Publications</h3> #}
+            <div class="label"><span class="title ttitle projects-table__title inline-block">Coverage</span></div>
           </div>
-          {# <div class="ribbon__segment--left">
-            <a class="icon icon--mat" style="background:none"><i class="material-icons">accessibility</i></a>
-          </div> #}
         </div>
       </div>
+
     </div>
 
     <div class="card__item card__body">
-    	{{ rows }}
+      <table class="table press-table__table">
+      	{# <thead class="press-table__head">
+      		<tr>
+      			<th class="press-table__head-publication-date">Date</th>
+            <th class="press-table__head-publication">Publication</th>
+      			<th class="press-table__head-name">Title</th> 
+      			<th class="press-table__head-icon data--right">Link / PDF</th>
+      		</tr>
+      	</thead> #}
+      	<tbody>
+        	{{ rows }}
+        </tbody>
+      </table>
     </div>
+
+    {# <div class="card__item border--bottom card__footer">
+      <div class="ribbon ribbon--big">
+          <div class="ribbon__segments">
+            <div class="ribbon__segment--left">
+              {{more}}
+              {{pager}}
+            </div>
+          </div>
+        </div>
+    </div> #}
+
+  </div>
 
   {{ feed_icons }}
 </div>

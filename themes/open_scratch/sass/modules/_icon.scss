@@ -8,7 +8,7 @@
 $icon-size:						$base-button-height;
 $icon-size--sml:				$base-icon-height;
 $icon-spacing:					0; /*.5em;*/
-$icon-color:					#555;
+$icon-color:					inherit;
 $icon-color-hover:				$openorange-color;
 $icon-bg-color:					none; /*#f9f9f9;*/
 $icon-hover-bg-color:			#e5e5e5;
@@ -83,6 +83,25 @@ $icon-hover-bg-color:			#e5e5e5;
 
 			.icon--pull-left {
 				margin-left: $icon-size*(-0.33);
+			}
+			.icon--pull-right {
+				margin-right: $icon-size*(-0.33);
+			}
+			.icon--pull-left-more {
+				margin-left: $base-button-height-big*(-0.33);
+			}
+			.icon--pull-right-more {
+				margin-right: $base-button-height-big*(-0.33);
+			}
+			
+			.icon.icon--inv {
+
+				> i { color: 		white; }
+
+				&:hover {
+
+					> i { color: 	white; }
+				}
 			}
 
 			.icon.icon--white {
@@ -278,7 +297,17 @@ $icongal_icon_size:			1.2em;
 
 
 				
+.menu-toggler .icon {
 
+    	position: 		fixed;
+	    bottom: 		1rem;
+	    right: 			1rem;
+	    font-size:  	1.5rem;
+	    height:			3.75rem;
+		line-height: 	3.75rem;
+		width:			3.75rem;
+	    background: 	$openorange-color; 
+}
 				
 
 /* ==================================================================

@@ -67,6 +67,19 @@ $ribbon-height:				$base-row2-height;
 	line-height:  				$base-row1-height;	
 }
 
+.ribbon--bigr {
+
+	/*font-size:					1rem;*/
+	height: 					$base-row0-height;
+	line-height:  				$base-row0-height;	
+}
+
+.ribbon--dbl {
+
+	/*font-size:					1rem;*/
+	height: 					$base-row2-height *2;
+	line-height:  				$base-row2-height *2;	
+}
 
 
 

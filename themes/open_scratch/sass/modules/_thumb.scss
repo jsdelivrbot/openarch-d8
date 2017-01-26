@@ -1,0 +1,49 @@
+.thumb {
+
+	/*img {
+
+		width:100%;
+		height:auto;
+	}*/
+
+	&__caption {
+
+		> * { 
+			width: 100%;
+			padding: 10px 15px;
+	    	font-size: $base-h4-font-size;
+	    	background: white; /*$openorange-color;*/
+	    	color: base-title-font-color; /*white;*/
+	    	opacity: .8;
+	    	justify-content: center;
+			text-align: center;
+		}
+	}
+
+	&__caption--top {
+
+		> * {
+			position: absolute;
+			top: 0;
+  		}
+	}
+
+	&__caption--middle {
+
+		> * {    	
+	    	height: 100%;
+  		}
+	}
+
+	&__caption--bottom {
+
+		> * {
+			position: absolute;
+			bottom: 0;
+  		}
+	}
+
+}
+
+.thumb--medium {}
+.thumb--small {}

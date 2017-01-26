@@ -281,6 +281,19 @@ change permissions on files directory to 777
 * make recent events expandable 3 items
 * create book content type fields
 
+#### 0.6.14
+
+* move layout margin to cards
+
+#### 0.6.15
+
+* center header nav
+* update embed video settings
+* add related media section
+* upload imagesets
+* add coverage section, but disable for now
+
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -368,6 +381,16 @@ change permissions on files directory to 777
 * delete fields from page content type, or prob should just delete content type.
 * update responsive image sizes for events wider/widest/full
 * consider fullpage slideshow at node page? then smaller responsive images sizes...
+* fix 
+* thumbnails in expandable rows (events, etc) should be height contrained b/c need to set max-height for expanded row.
+* views should only return plain text and let twig do rest.
+* remove inline-block class from header elements inside ribbon. instead wrap in label.
+* .custom-dropdown > select font is sizing weird. currently using magic .95rem to match font-size with everything else.
+* sortable tables
+* header__center only works for nav
+* thumb class should be list w/ li and h5 elments.
+* thumb should have thumb thumb__image and thumb__caption classes.
+* pad bottom of related media
 
 #### ISSUES:
 

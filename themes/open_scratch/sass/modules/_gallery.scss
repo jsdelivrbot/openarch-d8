@@ -281,7 +281,6 @@
 		}
 	}
 
-
 		.gallery__item > img,
 		.gallery__item > .overlay { /*li*/
 
@@ -368,49 +367,7 @@
 	
 }
 
-.overlay {
 
-	position: relative;
-
-	&__under {
-
-		/*position: absolute;
-	    top: 0;*/
-	    /*height: inherit;
-	    z-index: 99;
-	    background: red;
-	    opacity: .9;*/
-	}
-
-	&__over {
-		position: absolute;
-	    top: 0;
-	    width: 100%;
-	    height: 100%;    
-	    z-index: 100;
-	    
-	    > p {
-	    	width: 100%;
-	    	height: 100%;
-	    	padding: 10px;
-	    	font-size: .9rem;
-	    	background: $openorange-color;
-	    	color: white;
-	    	opacity: .8;
-	    	display: none;
-	    	justify-content: center;
-  			flex-direction: column;
-  			text-align: center;
-  		}
-	}
-
-	&__over:hover {
-
-		> p {
-			display: flex;
-		}
-	}
-}
 
 /*.showable {
 

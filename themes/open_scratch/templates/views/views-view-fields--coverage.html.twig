@@ -29,24 +29,33 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-{# {{ dump(fields) }} #}
-<li class="gallery__item">
+<tr>
+	<td class="press-table__data-publication-date">
+		<span>{{ fields.field_press_publication_date.content }}</span>
+	</td>
+	{# <td class="press-table__data-publication">
+		<span>{{ fields.field_press_publication.content }} {{ fields.field_press_publication_issue.content }}</span>
+	</td> #}
+	<td class="press-table__data-name">
+		<span>{{ fields.title.content }}</span>
+	</td>
+	<td class="press-table__data-icon data--right">
+		<div class="icon--container">
 
-	<div class="overlay overlay--onhover">
-		<div class="thumb overlay__under">
-			{{ fields.field_thumbnail.content }} {# img element #}
+			{# <a class="icon icon--img" href="task/{{ nid }}">
+				<img src="{{ directory }}/images/arrow1-sml-12px.png">
+			</a> #}
+			<a class="icon icon--big icon--button-sml icon--mat" href="{{ events_path }}">
+				<i class="material-icons">call_made</i>
+			</a>
+
+			<a class="icon icon--button-sml icon--fa" href="task/{{ nid }}">
+				<!-- <img src="{{ directory }}/images/arrow1-sml-12px.png"> -->
+				{# <i class="fa fa-file" aria-hidden="true"></i> #}
+				<i class="fa fa-file-o" aria-hidden="true"></i>
+			</a>
+
 		</div>
-		<a href="../task/{{ fields.nid.content|striptags }}" class="overlay__over thumb__caption thumb__caption--bottom">
-			<p>
-	    		{{ fields.title.content }}
-	    		{% if fields.field_task_city.content is not empty %}
-					, {{ fields.field_task_city.content }}
-	    		{% endif %}
-	    		{% if fields.field_task_year.content is not empty %}
-	    			</br></br>({{ fields.field_task_year.content }})
-	    		{% endif %}
-	    	</p>
-		</a>
-	</div>
+	</td>
+</tr>
 
-</li>

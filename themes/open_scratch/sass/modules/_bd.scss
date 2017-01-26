@@ -1,0 +1,66 @@
+.bd {
+
+	text-align:			justify;
+	/*margin: 			$base-spacing*.5;*/
+	/*margin:				$base-spacing 0;*/
+}
+
+.bd--bigtext > p {
+
+	font-size:			1.0rem;
+	line-height:		1.875rem;
+	margin: 			$base-spacing;
+
+	@include tiny {
+
+		font-size:			0.9rem;
+		line-height:		1.5rem;
+		margin: 			$base-spacing;
+	}
+	@include mobile {
+
+		font-size:			1.0rem;
+		line-height:		1.5rem;
+		margin: 			$base-spacing;
+	}
+	@include narrow {
+
+		font-size:			1.15rem;
+		line-height:		1.875rem;
+		margin: 			$base-spacing;
+	}
+	@include wide {
+
+		font-size:			1.15rem;
+		line-height:		1.875rem;
+		margin: 			$base-spacing;
+	}
+	@include wider {
+
+		font-size:			1.15rem;
+		line-height:		2.0rem;
+		margin: 			$base-spacing;
+	}
+	@include widest {
+
+		font-size:			1.25rem;
+		line-height:		2.0rem;
+		color:				white;
+		/*font-weight:		bold;*/ 
+		margin: 			$base-spacing;
+	}
+	@include full {
+
+		font-size:			1.25rem;
+		line-height:		2.0rem;
+		color:				white;
+		/*font-weight:		bold;*/ 
+		margin: 			$base-spacing;
+	}
+}
+
+.bd--smltext > p {
+
+	font-size: .85rem;
+	line-height: 1.25rem;
+}

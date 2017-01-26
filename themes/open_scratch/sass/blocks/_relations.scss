@@ -81,27 +81,31 @@
 	}
 }
 
-.card.relations {
+.card.relations,
+.card.media-relations {
 
 	@include tiny   {  }
 	@include mobile {  }
 	@include narrow {  }
 	@include wide   {  }
-	@include wider  {  }
+	@include wider  { 
+		/*margin-bottom: $base-spacing-sml;
+		margin-top: $base-spacing-sml; */
+	}
 	@include widest {
 		padding-left: gutter(13);
 		padding-right: gutter(13);
 		clear: left;
 		float: none; 
 		border-top: none;
-		margin-bottom: $base-spacing-sml;
-		margin-top: $base-spacing-sml; 
+		/*margin-bottom: $base-spacing-sml;
+		margin-top: $base-spacing-sml; */
 	}
 	@include full   { 
 		@include span(isolate 12 at 4 of 18);
 		border-top: none;
-		margin-bottom: $base-spacing-huge;
-		margin-top: $base-spacing-huge; 
+		/*margin-bottom: $base-spacing-huge;
+		margin-top: $base-spacing-huge; */
 	}
 
 	> .card {
@@ -183,7 +187,7 @@
 	@include wide   {  }
 	@include wider  {  }
 	@include widest {  }
-	@include full 	{ background: whitesmoke; }
+	@include full 	{ /*background: whitesmoke;*/ }
 
 	.card {
 

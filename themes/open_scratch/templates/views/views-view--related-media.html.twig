@@ -36,24 +36,42 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-	<div class="card peoples">
-
-    <div class="card__item card__header spaced">
-      <div class="ribbon ribbon--med">
-        <div class="ribbon__segments">
-          <div class="ribbon__segment--left">
-            <h3 class="title title--secondary tt--u fw--b inline-block">People</h3>
-          </div>
-          {# <div class="ribbon__segment--left">
-            <a class="icon icon--mat" style="background:none"><i class="material-icons">accessibility</i></a>
-          </div> #}
-        </div>
+{# {{ dump(view) }} #}
+{% if view.total_rows > 0 %}
+               
+  <div class="card card--supercard media-relations">
+    
+    <div class="card__item card__item--spaced-most card__header">
+      <div class="title title--secondary">
+        <h3>{{ view.display_handler.display.display_title }} ({{ view.total_rows }})</h3>
       </div>
     </div>
 
-    <div class="card__item card__body">
-    	{{ rows }}
+    <div class="card__item card__item--spaced-most-top card__body">
+      <div class=""> {# gallery galleryRelations #}
+        <ul class=""> {# gallery__container #}
+          {{ rows }}
+        </ul>
+      </div>
     </div>
+
+    {# <div class="card__item card__footer">
+
+        <div class="ribbon ribbon--med">
+          <div class="ribbon__segments">
+            <div class="ribbon__segment">
+              <a class="icon icon--bigr icon--mat icon--button-big icon--white" href="{{ events_path }}"><i class="material-icons">arrow_forward</i></a> 
+            </div>
+            <div class="ribbon__segment">
+              <div class="label">More Work</div>
+            </div>
+          </div>
+        </div>
+
+    </div> #}
+
+  </div>
+{% endif %}
 
   {{ feed_icons }}
 </div>

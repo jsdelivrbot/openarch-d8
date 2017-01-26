@@ -36,7 +36,7 @@ $titlebar-title-spacing:	$base-title-spacing;
 .title--secondary { /* block title, eg. recent news */
 
 	text-transform: 	uppercase;
-	/*background:			white;*/
+	/*background:		white;*/
 }
 
 .title--headline {
@@ -57,93 +57,21 @@ $titlebar-title-spacing:	$base-title-spacing;
 	font-weight: bold;
 }
 
+
+.tt--u { text-transform: uppercase; }
+.td--u { text-decoration: underline; }
+.fw--b { font-weight: bold }
+
+
+
 $card-body-font-size--big:		1.2em;
 $card-body-line-height--big:	1.7;
 
-.bd {
-
-	text-align:			justify;
-	/*margin: 			$base-spacing*.5;*/
-	/*margin:				$base-spacing 0;*/
-}
-
-.bd--bigtext > p {
-
-	font-size:			1.0rem;
-	line-height:		1.875rem;
-	margin: 			$base-spacing;
-
-	@include tiny {
-
-		font-size:			0.9rem;
-		line-height:		1.5rem;
-		margin: 			$base-spacing;
-	}
-	@include mobile {
-
-		font-size:			1.0rem;
-		line-height:		1.5rem;
-		margin: 			$base-spacing;
-	}
-	@include narrow {
-
-		font-size:			1.15rem;
-		line-height:		1.875rem;
-		margin: 			$base-spacing;
-	}
-	@include wide {
-
-		font-size:			1.15rem;
-		line-height:		1.875rem;
-		margin: 			$base-spacing;
-	}
-	@include wider {
-
-		font-size:			1.15rem;
-		line-height:		2.0rem;
-		margin: 			$base-spacing;
-	}
-	@include widest {
-
-		font-size:			1.25rem;
-		line-height:		2.0rem;
-		color:				white;
-		/*font-weight:		bold;*/ 
-		margin: 			$base-spacing;
-	}
-	@include full {
-
-		font-size:			1.25rem;
-		line-height:		2.0rem;
-		color:				white;
-		/*font-weight:		bold;*/ 
-		margin: 			$base-spacing;
-	}
-}
-
-.bd--smltext > p {
-
-	font-size: .85rem;
-	line-height: 1.25rem;
-}
 
 /*.mm {}
 .mm--thumb {}
 .mm--slideshow {}
 .mm--video {}*/
-
-.thumb {
-
-	/*img {
-
-		width:100%;
-		height:auto;
-	}*/
-}
-
-.thumb--medium {}
-.thumb--small {}
-
 
 
 .titlebar {

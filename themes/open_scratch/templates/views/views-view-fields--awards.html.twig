@@ -38,15 +38,11 @@
 		{# <span>{{ fields.field_award_link.content }}</span> #}
 	</td>
 	<td class="awards-table__data-icon data--right">
-		<div class="icon--container">
-	    	{# <div > #}
-	    		{# <a class="icon icon--img" href="http://www.google.com"> #}
-	    		{# <a class="icon icon--img" href="{{ fields.field_award_link.content }}">
-	    			<img src="{{ theme_path }}/images/arrow1-sml-12px.png">
-	    		</a> #}
-	    		<a class="icon icon--big icon--button-sml icon--mat" href="{{ events_path }}"><i class="material-icons">call_made</i></a>
-	    	{# </div> #}
-	    </div>
+		{% if fields.field_award_link.content %}
+			<div class="icon--container">    		
+	    		<a class="icon icon--big icon--button-sml icon--mat" href="{{ fields.field_award_link.content|striptags }}"><i class="material-icons">call_made</i></a>	    		
+		    </div>
+	    {% endif %}
 	</td>
 </tr>
 

@@ -35,7 +35,7 @@
 	{# <div class="node__title">
 		<h2>{{ fields.title.content }}</h2>
 	</div> #}
-	<div class="card__item card__item--spaced-most card__header media mediaTitle mediaTitle--big">
+	<div class="card__item card__item--spaced-most card__header">  {# media mediaTitle mediaTitle--big #}
 
 		{# <div class="media mediaTitle"> #}
 
@@ -47,7 +47,7 @@
 		        </div>
 	  		</div> #}
 
-	  		<div class="media__imgR">
+	  		{# <div class="media__imgR">
 	            <div class="ribbon ribbon--big">
 		            <div class="ribbon__segments">
 		                <div class="ribbon__segment">
@@ -55,11 +55,11 @@
 		                </div>
 		            </div>
 	            </div>
-	        </div>
+	        </div> #}
 
-			<div class="media__contents">
+			{# <div class="media__contents"> #}
 		    	<h2>{{ fields.title.content }}</h2>
-			</div>
+			{# </div> #}
 
 		{# </div> #}
 
@@ -115,14 +115,21 @@
         <div class="ribbon ribbon--med">
           <div class="ribbon__segments">
             <span class="ribbon__segment--left">
-              <a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a>
-            </span>
+				{# <a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a> #}
+				<a class="icon icon--pull-left icon--mat"><i class="material-icons">label</i></a>
+			</span>
             <span class="ribbon__segment--left">
               <div class="tag">{{ fields.type.content }}</div>
             </span>
             <span class="ribbon__segment--left">
               <div class="tag">{{ fields.field_video_type.content }}</div>
             </span>
+            <div class="ribbon__segment">
+              	<a class="icon icon--mat icon--button-big" href="{{ events_path }}"><i class="material-icons">call_made</i></a> 
+            </div>
+            <div class="ribbon__segment">
+              	<div class="label label--nopad"><h4>{{ fields.field_link.content }}</h4></div>
+            </div>
           </div>
         </div>
       </div>

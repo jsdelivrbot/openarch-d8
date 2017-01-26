@@ -57,7 +57,9 @@
 
 				<div class="media__contents">
 
-			    	<h3 class="title title--headline">{{ fields.title.content }}</h3>
+			    	<h3 class="title title--headline">
+			    		{{ fields.title.content }}
+			    	</h3>
 			    	
 				</div>
 
@@ -93,10 +95,10 @@
 						<div class="tag">{{ fields.field_event_city.content }}</div>
 					</span>
 					<div class="ribbon__segment">
-		              	<a class="icon icon--big icon--mat icon--button-big" href="{{ events_path }}"><i class="material-icons">arrow_forward</i></a> 
+		              	<a class="icon icon--big icon--mat icon--button-big" href="{{ base_path }}event/{{ fields.nid.content|striptags }}"><i class="material-icons">arrow_forward</i></a> 
 		            </div>
 		            {# <div class="ribbon__segment">
-		              	<div class="label">more</div>
+		              	<div class="label">more</div>href="../task/{{ fields.nid.content|striptags }}
 		            </div> #}
 				</div>
 			</div>

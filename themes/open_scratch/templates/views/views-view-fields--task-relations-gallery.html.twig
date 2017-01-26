@@ -44,6 +44,7 @@
       {# <div class="card__item card__slide"> #} {# spacing / height #}
 
         {{ fields.field_thumbnail.content }} {# img element #}
+        {{ fields.field_video_embed.content }}
 
       {# </div> #}
 
@@ -79,7 +80,7 @@
               <div class="ribbon__segments">
                 <div class="ribbon__segment">
                   {# <a class="icon icon--sml" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a> #}
-                  <a class="icon icon--button-big icon--big icon--mat" href="{{ events_path }}"><i class="material-icons">arrow_forward</i></a>
+                  <a class="icon icon--button-big icon--big icon--mat" href="{{ base_path }}task/{{ fields.nid.content|striptags }}"><i class="material-icons">arrow_forward</i></a>
                 </div>
               </div>
             </div>

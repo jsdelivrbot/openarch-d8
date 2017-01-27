@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Task
 type: task
-description: 'A project or sub-project'
+description: 'A project or task.'
 help: ''
 new_revision: false
 preview_mode: 1

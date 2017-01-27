@@ -1,0 +1,22 @@
+uuid: f94968e2-4cc9-496a-96f0-aa85c92500e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.embedded_video
+id: node.embedded_video.promote
+field_name: promote
+entity_type: node
+bundle: embedded_video
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

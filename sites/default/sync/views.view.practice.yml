@@ -402,7 +402,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -445,7 +445,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -521,44 +521,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_thumbnail'
-  block_2:
-    display_plugin: block
-    id: block_2
-    display_title: Block-old
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      style:
-        type: default
-        options:
-          grouping: {  }
-          row_class: 'card practice--card'
-          default_row_class: false
-      defaults:
-        style: false
-        row: false
-      row:
-        type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions

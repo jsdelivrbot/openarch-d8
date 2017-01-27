@@ -30,6 +30,9 @@ settings:
       value: Installation
       label: Installation
     -
+      value: Research
+      label: Research
+    -
       value: other
       label: other
   allowed_values_function: ''

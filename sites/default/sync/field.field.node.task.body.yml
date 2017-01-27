@@ -15,8 +15,12 @@ label: Body
 description: 'Project text'
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    summary: '1 paragraph summary goes here...'
+    value: "<p>Full text goes here...</p>\r\n"
+    format: basic_html
 default_value_callback: ''
 settings:
-  display_summary: false
+  display_summary: true
 field_type: text_with_summary

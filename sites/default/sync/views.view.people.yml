@@ -385,6 +385,56 @@ display:
           field_api_classes: false
           plugin_id: field
       filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            profile: profile
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          group: 1
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
         status:
           value: true
           table: node_field_data
@@ -396,31 +446,35 @@ display:
           expose:
             operator: ''
           group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            profile: profile
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
       sorts:
-        created:
-          id: created
+        sticky:
+          id: sticky
           table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+          field: sticky
           relationship: none
           group_type: group
           admin_label: ''
+          order: ASC
           exposed: false
           expose:
             label: ''
-          granularity: second
+          entity_type: node
+          entity_field: sticky
+          plugin_id: standard
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
       title: People
       header: {  }
       footer: {  }
@@ -429,6 +483,10 @@ display:
       arguments: {  }
       display_extenders: {  }
       css_class: 'cards profile--cards'
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -782,26 +840,7 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_profile_email'
-        - 'config:field.storage.node.field_profile_position'
-        - 'config:field.storage.node.field_thumbnail'
-  block_2:
-    display_plugin: block
-    id: block_2
-    display_title: Block-old
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
+      rendering_language: '***LANGUAGE_entity_translation***'
     cache_metadata:
       max-age: -1
       contexts:

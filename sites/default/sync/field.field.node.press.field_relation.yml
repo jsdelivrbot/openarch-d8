@@ -1,19 +1,17 @@
-uuid: 2648d037-5f55-4ef6-8253-63f09595958c
+uuid: d7e74f61-e334-4f65-996e-27c7af093acb
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_press_relations
-    - node.type.event
-    - node.type.idea
+    - field.storage.node.field_relation
     - node.type.press
     - node.type.task
-id: node.press.field_press_relations
-field_name: field_press_relations
+id: node.press.field_relation
+field_name: field_relation
 entity_type: node
 bundle: press
-label: Relations
-description: 'Enter project, idea or event receiving press coverage'
+label: Relation
+description: 'One or more related projects.'
 required: false
 translatable: false
 default_value: {  }
@@ -22,11 +20,9 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      event: event
-      idea: idea
       task: task
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: event
+    auto_create_bundle: ''
 field_type: entity_reference

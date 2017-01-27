@@ -7,7 +7,7 @@ dependencies:
 id: menutoggler
 theme: open_scratch
 region: header_right
-weight: -29
+weight: -32
 provider: null
 plugin: 'block_content:c4ffaa8f-2fe7-446a-a6e2-176dd33decdb'
 settings:

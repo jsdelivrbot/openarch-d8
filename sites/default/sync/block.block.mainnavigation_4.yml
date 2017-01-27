@@ -10,8 +10,8 @@ dependencies:
     - open_scratch
 id: mainnavigation_4
 theme: open_scratch
-region: header_right
-weight: -27
+region: header_middle
+weight: -32
 provider: null
 plugin: 'system_menu_block:main'
 settings:

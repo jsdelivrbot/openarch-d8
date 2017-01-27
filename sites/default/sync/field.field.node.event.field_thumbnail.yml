@@ -11,9 +11,9 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      title: title
+      alt: alt
       file: '0'
-      alt: '0'
+      title: '0'
 id: node.event.field_thumbnail
 field_name: field_thumbnail
 entity_type: node
@@ -25,9 +25,9 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: thumbnails
+  file_directory: 'raw_images/[current-date:html_month]'
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
+  max_filesize: '1 MB'
   max_resolution: ''
   min_resolution: ''
   alt_field: true
@@ -35,11 +35,11 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: b9829933-c9cf-4c30-9d48-eeeaf536ae22
-    alt: '[site:slogan] [current-page:title]'
+    uuid: 42a268ae-6d70-4f4e-ade2-d6c668e45df0
+    alt: 'Open Architecture Event'
     title: ''
-    width: 160
-    height: 160
+    width: 750
+    height: 634
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

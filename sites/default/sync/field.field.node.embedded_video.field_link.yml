@@ -11,13 +11,13 @@ id: node.embedded_video.field_link
 field_name: field_link
 entity_type: node
 bundle: embedded_video
-label: 'Video Link'
+label: 'Alternate Video Link'
 description: 'Link to video on third party hosting.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 17
-  title: 0
+  link_type: 16
+  title: 1
 field_type: link

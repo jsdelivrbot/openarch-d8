@@ -12,8 +12,10 @@ bundle: profile
 label: Email
 description: 'Enter email address.'
 required: false
-translatable: true
-default_value: {  }
+translatable: false
+default_value:
+  -
+    value: office@openarch.com
 default_value_callback: ''
 settings: {  }
 field_type: email

@@ -13,8 +13,8 @@ dependencies:
     - field.field.node.press.field_press_publication_date
     - field.field.node.press.field_press_publication_issue
     - field.field.node.press.field_press_publisher
-    - field.field.node.press.field_press_relations
     - field.field.node.press.field_press_type
+    - field.field.node.press.field_relation
     - image.style.thumbnail
     - node.type.press
   module:
@@ -97,19 +97,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_press_relations:
-    weight: 15
+  field_press_type:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_relation:
+    weight: 26
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-  field_press_type:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   langcode:
     type: language_select
     weight: 1

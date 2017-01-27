@@ -6,9 +6,8 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
 name: 'Embedded video'
 type: embedded_video
 description: 'Url and related fields for embedding video from supported third party video hosting site.'

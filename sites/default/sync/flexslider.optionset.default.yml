@@ -10,9 +10,9 @@ options:
   animation: fade
   animationSpeed: 600
   direction: horizontal
-  slideshow: true
+  slideshow: false
   easing: swing
-  smoothHeight: false
+  smoothHeight: true
   reverse: false
   slideshowSpeed: 7000
   animationLoop: true
@@ -23,7 +23,7 @@ options:
   minItems: 0
   maxItems: 0
   move: 0
-  directionNav: false
+  directionNav: true
   controlNav: '1'
   thumbCaptions: false
   thumbCaptionsBoth: false

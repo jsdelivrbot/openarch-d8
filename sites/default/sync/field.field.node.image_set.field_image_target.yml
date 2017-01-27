@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_image_target
-    - node.type.event
     - node.type.idea
     - node.type.image_set
     - node.type.task
@@ -22,11 +21,10 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      event: event
       idea: idea
       task: task
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: event
+    auto_create_bundle: idea
 field_type: entity_reference

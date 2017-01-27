@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
-    - field.storage.node.field_task_city
     - field.storage.node.field_task_group
     - field.storage.node.field_task_program
     - field.storage.node.field_task_type
@@ -238,7 +237,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -273,7 +272,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -283,69 +282,6 @@ display:
           settings:
             timezone_override: ''
             format_type: html_year
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_task_city:
-          id: field_task_city
-          table: node__field_task_city
-          field: field_task_city
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -367,7 +303,7 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: '{{ title }}, {{ field_task_city }}, {{ field_task_year }}'
             make_link: true
             path: '/task/{{ nid }}'
@@ -430,12 +366,12 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
+            alter_text: true
+            text: Idea
+            make_link: true
+            path: /ideas
             absolute: false
             external: false
             replace_spaces: false
@@ -465,7 +401,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -473,7 +409,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -495,12 +431,12 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
             make_link: true
-            path: '/projects/thumbs/results/field_tsk_program:"{{ field_task_program__value }}"'
+            path: '/ideas?field_task_program_value={{ field_task_program__value }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -530,7 +466,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -557,12 +493,12 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
             make_link: true
-            path: '/projects/thumbs/results/field_tsk_discipline:"{{ field_task_type__value }}"'
+            path: '/ideas?field_task_type_value={{ field_task_type__value }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -592,7 +528,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -654,13 +590,13 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_trimmed
+          type: text_summary_or_trimmed
           settings:
             trim_length: 600
           group_column: value
@@ -674,55 +610,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        nothing:
-          id: nothing
-          table: views
-          field: nothing
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: true
-            text: 'Tags: {{ field_task_program }} {{ field_task_type }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: tags
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
-          plugin_id: custom
         field_task_group:
           id: field_task_group
           table: node__field_task_group
@@ -846,6 +733,105 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
+        field_task_program_value:
+          id: field_task_program_value
+          table: node__field_task_program
+          field: field_task_program_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            Culture: Culture
+            Park: Park
+            Education: Education
+            Institution: Institution
+            Exhibition: Exhibition
+            Hotel: Hotel
+            Infrastructure: Infrastructure
+            Library: Library
+            Masterplan: Masterplan
+            Mixed-Use: Mixed-Use
+            Museum: Museum
+            Office: Office
+            Preservation: Preservation
+            Retail: Retail
+            Residential: Residential
+            Sport: Sport
+            other: other
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_task_program_value_op
+            label: 'Program (field_task_program)'
+            description: ''
+            use_operator: false
+            operator: field_task_program_value_op
+            identifier: field_task_program_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_task_type_value:
+          id: field_task_type_value
+          table: node__field_task_type
+          field: field_task_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            Installation: Installation
+            Research: Research
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_task_type_value_op
+            label: 'Type (field_task_type)'
+            description: ''
+            use_operator: false
+            operator: field_task_type_value_op
+            identifier: field_task_type_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts: {  }
       title: Ideas
       header: {  }
@@ -864,12 +850,12 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_task_city'
         - 'config:field.storage.node.field_task_group'
         - 'config:field.storage.node.field_task_program'
         - 'config:field.storage.node.field_task_type'
@@ -916,12 +902,12 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_task_city'
         - 'config:field.storage.node.field_task_group'
         - 'config:field.storage.node.field_task_program'
         - 'config:field.storage.node.field_task_type'

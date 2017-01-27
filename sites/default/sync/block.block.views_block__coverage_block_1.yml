@@ -1,22 +1,22 @@
-uuid: b506ff7e-5a59-43c2-961f-878fba0db5cf
+uuid: bc8457f3-2c1a-4957-8c9d-b692c9023ad1
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - views.view.task_relations_gallery
+    - views.view.coverage
   module:
     - system
     - views
   theme:
     - open_scratch
-id: views_block__task_relations_gallery_block_1
+id: views_block__coverage_block_1
 theme: open_scratch
-region: '-1'
-weight: -1
+region: content_relations
+weight: -30
 provider: null
-plugin: 'views_block:task_relations_gallery-block_1'
+plugin: 'views_block:coverage-block_1'
 settings:
-  id: 'views_block:task_relations_gallery-block_1'
+  id: 'views_block:coverage-block_1'
   label: ''
   provider: views
   label_display: '0'

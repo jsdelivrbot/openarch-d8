@@ -64,7 +64,8 @@
 
 .card.people {
 
-	
+	/* remove overlapping line */
+	@include full 	{ &:nth-child(1) {border-top: none;} }
 
 	/* layout card items */
 	.card {

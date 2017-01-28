@@ -1,0 +1,29 @@
+uuid: c49841c4-d7ff-487e-b39e-91d9cc41a2c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.featured_press.field_image_files
+    - node.type.featured_press
+  module:
+    - image
+    - user
+id: node.featured_press.default
+targetEntityType: node
+bundle: featured_press
+mode: default
+content:
+  field_image_files:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

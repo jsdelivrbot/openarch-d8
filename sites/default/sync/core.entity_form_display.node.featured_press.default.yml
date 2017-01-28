@@ -1,0 +1,51 @@
+uuid: 3d8fcb55-3d81-422c-b254-0f9a0d99abc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.featured_press.field_image_files
+    - image.style.thumbnail
+    - node.type.featured_press
+  module:
+    - image
+id: node.featured_press.default
+targetEntityType: node
+bundle: featured_press
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  field_image_files:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  path: true
+  promote: true
+  sticky: true

@@ -293,6 +293,16 @@ change permissions on files directory to 777
 * upload imagesets
 * add coverage section, but disable for now
 
+#### 0.6.16
+
+* add featured press content type
+* fix external and file links on press page
+* add feature cover images
+* add press content
+* remove publication creation date from press
+* update press form settings
+* change press sort order to ascending
+
 
 #### TBD
 
@@ -391,6 +401,10 @@ change permissions on files directory to 777
 * thumb class should be list w/ li and h5 elments.
 * thumb should have thumb thumb__image and thumb__caption classes.
 * pad bottom of related media
+* remove language selector from all content forms!
+* flexslider slideshow transition not working on frontpage while fullpage.js enabled for widest/full breakpoints.
+* re-order work images
+* create flexslider optionsets for thumb, frontpage, other and delete unused
 
 #### ISSUES:
 

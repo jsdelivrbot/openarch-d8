@@ -22,7 +22,7 @@ options:
   itemMargin: 2
   minItems: 1
   maxItems: 2
-  move: 0
+  move: 1
   directionNav: true
   controlNav: '1'
   thumbCaptions: false

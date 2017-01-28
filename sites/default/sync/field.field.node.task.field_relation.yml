@@ -4,8 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_relation
-    - node.type.embedded_video
-    - node.type.event
     - node.type.idea
     - node.type.task
 id: node.task.field_relation
@@ -22,12 +20,10 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      embedded_video: embedded_video
-      event: event
       idea: idea
       task: task
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: event
+    auto_create_bundle: idea
 field_type: entity_reference

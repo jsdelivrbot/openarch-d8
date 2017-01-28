@@ -1,0 +1,28 @@
+uuid: d7622790-7ec7-4ace-ab60-5d83352f2018
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_media
+    - node.type.embedded_video
+    - node.type.task
+id: node.task.field_related_media
+field_name: field_related_media
+entity_type: node
+bundle: task
+label: 'Related media'
+description: 'Enter related media items. Click "add another item" for multiple nodes rather than a comma-separated list.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      embedded_video: embedded_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

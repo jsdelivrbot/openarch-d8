@@ -6,7 +6,7 @@ MyFullpage = (function($) {
 
     //cache DOM
     var $el = $('.fullpage');
-    var $header = $('.main-header');
+    var $header = $('.main-header-layout');
     var $nameplate = $('.nameplate');
     var $manifesto = $('.manifesto');
     var $news = $('.recent-news');

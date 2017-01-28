@@ -97,13 +97,13 @@
 		padding-right: gutter(13);
 		clear: left;
 		float: none; 
-		border-top: none;
+		/*border-top: none;*/
 		/*margin-bottom: $base-spacing-sml;
 		margin-top: $base-spacing-sml; */
 	}
 	@include full   { 
 		@include span(isolate 12 at 4 of 18);
-		border-top: none;
+		/*border-top: none;*/
 		/*margin-bottom: $base-spacing-huge;
 		margin-top: $base-spacing-huge; */
 	}
@@ -179,7 +179,7 @@
 	/*clear: both;*/
 	/*overflow: auto;*/
 
-	background: white;
+	/*background: white;*/
 
 	@include tiny   {  }
 	@include mobile {  }

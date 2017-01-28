@@ -1,0 +1,17 @@
+uuid: aca77268-30cb-48f8-862a-9d3289d706da
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Featured work'
+type: featured_work
+description: 'Upload images to use as full-screen background on front page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

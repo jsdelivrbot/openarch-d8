@@ -9,8 +9,8 @@ dependencies:
     - field.field.node.event.field_event_date_to
     - field.field.node.event.field_event_type
     - field.field.node.event.field_frontslide
+    - field.field.node.event.field_image_files
     - field.field.node.event.field_relation
-    - field.field.node.event.field_thumbnail
     - node.type.event
   module:
     - datetime
@@ -66,6 +66,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_image_files:
+    weight: 109
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
   field_relation:
     weight: 107
     label: above
@@ -73,14 +81,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-  field_thumbnail:
-    weight: 102
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
   links:
     weight: 100
 hidden:

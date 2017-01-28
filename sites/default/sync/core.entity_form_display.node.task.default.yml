@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.task.body
     - field.field.node.task.field_featured_work
+    - field.field.node.task.field_related_media
     - field.field.node.task.field_relation
     - field.field.node.task.field_task_address
     - field.field.node.task.field_task_city
@@ -54,6 +55,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  field_related_media:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_relation:
     weight: 22
     settings:

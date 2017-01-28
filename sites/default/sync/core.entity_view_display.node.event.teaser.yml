@@ -7,10 +7,11 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_event_city
     - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_date_to
     - field.field.node.event.field_event_type
     - field.field.node.event.field_frontslide
+    - field.field.node.event.field_image_files
     - field.field.node.event.field_relation
-    - field.field.node.event.field_thumbnail
     - node.type.event
   module:
     - text
@@ -32,8 +33,9 @@ content:
 hidden:
   field_event_city: true
   field_event_date: true
+  field_event_date_to: true
   field_event_type: true
   field_frontslide: true
+  field_image_files: true
   field_relation: true
-  field_thumbnail: true
   langcode: true

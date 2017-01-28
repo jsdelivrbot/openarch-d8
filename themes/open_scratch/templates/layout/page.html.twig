@@ -86,7 +86,7 @@
 
         </div>
 
-        <div class="overlay__over card main-header">
+        <div class="overlay__over pe--n card main-header">
 
           <aside class="main-header__center" role="contentinfo">
             {{ page.header_middle }}
@@ -231,14 +231,14 @@
           {# </div> #}
           
           {% if page.content_relations %}
-            <div id="main-content-relations" class="region main-content__relations minh--1sp bg--dots"> {# border--top  #}
+            <div id="main-content-relations" class="region main-content__relations inv-full"> {# border--top bg--dots #}
               {{ page.content_relations }}
             </div>
           {% endif %}
 
           {% if page.content_facts %}
-            <div id="main-content-facts" class="region main-content__facts"> {# border--top #}
-              <div class="card factsheet">
+            <div id="main-content-facts" class="region main-content__facts inv-full"> {# border--top #}
+              <div class="card factsheet border--top">
                 <div class="card__item card__item--spaced-most card__header">
                   <div class="title title--secondary">
                     <h3>Data</h3>

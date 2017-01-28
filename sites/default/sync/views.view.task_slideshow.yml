@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_image_files
-    - image.style.iphone_6plus
     - node.type.image_set
     - node.type.task
     - responsive_image.styles.task_image
@@ -236,22 +235,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
+      sorts: {  }
       title: 'Task slideshow 2'
       header: {  }
       footer: {  }
@@ -418,7 +402,7 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: slide
+          element_wrapper_class: ''
           element_default_classes: false
           empty: ''
           hide_empty: true

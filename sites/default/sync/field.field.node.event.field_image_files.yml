@@ -1,9 +1,9 @@
-uuid: 0be0da6e-f7ac-433f-8090-f56d551bc95c
+uuid: 84428dc3-cd72-4fa8-bf77-623324e066a5
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_thumbnail
+    - field.storage.node.field_image_files
     - node.type.event
   module:
     - content_translation
@@ -14,12 +14,12 @@ third_party_settings:
       alt: alt
       file: '0'
       title: '0'
-id: node.event.field_thumbnail
-field_name: field_thumbnail
+id: node.event.field_image_files
+field_name: field_image_files
 entity_type: node
 bundle: event
-label: Thumbnail
-description: 'Upload thumbnail image'
+label: Images
+description: 'One or more slideshow images of event.'
 required: false
 translatable: true
 default_value: {  }
@@ -35,11 +35,11 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: 42a268ae-6d70-4f4e-ade2-d6c668e45df0
-    alt: 'Open Architecture Event'
+    uuid: 200549b5-af43-43f4-867a-e3573ff851c0
+    alt: ''
     title: ''
-    width: 750
-    height: 634
+    width: 1920
+    height: 1376
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

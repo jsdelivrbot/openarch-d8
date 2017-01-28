@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_image_files
-    - node.type.press
+    - node.type.featured_press
     - node.type.task
     - responsive_image.styles.press_image
   module:
@@ -396,7 +396,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            press: press
+            featured_press: featured_press
           group: 1
           exposed: false
           expose:
@@ -427,84 +427,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        sticky:
-          id: sticky
-          table: node_field_data
-          field: sticky
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: true
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: sticky
-          plugin_id: boolean
-        langcode:
-          id: langcode
-          table: node_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
       filter_groups:
         operator: AND
         groups:

@@ -1,0 +1,18 @@
+uuid: cd29accc-df21-4655-acee-8e1b75d86814
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.featured_work
+id: node.featured_work.title
+field_name: title
+entity_type: node
+bundle: featured_work
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

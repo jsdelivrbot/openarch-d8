@@ -1,0 +1,22 @@
+uuid: cb975263-9af2-47e9-b056-589a74d369e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.featured_work
+id: node.featured_work.promote
+field_name: promote
+entity_type: node
+bundle: featured_work
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -160,6 +160,8 @@
 	background: url('../images/hatch2x4-orange.png');
 }
 
+
+
 .hide {
 
 	display: none;
@@ -266,7 +268,9 @@ $base-spacing-big: 		1.5rem;*/
 
 }
 
-
+/* atomic pointer events */
+.pe--n { pointer-events: none; }
+.pe--v { pointer-events: visible; }
 
 
 .aft--arrow-r:after { content:"\27F6"; }

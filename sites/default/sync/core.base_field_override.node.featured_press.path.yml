@@ -1,0 +1,20 @@
+uuid: 107c9c2c-d265-4f0f-b4bd-749c37b2f9ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.featured_press
+  module:
+    - path
+id: node.featured_press.path
+field_name: path
+entity_type: node
+bundle: featured_press
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

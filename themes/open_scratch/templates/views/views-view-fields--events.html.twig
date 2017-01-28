@@ -32,7 +32,7 @@
 {# <div class="teaser events__teaser border--top-ltgrey"> #}
 
 {# <div class="section"> #} {# data-anchor="{{ fields.title.label }}" #}
-<div class="card event border--tb expandable">
+<div class="card event-teaser border--tb expandable">
 
 	<input type="checkbox" id="{{ fields.title.content|striptags }}" />
 	<label for="{{ fields.title.content|striptags }}">
@@ -79,7 +79,8 @@
 			{{ fields.field_thumbnail.content }}
 		</div> #}
 		<div class="card__item card__slide card__slide--small">
-			{{ fields.field_thumbnail.content }}
+			{{ fields.field_image_files.content }}
+			{# {{ fields.field_thumbnail.content }} #}
 		</div>
 
 		{# <div class="teaser__body">

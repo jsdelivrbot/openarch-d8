@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.press.field_image_files
-    - field.field.node.press.field_press_creation_date
     - field.field.node.press.field_press_file
     - field.field.node.press.field_press_id
     - field.field.node.press.field_press_link
@@ -36,14 +35,6 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-  field_press_creation_date:
-    weight: 106
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
   field_press_file:
     weight: 109
     label: above

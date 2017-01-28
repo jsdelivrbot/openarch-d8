@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.press.field_image_files
-    - field.field.node.press.field_press_creation_date
     - field.field.node.press.field_press_file
     - field.field.node.press.field_press_id
     - field.field.node.press.field_press_link
@@ -15,6 +14,7 @@ dependencies:
     - field.field.node.press.field_press_publication_issue
     - field.field.node.press.field_press_publisher
     - field.field.node.press.field_press_type
+    - field.field.node.press.field_relation
     - node.type.press
   module:
     - user
@@ -27,7 +27,6 @@ content:
     weight: 100
 hidden:
   field_image_files: true
-  field_press_creation_date: true
   field_press_file: true
   field_press_id: true
   field_press_link: true
@@ -37,4 +36,5 @@ hidden:
   field_press_publication_issue: true
   field_press_publisher: true
   field_press_type: true
+  field_relation: true
   langcode: true

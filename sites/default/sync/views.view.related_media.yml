@@ -877,13 +877,13 @@ display:
         filters: false
         filter_groups: false
       relationships:
-        field_relation:
-          id: field_relation
-          table: node__field_relation
-          field: field_relation
+        field_related_media:
+          id: field_related_media
+          table: node__field_related_media
+          field: field_related_media
           relationship: none
           group_type: group
-          admin_label: 'Item Referenced'
+          admin_label: 'Media Referenced'
           required: false
           plugin_id: standard
       fields:
@@ -891,7 +891,7 @@ display:
           id: type
           table: node_field_data
           field: type
-          relationship: field_relation
+          relationship: field_related_media
           group_type: group
           admin_label: ''
           label: ''
@@ -956,7 +956,7 @@ display:
           id: nid
           table: node_field_data
           field: nid
-          relationship: field_relation
+          relationship: field_related_media
           group_type: group
           admin_label: ''
           label: ''
@@ -1022,7 +1022,7 @@ display:
           id: field_video_embed
           table: node__field_video_embed
           field: field_video_embed
-          relationship: field_relation
+          relationship: field_related_media
           group_type: group
           admin_label: ''
           label: ''
@@ -1088,7 +1088,7 @@ display:
           id: title
           table: node_field_data
           field: title
-          relationship: field_relation
+          relationship: field_related_media
           group_type: group
           admin_label: ''
           label: ''
@@ -1153,7 +1153,7 @@ display:
           id: body
           table: node__body
           field: body
-          relationship: field_relation
+          relationship: field_related_media
           group_type: group
           admin_label: ''
           label: ''
@@ -1216,7 +1216,7 @@ display:
           id: field_task_program
           table: node__field_task_program
           field: field_task_program
-          relationship: field_relation
+          relationship: field_related_media
           group_type: group
           admin_label: ''
           label: ''
@@ -1255,7 +1255,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -1278,7 +1278,7 @@ display:
           id: field_task_type
           table: node__field_task_type
           field: field_task_type
-          relationship: field_relation
+          relationship: field_related_media
           group_type: group
           admin_label: ''
           label: ''
@@ -1317,7 +1317,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -1340,7 +1340,7 @@ display:
           id: type_1
           table: node_field_data
           field: type
-          relationship: field_relation
+          relationship: field_related_media
           group_type: group
           admin_label: ''
           label: ''
@@ -1379,7 +1379,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -1432,7 +1432,7 @@ display:
           id: type
           table: node_field_data
           field: type
-          relationship: field_relation
+          relationship: field_related_media
           group_type: group
           admin_label: ''
           operator: in
@@ -1472,7 +1472,7 @@ display:
           id: langcode
           table: node_field_data
           field: langcode
-          relationship: field_relation
+          relationship: field_related_media
           group_type: group
           admin_label: ''
           operator: in

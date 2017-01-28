@@ -7,7 +7,7 @@ dependencies:
     - field.storage.node.field_event_city
     - field.storage.node.field_event_date
     - field.storage.node.field_event_type
-    - field.storage.node.field_thumbnail
+    - field.storage.node.field_image_files
     - node.type.event
     - responsive_image.styles.event_image
   module:
@@ -455,10 +455,10 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        field_thumbnail:
-          id: field_thumbnail
-          table: node__field_thumbnail
-          field: field_thumbnail
+        field_image_files:
+          id: field_image_files
+          table: node__field_image_files
+          field: field_image_files
           relationship: none
           group_type: group
           admin_label: ''
@@ -497,7 +497,7 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: 'thumb teaser--thumb'
+          element_wrapper_class: ''
           element_default_classes: false
           empty: ''
           hide_empty: false
@@ -517,7 +517,7 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
+          multi_type: ul
           separator: ', '
           field_api_classes: false
           plugin_id: field
@@ -762,7 +762,7 @@ display:
         - 'config:field.storage.node.field_event_city'
         - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_type'
-        - 'config:field.storage.node.field_thumbnail'
+        - 'config:field.storage.node.field_image_files'
   page_1:
     display_plugin: page
     id: page_1
@@ -796,4 +796,4 @@ display:
         - 'config:field.storage.node.field_event_city'
         - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_type'
-        - 'config:field.storage.node.field_thumbnail'
+        - 'config:field.storage.node.field_image_files'

@@ -59,7 +59,7 @@
 
     <div class="bg-screen grid-target"></div>
 
-    <div class="layout main-header-layout slider-canvas">
+    {# <div class="layout main-header-layout slider-canvas">
 
         <div class="wrapper main-header-wrapper" role="contentinfo">
 
@@ -76,6 +76,42 @@
           </div>
 
         </div>
+
+    </div> #}
+
+    <div class="layout main-header-layout slider-canvas">
+
+      <div class="overlay wrapper main-header-wrapper region " role="contentinfo">
+
+        <div class="overlay__under card main-header media">
+
+          <aside class="main-header__right media__imgR" role="contentinfo">
+            {{ page.header_right }} 
+          </aside>
+
+          <aside class="main-header__left media__contents" role="contentinfo">
+            {{ page.header_left }}
+          </aside>
+
+        </div>
+
+        <div class="overlay__over pe--n card main-header">
+
+          <aside class="main-header__center" role="contentinfo">
+            {{ page.header_middle }}
+          </aside>
+
+          {# <div class="card ribbon ribbon--big">
+            <div class="ribbon__segments">
+                <div class="ribbon__segment--center">
+                    {{ page.header_middle }}
+                </div>
+            </div>
+          </div> #}
+
+        </div>
+
+      </div>
 
     </div> {# end header-wrapper #}
 

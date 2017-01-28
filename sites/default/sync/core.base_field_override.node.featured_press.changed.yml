@@ -1,0 +1,18 @@
+uuid: f1305202-8648-439a-8c3b-2f9619efa655
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.featured_press
+id: node.featured_press.changed
+field_name: changed
+entity_type: node
+bundle: featured_press
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

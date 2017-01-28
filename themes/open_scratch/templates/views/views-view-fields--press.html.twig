@@ -29,6 +29,7 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
+{# {{ dump(fields.field_press_file.content) }} #}
 <tr>
 	<td class="press-table__data-publication-date">
 		<span>{{ fields.field_press_publication_date.content }}</span>
@@ -42,18 +43,17 @@
 	<td class="press-table__data-icon data--right">
 		<div class="icon--container">
 
-			{# <a class="icon icon--img" href="task/{{ nid }}">
-				<img src="{{ directory }}/images/arrow1-sml-12px.png">
-			</a> #}
-			<a class="icon icon--big icon--button-sml icon--mat" href="{{ events_path }}">
-				<i class="material-icons">call_made</i>
-			</a>
+			{% if fields.field_press_link.content %}		
+	    		<a class="icon icon--big icon--button-sml icon--mat" href="{{ fields.field_press_link.content|striptags }}">
+	    			<i class="material-icons">call_made</i>
+	    		</a>	    		
+		    {% endif %}
 
-			<a class="icon icon--button-sml icon--fa" href="task/{{ nid }}">
-				<!-- <img src="{{ directory }}/images/arrow1-sml-12px.png"> -->
-				{# <i class="fa fa-file" aria-hidden="true"></i> #}
-				<i class="fa fa-file-o" aria-hidden="true"></i>
-			</a>
+			{% if fields.field_press_file.content %}
+				<a class="icon icon--button-sml icon--fa" href="{{ fields.field_press_file.content|striptags }}">
+					<i class="fa fa-file-o" aria-hidden="true"></i>
+				</a>
+			{% endif %}
 
 		</div>
 	</td>

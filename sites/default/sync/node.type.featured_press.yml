@@ -1,0 +1,17 @@
+uuid: 3bdd233c-1774-4868-8070-65715862f6ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Featured press'
+type: featured_press
+description: 'Selected magazine covers.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

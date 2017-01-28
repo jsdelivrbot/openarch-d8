@@ -1,0 +1,22 @@
+uuid: 234dba18-b03a-4d4c-b96c-cd8348d696f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.featured_work
+id: node.featured_work.status
+field_name: status
+entity_type: node
+bundle: featured_work
+label: 'Publishing status'
+description: 'A boolean indicating whether the node is published.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

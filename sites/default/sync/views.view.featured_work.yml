@@ -5,15 +5,13 @@ dependencies:
   config:
     - field.storage.node.field_featured_work
     - field.storage.node.field_frontslide
-    - image.style.flexslider_full
     - image.style.iphone_6plus
     - node.type.featured_work
     - node.type.task
-    - responsive_image.styles.event_image
+    - responsive_image.styles.feature_work_image
   module:
     - flexslider_views
     - image
-    - jssor
     - node
     - responsive_image
     - user
@@ -540,7 +538,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      css_class: 'slideshow slideshow--featured-work'
+      css_class: ''
     cache_metadata:
       max-age: 0
       contexts:
@@ -563,7 +561,7 @@ display:
         options:
           grouping: {  }
           flexslider: null
-          optionset: default
+          optionset: open_featured_work
           captionfield: ''
           id: ''
       defaults:
@@ -697,7 +695,7 @@ display:
           click_sort_column: target_id
           type: responsive_image
           settings:
-            responsive_image_style: event_image
+            responsive_image_style: feature_work_image
             image_link: ''
           group_column: ''
           group_columns: {  }

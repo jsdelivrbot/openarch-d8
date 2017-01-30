@@ -30,15 +30,15 @@
  */
 #}
 {#  {{ dump(view.result|length) }} #}
-<div class="slideshow">
+<div class="slide">
 
-	<div class="slideshow__image">
+	<div class="slide__image">
 
-		<div class="thumb">{{ fields.field_featured_work.content }}</div>
+		{{ fields.field_featured_work.content }}
 
 	</div>
 
-	<div class="slideshow__caption">
+	<div class="slide__caption">
 
 		<div class="ribbon ribbon--med">
 			<div class="ribbon__segments">

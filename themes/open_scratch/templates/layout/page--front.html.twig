@@ -1,4 +1,3 @@
-
 <div class="container slider">
 
     <div class="layout sidebar-layout slider-drawer "> {# drop--right #}
@@ -101,19 +100,12 @@
             {{ page.header_middle }}
           </aside>
 
-          {# <div class="card ribbon ribbon--big">
-            <div class="ribbon__segments">
-                <div class="ribbon__segment--center">
-                    {{ page.header_middle }}
-                </div>
-            </div>
-          </div> #}
-
         </div>
 
       </div>
 
-    </div> {# end header-wrapper #}
+    </div> 
+    {# end header-wrapper #}
 
     <div class="layout main-content-layout slider-canvas">
 
@@ -121,16 +113,18 @@
 
         <main class="main-content clearfix" role="main">  
 
+          
+
           <div id="fullpage" class="fullpage">
 
-            <div class="fullpage__section">
+            <div class="fullpage__section"> {# ta--c text-align center to center nameplate #}
               {% if page.content_slideshow %}
 
-                <div id="main-content-slideshow" class="region main-content__slideshow slideshow overflow-visible">
+                <div id="main-content-slideshow" class="region main-content__slideshow overflow-visible">
                   {{ page.content_slideshow }}
                 </div>
 
-                <div class="fullpage__asset card nameplate">
+                <div class="fullpage__asset card nameplate z--front">
                   <div class="ribbon">
                     <div class="ribbon__segments">
                         <div class="ribbon__segment--center">
@@ -140,7 +134,7 @@
                   </div>                
                 </div>
 
-                <div class="fullpage__asset fullpage__pager--down bg--white op--9">
+                <div class="fullpage__asset fullpage__pager--down bg--white op--9 z--fwd">
                   <div class="ribbon">
                     <div class="ribbon__segments">
                         <div class="ribbon__segment--center">
@@ -155,7 +149,7 @@
               {% endif %}
             </div>
 
-            <div class="fullpage__section--hidden bg--manifesto"> 
+            <div class="fullpage__section--hidden bg--manifesto z--fwd"> 
 
               <div id="main-content-primary" class="region main-content__primary overflow-hidden">
                 {{ page.content_primary }}              
@@ -173,7 +167,7 @@
 
             </div>
             
-            <div class="fullpage__section bg--recent-news">
+            <div class="fullpage__section bg--recent-news z--fwd">
 
                 <div id="main-content-relations" class="region main-content__primary bg--white overflow-hidden">
                   {{ page.content_relations }}

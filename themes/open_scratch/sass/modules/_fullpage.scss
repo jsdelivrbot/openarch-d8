@@ -10,6 +10,9 @@
 	&__section {
 
 	}
+	/*&__section--horizCenter {
+		text-align: center;
+	}*/
 	&__section--hidden { /* hide these during fullpage */
 		@include widest { display: none; }
 		@include full { display: none; }

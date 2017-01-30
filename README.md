@@ -303,6 +303,12 @@ change permissions on files directory to 777
 * update press form settings
 * change press sort order to ascending
 
+#### 0.6.17
+
+* remove social links from recent news (for now)
+* fix stacking featured work slideshow issue and stacking order
+* fix flexslider transition issue
+* fix featured word image stretching issue
 
 #### TBD
 

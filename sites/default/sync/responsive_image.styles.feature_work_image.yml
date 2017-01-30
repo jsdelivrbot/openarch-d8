@@ -7,6 +7,7 @@ dependencies:
     - image.style.open_full_widest_2
     - image.style.open_full_widest_3
     - image.style.open_full_widest_4
+    - image.style.open_full_widest_x1
     - image.style.open_img_mobile_x1
     - image.style.open_img_mobile_x2
     - image.style.open_img_narrow_x1
@@ -17,7 +18,6 @@ dependencies:
     - image.style.open_img_wide_x2
     - image.style.open_img_wider_x1
     - image.style.open_img_wider_x2
-    - image.style.open_img_widest_x1
   theme:
     - open_scratch
 id: feature_work_image
@@ -38,7 +38,7 @@ image_style_mappings:
     breakpoint_id: open_scratch.widest
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: open_img_widest_x1
+    image_mapping: open_full_widest_x1
   -
     breakpoint_id: open_scratch.wider
     multiplier: 1x

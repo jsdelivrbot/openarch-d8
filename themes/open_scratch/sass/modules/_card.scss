@@ -83,7 +83,8 @@ $card-base-font-size:			1rem;
 		
 	}
 
-	&__slide 	{
+	&__slide,
+	&__media 	{
 
 		width: 100%;	
 
@@ -648,7 +649,16 @@ $card-base-font-size:			1rem;
 }
 
 .card.nameplate {
+
+	/*display: inline-block;*/ /* so text-align center to works */
+	/* text-align center on section centers horizontally */
+
+	position: absolute; /* otherwise can't get it infront of slideshow */
+	top: 48%;
+	width: 100%;
+	pointer-events: none;
 	
+
 }
 
 /*.card.videos,*/
@@ -766,24 +776,25 @@ $card-base-font-size:			1rem;
 
 
 	
-.card.card--featured-work {
+.card.featured-work {
 
 	overflow: visible;
 	position: relative;
-	z-index: -1;
+	/*z-index: -1;*/ /* don't do this */
 
 	@include widest	{ 
 		
-		.slideshow__image img {
+		.slide__image img {
 			position: fixed;
 			top: 0;
 			left: 0;
-			width: 100%;
-			height: auto;
+			width: auto;
+			height: auto;	
+			min-width: 100%;
 			min-height: 100%;
 		}
 
-		.slideshow__caption {
+		.slide__caption {
 			position: fixed;
 			bottom: 0;
 			left: 0;
@@ -791,16 +802,17 @@ $card-base-font-size:			1rem;
 	}
 	@include full	{ 
 		/*.slideshow__caption {display: none;}*/
-		.slideshow__image img {
+		.slide__image img {
 			position: fixed;
 			top: 0;
 			left: 0;
-			width: 100%;
-			height: auto;
+			width: auto;
+			height: auto;	
+			min-width: 100%;
 			min-height: 100%;
 		}
 
-		.slideshow__caption {
+		.slide__caption {
 			position: fixed;
 			bottom: 0;
 			left: 0;

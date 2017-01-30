@@ -307,5 +307,10 @@ $base-spacing-big: 		1.5rem;*/
 	overflow: visible !important;
 }
 
+.z--front { z-index: 1000; }
+.z--fwd { z-index: 100 }
+.z--bwd { z-index: -100 }
+.z--back { z-index: -1000; }
 
-
+/* text-align */
+.ta--c { text-align: center; }

@@ -15,7 +15,10 @@ MyFullpage = (function($) {
 
         // init();
         if ((Breakpoint.isFull() || Breakpoint.isWidest())
-            && (window.location.pathname == "/" || window.location.pathname == "/openarch-d8/")) { 
+            && (window.location.pathname == "/" 
+                || window.location.pathname == "/openarch-d8/"
+                || window.location.pathname == "/openarch-d8/cn"
+                || window.location.pathname == "/openarch-d8/cn/")) { 
                     init(); 
             }
         // if (Breakpoint.isWidest() 
@@ -28,7 +31,10 @@ MyFullpage = (function($) {
         wasFull = isFull;
         isWidest = (Breakpoint.isWidest());
         isFull = (Breakpoint.isFull());
-        onFrontPage = window.location.pathname == "/" || window.location.pathname == "/openarch-d8/";
+        onFrontPage = (window.location.pathname == "/" 
+            || window.location.pathname == "/openarch-d8/"
+            || window.location.pathname == "/openarch-d8/cn"
+            || window.location.pathname == "/openarch-d8/cn/");
 
         if(onFrontPage && (!(wasWidest || wasFull) && (isWidest || isFull))) { init() }
         if(onFrontPage && ((wasWidest || wasFull) && !(isWidest || isFull))) { destroy() }

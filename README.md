@@ -321,6 +321,10 @@ change permissions on files directory to 777
 * update tag icon on recent news tags
 * delete unused views fields on recent news
 
+#### 0.6.19
+
+* fix fullpage not working with cn issue.
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

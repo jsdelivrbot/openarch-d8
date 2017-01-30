@@ -353,16 +353,17 @@
 		}
 
 		.expandable-body {
-			transition: max-height 1.5s;
+			/*transition: max-height 1.5s;*/
 		}
 
 		input[type='checkbox'] ~ .expandable-body {
-			/*display: none;*/
-			max-height: 0;
+			display: none;
+			/*max-height: 0;*/
 		}
 
 		input[type='checkbox']:checked ~ .expandable-body {
-			max-height: 750px;
+			/*max-height: 750px;*/
+			display: block;
 		}
 
 		input[type='checkbox'] ~ label .icon.unchecked {

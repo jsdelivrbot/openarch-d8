@@ -325,6 +325,10 @@ change permissions on files directory to 777
 
 * fix fullpage not working with cn issue.
 
+#### 0.6.20
+
+* make sidebar scrollable
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

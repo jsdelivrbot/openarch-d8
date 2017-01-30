@@ -310,6 +310,17 @@ change permissions on files directory to 777
 * fix flexslider transition issue
 * fix featured word image stretching issue
 
+#### 0.6.18
+
+* make minor fixes/changes to recent news
+* fix broken links on recent news
+* change recent news view to output plain text, let twig handle routing
+* add up arrow to captions
+* add padding to captions
+* change date format on recent news
+* update tag icon on recent news tags
+* delete unused views fields on recent news
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

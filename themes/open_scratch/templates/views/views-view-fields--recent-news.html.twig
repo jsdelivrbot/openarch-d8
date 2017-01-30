@@ -58,7 +58,9 @@
 				<div class="media__contents">
 
 			    	<h3 class="title title--headline">
-			    		{{ fields.title.content }}
+			    		<a href="{{ base_path }}event/{{ fields.nid.content|striptags }}">
+			    			{{ fields.field_event_date.content }} {{ fields.title.content }}
+			    		</a>
 			    	</h3>
 			    	
 				</div>
@@ -76,27 +78,47 @@
 			{# {{ fields.field_thumbnail.content }} #}
 		</div>
 
-		<div class="card__item card__item--spaced card__body">
-			<div class="bd lc--3">{{ fields.body.content }}</div>
+		<div class="card__item spaced card__body">
+			<div class="bd lc--3">
+				{{ fields.body.content }}
+			</div>
 		</div>
 
 		<div class="card__item card__footer">
 			<div class="ribbon ribbon--med">
 				<div class="ribbon__segments">
 					<span class="ribbon__segment--left">
-						<a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a>
+						{# <a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a> #}
+						<a class="icon icon--mat"><i class="material-icons">label</i></a>
 					</span>
 					<span class="ribbon__segment--left">
-						<div class="tag">{{ fields.type.content }}</div> 
+						{# <div class="tag">{{ fields.type.content }}</div>  #}
+						<div class="tag">
+							<a href="{{ base_path }}events?field_event_type_value={{ fields.type.content|striptags }}">
+								{{ fields.type.content }}
+							</a>
+						</div>
 					</span>
 					<span class="ribbon__segment--left">
-						<div class="tag">{{ fields.field_event_type.content }}</div>
+						{# <div class="tag">{{ fields.field_event_type.content }}</div> #}
+						<div class="tag">
+							<a href="{{ base_path }}events?field_event_type_value={{ fields.field_event_type.content|striptags }}">
+								{{ fields.field_event_type.content }}
+							</a>
+						</div>
 					</span>
 					<span class="ribbon__segment--left">
-						<div class="tag">{{ fields.field_event_city.content }}</div>
+						{# <div class="tag">{{ fields.field_event_city.content }}</div> #}
+						<div class="tag">
+							<a href="{{ base_path }}events?field_event_city_value={{ fields.field_event_city.content|striptags }}">
+								{{ fields.field_event_city.content }}
+							</a>
+						</div>
 					</span>
 					<div class="ribbon__segment">
-		              	<a class="icon icon--big icon--mat icon--button-big" href="{{ base_path }}event/{{ fields.nid.content|striptags }}"><i class="material-icons">arrow_forward</i></a> 
+		              	<a class="icon icon--big icon--mat icon--button-big" href="{{ base_path }}event/{{ fields.nid.content|striptags }}">
+		              		<i class="material-icons">arrow_forward</i>
+		              	</a> 
 		            </div>
 		            {# <div class="ribbon__segment">
 		              	<div class="label">more</div>href="../task/{{ fields.nid.content|striptags }}

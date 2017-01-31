@@ -72,13 +72,29 @@ $tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
 
 .label {
 
+	/* labels are basically just inline-blocks for vertical centering */
 	display: 			inline-block;
+
+	/* this should be done by button class */
 	padding: 			0 $base-button-pad-horiz; /* horizontal space btn tags */
+
+	/* create atom class for this */
 	text-transform: 	uppercase;
+
+	
 
 	/* this shouldn't be needed as long as ribbon has height set */
 	/*height: 			$tag-button-height;
 	line-height: 		$tag-button-height;*/
+}
+
+/* use if label should fill parent width */
+.label--fullwidth {
+	
+	/* labels don't wrap */
+	max-width: 100%;
+	overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .label--nopad {

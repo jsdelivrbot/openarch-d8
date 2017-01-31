@@ -105,7 +105,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -140,7 +140,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -149,7 +149,7 @@ display:
           type: number_integer
           settings:
             thousand_separator: ''
-            prefix_suffix: true
+            prefix_suffix: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -305,7 +305,7 @@ display:
           alter:
             alter_text: false
             text: '{{ title }}, {{ field_task_city }}, {{ field_task_year }}'
-            make_link: true
+            make_link: false
             path: '/task/{{ nid }}'
             absolute: false
             external: false

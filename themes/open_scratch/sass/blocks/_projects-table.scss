@@ -87,7 +87,7 @@
 		@include table-1-col {
 			&__head				{ display: table-row-group; }
 			&__head-year,
-			&__data-year 		{ display: none; }
+			&__data-year 		{ width: 10%; }
 			&__head-city,
 			&__data-city 		{ display: none; }
 			&__head-size,
@@ -99,13 +99,13 @@
 			&__head-name,
 			&__data-name 		{ /**/ }
 			&__head-icon,
-			&__data-icon 		{ width: 25%; }
+			&__data-icon 		{ display: none; }
 		}
 
 		@include table-2-col {
 			&__head				{ display: table-row-group; }
 			&__head-year,
-			&__data-year 		{ width: 10%;	}
+			&__data-year 		{ width: 11%;	}
 			&__head-city,
 			&__data-city 		{ display: none; }
 			&__head-size,
@@ -125,7 +125,7 @@
 			&__head-year,
 			&__data-year 		{ width: 9%;	}
 			&__head-city,
-			&__data-city 		{ width: 15%; }
+			&__data-city 		{ display: none; }
 			&__head-size,
 			&__data-size 		{ display: none; }
 			&__head-type,
@@ -141,37 +141,76 @@
 		@include table-4-col {
 			&__head				{ display: table-row-group; }
 			&__head-year,
-			&__data-year 		{ width: 6%;	}
+			&__data-year 		{ width: 7%;	}
 			&__head-city,
-			&__data-city 		{ width: 15%; }
+			&__data-city 		{ width: 14%; }
 			&__head-size,
 			&__data-size 		{ display: none; }
 			&__head-type,
-			&__data-type 		{ display: none; }
+			&__data-type 		{ width: 14%; }
 			&__head-program,
-			&__data-program 	{ display: none; }
+			&__data-program 	{ width: 14%; }
 			&__head-name,
 			&__data-name 		{ /**/ }
 			&__head-icon,
-			&__data-icon 		{ width: 7%; }
+			&__data-icon 		{ width: 5%; }
 		}
 
 		@include table-5-col {
 			&__head				{ display: table-row-group; }
 			&__head-year,
-			&__data-year 		{ width: 9%; }
+			&__data-year 		{ width: 20%; }
 			&__head-city,
-			&__data-city 		{ width: 15%; }
+			&__data-city 		{ width: 11%; }
 			&__head-size,
-			&__data-size 		{ width: 10%; }
+			&__data-size 		{ width: 11%; }
 			&__head-type,
-			&__data-type 		{ width: 15% }
+			&__data-type 		{ width: 11% }
 			&__head-program,
-			&__data-program 	{ width: 15%; }
+			&__data-program 	{ width: 11%; }
 			&__head-name,
 			&__data-name 		{ /**/ }
 			&__head-icon,
-			&__data-icon 		{ width: 10%; }
+			&__data-icon 		{ width: 3%; }
 		}
+
+		/*@include full {*/
+
+			&__data-name .icon,
+			&__data-name .label { /* both */
+				/*background: #f5f5f5;*/
+				/*color: inherit;*/
+				/*display: inline-block;*/
+				/*height: $base-row4-height;
+				line-height: $base-row4-height;*/	
+				/*border-top: 1px solid white;*/
+				/*-webkit-transition: background .5s;*/			
+			}
+			&__data-name .icon { /* icon */
+			}
+			&__data-name .label{ /* title */
+				padding: 0 $base-button-pad;
+			}
+			tr:hover &__data-name .icon{ /* icon on hover */
+				background: #eee;
+				/*> i { color: white; }*/
+				/*-webkit-transition: background .1s;*/
+			}
+			tr:hover &__data-name .label{ /* title on hover*/
+				/*background: #eee;*/
+				/*color: white;*/
+				/*-webkit-transition: background .1s;*/
+			}
+			tr &__data-name .icon:hover { /* icon on hover */
+				background: #666;
+				> i { color: white; }
+				/*-webkit-transition: background .1s;*/
+			}
+			tr &__data-name .icon:hover ~ .label{ /* title on hover*/
+				background: $openorange-color;
+				color: white;
+				/*-webkit-transition: background .1s;*/
+			}
+		/*}*/
 }
 

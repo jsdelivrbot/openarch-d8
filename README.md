@@ -329,6 +329,18 @@ change permissions on files directory to 777
 
 * make sidebar scrollable
 
+#### 0.6.21
+
+* update projects table layout
+* fix broken projects table links
+* remove tags from table
+* adjust table breakpoints to align with global bps
+* change global text for full to 17px
+* adjust ribbon to fill inherit height by default
+* change mediatitle content to 15% margin
+* add fullwidth label
+* modify ideas relations subclass
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

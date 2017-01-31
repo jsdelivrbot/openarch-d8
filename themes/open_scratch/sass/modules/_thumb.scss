@@ -12,12 +12,13 @@
 			width: 100%;
 			padding: 10px 15px;
 	    	font-size: $base-h4-font-size;
-	    	background: white; /*$openorange-color;*/
-	    	color: base-title-font-color; /*white;*/
+	    	background: $openorange-color;
+	    	color: white; /*white;*/
 	    	opacity: .8;
 	    	justify-content: center;
 			text-align: center;
 		}
+
 	}
 
 	&__caption--top {

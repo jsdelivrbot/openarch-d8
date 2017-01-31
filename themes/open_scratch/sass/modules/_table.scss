@@ -85,7 +85,7 @@ table {
 
 		@include full {
 
-			border: none !important;	
+			/*border: none !important;*/	
 		}
 	}
 
@@ -126,6 +126,12 @@ table {
 		height: 				$base-row2-height;
 		line-height: 			$base-row2-height;
 
+		.icon {
+			height:					$base-row2-height;
+			line-height: 			$base-row2-height;
+			width:					$base-row2-height;
+		}
+
 		@include tiny {}
 		@include mobile {}
 		@include narrow {}
@@ -138,6 +144,12 @@ table {
 		@include full {
 			height: 			$base-row4-height;
 			line-height: 		$base-row4-height;
+
+			.icon {
+				height:					$base-row4-height;
+				line-height: 			$base-row4-height;
+				width:					$base-row4-height;
+			}
 		}
 	}
 
@@ -176,11 +188,21 @@ table {
 	/*td*/.data--right {
 		/*float:right;*/
 		text-align:right;
-		padding-right: $base-button-pad-horiz;
+		padding-left: 0;
+		/*padding-right: $base-button-pad-horiz;*/
+
+		/*.icon {
+			float: right;
+		}*/
 	}
 
 	th.data--right {
-		padding-right: $base-button-pad-horiz;
+		padding-left: 0;
+		padding-right: $base-button-pad-horiz *1.5;
+
+		@include full {
+			padding-right: 0;
+		}
 	}
 
 	

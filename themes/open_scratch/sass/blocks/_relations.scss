@@ -81,8 +81,7 @@
 	}
 }
 
-.card.relations,
-.card.media-relations {
+.card.relations {
 
 	@include tiny   {  }
 	@include mobile {  }
@@ -174,6 +173,50 @@
 	}
 }
 
+/* ideas subclass */
+.card.relations.ideas {
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest {  }
+	@include full   { 
+
+		@include span(full);
+	}
+
+	> .card {
+	
+		@include tiny   {  }
+		@include mobile {  }
+		@include narrow {  }
+		@include wide   {  }
+		@include wider  {  }
+		@include widest	{  }
+		@include full 	{ 
+			
+			&__header { 
+				@include span(first 6 of 18);
+			}	
+			&__body { 
+				@include span(last 12 of 18); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 12 of 18); 
+				clear: right; 
+				float: right; 
+			}		
+		}
+	}
+}
+
+.card.relations.media-relations {
+
+}
+
 .card.relation {
 
 	/*clear: both;*/
@@ -212,6 +255,46 @@
 		&__footer { 
 			display: none; 
 			@include full	{ display: initial; }
+		}
+	}
+}
+
+.card.relation.idea {
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest {  }
+	@include full 	{  }
+
+	.card {
+
+		@include tiny   {  }
+		@include mobile {  }
+		@include narrow {  }
+		@include wide	{  }
+		@include wider	{  }
+		@include widest	{  }
+
+		@include full	{
+
+			&__slide {
+
+				width: span(3 of 12); 
+				margin-right: gutter(12); 
+			}
+			&__header {
+
+			}
+			&__body { 
+
+				> .bd { width: span(6 of 9); }
+			}			
+			&__footer { 
+				display: initial; 
+			}
 		}
 	}
 }

@@ -1168,7 +1168,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/projects/thumbs/results/field_tsk_discipline:"{{ field_task_type__value }}"'
             absolute: false
             external: false
@@ -1230,7 +1230,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/projects/thumbs/results/field_tsk_program:"{{ field_task_program__value }}"'
             absolute: false
             external: false
@@ -1292,7 +1292,7 @@ display:
           alter:
             alter_text: false
             text: '{{ title }}, {{ field_task_city }}, {{ field_task_year }}'
-            make_link: true
+            make_link: false
             path: '/task/{{ nid }}'
             absolute: false
             external: false

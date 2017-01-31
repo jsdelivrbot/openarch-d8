@@ -21,7 +21,8 @@ $ribbon-height:				$base-row2-height;
 	/*height: 					$ribbon-height;
 	line-height:  				$ribbon-height;*/
 	overflow: 					hidden;
-	 
+	height: inherit;
+	line-height: inherit;
 
 	&__segments {
 
@@ -44,6 +45,12 @@ $ribbon-height:				$base-row2-height;
 			text-align: 				center;
 		}
 }
+
+/* width */
+.w--100p {width: 100%;}
+.w--95p {width: 95%;}
+.w--90p {width: 90%;}
+.w--85p {width: 85%;}
 
 .ribbon--sml {
 

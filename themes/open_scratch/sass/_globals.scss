@@ -95,7 +95,7 @@ a:hover{
 
 /* responsive images */
 img {
-
+	display: block; /* remove gap at bottom of image */
 	width:100%;
 	height:auto;
 }

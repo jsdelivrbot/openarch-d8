@@ -1,0 +1,15 @@
+uuid: 087b77c8-b473-4319-9842-4191be1d33b2
+langcode: en
+status: true
+dependencies: {  }
+name: open_bookthumb_tiny_x1
+label: OPEN_bookthumb_tiny_x1
+effects:
+  0d345f53-e09a-41d2-9f31-a0285b90dedf:
+    uuid: 0d345f53-e09a-41d2-9f31-a0285b90dedf
+    id: image_scale
+    weight: 1
+    data:
+      width: 350
+      height: null
+      upscale: false

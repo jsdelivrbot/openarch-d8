@@ -1,0 +1,73 @@
+uuid: bbcbdd03-bab6-4583-9ea9-d222c64a768d
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.open_bookthumb_full_x1
+    - image.style.open_bookthumb_mobile_x1
+    - image.style.open_bookthumb_mobile_x2
+    - image.style.open_bookthumb_tiny_x1
+    - image.style.open_bookthumb_wide_x1
+    - image.style.open_bookthumb_wide_x2
+  theme:
+    - open_scratch
+id: book_thumb
+label: 'Book thumb'
+image_style_mappings:
+  -
+    breakpoint_id: open_scratch.full
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_bookthumb_full_x1
+  -
+    breakpoint_id: open_scratch.widest
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_bookthumb_wide_x1
+  -
+    breakpoint_id: open_scratch.wider
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_bookthumb_wide_x1
+  -
+    breakpoint_id: open_scratch.wider
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_bookthumb_wide_x2
+  -
+    breakpoint_id: open_scratch.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_bookthumb_wide_x1
+  -
+    breakpoint_id: open_scratch.wide
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_bookthumb_wide_x2
+  -
+    breakpoint_id: open_scratch.narrow
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_bookthumb_wide_x1
+  -
+    breakpoint_id: open_scratch.narrow
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_bookthumb_wide_x2
+  -
+    breakpoint_id: open_scratch.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_bookthumb_mobile_x1
+  -
+    breakpoint_id: open_scratch.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: open_bookthumb_mobile_x2
+  -
+    breakpoint_id: open_scratch.tiny
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: open_bookthumb_tiny_x1
+breakpoint_group: open_scratch
+fallback_image_style: open_bookthumb_tiny_x1

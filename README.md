@@ -341,6 +341,11 @@ change permissions on files directory to 777
 * add fullwidth label
 * modify ideas relations subclass
 
+#### 0.6.22
+
+* add responsive image styles for book
+* fix image gap
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

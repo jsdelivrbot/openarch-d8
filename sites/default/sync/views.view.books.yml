@@ -23,7 +23,7 @@ dependencies:
     - field.storage.node.field_publication_pages
     - node.type.book
     - node.type.press
-    - responsive_image.styles.task_image
+    - responsive_image.styles.book_thumb
   module:
     - datetime
     - file
@@ -1615,8 +1615,8 @@ display:
           click_sort_column: target_id
           type: responsive_image
           settings:
-            responsive_image_style: task_image
-            image_link: ''
+            responsive_image_style: book_thumb
+            image_link: content
           group_column: ''
           group_columns: {  }
           group_rows: true

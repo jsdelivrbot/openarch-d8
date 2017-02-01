@@ -361,6 +361,10 @@ change permissions on files directory to 777
 * remove task slideshow image link to content
 * add inverted colors theme
 
+#### 0.6.26
+
+* adjust projects gallery caption formating
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

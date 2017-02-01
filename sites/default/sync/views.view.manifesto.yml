@@ -387,28 +387,10 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: 'Block - old'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      enabled: false
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
   block_2:
     display_plugin: block
     id: block_2
-    display_title: Block-2
+    display_title: Block
     position: 1
     display_options:
       display_extenders: {  }

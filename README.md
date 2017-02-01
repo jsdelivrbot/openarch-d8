@@ -365,6 +365,10 @@ change permissions on files directory to 777
 
 * adjust projects gallery caption formating
 
+#### 0.6.27
+
+* delete unused views
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -466,6 +470,7 @@ change permissions on files directory to 777
 * flexslider slideshow transition not working on frontpage while fullpage.js enabled for widest/full breakpoints.
 * re-order work images
 * create flexslider optionsets for thumb, frontpage, other and delete unused
+* remove css class from views facts collabs, facts, credits
 
 #### ISSUES:
 

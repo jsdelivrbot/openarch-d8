@@ -6,8 +6,9 @@ dependencies:
     - field.field.node.image_set.field_image_files
     - field.field.node.image_set.field_image_target
     - node.type.image_set
+    - responsive_image.styles.feature_work_image
   module:
-    - image
+    - flexslider_fields
     - user
 id: node.image_set.default
 targetEntityType: node
@@ -16,20 +17,15 @@ mode: default
 content:
   field_image_files:
     weight: 102
-    label: above
+    label: hidden
     settings:
-      image_style: ''
+      optionset: open_featured_work
+      responsive_image_style: feature_work_image
+      caption: alt
       image_link: ''
     third_party_settings: {  }
-    type: image
-  field_image_target:
-    weight: 103
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-  links:
-    weight: 100
+    type: flexslider_responsive
 hidden:
+  field_image_target: true
   langcode: true
+  links: true

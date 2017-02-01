@@ -18,7 +18,7 @@ $base-font-family: 'Work Sans', sans-serif;
 
 /* constants */
 $base-font-color: 			#333; /*#505050;*/
-$base-font-color-inv: 		#eee; /*#505050;*/
+$base-font-color-inv: 		white; /*#505050;*/
 $lighter-font-color: 		#777;
 $darker-font-color: 		#333;
 $darker-font-color: 		#000;
@@ -38,6 +38,11 @@ $base-tag-font-color: red;
 $base-more-font-color: red;
 $base-cell-font-color: red;
 $base-icon-font-color: red;
+
+$base-bg-color:				white;
+$base-bg-color-inv: 		#111;
+$base-focus-color: 			#f5f5f5;
+$base-focus-color-inv: 		#222;
 
 
 /* slideshow */

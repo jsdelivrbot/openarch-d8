@@ -341,7 +341,7 @@
 		}
 
 		@include widest{	
-			@include with-layout(12 .25) { 
+			@include with-layout(12 .05) { 
 					@include gallery(3 of 12);
 					/*margin-bottom: gutter(12);*/
 					margin-bottom: 0;

@@ -412,7 +412,7 @@ display:
           type: responsive_image
           settings:
             responsive_image_style: task_image
-            image_link: content
+            image_link: ''
           group_column: ''
           group_columns: {  }
           group_rows: false

@@ -121,7 +121,7 @@
 
 .bg--ltwhitesmoke {background: #f9f9f9;}
 .bg--white { background: white; }
-.bg--dark { background: #333;}
+.bg--dark { background: #111 !important;}
 .bg--orange { background: $openorange-color; /*opacity: .9;*/}
 .bg--ltgrey { background: #eee; }
 
@@ -135,7 +135,7 @@
 	&__bg:hover .focus__btn {
 
 		/*background: #eee;*/
-		background: #f9f9f9;
+		/*background: #f9f9f9;*/
 	}
 
 	&__bg &__btn:hover {
@@ -152,7 +152,8 @@
 .op--5 { opacity: 0.5; }
 
 .c--orange { color: $openorange-color; }
-.c--white { color: white; }
+.c--black{ color: $base-font-color;}
+.c--white { color: $base-font-color-inv !important; }
 .c--wheat { color: wheat; }
 
 .bg--dots {

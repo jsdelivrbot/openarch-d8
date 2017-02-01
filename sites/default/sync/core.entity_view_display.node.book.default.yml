@@ -21,128 +21,35 @@ dependencies:
     - node.type.book
     - responsive_image.styles.feature_work_image
   module:
-    - datetime
-    - link
-    - options
     - responsive_image
-    - text
     - user
 id: node.book.default
 targetEntityType: node
 bundle: book
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-  field_book_type:
-    weight: 113
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
   field_image_files:
     weight: 104
-    label: above
+    label: hidden
     settings:
       responsive_image_style: feature_work_image
       image_link: ''
     third_party_settings: {  }
     type: responsive_image
-  field_link:
-    weight: 105
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-  field_press_pub_author:
-    weight: 102
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_press_publication_date:
-    weight: 107
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-  field_press_publisher:
-    weight: 112
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_product_dimensions:
-    weight: 106
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_publication_country:
-    weight: 109
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_publication_designer:
-    weight: 115
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_publication_editor:
-    weight: 103
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_publication_format:
-    weight: 110
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-  field_publication_isbn:
-    weight: 111
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_publication_language:
-    weight: 108
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-  field_publication_pages:
-    weight: 114
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  body: true
+  field_book_type: true
+  field_link: true
+  field_press_pub_author: true
+  field_press_publication_date: true
+  field_press_publisher: true
+  field_product_dimensions: true
+  field_publication_country: true
+  field_publication_designer: true
+  field_publication_editor: true
+  field_publication_format: true
+  field_publication_isbn: true
+  field_publication_language: true
+  field_publication_pages: true
   langcode: true
+  links: true

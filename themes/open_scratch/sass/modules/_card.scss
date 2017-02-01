@@ -521,9 +521,29 @@ $card-base-font-size:			1rem;
 	} 
 }
 
-.card.press,
 .card.awards,
 .card.projects-table {
+
+	/*.card__header { display: initial; }*/
+
+	/*@include tiny {
+		.card__header { display: none; }
+	}
+	@include mobile {
+		.card__header { display: none; }
+	}*/
+	@include widest	{ 
+		@include card-layout-vert;  
+		float: none;
+	} 
+	@include full	{ 		
+		@include card-type-6col;
+		/*@include card-layout-horiz;  
+		float: none;*/
+	} 
+}
+
+.card.press {
 
 	/*.card__header { display: initial; }*/
 

@@ -4,11 +4,40 @@ jQuery(document).ready(function($){
 	//   anchors: ['page1', 'page2'],
 	// });
 
-    $( ".grid-toggle" ).click(function() {    
-        $('.grid-target').hasClass('grid-on') 
-            ? $('.grid-target').removeClass('grid-on') 
-            : $('.grid-target').addClass('grid-on')
+    $(document).on('keydown', function (event) {
+        if (event.keyCode == 71) {
+            $('.grid-target').hasClass('grid-on') 
+                ? $('.grid-target').removeClass('grid-on') 
+                : $('.grid-target').addClass('grid-on')
+        }
+        if (event.keyCode == 73) {       
+            $('table').hasClass('invert') 
+                ? $('table').removeClass('invert') 
+                : $('table').addClass('invert')
+            $('.menu').hasClass('invert') 
+                ? $('.menu').removeClass('invert') 
+                : $('.menu').addClass('invert')
+            $('.bg').hasClass('invert') 
+                ? $('.bg').removeClass('invert') 
+                : $('.bg').addClass('invert')
+            $('body').hasClass('invert') 
+                ? $('body').removeClass('invert') 
+                : $('body').addClass('invert')
+            $('.bg--white').hasClass('bg--dark') 
+                ? $('.bg--white').removeClass('bg--dark') 
+                : $('.bg--white').addClass('bg--dark')
+            $('.c--black').hasClass('c--white') 
+                ? $('.c--black').removeClass('c--white') 
+                : $('.c--black').addClass('c--white')
+        }
     });
+
+    // $( ".grid-toggle" ).click(function() {    
+    //     $('.grid-target').hasClass('grid-on') 
+    //         ? $('.grid-target').removeClass('grid-on') 
+    //         : $('.grid-target').addClass('grid-on')
+    // });
+
 
     // remove buffer from frontpage for widest breakpoint
     if (Breakpoint.isWidest() 

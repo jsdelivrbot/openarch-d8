@@ -356,6 +356,11 @@ change permissions on files directory to 777
 * fix menu nolink issue
 * fix videos and related media links
 
+#### 0.6.25
+
+* remove task slideshow image link to content
+* add inverted colors theme
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -380,6 +380,10 @@ change permissions on files directory to 777
 
 * uninstall quick edit and contextual links
 
+#### 0.6.30
+
+* uninstall color and ckeditor modules
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -7,7 +7,6 @@ dependencies:
     - field.storage.node.field_task_program
     - field.storage.node.field_task_type
     - field.storage.node.field_thumbnail
-    - field.storage.node.field_video_embed
     - image.style.temp_191px_
     - node.type.embedded_video
     - node.type.event
@@ -19,7 +18,6 @@ dependencies:
     - options
     - text
     - user
-    - video_embed_field
 id: task_relations_gallery
 label: 'Task relations gallery'
 module: views
@@ -1094,8 +1092,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: 'task/{{ nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -1133,7 +1131,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true

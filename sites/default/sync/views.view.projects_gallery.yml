@@ -786,6 +786,86 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
+        field_task_program_value:
+          id: field_task_program_value
+          table: node__field_task_program
+          field: field_task_program_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_task_program_value_op
+            label: 'Program (field_task_program)'
+            description: ''
+            use_operator: false
+            operator: field_task_program_value_op
+            identifier: field_task_program_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_task_type_value:
+          id: field_task_type_value
+          table: node__field_task_type
+          field: field_task_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_task_type_value_op
+            label: 'Type (field_task_type)'
+            description: ''
+            use_operator: false
+            operator: field_task_type_value_op
+            identifier: field_task_type_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         field_task_year_value:
           id: field_task_year_value
@@ -1437,43 +1517,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_task_city'
-        - 'config:field.storage.node.field_task_program'
-        - 'config:field.storage.node.field_task_type'
-        - 'config:field.storage.node.field_task_year'
-        - 'config:field.storage.node.field_thumbnail'
-  page_2:
-    display_plugin: page
-    id: page_2
-    display_title: Page-old
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: projects/gallery-old
-      menu:
-        type: none
-        title: 'Projects thumbs'
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: main
-        enabled: true
-      enabled: false
-      exposed_block: true
-      display_description: ''
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_task_city'
         - 'config:field.storage.node.field_task_program'
         - 'config:field.storage.node.field_task_type'

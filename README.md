@@ -346,6 +346,11 @@ change permissions on files directory to 777
 * add responsive image styles for book
 * fix image gap
 
+#### 0.6.23
+
+* fix task tag links
+* fix relations link
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

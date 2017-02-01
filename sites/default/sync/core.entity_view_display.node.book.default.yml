@@ -19,11 +19,12 @@ dependencies:
     - field.field.node.book.field_publication_language
     - field.field.node.book.field_publication_pages
     - node.type.book
+    - responsive_image.styles.feature_work_image
   module:
     - datetime
-    - image
     - link
     - options
+    - responsive_image
     - text
     - user
 id: node.book.default
@@ -47,10 +48,10 @@ content:
     weight: 104
     label: above
     settings:
-      image_style: ''
+      responsive_image_style: feature_work_image
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
   field_link:
     weight: 105
     label: above
@@ -141,5 +142,7 @@ content:
     type: number_integer
   links:
     weight: 100
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

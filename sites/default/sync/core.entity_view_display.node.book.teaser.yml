@@ -5,6 +5,20 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.book.body
+    - field.field.node.book.field_book_type
+    - field.field.node.book.field_image_files
+    - field.field.node.book.field_link
+    - field.field.node.book.field_press_pub_author
+    - field.field.node.book.field_press_publication_date
+    - field.field.node.book.field_press_publisher
+    - field.field.node.book.field_product_dimensions
+    - field.field.node.book.field_publication_country
+    - field.field.node.book.field_publication_designer
+    - field.field.node.book.field_publication_editor
+    - field.field.node.book.field_publication_format
+    - field.field.node.book.field_publication_isbn
+    - field.field.node.book.field_publication_language
+    - field.field.node.book.field_publication_pages
     - node.type.book
   module:
     - text
@@ -24,4 +38,18 @@ content:
   links:
     weight: 100
 hidden:
+  field_book_type: true
+  field_image_files: true
+  field_link: true
+  field_press_pub_author: true
+  field_press_publication_date: true
+  field_press_publisher: true
+  field_product_dimensions: true
+  field_publication_country: true
+  field_publication_designer: true
+  field_publication_editor: true
+  field_publication_format: true
+  field_publication_isbn: true
+  field_publication_language: true
+  field_publication_pages: true
   langcode: true

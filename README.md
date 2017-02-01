@@ -351,6 +351,11 @@ change permissions on files directory to 777
 * fix task tag links
 * fix relations link
 
+#### 0.6.24
+
+* fix menu nolink issue
+* fix videos and related media links
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

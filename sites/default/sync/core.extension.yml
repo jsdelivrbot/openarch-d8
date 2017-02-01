@@ -9,7 +9,6 @@ module:
   comment: 0
   config: 0
   config_translation: 0
-  contextual: 0
   ctools: 0
   ctools_views: 0
   datetime: 0
@@ -40,7 +39,6 @@ module:
   options: 0
   page_cache: 0
   path: 0
-  quickedit: 0
   rdf: 0
   responsive_image: 0
   search: 0

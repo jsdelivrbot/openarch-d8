@@ -369,6 +369,17 @@ change permissions on files directory to 777
 
 * delete unused views
 
+#### 0.6.28
+
+* uninstall unused third-party modules
+* uninstall jssor slider module
+* uninstall jssor slider
+* uninstall views slideshow cycle
+
+#### 0.6.29
+
+* uninstall quick edit and contextual links
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

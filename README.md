@@ -380,6 +380,12 @@ change permissions on files directory to 777
 
 * uninstall quick edit and contextual links
 
+#### 0.6.31
+
+* uninstall unused themes
+* delete uninstalled themes
+* add ideas exposed filter
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -482,6 +488,7 @@ change permissions on files directory to 777
 * re-order work images
 * create flexslider optionsets for thumb, frontpage, other and delete unused
 * remove css class from views facts collabs, facts, credits
+* set up trusted hosts (https://www.drupal.org/node/1992030)
 
 #### ISSUES:
 
@@ -496,6 +503,7 @@ change permissions on files directory to 777
 * views infite scroll not working with flexslider ( temp fix -> added flexslider function to infinite-scroll.js as suggested here -> https://www.drupal.org/node/2317319) but need to make this more robust so update doesn't break it again.
 * Should filter for translation language = interface, then render language = row content!! This is causing issue with projects table/gallery when task group list field is exposed filters AND same list field is NOT translatable. Changing to translatable solve (but then task group discrep can arrise and shouldn't be translatable anyway). Removing translation language filter from view and instead setting rendering language to interface language also solves (but this SHOULD create duplicates in thumb gallery). WRONG Again, correct behavior SHOULD ACTUALLY be to NOT filter by translation AND render by interface BECAUSE, then if you having translated a node, it will STILL show up in listing!!! So real issue seems to be exposed list field causing duplicates. For now, can 
 * frontpage not working in chinese
+* can't uninstall comment core module!
 
 
 ## Liscense

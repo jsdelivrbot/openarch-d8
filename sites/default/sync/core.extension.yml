@@ -62,16 +62,9 @@ module:
 theme:
   stable: 0
   classy: 0
-  bartik: 0
   seven: 0
   at_core: 0
-  at_generator: 0
-  neato: 0
-  mbase: 0
   adminimal_theme: 0
-  bootstrap: 0
-  stark: 0
-  open: 0
   open_scratch: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU

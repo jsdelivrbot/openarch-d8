@@ -1,0 +1,29 @@
+uuid: 292bfb6a-de4d-4982-9fc8-ab900e97481a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.ideas
+  module:
+    - system
+    - views
+  theme:
+    - open_scratch
+id: exposedformideaspage_1
+theme: open_scratch
+region: toolbar_left
+weight: null
+provider: null
+plugin: 'views_exposed_filter_block:ideas-page_1'
+settings:
+  id: 'views_exposed_filter_block:ideas-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /ideas
+    negate: false
+    context_mapping: {  }

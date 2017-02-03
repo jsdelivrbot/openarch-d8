@@ -62,13 +62,10 @@
     </div> {# end sidebar-layout #}
 
     <div class="bg">
-
       <div class="bg__screen grid-target"></div>
-
       <div class="layout bg__layout slider-canvas"> {# bg--ltwhitesmoke #}
         <div class="region bg__page"></div>
-      </div>
-      
+      </div>      
     </div>
 
     <div class="layout main-header-layout slider-canvas">
@@ -92,14 +89,6 @@
           <aside class="main-header__center" role="contentinfo">
             {{ page.header_middle }}
           </aside>
-
-          {# <div class="card ribbon ribbon--big">
-            <div class="ribbon__segments">
-                <div class="ribbon__segment--center">
-                    {{ page.header_middle }}
-                </div>
-            </div>
-          </div> #}
 
         </div>
 
@@ -125,23 +114,6 @@
 
               <div class="wrapper toolbar-wrapper peekable-target" role="contentinfo">
 
-                {# <div class="toolbar media">
-
-                  {% if page.toolbar_right %}
-                    <div class="media__imgR" role="contentinfo">
-                      
-                    </div>
-                  {% endif %}
-
-                  {% if page.toolbar_left %}
-                    <div class="media__contents" role="contentinfo">
-                      {{ page.toolbar_right }} 
-                      {{ page.toolbar_left }}
-                    </div>
-                  {% endif %}
-
-                </div> #}
-
                 <div class="card toolbar ribbon ribbon--big">
                   <div class="ribbon__segments">
 
@@ -151,17 +123,11 @@
                       </div>
                     {% endif %}
 
-                    {# {% if page.toolbar_right %}
-                      <div class="ribbon__segment" role="contentinfo">
-                        <div class="label"><h3>Views</h3></div>
-                      </div>
-                    {% endif %} #}
-
-                    
-
                     {% if page.toolbar_left %}
                       <div class="ribbon__segment--left">
-                        <a class="icon icon--pull-left icon--fa" style="background:none"><i class="fa fa-filter" aria-hidden="true"></i></a>
+                        <a class="icon icon--pull-left icon--fa" style="background:none">
+                          <i class="fa fa-filter" aria-hidden="true"></i>
+                        </a>
                       </div>
                       <div class="ribbon__segment--left" role="contentinfo">
                         {{ page.toolbar_left }}
@@ -323,27 +289,11 @@
 
                 <div class="block-contents">
 
-                  {# <div class="titlebar copyright__titlebar media">
-
-                    <div class="icons titlebar__icons media__imgR">
-                      <div class="icon--container">
-                        <div class="icon"><a style="background:none"><i class="fa fa-github" aria-hidden="true"></i></a></div>
-                      </div>
-                    </div>
-
-                    <div class="titlebar__title media__contents">
-                      <h6 style="text-transform:none;">Copyright © 2011, OPEN Architecture.</h6>
-                    </div>
-
-                  </div> #}
                   <div class="ribbon ribbon--med">
                     <div class="ribbon__segments">
                       <span class="ribbon__segment">
                         <a class="icon icon--fa icon--button-big"><i class="fa fa-github" aria-hidden="true"></i></a>
                       </span>
-                      {# <span class="ribbon__segment">
-                        <a class="icon icon--mat icon--button-big icon--big grid-toggle"><i class="material-icons">view_column</i></a>
-                      </span> #}
                       <span class="ribbon__segment--left">
                         <h6 class="label label--nopad" style="text-transform:none;">Copyright © 2011, OPEN Architecture.</h6>
                       </span>
@@ -355,8 +305,6 @@
               </div>
 
             </aside>
-
-            {# {{ page.footer_bottom }} #} {# <span>CN | EN</span>  #} 
 
           </div>
 

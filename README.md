@@ -386,6 +386,14 @@ change permissions on files directory to 777
 * delete uninstalled themes
 * add ideas exposed filter
 
+#### 0.6.32
+
+* refactor color config
+* refactor font size config
+* refactor bd class
+* add focus and label partials
+* delete old teasers class
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -489,6 +497,7 @@ change permissions on files directory to 777
 * create flexslider optionsets for thumb, frontpage, other and delete unused
 * remove css class from views facts collabs, facts, credits
 * set up trusted hosts (https://www.drupal.org/node/1992030)
+* border colors.
 
 #### ISSUES:
 
@@ -504,6 +513,10 @@ change permissions on files directory to 777
 * Should filter for translation language = interface, then render language = row content!! This is causing issue with projects table/gallery when task group list field is exposed filters AND same list field is NOT translatable. Changing to translatable solve (but then task group discrep can arrise and shouldn't be translatable anyway). Removing translation language filter from view and instead setting rendering language to interface language also solves (but this SHOULD create duplicates in thumb gallery). WRONG Again, correct behavior SHOULD ACTUALLY be to NOT filter by translation AND render by interface BECAUSE, then if you having translated a node, it will STILL show up in listing!!! So real issue seems to be exposed list field causing duplicates. For now, can 
 * frontpage not working in chinese
 * can't uninstall comment core module!
+* table pagers not inverting
+* table pagers should have bigr buttons for mobile
+* bd class should be responsible for text color.
+* replace all title--prim, title--sec, etc with atomic classes.
 
 
 ## Liscense

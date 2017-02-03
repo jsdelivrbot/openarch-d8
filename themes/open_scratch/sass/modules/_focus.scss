@@ -1,0 +1,79 @@
+/* ==================================================================
+ * Focus
+ *
+ * Structure:
+ * 
+ * focus
+ *   focus__bg
+ *     focuss__btn
+ *
+ * Notes:
+ *
+ * Requires focus, focus__bg, and focus__btn be defined. If 
+ * you want to omit focus effect on __bg apply class bg--none to it.
+ * focus, focus__bg, and focus__btn do not require parent/child
+ * relation; decendant/anticedant is sufficient.
+ *
+===================================================================== */
+
+/* ==================================================================
+## Config Focus
+===================================================================== */
+
+/* local config - don't change! */
+$block-color: 			$blk-focus-color;
+$block-color-inv: 		$blk-focus-color-inv;
+$button-color: 			$btn-focus-color;
+$button-color-inv: 		$btn-focus-color-inv;
+$hover-color: 			$btn-hover-color;
+$hover-color-inv: 		$btn-hover-color-inv;
+
+/* ==================================================================
+## Def Focus
+===================================================================== */
+
+.focus {}
+
+	.focus {
+
+		&__block:hover {
+
+			background: $block-color;
+		}
+
+		&__block:hover .focus__btn {
+
+			background: $button-color;
+		}
+
+		&__block .focus__btn:hover {
+
+			background: $hover-color;
+			/*> i {color: white;}*/
+		}
+	}
+
+.focus.invert {
+
+	.focus {
+
+		&__block:hover {
+
+			background: $block-color-inv;
+		}
+
+		&__block:hover .focus__btn {
+
+			background: $button-color-inv;
+		}
+
+		&__block .focus__btn:hover {
+
+			background: $hover-color-inv;
+			/*> i {color: white;}*/
+		}
+	}
+}
+
+/* atomic override */
+.bg--none { background: none; }

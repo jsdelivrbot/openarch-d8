@@ -9,63 +9,58 @@ layouts
 ## Config
 ===================================================================== */	
 
-$titlebar-base-font-size:	1rem;
-
-$titlebar-font-size:		1em;
-$titlebar-line-height:		3.75em; /*$base-row-height;*/
-$titlebar-font-color:		$base-title-font-color;
-$titlebar-row-height:		3.75em;/* $base-row-height;*/
-$titlebar-title-spacing:	$base-title-spacing;
-
 
 /* ==================================================================
 ## fixed height titlebar
 ===================================================================== */
 
+/*
+ * div.title
+ *   hx
+ *
+ */
+
 .title {
 
-	/*adsf*/
+	color: $title-font-color;	
 }
 
-.title--primary { /* node title */
+.title.invert {
 
-	text-transform: 	uppercase;
-	/* tbd */
+	color: $title-font-color-inv;	
 }
 
-.title--secondary { /* block title, eg. recent news */
+.title--primary {
 
 	text-transform: 	uppercase;
-	/*background:		white;*/
+}
+
+.title--secondary { 
+
+	text-transform: 	uppercase;
 }
 
 .title--headline {
 
 	text-decoration: 	underline;
 	text-transform: 	uppercase;
-
-	/*@include widest {
-	    margin-right: 33%
-	}
-	@include full {
-	    margin-right: 33%
-	}*/
 }
 
 .title--bold {
+
 	text-transform: 	uppercase;
 	font-weight: bold;
 }
 
-
+/* atomic modifiers for titles */
 .tt--u { text-transform: uppercase; }
 .td--u { text-decoration: underline; }
 .fw--b { font-weight: bold }
 
 
 
-$card-body-font-size--big:		1.2em;
-$card-body-line-height--big:	1.7;
+/*$card-body-font-size--big:		1.2em;
+$card-body-line-height--big:	1.7;*/
 
 
 /*.mm {}
@@ -73,199 +68,3 @@ $card-body-line-height--big:	1.7;
 .mm--slideshow {}
 .mm--video {}*/
 
-
-.titlebar {
-
-	/* 	
-		module-level styling
-		only font-size is specified at module level
-		and everything below it is relative to it
-	*/
-	font-size:					$titlebar-base-font-size;
-
-
-	/* 	
-		element-level styling
-		relative to module font-size
-	*/
-	height: 			$titlebar-row-height;
-	line-height: 		$titlebar-row-height;
-
-	@include clearfix;
-
-	@include layout((
-        gutter-position: 	before,
-        columns: 			8,
-        gutters: 			3/8,
-        global-box-sizing: 	border-box
-	));
-
-	&__title {
-
-		h1, h2, h3, h4, h5, h6 {
-			/*font-size: 		$titlebar-font-size;*/
-			display: 			inline-block;
-			height: 			$titlebar-row-height;
-			line-height: 		$titlebar-row-height;
-			color: 				$titlebar-font-color;
-			text-transform: 	uppercase;
-			text-decoration:	none;
-			padding: 			0 3px; /* horizontal space btn tags */
-			/*overflow:			hidden;*/
-		}
-
-	}
-
-	&__title--multiline {
-
-		h1, h2, h3, h4, h5, h6 {
-			margin: 			$titlebar-title-spacing 0;
-			color: 				$titlebar-font-color;
-			text-transform: 	none;
-			text-decoration:	none;
-			padding: 			0 3px; /* horizontal space btn tags */
-		}
-	}
-
-	&__title,
-	&__title--multiline { /*.title*/
-		width: 	span(7 of 8);
-		float:	left;
-	}
-
-	&__icon{ /*.icon*/
-		width: 	span(1 of 8);
-		float:	right;
-	}
-}
-
-
-/* ==================================================================
-  flex height titlebox
-===================================================================== */
-
-$titlebox-title-spacing: 	$base-title-spacing;
-$magic-nudge:				.9em;
-
-.titlebox {
-
-	/* 	
-		module-level styling
-		only font-size is specified at module level
-		and everything below it is relative to it
-	*/
-
-	font-size:				$titlebar-base-font-size;
-	/*margin-bottom: 		$titlebox-title-spacing;*/
-	margin: $base-title-spacing 0;
-
-	/* 	
-		element-level styling
-		relative to module font-size
-	*/
-
-	@include clearfix;
-
-	@include layout((
-        gutter-position: 	before,
-        columns: 			8,
-        gutters: 			3/8,
-        global-box-sizing: 	border-box
-	));
-
-	&__title {
-
-		/*margin: 			$titlebox-title-spacing 0;*/
-
-		h1, h2, h3, h4, h5, h6 {		
-			color: 				$titlebar-font-color;
-			text-transform: 	none;
-			text-decoration:	none;
-			padding: 			0 3px; /* horizontal space btn tags */
-		}
-	}
-
-	&__title { /*.title*/
-
-		width: 	span(7 of 8);
-		float:	left;
-	}
-
-	&__icons { /*.icon*/
-
-				
-		/*margin-right:			.9em;*/ /* <-- magic number :( */
-
-		width: 	span(1 of 8);
-		float:	right;
-	}
-}
-	
-
-	
-/* ==================================================================
-  flex height titlebox
-===================================================================== */
-
-
-	
-/* ==================================================================
-  titlemedia
-===================================================================== */
-
-$titlebox-title-spacing: 	$base-title-spacing;
-$magic-nudge:				.9em;
-
-.titlemedia {
-
-	/* 	
-		module-level styling
-		only font-size is specified at module level
-		and everything below it is relative to it
-	*/
-
-	font-size:				$titlebar-base-font-size;
-	/*margin-bottom: 		$titlebox-title-spacing;*/
-	margin: $base-title-spacing 0;
-
-	/* 	
-		element-level styling
-		relative to module font-size
-	*/
-
-	@include clearfix;
-
-	@include layout((
-        gutter-position: 	before,
-        columns: 			8,
-        gutters: 			3/8,
-        global-box-sizing: 	border-box
-	));
-
-	&__title {
-
-		/*margin: 			$titlebox-title-spacing 0;*/
-
-		h1, h2, h3, h4, h5, h6 {		
-			color: 				$titlebar-font-color;
-			text-transform: 	none;
-			text-decoration:	none;
-			padding: 			0 3px; /* horizontal space btn tags */
-		}
-	}
-
-	&__title { /*.title*/
-
-		width: 	span(7 of 8);
-		float:	left;
-	}
-
-	&__icons { /*.icon*/
-
-				
-		/*margin-right:			.9em;*/ /* <-- magic number :( */
-
-		width: 	span(1 of 8);
-		float:	right;
-	}
-}

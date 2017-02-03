@@ -1,5 +1,10 @@
-$bg-color: 				$base-bg-color;
-$bg-color-inv: 			$base-bg-color-inv;
+/*$bg-color: 				$base-bg-color;
+$bg-color-inv: 			$base-bg-color-inv;*/
+
+$vp-color: 					$viewport-bg-color;
+$pg-color: 					$page-bg-color;
+$vp-color-inv: 				$viewport-bg-color-inv;
+$pg-color-inv: 				$page-bg-color-inv;
 
 .bg {
 
@@ -21,13 +26,13 @@ $bg-color-inv: 			$base-bg-color-inv;
 		width:				100%;
 		pointer-events:  	none;
 
-		background: $bg-color;	
+		background: $vp-color;	
 	}
 		&__page {
 			pointer-events:  	none;
 			height: 120vh;	
 
-			background: $bg-color;		
+			background: $pg-color;		
 	        box-shadow: 8px 0 8px -9px #555, -8px 0 8px -9px #555;
 	        /*border-right: 1px solid #ddd;
 	        border-left: 1px solid #ddd;*/
@@ -55,11 +60,11 @@ $bg-color-inv: 			$base-bg-color-inv;
 
 		&__layout {
 
-			background: $bg-color-inv;	
+			background: $vp-color-inv;	
 		}
 			&__page {
 
-				background: $bg-color-inv;		
+				background: $pg-color-inv;		
 		        box-shadow: none;
 
 			}

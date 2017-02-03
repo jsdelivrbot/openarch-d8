@@ -11,11 +11,11 @@
 ===================================================================== */
 
 $table-base-font-size:			1rem;
-$table-head-font-size: 			$base-h7-font-size;
-$table-body-font-size: 			$base-h7-font-size;
+$table-head-font-size: 			$h7-font-size;
+$table-body-font-size: 			$h7-font-size;
 
-$table-focus-color:				$base-focus-color;
-$table-focus-color-inv:			$base-focus-color-inv;
+$row-focus-color:				$table-row-focus-color;
+$row-focus-color-inv:			$table-row-focus-color;
 
 /* ==================================================================
 ## Config
@@ -35,15 +35,15 @@ table {
 
 table.invert {
 
-	tbody > tr:hover {
+	/*tbody > tr:hover {
 
-		background-color: $table-focus-color-inv;
-	}
+		background-color: $row-focus-color-inv;
+	}*/
 }
 
 	.ttitle {
 
-		font-size: $base-h3-font-size;
+		font-size: $h3-font-size;
 
 		@include tiny {}
 		@include mobile {}
@@ -51,7 +51,7 @@ table.invert {
 		@include wide {}
 		@include wider {}
 		@include widest {}
-		@include full { font-size: $base-h3-font-size; }
+		@include full { font-size: $h3-font-size; }
 	}
 
 	tr {
@@ -70,15 +70,15 @@ table.invert {
 
 	thead {
 
-		font-size: $base-h5-font-size; 
+		font-size: $h5-font-size; 
 		
 		@include tiny {}
 		@include mobile {}
 		@include narrow {}
 		@include wide {}
-		@include wider { font-size: $base-h6-font-size; }
-		@include widest { font-size: $base-h5-font-size; }
-		@include full { font-size: $base-h3-font-size; }	
+		@include wider { font-size: $h6-font-size; }
+		@include widest { font-size: $h5-font-size; }
+		@include full { font-size: $h3-font-size; }	
 	}
 
 	thead > tr {
@@ -88,22 +88,22 @@ table.invert {
 
 	tbody {
 
-		font-size: $base-h5-font-size; 
+		font-size: $h5-font-size; 
 
 		@include tiny {}
 		@include mobile {}
 		@include narrow {}
 		@include wide {}
-		@include wider { font-size: $base-h6-font-size; }
-		@include widest { font-size: $base-h5-font-size; }
-		@include full { font-size: $base-h7-font-size; }
+		@include wider { font-size: $h6-font-size; }
+		@include widest { font-size: $h5-font-size; }
+		@include full { font-size: $h7-font-size; }
 
-		tr {
+		/*tr {
 
 			&:hover {
-				background-color: $table-focus-color;
+				background-color: $row-focus-color;
 			}
-		}		
+		}*/		
 	}
 
 	

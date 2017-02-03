@@ -1,66 +1,65 @@
+/* ==================================================================
+ * Bd Class
+ *
+ * Structure:
+ * 
+ * div.bd
+ *   p
+ *
+ * div.bd.bd--big
+ *   p
+ *
+ * Notes:
+ *
+ * xxx
+ *
+===================================================================== */
+
+/* ==================================================================
+## Config
+===================================================================== */
+	
+$sml-font-size:			$bd-sml-font-size;
+$big-font-size:			$bd-big-font-size;
+$big-font-size-tiny: 	$body-font-size;
+$big-font-size-mobile: 	$bd-big-font-size-minus;
+$big-font-size-narrow: 	$bd-big-font-size;
+$big-font-size-wide: 	$bd-big-font-size;
+$big-font-size-wider: 	$bd-big-font-size;
+$big-font-size-widest: 	$bd-big-font-size-plus;
+$big-font-size-full: 	$bd-big-font-size-plus;
+
+/* ==================================================================
+## Def 
+===================================================================== */
+
 .bd {
 
 	text-align:			justify;
-	/*margin: 			$base-spacing*.5;*/
-	/*margin:				$base-spacing 0;*/
+
+	> p {
+
+		font-size:		inherit;
+	}
 }
 
 .bd--bigtext > p {
 
-	font-size:			1.0rem;
-	line-height:		1.875rem;
+	font-size:			$big-font-size;
+	line-height:		1.6;
 	margin: 			$base-spacing;
 
-	@include tiny {
-
-		font-size:			0.9rem;
-		line-height:		1.5rem;
-		margin: 			$base-spacing;
-	}
-	@include mobile {
-
-		font-size:			1.0rem;
-		line-height:		1.5rem;
-		margin: 			$base-spacing;
-	}
-	@include narrow {
-
-		font-size:			1.15rem;
-		line-height:		1.875rem;
-		margin: 			$base-spacing;
-	}
-	@include wide {
-
-		font-size:			1.15rem;
-		line-height:		1.875rem;
-		margin: 			$base-spacing;
-	}
-	@include wider {
-
-		font-size:			1.15rem;
-		line-height:		2.0rem;
-		margin: 			$base-spacing;
-	}
-	@include widest {
-
-		font-size:			1.25rem;
-		line-height:		2.0rem;
-		color:				white;
-		/*font-weight:		bold;*/ 
-		margin: 			$base-spacing;
-	}
-	@include full {
-
-		font-size:			1.25rem;
-		line-height:		2.0rem;
-		color:				white;
-		/*font-weight:		bold;*/ 
-		margin: 			$base-spacing;
-	}
+	@include tiny 	{ 	font-size: $big-font-size-tiny; 	}
+	@include mobile { 	font-size: $big-font-size-mobile; 	}
+	@include narrow { 	font-size: $big-font-size-narrow; 	}
+	@include wide 	{ 	font-size: $big-font-size-wide; 	}
+	@include wider 	{ 	font-size: $big-font-size-wider; 	}
+	@include widest { 	font-size: $big-font-size-widest; color: white; }
+	@include full 	{ 	font-size: $big-font-size-full; color: white; }
 }
 
 .bd--smltext > p {
 
-	font-size: .85rem;
-	line-height: 1.25rem;
+	font-size: 			$sml-font-size;
+	line-height: 		1.25rem;
 }

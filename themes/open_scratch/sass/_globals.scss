@@ -1,51 +1,44 @@
 /* =======================================================================
 ## ++ Globals
 ========================================================================== */
+
 html {
 	height:100%;  /* req for flexbox, ie sticky footer */
-	font-size: 16px;
+	font-size: $root-font-size;
 
 	@include tiny{ /* max-width: 559px */
-    	font-size: 12px;
+    	font-size: $root-font-size-tiny;
     }
 	@include mobile{ /* max-width: 559px */
-    	font-size: 13px;
+    	font-size: $root-font-size-mobile;
     }
     @include narrow{ /* all and (min-width: 560px) and (max-width: 850px) */
-    	font-size: 14px;
+    	font-size: $root-font-size-narrow;
     }
     @include wide{ /* all and (min-width: 851px) */
-    	font-size: 14px;
+    	font-size: $root-font-size-wide;
     }
     @include wider{ /* all and (min-width: 851px) */
-    	font-size: 15px;
+    	font-size: $root-font-size-wider;
     }
     @include widest{ /* all and (min-width: 851px) */
-    	font-size: 15px;
+    	font-size: $root-font-size-widest;
     }
     @include full{ /* all and (min-width: 851px) */
-    	font-size: 17px;
+    	font-size: $root-font-size-full;
     }
 }
-
 
 body {
 	height:100%;  /* req for flexbox, ie sticky footer */
-	/*font-size: 100%;*/
-	color: $base-font-color;	
-	/*line-height: 1.125em;*/ /* 16×1.125=18px */
+	color: $body-font-color;	
     -webkit-font-smoothing: antialiased;
     font-family: $base-font-family;
-    /*background: #333;*/
 }
 
 body.invert {
-	color: $base-font-color-inv;
+	color: $body-font-color-inv;
 }
-
-/*body::-webkit-scrollbar {
-    width: .5rem;
-}*/
 
 *, *:before, *:after{
 	padding: 0;
@@ -81,20 +74,20 @@ h1,h2,h3,h4,h5,h6 {
 	/*text-transform: uppercase;*/
 }
 
-/*  */
-h1 {	font-size: 	$base-h1-font-size;		}
-h2 {	font-size: 	$base-h2-font-size;	/*line-height: $base-line-height-single;*/ } /* task/event titles */
-h3 {	font-size: 	$base-h3-font-size;		}
-h4 {	font-size: 	$base-h4-font-size;		}
-h5 {	font-size: 	$base-h5-font-size;		}
-h6 {	font-size:	$base-h6-font-size;	line-height: $base-line-height; } /* facts */
+h1 {	font-size: 	$h1-font-size;		}
+h2 {	font-size: 	$h2-font-size;	/*line-height: $base-line-height-single;*/ } /* task/event titles */
+h3 {	font-size: 	$h3-font-size;		}
+h4 {	font-size: 	$h4-font-size;		}
+h5 {	font-size: 	$h5-font-size;		}
+h6 {	font-size:	$h6-font-size;	line-height: $base-line-height; } /* facts */
 
 a, a:link, a:visited {
 	color: 				inherit;
 	text-decoration:	none;
 }
+
 a:hover{
-	color:				$openorange-color;;
+	color:				$link-hover-color;
 }
 
 /* responsive images */
@@ -103,7 +96,6 @@ img {
 	width:100%;
 	height:auto;
 }
-
 
 /* =======================================================================
 ## ++ Cleafix
@@ -131,7 +123,3 @@ img {
 }
 
 .clr{clear:both;}
-
-
-
-

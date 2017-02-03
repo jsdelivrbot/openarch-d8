@@ -10,20 +10,21 @@
 ## Config
 ===================================================================== */
 
-$tag-font-size:					$base-h4-font-size;
+$tag-font-size:					$h4-font-size;
 
 $tag-spacing:					0; /*$base-button-spacing;*/
 $tag-button-height:				$base-button-height;
 $tag-button-pad-horiz:			$base-horiz-pad;
 
-$tag-row-height:				$base-row-height; 	
-$tag-font-color: 				inherit;
-$tag-hover-font-color:			$openorange-color; 	
+/*$tag-row-height:				$base-row-height; */	
+/*$tag-font-color: 				inherit;
+$tag-font-color: 				inherit;*/
+/*$tag-hover-font-color:			$openorange-color; */	
 
-$tag-bg-color:					inherit; /*#f9f9f9;*/
-$tag-hover-bg-color:			inherit; /*#e5e5e5;*/
+/*$tag-bg-color:					inherit;
+$tag-hover-bg-color:			inherit;*/
 
-$tag-font-size-sml:				$base-h6-font-size;
+$tag-font-size-sml:				$h6-font-size;
 $tag-button-height-sml:			$base-button-height-sml;
 $tag-spacing-sml:				$base-button-spacing;	/* horiz space btw buttons */
 $tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
@@ -36,6 +37,7 @@ $tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
 .tag {
 
 	font-size: 				$tag-font-size;
+	color: 					$tag-font-color;
 
 	a, a:link, a:visited{
 
@@ -44,17 +46,21 @@ $tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
 		line-height: 		$tag-button-height;
 		margin-right: 		$tag-spacing;			/* horiz space btw buttons */
 		padding: 			0 $tag-button-pad-horiz; 	/* horiz text padding */
-		color: 				$tag-font-color;
+		
 		text-transform: 	uppercase;
 		text-decoration:	none;
-		background:			$tag-bg-color;		
+		/*background:			$tag-bg-color;*/		
 	}
 
-	a:hover{
+	/*a:hover{
 		text-decoration: 	none;
 		color: 				$tag-hover-font-color;
 		background: 		$tag-hover-bg-color;
-	}
+	}*/
+}
+
+.tag.invert {
+	color: 					$tag-font-color-inv;
 }
 
 .tag--sml {
@@ -70,33 +76,22 @@ $tag-button-pad-horiz-sml:		$base-button-pad-horiz; 	/* horiz text padding */
 
 }
 
-.label {
 
-	/* labels are basically just inline-blocks for vertical centering */
-	display: 			inline-block;
+$btn-height:			$base-button-height;
+$btn-padding:			$base-horiz-pad;
+$btn-spacing:			$base-button-spacing;
 
-	/* this should be done by button class */
-	padding: 			0 $base-button-pad-horiz; /* horizontal space btn tags */
+.btn { /*a*/
 
-	/* create atom class for this */
-	text-transform: 	uppercase;
+		display: 			inline-block;
+		height: 			$btn-height;
+		line-height: 		$btn-height;
+		margin-right: 		$btn-spacing;		/* horiz space btw buttons */
+		padding: 			0 $btn-padding; 	/* horiz text padding */
 
-	
-
-	/* this shouldn't be needed as long as ribbon has height set */
-	/*height: 			$tag-button-height;
-	line-height: 		$tag-button-height;*/
 }
 
-/* use if label should fill parent width */
-.label--fullwidth {
-	
-	/* labels don't wrap */
-	max-width: 100%;
-	overflow: hidden;
-    text-overflow: ellipsis;
-}
+.btn--sml {}
+.btn--big {}
 
-.label--nopad {
-	padding:			0;
-}
+

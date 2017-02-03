@@ -1,76 +1,40 @@
 /* ==================================================================
-## Menubar (Page Header)
+ * Sitename
+ *
+ * div.sitename
+ *   a
+ *     img
+===================================================================== */
+
+/* ==================================================================
+## Config
+===================================================================== */
+
+$tiny-logo: 	$logo-height-tiny;
+$mobile-logo: 	$logo-height-mobile;
+$narrow-logo: 	$logo-height-narrow;
+$wide-logo: 	$logo-height-wide;
+$wider-logo: 	$logo-height-wider;
+$widest-logo: 	$logo-height-widest;
+$full-logo: 	$logo-height-full;
+
+/* ==================================================================
+## Def
 ===================================================================== */
 
 .sitename {
-
-	/*white-space: nowrap;
-  	overflow: hidden;
-  	text-overflow: ellipsis;*/
-
-	a{
-		font-size: 			$sitename-font-size;
-
-		display:			inline-block;
-		height:				2.75em;
-		line-height: 		2.75em;
-		
-		font-weight: 		bold;	
-		text-transform: 	uppercase;
-		color: 				$openorange-color;
-		text-decoration:	none;
-	}
-
-	a:hover{
-
-		text-decoration: none;
-	}
 
 	img {
 		
 		width: auto;
 		vertical-align: middle;
 
-		@include tiny {
-			height: 20px;
-		}
-
-		@include mobile {
-			height: 25px;
-		}
-
-		@include narrow {
-			height: 30px;
-		}
-
-		@include wide {	
-			height: 30px;
-		}
-
-		@include wider {	
-			height: 32px;
-		}
-
-		@include widest {	
-			height: 30px;
-		}
-
-		@include full {	
-			height: 34px;
-		}
-
-
-	}
-}
-
-.footer .sitename {
-
-	a{
-		
-		font-weight: normal;
-		font-size: $sitename-font-size;
-		text-transform: uppercase;
-		color: lightgrey;
-		text-decoration:none;
+		@include tiny 	{ height: $tiny-logo; }
+		@include mobile { height: $mobile-logo; }
+		@include narrow { height: $narrow-logo; }
+		@include wide 	{ height: $wide-logo; }
+		@include wider 	{ height: $wider-logo; }
+		@include widest { height: $widest-logo; }
+		@include full 	{ height: $full-logo; }
 	}
 }

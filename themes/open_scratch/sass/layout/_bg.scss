@@ -46,9 +46,10 @@ $pg-color-inv: 				$page-bg-color-inv;
 			@include full { padding: 0 gutter(19); }
 		}
 
-			/*.inv-widest { @include widest { background: #111; color: white; } }
-			.inv-full { @include full { background: #111; color: white; } }*/
 }
+
+.inv-widest { @include widest { background: #111; color: white; } }
+		.inv-full { @include full { background: #111; color: white; } }
 
 .bg.invert {
 

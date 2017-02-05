@@ -394,6 +394,12 @@ change permissions on files directory to 777
 * add focus and label partials
 * delete old teasers class
 
+#### 0.6.33
+
+* remove border lines from tabs at widest/full bps
+* reduce row height for table rows at widest bp
+* increate row height for tables at full bp
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -517,6 +523,8 @@ change permissions on files directory to 777
 * table pagers should have bigr buttons for mobile
 * bd class should be responsible for text color.
 * replace all title--prim, title--sec, etc with atomic classes.
+* sometimes invert gets in bad state when using ajax when inverted. eg events next page.
+* event flex slideshow not working with variable heights again...
 
 
 ## Liscense

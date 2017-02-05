@@ -21,53 +21,16 @@
 
 	table {}
 
-		caption {
-			/*text-align: right;*/
+		/*thead > tr {
 
-		}
-
-		caption > time {
-
-			/*font-size: $title-font-size;
-			line-height: $title-line-height;
-			color: $title-font-color;*/
-		}
+			@include widest { border-top: none; }
+		}*/
 }
 
-		tr {}
-
-		td.data.awards--name {
-			/*width: 90%;*/
-		}
 	
 .awards-table {
 
 	&__table {}
-
-		/*&__head {
-
-			@include table-1-col	{ 	display: none;	}
-			@include table-2-col	{ 	display: none;	}
-			@include table-3-col	{ 	display: table-row-group;	}
-		    @include table-4-col	{ 	display: table-row-group;	}
-		    @include table-5-col	{	display: table-row-group;	}
-		}
-
-		&__data-date {
-
-			@include table-1-col	{ 	display:none;	}
-			@include table-2-col	{ 	width: 13%;	}
-			@include table-3-col	{ 	width: 12%;	}
-		    @include table-4-col	{ 	width: 11%;	}
-		    @include table-5-col	{	width: 10%;	}
-		}
-		&__data-name {
-
-		}
-		
-		&__data-icon {}*/
-
-		
 
 		@include table-1-col {
 			&__head 		{ display: table-row-group; }

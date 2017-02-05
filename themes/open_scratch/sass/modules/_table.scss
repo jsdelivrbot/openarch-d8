@@ -43,7 +43,7 @@ table.invert {
 
 	.ttitle {
 
-		font-size: $h3-font-size;
+		font-size: $h4-font-size;
 
 		@include tiny {}
 		@include mobile {}
@@ -51,21 +51,24 @@ table.invert {
 		@include wide {}
 		@include wider {}
 		@include widest {}
-		@include full { font-size: $h3-font-size; }
+		@include full { font-size: $h4-font-size; }
 	}
 
 	tr {
 
-		border-top: 1px solid whitesmoke;
+		border-top: 1px solid #666;
 
 		&:nth-last-child(1) {
-			border-bottom: 1px solid whitesmoke;
+			border-bottom: 1px solid #666;
 		}
 
-		@include full {
-
-			/*border: none !important;*/	
-		}
+		@include tiny {}
+		@include mobile {}
+		@include narrow {}
+		@include wide {}
+		@include wider {}
+		@include widest { border: none !important; }
+		@include full { border: none !important; }
 	}
 
 	thead {
@@ -78,7 +81,7 @@ table.invert {
 		@include wide {}
 		@include wider { font-size: $h6-font-size; }
 		@include widest { font-size: $h5-font-size; }
-		@include full { font-size: $h3-font-size; }	
+		@include full { font-size: $h4-font-size; }	
 	}
 
 	thead > tr {
@@ -131,8 +134,8 @@ table.invert {
 		@include wide {}
 		@include wider {}
 		@include widest {
-			/*height: 			$base-row3-height;
-			line-height: 		$base-row3-height;*/
+			height: 			$base-row3-height;
+			line-height: 		$base-row3-height;
 		}
 		@include full {
 			height: 			$base-row1-height;
@@ -157,17 +160,23 @@ table.invert {
 		@include wide {}
 		@include wider {}
 		@include widest {
-			/*height: 			$base-row3-height;
-			line-height: 		$base-row3-height;*/
-		}
-		@include full {
-			height: 			$base-row4-height;
-			line-height: 		$base-row4-height;
+			height: 			$base-row3-height;
+			line-height: 		$base-row3-height;
 
 			.icon {
-				height:					$base-row4-height;
-				line-height: 			$base-row4-height;
-				width:					$base-row4-height;
+				height:					$base-row3-height;
+				line-height: 			$base-row3-height;
+				width:					$base-row3-height;
+			}
+		}
+		@include full {
+			height: 			$base-row3-height;
+			line-height: 		$base-row3-height;
+
+			.icon {
+				height:					$base-row3-height;
+				line-height: 			$base-row3-height;
+				width:					$base-row3-height;
 			}
 		}
 	}

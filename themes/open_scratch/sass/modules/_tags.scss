@@ -86,6 +86,7 @@ $btn-spacing:			$base-button-spacing;
 		display: 			inline-block;
 		height: 			$btn-height;
 		line-height: 		$btn-height;
+		min-width:			$btn-height;
 		margin-right: 		$btn-spacing;		/* horiz space btw buttons */
 		padding: 			0 $btn-padding; 	/* horiz text padding */
 
@@ -93,5 +94,6 @@ $btn-spacing:			$base-button-spacing;
 
 .btn--sml {}
 .btn--big {}
+
 
 

@@ -45,11 +45,23 @@ $pg-color-inv: 				$page-bg-color-inv;
 			@include widest { padding: 0; margin: 0 span(3 of 19 wide); }
 			@include full { padding: 0 gutter(19); }
 		}
-
 }
+			.bg--whitesmoke { background: $whitesmoke-bg-color;}
+			.bg--white { background: $white-bg-color; }
+			.bg--lines { background: url('../images/hatch2x4.png'); }
+			.bg--manifesto {
+				background: url('../images/hatch2x4.png');
+				@include widest {
+					background: $openorange-color;
+				}
+				@include full {
+					background: $openorange-color;
+				}
+			}
 
-.inv-widest { @include widest { background: #111; color: white; } }
-		.inv-full { @include full { background: #111; color: white; } }
+
+/*.inv-widest { @include widest { background: #111; color: white; } }
+.inv-full { @include full { background: #111; color: white; } }*/
 
 .bg.invert {
 
@@ -65,9 +77,24 @@ $pg-color-inv: 				$page-bg-color-inv;
 		}
 			&__page {
 
-				background: $pg-color-inv;		
-		        box-shadow: none;
+				background: $pg-color-inv;	
+				box-shadow: 8px 0 8px -6px #000, -8px 0 8px -6px #000;	
+		        /*box-shadow: none;*/
 
 			}
+
 	}
+				.bg--whitesmoke { background: $darksmoke-bg-color; }
+				.bg--white { background: $dark-bg-color; }
+				.bg--lines { background: $darksmoke-bg-color; }
+				.bg--manifesto {
+					background: $darksmoke-bg-color;
+					@include widest {
+						background: $openorange-color;
+					}
+					@include full {
+						background: $openorange-color;
+					}
+				}	
+
 }

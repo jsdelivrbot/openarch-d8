@@ -1,0 +1,41 @@
+/* ==================================================================
+ *
+ * Select Drop down Base Style
+ *
+ * Perhaps this should be moved to _base.scss
+ *
+===================================================================== */	
+
+.views-exposed-form {
+
+	display: inline-block; 
+	vertical-align: middle;
+
+	/*margin: $base-row-pad 0;*/
+
+	.form-item {
+		line-height: $base-button-height;
+		float: left;
+	}
+
+	label {
+		display: none;
+	}
+
+	.form-select {
+		border: none;
+
+		&:option {
+			text-transform: uppercase;
+		}
+	}
+
+	input {
+		display: none;
+	}
+
+	option {
+		height: $base-button-height;
+		line-height: $base-button-height;
+	}
+}

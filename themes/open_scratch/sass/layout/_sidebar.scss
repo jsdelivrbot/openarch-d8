@@ -121,7 +121,7 @@ $sidebar-footer-height: 	$base-row2-height;
 	height:					100%;
 	position:				relative;
 
-	border-right: 1px solid #ddd;
+	border-right: 1px solid $sidebar-vbd-color;
 
 	&__top{
 		
@@ -188,34 +188,9 @@ $sidebar-footer-height: 	$base-row2-height;
 	
 }
 
-@include tiny {
+.sidebar.invert {
 
-
-}
-
-@include mobile {
-
-
-}
-
-@include narrow {
-
-
-}
-
-@include wide {
-
-
-}
-
-@include wider {
-
-
-}
-
-@include widest {
-
-	
+	border-right: 1px solid $sidebar-vbd-color-inv;
 }
 
 	

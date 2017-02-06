@@ -24,16 +24,16 @@ $menu-focus-color-inv:			$base-focus-color-inv;
 .sidebar .menu {
 
 	/* borders */
-	/*li {
-		border-bottom: 1px solid whitesmoke;
+	li {
+		border-bottom: 1px solid $sidebar-hbd-color;
 		&:nth-child(1) {
-			border-top: 1px solid whitesmoke;
+			border-top: 1px solid $sidebar-hbd-color;
 		}
 	}
 	li ul li {
 		border-bottom: none;
-		border-top: 1px solid whitesmoke;
-	}*/
+		border-top: 1px solid $sidebar-hbd-color;
+	}
 }
 
 

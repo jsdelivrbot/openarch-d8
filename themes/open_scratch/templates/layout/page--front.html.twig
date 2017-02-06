@@ -1,4 +1,4 @@
-<div class="container slider">
+<div class="container slider bg">
 
     <div class="layout sidebar-layout slider-drawer "> {# drop--right #}
 
@@ -58,26 +58,6 @@
 
     <div class="bg-screen grid-target"></div>
 
-    {# <div class="layout main-header-layout slider-canvas">
-
-        <div class="wrapper main-header-wrapper" role="contentinfo">
-
-          <div class="main-header media">
-
-              <aside class="region main-header__right media__imgR" role="contentinfo">
-                {{ page.header_right }} 
-              </aside>
-
-              <aside class="region main-header__left media__contents" role="contentinfo">
-                {{ page.header_left }}
-              </aside>
-
-          </div>
-
-        </div>
-
-    </div> #}
-
     <div class="layout main-header-layout slider-canvas">
 
       <div class="overlay wrapper main-header-wrapper region " role="contentinfo">
@@ -117,7 +97,7 @@
 
           <div id="fullpage" class="fullpage">
 
-            <div class="fullpage__section"> {# ta--c text-align center to center nameplate #}
+            <div class="fullpage__section bg--white"> {# ta--c text-align center to center nameplate #}
               {% if page.content_slideshow %}
 
                 <div id="main-content-slideshow" class="region main-content__slideshow overflow-visible">

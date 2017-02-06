@@ -17,9 +17,9 @@ $searchbar-width:               100%;
 $searchbar-input-bg-color:      #f7f7f7;
 $searchbar-input-bg-color-inv:  #333;
 $searchbar-hover-bg-color:      #e5e5e5;
-$searchbar-icon-color:          #333;
-$searchbar-input-color:         #333;
-$searchbar-placeholder-color:   #333;
+$searchbar-icon-color:          inherit;
+$searchbar-input-color:         inherit;
+$searchbar-placeholder-color:   inherit;
 
 $searchbar-input-font-size:     $h3-font-size;
 

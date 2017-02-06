@@ -52,6 +52,19 @@ layouts
 	font-weight: bold;
 }
 
+.ttitle {
+
+	font-size: $tbl-font-size-plus;
+
+	@include tiny {}
+	@include mobile {}
+	@include narrow {}
+	@include wide {}
+	@include wider {}
+	@include widest {}
+	@include full { font-size: $tbl-font-size-plus; }
+}
+
 /* atomic modifiers for titles */
 .tt--u { text-transform: uppercase; }
 .td--u { text-decoration: underline; }

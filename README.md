@@ -400,6 +400,10 @@ change permissions on files directory to 777
 * reduce row height for table rows at widest bp
 * increate row height for tables at full bp
 
+#### 0.6.34
+
+* refactor table class
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -10,12 +10,14 @@
 ## Config
 ===================================================================== */
 
-$table-base-font-size:			1rem;
+/*$table-base-font-size:			1rem;
 $table-head-font-size: 			$h7-font-size;
-$table-body-font-size: 			$h7-font-size;
+$table-body-font-size: 			$h7-font-size;*/
 
-$row-focus-color:				$table-row-focus-color;
-$row-focus-color-inv:			$table-row-focus-color;
+/*$row-focus-color:				$table-row-focus-color;
+$row-focus-color-inv:			$table-row-focus-color;*/
+
+
 
 /* ==================================================================
 ## Config
@@ -25,91 +27,10 @@ $row-focus-color-inv:			$table-row-focus-color;
 
 table {
 
-	font-size:			$table-base-font-size;
-	text-transform: 	uppercase;
-
-	width:100%;
-	display:table;
-	table-layout:fixed;
+	width:				100%;
+	display:			table;
+	table-layout:		fixed;
 }
-
-table.invert {
-
-	/*tbody > tr:hover {
-
-		background-color: $row-focus-color-inv;
-	}*/
-}
-
-	.ttitle {
-
-		font-size: $h4-font-size;
-
-		@include tiny {}
-		@include mobile {}
-		@include narrow {}
-		@include wide {}
-		@include wider {}
-		@include widest {}
-		@include full { font-size: $h4-font-size; }
-	}
-
-	tr {
-
-		border-top: 1px solid #666;
-
-		&:nth-last-child(1) {
-			border-bottom: 1px solid #666;
-		}
-
-		@include tiny {}
-		@include mobile {}
-		@include narrow {}
-		@include wide {}
-		@include wider {}
-		@include widest { border: none !important; }
-		@include full { border: none !important; }
-	}
-
-	thead {
-
-		font-size: $h5-font-size; 
-		
-		@include tiny {}
-		@include mobile {}
-		@include narrow {}
-		@include wide {}
-		@include wider { font-size: $h6-font-size; }
-		@include widest { font-size: $h5-font-size; }
-		@include full { font-size: $h4-font-size; }	
-	}
-
-	thead > tr {
-
-		@include full { border-top: none; }
-	}
-
-	tbody {
-
-		font-size: $h5-font-size; 
-
-		@include tiny {}
-		@include mobile {}
-		@include narrow {}
-		@include wide {}
-		@include wider { font-size: $h6-font-size; }
-		@include widest { font-size: $h5-font-size; }
-		@include full { font-size: $h7-font-size; }
-
-		/*tr {
-
-			&:hover {
-				background-color: $row-focus-color;
-			}
-		}*/		
-	}
-
-	
 
 	th,td {
 
@@ -121,64 +42,6 @@ table.invert {
 		padding-left:		$base-button-pad-horiz;
 		/*padding: 			0 1em;*/
 		text-align:			left;
-	}
-
-	th {
-
-		height: 				$base-row2-height;
-		line-height: 			$base-row2-height;
-
-		@include tiny {}
-		@include mobile {}
-		@include narrow {}
-		@include wide {}
-		@include wider {}
-		@include widest {
-			height: 			$base-row3-height;
-			line-height: 		$base-row3-height;
-		}
-		@include full {
-			height: 			$base-row1-height;
-			line-height: 		$base-row1-height;
-		}
-	}
-
-	td {
-
-		height: 				$base-row2-height;
-		line-height: 			$base-row2-height;
-
-		.icon {
-			height:					$base-row2-height;
-			line-height: 			$base-row2-height;
-			width:					$base-row2-height;
-		}
-
-		@include tiny {}
-		@include mobile {}
-		@include narrow {}
-		@include wide {}
-		@include wider {}
-		@include widest {
-			height: 			$base-row3-height;
-			line-height: 		$base-row3-height;
-
-			.icon {
-				height:					$base-row3-height;
-				line-height: 			$base-row3-height;
-				width:					$base-row3-height;
-			}
-		}
-		@include full {
-			height: 			$base-row3-height;
-			line-height: 		$base-row3-height;
-
-			.icon {
-				height:					$base-row3-height;
-				line-height: 			$base-row3-height;
-				width:					$base-row3-height;
-			}
-		}
 	}
 
 	/* make links in cells easily selectable */
@@ -233,168 +96,171 @@ table.invert {
 		}
 	}
 
-	
+/*%tbl {}*/
 
 /* ==================================================================
- *
- * Select Drop down Base Style
- *
- * Perhaps this should be moved to _base.scss
- *
-===================================================================== */	
+## Table type placeholder
+===================================================================== */
+%tbl-type {
 
-.views-exposed-form {
+	font-size:			$tbl-font-size;
+	text-transform: 	uppercase;
 
-	display: inline-block; 
-	vertical-align: middle;
+	thead {
 
-	/*margin: $base-row-pad 0;*/
-
-	.form-item {
-		line-height: $base-button-height;
-		float: left;
+		font-size: $tbl-font-size; 
+		
+		/*@include tiny {}
+		@include mobile {}
+		@include narrow {}
+		@include wide {}*/
+		@include wider { font-size: $tbl-font-size-minus; }
+		@include widest { font-size: $tbl-font-size; }
+		@include full { font-size: $tbl-font-size-plus; }	
 	}
 
-	label {
-		display: none;
+	tbody {
+
+		font-size: $tbl-font-size; 
+
+		/*@include tiny {}
+		@include mobile {}
+		@include narrow {}
+		@include wide {}*/
+		@include wider { font-size: $tbl-font-size-minus; }
+		@include widest { font-size: $tbl-font-size; }
+		@include full { font-size: $tbl-font-size-minus; }	
 	}
+}
 
-	.form-select {
-		border: none;
+/* ==================================================================
+## Table spacing placeholder
+===================================================================== */
+%tbl-spacing {
 
-		&:option {
-			text-transform: uppercase;
+	th {
+
+		height: 				$base-row2-height;
+		line-height: 			$base-row2-height;
+
+		@include tiny {}
+		@include mobile {}
+		@include narrow {}
+		@include wide {}
+		@include wider {}
+		@include widest {
+			height: 			$base-row3-height;
+			line-height: 		$base-row3-height;
+		}
+		@include full {
+			height: 			$base-row1-height;
+			line-height: 		$base-row1-height;
 		}
 	}
 
-	input {
-		display: none;
-	}
+	td {
 
-	option {
-		height: $base-button-height;
-		line-height: $base-button-height;
+		height: 				$base-row2-height;
+		line-height: 			$base-row2-height;
+
+		.icon {
+			height:					$base-row2-height;
+			line-height: 			$base-row2-height;
+			width:					$base-row2-height;
+		}
+
+		@include tiny {}
+		@include mobile {}
+		@include narrow {}
+		@include wide {}
+		@include wider {}
+		@include widest {
+
+			height: 			$base-row3-height;
+			line-height: 		$base-row3-height;
+
+			.icon {
+				height:					$base-row3-height;
+				line-height: 			$base-row3-height;
+				width:					$base-row3-height;
+			}
+		}
+		@include full {
+
+			height: 			$base-row3-height;
+			line-height: 		$base-row3-height;
+
+			.icon {
+				height:					$base-row3-height;
+				line-height: 			$base-row3-height;
+				width:					$base-row3-height;
+			}
+		}
 	}
 }
 
 /* ==================================================================
- *
- * Customize Select Drop down Base Style
- *
- * Perhaps this should be moved to _base.scss
- *
+## Table borders placeholder
 ===================================================================== */
+%tbl-bd {
 
+	tr {
 
+		border-top: 1px solid $tbl-bd-color;
 
-/*.custom-dropdown--large {
-	font-size: 1.5em;
-}
-
-.custom-dropdown--small {
-	font-size: .7em;
-}*/
-
-/*.custom-dropdown__select{ 
-	margin: 0; 
-}
-
-.custom-dropdown__select--white {
-	background-color: #fff;
-	color: #333;    
-}
-
-.custom-dropdown__select--white:hover {
-	background-color: #e9e9e9;
-}*/
-
-.custom-dropdown > select {
-	font-size: .95rem; /*$base-h4-font-size;*/
-	text-transform: uppercase;
-	color: inherit; 
-	background: none;
-}
-
-.custom-dropdown__select > option{
-	/*font-size: 1em;*/
-	/*background-color: #fff;*/
-	color: inherit;  
-}
-
-@supports (pointer-events: none) and
-	  ((-webkit-appearance: none) or
-	  (-moz-appearance: none) or
-	  (appearance: none)) {
-
-	.custom-dropdown {
-		position: relative;
-		display: inline-block;
-		vertical-align: middle;
+		&:nth-last-child(1) {
+			border-bottom: 1px solid $tbl-bd-color;
+		}
 	}
 
-	.custom-dropdown__select {
-		/*padding-right: 1em;*/
-		/*padding-left: 1em;*/ /*padding-left: 3.5em;*/ /* accommodate with the pseudo elements for the dropdown arrow */
-		/*margin-left: $base-button-spacing;*/
-		border: 0;
-		border-radius: 3px;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;   
-		outline: none; 
+	tr {
+
+		@include widest { border: none !important; }
+		@include full { border: none !important; }
 	}
 
-	.custom-dropdown::before,
-	.custom-dropdown::after {
-		content: "";
-		position: absolute;
-		pointer-events: none;
-	}
+	thead > tr {
 
-	.custom-dropdown::after { /*  Custom dropdown arrow */
-		/*content: "\25BC";
-		height: 1em;
-		font-size: .625em;
-		line-height: 1;
-		right: 1.2em;
-		top: 50%; 
-		margin-top: -.5em;*/
-	}
-
-	.custom-dropdown::before { /*  Custom dropdown arrow cover */
-		/*width: 2em;
-		height: 30px;
-		right: 0; top: .5em; bottom: 0;
-		border-radius: 0 3px 3px 0;*/
-	}
-
-	.custom-dropdown__select[disabled] {
-		color: rgba(0,0,0,.3);
-	}
-
-	.custom-dropdown.custom-dropdown--disabled::after {
-		color: rgba(0,0,0,.1);
-	}
-
-	/* White dropdown style */
-	.custom-dropdown--white {
-		/*background: #f5f5f5;*/
-	}
-
-	.custom-dropdown--white::before {
-		/*background-color: #555;
-		border-left: 1px solid rgba(0,0,0,.1);*/
-	}
-
-	.custom-dropdown--white::after {
-		/*color: rgba(0,0,0,.9);*/
-	}
-
-	/* FF only temp fix */
-	@-moz-document url-prefix() {
-		.custom-dropdown__select 			 { padding-right: .9em }
-		.custom-dropdown--large .custom-dropdown__select { padding-right: 1.3em }
-		.custom-dropdown--small .custom-dropdown__select { padding-right: .5em }
+		@include full { border-top: none; }
 	}
 }
 
+/* ==================================================================
+## Table borders inverted placeholder
+===================================================================== */
+%tbl-bd-inv {
+
+	tr {
+
+		border-top: 1px solid $tbl-bd-color-inv;
+
+		&:nth-last-child(1) {
+			border-bottom: 1px solid $tbl-bd-color-inv;
+		}
+	}
+}
+
+/* ==================================================================
+## Tbl
+===================================================================== */
+.table {
+	/*@extend %tbl;*/
+	@extend %tbl-bd;
+	@extend %tbl-type;
+	@extend %tbl-spacing;
+	&.invert{
+		@extend %tbl-bd-inv;
+	}
+}
+
+/*table.invert {*/
+
+	/*tr {
+
+		border-top: 1px solid $tbl-bd-color-inv;
+
+		&:nth-last-child(1) {
+			border-bottom: 1px solid $tbl-bd-color-inv;
+		}
+	}*/
+/*}*/	

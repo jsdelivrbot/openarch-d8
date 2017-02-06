@@ -1,32 +1,33 @@
 
+.border {}
+
+	.border-top,
+	.border--top {
+		border-top: 1px solid $def-bd-color;
+	}
+
+	.border-bottom,
+	.border--bottom {
+		border-bottom: 1px solid $def-bd-color;
+	}
+
+	.border--tb,
+	.border--tb-blk {
+		border-top: 1px solid $def-bd-color;
+		&:nth-last-child(1) {
+			border-bottom: 1px solid $def-bd-color;
+		}
+	}
+
+
+
+
+
 
 .border-bottom-hairline {
 	border-bottom: 1px solid #f1f1f1;
 }
 
-.border-top,
-.border--top {
-	border-top: 1px solid #666;
-}
-.border-bottom,
-.border--bottom {
-	border-bottom: 1px solid #666;
-}
-
-
-/*.border--bottom {
-	border-bottom: 1px solid #333;
-}*/
-
-/* recent news items */
-.border--tb,
-.border--tb-blk {
-	border-top: 1px solid #666;
-
-	&:nth-last-child(1) {
-		border-bottom: 1px solid #666;
-	}
-}
 .border--tb-ltgrey {
 	border-top: 1px solid lightgrey;
 
@@ -119,11 +120,7 @@
 	box-shadow: 8px 0 8px -9px #555, -8px 0 8px -9px #555;
 }
 
-.bg--ltwhitesmoke {background: #f9f9f9;}
-.bg--white { background: white; }
-.bg--dark { background: #111 !important;}
-.bg--orange { background: $openorange-color; /*opacity: .9;*/}
-.bg--ltgrey { background: #eee; }
+
 
 
 
@@ -137,33 +134,6 @@
 .c--black{ color: $base-font-color;}
 .c--white { color: $base-font-color-inv !important; }
 .c--wheat { color: wheat; }
-
-.bg--dots {
-	
-	background: url('../images/ptgrid-4px-50pct.png');
-}
-
-.bg--lines {
-	
-	background: url('../images/hatch2x4.png');
-}
-
-.bg--manifesto {
-	background: url('../images/hatch2x4.png');
-	@include widest {
-		background: $openorange-color;
-	}
-	@include full {
-		background: $openorange-color;
-	}
-}
-
-.bg--lines-orange {
-	
-	background: url('../images/hatch2x4-orange.png');
-}
-
-
 
 .hide {
 

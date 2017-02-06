@@ -2,35 +2,13 @@
 /* ==================================================================
 ## Awards Table subclass
 ===================================================================== */
-
-.title.awards--title {
-
-	/*width: 50%;
-
-	h2, a {
-		font-size: $table-title-font-size;
-		line-height: $table-title-line-height;
-		color: $table-title-font-color;
-	}*/
-
-}
-
-.awards {
-
-	/*margin-bottom: 50px;*/
-
-	table {}
-
-		/*thead > tr {
-
-			@include widest { border-top: none; }
-		}*/
-}
-
 	
 .awards-table {
 
-	&__table {}
+	&__table {
+
+		/*@extend .tbl;*/
+	}
 
 		@include table-1-col {
 			&__head 		{ display: table-row-group; }

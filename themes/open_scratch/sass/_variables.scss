@@ -19,7 +19,9 @@ $base-font-family: 'Work Sans', sans-serif;
 $openorange-color: 			#eb6100;
 
 $base-bg-color:				white;
-$base-bg-color-inv: 		#111;
+$base-bg-color-inv: 		#151515;
+$white-bg-color:			$base-bg-color;
+$dark-bg-color:				$base-bg-color-inv;
 $whitesmoke-bg-color: 		#f9f9f9;
 $darksmoke-bg-color:		#222;
 $ltgrey-bg-color: 			#f5f5f5;
@@ -28,7 +30,7 @@ $darkgrey-bg-color: 		#252525;
 /* bg colors */
 $viewport-bg-color:			$base-bg-color;
 $page-bg-color:				$base-bg-color;
-$viewport-bg-color-inv:		$base-bg-color-inv;
+$viewport-bg-color-inv:		#111;
 $page-bg-color-inv:			$base-bg-color-inv;
 
 /* focus background colors */
@@ -51,24 +53,33 @@ $btn-hover-color-inv:		$base-hover-color-inv;
 $base-font-color: 			#333;
 $base-font-color-inv: 		#f5f5f5; 
 $lighter-font-color:		#555;
+$lighter-font-color-inv:	#ddd;
 $darker-font-color:			#111;
-$lighter-font-color-inv:	#777;
-$darker-font-color-inv:		white;
+$darker-font-color-inv:		#f9f9f9;
 
 /* font colors - only two to make inversion simple */
-$body-font-color:			$base-font-color;
-$body-font-color-inv:		$base-font-color-inv;
+$body-font-color:			$lighter-font-color;
+$body-font-color-inv:		$lighter-font-color-inv;
 $title-font-color: 			$darker-font-color;
 $title-font-color-inv: 		$darker-font-color-inv;
-$tag-font-color: 			$lighter-font-color;
-$tag-font-color-inv: 		$lighter-font-color-inv;
+$tag-font-color: 			$darker-font-color;
+$tag-font-color-inv: 		$darker-font-color-inv;
 /*$link-font-color:			inherit;*/
 $link-hover-color:			$openorange-color;
 
-/* border colors -tbd */
-$base-bd-color: 			whitesmoke;
-$base-bd-color-inv:			whitesmoke;
-$sidebar-vertical-bd-color: whitesmoke;
+/* border colors */
+$base-bd-color: 			#999;
+$base-bd-color-inv:			#555;
+$lighter-bd-color:			#ddd;
+$lighter-bd-color-inv:		#333;
+
+$def-bd-color: 				$base-bd-color;
+$def-bd-color-inv: 			$base-bd-color-inv;
+$sidebar-vbd-color: 		$lighter-bd-color;
+$sidebar-vbd-color-inv: 	$lighter-bd-color-inv;
+$sidebar-hbd-color:			none;
+$tbl-bd-color: 				$lighter-bd-color;
+$tbl-bd-color-inv: 			$lighter-bd-color-inv;
 
 /* ==================================================================
 ## Fonts Size
@@ -102,6 +113,11 @@ $bd-big-font-size-plus:		1.25rem;
 $bd-big-font-size:			1.15rem;
 $bd-big-font-size-minus: 	1.0rem;
 $bd-sml-font-size:			0.85rem;
+
+/* table font sizes */
+$tbl-font-size:				$h5-font-size;
+$tbl-font-size-minus:		$h6-font-size;
+$tbl-font-size-plus:		$h4-font-size;
 
 /* ==================================================================
 ## Fonts Line Heights

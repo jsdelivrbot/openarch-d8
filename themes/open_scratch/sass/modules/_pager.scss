@@ -14,19 +14,19 @@
 				/*display: 				inline-block;*/ 
 				padding-left: 			$base-button-pad-horiz; /*prev 1em*/
 				padding-right: 			$base-button-pad-horiz;
-				color: 					#555;
+				/*color: 					inherit;*/
 
 			}
 
 			&:hover {
 
-				> a { color: 			$openorange-color; }
+				> a { /*color: 			$openorange-color;*/ }
 			}
 
 			&.is-active {
 
 				> a { 
-					color: 				black; 
+					/*color: 				inherit;*/ 
 					text-decoration: 	underline;
 				}
 			}

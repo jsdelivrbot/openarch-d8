@@ -66,11 +66,23 @@
 		}
 
 		@include wider {
-			&__header {  }	
+			/*&__header {  }	
 			&__body {
 				> .bd { width: span(11 of 12); } 
 			}
-			&__footer {  }
+			&__footer {  }*/
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); 
+				clear: right; 
+				float: right; 
+			}
 		}
 
 		@include widest	{ 

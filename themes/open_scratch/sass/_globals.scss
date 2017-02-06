@@ -48,12 +48,13 @@ body.invert {
 
 /* only apply font-size and line-height to 
 elements so don't have issue w/ cascading sizes */
-p {
+p,
+.morelink {
 	font-size: 		$base-font-size; 
 	line-height: 	$base-line-height;
 	/*padding: 		0 $base-pad-horiz;*/	
 	margin: 		$base-row-pad 0;
-	text-align:		justify;	
+	/*text-align:		justify;*/	
 }
 
 p:first-child,

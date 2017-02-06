@@ -410,6 +410,10 @@ change permissions on files directory to 777
 * refactor recent news class
 * refactor factsheet class
 
+#### 0.6.36
+
+* make text bodies expandable with readmore.js
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -514,6 +518,7 @@ change permissions on files directory to 777
 * remove css class from views facts collabs, facts, credits
 * set up trusted hosts (https://www.drupal.org/node/1992030)
 * border colors.
+* make readmorejs bodies use breakpoints so not cropping text.
 
 #### ISSUES:
 

@@ -36,30 +36,41 @@ $big-font-size-full: 	$bd-big-font-size-plus;
 .bd {
 
 	text-align:			justify;
+	/*max-height: 		15em;*/ /* 10 (lines) x 1.5 (line-height) */
 
-	> p {
+	> p,
+	~ .morelink {
 
 		font-size:		inherit;
 	}
+
 }
 
-.bd--bigtext > p {
+.bd--bigtext {
 
-	font-size:			$big-font-size;
-	line-height:		1.6;
-	margin: 			$base-spacing;
+	> p,
+	~ .morelink  {
 
-	@include tiny 	{ 	font-size: $big-font-size-tiny; 	}
-	@include mobile { 	font-size: $big-font-size-mobile; 	}
-	@include narrow { 	font-size: $big-font-size-narrow; 	}
-	@include wide 	{ 	font-size: $big-font-size-wide; 	}
-	@include wider 	{ 	font-size: $big-font-size-wider; 	}
-	@include widest { 	font-size: $big-font-size-widest; color: white; }
-	@include full 	{ 	font-size: $big-font-size-full; color: white; }
+		font-size:			$big-font-size;
+		line-height:		1.6;
+		margin: 			$base-spacing;
+
+		@include tiny 	{ 	font-size: $big-font-size-tiny; 	}
+		@include mobile { 	font-size: $big-font-size-mobile; 	}
+		@include narrow { 	font-size: $big-font-size-narrow; 	}
+		@include wide 	{ 	font-size: $big-font-size-wide; 	}
+		@include wider 	{ 	font-size: $big-font-size-wider; 	}
+		@include widest { 	font-size: $big-font-size-widest; color: white; }
+		@include full 	{ 	font-size: $big-font-size-full; color: white; }
+	}
 }
 
-.bd--smltext > p {
+.bd--smltext {
 
-	font-size: 			$sml-font-size;
-	line-height: 		1.25rem;
+	> p,
+	~ .morelink {
+
+		font-size: 			$sml-font-size;
+		line-height: 		1.25rem;
+	}
 }

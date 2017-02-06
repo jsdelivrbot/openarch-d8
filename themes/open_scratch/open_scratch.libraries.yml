@@ -9,5 +9,6 @@ global-js:
     js/main.js: {}
     js/scrolloverflow.min.js: {}
     js/jquery.fullPage.min.js: {}
+    node_modules/readmore-js/readmore.min.js: {}
   dependencies:
     - core/jquery

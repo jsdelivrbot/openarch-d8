@@ -402,7 +402,13 @@ change permissions on files directory to 777
 
 #### 0.6.34
 
-* refactor table class
+* refactor table classg
+
+#### 0.6.35
+
+* refactor manifesto class
+* refactor recent news class
+* refactor factsheet class
 
 #### TBD
 

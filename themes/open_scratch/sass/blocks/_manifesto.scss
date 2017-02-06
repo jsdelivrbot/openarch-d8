@@ -1,0 +1,48 @@
+/* ==================================================================
+ *
+ *
+ * manifesto
+ *
+ *
+===================================================================== */
+
+.card.manifesto {
+
+	/* position card */
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest { 
+
+		padding-left: gutter(13);
+		padding-right: gutter(13);
+		clear: left;
+		float: none;
+	}
+	@include full   { 
+
+		@include span(isolate 12 at 4 of 18);
+	}
+
+	> .card {
+
+		@include tiny   {  }
+		@include mobile {  }
+		@include narrow {  }
+		@include wide   {  }
+		@include wider  {  }
+		@include widest { 
+
+			&__header { display: none; }
+			&__footer { display: none; } 
+		}
+		@include full 	{ 
+
+			&__header { display: none; }
+			&__footer { display: none; } 
+		}
+	}
+}
+

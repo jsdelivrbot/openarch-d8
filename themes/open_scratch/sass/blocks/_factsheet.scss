@@ -22,36 +22,96 @@
 ## Config
 ===================================================================== */
 
-$factsheet-base-font-size:			1rem;
+
 
 
 /* ==================================================================
 ## Layout
 ===================================================================== */
 
-.factsheet {
+.card.factsheet {
 
-	&__header 	{margin: $base-row-pad 0;}
-	&__facts 	{margin: $base-row-pad 0;}
+	/* position card */
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest { 
+
+		padding-left: gutter(13);
+		padding-right: gutter(13);
+		clear: left;
+		float: none;
+	}
+	@include full   { 
+
+		@include span(isolate 12 at 4 of 18);
+	}
+
+	> .card {
+
+		@include tiny   { 
+			&__header { display: none; } 
+		}
+		@include mobile { 
+			&__header { display: none; } 
+		}
+		@include narrow { 
+			&__header { display: none; } 
+		}
+		@include wide   {  }
+		@include wider  { 
+
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); float: right; 
+			}
+		}
+		@include widest	{ 
+
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); float: right; 
+			}
+		}
+		@include full {
+
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); float: right; 
+			}
+		}
+	}
 }
 
+.card.facts {
+
+	> .card {
+
+		&__header {  }	
+		&__body {  }
+	}
+}
 
 /* ==================================================================
 ## Theme
 ===================================================================== */
 
-.factsheet {
 
-	/* 	
-	module-level styling
-	typically only font-size is specified at module level
-	and em sizing below it is relative to it
-	*/
-	font-size:					$factsheet-base-font-size;
-
-
-	&__header h3	{/* override global h3 */}
-	&__facts		{}
-
-}
 

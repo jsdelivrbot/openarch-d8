@@ -1,0 +1,82 @@
+/* ==================================================================
+ *
+ *
+ * recent news & news items
+ *
+ *
+===================================================================== */
+
+.card.recent-news {
+
+	/* position card */
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest { 
+
+		padding-left: gutter(13);
+		padding-right: gutter(13);
+		clear: left;
+		float: none;
+	}
+	@include full   { 
+
+		@include span(isolate 12 at 4 of 18);
+	}
+
+	> .card {
+
+		/* position card */
+		@include tiny   {  }
+		@include mobile {  }
+		@include narrow {  }
+		@include wide   {  }
+		@include wider  {  }
+		@include widest {  }
+		@include full   {
+
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); float: right; 
+			}
+		}
+	}
+}
+
+.card.news-item {
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest {  }
+	@include full   {  }
+
+	.card {
+
+		&__header {  }
+
+		&__media {	
+
+			@include tiny   { width: 50% }
+			@include mobile { width: 50% }
+			@include narrow { width: 33% }
+			@include wide   { width: 33% }
+			@include wider  { width: 25% }
+			@include widest	{ width: 25% }
+			@include full	{ width: 33% }
+		}
+	
+		&__body {  }
+
+		&__footer {  }
+	}
+}

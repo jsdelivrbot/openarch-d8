@@ -57,13 +57,6 @@ $card-base-font-size:			1rem;
 	clear: left;
 	float: none;
 
-	/* clearfix */
-	/*&:after {
-		content: ""; 
-	    display: table;
-	    clear: both; 
-	}*/
-
 	@include widest {
 
 	}
@@ -103,71 +96,8 @@ $card-base-font-size:			1rem;
 
 	}
 
-	/*&__slide--small 	{	
-
-		@include tiny   { width: 100% }
-		@include mobile { width: 100% }
-		@include narrow { width: span(8 of 12); }
-		@include wide   { width: span(6 of 9) }
-		@include wider  { width: span(6 of 12) }
-		@include widest	{ width: span(6 of 12); }
-		@include full	{ width: span(6 of 15); }
-	}*/
-
-	/*&__slide--medium 	{	
-
-		@include tiny   { width: 100% }
-		@include mobile { width: 100% }
-		@include narrow { width: 100% }
-		@include wide   { width: 100% }
-		@include wider  { width: 75% }
-		@include widest	{ width: 75% }
-		@include full	{ width: 75% }
-	}*/
-
-	
-
-	
- 
 }
 
-.card--10col {
-
-	@include widest	{ 
-		@include span(isolate 10 at 2 of 12);  
-		float: none;
-	}
-}
-
-.card--flag {
-
-	/*.card__body { padding-right: $base-spacing; }
-	background: #fafafa;*/
-
-}
-
-.card--postit {
-
-	/*background: #f9f9f9;*/
-
-	@include tiny   {  }
-	@include mobile { width: 100%; }
-	@include narrow { padding: 0; }
-	@include wide   { padding: 0; }
-	@include wider  { padding: 0; } /*padding: 0 ($base-spacing*.5);*/
-	@include widest	{ padding: 0; }	
-}
-
-.card--subcard {
-
-	font-size: .9rem;
-}
-
-.card--supercard {
-
-	font-size: 1.1rem;
-	/*padding: ($base-spacing*.5) 0;*/
-}
 
 /* ==================================================================
 ## card types (ie. subclasses) - CARD-GRID-3COL
@@ -317,100 +247,6 @@ $card-base-font-size:			1rem;
 
 }
 
-
-
-.card.manifesto {
-
-	@include widest	{ 
-		> .card__header { display: none; }
-		> .card__footer { display: none; }  
-		@include card-layout-vert;
-		/*@include span(isolate 8 at 3 of 12); 
-		float: none;*/
-	} 
-	@include full { 
-		> .card__header { display: none; } 
-		> .card__footer{ display: none; } 
-		@include span(isolate 12 at 4 of 18);
-		/*@include span(isolate 8 at 3 of 12); 
-		float: none;*/
-	}
-
-}
-
-
-.card.recent-news {
-
-	 .card__slide {	
-
-		@include tiny   { width: 50% }
-		@include mobile { width: 50% }
-		@include narrow { width: 33% }
-		@include wide   { width: 33% }
-		@include wider  { width: 25% }
-		@include widest	{ width: 25% }
-		@include full	{ width: 33% }
-	}
-
-	@include widest	{ 
-		 .card__header {  }
-		 .card__footer {/* display: none;*/ }  
-		@include card-layout-vert;
-		/*@include span(isolate 8 at 3 of 12); 
-		float: none;*/
-	}
-
-	@include full { 
-		.card__header {  } 
-		.card__footer{ /*display: none;*/ } 
-		@include span(isolate 12 at 4 of 18);
-		@include card-type-4col;
-		/*@include span(isolate 8 at 3 of 12); 
-		float: none;*/
-	} 
-}
-
-/*.card.card--news {
-
-	@include widest	{ @include span(isolate 8 at 3 of 12); } 
-	@include full	{ @include span(isolate 8 at 3 of 12); } 
-}*/
-
-
-
-
-
-.card.factsheet {
-
-	@include tiny   { > .card__header { display: none; } }
-	@include mobile { > .card__header { display: none; } }
-	@include narrow { > .card__header { display: none; } }
-	@include wide   { /*> .card__header { display: none; }*/ }
-	@include wider  {  
-		@include card-type-4col;
-	}
-	@include widest	{ 
-		@include card-layout-vert;
-		@include card-type-4col;
-		/*border-top: none;*/
-		/*margin-bottom: $base-spacing-sml;
-		margin-top: $base-spacing-sml;*/
-	}
-	@include full { 
-		@include span(isolate 12 at 4 of 18);
-		@include card-type-4col;
-		/*border-top: none;*/
-		/*margin-bottom: $base-spacing-sml;*/
-		/*margin-top: $base-spacing-sml;*/
-	}
-
-}
-
-.card.facts {
-
-	/*.card__item { float: none; }*/
-}
-
 .card.practice {
 
 	&__slideshow {}
@@ -428,18 +264,6 @@ $card-base-font-size:			1rem;
 		}
 	}
 }
-
-/*.card.press {
-
-	@include widest	{ 
-		@include card-layout-vert;  
-		float: none;
-	} 
-	@include full	{ 
-		@include card-layout-horiz-left;
-		@include card-type-5col;
-	} 
-}*/
 
 .card.books {
 

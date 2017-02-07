@@ -1,0 +1,6 @@
+.card.contact-info {
+
+	/* base type */
+	@include widest	{ @include card-layout-vert;  } 
+	@include full	{ @include span(isolate 12 at 4 of 18);  } 
+}

@@ -6,7 +6,7 @@
 	float: none;
 }
 
-@mixin card-type { 
+@mixin card-type-4col { 
 
 	> .card__header { 
 		@include span(first 3 of 12); 

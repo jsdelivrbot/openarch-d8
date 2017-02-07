@@ -1,0 +1,65 @@
+.card.coverage {
+
+	/*.card__header { display: initial; }*/
+
+	@include tiny {
+		display: none;
+	}
+	@include mobile {
+		display: none;
+	}
+	@include narrow {
+		display: none;
+	}
+	@include wide {
+		display: none;
+	}
+	@include wider {
+		display: none;
+	}
+	@include widest {
+		display: none;
+		padding-left: gutter(13);
+		padding-right: gutter(13);
+		clear: left;
+		float: none; 
+		border-top: none;
+	}
+	@include full {
+		display: none;
+		@include span(isolate 12 at 4 of 18);
+	}
+
+	.card {
+		
+		@include widest	{ 
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); 
+				clear: right; 
+				float: right; 
+			}	
+		} 
+		@include full	{ 
+
+			&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); 
+				clear: right; 
+				float: right; 
+			}
+		} 
+	}
+}

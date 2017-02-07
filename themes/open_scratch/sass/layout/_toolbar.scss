@@ -41,6 +41,13 @@ $toolbar-height:			$base-row1-height;
 .toolbar,
 .toolbar-toggle {
 
+	@include widest	{ 
+		padding-left: gutter(13);
+		padding-right: gutter(13);
+		clear: left;
+		float: none;  
+	} 
+
 		/* clearfix to prevent header region collapse w/out overflow hidden b/c that would clip dropdown menu */
 	@include clearfix;
 

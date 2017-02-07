@@ -98,7 +98,6 @@ $card-base-font-size:			1rem;
 
 }
 
-
 /* ==================================================================
 ## card types (ie. subclasses) - CARD-GRID-3COL
 ===================================================================== */
@@ -157,7 +156,6 @@ $card-base-font-size:			1rem;
 		@include full	{ width: span(6 of 15); }
 	}
 }
-
 
 @mixin card-type-3col { 
 	
@@ -244,552 +242,58 @@ $card-base-font-size:			1rem;
 	.card__footer { 
 		float: none; 
 	}
-
 }
 
-.card.practice {
-
-	&__slideshow {}
-	&__main {
-
-		@include widest	{ 
-			margin-top: $base-spacing-huge;
-			@include card-layout-vert;
-			@include card-type-4col;
-		}
-		@include full { 
-			margin-top: $base-spacing-huge;
-			@include span(isolate 12 at 4 of 18);
-			@include card-type-4col;
-		}
-	}
-}
-
-.card.books {
+.card.card--basic { /* videos, projects-gallery */
 
 	@include widest	{ 
 		@include card-layout-vert;  
-		float: none;
-	} 
-	@include full	{ 
-		/*@include card-layout-horiz-left;*/
-		@include card-type-6col;
-		/*@include card-layout-horiz-widest;  
-		float: none;*/
-	} 
-}
-
-.card.book-item {
-
-	@include wider 	{ &:nth-child(1) {border-top: none;} }
-	@include widest { &:nth-child(1) {border-top: none;} }
-	@include full 	{ &:nth-child(1) {border-top: none;} }
-}
-
-.card.events {
-
-	@include wider  {  
-		> .card__header { 
-			@include span(first 3 of 12);
-			/*float: left; */
-		}	
-		> .card__body { 
-			@include span(last 9 of 12); 
-			float: right;  
-		}
-		> .card__footer { 
-			@include span(last 9 of 12); 
-			clear: right; 
-			float: right; 
-		}
-	}
-
-	@include widest	{ 
-		@include card-layout-vert; 
-		> .card__header { 
-			@include span(first 3 of 12);
-			/*float: left; */
-		}	
-		> .card__body { 
-			@include span(last 9 of 12); 
-			float: right;  
-		}
-		> .card__footer { 
-			@include span(last 9 of 12); 
-			clear: right; 
-			float: right; 
-		} 
-		/*float: none;*/
-	} 
-
-	@include full	{ 
-		/*@include card-layout-horiz-left;*/
-		/*@include card-type-6col;*/
-		/*@include card-layout-horiz-widest;  
-		float: none;*/
-		/*@include span(isolate 15 at 4 of 18);*/
-
-		> .card__header { 
-			@include span(first 3 of 18);
-			/*float: left; */
-		}	
-		> .card__body { 
-			@include span(last 12 of 18); 
-			float: right;  
-		}
-		> .card__footer { 
-			@include span(last 12 of 18); 
-			clear: right; 
-			float: right; 
-		} 
-	} 
-}
-
-
-.card.projects-table {
-
-	/*.card__header { display: initial; }*/
-
-	/*@include tiny {
-		.card__header { display: none; }
-	}
-	@include mobile {
-		.card__header { display: none; }
-	}*/
-	/*@include widest	{ 
-		@include card-layout-vert;  
-		float: none;
-	} */
-	@include widest	{ 
-		@include card-layout-vert; 
-	} 
-	@include full	{ 		
-		@include card-type-6col;
-		/*@include card-layout-horiz;  
-		float: none;*/
-	} 
-}
-
-.card.awards  {
-
-	/*.card__header { display: initial; }*/
-
-	/*@include tiny {
-		.card__header { display: none; }
-	}
-	@include mobile {
-		.card__header { display: none; }
-	}*/
-	/*@include widest	{ 
-		@include card-layout-vert;  
-		float: none;
-	} */
-	@include widest	{ 
-		@include card-layout-vert; 
-		/*> .card__header { 
-			@include span(first 3 of 12);
-		}	
-		> .card__body { 
-			@include span(last 9 of 12); 
-			float: right;  
-		}
-		> .card__footer { 
-			@include span(last 9 of 12); 
-			clear: right; 
-			float: right; 
-		} */
-
-	} 
-	@include full	{ 		
-		@include card-type-6col;
-		/*@include card-layout-horiz;  
-		float: none;*/
-	} 
-}
-
-.card.press {
-
-	/*.card__header { display: initial; }*/
-
-	/*@include tiny {
-		.card__header { display: none; }
-	}
-	@include mobile {
-		.card__header { display: none; }
-	}*/
-	@include widest	{ 
-		@include card-layout-vert;  
-		float: none;
-	} 
-	@include full	{ 		
-		@include card-type-6col;
-		/*@include card-layout-horiz;  
-		float: none;*/
-	} 
-}
-
-.card.coverage {
-
-	/*.card__header { display: initial; }*/
-
-	@include tiny {
-		display: none;
-	}
-	@include mobile {
-		display: none;
-	}
-	@include narrow {
-		display: none;
-	}
-	@include wide {
-		display: none;
-	}
-	@include wider {
-		display: none;
-	}
-	@include widest {
-		display: none;
-		padding-left: gutter(13);
-		padding-right: gutter(13);
-		clear: left;
-		float: none; 
-		border-top: none;
-	}
-	@include full {
-		display: none;
-		@include span(isolate 12 at 4 of 18);
-	}
-
-	.card {
-		
-		@include widest	{ 
-			&__header { 
-				@include span(first 3 of 12); 
-			}	
-			&__body { 
-				@include span(last 9 of 12); 
-				float: right;  
-			}
-			&__footer { 
-				@include span(last 9 of 12); 
-				clear: right; 
-				float: right; 
-			}	
-		} 
-		@include full	{ 
-
-			
-
-			&__header { 
-				@include span(first 3 of 12); 
-			}	
-			&__body { 
-				@include span(last 9 of 12); 
-				float: right;  
-			}
-			&__footer { 
-				@include span(last 9 of 12); 
-				clear: right; 
-				float: right; 
-			}
-		} 
-	}
-}
-
-.card.projects-gallery,
-.card.videos {
-
-	@include widest	{ 
-		@include card-layout-vert;  
-		float: none;
 	} 
 	@include full	{ 
 		
 	} 
 }
 
-.card.toolbar {
 
-	@include widest	{ 
-		padding-left: gutter(13);
-		padding-right: gutter(13);
-		clear: left;
-		float: none;  
-	} 
-	@include full	{ 
-		
-	} 
-}
-
-.card.main-header,
-.card.main-footer {
-
-	overflow: visible; /* don't hide dropdown submenu */
-
-	@include widest	{ 
-		@include card-layout-vert;  
-		clear: left;
-	} 
-	@include full { 
-		
-	} 
-}
-
-.card.nameplate {
-
-	/*display: inline-block;*/ /* so text-align center to works */
-	/* text-align center on section centers horizontally */
-
-	position: absolute; /* otherwise can't get it infront of slideshow */
-	top: 48%;
-	width: 100%;
-	pointer-events: none;
-	
-
-}
-
-/*.card.videos,*/
-/*.card.events {
-	@include widest	{ @include card-layout-vert; }
-	@include full { @include card-layout-horiz; }
-}*/
-
-/*.card.videos,*/
-.card.event-teaser {
-	/*@include widest	{ @include card-type-12col; }
-	@include full { @include card-type-12col; }*/
-
-	@include wider 	{ &:nth-child(1) {border-top: none;} }
-	@include widest { &:nth-child(1) {border-top: none;} }
-	@include full 	{ &:nth-child(1) {border-top: none;} }
-
-	.card__slide	{
-
-		/*overflow: visible;*/ /* so slideshow works with varying height slides */
-
-		@include tiny   { width: 100% }
-		@include mobile { width: 100% }
-		@include narrow { width: span(8 of 12); }
-		@include wide   { width: span(6 of 9); }
-		@include wider  { width: span(6 of 9); }
-		@include widest	{ width: span(6 of 9); }
-		@include full	{ width: span(6 of 12); }
-	}
-
-	.card__body {
-		@include full { width: span(9 of 12); }
-	}
-}
-
-.card.event {
-	/*@include widest	{ @include card-type-12col; }
-	@include full { @include card-type-12col; }*/
-
-	@include wider 	{ border-top: none; }
-	@include widest { border-top: none; }
-	@include full 	{ border-top: none; }
-
-	.card__slide	{
-
-		/*overflow: visible;*/ /* so slideshow works with varying height slides */
-
-		@include tiny   { width: 100% }
-		@include mobile { width: 100% }
-		@include narrow { width: span(8 of 12); }
-		@include wide   { width: span(6 of 9); }
-		@include wider  { width: span(6 of 9); }
-		@include widest	{ width: span(6 of 9); }
-		@include full	{ width: span(6 of 12); }
-	}
-
-	.card__body {
-		@include full { width: span(9 of 12); }
-	}
-}
-
-.card.task-slideshow,
-.card.press-slideshow {
-	@include widest	{ /*@include card-layout-vert;*/ }
-	@include full { }	
-}
 
 .card.video-player {
 
 	/*overflow: hidden;*/
     /*background: #333;*/
-	@include widest	{/* @include card-layout-vert;*/  } 
-	@include full	{ @include span(isolate 11 at 4.5 of 19 wider);  } 
+	@include widest	{ /* @include card-layout-vert;*/  } 
+	@include full	{ @include span(isolate 11 at 4.5 of 19 wider); } 
 }
 
-.card.jobs,
-.card.contact-info {
+.card.toolbar {
 
-	/* base type */
-	@include widest	{ @include card-layout-vert;  } 
-	@include full	{ @include span(isolate 12 at 4 of 18);  } 
+	
 }
 
-.card.job {}
+.card.main-header,
+.card.main-footer {
+
+	
+}
+
+.card.task-slideshow,
+.card.press-slideshow {
+
+	@include widest	{ /*@include card-layout-vert;*/ }
+	@include full { 
+	}	
+}
+
+
+
+
 
 /* ==================================================================
 ## card types (ie. subclasses) - CARD--XXX
 ===================================================================== */
 
-.card.profile--card { 
+/*.card.profile--card { 
 	border: none;
 }
-
+*/
 
 /*.card.relation {}*/
-
-
-
-.card.card--moremenu {
-
-	@include tiny   { display: none; }
-	@include mobile { display: none; }
-	@include narrow { display: none; }
-	@include wide   { display: none; }
-	@include wider  { display: none; }
-	@include widest	{ 
-		@include span(isolate 8 at 3 of 12); 
-		float: none;
-	} 
-	@include full	{ 
-		@include span(isolate 8 at 3 of 12); 
-		float: none;
-	} 
-}
-
-
-	
-.card.featured-work {
-
-	overflow: visible;
-	position: relative;
-	/*z-index: -1;*/ /* don't do this */
-
-	@include widest	{ 
-		
-		.slide__image img {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: auto;
-			height: auto;	
-			min-width: 100%;
-			min-height: 100%;
-		}
-
-		.slide__caption {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-		}
-	}
-	@include full	{ 
-		/*.slideshow__caption {display: none;}*/
-		.slide__image img {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: auto;
-			height: auto;	
-			min-width: 100%;
-			min-height: 100%;
-		}
-
-		.slide__caption {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-		}
-	}
-}
-
-
-
-
-
-/* ==================================================================
-## buffer
-===================================================================== */
-
-$buffer-size-top: 		12.5rem; /*200px;*/
-$buffer-size-bottom:	8.75rem; /*140px;*/
-
-@include tiny {
-	.buffer--main-top 		{ padding-top:		$base-row2-height *2; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row2-height *2; }
-}
-@include mobile {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
-@include narrow {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
-@include wide {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
-@include wider {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *2; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
-@include widest {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
-@include full {
-	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
-	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
-
-/* buffer class */
-.card.buffer-top,
-.card.buffer-bottom { 
-	@include widest {
-		padding-left: gutter(13);
-		padding-right: gutter(13);
-		clear: left;
-		float: none;
-	}
-}
-
-@include tiny {
-	.buffer-top 			{ height:	$base-row2-height *2; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include mobile {
-	.buffer-top 			{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include narrow {
-	.buffer-top 		 	{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include wide {
-	.buffer-top 		 	{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include wider {
-	.buffer-top 			{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include widest {
-	.buffer-top 			{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
-@include full {
-	.buffer-top 			{ height:	$base-row1-height *3; }
-	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}

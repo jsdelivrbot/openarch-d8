@@ -72,6 +72,13 @@ $footer-base-font-size:		1rem;
 
 	font-size: 				$main-base-font-size;
 
+	@include widest	{ 
+		margin-left: gutter(13);
+		margin-right: gutter(13);
+		clear: left;
+		float: none;  
+	} 
+
 	&__top {
 
 		height:			4.5em;

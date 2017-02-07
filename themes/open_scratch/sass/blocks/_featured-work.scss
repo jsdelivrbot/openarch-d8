@@ -1,0 +1,43 @@
+.card.featured-work {
+
+	overflow: visible;
+	position: relative;
+	/*z-index: -1;*/ /* don't do this */
+
+	@include widest	{ 
+		
+		.slide__image img {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: auto;
+			height: auto;	
+			min-width: 100%;
+			min-height: 100%;
+		}
+
+		.slide__caption {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	@include full	{ 
+		/*.slideshow__caption {display: none;}*/
+		.slide__image img {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: auto;
+			height: auto;	
+			min-width: 100%;
+			min-height: 100%;
+		}
+
+		.slide__caption {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}

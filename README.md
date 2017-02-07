@@ -414,6 +414,12 @@ change permissions on files directory to 777
 
 * make text bodies expandable with readmore.js
 
+#### 0.6.37
+
+* refactor card class
+
+
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

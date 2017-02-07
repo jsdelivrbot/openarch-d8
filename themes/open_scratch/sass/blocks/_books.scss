@@ -1,0 +1,43 @@
+@mixin card-layout-vert { 
+
+	margin-left: gutter(13);
+	margin-right: gutter(13);
+	clear: left;
+	float: none;
+}
+
+@mixin card-type-6col { 
+
+	> .card__header { 
+		@include span(first 3 of 18); 
+	}	
+	> .card__body { 
+		@include span(last 15 of 18); 
+		float: right;  
+	}
+	> .card__footer { 
+		@include span(last 15 of 18); 
+		clear: right; 
+		float: right; 
+	}
+}
+
+.card.books {
+
+	@include widest	{ 
+		margin-left: gutter(13);
+		margin-right: gutter(13);
+		clear: left;
+		float: none;  
+	} 
+	@include full	{ 
+		@include card-type-6col;
+	} 
+}
+
+.card.book-item {
+
+	/*@include wider 	{ &:nth-child(1) {border-top: none;} }*/
+	/*@include widest { &:nth-child(1) {border-top: none;} }*/
+	@include full 	{ &:nth-child(1) {border-top: none;} }
+}

@@ -1,0 +1,49 @@
+
+
+.card.practice {
+
+	&__slideshow {}
+
+	&__main {
+
+		@include widest	{ 
+			margin-top: $base-spacing-huge;
+			padding-left: gutter(13);
+			padding-right: gutter(13);
+			clear: left;
+			float: none;
+		}
+		@include full { 
+			@include span(isolate 12 at 4 of 18);
+			margin-top: $base-spacing-huge;
+		}
+
+		> .card {
+
+			@include widest	{ 
+
+				&__header { 
+					@include span(first 3 of 12); 
+				}	
+				&__body { 
+					@include span(last 9 of 12); float: right;  
+				}
+				&__footer { 
+					@include span(last 9 of 12); float: right;
+				}
+			}
+			@include full { 
+				
+				&__header { 
+					@include span(first 3 of 12); 
+				}	
+				&__body { 
+					@include span(last 9 of 12); float: right;  
+				}
+				&__footer { 
+					@include span(last 9 of 12); float: right;
+				}
+			}
+		}
+	}
+}

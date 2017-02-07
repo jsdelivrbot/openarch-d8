@@ -24,12 +24,12 @@
 @import "./modules/card";
 @import "./modules/media";
 @import "./modules/node";
-/*@import "./modules/teasers";*/
 @import "./modules/table";
 @import "./modules/exposed-form";
 @import "./modules/dropdown";
 @import "./modules/searchbar";
 @import "./modules/menu";
+@import "./modules/moremenu";
 @import "./modules/slider";
 @import "./modules/flexslider";
 @import "./modules/fullpage";
@@ -38,6 +38,8 @@
 @import "./modules/bd";
 @import "./modules/overlay";
 @import "./modules/focus";
+@import "./modules/buffer";
+
 
 /* Cards (Blocks, Views, Rows) */
 @import "./blocks/statement";
@@ -51,6 +53,13 @@
 @import "./blocks/task";
 @import "./blocks/manifesto";
 @import "./blocks/recent-news";
+@import "./blocks/practice";
+@import "./blocks/books";
+@import "./blocks/events";
+@import "./blocks/coverage";
+@import "./blocks/featured-work";
+@import "./blocks/jobs";
+@import "./blocks/contact";
 
 /* layout (Layout and Regions) */
 @import "./layout/layout";
@@ -63,6 +72,7 @@
 @import "./layout/bar";
 @import "./layout/ribbon";
 @import "./layout/bg";
+@import "./layout/nameplate";
 
 /* debug */
 @import "debug";

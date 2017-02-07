@@ -29,103 +29,39 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-{# <div class="node task__node border-top-hairline"> #}
-{# <div class="card card--task-main border-top-hairline"> #}
 
-	{# <div class="node__title">
-		<h2>{{ fields.title.content }}</h2>
-	</div> #}
-	{# {{ dump(fields.field_task_city ) }} #}
-	<div class="card__item card__item--spaced-most card__header"> 
+<div class="card__item card__item--spaced-most card__header"> 
 
-		{# <div class="media mediaTitle"> #}
+	<h1>
+		{{ fields.title.content }}
+		{# {% if fields.field_task_city.content is not empty %}, {{ fields.field_task_city.content }}{% endif %}
+		{% if fields.field_task_country.content is not empty %}, {{ fields.field_task_country.content }}{% endif %}
+		{% if fields.field_task_year.content is not empty %}, {{ fields.field_task_year.content }}{% endif %} #}
+	</h1>
 
-	  		{# <div class="media__imgR">
-	            <div class="ribbon ribbon--big">
-		            <div class="ribbon__segments">
-		                <div class="ribbon__segment">
-		                	<a class="icon icon--bigr" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-		                </div>
-		            </div>
-	            </div>
-	        </div> #}
+</div>
 
-			{# <div class="media__contents"> #}
-		    	<h1>
-		    		{{ fields.title.content }}
-		    		{# {% if fields.field_task_city.content is not empty %}, {{ fields.field_task_city.content }}{% endif %}
-		    		{% if fields.field_task_country.content is not empty %}, {{ fields.field_task_country.content }}{% endif %}
-		    		{% if fields.field_task_year.content is not empty %}, {{ fields.field_task_year.content }}{% endif %} #}
-		    	</h1>
-			{# </div> #}
+<div class="card__item card__item--spaced-more card__body">
+	<div class="bd bd--expandable">{{ fields.body.content }}</div>
+</div>
 
-		{# </div> #}
-
-	</div>
-
-	{# <div class="node__thumb">
-		{{ fields.field_thumbnail.content }}
-	</div> #}
-
-	{# <div class="node__body">
-		{{ fields.body.content }}
-	</div> #}
-	<div class="card__item card__item--spaced-more card__body">
-		<div class="bd bd--expandable">{{ fields.body.content }}</div>
-	</div>
-
-	{# <div class="tagline node__tagline">
-		<div class="tags node__tags">
-			<span class="tags__tag">
-				<div class="icon"><a><i class="fa fa-tag" aria-hidden="true"></i></a></div>
-			</span>
-			<span class="tags__tag">
-				{{ fields.type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_task_type.content }} 
-			</span>
-			<span class="tags__tag">
-				{{ fields.field_task_program.content }}
-			</span>
-		</div>
-	</div> #}
-	{# <div class="card__footer">
-		<div class="tagline teaser__tagline">
-			<div class="tags teaser__tags">
-				<span class="tags__tag">
-					<div class="icon"><a><i class="fa fa-tag" aria-hidden="true"></i></a></div>
-				</span>
-				<span class="tags__tag">
-					{{ fields.type.content }} 
-				</span>
-				<span class="tags__tag">
-					{{ fields.field_task_type.content }} 
-				</span>
-				<span class="tags__tag">
-					{{ fields.field_task_program.content }}
-				</span>
-			</div>
-		</div>
-	</div> #}
-	<div class="card__item card__footer">
-        <div class="ribbon ribbon--med">
-          <div class="ribbon__segments">
-            <span class="ribbon__segment--left">
-              {# <a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a> #}
-              <a class="icon icon--pull-left icon--mat"><i class="material-icons">label</i></a>
-            </span>
-            <span class="ribbon__segment--left">
-              <div class="tag">{{ fields.field_task_group.content }}</div>
-            </span>
-            <span class="ribbon__segment--left">
-              <div class="tag">{{ fields.field_task_type.content }}</div>
-            </span>
-            <span class="ribbon__segment--left">
-              <div class="tag">{{ fields.field_task_program.content }}</div>
-            </span>
-          </div>
-        </div>
+<div class="card__item card__footer">
+    <div class="ribbon ribbon--med">
+      <div class="ribbon__segments">
+        <span class="ribbon__segment--left">
+          {# <a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a> #}
+          <a class="icon icon--pull-left icon--mat"><i class="material-icons">label</i></a>
+        </span>
+        <span class="ribbon__segment--left">
+          <div class="tag">{{ fields.field_task_group.content }}</div>
+        </span>
+        <span class="ribbon__segment--left">
+          <div class="tag">{{ fields.field_task_type.content }}</div>
+        </span>
+        <span class="ribbon__segment--left">
+          <div class="tag">{{ fields.field_task_program.content }}</div>
+        </span>
       </div>
+    </div>
+  </div>
 
-{# </div> #}

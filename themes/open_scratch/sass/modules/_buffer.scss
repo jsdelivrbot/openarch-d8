@@ -1,0 +1,82 @@
+/* ==================================================================
+## buffer
+===================================================================== */
+
+$buffer-size-top: 		12.5rem; 
+$buffer-size-bottom:	8.75rem; 
+
+@include tiny {
+	.buffer--main-top 		{ padding-top:		$base-row2-height *2; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$base-row2-height *2; }
+}
+@include mobile {
+	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
+}
+@include narrow {
+	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
+}
+@include wide {
+	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
+}
+@include wider {
+	.buffer--main-top 		{ padding-top:		$base-row1-height *2; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
+}
+@include widest {
+	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
+}
+@include full {
+	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
+	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
+}
+
+/* buffer class */
+.card.buffer-top,
+.card.buffer-bottom { 
+	@include widest {
+		padding-left: gutter(13);
+		padding-right: gutter(13);
+		clear: left;
+		float: none;
+	}
+}
+
+@include tiny {
+	.buffer-top 			{ height:	$base-row2-height *2; }
+	.buffer-bottom 			{ height:	$buffer-size-bottom; }
+}
+@include mobile {
+	.buffer-top 			{ height:	$base-row1-height *3; }
+	.buffer-bottom 			{ height:	$buffer-size-bottom; }
+}
+@include narrow {
+	.buffer-top 		 	{ height:	$base-row1-height *3; }
+	.buffer-bottom 			{ height:	$buffer-size-bottom; }
+}
+@include wide {
+	.buffer-top 		 	{ height:	$base-row1-height *3; }
+	.buffer-bottom 			{ height:	$buffer-size-bottom; }
+}
+@include wider {
+	.buffer-top 			{ height:	$base-row1-height *3; }
+	.buffer-bottom 			{ height:	$buffer-size-bottom; }
+}
+@include widest {
+	.buffer-top 			{ height:	$base-row1-height *3; }
+	.buffer-bottom 			{ height:	$buffer-size-bottom; }
+}
+@include full {
+	.buffer-top 			{ height:	$base-row1-height *3; }
+	.buffer-bottom 			{ height:	$buffer-size-bottom; }
+}

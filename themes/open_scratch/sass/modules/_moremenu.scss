@@ -1,0 +1,16 @@
+.card.card--moremenu {
+
+	@include tiny   { display: none; }
+	@include mobile { display: none; }
+	@include narrow { display: none; }
+	@include wide   { display: none; }
+	@include wider  { display: none; }
+	@include widest	{ 
+		@include span(isolate 8 at 3 of 12); 
+		float: none;
+	} 
+	@include full	{ 
+		@include span(isolate 8 at 3 of 12); 
+		float: none;
+	} 
+}

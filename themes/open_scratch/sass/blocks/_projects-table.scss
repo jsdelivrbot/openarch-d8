@@ -1,4 +1,50 @@
+@mixin card-layout-vert { 
 
+	padding-left: gutter(13);
+	padding-right: gutter(13);
+	clear: left;
+	float: none;
+}
+
+@mixin card-type-6col { 
+
+	> .card__header { 
+		@include span(first 3 of 18); 
+	}	
+	> .card__body { 
+		@include span(last 15 of 18); 
+		float: right;  
+	}
+	> .card__footer { 
+		@include span(last 15 of 18); 
+		clear: right; 
+		float: right; 
+	}
+}
+
+.card.projects-table {
+
+	/*.card__header { display: initial; }*/
+
+	/*@include tiny {
+		.card__header { display: none; }
+	}
+	@include mobile {
+		.card__header { display: none; }
+	}*/
+	/*@include widest	{ 
+		@include card-layout-vert;  
+		float: none;
+	} */
+	@include widest	{ 
+		@include card-layout-vert; 
+	} 
+	@include full	{ 		
+		@include card-type-6col;
+		/*@include card-layout-horiz;  
+		float: none;*/
+	} 
+}
 
 /* ==================================================================
 ## Projects Table subclass
@@ -20,69 +66,6 @@
 	}
 
 	&__table{}
-
-		/*&__data-year{
-
-			@include table-1-col	{ 	display:none;	}
-			@include table-2-col	{ 	width: 10%;	}
-			@include table-3-col	{ 	width: 9%;	}
-		    @include table-4-col	{ 	width: 8%;	}
-		    @include table-5-col	{	width: 7%;	}
-		}
-
-		&__data-city {
-
-			@include table-1-col	{ 	display:none;	}
-			@include table-2-col	{ 	display:none;	}
-			@include table-3-col	{ 	width: 15%;	}
-		    @include table-4-col	{ 	width: 15%;	}
-		    @include table-5-col	{	width: 15%;	}
-		}
-
-		&__data-size {
-
-			@include table-1-col	{ 	display:none;	}
-			@include table-2-col	{ 	display:none;	}
-			@include table-3-col	{ 	display:none;	}
-		    @include table-4-col	{ 	width: 10%;	}
-		    @include table-5-col	{	width: 10%;	}
-		}
-
-		&__data-type {
-
-			@include table-1-col	{ 	display:none;	}
-			@include table-2-col	{ 	display:none;	}
-			@include table-3-col	{ 	display:none;	}
-		    @include table-4-col	{ 	display:none;	}
-		    @include table-5-col	{	width: 15%;	}
-		}
-
-		&__data-program {
-
-			@include table-1-col	{ 	display:none;	}
-			@include table-2-col	{ 	display:none;	}
-			@include table-3-col	{ 	display:none;	}
-		    @include table-4-col	{ 	display:none;	}
-		    @include table-5-col	{	width: 15%;	}
-		}
-
-		&__data-name {
-			
-			@include table-1-col	{ 	width: 75%;	}
-			@include table-2-col	{ 	width: 50%;	}
-			@include table-3-col	{ 	width: 67%;	}
-		    @include table-4-col	{ 	width: 41%;	}
-		    @include table-5-col	{	width: 33%;	}
-		}
-
-		&__data-icon {
-
-			@include table-1-col	{ 	width: 25%;	}
-			@include table-2-col	{ 	width: 10%;	}
-			@include table-3-col	{ 	width: 8%;	}
-		    @include table-4-col	{ 	width: 7%;	}
-		    @include table-5-col	{	width: 5%;	}			
-		}*/
 
 		@include table-1-col {
 			&__head				{ display: table-row-group; }

@@ -1,0 +1,11 @@
+.card.nameplate {
+
+	/*display: inline-block;*/ /* so text-align center to works */
+	/* text-align center on section centers horizontally */
+
+	position: absolute; /* otherwise can't get it infront of slideshow */
+	top: 48%;
+	width: 100%;
+	pointer-events: none;
+	
+}

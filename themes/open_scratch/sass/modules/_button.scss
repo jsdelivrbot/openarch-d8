@@ -22,15 +22,15 @@ $button-hover-bg-color:		#e5e5e5;
 
 	/*font-size: 				$button-base-font-size;*/
 
-	height: 				$button-height; /*35px;*/
-	padding-left: 			$base-button-pad-horiz; /*prev 1em*/
+	/*height: 				$button-height; */
+	padding-left: 			$base-button-pad-horiz;
 	padding-right: 			$base-button-pad-horiz;
 	margin-right: 			$base-button-spacing;
 	/*margin-left:			$base-button-spacing;*/
 
 	/*background:				$button-bg-color;*/
 
-	&:hover{
+	/*&:hover{
 		background:			$button-hover-bg-color;
-	}
+	}*/
 }

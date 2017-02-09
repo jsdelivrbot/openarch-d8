@@ -1,4 +1,4 @@
-//mediaCard
+
 Flexslider = (function($) {
 
 	$(window).load(function() {
@@ -12,11 +12,7 @@ Flexslider = (function($) {
         avg_width = total_width / $('.slides > li').length;
 
 		$('.flexslider').flexslider({
-			// animation: "slide",
-			// animationLoop: true,
 			itemWidth: avg_width,
-			// itemMargin: 0,
-			// controlNav: false
 		});
     });
 

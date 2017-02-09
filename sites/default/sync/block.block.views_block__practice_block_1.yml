@@ -12,7 +12,7 @@ dependencies:
 id: views_block__practice_block_1
 theme: open_scratch
 region: content_primary
-weight: -29
+weight: -31
 provider: null
 plugin: 'views_block:practice-block_1'
 settings:

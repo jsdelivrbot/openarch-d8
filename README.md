@@ -418,7 +418,19 @@ change permissions on files directory to 777
 
 * refactor card class
 
+#### 0.6.38
 
+* add background/border to header on frontpage
+* update main-header menu styling
+* removed manifesto from front page
+* add manifesto page and menu item under "about us"
+* add related work title and link to awards table.
+* add press coverage type to task
+* remove drop shadows from page
+* add drop shadows or border to header
+* make table rows clickable
+* upate filters, move views to menu
+* update featured press slideshow and content.
 
 #### TBD
 
@@ -525,6 +537,9 @@ change permissions on files directory to 777
 * set up trusted hosts (https://www.drupal.org/node/1992030)
 * border colors.
 * make readmorejs bodies use breakpoints so not cropping text.
+* scroll responsive header 
+* optimize core twig templates by deleted unused conditionals/variables/etc..?
+* change press image style from scale to h to resize, where w = h*.8
 
 #### ISSUES:
 

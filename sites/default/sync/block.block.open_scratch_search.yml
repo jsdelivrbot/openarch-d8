@@ -11,7 +11,7 @@ _core:
 id: open_scratch_search
 theme: open_scratch
 region: '-1'
-weight: -12
+weight: -14
 provider: null
 plugin: search_form_block
 settings:

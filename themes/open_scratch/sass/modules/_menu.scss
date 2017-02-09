@@ -10,6 +10,12 @@ $menu-bg-color-inv: 			$base-bg-color-inv;
 $menu-focus-color:				$base-focus-color;
 $menu-focus-color-inv:			$base-focus-color-inv;
 
+$menu-top-btn-bg: 				none;
+$menu-top-activeparent-bg: 		$ltgrey-bg-color;
+$menu-top-child-bg: 			$ltgrey-bg-color; /*$darkgrey-bg-color;*/
+$menu-top-activechild-bg: 		$ltgrey-bg-color; /*$darkgrey-bg-color;*/
+$menu-top-child-color: 			$lighter-font-color-inv;
+
 .language-switcher {
 
 	.english { font-size: 1rem; /*.75em;*/}
@@ -141,9 +147,16 @@ $menu-focus-color-inv:			$base-focus-color-inv;
 	}
 }
 
+
 .main-header {
 
-	.menu {
+	&__center {
+	
+	font-weight: bold;
+
+	/*.menu {*/
+
+
 
 		ul {
 			/* */
@@ -155,15 +168,18 @@ $menu-focus-color-inv:			$base-focus-color-inv;
 		}
 
 		li a {
-			display: 		block;
-			line-height: 	inherit;
-			height: 		inherit;
-			white-space: 	nowrap;
-			/*padding-left: 0;*/
+			display: 			block;
+			line-height: 		inherit;
+			height: 			inherit;
+			white-space: 		nowrap;
+			background-color: 	$menu-top-btn-bg;
 		}
 
 		li a:hover {
-			background-color: $menu-bg-color;
+			background-color: $menu-top-activeparent-bg;
+		}
+		li ul li a:hover {
+			background-color: 	$menu-top-activechild-bg; /*$menu-bg-color;*/
 		}
 
 		/* indent submenu items */
@@ -190,21 +206,28 @@ $menu-focus-color-inv:			$base-focus-color-inv;
 			cursor: 		pointer;
 		}
 
-		ul li:hover label,
+		ul li:hover label {
+			background-color: $menu-top-activeparent-bg;
+
+		}
 		/*ul li label:hover,*/
 		ul li label ~ ul {
-			background-color: $menu-bg-color;
+			font-size: $h4-font-size;
+			font-weight: normal;
+			background-color: $menu-top-child-bg; /*$menu-bg-color;*/
+			/*color: $menu-top-child-color;*/
 		}
 
-		ul li label:hover > a,
+		/*ul li label:hover > a,
 		ul li:hover > a {
 			color:	$openorange-color;
-		}
+		}*/
 
 		ul li label a {
 			display: 		initial;
 			line-height: 	inherit;
 			height: 		inherit;
+			
 		}
 
 		ul li label ~ ul {
@@ -325,6 +348,31 @@ $menu-focus-color-inv:			$base-focus-color-inv;
  *
  *
 ===================================================================== */
+
+.menu-toggler {
+	position: 		fixed;
+    bottom: 		1.25rem;
+    right: 			1.25rem; /*gutter(13);*/
+}
+
+.menu-toggler .icon {
+
+	
+    font-size:  	1.5rem;
+    background: 	$openorange-color; 
+
+    height:			3.75rem;
+	line-height: 	3.75rem;
+	width:			3.75rem;
+}
+
+.menu-toggler{
+	@include wide {display: none;}
+	@include wider {display: none;}
+	@include widest {display: none;}
+	@include full {display: none;}
+}
+
 
 .expandable {
 

@@ -13,7 +13,7 @@ _core:
 id: open_scratch_tools
 theme: open_scratch
 region: footer
-weight: -10
+weight: -30
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

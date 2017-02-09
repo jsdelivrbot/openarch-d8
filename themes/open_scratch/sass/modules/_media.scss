@@ -133,6 +133,8 @@ $mediaTitle-spacing-big: 	$base-spacing-huge;
 /* subclass overrides */
 .media.mediaTitle {
 
+	clear: right; /* fix stacked media titles */
+
 	overflow:			visible;
 	margin: 			$mediaTitle-spacing 0;
 

@@ -50,7 +50,6 @@ jQuery(document).ready(function($){
     //         : $('.grid-target').addClass('grid-on')
     // });
 
-
     // remove buffer from frontpage for widest breakpoint
     if (Breakpoint.isWidest() 
         && (window.location.pathname == "/" 
@@ -96,6 +95,14 @@ jQuery(document).ready(function($){
         window.setTimeout(function() {
             window.location.href = dest;
         }, 100);
+    });
+
+    //make table rows clickable
+    $(".row--clickable").click(function() {
+
+        var $row = $(this);
+        var $link = $row.find("a");
+        window.document.location = $link.attr('href');
     });
 
 

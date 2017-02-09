@@ -12,7 +12,7 @@ dependencies:
 id: exposedformvideospage_1
 theme: open_scratch
 region: toolbar_left
-weight: -32
+weight: -27
 provider: null
 plugin: 'views_exposed_filter_block:videos-page_1'
 settings:

@@ -763,9 +763,8 @@ display:
           operator: or
           value:
             'OPEN Work': 'OPEN Work'
-            'Pre - OPEN Work': 'Pre - OPEN Work'
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: field_task_group_value_op
             label: 'Task group (field_task_group)'
@@ -773,6 +772,86 @@ display:
             use_operator: false
             operator: field_task_group_value_op
             identifier: field_task_group_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_task_type_value:
+          id: field_task_type_value
+          table: node__field_task_type
+          field: field_task_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_task_type_value_op
+            label: 'Filter By Type'
+            description: ''
+            use_operator: false
+            operator: field_task_type_value_op
+            identifier: field_task_type_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_task_program_value:
+          id: field_task_program_value
+          table: node__field_task_program
+          field: field_task_program_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_task_program_value_op
+            label: 'By Program'
+            description: ''
+            use_operator: false
+            operator: field_task_program_value_op
+            identifier: field_task_program_value
             required: false
             remember: false
             multiple: false
@@ -809,18 +888,6 @@ display:
             label: 'BY DATE'
           granularity: year
           plugin_id: datetime
-        field_task_type_value:
-          id: field_task_type_value
-          table: node__field_task_type
-          field: field_task_type_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: 'BY TYPE'
-          plugin_id: standard
         field_task_city_value:
           id: field_task_city_value
           table: node__field_task_city
@@ -832,6 +899,18 @@ display:
           exposed: false
           expose:
             label: 'BY CITY'
+          plugin_id: standard
+        field_task_type_value:
+          id: field_task_type_value
+          table: node__field_task_type
+          field: field_task_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: 'BY TYPE'
           plugin_id: standard
       title: Projects
       header: {  }

@@ -1,6 +1,6 @@
 uuid: 98f179e3-43e9-4878-ac7d-cb03ab4e00e5
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:fb736cbb-0abb-434b-80ca-628f79466e9f'
@@ -11,8 +11,8 @@ dependencies:
     - open_scratch
 id: projectsgalleryviewmodeicon
 theme: open_scratch
-region: toolbar_right
-weight: -22
+region: '-1'
+weight: -2
 provider: null
 plugin: 'block_content:fb736cbb-0abb-434b-80ca-628f79466e9f'
 settings:

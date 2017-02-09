@@ -30,10 +30,12 @@
 }*/
 
 .custom-dropdown > select {
-	font-size: .95rem; /*$base-h4-font-size;*/
+	/*font-size: .95rem;*/ /*$base-h4-font-size;*/
 	text-transform: uppercase;
 	color: inherit; 
-	background: none;
+	background: whitesmoke;
+	height: 1.25rem;
+    padding: 0 5px;
 }
 
 .custom-dropdown__select > option{

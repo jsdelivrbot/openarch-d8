@@ -57,7 +57,7 @@ $buffer-size-bottom:	8.75rem;
 	.buffer-bottom 			{ height:	$buffer-size-bottom; }
 }
 @include mobile {
-	.buffer-top 			{ height:	$base-row1-height *3; }
+	.buffer-top 			{ height:	$base-row1-height *3; } 
 	.buffer-bottom 			{ height:	$buffer-size-bottom; }
 }
 @include narrow {
@@ -80,3 +80,4 @@ $buffer-size-bottom:	8.75rem;
 	.buffer-top 			{ height:	$base-row1-height *3; }
 	.buffer-bottom 			{ height:	$buffer-size-bottom; }
 }
+

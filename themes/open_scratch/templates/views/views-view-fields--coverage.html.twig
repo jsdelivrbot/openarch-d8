@@ -29,33 +29,33 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-<tr>
-	<td class="press-table__data-publication-date">
-		<span>{{ fields.field_press_publication_date.content }}</span>
-	</td>
-	{# <td class="press-table__data-publication">
-		<span>{{ fields.field_press_publication.content }} {{ fields.field_press_publication_issue.content }}</span>
-	</td> #}
-	<td class="press-table__data-name">
-		<span>{{ fields.title.content }}</span>
-	</td>
-	<td class="press-table__data-icon data--right">
-		<div class="icon--container">
 
-			{# <a class="icon icon--img" href="task/{{ nid }}">
-				<img src="{{ directory }}/images/arrow1-sml-12px.png">
-			</a> #}
-			<a class="icon icon--big icon--button-sml icon--mat" href="{{ events_path }}">
-				<i class="material-icons">call_made</i>
-			</a>
+<div class="media mediaTitle">
 
-			<a class="icon icon--button-sml icon--fa" href="task/{{ nid }}">
-				<!-- <img src="{{ directory }}/images/arrow1-sml-12px.png"> -->
-				{# <i class="fa fa-file" aria-hidden="true"></i> #}
-				<i class="fa fa-file-o" aria-hidden="true"></i>
-			</a>
+	<div class="media__imgR">
+        <div class="ribbon ribbon--med">
+            <div class="ribbon__segments">
+                <div class="ribbon__segment">
 
-		</div>
-	</td>
-</tr>
+                  	{% if fields.field_press_link.content %}		
+			    		<a class="icon icon--sml icon--button-big icon--mat focus__btn" href="{{ fields.field_press_link.content|striptags }}">
+			    			<i class="material-icons">call_made</i>
+			    		</a>	    		
+					{% elseif fields.field_press_file.content %}
+						<a class="icon icon--smlr icon--button-big icon--fa focus__btn" href="{{ fields.field_press_file.content|striptags }}">
+							<i class="fa fa-file-o" aria-hidden="true"></i>
+						</a>
+					{% endif %}
+
+            	</div>
+            </div>
+        </div>
+    </div>
+
+	<div class="media__contents">
+    	<h5 class="title">{{ fields.field_press_publication_date.content }} | {{ fields.title.content }}</h5>
+	</div>
+
+</div>
+
 

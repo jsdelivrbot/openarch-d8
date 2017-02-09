@@ -12,7 +12,7 @@ dependencies:
 id: contactinfo
 theme: open_scratch
 region: content_primary
-weight: -25
+weight: -27
 provider: null
 plugin: 'block_content:0439dce5-3c67-4ffb-a921-9bde3951b449'
 settings:

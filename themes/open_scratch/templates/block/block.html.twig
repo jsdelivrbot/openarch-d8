@@ -27,7 +27,7 @@
 #}
 <div{{ attributes.addClass('block')}}>
   {{ title_prefix }}
-  {% if label %}
+  {# {% if label %}
     <div class="block-title">
     	<div class="titlebox">
     		<div class="titlebox__title">
@@ -35,7 +35,7 @@
     		</div>
     	</div>
     </div>
-  {% endif %}
+  {% endif %} #}
   {{ title_suffix }}
   {% block content %}
     <div class="block-content">{{ content }}</div>

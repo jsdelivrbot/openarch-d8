@@ -89,11 +89,15 @@ table {
 
 	th.data--right {
 		padding-left: 0;
-		padding-right: $base-button-pad-horiz *1.5;
+		padding-right: $base-button-pad-horiz;
 
-		@include full {
+		/*@include full {
 			padding-right: 0;
-		}
+		}*/
+	}
+
+	tr.row--clickable { 
+		cursor: pointer; 
 	}
 
 /*%tbl {}*/
@@ -166,7 +170,7 @@ table {
 		.icon {
 			height:					$base-row2-height;
 			line-height: 			$base-row2-height;
-			width:					$base-row2-height;
+			width:					$base-row2-height *.75;
 		}
 
 		@include tiny {}

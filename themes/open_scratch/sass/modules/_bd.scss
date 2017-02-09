@@ -60,8 +60,8 @@ $big-font-size-full: 	$bd-big-font-size-plus;
 		@include narrow { 	font-size: $big-font-size-narrow; 	}
 		@include wide 	{ 	font-size: $big-font-size-wide; 	}
 		@include wider 	{ 	font-size: $big-font-size-wider; 	}
-		@include widest { 	font-size: $big-font-size-widest; color: white; }
-		@include full 	{ 	font-size: $big-font-size-full; color: white; }
+		@include widest { 	font-size: $big-font-size-widest; /*color: white;*/ }
+		@include full 	{ 	font-size: $big-font-size-full; /*color: white; */}
 	}
 }
 

@@ -29,7 +29,7 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-<tr class="focus__block">
+<tr class="row--clickable focus__block">
 	<td class="projects-table__data-year">
 		<span>{{ fields.field_task_year.content }}</span>
 	</td>
@@ -61,7 +61,7 @@
 	<td class="projects-table__data-name data--right">
 		<div class="ribbon">
 			<div class="ribbon__segment">
-				<a class="icon icon--fa icon--bigr icon--button-sml focus__btn" href="../task/{{ fields.nid.content|striptags }}">
+				<a class="icon icon--fa icon--bigr icon--button-sml focus__btn clickable-row-link" href="../task/{{ fields.nid.content|striptags }}">
 					<i class="fa fa-angle-right" aria-hidden="true"></i>
 				</a>
 			</div>

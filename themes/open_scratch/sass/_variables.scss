@@ -28,7 +28,7 @@ $ltgrey-bg-color: 			#f5f5f5;
 $darkgrey-bg-color: 		#252525;
 
 /* bg colors */
-$viewport-bg-color:			$base-bg-color;
+$viewport-bg-color:			$whitesmoke-bg-color;
 $page-bg-color:				$base-bg-color;
 $viewport-bg-color-inv:		#111;
 $page-bg-color-inv:			$base-bg-color-inv;
@@ -78,6 +78,8 @@ $def-bd-color-inv: 			$base-bd-color-inv;
 $sidebar-vbd-color: 		$lighter-bd-color;
 $sidebar-vbd-color-inv: 	$lighter-bd-color-inv;
 $sidebar-hbd-color:			none;
+$header-bd-color: 			$lighter-bd-color;
+$header-bd-color-inv: 		$lighter-bd-color-inv;			
 $tbl-bd-color: 				$lighter-bd-color;
 $tbl-bd-color-inv: 			$lighter-bd-color-inv;
 

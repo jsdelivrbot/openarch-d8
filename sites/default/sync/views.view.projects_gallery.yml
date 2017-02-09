@@ -754,9 +754,8 @@ display:
           operator: or
           value:
             'OPEN Work': 'OPEN Work'
-            'Pre - OPEN': 'Pre - OPEN'
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: field_task_group_value_op
             label: 'Task group (field_task_group)'
@@ -786,10 +785,10 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
-        field_task_program_value:
-          id: field_task_program_value
-          table: node__field_task_program
-          field: field_task_program_value
+        field_task_type_value:
+          id: field_task_type_value
+          table: node__field_task_type
+          field: field_task_type_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -798,12 +797,12 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_task_program_value_op
-            label: 'Program (field_task_program)'
+            operator_id: field_task_type_value_op
+            label: 'Filter By Type'
             description: ''
             use_operator: false
-            operator: field_task_program_value_op
-            identifier: field_task_program_value
+            operator: field_task_type_value_op
+            identifier: field_task_type_value
             required: false
             remember: false
             multiple: false
@@ -826,10 +825,10 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
-        field_task_type_value:
-          id: field_task_type_value
-          table: node__field_task_type
-          field: field_task_type_value
+        field_task_program_value:
+          id: field_task_program_value
+          table: node__field_task_program
+          field: field_task_program_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -838,12 +837,12 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_task_type_value_op
-            label: 'Type (field_task_type)'
+            operator_id: field_task_program_value_op
+            label: 'By Program'
             description: ''
             use_operator: false
-            operator: field_task_type_value_op
-            identifier: field_task_type_value
+            operator: field_task_program_value_op
+            identifier: field_task_program_value
             required: false
             remember: false
             multiple: false

@@ -1,3 +1,20 @@
+.visor {
+
+	/*@include tiny {*/
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		-webkit-transition: .3s ease transform;
+		transition: .3s ease transform;
+	/*}*/
+}
+.visor.up {
+
+	/*@include tiny {*/
+		-webkit-transform: translateY(-100%);
+	  	transform: translateY(-100%);
+	/*}*/
+}
+
 .slider {
 
 	/*@include layout((

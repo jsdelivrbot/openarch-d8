@@ -29,20 +29,30 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-<tr>
+<tr class="row--clickable focus__block">
 	<td class="awards-table__data-date">
 		<span>{{ fields.field_award_date.content }}</span>
 	</td>
 	<td class="awards-table__data-name">
-		<span>{{ fields.title.content }}</span>
-		{# <span>{{ fields.field_award_link.content }}</span> #}
+		<span>
+			{{ fields.title.content }}
+			{% if fields.field_relation.content %}
+				| {{ fields.field_relation.content }}
+		    {% endif %}
+		</span>
 	</td>
 	<td class="awards-table__data-icon data--right">
-		{% if fields.field_award_link.content %}
-			<div class="icon--container">    		
-	    		<a class="icon icon--big icon--button-sml icon--mat" href="{{ fields.field_award_link.content|striptags }}"><i class="material-icons">call_made</i></a>	    		
-		    </div>
-	    {% endif %}
+		<div class="icon--container">
+			{% if fields.field_award_link.content %}		    		
+	    		<a class="icon icon--big icon--button-sml icon--mat focus__btn" href="{{ fields.field_award_link.content|striptags }}">
+	    			<i class="material-icons">call_made</i>
+	    		</a>	    		
+		    {% elseif fields.field_relation.content %}   		
+	    		<a class="icon icon--fa icon--bigr icon--button-sml focus__btn" href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
+	          		<i class="fa fa-angle-right" aria-hidden="true"></i>
+	          	</a> 	    		
+		    {% endif %}
+	    </div>
 	</td>
 </tr>
 

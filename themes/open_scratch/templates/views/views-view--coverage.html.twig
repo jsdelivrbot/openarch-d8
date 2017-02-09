@@ -37,47 +37,21 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="card coverage">
+  <div class="card coverage border--top">
 
-    <div class="card__item card__header">
+    <div class="card__item card__header spaced--most">
 
-      <div class="ribbon ribbon--big">
-        <div class="ribbon__segments">
-          <div class="ribbon__segment--left">
-            {# <h3 class="title title--secondary inline-block">List of Publications</h3> #}
-            <div class="label"><span class="title ttitle projects-table__title inline-block">Coverage</span></div>
-          </div>
-        </div>
+      <div class="title title--secondary">
+        <h3>{{ view.display_handler.display.display_title }} ({{ view.total_rows }})</h3>
       </div>
 
     </div>
 
-    <div class="card__item card__body">
-      <table class="table press-table__table">
-      	{# <thead class="press-table__head">
-      		<tr>
-      			<th class="press-table__head-publication-date">Date</th>
-            <th class="press-table__head-publication">Publication</th>
-      			<th class="press-table__head-name">Title</th> 
-      			<th class="press-table__head-icon data--right">Link / PDF</th>
-      		</tr>
-      	</thead> #}
-      	<tbody>
+    <div class="card__item card__body spaced--most">
+     
         	{{ rows }}
-        </tbody>
-      </table>
-    </div>
 
-    {# <div class="card__item border--bottom card__footer">
-      <div class="ribbon ribbon--big">
-          <div class="ribbon__segments">
-            <div class="ribbon__segment--left">
-              {{more}}
-              {{pager}}
-            </div>
-          </div>
-        </div>
-    </div> #}
+    </div>
 
   </div>
 

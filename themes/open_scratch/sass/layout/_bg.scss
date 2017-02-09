@@ -33,7 +33,7 @@ $pg-color-inv: 				$page-bg-color-inv;
 			height: 120vh;	
 
 			background: $pg-color;		
-	        box-shadow: 8px 0 8px -9px #555, -8px 0 8px -9px #555;
+	        /*box-shadow: 8px 0 8px -9px #555, -8px 0 8px -9px #555;*/
 	        /*border-right: 1px solid #ddd;
 	        border-left: 1px solid #ddd;*/
 
@@ -78,7 +78,7 @@ $pg-color-inv: 				$page-bg-color-inv;
 			&__page {
 
 				background: $pg-color-inv;	
-				box-shadow: 8px 0 8px -6px #000, -8px 0 8px -6px #000;	
+				/*box-shadow: 8px 0 8px -6px #000, -8px 0 8px -6px #000;*/	
 		        /*box-shadow: none;*/
 
 			}

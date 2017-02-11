@@ -19,13 +19,24 @@ MyVisor = (function($) {
 
 	//bindings
 	$(document).ready(function() { init() });
+	$(window).resize(function() { init() });
     $(window).scroll(function() { update() });
-    $(window).resize(function() { update() });
 	// $('.slider-toggler').click(function() { toggle() });
 
 	function init() {
 
-		update();
+		$isFullpage = (
+			Breakpoint.isWidest() || Breakpoint.isFull()) 
+	        && (window.location.pathname == "/" 
+            || window.location.pathname == "/openarch-d8/"
+            );
+
+		if ($isFullpage) {
+	        disable();
+	    } else {
+	    	enable();
+			update();
+		}
 	}
 
 	function down() {
@@ -55,7 +66,6 @@ MyVisor = (function($) {
 		//if has open, then it is mobile breakpoint with drawer open
 		// $visor.addClass('border--b-lighter'); 
 		$visor.addClass('drop--b'); 
-
 	};
 
 	function hideedge() {
@@ -63,12 +73,26 @@ MyVisor = (function($) {
 		//if has open, then it is mobile breakpoint with drawer open
 		// $visor.removeClass('border--b-lighter'); 
 		$visor.removeClass('drop--b');
-
 	};
+
+	function disable() {
+
+		if ($visor.hasClass('visor')) { 
+			$visor.removeClass('visor'); 
+		} 
+	}
+
+	function enable() {
+
+		if (!$visor.hasClass('visor')) { 
+			$visor.addClass('visor'); 
+		}	
+	}
 
 	function update() {
 
 		$scroll = $(window).scrollTop();
+		
 
 		// $root-font-size-tiny: 		12;
 		// $root-font-size-mobile: 		13;
@@ -115,7 +139,9 @@ MyVisor = (function($) {
 	public_API = {
 		toggle: toggle,
 		up: up,
-		down: down
+		down: down,
+		disable: disable,
+		enable: enable
 	};
 
 	return public_API

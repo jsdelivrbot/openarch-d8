@@ -60,7 +60,7 @@
 
     <div class="bg-screen grid-target"></div>
 
-    <div class="layout main-header-layout slider-canvas bg--white drop--b">
+    <div class="layout main-header-layout slider-canvas visor bg--white">
 
       <div class="overlay wrapper main-header-wrapper region " role="contentinfo">
 
@@ -95,9 +95,13 @@
 
         <main class="main-content clearfix" role="main">  
 
-          
-
           <div id="fullpage" class="fullpage">
+
+            <div class="fullpage__section--hidden">
+              <div class="region main-content__buffer">
+                <div class="card buffer-top"></div>
+              </div>
+            </div>
 
             <div class="fullpage__section bg--white"> {# ta--c text-align center to center nameplate #}
               {% if page.content_slideshow %}

@@ -51,12 +51,12 @@ jQuery(document).ready(function($){
     // });
 
     // remove buffer from frontpage for widest breakpoint
-    if (Breakpoint.isWidest() 
-        && (window.location.pathname == "/" 
-            || window.location.pathname == "/openarch-d8/"
-            )) {
-        $('.main-content-wrapper').removeClass('buffer--main-top buffer--main-bottom');
-    }
+    // if (Breakpoint.isWidest() 
+    //     && (window.location.pathname == "/" 
+    //         || window.location.pathname == "/openarch-d8/"
+    //         )) {
+    //     $('.main-content-wrapper').removeClass('buffer--main-top buffer--main-bottom');
+    // }
 
     // remove top border from a few pages
     $(function() {

@@ -5,10 +5,10 @@
 $buffer-size-top: 		12.5rem; 
 $buffer-size-bottom:	8.75rem; 
 
-/*@include tiny {
-	.buffer--main-top 		{ padding-top:		$base-row2-height *2; }
+@include tiny {
+	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
 	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
-	.buffer--side-top 		{ padding-top:		$base-row2-height *2; }
+	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
 }
 @include mobile {
 	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
@@ -39,7 +39,7 @@ $buffer-size-bottom:	8.75rem;
 	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
 	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
 	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}*/
+}
 
 /* buffer class */
 .card.buffer-top,

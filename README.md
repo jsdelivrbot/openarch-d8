@@ -440,6 +440,10 @@ change permissions on files directory to 777
 * add functionality to close sidebar by clicking anywhere
 * adjust projects table columns widths again.
 
+#### 0.7.0
+
+* alpha release
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

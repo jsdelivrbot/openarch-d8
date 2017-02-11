@@ -30,6 +30,7 @@
  */
 #}
 {# {{ dump(fields.field_press_file.content) }} #}
+{# {{ dump(fields.sticky ) }} #}
 <tr class="focus__block">
 	<td class="press-table__data-publication-date">
 		<span>{{ fields.field_press_publication_date.content }}</span>
@@ -43,14 +44,18 @@
 	<td class="press-table__data-icon data--right">
 		<div class="icon--container">
 
-			{% if fields.field_press_link.content %}		
-	    		<a class="icon icon--big icon--button-sml icon--mat focus__btn" href="{{ fields.field_press_link.content|striptags }}">
-	    			<i class="material-icons">call_made</i>
-	    		</a>	    		
+			{% if fields.sticky.content == "Yes" %}	
+				<a class="icon icon--button-sml icon--fa focus__btn" href="{{ fields.field_press_file.content|striptags }}">
+					<i class="fa fa-file" aria-hidden="true"></i>
+				</a>
 			{% elseif fields.field_press_file.content %}
 				<a class="icon icon--button-sml icon--fa focus__btn" href="{{ fields.field_press_file.content|striptags }}">
 					<i class="fa fa-file-o" aria-hidden="true"></i>
-				</a>
+				</a>	    		
+			{% elseif fields.field_press_link.content %}
+				<a class="icon icon--big icon--button-sml icon--mat focus__btn" href="{{ fields.field_press_link.content|striptags }}">
+	    			<i class="material-icons">call_made</i>
+	    		</a>
 			{% endif %}
 
 		</div>

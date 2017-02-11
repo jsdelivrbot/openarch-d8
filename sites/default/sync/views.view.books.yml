@@ -563,7 +563,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Press
+      title: Books
       header: {  }
       footer: {  }
       empty: {  }
@@ -1620,7 +1620,7 @@ display:
           group_column: ''
           group_columns: {  }
           group_rows: true
-          delta_limit: 0
+          delta_limit: 3
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
@@ -1861,7 +1861,7 @@ display:
           exposed: true
           expose:
             operator_id: field_book_type_value_op
-            label: 'Book type (field_book_type)'
+            label: 'Filter by Type'
             description: ''
             use_operator: false
             operator: field_book_type_value_op

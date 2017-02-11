@@ -432,6 +432,14 @@ change permissions on files directory to 777
 * upate filters, move views to menu
 * update featured press slideshow and content.
 
+#### 0.6.39
+
+* Reduce number of book pages shown in books listing
+* update events sort order
+* remove body trimming form event body on events and event pages
+* add functionality to close sidebar by clicking anywhere
+* adjust projects table columns widths again.
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -540,6 +548,10 @@ change permissions on files directory to 777
 * scroll responsive header 
 * optimize core twig templates by deleted unused conditionals/variables/etc..?
 * change press image style from scale to h to resize, where w = h*.8
+* add youku video embed submodule (https://www.drupal.org/node/2329571)
+* optimize javascript (use find() for caching dom)
+* handle how filters collapse and stack!
+* remove table breakpoints, just use global bps.
 
 #### ISSUES:
 

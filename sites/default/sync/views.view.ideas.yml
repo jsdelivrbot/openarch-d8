@@ -733,6 +733,48 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
+        field_task_type_value:
+          id: field_task_type_value
+          table: node__field_task_type
+          field: field_task_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            Installation: Installation
+            Research: Research
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_task_type_value_op
+            label: 'Filter by Type'
+            description: ''
+            use_operator: false
+            operator: field_task_type_value_op
+            identifier: field_task_type_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
         field_task_program_value:
           id: field_task_program_value
           table: node__field_task_program
@@ -763,7 +805,7 @@ display:
           exposed: true
           expose:
             operator_id: field_task_program_value_op
-            label: 'Program (field_task_program)'
+            label: 'By Program'
             description: ''
             use_operator: false
             operator: field_task_program_value_op
@@ -790,49 +832,20 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
-        field_task_type_value:
-          id: field_task_type_value
-          table: node__field_task_type
-          field: field_task_type_value
+      sorts:
+        field_task_year_value:
+          id: field_task_year_value
+          table: node__field_task_year
+          field: field_task_year_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value:
-            Installation: Installation
-            Research: Research
-          group: 1
-          exposed: true
+          order: DESC
+          exposed: false
           expose:
-            operator_id: field_task_type_value_op
-            label: 'Type (field_task_type)'
-            description: ''
-            use_operator: false
-            operator: field_task_type_value_op
-            identifier: field_task_type_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: true
-          is_grouped: false
-          group_info:
             label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-      sorts: {  }
+          granularity: day
+          plugin_id: datetime
       title: Ideas
       header: {  }
       footer: {  }

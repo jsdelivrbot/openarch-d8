@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.press.field_frontslide
     - field.field.node.press.field_image_files
     - field.field.node.press.field_press_file
     - field.field.node.press.field_press_id
@@ -27,6 +28,14 @@ targetEntityType: node
 bundle: press
 mode: default
 content:
+  field_frontslide:
+    weight: 114
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
   field_image_files:
     weight: 112
     label: above

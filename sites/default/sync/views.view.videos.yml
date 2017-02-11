@@ -467,7 +467,7 @@ display:
           exposed: true
           expose:
             operator_id: field_video_type_value_op
-            label: 'Type (field_video_type)'
+            label: 'Filter by Type'
             description: ''
             use_operator: false
             operator: field_video_type_value_op

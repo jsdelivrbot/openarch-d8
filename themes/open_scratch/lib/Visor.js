@@ -79,12 +79,13 @@ MyVisor = (function($) {
 		// $root-font-size-full: 		17;
 
 		$rootFont = parseFloat($("html").css("font-size"));
+		$bufferSize =  5.0 * $rootFont * 2;
 
-		if (Breakpoint.isTiny()) { 
-			$bufferSize =  3.75 * $rootFont;
-		} else { 
-			$bufferSize =  5.0 * $rootFont * 2;
-		}
+		// if (Breakpoint.isTiny()) { 
+		// 	$bufferSize =  3.75 * $rootFont;
+		// } else { 
+		// 	$bufferSize =  5.0 * $rootFont * 2;
+		// }
 
 		if ($scroll > $bufferSize) {
 			showedge();

@@ -17,13 +17,16 @@ MySlider = (function($) {
 
 	//cache dom
 	var $slider = $('.slider');
-	var $drawer = $('.slider-drawer');
-	var $canvas = $('.slider-canvas');
+	var $drawer = $slider.find('.slider-drawer');
+	var $canvas = $slider.find('.slider-canvas');
+	var $toggle = $slider.find('.slider-toggler');
+	var $screen = $slider.find('.slider-screen');
 
 	//bindings
 	$(document).ready(function() { init() });
     $(window).resize(function() { reset() });
-	$('.slider-toggler').click(function() { toggle() });
+	$toggle.click(function() { toggle() });
+	$screen.click(function() { toggle() });
 
 	function init() {
 

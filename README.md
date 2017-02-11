@@ -455,6 +455,13 @@ change permissions on files directory to 777
 * fix issue of header vanising when resizing from fullpage
 * add footer to frontpage when not fullpage
 
+#### 0.7.3
+
+* remove default event image
+* make filter icon button big
+* make visor retract more to hide drop shadow.
+* delete placeholder event
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -567,6 +574,7 @@ change permissions on files directory to 777
 * optimize javascript (use find() for caching dom)
 * handle how filters collapse and stack!
 * remove table breakpoints, just use global bps.
+* fix spacing btw event title and body when no images
 
 #### ISSUES:
 

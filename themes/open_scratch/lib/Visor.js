@@ -61,17 +61,19 @@ MyVisor = (function($) {
 		isDown = false;
 	};
 
-	function showedge() {
+	function addStyle() {
 
 		//if has open, then it is mobile breakpoint with drawer open
 		// $visor.addClass('border--b-lighter'); 
+		$visor.addClass('bg--white'); 
 		$visor.addClass('drop--b'); 
 	};
 
-	function hideedge() {
+	function removeStyle() {
 
 		//if has open, then it is mobile breakpoint with drawer open
 		// $visor.removeClass('border--b-lighter'); 
+		$visor.removeClass('bg--white');
 		$visor.removeClass('drop--b');
 	};
 
@@ -92,7 +94,7 @@ MyVisor = (function($) {
 	function update() {
 
 		$scroll = $(window).scrollTop();
-		
+
 
 		// $root-font-size-tiny: 		12;
 		// $root-font-size-mobile: 		13;
@@ -112,9 +114,9 @@ MyVisor = (function($) {
 		// }
 
 		if ($scroll > $bufferSize) {
-			showedge();
+			addStyle();
 		} else {
-			hideedge();
+			removeStyle();
 		}
 
 		if ($scroll > ($bufferSize * 5)) {

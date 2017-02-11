@@ -449,6 +449,12 @@ change permissions on files directory to 777
 * fix visor class to disable on fullpage
 * comment out js removal of buffer on widest
 
+#### 0.7.2
+
+* fix header background
+* fix issue of header vanising when resizing from fullpage
+* add footer to frontpage when not fullpage
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -582,7 +588,7 @@ change permissions on files directory to 777
 * replace all title--prim, title--sec, etc with atomic classes.
 * sometimes invert gets in bad state when using ajax when inverted. eg events next page.
 * event flex slideshow not working with variable heights again...
-
+x header vanising when resizing from fullpage 
 
 ## Liscense
  

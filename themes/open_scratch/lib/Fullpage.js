@@ -142,6 +142,7 @@ MyFullpage = (function($) {
     function destroy() {
 
         $.fn.fullpage.destroy('all');
+        $header.fadeIn();
     }
     
     //public methods

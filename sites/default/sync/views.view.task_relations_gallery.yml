@@ -823,7 +823,7 @@ display:
   block_3:
     display_plugin: block
     id: block_3
-    display_title: 'Related Works'
+    display_title: Related
     position: 1
     display_options:
       display_extenders: {  }

@@ -70,53 +70,73 @@
 		/*@extend .tbl;*/
 	}
 
-		@include table-1-col {
+		@include tiny {
 			&__head 		{ display: table-row-group; }
 			&__head-date,
 			&__data-date 	{ display: none; }
 			&__head-name,
 			&__data-name	{  }
 			&__head-icon,
-			&__data-icon 	{ width: 30%; }
+			&__data-icon 	{ width: 11%; }
 		}
 
-		@include table-2-col {
+		@include mobile {
 			&__head 		{ display: table-row-group; }
 			&__head-date,
 			&__data-date 	{ width: 12%; }
 			&__head-name,
 			&__data-name	{  }
 			&__head-icon,
-			&__data-icon 	{ width: 33%; }
+			&__data-icon 	{ width: 11%; }
 		}
 
-		@include table-3-col {
+		@include narrow {
 			&__head 		{ display: table-row-group; }
 			&__head-date,
-			&__data-date 	{ width: 8%; }
+			&__data-date 	{ width: 9%; }
 			&__head-name,
 			&__data-name	{  }
 			&__head-icon,
-			&__data-icon 	{ width: 22%; }
+			&__data-icon 	{ width: 9%; }
 		}
 
-		@include table-4-col {
+		@include wide {
 			&__head 		{ display: table-row-group; }
 			&__head-date,
-			&__data-date 	{ width: 8%; }
+			&__data-date 	{ width: 9%; }
 			&__head-name,
 			&__data-name	{  }
 			&__head-icon,
-			&__data-icon 	{ width: 16%; }
+			&__data-icon 	{ width: 9%; }
 		}
 
-		@include table-5-col {
+		@include wider {
 			&__head 		{ display: table-row-group; }
 			&__head-date,
-			&__data-date 	{ width: 8%; }
+			&__data-date 	{ width: 6%; }
 			&__head-name,
 			&__data-name	{  }
 			&__head-icon,
-			&__data-icon 	{ width: 15%; }
+			&__data-icon 	{ width: 6%; }
+		}
+
+		@include widest {
+			&__head 		{ display: table-row-group; }
+			&__head-date,
+			&__data-date 	{ width: 6%; }
+			&__head-name,
+			&__data-name	{  }
+			&__head-icon,
+			&__data-icon 	{ width: 7%; }
+		}
+
+		@include full {
+			&__head 		{ display: table-row-group; }
+			&__head-date,
+			&__data-date 	{ width: 10%; }
+			&__head-name,
+			&__data-name	{  }
+			&__head-icon,
+			&__data-icon 	{ width: 5%; }
 		}
 }

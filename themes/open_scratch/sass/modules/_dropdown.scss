@@ -32,8 +32,8 @@
 .custom-dropdown > select {
 	/*font-size: .95rem;*/ /*$base-h4-font-size;*/
 	text-transform: uppercase;
-	color: inherit; 
-	background: whitesmoke;
+	color: white; 
+	background: #444;
 	height: 1.25rem;
     padding: 0 5px;
 }
@@ -53,6 +53,11 @@
 		position: relative;
 		display: inline-block;
 		vertical-align: middle;
+
+		 /*max-width: 90%; 
+	     overflow: hidden; 
+	     text-overflow: ellipsis; 
+	     white-space: nowrap; */
 	}
 
 	.custom-dropdown__select {

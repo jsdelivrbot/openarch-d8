@@ -6,8 +6,8 @@ dependencies:
     - open_scratch
 id: menutoggler
 theme: open_scratch
-region: content_primary
-weight: -26
+region: footer
+weight: -31
 provider: null
 plugin: 'block_content:c4ffaa8f-2fe7-446a-a6e2-176dd33decdb'
 settings:

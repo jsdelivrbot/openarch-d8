@@ -47,12 +47,26 @@
 	    		<a class="icon icon--big icon--button-sml icon--mat focus__btn" href="{{ fields.field_award_link.content|striptags }}">
 	    			<i class="material-icons">call_made</i>
 	    		</a>	    		
-		    {% elseif fields.field_relation.content %}   		
+		    {# {% elseif fields.field_relation.content %}   		
 	    		<a class="icon icon--fa icon--bigr icon--button-sml focus__btn" href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
 	          		<i class="fa fa-angle-right" aria-hidden="true"></i>
-	          	</a> 	    		
+	          	</a> #} 	    		
 		    {% endif %}
 	    </div>
+	    {# {% if fields.field_award_link.content %}
+		    <div class="ribbon">
+				<div class="ribbon__segment">
+					<a class="icon icon--big icon--button-sml icon--mat focus__btn" href="{{ fields.field_award_link.content|striptags }}">
+		    			<i class="material-icons">call_made</i>
+		    		</a>
+				</div>
+				<div class="ribbon__segment w--85p">
+					<div class="label label--fullwidth">
+						{{ fields.field_award_link.content }}
+					</div>
+				</div>
+			</div>
+		{% endif %} #}
 	</td>
 </tr>
 

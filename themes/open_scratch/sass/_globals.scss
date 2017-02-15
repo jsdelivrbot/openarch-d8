@@ -70,7 +70,7 @@ span {
 	/* only use for local styling */
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4 {
 	line-height: 	$base-line-height-title;
 	/*text-transform: uppercase;*/
 }
@@ -79,7 +79,7 @@ h1 {	font-size: 	$h1-font-size;		}
 h2 {	font-size: 	$h2-font-size;	/*line-height: $base-line-height-single;*/ } /* task/event titles */
 h3 {	font-size: 	$h3-font-size;		}
 h4 {	font-size: 	$h4-font-size;		}
-h5 {	font-size: 	$h5-font-size;		}
+h5 {	font-size: 	$h5-font-size;	line-height: $base-line-height; } /* coverage items */
 h6 {	font-size:	$h6-font-size;	line-height: $base-line-height; } /* facts */
 
 a, a:link, a:visited {

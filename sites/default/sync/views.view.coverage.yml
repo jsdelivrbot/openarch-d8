@@ -179,7 +179,7 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: false
+            strip_tags: true
             trim: false
             preserve_tags: ''
             html: false
@@ -196,7 +196,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: file_default
+          type: file_url_plain
           settings: {  }
           group_column: ''
           group_columns: {  }
@@ -219,8 +219,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_press_link__uri }}'
             make_link: false
             path: ''
             absolute: false
@@ -241,7 +241,7 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: false
+            strip_tags: true
             trim: false
             preserve_tags: ''
             html: false
@@ -283,7 +283,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Date
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -406,23 +406,43 @@ display:
           entity_field: title
           plugin_id: field
       filters:
-        status:
-          value: true
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
             press: press
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: node
           entity_field: type
           plugin_id: bundle
@@ -493,9 +513,19 @@ display:
           field: field_relation
           relationship: none
           group_type: group
-          admin_label: 'field_relation: Content'
+          admin_label: 'Item referenced'
           required: false
           plugin_id: standard
+        reverse__node__field_relation:
+          id: reverse__node__field_relation
+          table: node_field_data
+          field: reverse__node__field_relation
+          relationship: none
+          group_type: group
+          admin_label: 'Item referencing'
+          required: false
+          entity_type: node
+          plugin_id: entity_reverse
       arguments:
         nid:
           id: nid
@@ -536,8 +566,12 @@ display:
           entity_field: nid
           plugin_id: node_nid
       display_extenders: {  }
-      css_class: press-table
+      css_class: ''
       use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -555,11 +589,12 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'Press coverage'
+    display_title: Press
     position: 1
     display_options:
       display_extenders: {  }
       display_description: ''
+      rendering_language: '***LANGUAGE_entity_translation***'
     cache_metadata:
       max-age: -1
       contexts:

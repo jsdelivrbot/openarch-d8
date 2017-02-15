@@ -4,9 +4,10 @@
 
 /* Base */
 @import "reset";
-@import "breakpoints";
-@import "mixins";
 @import "variables";
+@import "breakpoints";
+@import "clearfix";
+@import "mixins";
 
 /* atoms (elements, atomc classes, etc) */
 @import "globals";

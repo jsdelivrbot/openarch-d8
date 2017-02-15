@@ -1,6 +1,6 @@
 uuid: 8479e3e4-a6a2-4bd4-a8be-cc38608b798f
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.tools
@@ -12,8 +12,8 @@ _core:
   default_config_hash: f3Dd5TnUiFDjFZp9yEGJInwt6cUzs7O6SvLTFTATSlU
 id: open_scratch_tools
 theme: open_scratch
-region: footer
-weight: -30
+region: '-1'
+weight: 1
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

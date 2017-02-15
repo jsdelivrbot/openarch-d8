@@ -44,19 +44,19 @@
 
 /* breakpoints for tables */
 
-@mixin table-1-col{
+@mixin table-1-col{ /*tiny*/
     @media all and (max-width: 350px){ @content; }
 }
-@mixin table-2-col{
+@mixin table-2-col{ /*mobile, narrow*/
     @media all and (min-width: 351px) and (max-width: 750px){ @content; }
 }
-@mixin table-3-col{
+@mixin table-3-col{ /*wide*/
     @media all and (min-width: 751px) and (max-width: 1050px){ @content; }
 }
-@mixin table-4-col{
+@mixin table-4-col{ /*wider,widest*/
     @media all and (min-width: 1051px) and (max-width: 1440px){ @content; }
 }
-@mixin table-5-col{
+@mixin table-5-col{ /*full*/
     @media all and (min-width: 1441px) { @content; }
 }
 

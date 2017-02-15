@@ -97,16 +97,18 @@ MediaCard2 = (function($) {
 
         $media.removeClass('media');
         $img.removeClass('media__img');
+        $contents.removeClass('media__contents');
         $contents.addClass('hide');
-        // $contents.removeClass('media__contents');
+        
     }
 
     function enableMedia() {
 
         $media.addClass('media');
         $img.addClass('media__img');
+        $contents.addClass('media__contents');
         $contents.removeClass('hide');
-        // $contents.addClass('media__contents');
+        
     }
     
     //public API

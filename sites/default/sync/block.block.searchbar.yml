@@ -7,7 +7,7 @@ dependencies:
 id: searchbar
 theme: open_scratch
 region: '-1'
-weight: -12
+weight: -10
 provider: null
 plugin: 'block_content:85847b70-27cf-4be1-acd3-dda741e43db9'
 settings:

@@ -105,8 +105,8 @@
 
       <div class="wrapper main-content-wrapper "> {# buffer--main-top buffer--main-bottom #}
 
-        <div class="region main-content__buffer">
-          <div class="card buffer-top"></div>
+        <div class="region main-content__buffer buffer-top">
+          {# <div class="card buffer-top"></div> #}
         </div>
 
         {% if (page.toolbar_right or page.toolbar_left) %}
@@ -134,7 +134,7 @@
                           <i class="fa fa-filter" aria-hidden="true"></i>
                         </a>
                       </div> #}
-                      <div class="ribbon__segment--left" role="contentinfo">
+                      <div class="ribbon__segment--left w--85p" role="contentinfo">
                         {{ page.toolbar_left }}
                       </div>
                     {% endif %}
@@ -300,6 +300,9 @@
 
                   <div class="ribbon ribbon--med">
                     <div class="ribbon__segments">
+                      <span class="ribbon__segment">
+                        {{ page.footer }}
+                      </span>
                       <span class="ribbon__segment">
                         <a class="icon icon--fa icon--button-big"><i class="fa fa-github" aria-hidden="true"></i></a>
                       </span>

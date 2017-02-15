@@ -36,11 +36,11 @@
 		<div class="thumb overlay__under">
 			{{ fields.field_thumbnail.content }} {# img element #}
 		</div>
-		<a href="../task/{{ fields.nid.content|striptags }}" class="overlay__over thumb__caption thumb__caption--bottom">
+		<a href="../task/{{ fields.nid.content|striptags }}" class="overlay__over thumb__caption thumb__caption--middle">
 			<p>
-	    		<span class="tt--u">{{ fields.title.content }}</span>
+	    		<span class="tt--u td--u">{{ fields.title.content }}</span>
 	    		{% if fields.field_task_city.content is not empty %}
-					</br></br>{{ fields.field_task_city.content }}
+					</br>{{ fields.field_task_city.content }}
 	    		{% endif %}
 	    		{% if fields.field_task_year.content is not empty %}
 	    			</br>({{ fields.field_task_year.content }})

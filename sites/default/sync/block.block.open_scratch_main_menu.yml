@@ -1,6 +1,6 @@
 uuid: 7d368dd3-7055-496e-8860-3d60f64158f4
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
@@ -12,8 +12,8 @@ _core:
   default_config_hash: GT_zYl7I9VAILH8OxMRe-VDvFadCDHxRcnmBc5xEmf0
 id: open_scratch_main_menu
 theme: open_scratch
-region: footer
-weight: -31
+region: '-1'
+weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:

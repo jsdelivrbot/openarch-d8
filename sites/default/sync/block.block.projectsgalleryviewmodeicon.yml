@@ -12,7 +12,7 @@ dependencies:
 id: projectsgalleryviewmodeicon
 theme: open_scratch
 region: '-1'
-weight: -2
+weight: -14
 provider: null
 plugin: 'block_content:fb736cbb-0abb-434b-80ca-628f79466e9f'
 settings:

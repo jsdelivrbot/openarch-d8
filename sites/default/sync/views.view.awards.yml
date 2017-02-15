@@ -1020,7 +1020,7 @@ display:
           exposed: true
           expose:
             operator_id: field_award_group_value_op
-            label: 'Award group (field_award_group)'
+            label: 'By recipient'
             description: ''
             use_operator: false
             operator: field_award_group_value_op

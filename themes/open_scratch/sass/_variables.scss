@@ -22,13 +22,13 @@ $base-bg-color:				white;
 $base-bg-color-inv: 		#151515;
 $white-bg-color:			$base-bg-color;
 $dark-bg-color:				$base-bg-color-inv;
-$whitesmoke-bg-color: 		#f9f9f9;
+$whitesmoke-bg-color: 		#f5f5f5;
 $darksmoke-bg-color:		#222;
-$ltgrey-bg-color: 			#f5f5f5;
+$ltgrey-bg-color: 			#ddd;
 $darkgrey-bg-color: 		#252525;
 
 /* bg colors */
-$viewport-bg-color:			$whitesmoke-bg-color;
+$viewport-bg-color:			$ltgrey-bg-color;
 $page-bg-color:				$base-bg-color;
 $viewport-bg-color-inv:		#111;
 $page-bg-color-inv:			$base-bg-color-inv;
@@ -44,8 +44,8 @@ $btn-focus-color:			$base-focus-color;
 $btn-focus-color-inv:		$base-focus-color-inv;
 
 /* hover background colors */
-$base-hover-color:			$ltgrey-bg-color;
-$base-hover-color-inv:		$darkgrey-bg-color;
+$base-hover-color:			$whitesmoke-bg-color;
+$base-hover-color-inv:		$darksmoke-bg-color;
 $btn-hover-color:			$base-hover-color;
 $btn-hover-color-inv:		$base-hover-color-inv;
 
@@ -68,7 +68,7 @@ $tag-font-color-inv: 		$darker-font-color-inv;
 $link-hover-color:			$openorange-color;
 
 /* border colors */
-$base-bd-color: 			#999;
+$base-bd-color: 			#ddd;
 $base-bd-color-inv:			#555;
 $lighter-bd-color:			#ddd;
 $lighter-bd-color-inv:		#333;

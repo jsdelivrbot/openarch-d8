@@ -172,6 +172,9 @@
 .spaced--dbl 	{ margin: $base-spacing*2 0; }
 .pspaced 		{ padding: $base-spacing 0; }
 .pspaced--less 	{ padding: $base-spacing-sml 0; }
+.pspaced--more 	{ padding: $base-spacing-big 0; }
+.pspaced--most 	{ padding: $base-spacing-huge 0; }
+.pspaced--dbl 	{ padding: $base-spacing*2 0; }
 .pspaced--top 	{ padding-top: $base-spacing; }
 
 .minh--hsp 	{ min-height: $base-spacing*.5; }
@@ -180,6 +183,9 @@
 
 /*.height--row1x3 				{ height:	$base-row1-height *3; }*/
 
+.cl { clear: left; }
+.cr { clear: right; }
+.cb { clear: both; }
 .clr-margin--top	{ margin-top: 0; }
 .clr-margin--bottom	{ margin-bottom: 0; }
 .clr-padding		{ padding: 0; }

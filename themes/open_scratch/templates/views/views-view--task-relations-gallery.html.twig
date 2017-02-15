@@ -39,15 +39,39 @@
 {# {{ dump(view) }} #}
 {% if view.total_rows > 0 %}
                
-  <div class="card card--supercard relations border--top">
-    
-    <div class="card__item card__item--spaced-most card__header">
-      <div class="title title--secondary">
-        <h3>{{ view.display_handler.display.display_title }} ({{ view.total_rows }})</h3>
-      </div>
-    </div>
+  <div class="card card--supercard relations border--top expandable">
 
-    <div class="card__item card__item--spaced-most-top card__body">
+    <input type="checkbox" id="related-work"/>
+    <label for="related-work">
+    
+      <div class="card__item spaced--most card__header expandable-head">
+
+        <div class="media mediaTitle">
+
+          <div class="media__imgR">
+            <div class="ribbon">
+              <div class="ribbon__segments">
+                  <div class="ribbon__segment">
+                      <a class="icon icon--fa icon--button-big icon--big checked" style="background:none"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                    <a class="icon icon--fa icon--button-big icon--big unchecked" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="media__contents">
+            <div class="title title--secondary">
+              <h3>{{ view.display_handler.display.display_title }} ({{ view.total_rows }})</h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </label>
+
+    <div class="card__item card__item--spaced-most-top card__body expandable-body">
       <div class="gallery galleryRelations">
         <ul class="gallery__container">
           {{ rows }}

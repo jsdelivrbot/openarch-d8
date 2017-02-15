@@ -62,7 +62,7 @@ $card-base-font-size:			1rem;
 	}
 
 	&__item {
-		overflow: hidden;
+		/*overflow: hidden;*/
 	}
 
 	&__item--spaced 		{ margin: $base-spacing 0; }
@@ -283,7 +283,12 @@ $card-base-font-size:			1rem;
 	}	
 }
 
+.card.contact-info {
 
+	.card__body p {
+		text-align: center;
+	}
+}
 
 
 

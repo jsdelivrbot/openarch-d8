@@ -462,6 +462,17 @@ change permissions on files directory to 777
 * make visor retract more to hide drop shadow.
 * delete placeholder event
 
+#### 0.7.4
+
+* adjust language switcher padding
+* fix coverage links
+* add menu toggler to frontpage
+* fix invert on frontpage
+* fix event title margin collapse
+* center contact info
+* update awards table spacing
+* update press table spacing
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -575,6 +586,9 @@ change permissions on files directory to 777
 * handle how filters collapse and stack!
 * remove table breakpoints, just use global bps.
 * fix spacing btw event title and body when no images
+* make sure all expandable headers are pspaced.
+* consider replacing or adding related events to event
+* clean up exposed form and dropdown
 
 #### ISSUES:
 
@@ -597,6 +611,8 @@ change permissions on files directory to 777
 * sometimes invert gets in bad state when using ajax when inverted. eg events next page.
 * event flex slideshow not working with variable heights again...
 x header vanising when resizing from fullpage 
+* duplicated in coverage.
+* toolbar filters not quite vertically centered. 
 
 ## Liscense
  

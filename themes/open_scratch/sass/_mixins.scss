@@ -25,17 +25,7 @@
 }
 $base-font-size:16px;
 
-/* =======================================================================
-## ++ Clearfix
-========================================================================== */
 
-@mixin clearfix {
-  &:after {
-    content: ""; 
-    display: table;
-    clear: both; 
-  }
-}
 
 /* =======================================================================
 ## ++ Grid old? who uses this?
@@ -64,115 +54,5 @@ $grid-4col: (
     global-box-sizing: border-box
 );
 
-/* =======================================================================
-## ++ Gallery old
-========================================================================== */
 
-@mixin gallery-list {
-  
-    @include layout((
-        gutter-position: before,
-        columns: 4,
-        gutters: 3/16,
-        global-box-sizing: border-box
-    ));
-
-}
-
-@mixin gallery-list-item {
-
-    @include gallery(2 of 4);
-    margin-bottom: gutter(4);
-}
-
-/* =======================================================================
-## ++ Gallery new
-========================================================================== */
-
-@mixin gallery-container {
-
-    @include layout((
-        gutter-position: before,
-        columns: 12,
-        gutters: 1, 
-        global-box-sizing: border-box
-    ));
-
-    /*margin-top: gutter(12);*/
-}
-
-/*@mixin gallery-container-snug {
-
-    @include with-layout((
-        gutter-position: before,
-        columns: 12,
-        gutters: 1/4, 
-        global-box-sizing: border-box
-    ));
-
-    margin-top: gutter(12);
-}
-
-@mixin gallery-container-tight {
-
-    @include with-layout((
-        gutter-position: before,
-        columns: 12,
-        gutters: 1/8, 
-        global-box-sizing: border-box
-    ));
-
-    margin-top: gutter(12);
-}*/
-
-/*@mixin gallery-container-1-col {
-
-    @include layout(12 1 before border-box, true);
-}
-
-@mixin gallery-container-2-col {
-
-    @include layout(12 1 before border-box, true);
-}
-
-@mixin gallery-container-3-col {
-
-    @include layout(12 1/2 before border-box, true);
-}
-
-@mixin gallery-container-4-col {
-
-    @include layout(12 1/2 before border-box, true);
-}*/
-
-
-@mixin gallery-item-1-col {
-
-    @include gallery(12 of 12);
-    margin-bottom: gutter(12);
-}
-
-@mixin gallery-item-2-col {
-
-    @include gallery(6 of 12);
-    margin-bottom: gutter(12);
-}
-
-@mixin gallery-item-3-col {
-
-    @include gallery(4 of 12);
-    margin-bottom: gutter(12);
-}
-
-@mixin gallery-item-4-col {
-
-    @include gallery(3 of 12);
-    margin-bottom: gutter(12);
-}
-
-@mixin gallery-item-6-col {
-
-    @include gallery(2 of 12);
-    margin-bottom: gutter(12);
-}
 

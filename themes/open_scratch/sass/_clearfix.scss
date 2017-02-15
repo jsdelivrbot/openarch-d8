@@ -1,0 +1,19 @@
+/* =======================================================================
+## ++ Clearfix
+========================================================================== */
+
+.clearfix {
+    &:after {
+        content: ""; 
+        display: table;
+        clear: both; 
+    }
+}
+
+@mixin clearfix {
+  &:after {
+    content: ""; 
+    display: table;
+    clear: both; 
+  }
+}

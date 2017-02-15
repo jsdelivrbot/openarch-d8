@@ -36,22 +36,24 @@ $menubar-width:				100%;
 	padding: 0 gutter(12);
 
 	@include tiny {
-		padding: 0 0 0 gutter(13);
-		/*padding-right:		0;*/
+		padding-left: gutter(13);
+		padding-right: ($base-row1-height - $base-button-height-big)/2;	
 	}
 	@include mobile {
-		padding: 0 0 0 gutter(13);
-		/*padding-right:		0;*/
+		padding-left: gutter(13);
+		padding-right: ($base-row1-height - $base-button-height-big)/2;	
 	}
 	@include narrow {
 		padding-left: gutter(13);
 		padding-right: ($base-row1-height - $base-button-height-big)/2;	
 	}
 	@include wide {
-		padding: 0 gutter(10);
+		padding-left: gutter(10);
+		padding-right: ($base-row1-height - $base-button-height-big);
 	}
 	@include wider {
-		padding: 0 gutter(13);
+		padding-left: gutter(13);
+		padding-right: ($base-row1-height - $base-button-height-big);
 	}
 	@include widest {
 		padding: 0; margin: 0 span(3 of 19 wide); /*gutter(19);*/

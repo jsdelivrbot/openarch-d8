@@ -11,7 +11,7 @@ _core:
 id: open_scratch_content
 theme: open_scratch
 region: content_primary
-weight: -28
+weight: -29
 provider: null
 plugin: system_main_block
 settings:

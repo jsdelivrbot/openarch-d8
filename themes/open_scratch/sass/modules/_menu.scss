@@ -11,9 +11,9 @@ $menu-focus-color:				$base-focus-color;
 $menu-focus-color-inv:			$base-focus-color-inv;
 
 $menu-top-btn-bg: 				none;
-$menu-top-activeparent-bg: 		$ltgrey-bg-color;
-$menu-top-child-bg: 			$ltgrey-bg-color; /*$darkgrey-bg-color;*/
-$menu-top-activechild-bg: 		$ltgrey-bg-color; /*$darkgrey-bg-color;*/
+$menu-top-activeparent-bg: 		$whitesmoke-bg-color;
+$menu-top-child-bg: 			$whitesmoke-bg-color; /*$darkgrey-bg-color;*/
+$menu-top-activechild-bg: 		$whitesmoke-bg-color; /*$darkgrey-bg-color;*/
 $menu-top-child-color: 			$lighter-font-color-inv;
 
 .language-switcher {
@@ -176,7 +176,7 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 		}
 
 		li a:hover {
-			background-color: $menu-top-activeparent-bg;
+			background-color: white; /*$menu-top-activeparent-bg;*/
 		}
 		li ul li a:hover {
 			background-color: 	$menu-top-activechild-bg; /*$menu-bg-color;*/

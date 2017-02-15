@@ -4,6 +4,77 @@
  *
 ===================================================================== */
 
+/* =======================================================================
+## ++  old
+========================================================================== */
+
+@mixin gallery-list {
+  
+    @include layout((
+        gutter-position: before,
+        columns: 4,
+        gutters: 3/16,
+        global-box-sizing: border-box
+    ));
+
+}
+
+@mixin gallery-list-item {
+
+    @include gallery(2 of 4);
+    margin-bottom: gutter(4);
+}
+
+/* =======================================================================
+## ++  new
+========================================================================== */
+
+@mixin gallery-container {
+
+    @include layout((
+        gutter-position: before,
+        columns: 12,
+        gutters: 1, 
+        global-box-sizing: border-box
+    ));
+
+    /*margin-top: gutter(12);*/
+}
+
+@mixin gallery-item-1-col {
+
+    @include gallery(12 of 12);
+    margin-bottom: gutter(12);
+}
+
+@mixin gallery-item-2-col {
+
+    @include gallery(6 of 12);
+    margin-bottom: gutter(12);
+}
+
+@mixin gallery-item-3-col {
+
+    @include gallery(4 of 12);
+    margin-bottom: gutter(12);
+}
+
+@mixin gallery-item-4-col {
+
+    @include gallery(3 of 12);
+    margin-bottom: gutter(12);
+}
+
+@mixin gallery-item-6-col {
+
+    @include gallery(2 of 12);
+    margin-bottom: gutter(12);
+}
+
+/* =======================================================================
+## ++ Gallery
+========================================================================== */
+
 /*@mixin gallery-list{
 
     @include clearfix;
@@ -294,6 +365,8 @@
 .gallery--books.gallery {
 
 	ul {
+
+		@include clearfix;
 
 		/* overrides */
 		/*@include tiny {		margin-top: gutter(12); }

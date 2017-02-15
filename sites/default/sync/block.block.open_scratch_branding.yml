@@ -11,7 +11,7 @@ _core:
 id: open_scratch_branding
 theme: open_scratch
 region: '-1'
-weight: -11
+weight: -8
 provider: null
 plugin: system_branding_block
 settings:

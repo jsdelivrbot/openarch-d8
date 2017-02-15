@@ -28,7 +28,7 @@
 		padding-right: gutter(13);
 		clear: left;
 		float: none; 
-		border-top: none;
+		/*border-top: none;*/
 	}
 	@include full {
 		/*display: none;*/
@@ -37,9 +37,29 @@
 
 	.card {
 		
+		&__header { 
+			@include span(full);
+			float: none; 
+		}	
+		&__body { 
+			@include span(full);
+			float: none; 
+		}
+		&__footer { 
+			display:none;
+			@include span(full);
+			float: none;
+		}
+	
+		@include tiny   {  }
+		@include mobile {  }
+		@include narrow {  }
+		@include wide   {  }
 		@include wider  {  
 			&__header { 
-				@include span(first 3 of 12); 
+				@include span(full);
+				float: none; 
+				/*@include span(first 3 of 12); */
 			}	
 			&__body { 
 				@include span(last 9 of 12); 
@@ -53,7 +73,9 @@
 		}
 		@include widest	{ 
 			&__header { 
-				@include span(first 3 of 12); 
+				@include span(full);
+				float: none; 
+				/*@include span(first 3 of 12); */ 
 			}	
 			&__body { 
 				@include span(last 9 of 12); 
@@ -68,7 +90,9 @@
 		@include full	{ 
 
 			&__header { 
-				@include span(first 3 of 12); 
+				@include span(full);
+				float: none; 
+				/*@include span(first 3 of 12); */
 			}	
 			&__body { 
 				@include span(last 9 of 12); 

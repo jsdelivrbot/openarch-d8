@@ -826,7 +826,7 @@ display:
   block_4:
     display_plugin: block
     id: block_4
-    display_title: 'Related Media'
+    display_title: Media
     position: 1
     display_options:
       display_extenders: {  }

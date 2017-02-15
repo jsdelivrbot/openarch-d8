@@ -12,7 +12,7 @@ dependencies:
 id: projectstableviewmodeicon
 theme: open_scratch
 region: '-1'
-weight: -1
+weight: -13
 provider: null
 plugin: 'block_content:4b243142-9280-4f4c-8a17-e389f5531401'
 settings:

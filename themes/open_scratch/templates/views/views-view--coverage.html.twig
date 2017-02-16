@@ -35,25 +35,14 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
+
+{% if view.total_rows > 0 %}
+
 <div{{ attributes.addClass(classes) }}>
-
-  {# <div class="card coverage border--top">
-
-    <div class="card__item card__header spaced--most">
-      <div class="title title--secondary">
-        <h3>{{ view.display_handler.display.display_title }} ({{ view.total_rows }})</h3>
-      </div>
-    </div>
-
-    <div class="card__item card__body spaced--most">    
-        	{{ rows }}
-    </div>
-
-  </div> #}
 
   <div class="card coverage border--top expandable">
 
-    <input type="checkbox" id="related-press"/>
+    <input type="checkbox" id="related-press">
     <label for="related-press">
 
       <div class="card__item card__header spaced--most expandable-head">
@@ -89,3 +78,5 @@
 
   {{ feed_icons }}
 </div>
+
+{% endif %}

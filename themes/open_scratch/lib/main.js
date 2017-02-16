@@ -5,44 +5,16 @@ jQuery(document).ready(function($){
 	// });
 
     $(document).on('keydown', function (event) {
+
         if (event.keyCode == 71) {
             $('.grid-target').hasClass('grid-on') 
                 ? $('.grid-target').removeClass('grid-on') 
                 : $('.grid-target').addClass('grid-on')
         }
-        if (event.keyCode == 73) {       
-            $('table').hasClass('invert') 
-                ? $('table').removeClass('invert') 
-                : $('table').addClass('invert')
-            $('.title').hasClass('invert') 
-                ? $('.title').removeClass('invert') 
-                : $('.title').addClass('invert')
-            $('.tag').hasClass('invert') 
-                ? $('.tag').removeClass('invert') 
-                : $('.tag').addClass('invert')
-            $('.focus').hasClass('invert') 
-                ? $('.focus').removeClass('invert') 
-                : $('.focus').addClass('invert')
-            $('.menu').hasClass('invert') 
-                ? $('.menu').removeClass('invert') 
-                : $('.menu').addClass('invert')
-            $('.bg').hasClass('invert') 
-                ? $('.bg').removeClass('invert') 
-                : $('.bg').addClass('invert')
-            $('body').hasClass('invert') 
-                ? $('body').removeClass('invert') 
-                : $('body').addClass('invert')
-            $('.sidebar').hasClass('invert') 
-                ? $('.sidebar').removeClass('invert') 
-                : $('.sidebar').addClass('invert')
-            // $('.bg--white').hasClass('bg--dark') 
-            //     ? $('.bg--white').removeClass('bg--dark') 
-            //     : $('.bg--white').addClass('bg--dark')
-            $('.c--black').hasClass('c--white') 
-                ? $('.c--black').removeClass('c--white') 
-                : $('.c--black').addClass('c--white')
-        }
+
     });
+
+    
 
     // $( ".grid-toggle" ).click(function() {    
     //     $('.grid-target').hasClass('grid-on') 
@@ -81,8 +53,9 @@ jQuery(document).ready(function($){
         })
     });
 
-    // expand first element in expandable list
+    // expand first few elements in expandable list
     $(".expandable input:checkbox:first").attr('checked', true);
+    $(".event-teaser.expandable input:checkbox:lt(3)").attr('checked', true);
 
     // all <a> tags containing a certain rel=""
     $("a[rel~='keep-params']").click(function(e) {

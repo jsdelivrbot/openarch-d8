@@ -32,57 +32,51 @@
 #}
 {%
   set classes = [
-	dom_id ? 'js-view-dom-id-' ~ dom_id,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
+
+{% if view.total_rows > 0 %}
+
 <div{{ attributes.addClass(classes) }}>
 
-<div class="card projects-table border--top">
+  <div class="card coverage border--top expandable">
 
-	<div class="card__item card__header projects-table__header">
-      <div class="ribbon ribbon--big">
-        <div class="ribbon__segments">
-          <div class="ribbon__segment--left">
-            <div class="label label--nopad"><span class="title ttitle projects-table__title inline-block">List of Works </span></div>
+    <input type="checkbox" id="related-awards">
+    <label for="related-awards">
+
+      <div class="card__item card__header spaced--most expandable-head">
+
+        <div class="media mediaTitle">
+
+            <div class="media__imgR">
+                  <div class="ribbon">
+                    <div class="ribbon__segments">
+                        <div class="ribbon__segment">
+                            <a class="icon icon--fa icon--button-big icon--big checked" style="background:none"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                          <a class="icon icon--fa icon--button-big icon--big unchecked" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+
+          <div class="media__contents">
+              <h3 class="title title--secondary">{{ view.display_handler.display.display_title }} ({{ view.total_rows }})</h3>
           </div>
+
         </div>
+
       </div>
+
+    </label>
+
+    <div class="card__item card__body spaced--most expandable-body">
+      {{ rows }}
     </div>
 
-	<div class="card__body">
-
-		<table class="table projects-table__table inverter__target">
-
-			<thead>
-				<tr>
-					<th class="projects-table__head-year"><span>Year</span></th>
-					<th class="projects-table__head-size"><span>Size</span></th>
-					<th class="projects-table__head-city"><span>City</span></th>
-					<th class="projects-table__head-type"><span>Type</span></th>
-					<th class="projects-table__head-program"><span>Program</span></th>
-					{# <th class="projects-table__head-name data--right"><span>Name</span></th> #} 
-					<th class="projects-table__head-name data--right"><span>Project Name</span></th>
-				</tr>
-			</thead>
-
-			<tbody class="focus">
-				{{ rows }}
-			</tbody>
-
-		</table>
-		
-	</div>
-	<div class="card__item border--bottom card__footer">
-		<div class="ribbon ribbon--big">
-        <div class="ribbon__segments">
-          <div class="ribbon__segment--left">
-            {{more}}
-            {{pager}}
-          </div>
-        </div>
-      </div>
-	</div>
-</div>
+  </div>
 
   {{ feed_icons }}
 </div>
+
+{% endif %}

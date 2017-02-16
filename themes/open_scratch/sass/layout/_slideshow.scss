@@ -144,6 +144,15 @@ $slide-titlebar-font-color: 	$lighter-font-color;
 	}
 }
 
+.slideshow.slideshow--fitscreen {
+
+	.flexslider {
+		position: fixed;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+}
+
 		/*&__title {		
 			
 		}

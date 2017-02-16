@@ -473,6 +473,10 @@ change permissions on files directory to 777
 * update awards table spacing
 * update press table spacing
 
+#### 0.7.5
+
+* 
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

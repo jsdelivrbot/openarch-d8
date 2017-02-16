@@ -12,6 +12,12 @@ jQuery(document).ready(function($){
                 : $('.grid-target').addClass('grid-on')
         }
 
+        // if (event.keyCode == 70) {
+        //     $('.grid-target').hasClass('grid-on') 
+        //         ? $('.grid-target').removeClass('grid-on') 
+        //         : $('.grid-target').addClass('grid-on')
+        // }
+
     });
 
     

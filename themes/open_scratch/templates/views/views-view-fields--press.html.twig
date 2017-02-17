@@ -44,11 +44,11 @@
 	<td class="press-table__data-icon data--right">
 		<div class="icon--container">
 
-			{% if fields.sticky.content == "Yes" %}	
+			{# {% if fields.sticky.content == "Yes" %}	
 				<a class="icon icon--button-sml icon--fa focus__btn" href="{{ fields.field_press_file.content|striptags }}">
 					<i class="fa fa-file" aria-hidden="true"></i>
-				</a>
-			{% elseif fields.field_press_file.content %}
+				</a> #}
+			{% if fields.field_press_file.content %}
 				<a class="icon icon--button-sml icon--fa focus__btn" href="{{ fields.field_press_file.content|striptags }}">
 					<i class="fa fa-file-o" aria-hidden="true"></i>
 				</a>	    		

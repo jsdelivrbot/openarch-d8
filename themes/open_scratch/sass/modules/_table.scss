@@ -39,7 +39,7 @@ table {
 		overflow: 			hidden;
 		text-overflow: 		ellipsis;		
 		vertical-align: 	middle;
-		padding-left:		$base-button-pad-horiz;
+		/*padding-left:		$base-button-pad-horiz;*/
 		/*padding: 			0 1em;*/
 		text-align:			left;
 	}
@@ -79,7 +79,7 @@ table {
 	/*td*/.data--right {
 		/*float:right;*/
 		text-align:right;
-		padding-left: 0;
+		/*padding-left: 0;*/
 		/*padding-right: $base-button-pad-horiz;*/
 
 		/*.icon {
@@ -88,8 +88,8 @@ table {
 	}
 
 	th.data--right {
-		padding-left: 0;
-		padding-right: $base-button-pad-horiz;
+		/*padding-left: 0;
+		padding-right: $base-button-pad-horiz;*/
 
 		/*@include full {
 			padding-right: 0;
@@ -118,9 +118,9 @@ table {
 		@include mobile {}
 		@include narrow {}
 		@include wide {}*/
-		@include wider { font-size: $tbl-font-size-minus; }
-		@include widest { font-size: $tbl-font-size; }
-		@include full { font-size: $tbl-font-size-plus; }	
+		@include wider { }
+		@include widest { font-size: $tbl-font-size-minus; }
+		@include full {  }	
 	}
 
 	tbody {
@@ -131,9 +131,9 @@ table {
 		@include mobile {}
 		@include narrow {}
 		@include wide {}*/
-		@include wider { font-size: $tbl-font-size-minus; }
-		@include widest { font-size: $tbl-font-size; }
-		@include full { font-size: $tbl-font-size-minus; }	
+		@include wider { }
+		@include widest { font-size: $tbl-font-size-minus; }
+		@include full { font-size: $tbl-font-size-minus;  }	
 	}
 }
 
@@ -219,8 +219,8 @@ table {
 
 	tr {
 
-		@include widest { border: none !important; }
-		@include full { border: none !important; }
+		@include widest { /*border: none !important;*/ }
+		@include full { /*border: none !important;*/ }
 	}
 
 	thead > tr {

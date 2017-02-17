@@ -102,29 +102,44 @@ $base-font-size: 			0.9rem;
 
 /* header font sizes */
 $h1-font-size:				1.67rem; 	/*  2.1rem;  */ /*	5/3 	node titles 		*/	/*	6.25/3 	node title			*/
-$h2-font-size:				1.25rem; 	/*  headlines */
-$h3-font-size:				1.0rem; 	/*	3.75/3 = 1.25 but little too big for underlined caps - secondary titles 	*/
-$h4-font-size:				0.9rem; 	/*	2.5/3 	factsheet headers & headlines	*/
+$h2-font-size:				1.25rem; 	/*  Secondary titles: "recent news", "open architecture", "open manifesto", peoples names, titles */
+$h3-font-size:				1.0rem; 	/*  recent news headlines, "people", videos video title  */
+										/*	3.75/3 = 1.25 but little too big for underlined caps - secondary titles 	*/
+$h4-font-size:				0.9rem; 	/*	2.5/3 	tags, factsheet headers & headlines	*/
 $h5-font-size:				0.84rem; 	/*	2.5/3 	factsheet multiline headers (ie. roles)		*/
-$h6-font-size:				0.80rem; 	/*	2.5/3 	factsheet facts		*/
+$h6-font-size:				0.84rem; 	/*	2.5/3 	caption, facts, footer, under video title	*/
 $h7-font-size:				0.75rem;	/*  3.75/5  menus and tables */
 
 /* body font sizes */
 $body-font-size:			$base-font-size;
+$bd-def-font-size:			$body-font-size;	/* recent news, about us */	
 $bd-big-font-size-plus:		1.25rem;
-$bd-big-font-size:			1.15rem;
+$bd-big-font-size:			1.15rem;	/* manifesto */
 $bd-big-font-size-minus: 	1.0rem;
-$bd-sml-font-size:			0.85rem;
+$bd-sml-font-size:			0.85rem;	/* peoples bios
 
 /* table font sizes */
 $tbl-font-size:				$h5-font-size;
-$tbl-font-size-minus:		$h6-font-size;
+$tbl-font-size-minus:		$h7-font-size;
 $tbl-font-size-plus:		$h4-font-size;
+$pager-font-size:			$h5-font-size;		
+
+/* menu */
+$menu-font-size:			$h3-font-size;	
+
+/* tags */
+$tag-font-size:				$h4-font-size;
+/*$tag-font-size-sml:			$h6-font-size;*/ /* under video title */
+
+/* toolbar font size */
+$tbar-font-size:			$h5-font-size;	
 
 /* ==================================================================
 ## Fonts Line Heights
 ===================================================================== */
 $base-line-height: 1.5;
+$base-line-height-more: 1.75;
+$base-line-height-less: 1.25;
 $base-line-height-title: 1.25; /* 1.25 x 3 = 3.75 */
 $base-line-height-single: 1;
 $base-line-height-dbl: 2;
@@ -157,11 +172,14 @@ $base-row4-height:		2.0rem; /* Compress tables @full */
 $base-button-height:	2.5rem; /* Icons, Tags, Buttons */
 $base-button-height-sml: 2.0rem; /* Icons, Tags, Buttons */
 $base-button-height-big: 3.75rem;
+$base-button-height-smlr: 1.75rem; /* Inline buttons (ie coverage) */
 $base-icon-height:		1rem; /* Icons, Tags, Buttons */
 $base-spacing: 			1.25rem;
 $base-spacing-sml: 		0.83rem; /* 2.5/3 */
 $base-spacing-big: 		1.5rem;	 /* 5/3 */
 $base-spacing-huge: 	1.67rem; /* 1.66 + .84 = 2.5! */
+
+$tbar-height:			$base-row1-height;		
 
 /* ==================================================================
 ## Horiz Spacing

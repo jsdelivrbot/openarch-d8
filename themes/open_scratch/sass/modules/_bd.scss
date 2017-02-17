@@ -19,6 +19,7 @@
 ## Config
 ===================================================================== */
 	
+$def-font-size:			$bd-def-font-size;
 $sml-font-size:			$bd-sml-font-size;
 $big-font-size:			$bd-big-font-size;
 $big-font-size-tiny: 	$body-font-size;
@@ -41,7 +42,7 @@ $big-font-size-full: 	$bd-big-font-size-plus;
 	> p,
 	~ .morelink {
 
-		font-size:		inherit;
+		font-size:		$def-font-size;
 	}
 
 }

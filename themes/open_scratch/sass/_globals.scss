@@ -79,8 +79,8 @@ h1 {	font-size: 	$h1-font-size;		}
 h2 {	font-size: 	$h2-font-size;	/*line-height: $base-line-height-single;*/ } /* task/event titles */
 h3 {	font-size: 	$h3-font-size;		}
 h4 {	font-size: 	$h4-font-size;		}
-h5 {	font-size: 	$h5-font-size;	line-height: $base-line-height-dbl; } /* coverage items $base-line-height-dbl = $base-button-height-sml = 2rem so wraping lines don't collapse*/
-h6 {	font-size:	$h6-font-size;	line-height: $base-line-height; } /* facts */
+h5 {	font-size: 	$h5-font-size;	line-height: $base-line-height; } /* coverage items $base-line-height-dbl = $base-button-height-sml = 2rem so wraping lines don't collapse*/
+h6 {	font-size:	$h6-font-size;	line-height: $base-line-height-more; } /* facts */
 
 a, a:link, a:visited {
 	color: 				inherit;

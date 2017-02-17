@@ -54,7 +54,7 @@ layouts
 
 .ttitle {
 
-	font-size: $tbl-font-size-plus;
+	font-size: $tbl-font-size;
 
 	@include tiny {}
 	@include mobile {}
@@ -62,7 +62,7 @@ layouts
 	@include wide {}
 	@include wider {}
 	@include widest {}
-	@include full { font-size: $tbl-font-size-plus; }
+	@include full {}
 }
 
 /* atomic modifiers for titles */

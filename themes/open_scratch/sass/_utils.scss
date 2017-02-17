@@ -130,6 +130,8 @@
 
 
 
+.d--ib { display: inline-block; }
+.va--m { vertical-align: middle; }
 
 .op--9 { opacity: 0.9; }
 .op--8 { opacity: 0.8; }
@@ -190,6 +192,8 @@
 .clr-margin--bottom	{ margin-bottom: 0; }
 .clr-padding		{ padding: 0; }
 
+/* clear margins */
+.mt--0 { margin-top: 0; }
 
 /*$base-row1-height: 		3.75rem; 
 $base-row2-height: 		3.75rem; 

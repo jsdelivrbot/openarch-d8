@@ -12,8 +12,8 @@
 ## Config
 ===================================================================== */
 
-$toolbar-base-font-size:	$h4-font-size;
-$toolbar-height:			$base-row1-height;
+/*$toolbar-base-font-size:	$h4-font-size;*/
+$toolbar-height:			$tbar-height;
 
 /* ==================================================================
 ## Layout
@@ -34,8 +34,7 @@ $toolbar-height:			$base-row1-height;
 	.ribbon__segment--left,
 	.ribbon__segment--right { 
 		pointer-events: visible; 
-	}
-	
+	}	
 }
 
 .toolbar,
@@ -51,7 +50,7 @@ $toolbar-height:			$base-row1-height;
 		/* clearfix to prevent header region collapse w/out overflow hidden b/c that would clip dropdown menu */
 	@include clearfix;
 
-	font-size: 			$toolbar-base-font-size;	
+	font-size: 			$tbar-font-size; /*$toolbar-base-font-size;*/	
 	height: 			$toolbar-height;
 	text-transform:  	uppercase;
 	line-height: 		$toolbar-height;
@@ -60,7 +59,6 @@ $toolbar-height:			$base-row1-height;
 	width:				100%;	
 
 	/*background: whitesmoke;*/
-
 }
 
 .toolbar-screen {

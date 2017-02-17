@@ -475,7 +475,11 @@ change permissions on files directory to 777
 
 #### 0.7.5
 
-* 
+* add related awards section
+
+#### 0.7.6
+
+* adjust font sizing
 
 #### TBD
 
@@ -617,6 +621,7 @@ change permissions on files directory to 777
 x header vanising when resizing from fullpage 
 * duplicated in coverage.
 * toolbar filters not quite vertically centered. 
+* grid broken on frontpage
 
 ## Liscense
  

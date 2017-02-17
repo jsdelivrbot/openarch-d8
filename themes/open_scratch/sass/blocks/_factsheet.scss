@@ -60,7 +60,9 @@
 		@include narrow { 
 			&__header { display: none; } 
 		}
-		@include wide   {  }
+		@include wide   { 
+			&__header { display: none; } 
+		}
 		@include wider  { 
 
 			&__header { 

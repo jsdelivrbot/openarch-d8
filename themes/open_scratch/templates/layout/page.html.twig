@@ -119,27 +119,31 @@
 
               <div class="wrapper toolbar-wrapper peekable-target" role="contentinfo">
 
-                <div class="card toolbar ribbon ribbon--big">
-                  <div class="ribbon__segments">
+                <div class="card toolbar">
 
-                    {% if page.toolbar_right %}
-                      <div class="ribbon__segment" role="contentinfo">
-                        {{ page.toolbar_right }} 
-                      </div>
-                    {% endif %}
+                  <div class="ribbon ribbon--big">
+                    <div class="ribbon__segments">
 
-                    {% if page.toolbar_left %}
-                      {# <div class="ribbon__segment--left">
-                        <a class="icon icon--pull-left icon--fa" style="background:none">
-                          <i class="fa fa-filter" aria-hidden="true"></i>
-                        </a>
-                      </div> #}
-                      <div class="ribbon__segment--left w--85p" role="contentinfo">
-                        {{ page.toolbar_left }}
-                      </div>
-                    {% endif %}
-      
+                      {% if page.toolbar_right %}
+                        <div class="ribbon__segment" role="contentinfo">
+                          {{ page.toolbar_right }} 
+                        </div>
+                      {% endif %}
+
+                      {% if page.toolbar_left %}
+                        {# <div class="ribbon__segment--left">
+                          <a class="icon icon--pull-left icon--fa" style="background:none">
+                            <i class="fa fa-filter" aria-hidden="true"></i>
+                          </a>
+                        </div> #}
+                        <div class="ribbon__segment--left w--85p" role="contentinfo">
+                          {{ page.toolbar_left }}
+                        </div>
+                      {% endif %}
+        
+                    </div>
                   </div>
+
                 </div>
 
               </div> {# end toolbar-wrapper #}
@@ -148,24 +152,27 @@
 
                 <div class="wrapper toolbar-toggle-wrapper peekable-toggle">
 
-                  <div class="card toolbar-toggle ribbon ribbon--big">
-                    <div class="ribbon__segments">
+                  <div class="card toolbar-toggle">
 
-                      {# {% if page.toolbar_right %} #}
-                        <div class="ribbon__segment">
-                          <a class="icon icon--pull-left icon--button-big icon--fa checked" style="background:none">
-                            <i class="fa fa-filter" aria-hidden="true"></i>
-                          </a>
-                          <a class="icon icon--pull-left icon--button-big icon--fa unchecked" style="background:none">
-                            <i class="fa fa-filter" aria-hidden="true"></i>
-                          </a>
-                        </div>
-                      {# {% endif %} #}
+                    <div class="ribbon ribbon--big">
+                      <div class="ribbon__segments">
 
+                        {# {% if page.toolbar_right %} #}
+                          <div class="ribbon__segment">
+                            <a class="icon icon--pull-left icon--button-big icon--fa checked" style="background:none">
+                              <i class="fa fa-filter" aria-hidden="true"></i>
+                            </a>
+                            <a class="icon icon--pull-left icon--button-big icon--fa unchecked" style="background:none">
+                              <i class="fa fa-filter" aria-hidden="true"></i>
+                            </a>
+                          </div>
+                        {# {% endif %} #}
+
+                      </div>
                     </div>
                   </div>
 
-                  <div class="card toolbar-screen ribbon ribbon--big">
+                  <div class="card toolbar-screen ribbon ribbon--med">
                   </div>
 
                 </div>

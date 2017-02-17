@@ -1,6 +1,7 @@
 .pager { /* nav */
 
 	display: inline-block;
+	font-size: $pager-font-size;
 
 	&__items { /* ul */
 
@@ -12,15 +13,27 @@
 			> a {
 
 				/*display: 				inline-block;*/ 
-				padding-left: 			$base-button-pad-horiz; /*prev 1em*/
-				padding-right: 			$base-button-pad-horiz;
+				/*padding-left: 			$base-button-pad-horiz;
+				padding-right: 			$base-button-pad-horiz;*/
 				/*color: 					inherit;*/
+				display: 				inline-block; /* height/width only work on a-link if inline-block */
+
+				height:					$base-button-height-big;
+				line-height: 			$base-button-height-big;
+				width:					$base-button-height;
+
+				text-align: center;
 
 			}
 
 			&:hover {
 
-				> a { /*color: 			$openorange-color;*/ }
+				background: $base-hover-color;
+
+				> a { 
+					
+					/*color: 			$openorange-color;*/ 
+				}
 			}
 
 			&.is-active {

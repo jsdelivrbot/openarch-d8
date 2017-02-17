@@ -18,8 +18,9 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 
 .language-switcher {
 
-	.english { font-size: 1rem; /*.75em;*/}
-	.chinese { font-size: 0.9rem; }
+	.english { font-size: $h6-font-size; }
+	.chinese { font-size: $h6-font-size; }
+
 
 }
 
@@ -46,7 +47,7 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 .menu {
 
 	font-size: $h3-font-size; /*.75em;*/
-	/*font-weight: bold;*/
+	font-weight: bold;
 
 	pointer-events: visible;
 
@@ -56,6 +57,7 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 
 	.icon {
 		float: right;
+		margin-right: gutter(3.5 1) *.5;
 	}
 
 	li a {
@@ -507,7 +509,7 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 	
 }
 
-.peekable {
+.peekable { /* toolbar */
 
 	/* hide checkbox */
 	input[type='checkbox'] {
@@ -543,7 +545,7 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 	input[type='checkbox']:checked ~ .peekable-target > .toolbar{
 		/*max-height: 0;*/
 		/*display: inherit;*/
-		top: -$base-row1-height;
+		top: -$tbar-height;
 		opacity: 1;
 	}
 

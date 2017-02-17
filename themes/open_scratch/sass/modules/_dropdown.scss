@@ -31,6 +31,7 @@
 
 .custom-dropdown > select {
 	/*font-size: .95rem;*/ /*$base-h4-font-size;*/
+	font-size: inherit; /*$h5-font-size;*/
 	text-transform: uppercase;
 	color: white; 
 	background: #444;

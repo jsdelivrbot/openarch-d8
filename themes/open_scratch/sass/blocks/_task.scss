@@ -94,7 +94,7 @@
 				> .bd { width: span(9 of 12); } 
 			}
 			&__footer { 
-				@include span(last 12 of 15); float: right; /*clear: right;*/ 
+				@include span(isolate 12 of 15); float: right; /*clear: right;*/ 
 			}			
 		}
 	}

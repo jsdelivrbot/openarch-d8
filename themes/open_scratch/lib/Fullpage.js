@@ -14,15 +14,21 @@ MyFullpage = (function($) {
     $(document).ready(function() {
 
         // init();
-        if ((Breakpoint.isFull() || Breakpoint.isWidest())
-            && (window.location.pathname == "/" 
+        // if ((Breakpoint.isFull() || Breakpoint.isWidest())
+        //     && (window.location.pathname == "/" 
+        //         || window.location.pathname == "/openarch-d8/"
+        //         || window.location.pathname == "/openarch-d8/cn"
+        //         || window.location.pathname == "/openarch-d8/cn/")) { 
+        //             init(); 
+        //     }
+        
+        if ((window.location.pathname == "/" 
                 || window.location.pathname == "/openarch-d8/"
                 || window.location.pathname == "/openarch-d8/cn"
                 || window.location.pathname == "/openarch-d8/cn/")) { 
                     init(); 
             }
-        // if (Breakpoint.isWidest() 
-        //     && (window.location.pathname == "/events" || window.location.pathname == "/openarch-d8/events")) { initHoriz(); }
+
     });
 
     $(window).resize(function() {
@@ -38,6 +44,9 @@ MyFullpage = (function($) {
 
         if(onFrontPage && (!(wasWidest || wasFull) && (isWidest || isFull))) { init() }
         if(onFrontPage && ((wasWidest || wasFull) && !(isWidest || isFull))) { destroy() }
+
+        if(onFrontPage) { init() }
+        if(onFrontPage) { destroy() }
 
         // if(!wasFull && isFull) { init() }
         // if(wasFull && !isFull) { destroy() }

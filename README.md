@@ -481,6 +481,10 @@ change permissions on files directory to 777
 
 * adjust font sizing
 
+#### 0.7.7
+
+* enable fullpage on frontpage for all breakpoints
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

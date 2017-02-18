@@ -47,6 +47,10 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 .menu {
 
 	font-size: $h3-font-size; /*.75em;*/
+
+	@include widest { font-size: $h4-font-size;  }
+	@include full { font-size: $h4-font-size;  }
+
 	font-weight: bold;
 
 	pointer-events: visible;

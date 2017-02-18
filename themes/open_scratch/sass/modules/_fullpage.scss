@@ -1,11 +1,11 @@
 .fullpage {
 
 	&__asset { /* hide this when not in fullpage mode */
-		@include tiny { display: none !important;}
+		/*@include tiny { display: none !important;}
 		@include mobile { display: none !important; }
 		@include narrow { display: none !important; }
 		@include wide { display: none !important; }
-		@include wider { display: none !important; }
+		@include wider { display: none !important; }*/
 	}
 	&__section {
 
@@ -14,6 +14,7 @@
 		text-align: center;
 	}*/
 	&__section--hidden { /* hide these during fullpage */
+		display: none;
 		@include widest { display: none; }
 		@include full { display: none; }
 	}

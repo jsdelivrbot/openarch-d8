@@ -25,9 +25,13 @@ MyVisor = (function($) {
 
 	function init() {
 
-		$isFullpage = (
-			Breakpoint.isWidest() || Breakpoint.isFull()) 
-	        && (window.location.pathname == "/" 
+		// $isFullpage = (
+		// 	Breakpoint.isWidest() || Breakpoint.isFull()) 
+	 //        && (window.location.pathname == "/" 
+  //           || window.location.pathname == "/openarch-d8/"
+  //           );
+
+        $isFullpage = (window.location.pathname == "/" 
             || window.location.pathname == "/openarch-d8/"
             );
 

@@ -20,7 +20,7 @@
 			left: 0;
 		}
 
-	@include widest	{ 
+	/*@include widest	{ 
 		
 		.slide__image img {
 			position: fixed;
@@ -39,7 +39,7 @@
 		}
 	}
 	@include full	{ 
-		/*.slideshow__caption {display: none;}*/
+
 		.slide__image img {
 			position: fixed;
 			top: 0;
@@ -55,5 +55,5 @@
 			bottom: 0;
 			left: 0;
 		}
-	}
+	}*/
 }

@@ -60,7 +60,7 @@ jQuery(document).ready(function($){
     });
 
     // expand first few elements in expandable list
-    $(".expandable input:checkbox:first").attr('checked', true);
+    $(".news-item.expandable input:checkbox:lt(3)").attr('checked', true);
     $(".event-teaser.expandable input:checkbox:lt(3)").attr('checked', true);
 
     // all <a> tags containing a certain rel=""

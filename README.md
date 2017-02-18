@@ -485,6 +485,10 @@ change permissions on files directory to 777
 
 * enable fullpage on frontpage for all breakpoints
 
+#### 0.7.8
+
+* enable slider for all breakpoints.
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -97,11 +97,10 @@
 
           <div id="fullpage" class="fullpage">
 
-            <div class="fullpage__section--hidden">
+            {# <div class="fullpage__section--hidden">
               <div class="region main-content__buffer buffer-top bg--white">
-                {# <div class="card buffer-top"></div> #}
               </div>
-            </div>
+            </div> #}
 
             <div class="fullpage__section bg--white"> {# ta--c text-align center to center nameplate #}
               {% if page.content_slideshow %}
@@ -155,6 +154,9 @@
             
             <div class="fullpage__section bg--recent-news z--fwd">
 
+                <div class="region main-content__buffer buffer-top bg--white">
+                </div>
+
                 <div id="main-content-relations" class="region main-content__primary bg--white overflow-hidden">
                   {{ page.content_relations }}
                 </div>
@@ -163,18 +165,27 @@
                   <div class="ribbon__segments">
                       <div class="ribbon__segment--center">
                           <a href="#firstPage" class="icon icon--mat icon--bigr icon--button-big unchecked" style="background:none">
-                              <i class="material-icons">arrow_upward</i>
-                            </a>
+                            <i class="material-icons">arrow_upward</i>
+                          </a>
                       </div>
                   </div>
                 </div>
 
+                <div class="region main-content__buffer buffer-bottom bg--white">
+                </div>
+
+               {#  <div class="fullpage__asset">
+                  <a class="icon icon--mat icon--inv icon--bigr icon--button-big z--front slider-toggler menu-toggler-2">
+                    <i class="material-icons">menu</i>
+                  </a>
+                </div> #}
+
             </div>
 
-            <div class="fullpage__section--hidden">
+            {# <div class="fullpage__section--hidden">
               <div class="region main-content__buffer buffer-bottom bg--white">
               </div>
-            </div>
+            </div> #}
 
             
 
@@ -186,39 +197,40 @@
 
       <div class="wrapper main-footer-wrapper region bg--white">
 
-        <footer class="card footer main-footer" role="contentinfo">
+        <footer class="footer main-footer" role="contentinfo">
 
-          <div class="fullpage__section--hidden">
-            <div id="footer-content-bottom" class="main-footer__bottom">
-{#               <aside role="complementary" >
+          {# <div class="fullpage__section--hidden"> #}
+            {# <div id="footer-content-bottom" class="main-footer__bottom"> #}
 
-                <div class="block">
 
-                  <div class="block-contents"> #}
-
-                    <div class="ribbon ribbon--med">
+                    {# <div class="ribbon ribbon--med">
                       <div class="ribbon__segments">
                         <span class="ribbon__segment">
-                          {{ page.footer }}
+
+                          <div class="block menu-toggler-2 z--front">
+                            <div class="block-content icons">
+                              <div class="icon--container"> #}
+                                <a class="icon icon--mat icon--inv icon--bigr icon--button-big z--front slider-toggler menu-toggler-2">
+                                  <i class="material-icons">menu</i>
+                                </a>
+                              {# </div>
+                            </div>
+                          </div>
                         </span>
                         <span class="ribbon__segment">
-                          {# <a class="icon icon--fa icon--button-big"><i class="fa fa-github" aria-hidden="true"></i></a> #}
-                        <a class="icon icon--mat icon--button-big inverter__toggler"><i class="material-icons">invert_colors</i></a> 
-                        </span>
-                        <span class="ribbon__segment--left">
-                          <h6 class="label label--nopad" style="text-transform:none;">Copyright © 2011, OPEN Architecture.</h6>
-                        </span>
+
+                          <a class="icon icon--mat icon--button-big inverter__toggler"><i class="material-icons">invert_colors</i></a> 
+                          </span>
+                          <span class="ribbon__segment--left">
+                            <h6 class="label label--nopad" style="text-transform:none;">Copyright © 2011, OPEN Architecture.</h6>
+                          </span>
 
                       </div>
-                    </div>
+                    </div> #}
 
-{#                   </div>
 
-                </div>
-
-              </aside> #}
-            </div>
-          </div>
+            {# </div> #}
+          {# </div> #}
 
         </footer>
         

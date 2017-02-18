@@ -28,20 +28,30 @@ MySlider = (function($) {
 	$toggle.click(function() { toggle() });
 	$screen.click(function() { toggle() });
 
+	$(document).on('keydown', function (event) {          
+        if (event.keyCode == 83) {       
+            toggle()
+        }
+    });
+
 	function init() {
 
-		if(isFull) { $slider.addClass('close'); isOpen = false;}
+		// if(isFull) { $slider.addClass('close'); isOpen = false;}
+		reset();
+
+		
+
 	}
 
 	function open() {
 
 		//if has close, then it is wide breakpoint with drawer closed
-		if ($slider.hasClass('close')) { 
-			$slider.removeClass('close');
-		} else { 						
-			$slider.addClass('open'); 
-		}
+		// if ($slider.hasClass('close')) { 
+		// 	$slider.removeClass('close');
+		// } 
 
+		$slider.removeClass('close');
+		$slider.addClass('open');
 		isOpen = true;
 	};
 
@@ -49,28 +59,49 @@ MySlider = (function($) {
 
 		//if has open, then it is mobile breakpoint with drawer open
 
-		if ($slider.hasClass('open')) { 
-			$slider.removeClass('open'); 
-		} else { 
-			$slider.addClass('close'); 
-		}
+		// if ($slider.hasClass('open')) { 
+		// 	$slider.removeClass('open'); 
+		// } else { 
+		// 	$slider.addClass('close'); 
+		// }
 
+		$slider.removeClass('open');
+		$slider.addClass('close'); 
 		isOpen = false;
 	};
 
 	function reset() {
 
-		wasWide = isWide;
-    	isWide = (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest());
-    	wasFull = isFull;
-    	isFull = (Breakpoint.isWidest());
+		// wasWide = isWide;
+  //   	isWide = (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest());
+  //   	wasFull = isFull;
+  //   	isFull = (Breakpoint.isWidest());
 
-    	if(!wasWide && isWide && !isOpen) { isOpen = true;}
-    	if(!wasWide && isWide && isOpen) { $slider.removeClass('open close'); isOpen = true;}
-    	if(wasWide && !isWide && !isOpen) { $slider.removeClass('open close'); }
-    	if(wasWide && !isWide && isOpen) { isOpen = false; }
-    	if(isFull) { $slider.addClass('close'); isOpen = false;}
-    	if(wasFull && !isFull) { $slider.removeClass('close'); isOpen = true;}
+  //   	if(!wasWide && isWide && !isOpen) { isOpen = true;}
+  //   	if(!wasWide && isWide && isOpen) { $slider.removeClass('open close'); isOpen = true;}
+  //   	if(wasWide && !isWide && !isOpen) { $slider.removeClass('open close'); }
+  //   	if(wasWide && !isWide && isOpen) { isOpen = false; }
+  //   	if(isFull) { $slider.addClass('close'); isOpen = false;}
+  //   	if(wasFull && !isFull) { $slider.removeClass('close'); isOpen = true;}
+
+	  	onFrontPage = (window.location.pathname == "/" 
+            || window.location.pathname == "/openarch-d8/"
+            || window.location.pathname == "/openarch-d8/cn"
+            || window.location.pathname == "/openarch-d8/cn/");
+
+  // 		if (Breakpoint.isTiny() ) { close(); }
+		// if (Breakpoint.isMobile() ) { close(); }
+		// if (Breakpoint.isNarrow() ) { close(); }
+		// if (Breakpoint.isWide() && !onFrontPage ) { open(); }
+		// if (Breakpoint.isWider() && !onFrontPage ) { open(); }
+		// if (Breakpoint.isWidest() ) { close(); }
+		// if (Breakpoint.isFull() ) { close(); }
+
+		if ((Breakpoint.isWide() && !onFrontPage ) || (Breakpoint.isWider() && !onFrontPage )) {
+			open();
+		} else {
+			close();
+		}
 
 	};
 
@@ -90,7 +121,9 @@ MySlider = (function($) {
 	//public API
 	public_API = {
 		toggle: toggle,
-		isOpen: isOpen
+		isOpen: isOpen,
+		close: close,
+		open: open
 	};
 
 	return public_API

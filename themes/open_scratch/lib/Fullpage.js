@@ -7,6 +7,7 @@ MyFullpage = (function($) {
     //cache DOM
     var $el = $('.fullpage');
     var $header = $('.main-header-layout');
+    var $footer = $('.main-footer-wrapper');
     var $nameplate = $('.nameplate');
     var $manifesto = $('.manifesto');
     var $news = $('.recent-news');
@@ -23,11 +24,11 @@ MyFullpage = (function($) {
         //     }
         
         if ((window.location.pathname == "/" 
-                || window.location.pathname == "/openarch-d8/"
-                || window.location.pathname == "/openarch-d8/cn"
-                || window.location.pathname == "/openarch-d8/cn/")) { 
-                    init(); 
-            }
+            || window.location.pathname == "/openarch-d8/"
+            || window.location.pathname == "/openarch-d8/cn"
+            || window.location.pathname == "/openarch-d8/cn/")) { 
+                init(); 
+        }
 
     });
 
@@ -42,11 +43,11 @@ MyFullpage = (function($) {
             || window.location.pathname == "/openarch-d8/cn"
             || window.location.pathname == "/openarch-d8/cn/");
 
-        if(onFrontPage && (!(wasWidest || wasFull) && (isWidest || isFull))) { init() }
-        if(onFrontPage && ((wasWidest || wasFull) && !(isWidest || isFull))) { destroy() }
+        // if(onFrontPage && (!(wasWidest || wasFull) && (isWidest || isFull))) { init() }
+        // if(onFrontPage && ((wasWidest || wasFull) && !(isWidest || isFull))) { destroy() }
 
-        if(onFrontPage) { init() }
-        if(onFrontPage) { destroy() }
+        // if(onFrontPage) { init() }
+        // if(onFrontPage) { destroy() }
 
         // if(!wasFull && isFull) { init() }
         // if(wasFull && !isFull) { destroy() }
@@ -56,26 +57,29 @@ MyFullpage = (function($) {
     function init() {
 
         $header.hide();
+        $footer.hide();
+        // MySlider.close();
+
 
         $('#fullpage').fullpage({
 
             //Navigation
             menu: '#menu',
             lockAnchors: false,
-            anchors:['firstPage', 'secondPage', 'thirdPage'],
+            anchors:['firstPage', 'secondPage'],
             navigation: false,
             navigationPosition: 'left',
-            navigationTooltips: ['Featured Work', 'OPEN Manifesto', 'Recent News'],
+            navigationTooltips: ['Featured Work', 'Recent News'],
             showActiveTooltip: false,
             slidesNavigation: true,
             slidesNavPosition: 'bottom',
 
             //Scrolling
-            css3: true,
+            css3: false,
             scrollingSpeed: 700,
-            autoScrolling: false,
+            autoScrolling: true,
             fitToSection: false,
-            fitToSectionDelay: 1000,
+            // fitToSectionDelay: 1000,
             scrollBar: false,
             easing: 'easeInOutCubic',
             easingcss3: 'ease',
@@ -91,7 +95,7 @@ MyFullpage = (function($) {
             resetSliders: false,
             fadingEffect: false,
             normalScrollElements: '#element1, .element2',
-            scrollOverflow: false,
+            scrollOverflow: true,
             scrollOverflowOptions: null,
             touchSensitivity: 15,
             normalScrollElementTouchThreshold: 5,
@@ -110,9 +114,9 @@ MyFullpage = (function($) {
             paddingTop: '0',
             paddingBottom: '0',
             // fixedElements: '.section__header, .section__footer',
-            responsiveWidth: 0,
-            responsiveHeight: 0,
-            responsiveSlides: false,
+            // responsiveWidth: 0,
+            // responsiveHeight: 0,
+            // responsiveSlides: false,
 
             //Custom selectors
             sectionSelector: '.fullpage__section',
@@ -123,6 +127,7 @@ MyFullpage = (function($) {
             //events
             onLeave: function(index, nextIndex, direction){
                 if (index == 2){
+                    $footer.hide();
                     $header.fadeOut();
                 }
                 if (index == 1){
@@ -132,10 +137,17 @@ MyFullpage = (function($) {
             },
             afterLoad: function(anchorLink, index){
                 if (index == 2){
-                    $header.fadeIn();
+                    $footer.show();
+                    $header.show(); 
+                    // if ( Breakpoint.isWide() || Breakpoint.isWider() ) {
+                    //     MySlider.open();
+                    // } else {
+                    //     MySlider.close();
+                    // }              
                 }
                 if (index == 1){
                     $nameplate.fadeIn();
+                    MySlider.close();
                 }
 
             },
@@ -152,6 +164,7 @@ MyFullpage = (function($) {
 
         $.fn.fullpage.destroy('all');
         $header.fadeIn();
+        $footer.fadeIn();
     }
     
     //public methods

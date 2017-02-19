@@ -1,0 +1,45 @@
+.main-header {}
+
+
+	.icon.menu-toggler-1 {
+
+		cursor:	pointer;
+
+		@include tiny {display: none;}
+		@include mobile {display: none;}
+		/*@include narrow {}*/
+		/*@include wide {}
+		@include wider {}*/
+		@include widest {display: none;}
+		@include full {display: none;}
+	}
+
+
+
+
+.main-footer {}
+
+	.icon.menu-toggler-2 {
+
+		cursor:	pointer;
+
+		position: 		fixed;
+	    bottom: 		1.25rem;
+	    right: 			1.25rem; /*gutter(13);*/
+
+		@include narrow {display: none;}
+	    @include wide {display: none;}
+		@include wider {display: none;}
+		@include widest {display: none;}
+		@include full {display: none;}
+	}
+
+	.icon.menu-toggler-2 {
+
+	    /*font-size:  	1.5rem;*/
+	    /*background: 	$openorange-color; */
+
+	    /*height:			$base-row2-height;
+		line-height: 	$base-row2-height;
+		width:			$base-row2-height;*/
+	}

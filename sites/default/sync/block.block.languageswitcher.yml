@@ -11,7 +11,7 @@ dependencies:
 id: languageswitcher
 theme: open_scratch
 region: '-1'
-weight: -23
+weight: -24
 provider: null
 plugin: 'block_content:4b58ad1b-40af-470f-bf89-16fe3800dfe9'
 settings:

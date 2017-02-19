@@ -51,7 +51,8 @@
 	> .slider-drawer {
 
 		@include tiny {
-			width:			75%;
+			/*width:			75%;*/
+			width: span(9 of 13 wide);
 			-webkit-transform: translateX(-100%);
 			transform: translateX(-100%);
 			-webkit-transition: .3s ease all;
@@ -59,7 +60,8 @@
 		}
 
 		@include mobile {
-			width:			50%;
+			/*width:			50%;*/
+			width: span(6 of 13 wide);
 			-webkit-transform: translateX(-100%);
 			transform: translateX(-100%);
 			-webkit-transition: .3s ease all;
@@ -67,7 +69,8 @@
 		}
 
 		@include narrow {
-			width:			33%;
+			/*width:			33%;*/
+			width: span(4 of 13 wide);
 			-webkit-transform: translateX(-100%);
 			transform: translateX(-100%);
 			-webkit-transition: .3s ease all;
@@ -79,8 +82,8 @@
 			width: span(3 of 13 wide);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
-			-webkit-transition: 0 ease all;
-			transition: 0 ease all;
+			-webkit-transition: .3s ease all;
+			transition: .3s ease all;
 		}
 
 		@include wider {
@@ -88,8 +91,8 @@
 			width: span(3 of 16 wide);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
-			-webkit-transition: 0 ease all;
-			transition: 0 ease all;
+			-webkit-transition: .3s ease all;
+			transition: .3s ease all;
 
 			/*width: 192px;*/ /* 0.2 x 1200 */
 		}
@@ -98,16 +101,16 @@
 			width:			15%; /*240px;*/
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
-			-webkit-transition: 0 ease all;
-			transition: 0 ease all;
+			-webkit-transition: .3s ease all;
+			transition: 0.3s ease all;
 		}
 
 		@include full {
 			width:			15%; /*240px;*/
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
-			-webkit-transition: 0 ease all;
-			transition: 0 ease all;
+			-webkit-transition: .3s ease all;
+			transition: .3s ease all;
 		}
 
 	}

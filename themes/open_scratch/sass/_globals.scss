@@ -31,12 +31,14 @@ html {
 
 body {
 	height:100%;  /* req for flexbox, ie sticky footer */
+	background: $base-bg-color;
 	color: $body-font-color;	
     -webkit-font-smoothing: antialiased;
     font-family: $base-font-family;
 }
 
 body.invert {
+	background: $base-bg-color-inv;
 	color: $body-font-color-inv;
 }
 

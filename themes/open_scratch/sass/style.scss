@@ -12,6 +12,8 @@
 /* atoms (elements, atomc classes, etc) */
 @import "globals";
 @import "utils";
+@import "./atoms/language";
+@import "./atoms/menu-toggler";
 
 /* Modules (reusable components) */
 @import "./modules/tags";

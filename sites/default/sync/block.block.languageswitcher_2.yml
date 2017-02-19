@@ -9,7 +9,7 @@ dependencies:
 id: languageswitcher_2
 theme: open_scratch
 region: '-1'
-weight: -24
+weight: -23
 provider: null
 plugin: 'language_block:language_interface'
 settings:

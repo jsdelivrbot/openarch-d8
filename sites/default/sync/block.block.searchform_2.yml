@@ -1,6 +1,6 @@
 uuid: d5ee640e-64d5-4308-9429-9caedfd760b3
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
@@ -8,8 +8,8 @@ dependencies:
     - open_scratch
 id: searchform_2
 theme: open_scratch
-region: sidebar_search
-weight: -31
+region: '-1'
+weight: 3
 provider: null
 plugin: search_form_block
 settings:

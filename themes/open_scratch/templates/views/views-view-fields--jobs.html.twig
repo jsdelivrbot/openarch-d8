@@ -36,7 +36,7 @@
 
 	<div class="card__item card__header">
 
-		<div class="media mediaTitle">
+		<div class="media mediaTitle mediaTitle--big">
 
 	  		<div class="media__imgR">
 	            <div class="ribbon">
@@ -58,14 +58,14 @@
 	</div>
 
 	<div class="card__item card__item--spaced-less card__body">
-		{{ fields.body.content }}
+		<div class="bd">{{ fields.body.content }}</div>
 	</div>
 
 	<div class="card__item card__footer">
 		<div class="ribbon ribbon--med">
 			<div class="ribbon__segments">
 				<span class="ribbon__segment--left">
-					<a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a>
+					<a class="icon icon--mat icon--pull-left"><i class="material-icons">label</i></a>
 				</span>
 				<span class="ribbon__segment--left">
 					<div class="tag">{{ fields.type.content }}</div> 

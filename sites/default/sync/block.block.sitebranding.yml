@@ -9,7 +9,7 @@ dependencies:
 id: sitebranding
 theme: open_scratch
 region: '-1'
-weight: -9
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:

@@ -13,7 +13,7 @@ _core:
 id: open_scratch_account_menu
 theme: open_scratch
 region: '-1'
-weight: 2
+weight: 1
 provider: null
 plugin: 'system_menu_block:account'
 settings:

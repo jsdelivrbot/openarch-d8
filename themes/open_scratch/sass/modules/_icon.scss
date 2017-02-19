@@ -204,6 +204,12 @@ $icon-hover-bg-color:			#e5e5e5;
 				/*width:					$base-button-height-big;*/
 			}
 
+			.icon--button-big-sqr {
+				height:					$base-row2-height;
+				line-height: 			$base-row2-height;
+				width:					$base-row2-height;
+			}
+
 			.icon--sml {
 				font-size: .9em;
 				/*height:					$base-button-height-sml;
@@ -222,6 +228,7 @@ $icon-hover-bg-color:			#e5e5e5;
 			.icon--bigr {
 				font-size: 1.4em;
 			}
+
 
 			/* titlebox icons use this for now */
 			.icon--fit {

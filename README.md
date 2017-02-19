@@ -489,6 +489,11 @@ change permissions on files directory to 777
 
 * enable slider for all breakpoints.
 
+#### 0.7.8
+
+* fix menu toggler
+* add transition effect to sidebar
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

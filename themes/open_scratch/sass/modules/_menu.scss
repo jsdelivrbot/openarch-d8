@@ -16,17 +16,10 @@ $menu-top-child-bg: 			$whitesmoke-bg-color; /*$darkgrey-bg-color;*/
 $menu-top-activechild-bg: 		$whitesmoke-bg-color; /*$darkgrey-bg-color;*/
 $menu-top-child-color: 			$lighter-font-color-inv;
 
-.language-switcher {
-
-	.english { font-size: $h6-font-size; }
-	.chinese { font-size: $h6-font-size; }
 
 
-}
-
-
-.sidebar nav 	{	font-size: 1rem;	}
-.footer nav 	{	font-size: 1rem;	}
+.sidebar nav 	{ font-size: 1rem; }
+.footer nav 	{ font-size: 1rem; }
 
 .sidebar .menu {
 
@@ -355,62 +348,7 @@ $menu-top-child-color: 			$lighter-font-color-inv;
  *
 ===================================================================== */
 
-.main-header {}
 
-	/*.menu-toggler {
-		position: 		fixed;
-	    bottom: 		1.25rem;
-	    right: 			1.25rem; 
-	}*/
-
-	/*.menu-toggler .icon {
-
-		
-	    font-size:  	1.5rem;
-	    background: 	$openorange-color; 
-
-	    height:			3.75rem;
-		line-height: 	3.75rem;
-		width:			3.75rem;
-	}*/
-
-	.menu-toggler-1 {
-		@include tiny {display: none;}
-		@include mobile {display: none;}
-		@include narrow {display: none;}
-		/*@include wide {display: none;}
-		@include wider {display: none;}*/
-		@include widest {display: none;}
-		@include full {display: none;}
-	}
-
-
-
-
-.main-footer {}
-
-	.menu-toggler-2 {
-		position: 		fixed;
-	    bottom: 		1.25rem;
-	    right: 			1.25rem; /*gutter(13);*/
-	}
-
-	.menu-toggler-2.icon {
-
-	    font-size:  	1.5rem;
-	    background: 	$openorange-color; 
-
-	    height:			3.75rem;
-		line-height: 	3.75rem;
-		width:			3.75rem;
-	}
-
-	.menu-toggler-2{
-		@include wide {display: none;}
-		@include wider {display: none;}
-		@include widest {display: none;}
-		@include full {display: none;}
-	}
 
 
 

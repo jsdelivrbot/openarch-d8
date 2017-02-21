@@ -29,6 +29,8 @@ MyFullpage = (function($) {
     //private methods
 
     function init() {
+
+        $asset.hide();
         reset();
     }
 
@@ -161,17 +163,15 @@ MyFullpage = (function($) {
 
             // console.log(screen.orientation.angle);
 
-            if(screen.orientation.angle == 90) { //landscape
+            if(Orient.isLandscape()) { //landscape
                 build();
-            } else if (screen.orientation.angle == 0) { //portrait
+            } else { //portrait
                 destroy();
-            } else {
-                //do nothing
             }
 
-        } else {
+        } else { //other pages and task page when break is widest/full
 
-            //do nothing
+            destroy(); //ensure known state on reset
         }
     }
 
@@ -193,6 +193,7 @@ MyFullpage = (function($) {
     //public API
 
     public_API = { 
+
         disable: disable,
         enable: enable,
         reset: reset

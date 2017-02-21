@@ -498,6 +498,12 @@ change permissions on files directory to 777
 
 * fix flexslider resize
 
+#### 0.7.11
+
+* remove fullpage assets on page ready
+* open one book item by def
+* test orientation in three ways for better device support
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

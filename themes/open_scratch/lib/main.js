@@ -66,6 +66,7 @@ jQuery(document).ready(function($){
     // expand first few elements in expandable list
     $(".news-item.expandable input:checkbox:lt(3)").attr('checked', true);
     $(".event-teaser.expandable input:checkbox:lt(3)").attr('checked', true);
+    $(".book-item.expandable input:checkbox:first").attr('checked', true);
 
     // all <a> tags containing a certain rel=""
     $("a[rel~='keep-params']").click(function(e) {

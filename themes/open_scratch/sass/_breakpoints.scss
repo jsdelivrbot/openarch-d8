@@ -42,6 +42,10 @@
     @media all and (min-width: 1441px){ @content; }
 }
 
+/*@mixin landscape {
+    @media
+}*/
+
 /* breakpoints for tables */
 
 @mixin table-1-col{ /*tiny*/

@@ -1,5 +1,9 @@
 jQuery(document).ready(function($){
 
+    
+
+    // alert("main ready");
+
 	// $('#fullpage').fullpage({
 	//   anchors: ['page1', 'page2'],
 	// });

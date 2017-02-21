@@ -489,10 +489,14 @@ change permissions on files directory to 777
 
 * enable slider for all breakpoints.
 
-#### 0.7.8
+#### 0.7.9
 
 * fix menu toggler
 * add transition effect to sidebar
+
+#### 0.7.10
+
+* fix flexslider resize
 
 #### TBD
 

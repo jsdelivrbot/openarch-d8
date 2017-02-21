@@ -104,7 +104,7 @@
 
       <div class="wrapper main-content-wrapper "> {# buffer--main-top buffer--main-bottom #}
 
-        <div class="region main-content__buffer buffer-top">
+        <div class="fullpage__hidden region main-content__buffer buffer-top">
           {# <div class="card buffer-top"></div> #}
         </div>
 
@@ -186,58 +186,88 @@
 
         <main class="main-content" role="main"> 
 
+          <div id="fullpage" class="fullpage">
+     
+            {% if page.content_slideshow %}
 
+              <div class="fullpage__section">
 
-          {% if page.content_gallery %}
-            <div id="main-content-gallery" class="region main-content__gallery">
-              {{ page.content_gallery }}
-            </div>
-          {% endif %}
+                <div id="main-content-slideshow" class="region main-content__slideshow slideshow bg--dark"> {# border--top #}
+                  {{ page.content_slideshow }}
+                </div>
 
-          {# <div id="fullpager"> #}
-          
-          {# <div class="section"> #}
-          {% if page.content_slideshow %}
-            <div id="main-content-slideshow" class="region main-content__slideshow slideshow bg--dark"> {# border--top #}
-              {{ page.content_slideshow }}
-            </div>
-          {% endif %}
-          {# </div> #}
-
-          {# <div class="section"> #}
-            <div id="main-content-primary" class="region main-content__primary"> {# border--top #}
-              {{ page.content_primary }}
-            </div>
-          {# </div> #}
-
-          {# </div> #}
-          
-          {% if page.content_relations %}
-            <div id="main-content-relations" class="region main-content__relations"> {# border--top bg--dots #}
-              {{ page.content_relations }}
-            </div>
-          {% endif %}
-
-          {% if page.content_facts %}
-            <div id="main-content-facts" class="region main-content__facts"> {# border--top #}
-              <div class="card factsheet border--top">
-                <div class="card__item card__item--spaced-most card__header">
-                  <div class="title title--secondary">
-                    <h3>Data</h3>
+                <div class="fullpage__asset fullpage__pager--down bg--white op--9 z--fwd">
+                  <div class="ribbon">
+                    <div class="ribbon__segments">
+                        <div class="ribbon__segment--center">
+                            <a href="#secondPage" class="icon icon--mat icon--bigr icon--button-big unchecked" style="background:none">
+                              <i class="material-icons">arrow_downward</i>
+                            </a>
+                        </div>
+                    </div>
                   </div>
                 </div>
-                <div class="card__item card__item--spaced-most-top card__body">
-                  <div class="gallery-container factsheet-gallery-container">
-                    {{ page.content_facts }}
-                  </div>
+
+              </div>
+
+            {% endif %}
+            
+            <div class="fullpage__section z--fwd">
+
+              <div id="main-content-primary" class="region main-content__primary"> {# border--top #}
+                {{ page.content_primary }}
+              </div>
+
+              <div class="fullpage__asset fullpage__pager--down">
+                <div class="ribbon__segments">
+                    <div class="ribbon__segment--center">
+                        <a href="#firstPage" class="icon icon--mat icon--bigr icon--button-big unchecked" style="background:none">
+                          <i class="material-icons">arrow_upward</i>
+                        </a>
+                    </div>
                 </div>
               </div>
+
             </div>
-          {% endif %}
+
+            <div class="fullpage__hidden">
+
+              {% if page.content_gallery %}
+                <div id="main-content-gallery" class="region main-content__gallery">
+                  {{ page.content_gallery }}
+                </div>
+              {% endif %}
+              
+              {% if page.content_relations %}
+                <div id="main-content-relations" class="region main-content__relations"> {# border--top bg--dots #}
+                  {{ page.content_relations }}
+                </div>
+              {% endif %}
+
+              {% if page.content_facts %}
+                <div id="main-content-facts" class="region main-content__facts"> {# border--top #}
+                  <div class="card factsheet border--top">
+                    <div class="card__item card__item--spaced-most card__header">
+                      <div class="title title--secondary">
+                        <h3>Data</h3>
+                      </div>
+                    </div>
+                    <div class="card__item card__item--spaced-most-top card__body">
+                      <div class="gallery-container factsheet-gallery-container">
+                        {{ page.content_facts }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+
+            </div> 
+
+          </div>
 
         </main>
 
-        <div class="region main-content__buffer buffer-bottom">
+        <div class="fullpage__hidden region main-content__buffer buffer-bottom">
 
         </div>
 

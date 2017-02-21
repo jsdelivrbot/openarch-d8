@@ -146,7 +146,12 @@
 
 .hide {
 
-	display: none;
+	display: none !important;
+}
+
+.show {
+
+	display: initial !important;
 }
 
 /*.show-on-widest {

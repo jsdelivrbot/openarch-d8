@@ -11,9 +11,12 @@
 MySlider = (function($) {
 
 	//hold state
-	var isOpen = (Breakpoint.isWide() || Breakpoint.isWider());
-	var isWide = (Breakpoint.isWide() || Breakpoint.isWider());
-	var isFull = (Breakpoint.isWidest())
+	// var isOpen = false;
+	// var isOpen = (Breakpoint.isWide() || Breakpoint.isWider());
+	// var isWide = (Breakpoint.isWide() || Breakpoint.isWider());
+	// var isFull = (Breakpoint.isWidest())
+	// var onTask = false;
+	// var onFrontPage = false;
 
 	//cache dom
 	var $slider = $('.slider');
@@ -23,8 +26,9 @@ MySlider = (function($) {
 	var $screen = $slider.find('.slider-screen');
 
 	//bindings
-	$(document).ready(function() { init() });
-    $(window).resize(function() { reset() });
+	$(document).ready(function() { init(); });
+
+    // $(window).one('resize', function() { reset(); alert("resize")});
 	$toggle.click(function() { toggle() });
 	$screen.click(function() { toggle() });
 
@@ -34,96 +38,69 @@ MySlider = (function($) {
         }
     });
 
+    //private methods
+
 	function init() {
 
-		// if(isFull) { $slider.addClass('close'); isOpen = false;}
 		reset();
-
-		
-
 	}
+
+	//public methods
+
+	function reset() {
+
+		if (!(Breakpoint.isWide() || Breakpoint.isWider()) || Pg.isFront()) {
+
+            close();
+
+        } else if ((Breakpoint.isWide() || Breakpoint.isWider()) && !Pg.isTask()) {
+
+        	open();
+
+        } else { //((Breakpoint.isWide() || Breakpoint.isWider()) && Pg.isTask())
+
+            if(screen.orientation.angle == 90) { //is landscape
+                close();
+            } else {
+                open();
+                // alert("open");
+            }
+        } 
+	};
 
 	function open() {
 
-		//if has close, then it is wide breakpoint with drawer closed
-		// if ($slider.hasClass('close')) { 
-		// 	$slider.removeClass('close');
-		// } 
-
 		$slider.removeClass('close');
 		$slider.addClass('open');
-		isOpen = true;
+		// isOpen = true;
 	};
 
 	function close() {
 
-		//if has open, then it is mobile breakpoint with drawer open
-
-		// if ($slider.hasClass('open')) { 
-		// 	$slider.removeClass('open'); 
-		// } else { 
-		// 	$slider.addClass('close'); 
-		// }
-
 		$slider.removeClass('open');
 		$slider.addClass('close'); 
-		isOpen = false;
+		// isOpen = false;
 	};
 
-	function reset() {
-
-		// wasWide = isWide;
-  //   	isWide = (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest());
-  //   	wasFull = isFull;
-  //   	isFull = (Breakpoint.isWidest());
-
-  //   	if(!wasWide && isWide && !isOpen) { isOpen = true;}
-  //   	if(!wasWide && isWide && isOpen) { $slider.removeClass('open close'); isOpen = true;}
-  //   	if(wasWide && !isWide && !isOpen) { $slider.removeClass('open close'); }
-  //   	if(wasWide && !isWide && isOpen) { isOpen = false; }
-  //   	if(isFull) { $slider.addClass('close'); isOpen = false;}
-  //   	if(wasFull && !isFull) { $slider.removeClass('close'); isOpen = true;}
-
-	  	onFrontPage = (window.location.pathname == "/" 
-            || window.location.pathname == "/openarch-d8/"
-            || window.location.pathname == "/openarch-d8/cn"
-            || window.location.pathname == "/openarch-d8/cn/");
-
-  // 		if (Breakpoint.isTiny() ) { close(); }
-		// if (Breakpoint.isMobile() ) { close(); }
-		// if (Breakpoint.isNarrow() ) { close(); }
-		// if (Breakpoint.isWide() && !onFrontPage ) { open(); }
-		// if (Breakpoint.isWider() && !onFrontPage ) { open(); }
-		// if (Breakpoint.isWidest() ) { close(); }
-		// if (Breakpoint.isFull() ) { close(); }
-
-		if ((Breakpoint.isWide() && !onFrontPage ) || (Breakpoint.isWider() && !onFrontPage )) {
-			open();
-		} else {
-			close();
-		}
-
-	};
-
-	function isitOpen() {
-
-		// return isOpen
-	};
-
-
-	//public methods
 	function toggle() {
 
-		isOpen ? close() : open();
-
+		isOpen() ? close() : open();
+		// MyFlexslider.resize();
 	};
 
+	function isOpen() {
+
+		return $slider.hasClass('open');
+	}
+
 	//public API
+
 	public_API = {
 		toggle: toggle,
 		isOpen: isOpen,
 		close: close,
-		open: open
+		open: open,
+		reset: reset
 	};
 
 	return public_API

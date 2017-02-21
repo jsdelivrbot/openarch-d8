@@ -10,7 +10,8 @@ Orient = (function($) {
 
 		if ((screen.orientation.angle === 90)
 			|| (window.innerWidth > window.innerHeight)
-			|| (screen.orientation.type.match(/\w+/)[0] === "landscape")) { //landscape
+			|| (screen.orientation.type.match(/\w+/)[0] === "landscape")
+			|| (window.matchMedia("(orientation:landscape)").matches)) { //landscape
             return true;
         } else  {
             return false;

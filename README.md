@@ -504,6 +504,10 @@ change permissions on files directory to 777
 * open one book item by def
 * test orientation in three ways for better device support
 
+#### 0.7.12
+
+* fix zoom effect on ios
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

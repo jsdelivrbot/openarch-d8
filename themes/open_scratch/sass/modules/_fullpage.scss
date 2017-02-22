@@ -33,4 +33,31 @@
 	&__pager--orange {
 		background: rgba(235, 97, 0, 0.9);
 	}*/	
+
+	&__toggler {
+
+		cursor:	pointer;
+
+		position: 		absolute;
+	    bottom: 		1.25rem;
+	    right: 			1.25rem; /*gutter(13);*/
+
+	    /*background: white;
+	    opacity: .4;
+	    > i { color: #333; }*/
+
+		/*@include narrow {display: none;}
+	    @include wide {display: none;}
+		@include wider {display: none;}*/
+		@include widest {display: none;}
+		@include full {display: none;}
+	}
+
+	&__toggler.fixed {
+
+		position: 		fixed;
+	    bottom: 		0;
+	    right: 			0; /*gutter(13);*/
+
+	}
 }

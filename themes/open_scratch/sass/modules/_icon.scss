@@ -136,6 +136,20 @@ $icon-hover-bg-color:			#e5e5e5;
 				}
 			}
 
+			.icon.icon--overlay {
+
+				background: 		#f5f5f5;
+				opacity: .3;
+				> i { color: 		black; }
+
+				&:hover {
+
+					background: 	white;
+					opacity: .35;
+					> i { color: 	black; }
+				}
+			}
+
 			.icon--img {
 
 				img {
@@ -227,6 +241,10 @@ $icon-hover-bg-color:			#e5e5e5;
 
 			.icon--bigr {
 				font-size: 1.4em;
+			}
+
+			.icon--huge {
+				font-size: 1.8em;
 			}
 
 

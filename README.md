@@ -508,6 +508,10 @@ change permissions on files directory to 777
 
 * fix zoom effect on ios
 
+#### 0.7.13
+
+* add fullpage toggle button
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

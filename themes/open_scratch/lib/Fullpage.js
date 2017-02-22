@@ -14,8 +14,10 @@ MyFullpage = (function($) {
     var $nameplate = $('.nameplate');
     var $manifesto = $('.manifesto');
     var $news = $('.recent-news');
+    var $toggle = $('.fullpage__toggler');
 
     //bindings
+    $toggle.click(function() { toggle() });
     $(document).ready(function() { 
         init() 
     });
@@ -41,6 +43,7 @@ MyFullpage = (function($) {
         $footer.hide();
         $hidden.hide();
         $asset.show();
+        $toggle.addClass('fixed');
 
         if (!isBuilt()) {
             $('#fullpage').fullpage({
@@ -147,11 +150,17 @@ MyFullpage = (function($) {
         $footer.show();
         $hidden.show();
         $asset.hide();
+        $toggle.removeClass('fixed');
 
         if (isBuilt()) $.fn.fullpage.destroy('all');
     }
     
     //public methods
+
+    function toggle() {
+
+        isBuilt() ? destroy() : build();
+    };
 
     function reset() {
 

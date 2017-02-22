@@ -212,6 +212,10 @@ $base-spacing-big: 		1.5rem;*/
 .position--bottom 	{ position: absolute; bottom: 0; }
 .position--top 		{ position: absolute; top: 0; }
 
+.pos--a { position: absolute; }
+.pos--f { position: fixed; }
+.pos--r { position: relative }
+
 /*bd*/.line-clamp > p {
 
 	display: block; /* Fallback for non-webkit */

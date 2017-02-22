@@ -22,9 +22,9 @@ MyFullpage = (function($) {
     $(window).resize(function() { 
         //omit for now. but will need for resize during task to/from widest/full! 
     });
-    $(window).on( "orientationchange", function( event ) { 
-        reset() 
-    });
+    // $(window).on( "orientationchange", function( event ) { 
+    //     reset() 
+    // });
 
     //private methods
 

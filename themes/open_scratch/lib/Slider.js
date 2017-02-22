@@ -59,7 +59,7 @@ MySlider = (function($) {
 
         } else { //((Breakpoint.isWide() || Breakpoint.isWider()) && Pg.isTask())
 
-            if(screen.orientation.angle == 90) { //is landscape
+            if(Orient.isLandscape()) { //is landscape
                 close();
             } else {
                 open();

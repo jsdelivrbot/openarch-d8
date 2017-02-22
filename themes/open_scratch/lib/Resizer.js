@@ -1,5 +1,3 @@
-
-
 Resizer = (function($) {
 
 	// var timer;

@@ -1,22 +1,51 @@
 Orient = (function($) {
 
-	// var ls;
+	var ls;
 
-	// $(window).on( "orientationchange", function( event ) { 
- 	// 		isLandscape() 
- 	// });
+	$(document).ready(function() { reset(); });
 
-	function isLandscape() {
+	$(window).on( "orientationchange", function() { 
+ 		
+ 		reset(function(){
+ 			MyFullpage.reset();
+ 			MySlider.reset();
+ 		});
+ 	});
 
-		if ((screen.orientation.angle === 90)
-			|| (window.innerWidth > window.innerHeight)
-			|| (screen.orientation.type.match(/\w+/)[0] === "landscape")
-			|| (window.matchMedia("(orientation:landscape)").matches)) { //landscape
-            return true;
+ 	function reset(callback) {
+
+ 		if (
+ 			(screen.orientation.angle == 90)
+			// || (window.innerWidth > window.innerHeight)
+			// || (screen.orientation.type.match(/\w+/)[0] === "landscape")
+			|| (window.matchMedia("(orientation:landscape)").matches)
+			|| (window.orientation == 90)
+			|| (window.orientation == -90)) 
+		{ 
+            ls = true;
+            callback();
         } else  {
-            return false;
-        }
+            ls = false;
+            callback();
+        }    
+        return true; //done
+ 	}
+
+	function getLs() {
+
+		return ls;
 	}
+
+	// $(window).on("orientationchange",function(){
+	// 	if(window.orientation == 0) // Portrait
+	// 	{
+	// 		$("p").css({"background-color":"yellow","font-size":"300%"});
+	// 	}
+	// 	else // Landscape
+	// 	{
+	// 		$("p").css({"background-color":"pink","font-size":"200%"});
+	// 	}
+	// });
 	
 
 	// function isLandscape2() {
@@ -38,7 +67,8 @@ Orient = (function($) {
 		
 	return {
 		
-		isLandscape: isLandscape
+		isLandscape: getLs,
+		reset: reset
 	}
 
 })(jQuery);

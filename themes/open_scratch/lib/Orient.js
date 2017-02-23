@@ -4,13 +4,13 @@ Orient = (function($) {
 
 	$(document).ready(function() { reset(); });
 
-	$(window).on( "orientationchange", function() { 
+	// $(window).on( "orientationchange", function() { 
  		
- 		reset(function(){
- 			MyFullpage.reset();
- 			MySlider.reset();
- 		});
- 	});
+ // 		reset(function(){
+ // 			MyFullpage.reset();
+ // 			MySlider.reset();
+ // 		});
+ // 	});
 
  	function reset(callback) {
 
@@ -34,6 +34,24 @@ Orient = (function($) {
 	function getLs() {
 
 		return ls;
+	}
+
+	function isLandscape() {
+
+		if (
+ 			// (screen.orientation.angle == 90)
+			// || (window.innerWidth > window.innerHeight)
+			// || (screen.orientation.type.match(/\w+/)[0] === "landscape")
+			(window.matchMedia("(orientation:landscape)").matches)
+			|| (window.orientation == 90)
+			|| (window.orientation == -90)) 
+		{ 
+            return true;
+            // callback();
+        } else  {
+            return false;
+            // callback();
+        }
 	}
 
 	// $(window).on("orientationchange",function(){
@@ -67,7 +85,7 @@ Orient = (function($) {
 		
 	return {
 		
-		isLandscape: getLs,
+		isLandscape: isLandscape,
 		reset: reset
 	}
 

@@ -15,6 +15,7 @@ MyFullpage = (function($) {
     var $manifesto = $('.manifesto');
     var $news = $('.recent-news');
     var $toggle = $('.fullpage__toggler');
+    var $screen = $('.bg__screen');
 
     //bindings
     $toggle.click(function() { toggle() });
@@ -38,6 +39,7 @@ MyFullpage = (function($) {
 
     function build() {
 
+        $screen.addClass('bg--white');
 
         $header.hide();
         $footer.hide();
@@ -135,13 +137,22 @@ MyFullpage = (function($) {
                     }
                     
                 },
-                afterRender: function(){},
+                afterRender: function(){
+
+                    $screen.delay(500).fadeOut(function() {
+                        $screen.removeClass('bg--white');
+                        $screen.show();
+                    });
+
+                },
                 afterResize: function(){},
                 afterResponsive: function(isResponsive){},
                 afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
                 onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
             });
         }
+
+        MyFlexslider.resize();
     } 
 
     function destroy() {
@@ -153,6 +164,10 @@ MyFullpage = (function($) {
         $toggle.removeClass('fixed');
 
         if (isBuilt()) $.fn.fullpage.destroy('all');
+
+        MySlider.reset();
+        // MyFlexslider.reset(); 
+        MyFlexslider.resize();
     }
     
     //public methods
@@ -168,7 +183,7 @@ MyFullpage = (function($) {
 
             build();
 
-        } else if (Pg.isTask() && !(Breakpoint.isWidest() || Breakpoint.isFull())) {
+        } else if (Pg.isTask() && (Breakpoint.isTiny() || Breakpoint.isMobile() || Breakpoint.isNarrow())) {
 
             // console.log(screen.orientation.angle);
 

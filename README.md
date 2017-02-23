@@ -512,6 +512,11 @@ change permissions on files directory to 777
 
 * add fullpage toggle button
 
+#### 0.7.14
+
+* refactor javascript
+* update sidebar, fullscreen, flexslider transitions
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

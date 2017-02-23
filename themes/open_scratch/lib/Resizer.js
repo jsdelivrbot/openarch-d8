@@ -22,9 +22,13 @@ Resizer = (function($) {
         var existingWidth = $(document).data('resize-width');
         var newWidth = $(document).width();
         if (existingWidth != newWidth) {
-            MySlider.reset();  
-            clearTimeout(timer);
-            timer = setTimeout(doneResizing, 100);
+            console.log('resizing')
+            MyFullpage.reset();
+            MySlider.reset();
+            MyFlexslider.reset(); 
+            MyFlexslider.resize();
+            // clearTimeout(timer);
+            // timer = setTimeout(doneResizing, 100);
             $(document).data('resize-width', newWidth);
         };
     };
@@ -35,9 +39,9 @@ Resizer = (function($) {
     //     timer = setTimeout(doneResizing, 100);
     // });
 
-    function doneResizing(){
-        console.log('Flexslider resize'); 
-   		MyFlexslider.reset();
-    }
+    // function doneResizing(){
+    //     console.log('Flexslider resize'); 
+   	// 	MyFlexslider.resize();
+    // }
 
 })(jQuery);

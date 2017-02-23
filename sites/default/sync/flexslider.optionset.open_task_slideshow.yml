@@ -1,11 +1,9 @@
-uuid: c81bd542-4436-4155-9003-59aa1e6b5944
+uuid: 2011cf60-1437-4142-8bfd-48b970a555fa
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: mvZbfKqr-YM3s3aw0YQLUkIi5D9zrpWlg6g4hQ5P0Z4
-id: flexslider_carousel_with_min_and_max_ranges
-label: 'FlexSlider carousel with min and max ranges'
+id: open_task_slideshow
+label: 'Open task slideshow'
 options:
   animation: slide
   animationSpeed: 600
@@ -18,10 +16,10 @@ options:
   animationLoop: true
   randomize: false
   startAt: 0
-  itemWidth: 960
+  itemWidth: 0
   itemMargin: 2
   minItems: 1
-  maxItems: 1
+  maxItems: 2
   move: 1
   directionNav: true
   controlNav: '1'

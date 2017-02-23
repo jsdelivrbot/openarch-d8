@@ -44,7 +44,8 @@ Pg = (function($) {
 		
 	return {
 		isFront: pathEquals(""),
-		isTask: pathBegins("task")
+		isTask: pathBegins("task"),
+		isPress: pathEquals("press")
 	}
 
 })(jQuery);

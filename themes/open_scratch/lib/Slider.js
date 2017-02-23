@@ -59,12 +59,13 @@ MySlider = (function($) {
 
         } else { //((Breakpoint.isWide() || Breakpoint.isWider()) && Pg.isTask())
 
-            if(Orient.isLandscape()) { //is landscape
-                close();
-            } else {
-                open();
-                // alert("open");
-            }
+        	open();
+        	
+            // if(Orient.isLandscape()) { 
+            //     close();
+            // } else {
+            //     open();
+            // }
         } 
 	};
 
@@ -85,7 +86,7 @@ MySlider = (function($) {
 	function toggle() {
 
 		isOpen() ? close() : open();
-		// MyFlexslider.resize();
+		MyFlexslider.resize();
 	};
 
 	function isOpen() {

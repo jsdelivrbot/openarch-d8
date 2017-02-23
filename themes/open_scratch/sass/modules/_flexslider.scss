@@ -1,3 +1,25 @@
+/* views-view--task-slideshow.html.twig */
+.card {}
+	.card__media.slideshow {}
+
+		/* flexslider-views-style.html.twig */
+		div {}
+
+			/* flexslider.html.twig */
+			.flexslider {}
+
+				/* flexslider-list.html.twig */
+				.flex-viewport {}
+					ul.slides {} 
+
+						/* flexslider-list-item.html.twig */
+						li {} 
+
+							/* views-view-fields--task-slideshow.html.twig */
+							.slide {}
+								.slide__image {}
+									picture {}
+
 .flexslider {
 	border: none;
 	background: none;

@@ -75,3 +75,31 @@ $big-font-size-full: 	$bd-big-font-size-plus;
 		line-height: 		1.25rem;
 	}
 }
+
+.bd--expandable {
+
+	/*display: block;
+	width: 100%;*/
+
+	/*max-height: 100px;*/
+
+	/* root font sizes */
+	/*$root-font-size: 			16px;
+	$root-font-size-tiny: 		12px;
+	$root-font-size-mobile: 	13px;
+	$root-font-size-narrow: 	14px;
+	$root-font-size-wide: 		14px;
+	$root-font-size-wider: 		15px;
+	$root-font-size-widest: 	15px;
+	$root-font-size-full: 		17px;*/
+
+	/* 1.33 * numLines */
+
+	@include tiny 	{ max-height: 6.75em; }
+	@include mobile { max-height: 8.0em; }
+	@include narrow { max-height: 10.55em; }
+	@include wide 	{ max-height: 9.25em; }
+	@include wider 	{ max-height: 9.55em; }
+	@include widest { max-height: 9.55em; }
+	@include full 	{ max-height: 9.33em; }
+}

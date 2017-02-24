@@ -91,7 +91,7 @@ h2 {	font-size: 	$h2-font-size;	/*line-height: $base-line-height-single;*/ } /* 
 h3 {	font-size: 	$h3-font-size;		}
 h4 {	font-size: 	$h4-font-size;		}
 h5 {	font-size: 	$h5-font-size;	line-height: $base-line-height; } /* coverage items $base-line-height-dbl = $base-button-height-sml = 2rem so wraping lines don't collapse*/
-h6 {	font-size:	$h6-font-size;	line-height: $base-line-height-more; } /* facts */
+h6 {	font-size:	$h6-font-size;	line-height: $base-line-height; } /* facts */
 
 a, a:link, a:visited {
 	color: 				inherit;

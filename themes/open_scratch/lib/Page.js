@@ -26,21 +26,6 @@ Pg = (function($) {
 	            );
 		}
 	}
-
-	// function isTask() {
-
-	// 	return (window.location.pathname.indexOf("/task") == 0
-	//         || window.location.pathname.indexOf("/openarch-d8/task") == 0
-	//         || window.location.pathname.indexOf("/openarch-d8/cn/task") == 0);
-	// }
-
-	// function isFront() {
-
-	// 	return (window.location.pathname == "/" 
-	//         || window.location.pathname == "/openarch-d8/"
-	//         || window.location.pathname == "/openarch-d8/cn"
-	//         || window.location.pathname == "/openarch-d8/cn/");
-	// }
 		
 	return {
 		isFront: pathEquals(""),

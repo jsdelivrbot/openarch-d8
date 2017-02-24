@@ -1,32 +1,35 @@
-//var onTask = (window.location.pathname.indexOf("/task") == 0
-//		|| window.location.pathname.indexOf("/openarch-d8/task") == 0
-//		|| window.location.pathname.indexOf("/openarch-d8/cn/task") == 0);
-
-//var isLandscape = (screen.orientation.angle == 90);
-
-//if ((Breakpoint.isWidest() || Breakpoint.isFull())
-// 		|| !(onTask && isLandscape)) {
-// 		alert("init");
-//}
 
 MyReadmore = (function($) {
 
-	$(document).ready(function() {
+	// $(document).ready(function() {
+	$(window).load(function() {
 
-		$('.bd--expandable').readmore({
-	      	moreLink: '<a class="morelink" href="#">More...</a>',
-	      	lessLink: '<a class="morelink" href="#">Less</a>',
-	      	collapsedHeight: 257
-	    });
+		init();
+		// $('.bd--expandable').readmore({
+	 //      	moreLink: '<a class="morelink" href="#">More...</a>',
+	 //      	lessLink: '<a class="morelink" href="#">Less</a>',
+	 //      	collapsedHeight: 257
+	 //    });
 	});
 
+	//see options at https://github.com/jedfoster/Readmore.js
 	function init() {
 
+	    // $('.bd--expandable').readmore({
+	    // 	speed: 100 in milliseconds,
+	    //   	moreLink: '<a class="morelink" href="#">More...</a>',
+	    //   	lessLink: '<a class="morelink" href="#">Less</a>',
+	    //   	collapsedHeight: 257,
+	    //   	heightMargin: 16
+	    // });
+
 	    $('.bd--expandable').readmore({
+	    	speed: 200,
 	      	moreLink: '<a class="morelink" href="#">More...</a>',
-	      	lessLink: '<a class="morelink" href="#">Less</a>',
-	      	collapsedHeight: 257
+	      	lessLink: '<a class="morelink" href="#">Less</a>'
 	    });
+
+	    // $('.bd--expandable').readmore();
 	}
 
     function toggle() {

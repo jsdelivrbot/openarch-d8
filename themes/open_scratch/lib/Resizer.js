@@ -1,47 +1,22 @@
 Resizer = (function($) {
 
-	// var timer;
-
- //    $(window).resize(function() { 
-
- //        
-        
- //        clearTimeout(timer);
- //        timer = setTimeout(delayedResize, 500);      
- //    });
-
- //    function delayedResize(){
- //        MyFlexslider.resize();
- //    }
-
     var timer;
 
-    $(window).resize(resizeWidth);
+    $(window).resize(function() { 
 
-    function resizeWidth() {
         var existingWidth = $(document).data('resize-width');
         var newWidth = $(document).width();
+
+        //only care about changes in width
         if (existingWidth != newWidth) {
-            console.log('resizing')
+
             MyFullpage.reset();
             MySlider.reset();
             MyFlexslider.reset(); 
             MyFlexslider.resize();
-            // clearTimeout(timer);
-            // timer = setTimeout(doneResizing, 100);
+
             $(document).data('resize-width', newWidth);
         };
-    };
-
-    // $(window).resize(function() {
-    // 	MySlider.reset();	
-    //     clearTimeout(timer);
-    //     timer = setTimeout(doneResizing, 100);
-    // });
-
-    // function doneResizing(){
-    //     console.log('Flexslider resize'); 
-   	// 	MyFlexslider.resize();
-    // }
+    });
 
 })(jQuery);

@@ -18,16 +18,13 @@ MyFullpage = (function($) {
     var $screen = $('.bg__screen');
 
     //bindings
+
     $toggle.click(function() { toggle() });
+
     $(document).ready(function() { 
+
         init() 
     });
-    $(window).resize(function() { 
-        //omit for now. but will need for resize during task to/from widest/full! 
-    });
-    // $(window).on( "orientationchange", function( event ) { 
-    //     reset() 
-    // });
 
     //private methods
 
@@ -97,7 +94,7 @@ MyFullpage = (function($) {
                 controlArrows: true,
                 verticalCentered: true,
                 // sectionsColor : [ 'rgba(255,255,255,.1)', 'rgba(235, 97, 0, 0.9)', 'rgb(255,255,255)'],
-                sectionsColor: [ 'rgba(255,255,255,.1)', 'rgb(255,255,255)'],
+                // sectionsColor: [ 'rgba(255,255,255,.1)', 'rgb(255,255,255)'],
                 paddingTop: '0',
                 paddingBottom: '0',
                 // fixedElements: '.section__header, .section__footer',
@@ -133,12 +130,14 @@ MyFullpage = (function($) {
 
                     if (index == 2){
                         $footer.show();
-                        $header.show();             
+                        $header.show(); 
+                        MySlider.open();            
                     }
                     
                 },
                 afterRender: function(){
 
+                    MySlider.close();
                     $screen.delay(500).fadeOut(function() {
                         $screen.removeClass('bg--white');
                         $screen.show();
@@ -188,8 +187,11 @@ MyFullpage = (function($) {
             // console.log(screen.orientation.angle);
 
             if(Orient.isLandscape()) { //landscape
+
                 build();
+
             } else { //portrait
+
                 destroy();
             }
 

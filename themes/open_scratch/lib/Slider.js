@@ -53,19 +53,9 @@ MySlider = (function($) {
 
             close();
 
-        } else if ((Breakpoint.isWide() || Breakpoint.isWider()) && !Pg.isTask()) {
+        } else { // Let fullpage close slider if it wants to.
 
         	open();
-
-        } else { //((Breakpoint.isWide() || Breakpoint.isWider()) && Pg.isTask())
-
-        	open();
-        	
-            // if(Orient.isLandscape()) { 
-            //     close();
-            // } else {
-            //     open();
-            // }
         } 
 	};
 

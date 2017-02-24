@@ -517,6 +517,12 @@ change permissions on files directory to 777
 * refactor javascript
 * update sidebar, fullscreen, flexslider transitions
 
+#### 0.7.15
+
+* fix missing sidebar bg
+* sidebar open on recent-news, close on featured work
+* fix readmore.js cropping issue
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

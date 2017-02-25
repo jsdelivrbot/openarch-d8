@@ -10,9 +10,9 @@ MyFlexslider = (function($) {
 
     // stop loop
     // (see http://stackoverflow.com/questions/22313398/prevent-an-infinite-loop-on-window-resize)
-    // $fs.on('resize',function(event){
-    //     event.stopPropagation();
-    // });
+    $fs.on('resize',function(event){
+        event.stopPropagation();
+    });
 
     //bindings
     $(document).ready(function() { init(); });

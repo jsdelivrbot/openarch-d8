@@ -523,6 +523,10 @@ change permissions on files directory to 777
 * sidebar open on recent-news, close on featured work
 * fix readmore.js cropping issue
 
+#### 0.7.16
+
+* fix transitions
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

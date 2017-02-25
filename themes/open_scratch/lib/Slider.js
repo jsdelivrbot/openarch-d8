@@ -47,7 +47,9 @@ MySlider = (function($) {
 
 	//public methods
 
-	function reset() {
+	function reset() { //safe reset
+
+		console.log("reset sidebar");
 
 		if (!(Breakpoint.isWide() || Breakpoint.isWider()) || Pg.isFront()) {
 
@@ -55,28 +57,41 @@ MySlider = (function($) {
 
         } else { // Let fullpage close slider if it wants to.
 
-        	open();
+        	MyFullpage.isEnabled() ? close() : open()
+        	// !isOpen() ? close() : open()
+        	// open();
         } 
 	};
 
-	function open() {
+	function open() { //safe
+
+		console.log("open sidebar");
 
 		$slider.removeClass('close');
 		$slider.addClass('open');
 		// isOpen = true;
 	};
 
-	function close() {
+	function close() { //safe
+
+		console.log("close sidebar");
 
 		$slider.removeClass('open');
 		$slider.addClass('close'); 
 		// isOpen = false;
 	};
 
-	function toggle() {
+	function toggle() { //event 3
+
+		console.log("on sidebar toggle");
 
 		isOpen() ? close() : open();
-		MyFlexslider.resize();
+
+		//reset
+		// MyFlexslider.resize();
+		// Resizer.reset();
+		MyFlexslider.reset(); 
+        MyFlexslider.resize();
 	};
 
 	function isOpen() {

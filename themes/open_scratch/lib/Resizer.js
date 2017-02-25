@@ -2,7 +2,13 @@ Resizer = (function($) {
 
     var timer;
 
-    
+    $(window).on("orientationchange",function(){
+
+        console.log("on reorientation");
+
+        MyFullpage.reset(); 
+
+    });
 
     $(window).resize(function() { 
 
@@ -12,15 +18,26 @@ Resizer = (function($) {
         //only care about changes in width
         if (existingWidth != newWidth) {
 
-            console.log("reset");
+            console.log("on resize");
 
-            MyFullpage.reset();
-            MySlider.reset();
-            MyFlexslider.reset(); 
-            MyFlexslider.resize();
+            reset();
 
             $(document).data('resize-width', newWidth);
         };
     });
+
+    function reset() {
+
+        console.log("reset");
+
+        MySlider.reset();
+        MyFlexslider.reset(); 
+        MyFlexslider.resize();
+    }
+
+    return { 
+
+        reset: reset
+    }
 
 })(jQuery);

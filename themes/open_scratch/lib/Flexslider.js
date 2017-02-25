@@ -42,6 +42,8 @@ MyFlexslider = (function($) {
 
     function reset() {
 
+        console.log("reset flexslider");
+
         if(Pg.isTask()) {
 
             var numTaskItems = (Breakpoint.isFull()) ? 2 : 1;
@@ -66,6 +68,9 @@ MyFlexslider = (function($) {
     var timer;
 
     function resize() {
+
+        console.log("resize flexslider");
+
         // $fs.resize();
         // $fs.data('flexslider').resize(); 
         clearTimeout(timer);

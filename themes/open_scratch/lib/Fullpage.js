@@ -36,13 +36,15 @@ MyFullpage = (function($) {
 
     function build() {
 
+        console.log('build fullpage');
+
         $header.hide();
         $footer.hide();
         $hidden.hide();
         $asset.show();
         $toggle.addClass('fixed');
 
-        if (!isBuilt()) {
+        if (!isEnabled()) {
 
             $screen.addClass('bg--white');
 
@@ -247,7 +249,7 @@ MyFullpage = (function($) {
                     },
                     afterRender: function(){
 
-                        MySlider.close();
+                        // MySlider.close();
                         $screen.delay(500).fadeOut(function() {
                             $screen.removeClass('bg--white');
                             $screen.show();
@@ -262,10 +264,12 @@ MyFullpage = (function($) {
             }
         }
 
-        MyFlexslider.resize();
+        // MyFlexslider.resize();
     } 
 
     function destroy() {
+
+        console.log('destroy fullpage');
    
         $header.show();
         $footer.show();
@@ -273,21 +277,33 @@ MyFullpage = (function($) {
         $asset.hide();
         $toggle.removeClass('fixed');
 
-        if (isBuilt()) $.fn.fullpage.destroy('all');
+        if (isEnabled()) $.fn.fullpage.destroy('all');
 
-        MySlider.reset();
+        // MySlider.reset();
         // MyFlexslider.reset(); 
-        MyFlexslider.resize();
+        // MyFlexslider.resize();
     }
     
     //public methods
 
     function toggle() {
 
-        isBuilt() ? destroy() : build();
+        console.log("on fullpage toggle");
+
+        isEnabled() ? destroy() : build();
+
+        //reset
+        // MySlider.reset();
+        // MyFlexslider.resize();
+        // Resizer.reset();
+        MySlider.reset();
+        MyFlexslider.reset(); 
+        MyFlexslider.resize();
     };
 
     function reset() {
+
+        console.log("reset fullpage");
 
         if (Pg.isFront()) {
 
@@ -312,17 +328,17 @@ MyFullpage = (function($) {
         }
     }
 
-    function disable() {
+    // function disable() {
 
-        $.fn.fullpage.setAutoScrolling(false);
-    }
+    //     $.fn.fullpage.setAutoScrolling(false);
+    // }
 
-    function enable() {
+    // function enable() {
 
-        $.fn.fullpage.setAutoScrolling(true);
-    }
+    //     $.fn.fullpage.setAutoScrolling(true);
+    // }
 
-    function isBuilt() {
+    function isEnabled() {
 
         return $('html').hasClass('fp-enabled');
     }
@@ -331,9 +347,8 @@ MyFullpage = (function($) {
 
     public_API = { 
 
-        disable: disable,
-        enable: enable,
-        reset: reset
+        reset: reset,
+        isEnabled: isEnabled
     }
     
     return public_API

@@ -527,6 +527,10 @@ change permissions on files directory to 777
 
 * fix transitions
 
+#### 0.7.17
+
+* add sub sub menu
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

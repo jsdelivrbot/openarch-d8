@@ -11,9 +11,9 @@ $menu-focus-color:				$base-focus-color;
 $menu-focus-color-inv:			$base-focus-color-inv;
 
 $menu-top-btn-bg: 				none;
-$menu-top-activeparent-bg: 		$whitesmoke-bg-color;
-$menu-top-child-bg: 			$whitesmoke-bg-color; /*$darkgrey-bg-color;*/
-$menu-top-activechild-bg: 		$whitesmoke-bg-color; /*$darkgrey-bg-color;*/
+$menu-top-activeparent-bg: 		white; /*$whitesmoke-bg-color;*/
+$menu-top-child-bg: 			white; /*$whitesmoke-bg-color;*/ /*$darkgrey-bg-color;*/
+$menu-top-activechild-bg: 		white; /*$whitesmoke-bg-color;*/ /*$darkgrey-bg-color;*/
 $menu-top-child-color: 			$lighter-font-color-inv;
 
 
@@ -86,7 +86,9 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 		
 	} */
 
-	li a {padding-left: gutter(3.5 1);} li ul li a {padding-left: gutter(3.5 1) *1.5;}
+	li a {padding-left: gutter(3.5 1);} 
+	li ul li a {padding-left: gutter(3.5 1) *1.5;}
+	li ul li ul li a {padding-left: gutter(3.5 1) *2;}
 
 	/*@include tiny   { li a {padding-left: 20px;} li ul li a {padding-left: 30px;} }
 	@include mobile { li a {padding-left: 20px;} li ul li a {padding-left: 30px;} }
@@ -166,6 +168,7 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 			float: left;
 		}
 
+		/* primary menu links */
 		li a {
 			display: 			block;
 			line-height: 		inherit;
@@ -174,16 +177,24 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 			background-color: 	$menu-top-btn-bg;
 		}
 
+		/* secondary menu links */
+		li ul li a {
+			line-height: 		1.5;
+			height: 			3.33rem;
+		}
+
 		li a:hover {
 			background-color: white; /*$menu-top-activeparent-bg;*/
 		}
+
 		li ul li a:hover {
 			background-color: 	$menu-top-activechild-bg; /*$menu-bg-color;*/
 		}
 
-		/* indent submenu items */
+		/* indent submenu items  */ /*<-----*/
 		li a,
-		li ul li a {
+		li ul li a,
+		li ul li ul li a {
 			padding: 0 .8rem;
 			@include full {
 				padding: 0 1rem;
@@ -198,17 +209,25 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 		}
 
 		ul li label {
-			position: relative;
+			position: 		relative;
 			display: 		block;
 			line-height: 	inherit;
 			height: 		inherit;
 			cursor: 		pointer;
 		}
 
+		ul li ul li label {
+			line-height: 	1.5;
+			height: 		3.33rem;
+		}
+
+		/*<-----*/
 		ul li:hover label {
 			background-color: $menu-top-activeparent-bg;
 
 		}
+
+		/*<-----*/
 		/*ul li label:hover,*/
 		ul li label ~ ul {
 			font-size: $h4-font-size;
@@ -226,7 +245,6 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 			display: 		initial;
 			line-height: 	inherit;
 			height: 		inherit;
-			
 		}
 
 		ul li label ~ ul {
@@ -237,9 +255,12 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 		}
 
 		ul li label:hover ~ ul,
-		ul li label ~ ul:hover  {
+		ul li label ~ ul:hover,
+		ul li ul li label:hover ~ ul,
+		ul li ul li label ~ ul:hover  {
 			height: auto;
 			display:block;
+			overflow: visible;
 			/*min-height:40px;
 			max-height:400px;*/
 		}

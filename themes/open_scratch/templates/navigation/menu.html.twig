@@ -38,7 +38,8 @@
         
         <li{{ item.attributes }}>
 
-          {% if menu_level == 0 and item.below %}
+          {# {% if menu_level == 0 and item.below %} #}
+          {% if item.below %}
             <input type="checkbox" id="{{ item.title }}" />
             <label for="{{ item.title }}" >
               {{ link(item.title, item.url) }}

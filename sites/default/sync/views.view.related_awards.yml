@@ -37,7 +37,7 @@ display:
         type: views_query
         options:
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_comment: ''
           query_tags: {  }
@@ -388,16 +388,6 @@ display:
           admin_label: 'Item referenced'
           required: false
           plugin_id: standard
-        reverse__node__field_relation:
-          id: reverse__node__field_relation
-          table: node_field_data
-          field: reverse__node__field_relation
-          relationship: none
-          group_type: group
-          admin_label: 'Item referencing'
-          required: false
-          entity_type: node
-          plugin_id: entity_reverse
       arguments:
         nid:
           id: nid

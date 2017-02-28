@@ -31,7 +31,7 @@
 #}
 {# {{ dump(fields.field_press_file.content) }} #}
 {# {{ dump(fields.sticky ) }} #}
-<tr class="focus__block">
+<tr class="row--clickable focus__block">
 	<td class="press-table__data-publication-date">
 		<span>{{ fields.field_press_publication_date.content }}</span>
 	</td>
@@ -49,11 +49,11 @@
 					<i class="fa fa-file" aria-hidden="true"></i>
 				</a> #}
 			{% if fields.field_press_file.content %}
-				<a class="icon icon--button-sml icon--fa focus__btn" href="{{ fields.field_press_file.content|striptags }}">
+				<a class="icon icon--button-sml icon--fa focus__btn clickable-row-link" href="{{ fields.field_press_file.content|striptags }}">
 					<i class="fa fa-file-o" aria-hidden="true"></i>
 				</a>	    		
 			{% elseif fields.field_press_link.content %}
-				<a class="icon icon--big icon--button-sml icon--mat focus__btn" href="{{ fields.field_press_link.content|striptags }}">
+				<a class="icon icon--big icon--button-sml icon--mat focus__btn clickable-row-link" href="{{ fields.field_press_link.content|striptags }}">
 	    			<i class="material-icons">call_made</i>
 	    		</a>
 			{% endif %}

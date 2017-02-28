@@ -531,6 +531,10 @@ change permissions on files directory to 777
 
 * add sub sub menu
 
+#### 0.7.18
+
+* fix duplication issue with press and awards
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

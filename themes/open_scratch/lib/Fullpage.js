@@ -136,17 +136,18 @@ MyFullpage = (function($) {
                         if (index == 2){
                             $footer.show();
                             $header.show(); 
-                            MySlider.open();            
+                            (Breakpoint.isWide() || Breakpoint.isWider()) ? MySlider.open() : MySlider.close();            
                         }
                         
                     },
                     afterRender: function(){
 
                         MySlider.close();
-                        $screen.delay(500).fadeOut(function() {
-                            $screen.removeClass('bg--white');
-                            $screen.show();
-                        });
+                        $screen.delay(500).fadeOut();
+                        // $screen.delay(500).fadeOut(function() {
+                        //     $screen.removeClass('bg--white');
+                        //     $screen.show();
+                        // });
 
                     },
                     afterResize: function(){},

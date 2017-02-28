@@ -154,10 +154,10 @@
 			width: 100%;
 		}
 
-		-webkit-transition: 	width 0 ease, 
-								margin-left 0 ease;
-		transition: 			width 0 ease, 
-								margin-left 0 ease;
+		-webkit-transition: width .3s ease, 
+							margin-left .3s ease;
+		transition: 		width .3s ease, 
+							margin-left .3s ease;
 	}
 }
 

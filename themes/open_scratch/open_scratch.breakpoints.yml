@@ -4,6 +4,7 @@ open_scratch.tiny:
   weight: 0
   multipliers:
     - 1x
+    - 2x
 open_scratch.mobile:
   label: mobile
   mediaQuery: 'all and (min-width: 351px) and (max-width: 560px)'

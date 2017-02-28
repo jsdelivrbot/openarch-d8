@@ -4,4 +4,11 @@ status: true
 dependencies: {  }
 name: open_img_tiny_x2
 label: OPEN_img_tiny_x2
-effects: {  }
+effects:
+  4f99368b-23c8-4870-b132-13a784b88a61:
+    uuid: 4f99368b-23c8-4870-b132-13a784b88a61
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 560

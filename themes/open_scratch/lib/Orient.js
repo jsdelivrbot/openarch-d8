@@ -3,7 +3,7 @@
 
 Orient = (function($) {
 
-	$(document).ready(function() { reset(); });
+	$(document).ready(function() { Resizer.reset(); });
 
 	function isLandscape() {
 

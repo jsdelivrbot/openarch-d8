@@ -17,6 +17,7 @@ MySlider = (function($) {
 	// var isFull = (Breakpoint.isWidest())
 	// var onTask = false;
 	// var onFrontPage = false;
+	var isToggled = false;
 
 	//cache dom
 	var $slider = $('.slider');
@@ -51,16 +52,29 @@ MySlider = (function($) {
 
 		console.log("reset sidebar");
 
-		if (!(Breakpoint.isWide() || Breakpoint.isWider()) || Pg.isFront()) {
+		if (Pg.isFront() || MyFullpage.isEnabled()) {
 
             close();
+            isToggled = false;
 
-        } else { // Let fullpage close slider if it wants to.
+        } else if(isToggled) {
 
-        	MyFullpage.isEnabled() ? close() : open()
+        	//do nothing
+
+        	// MyFullpage.isEnabled() ? close() : open()
         	// !isOpen() ? close() : open()
         	// open();
-        } 
+
+        } else if(Breakpoint.isWide() || Breakpoint.isWider()) {
+
+        	open();
+        	isToggled = false; //no nec.
+
+        } else {
+
+        	close();
+        	isToggled = false; //no nec.
+        }
 	};
 
 	function open() { //safe
@@ -86,6 +100,8 @@ MySlider = (function($) {
 		console.log("on sidebar toggle");
 
 		isOpen() ? close() : open();
+
+		isToggled = true;
 
 		//reset
 		// MyFlexslider.resize();

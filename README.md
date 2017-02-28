@@ -535,6 +535,14 @@ change permissions on files directory to 777
 
 * fix duplication issue with press and awards
 
+#### 0.7.19
+
+* fix vertical center issue with slideshow on landscape phone 
+
+#### 0.7.20
+
+* fix slider gap issue
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

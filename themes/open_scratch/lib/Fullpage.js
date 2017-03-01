@@ -21,6 +21,12 @@ MyFullpage = (function($) {
 
     $toggle.click(function() { toggle() });
 
+    $(document).on('keydown', function (event) {          
+        if (event.keyCode == 70) {       
+            toggle()
+        }
+    });
+
     $(document).ready(function() { 
 
         init() 
@@ -44,9 +50,7 @@ MyFullpage = (function($) {
         $asset.show();
         $toggle.addClass('fixed');
 
-        if (!isEnabled()) {
-
-            $screen.addClass('bg--white');
+        if (!isEnabled()) { 
 
             if (Pg.isFront()) {
 
@@ -143,7 +147,7 @@ MyFullpage = (function($) {
                     afterRender: function(){
 
                         MySlider.close();
-                        $screen.delay(500).fadeOut();
+                        
                         // $screen.delay(500).fadeOut(function() {
                         //     $screen.removeClass('bg--white');
                         //     $screen.show();
@@ -157,6 +161,8 @@ MyFullpage = (function($) {
                 });
 
             } else { //is task
+
+                $screen.addClass('bg--white');
 
                 $('#fullpage').fullpage({
 

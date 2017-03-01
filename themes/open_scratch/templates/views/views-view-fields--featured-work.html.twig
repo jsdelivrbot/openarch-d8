@@ -43,14 +43,11 @@
 		<div class="ribbon ribbon--med">
 			<div class="ribbon__segments">
 
-				{# <span class="ribbon__segment--left">
-					<a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a>
-				</span> #}
 				<span class="ribbon__segment--left">
-					<div class="label label--nopad"><h6>{{ fields.title.content }}</h6></div> 
+					<div class="label label--nopad c--white op--7"><h6>{{ fields.title.content }}</h6></div> 
 				</span>
-				<span class="ribbon__segment">
-					<div class="label label--nopad"><h4>{{ fields.counter.content }}/ {{ view.result|length }}</h4></div>
+				<span class="ribbon__segment--left">
+					<div class="label label--nopad c--white op--7"><h6><span>{{ fields.counter.content }} / {{ view.result|length }}</span></h6></div>
 				</span>
 
 			</div>

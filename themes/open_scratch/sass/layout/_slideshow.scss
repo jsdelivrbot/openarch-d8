@@ -119,7 +119,15 @@ $slide-titlebar-font-color: 	$lighter-font-color;
 
 				&__caption { 			/*.titlebar*/
 
+					/*color: white;*/
+
 					a:before { content:"\2191\00a0\00a0\00a0"; }
+					/*a:after { content:"\00a0"; }*/
+
+					.label { padding: 0 .5rem; }
+
+					@include tiny {display: none;}
+					@include mobile {display: none;}
 				}
 			}
 

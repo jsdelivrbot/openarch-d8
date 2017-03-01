@@ -543,6 +543,12 @@ change permissions on files directory to 777
 
 * fix slider gap issue
 
+#### 0.7.21
+
+* add preloader
+* add fade in on page load
+* update front page pager toolbar
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -1,11 +1,14 @@
-.card.nameplate {
+.nameplate {
 
 	/*display: inline-block;*/ /* so text-align center to works */
 	/* text-align center on section centers horizontally */
 
 	position: absolute; /* otherwise can't get it infront of slideshow */
-	top: 48%;
+	top: 50%;
+	/*left: 50%;*/
 	width: 100%;
+	/*margin: -15px 0 0 -90px;*/
+	margin-top: -1.875rem;
 	pointer-events: none;
 	
 }

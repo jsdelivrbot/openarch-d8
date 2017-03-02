@@ -549,6 +549,10 @@ change permissions on files directory to 777
 * add fade in on page load
 * update front page pager toolbar
 
+#### 0.7.22
+
+* enable sidebar for all bps
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

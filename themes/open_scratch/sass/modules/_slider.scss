@@ -1,18 +1,13 @@
 .visor {
 
-	/*@include tiny {*/
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-		-webkit-transition: .3s ease transform;
-		transition: .3s ease transform;
-	/*}*/
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
 }
+
 .visor.up {
 
-	/*@include tiny {*/
-		-webkit-transform: translateY(-105%);
-	  	transform: translateY(-105%);
-	/*}*/
+	-webkit-transform: translateY(-105%);
+	transform: translateY(-105%);
 }
 
 .slider {
@@ -27,140 +22,83 @@
 		pointer-events:  	none;
 	}
 
-	/*@include layout((
-		gutter-position: 	inside-static,
-		columns: 			12, 
-		gutters: 			1,
-		global-box-sizing: 	border-box,
-		debug: (
-		    image: show-columns,
-		    color: rgba(#AEEFF2, .15),
-		    output: overlay,
-		    toggle: top right,
-	    ),
-	));*/
-
-	@include tiny {}
-	@include mobile {}
-	@include narrow {}
-	@include wide {}
-	@include wider {}
-	@include widest {}
-	@include full {}
-
 	> .slider-drawer {
 
+		-webkit-transition: .3s ease all;
+		transition: .3s ease all;
+
 		@include tiny {
-			/*width:			75%;*/
 			width: span(9 of 13 wide);
 			-webkit-transform: translateX(-100%);
-			transform: translateX(-100%);
-			-webkit-transition: .3s ease all;
-			transition: .3s ease all;
+			transform: translateX(-100%);			
 		}
-
 		@include mobile {
-			/*width:			50%;*/
 			width: span(6 of 13 wide);
 			-webkit-transform: translateX(-100%);
 			transform: translateX(-100%);
-			-webkit-transition: .3s ease all;
-			transition: .3s ease all;
 		}
-
 		@include narrow {
-			/*width:			33%;*/
 			width: span(4 of 13 wide);
 			-webkit-transform: translateX(-100%);
 			transform: translateX(-100%);
-			-webkit-transition: .3s ease all;
-			transition: .3s ease all;
 		}
-
 		@include wide {
-			/*width:			25%;*/
 			width: span(3 of 13 wide);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
-			-webkit-transition: .3s ease all;
-			transition: .3s ease all;
 		}
-
 		@include wider {
-			/*width:			20%;*/
 			width: span(3 of 16 wide);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
-			-webkit-transition: .3s ease all;
-			transition: .3s ease all;
-
-			/*width: 192px;*/ /* 0.2 x 1200 */
 		}
-
 		@include widest {
-			width:			15%; /*240px;*/
+			width: span(3 of 19 wide);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
-			-webkit-transition: .3s ease all;
-			transition: 0.3s ease all;
 		}
-
 		@include full {
-			width:			15%; /*240px;*/
+			width: span(6 of 19 wide);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
-			-webkit-transition: .3s ease all;
-			transition: .3s ease all;
 		}
-
 	}
 
 	> .slider-canvas {
 
+		-webkit-transition: .3s ease; 
+		transition: 		.3s ease;
+
 		@include tiny {
 			margin-left: 0;
 			width:	100%;
 		}
-
 		@include mobile {
 			margin-left: 0;
 			width:	100%;
 		}
-
 		@include narrow {
 			margin-left: 0;
 			width:	100%;
 		}
-
 		@include wide {
-
 			margin-left: span(3 of 13 wide);
 			width: span(10 of 13);
 		}
-
 		@include wider {
-
 			margin-left: span(3 of 16 wide);
 			width: span(13 of 16);
 		}
-
 		@include widest {
 			margin-left: 0;
 			width: 100%;
 		}
-
 		@include full {
 			margin-left: 0;
 			width: 100%;
-		}
-
-		-webkit-transition: width .3s ease, 
-							margin-left .3s ease;
-		transition: 		width .3s ease, 
-							margin-left .3s ease;
+		}	
 	}
 }
-
 
 .close {
 
@@ -180,33 +118,6 @@
 
 		margin-left: 0;
 		width:	100%;
-
-		/*@include wide {
-
-			margin-left: 0;
-			width:	100%;
-		}
-
-		@include wider {
-
-			margin-left: 0;
-			width:	100%;
-		}*/
-
-		@include widest {
-			/*width: 1200px;*/
-			/*margin: 0 auto;*/
-
-			/*width: 100%;*/
-		}
-
-		@include full {
-			/*width: 1200px;*/
-			/*margin: 0 auto;*/
-
-			/*width: 100%;*/
-		}
-
 	}
 }
 
@@ -229,47 +140,33 @@
 
 	> .slider-canvas {
 
-		/*margin-left: 25%;
-		width: 75%;*/
-
 		@include tiny {
 			margin-left: 0;
 			width: 100%;
 		}
-
 		@include mobile {
 			margin-left: 0;
 			width: 100%;
 		}
-
 		@include narrow {
 			margin-left: 0;
 			width: 100%;
 		}
-
 		@include wide {
-
 			margin-left: span(3 of 13 wide);
 			width: span(10 of 13);
 		}
-
 		@include wider {
-
 			margin-left: span(3 of 16 wide);
 			width: span(13 of 16);
 		}
-
 		@include widest {
 			margin-left: 0;
 			width: 100%;
-
 		}
-
 		@include full {
 			margin-left: 0;
 			width: 100%;
-
 		}
-
 	}
 }

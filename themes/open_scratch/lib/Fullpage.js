@@ -44,7 +44,7 @@ MyFullpage = (function($) {
 
         console.log('build fullpage');
 
-        $header.hide();
+        // $header.hide();
         $footer.hide();
         $hidden.hide();
         $asset.show();
@@ -126,7 +126,7 @@ MyFullpage = (function($) {
 
                         if (index == 2){
                             $footer.hide();
-                            $header.fadeOut();
+                            // $header.fadeOut();
                         }
                         
                     },
@@ -135,18 +135,21 @@ MyFullpage = (function($) {
                         if (index == 1){
                             $nameplate.fadeIn();
                             MySlider.close();
+                            MyVisor.up();
                         }
 
                         if (index == 2){
                             $footer.show();
-                            $header.show(); 
-                            (Breakpoint.isWide() || Breakpoint.isWider()) ? MySlider.open() : MySlider.close();            
+                            // $header.show(); 
+                            MyVisor.down();
+                            // (Breakpoint.isWide() || Breakpoint.isWider()) ? MySlider.open() : MySlider.close();            
                         }
                         
                     },
                     afterRender: function(){
 
                         MySlider.close();
+                        MyVisor.up();
                         
                         // $screen.delay(500).fadeOut(function() {
                         //     $screen.removeClass('bg--white');

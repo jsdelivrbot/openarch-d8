@@ -71,8 +71,8 @@ $menubar-width:				100%;
 	overflow: visible; /* don't hide dropdown submenu */
 
 	@include widest	{ 
-		margin-left: gutter(13);
-		margin-right: gutter(13);
+		padding-left: gutter(13);
+		padding-right: gutter(13);
 		clear: left;
 		float: none;  
 	}  

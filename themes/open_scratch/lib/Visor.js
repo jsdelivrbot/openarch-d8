@@ -16,12 +16,20 @@ MyVisor = (function($) {
 	//cache dom
 	// var $container = $('.container');
 	var $visor = $('.visor');
+	var $toggle = $visor.find('.visor-toggler');
+	var $nameplate = $('.nameplate');
 
 	//bindings
 	$(document).ready(function() { init() });
 	$(window).resize(function() { init() });
     $(window).scroll(function() { update() });
 	// $('.slider-toggler').click(function() { toggle() });
+
+	$(document).on('keydown', function (event) {          
+        if (event.keyCode == 72) { // "h" for header    
+            toggle()
+        }
+    });
 
 	function init() {
 
@@ -31,36 +39,41 @@ MyVisor = (function($) {
   //           || window.location.pathname == "/openarch-d8/"
   //           );
 
-        $isFullpage = (window.location.pathname == "/" 
-            || window.location.pathname == "/openarch-d8/"
-            );
+  		enable();
+		update();
 
-		if ($isFullpage) {
-	        disable();
-	    } else {
-	    	enable();
-			update();
-		}
+  //       $isFullpage = (window.location.pathname == "/" 
+  //           || window.location.pathname == "/openarch-d8/"
+  //           );
+
+		// if ($isFullpage) {
+	 //        disable();
+	 //    } else {
+	 //    	enable();
+		// 	update();
+		// }
 	}
 
 	function down() {
 
-		//if has close, then it is wide breakpoint with drawer closed
-		if ($visor.hasClass('up')) { 
-			$visor.removeClass('up');
-		} 
+		$isFullpage = (window.location.pathname == "/" 
+            || window.location.pathname == "/openarch-d8/"
+            );
+
+		$visor.removeClass('up');
+
+		if($isFullpage) {
+			$nameplate.fadeOut();
+		}
 
 		isDown = true;
 	};
 
 	function up() {
 
-		//if has open, then it is mobile breakpoint with drawer open
-		if ($visor.hasClass('up')) { 
-			/* bad state? */ 
-		} else { 
-			$visor.addClass('up'); 
-		}
+
+		$visor.addClass('up'); 
+		// $nameplate.fadeIn();
 
 		isDown = false;
 	};
@@ -83,16 +96,16 @@ MyVisor = (function($) {
 
 	function disable() {
 
-		if ($visor.hasClass('visor')) { 
+		// if ($visor.hasClass('visor')) { 
 			$visor.removeClass('visor'); 
-		} 
+		// } 
 	}
 
 	function enable() {
 
-		if (!$visor.hasClass('visor')) { 
+		// if (!$visor.hasClass('visor')) { 
 			$visor.addClass('visor'); 
-		}	
+		// }	
 	}
 
 	function update() {
@@ -117,16 +130,27 @@ MyVisor = (function($) {
 		// 	$bufferSize =  5.0 * $rootFont * 2;
 		// }
 
-		if ($scroll > $bufferSize) {
-			addStyle();
-		} else {
-			removeStyle();
-		}
+		$isFullpage = (window.location.pathname == "/" 
+            || window.location.pathname == "/openarch-d8/"
+            );
 
-		if ($scroll > ($bufferSize * 5)) {
-			up();
+		if (!$isFullpage) {
+
+			if ($scroll > $bufferSize) {
+				addStyle();
+			} else {
+				removeStyle();
+			}
+
+			if ($scroll > ($bufferSize * 5)) {
+				up();
+			} else {
+				down();
+			}
+
 		} else {
-			down();
+
+			//Let Fullpage.js handle this
 		}
 	};
 

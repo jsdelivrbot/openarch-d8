@@ -1,0 +1,58 @@
+/* ==================================================================
+## icon gallery
+===================================================================== */
+
+$icongal_base_font_size:	.65rem;
+$icongal_button_height:		$base_row_height;
+$icongal_icon_size:			1.2em;
+
+.icongallery-wrapper {
+	display: inline-block;
+	width: 100%;
+	vertical-align: middle;
+}
+
+.icongallery {
+
+	font-size:		$icongal_base_font_size;
+
+	&__container{
+
+		@include layout((
+	        gutter-position: 	before,
+	        columns: 			4,
+	        gutters: 			0,
+	        global-box-sizing: 	border-box
+    	));
+	}
+
+	&__item {
+
+		@include 		gallery(1 of 4);
+		line-height: 	$icongal_button_height;
+
+		> a {	
+
+			display: 				inline-block;
+			height:					100%;
+			width:					100%;
+			text-align:				center; /* horiz align img */
+			background: 			$icon-bg-color;
+			
+			&:hover {
+
+				> i { color: 		$icon-color-hover; }
+			}
+
+			> img {
+				vertical-align: 	middle; /* vertical align img */
+			}
+
+			> i {
+				font-size:			$icongal_icon_size;
+				color: 				$icon-color;
+				vertical-align:  	middle;
+			}
+		} 
+	}
+}

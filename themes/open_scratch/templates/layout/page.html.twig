@@ -2,55 +2,29 @@
 
 <div class="container slider bg"> 
 
-    <div class="layout sidebar-layout slider-drawer"> {# drop--right #}
+    <div class="layout sidebar-layout slider-drawer">
 
       <div class="wrapper sidebar-wrapper bg--white">
 
         <div class="sidebar">
 
-            <div class="region sidebar__top z--fwd">
+            <div class="region sidebar__top bg--white z--fwd">
 
-              <aside class="card sidebar-search" role="complementary">
-
-                <div class="searchbar-wrapper">
-                  <div class="searchbar">
-                    <span class="searchbar__input"><input type="search" id="search" placeholder="Search..." /><span>
-                  </div>
-                </div> 
-
-                {# {{ page.sidebar_search }} #}
-
-              </aside>
+                {% include '@open_scratch/parts/searchbar.html.twig' %}               
 
             </div>
 
-            <div class="region sidebar__middle buffer--side-top">
+            <div class="buffer-top"></div>
 
-              <aside class="card sidebar-nav" role="complementary">
+            <div class="region sidebar__middle">
 
                 {{ page.sidebar_nav }}
 
-              </aside>
-
             </div>
      
-            <div class="region sidebar__bottom z--fwd">
+            <div class="region sidebar__bottom bg--white z--fwd">
 
-              <aside class="card sidebar-links" role="complementary">
-
-                {# {{ page.sidebar_links }} #} {# <span>CN | EN</span>  #} 
-                <div class="icongallery-wrapper">
-                  <div class="icongallery">
-                    <ul class="icongallery__container">
-                      <li class="icongallery__item"><a><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
-                      <li class="icongallery__item"><a><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                      <li class="icongallery__item"><a><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                      <li class="icongallery__item"><a><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                    </ul>
-                  </div>
-                </div> 
-
-              </aside>
+                {% include '@open_scratch/parts/icongallery.html.twig' %} 
 
             </div>
 

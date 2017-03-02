@@ -2,10 +2,10 @@
 ## buffer
 ===================================================================== */
 
-$buffer-size-top: 		12.5rem; 
-$buffer-size-bottom:	8.75rem; 
+/*$buffer-size-top: 		12.5rem; 
+$buffer-size-bottom:	11.25rem; */
 
-@include tiny {
+/*@include tiny {
 	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
 	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
 	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
@@ -39,10 +39,10 @@ $buffer-size-bottom:	8.75rem;
 	.buffer--main-top 		{ padding-top:		$base-row1-height *3; }
 	.buffer--main-bottom 	{ padding-bottom:	$buffer-size-bottom; }
 	.buffer--side-top 		{ padding-top:		$base-row1-height *3; }
-}
+}*/
 
 /* buffer class */
-.card.buffer-top,
+/*.card.buffer-top,
 .card.buffer-bottom { 
 	@include widest {
 		padding-left: gutter(13);
@@ -50,9 +50,11 @@ $buffer-size-bottom:	8.75rem;
 		clear: left;
 		float: none;
 	}
-}
+}*/
+.buffer-top 			{ height:	$base-row1-height * 3; }
+.buffer-bottom 			{ height:	$base-row1-height * 2 - $base-row2-height; }
 
-@include tiny {
+/*@include tiny {
 	.buffer-top 			{ height:	$base-row1-height *3; }
 	.buffer-bottom 			{ height:	$buffer-size-bottom; }
 }
@@ -79,5 +81,5 @@ $buffer-size-bottom:	8.75rem;
 @include full {
 	.buffer-top 			{ height:	$base-row1-height *3; }
 	.buffer-bottom 			{ height:	$buffer-size-bottom; }
-}
+}*/
 

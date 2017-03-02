@@ -553,6 +553,10 @@ change permissions on files directory to 777
 
 * enable sidebar for all bps
 
+#### 0.7.23
+
+* refactor sidebar templates
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

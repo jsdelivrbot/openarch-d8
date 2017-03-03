@@ -13,32 +13,21 @@
 ===================================================================== */
 
 /*$toolbar-base-font-size:	$h4-font-size;*/
-$toolbar-height:			$tbar-height;
+/*$toolbar-height:			$tbar-height;*/
 
 /* ==================================================================
 ## Layout
 ===================================================================== */
 
-.toolbar-wrapper,
-.toolbar-toggle-wrapper {
+.toolbar-wrapper {
+ 	
+	pointer-events: 	none;
 
-	/*z-index: -100000;*/
-	position:			relative;
-	/*@include 			layout($grid-4col);
-	@include 			span(4);*/
-
-	/*@include wider  { @include span(first 7 of 9.5 wide); }*/
-	pointer-events: none;
 	a,
-	.ribbon__segment,
-	.ribbon__segment--left,
-	.ribbon__segment--right { 
+	.ribbon__segment  { 
+		
 		pointer-events: visible; 
-	}	
-}
-
-.toolbar,
-.toolbar-toggle {
+	}
 
 	@include widest	{ 
 		padding-left: gutter(13);
@@ -46,36 +35,39 @@ $toolbar-height:			$tbar-height;
 		clear: left;
 		float: none;  
 	} 
-
-		/* clearfix to prevent header region collapse w/out overflow hidden b/c that would clip dropdown menu */
-	@include clearfix;
-
-	font-size: 			$tbar-font-size; /*$toolbar-base-font-size;*/	
-	height: 			$toolbar-height;
-	text-transform:  	uppercase;
-	line-height: 		$toolbar-height;
-	position:			absolute;
-	top:				-$toolbar-height;
-	width:				100%;	
-
-	/*background: whitesmoke;*/
 }
 
-.toolbar-screen {
+.toolbar {
+
+	font-size: 			$tbar-font-size;
+	position:			relative;
+	height:				0;
+}
+
+	.toolbar-contents,
+	.toolbar-toggle {
 
 		/* clearfix to prevent header region collapse w/out overflow hidden b/c that would clip dropdown menu */
-	@include clearfix;
+		@include clearfix;
 	
-	height: 			$toolbar-height;
-	line-height: 		$toolbar-height;
-	position:			absolute;
-	top:				0;
-	width:				100%;	
+		position:			absolute;
+		top:				-$tbar-height;
+		width:				100%;	
+		height: 			$tbar-height;
+		line-height: 		$tbar-height;
 
-	/*z-index: -10000;*/
-	/*background: white;*/
+	}
 
-}
+	.toolbar-contents {
+		top: -$tbar-height;
+	}
+
+	.toolbar-toggle{
+		top: -$tbar-height;
+	}
+
+
+
 
 /* ==================================================================
 ## Type

@@ -507,7 +507,7 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 	
 }
 
-.peekable { /* toolbar */
+.peekable { /* peekable-contents */
 
 	/* hide checkbox */
 	input[type='checkbox'] {
@@ -518,11 +518,11 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 		color: black;
 	}*/
 
-	.peekable-target {
+	/*.peekable-target {
 
-	}
+	}*/
 
-	.peekable-target > .toolbar {
+	.peekable-contents {
 		/*display: none;*/
 		transition: top 0.4s, opacity 0.4s;
 	}
@@ -534,13 +534,13 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 	input[type='checkbox']:checked ~ label > .peekable-toggle {
 		/*max-height: 0;*/
 	}
-	input[type='checkbox'] ~ .peekable-target > .toolbar{
+	input[type='checkbox'] ~ .peekable-contents{
 		/*display: none;*/
 		top: 0;
 		opacity: 0;
 		/*max-height: 700px;*/
 	}
-	input[type='checkbox']:checked ~ .peekable-target > .toolbar{
+	input[type='checkbox']:checked ~ .peekable-contents{
 		/*max-height: 0;*/
 		/*display: inherit;*/
 		top: -$tbar-height;

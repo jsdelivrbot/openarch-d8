@@ -1,0 +1,27 @@
+<div class="wrapper sidebar-wrapper bg--white">
+
+    <div class="sidebar">
+
+        <div class="region sidebar__top bg--white z--fwd">
+
+            {% include '@open_scratch/parts/searchbar.html.twig' %}               
+
+        </div>
+
+        <div class="buffer-top"></div>
+
+        <div class="region sidebar__middle">
+
+            {{ page.sidebar_nav }}
+
+        </div>
+ 
+        <div class="region sidebar__bottom bg--white z--fwd">
+
+            {% include '@open_scratch/parts/icongallery.html.twig' %} 
+
+        </div>
+
+    </div> {# end sidebar #}
+
+</div> {# end sidebar-wrapper #}

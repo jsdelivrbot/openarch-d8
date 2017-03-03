@@ -1,138 +1,42 @@
-{#
-/**
- * @file
- * Theme override to display all the fields in a row.
- *
- * Available variables:
- * - view: The view in use.
- * - fields: A list of fields, each one contains:
- *   - content: The output of the field.
- *   - raw: The raw data for the field, if it exists. This is NOT output safe.
- *   - class: The safe class ID to use.
- *   - handler: The Views field handler controlling this field.
- *   - inline: Whether or not the field should be inline.
- *   - wrapper_element: An HTML element for a wrapper.
- *   - wrapper_attributes: List of attributes for wrapper element.
- *   - separator: An optional separator that may appear before a field.
- *   - label: The field's label text.
- *   - label_element: An HTML element for a label wrapper.
- *   - label_attributes: List of attributes for label wrapper.
- *   - label_suffix: Colon after the label.
- *   - element_type: An HTML element for the field content.
- *   - element_attributes: List of attributes for HTML element for field content.
- *   - has_label_colon: A boolean indicating whether to display a colon after
- *     the label.
- *   - element_type: An HTML element for the field content.
- *   - element_attributes: List of attributes for HTML element for field content.
- * - row: The raw result from the query, with all data it fetched.
- *
- * @see template_preprocess_views_view_fields()
- */
-#}
-{# <div class="teaser events__teaser border--top-ltgrey"> #}
-
-{# <div class="section"> #} {# data-anchor="{{ fields.title.label }}" #}
 <li class="gallery__item">
 
-	{# <div class="overlay"> #}
+	<div class="card__item card__slide">
+		{{ fields.field_video_embed.content }} {# img element #}
+	</div>
 
-		<div class="card__item card__slide">
-			{{ fields.field_video_embed.content }} {# img element #}
-		</div>
-		<div class="card__item card__header">
+	<div class="card__item card__header">
 
-			<div class="media mediaTitle">
+		<div class="media mediaTitle">
 
-		  		<div class="media__imgR">
-		            <div class="ribbon ribbon--med">
-				      	<div class="ribbon__segments">
-					      	<div class="ribbon__segment">
-				    			<a class="icon icon--bigr icon--mat icon--button-big" href="{{ base_path }}media/{{ fields.nid.content|striptags }}"><i class="material-icons">arrow_forward</i></a>	
-						    </div>
-					      	{# <div class="ribbon__segment">
-				      			<div class="label">more</div>
-							</div>  #} 	
-						</div>
-				    </div>
-		        </div>
+	  		<div class="media__imgR">
 
-				<div class="media__contents">
-			    	<h3 class="title title--bold">
-			    		{{ fields.title.content }}
-			    	</h3>
-					<h6>
-						{{ fields.type.content }}{{ fields.field_video_type.content }}
-					</h6>
-				</div>
+	            <div class="ribbon med">
+			      	<div class="ribbon__segments">
+				      	<div class="ribbon__segment right">
+
+			    			<a class="icon icon--bigr icon--mat icon--button-big" href="{{ base_path }}media/{{ fields.nid.content|striptags }}">
+			    				<i class="material-icons">arrow_forward</i>
+			    			</a>	
+
+					    </div>
+					</div>
+			    </div>
+
+	        </div>
+
+			<div class="media__contents">
+
+		    	<h3 class="title title--bold">
+		    		{{ fields.title.content }}
+		    	</h3>
+				<h6>
+					{{ fields.type.content }}{{ fields.field_video_type.content }}
+				</h6>
 
 			</div>
 
 		</div>
 
-	{# </div> #}
+	</div>
 
 </li>
-
-
-{# <div class="card video border--top-ltgrey expandable">
-	
-	<input type="checkbox" id="{{ fields.title.content|striptags }}" />
-	<label for="{{ fields.title.content|striptags }}">
-
-		<div class="card__item card__header card__header--headline expandable-head">
-
-			<div class="media mediaTitle">
-
-		  		<div class="media__imgR">
-		            <div class="ribbon">
-			            <div class="ribbon__segments">
-			                <div class="ribbon__segment">
-			                	<a class="icon icon--fa icon--button-big icon--big expander-toggle unchecked" style="background:none"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-			                	<a class="icon icon--fa icon--button-big icon--big expander-toggle checked" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-			                </div>
-			            </div>
-		            </div>
-		        </div>
-
-				<div class="media__contents">
-			    	<h2 class="title title--headline">
-			    		{{ fields.title.content }}
-			    	</h2>
-				</div>
-
-			</div>
-
-		</div>
-	
-	</label>
-
-	<div class="expandable-body">
-
-	<div class="card__item card__slide card__slide--small expander-item">
-		{{ fields.field_video_embed.content }}
-	</div>
-
-	<div class="card__item card__item--spaced card__body">
-		{{ fields.body.content }}
-	</div>
-
-	<div class="card__item card__footer">
-		<div class="ribbon ribbon--med">
-			<div class="ribbon__segments">
-				<span class="ribbon__segment--left">
-					<a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a>
-				</span>
-				<span class="ribbon__segment--left">
-					<div class="tag">{{ fields.type.content }}</div> 
-				</span>
-				<span class="ribbon__segment--left">
-					<div class="tag">{{ fields.field_video_type.content }}</div>
-				</span>
-			</div>
-		</div>
-	</div>
-
-	</div>
-
-</div> #}
-

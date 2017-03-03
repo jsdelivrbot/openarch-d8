@@ -6,18 +6,14 @@ use Drupal\Core\Url;
 function open_scratch_preprocess(&$variables, $hook)
 {
 
-	// Inject the current language into every template to ease theme development.
+    // Inject the current language into every template to ease theme development.
   	$variables['current_language'] = \Drupal::languageManager()->getCurrentLanguage();
     $variables['current_language_id'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
-
-
-    //$variables['base_path'] = base_path();
 
     // Inject a usable directory path.
   	$variables['theme_path'] = base_path() . $variables['directory'];
   	
-  	// Generate Url Strings
-    
+  	// Generate Url Strings    
     $cur_lang_id = \Drupal::languageManager()->getCurrentLanguage()->getId();
     if ($cur_lang_id == "zh-hans") {
       $url_prefix = 'cn/';
@@ -26,19 +22,25 @@ function open_scratch_preprocess(&$variables, $hook)
     } else {
       $url_prefix = '';
     }
+
+    //$variables['base_path'] = base_path();
+    $variables['root_path'] = base_path();
     $variables['base_path'] = base_path() . $url_prefix;
     $variables['current_language_prefix'] = $url_prefix;
-  
+
+    //current path, eg. "practice" (see http://drupal.stackexchange.com/questions/106103/get-the-current-path-alias-or-path)
+    $variables['current_path'] = ltrim(\Drupal::service('path.current')->getPath(), '/');
+    
     //$options = ['language' => $cur_language,];
     $options['language'] = \Drupal::languageManager()->getCurrentLanguage();
-  	$variables['practice_path'] = Url::fromUri('internal:/practice')->toString();
+  	// $variables['practice_path'] = Url::fromUri('internal:/practice')->toString();
     //$variables['event_path'] = Url::fromUri('internal:/event', $options)->toString();
     //$variables['event_path'] = base_path() . $url_prefix . 'event';
-    $variables['events_path'] = Url::fromUri('internal:/events')->toString();
-    $variables['projects_gallery_path'] = Url::fromUri('internal:/projects/gallery')->toString();
-    $variables['projects_table_path'] = Url::fromUri('internal:/projects/table')->toString();
-    $variables['projects_teasers_path'] = Url::fromUri('internal:/projects/teasers')->toString();
-    $variables['task_path'] = Url::fromUri('internal:/task')->toString();
+    // $variables['events_path'] = Url::fromUri('internal:/events')->toString();
+    // $variables['projects_gallery_path'] = Url::fromUri('internal:/projects/gallery')->toString();
+    // $variables['projects_table_path'] = Url::fromUri('internal:/projects/table')->toString();
+    // $variables['projects_teasers_path'] = Url::fromUri('internal:/projects/teasers')->toString();
+    // $variables['task_path'] = Url::fromUri('internal:/task')->toString();
 
 }
 

@@ -1,63 +1,35 @@
-{#
-/**
- * @file
- * Theme override to display all the fields in a row.
- *
- * Available variables:
- * - view: The view in use.
- * - fields: A list of fields, each one contains:
- *   - content: The output of the field.
- *   - raw: The raw data for the field, if it exists. This is NOT output safe.
- *   - class: The safe class ID to use.
- *   - handler: The Views field handler controlling this field.
- *   - inline: Whether or not the field should be inline.
- *   - wrapper_element: An HTML element for a wrapper.
- *   - wrapper_attributes: List of attributes for wrapper element.
- *   - separator: An optional separator that may appear before a field.
- *   - label: The field's label text.
- *   - label_element: An HTML element for a label wrapper.
- *   - label_attributes: List of attributes for label wrapper.
- *   - label_suffix: Colon after the label.
- *   - element_type: An HTML element for the field content.
- *   - element_attributes: List of attributes for HTML element for field content.
- *   - has_label_colon: A boolean indicating whether to display a colon after
- *     the label.
- *   - element_type: An HTML element for the field content.
- *   - element_attributes: List of attributes for HTML element for field content.
- * - row: The raw result from the query, with all data it fetched.
- *
- * @see template_preprocess_views_view_fields()
- */
-#}
-{# <div class="teaser headlines__teaser border-bottom-hairline"> #}
 <div class="card book-item border--tb expandable focus__bg">
 	
 	<input type="checkbox" id="{{ fields.title.content|striptags }}" />
+
 	<label for="{{ fields.title.content|striptags }}">
 
-		{# <div class="media mediaTitle teaser__title"> #}
 		<div class="card__header expandable-head">
 
 			<div class="media mediaTitle mediaTitle--big">
 
-				{# <div class="media__imgR">
-				    <a class="icon icon--sml" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-		  		</div> #}
-
 		  		<div class="media__imgR">
+
 		            <div class="ribbon ribbon--big">
 		              <div class="ribbon__segments">
 		                <div class="ribbon__segment">
-		                  	<a class="icon icon--fa icon--button-big icon--big checked" style="background:none"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-			                <a class="icon icon--fa icon--button-big icon--big unchecked" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+		                  	<a class="icon icon--fa icon--button-big icon--big checked" style="background:none">
+		                  		<i class="fa fa-angle-up" aria-hidden="true"></i>
+		                  	</a>
+			                <a class="icon icon--fa icon--button-big icon--big unchecked" style="background:none">
+			                	<i class="fa fa-angle-down" aria-hidden="true"></i>
+			                </a>
 		                </div>
 		              </div>
 		            </div>
+
 		        </div>
 
 				<div class="media__contents">
 
-			    	<h4 class="title title--headline">{{ fields.title.content }} ({{ fields.field_press_publication_date.content }})</h4>
+			    	<h4 class="title title--headline">
+			    		{{ fields.title.content }} ({{ fields.field_press_publication_date.content }})
+			    	</h4>
 			    	
 				</div>
 
@@ -70,13 +42,17 @@
 	<div class="expandable-body">
 
 		<div class="card__item card__slide">
+
 			<div class="gallery gallery--books">
 				{{ fields.field_image_files.content }}
 			</div>
+
 		</div>
 
 		<div class="card__item card__item--spaced card__body">
+
 			<div class="bd lc--3">{{ fields.body.content }}</div>
+
 			<ul class="list facts">
 				<li class="facts__fact">
 					<h6>Author: {{ fields.field_press_pub_author.content }}</h6>
@@ -110,29 +86,33 @@
 					<h6>Dimensions: {{ fields.field_product_dimensions.content }}</h6>
 				</li>
 			</ul>
+
 		</div>
 
 		<div class="card__item card__footer">
-			<div class="ribbon ribbon--med">
+
+			<div class="ribbon med">
 				<div class="ribbon__segments">
-					<span class="ribbon__segment--left">
-						{# <a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a> #}
+
+					<span class="ribbon__segment left">
 						<a class="icon icon--mat icon--pull-left"><i class="material-icons">label</i></a>
 					</span>
-					<span class="ribbon__segment--left">
+					<span class="ribbon__segment left">
 						<div class="tag">{{ fields.type.content }}</div> 
 					</span>
-					<span class="ribbon__segment--left">
+					<span class="ribbon__segment left">
 						<div class="tag">{{ fields.field_book_type.content }}</div>
 					</span>
-					<div class="ribbon__segment">
+					<div class="ribbon__segment right">
 		              	<a class="icon icon--mat icon--button-big" href="{{ events_path }}"><i class="material-icons">call_made</i></a> 
 		            </div>
-		            <div class="ribbon__segment">
+		            <div class="ribbon__segment right">
 		              	<div class="label label--nopad"><h4>{{ fields.field_link.content }}</h4></div>
 		            </div>
+
 				</div>
 			</div>
+
 		</div>
 
 	</div>

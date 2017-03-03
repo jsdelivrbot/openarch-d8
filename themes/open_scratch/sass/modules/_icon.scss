@@ -20,17 +20,17 @@ $icon-hover-bg-color:			#e5e5e5;
 .icons {
 
 	/* apply global icon sizing, change to px to make size non-responsive */
-	font-size:	1rem;
+	/*font-size:	1rem;
 
 	&__container {
 
-		/* handle item overflow here*/
+		
 	}
 
 		&__item {
 
-			float:						right; /* fill container right to left */
-		}
+			float:						right; 
+		}*/
 }
 
 			.icon { /*a*/
@@ -239,6 +239,12 @@ $icon-hover-bg-color:			#e5e5e5;
 			.icon--button-big {
 				height:					$base-row2-height;
 				line-height: 			$base-row2-height;
+				/*width:					$base-button-height-big;*/
+			}
+
+			.icon--button-bigr {
+				height:					$base-row1-height;
+				line-height: 			$base-row1-height;
 				/*width:					$base-button-height-big;*/
 			}
 

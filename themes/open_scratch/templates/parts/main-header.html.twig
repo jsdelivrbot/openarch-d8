@@ -1,0 +1,36 @@
+<div class="wrapper main-header-wrapper overlay bg--white" role="contentinfo">
+
+  <div class="main-header media overlay__under">
+
+    <aside class="main-header__right media__imgR" role="contentinfo">
+        {# <div class="icons">
+            {{ page.header_right }} 
+        </div> #}
+
+      <div class="icons">
+        <a class="icon icon--mat icon--button-bigr z--front slider-toggler menu-toggler-1">
+          <i class="material-icons">menu</i>
+        </a>
+        <a href="{{ root_path }}{{ current_path }}" class="language-link icon icon--button-bigr language--icon fz--en" hreflang="en" data-drupal-link-system-path="{{ current_path }}">EN</a>
+        <a href="{{ root_path }}cn/{{ current_path }}" class="language-link icon icon--button-bigr language--icon fz--cn" hreflang="zh-hans" data-drupal-link-system-path="{{ current_path }}">中文</a>
+      </div>
+
+    </aside>
+
+    <aside class="main-header__left media__contents" role="contentinfo">
+
+      {{ page.header_left }}
+
+    </aside>
+
+  </div>
+
+  <div class="main-header overlay__over pe--n">
+
+    <aside class="main-header__center" role="contentinfo">
+      {{ page.header_middle }}
+    </aside>
+
+  </div>
+
+</div>

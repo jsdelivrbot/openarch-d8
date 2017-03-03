@@ -15,46 +15,64 @@ $ribbon-height:				$base-row2-height;
 
 .ribbon {
 
-	/* apply global icon sizing, change to px to make size non-responsive */
-	/*font-size:					$ribbon-base-font-size;*/
-
-	/*height: 					$ribbon-height;
-	line-height:  				$ribbon-height;*/
 	overflow: 					hidden;
 	height: inherit;
 	line-height: inherit;
 
 	&__segments {
 
-		/* handle item overflow here*/
+		/* handle item overflow here */
 	}
+}
+		/* placeholder to prevent applying base class without position subclass*/
+		%ribbon__segment {
 
-		&__segment {
-
-			float:						right; /* fill container right to left */
 			overflow: hidden; 
 			white-space: nowrap; 
 			text-overflow: ellipsis;
 		}
+		.ribbon__segment.right {
 
-		&__segment--right {
+			@extend %ribbon__segment;
+			float: right; 
+		}
+		.ribbon__segment.left {
 
-			float:						right; /* fill container right to left */
+			@extend %ribbon__segment;
+			float: left;
+		}
+		.ribbon__segment.center {
+
+			@extend %ribbon__segment;
+			float: none;
+			text-align: center;
 		}
 
-		&__segment--left {
 
-			float:						left; /* fill container right to left */
-			overflow: hidden; 
-			white-space: nowrap; 
-			text-overflow: ellipsis;
-		}
+.ribbon.sml {
 
-		&__segment--center{
+	height: 					$base-row3-height;
+	line-height:  				$base-row3-height;	
+}
+.ribbon.med {
 
-			float:						none; /* fill container right to left */
-			text-align: 				center;
-		}
+	height: 					$base-row2-height;
+	line-height:  				$base-row2-height;
+}
+.ribbon.big {
+
+	height: 					$base-row1-height;
+	line-height:  				$base-row1-height;	
+}
+.ribbon.bigr {
+
+	height: 					$base-row0-height;
+	line-height:  				$base-row0-height;	
+}
+.ribbon.dbl {
+
+	height: 					$base-row2-height *2;
+	line-height:  				$base-row2-height *2;	
 }
 
 /* width */
@@ -63,41 +81,10 @@ $ribbon-height:				$base-row2-height;
 .w--90p {width: 90%;}
 .w--85p {width: 85%;}
 
-.ribbon--sml {
-
-	/*font-size:					.9rem;*/
-	height: 					$base-row3-height;
-	line-height:  				$base-row3-height;
-	
-}
-
-.ribbon--med {
-
-	/*font-size:					1rem;*/
-	height: 					$base-row2-height;
-	line-height:  				$base-row2-height;
-}
-
-.ribbon--big {
-
-	/*font-size:					1rem;*/
-	height: 					$base-row1-height;
-	line-height:  				$base-row1-height;	
-}
-
-.ribbon--bigr {
-
-	/*font-size:					1rem;*/
-	height: 					$base-row0-height;
-	line-height:  				$base-row0-height;	
-}
-
-.ribbon--dbl {
-
-	/*font-size:					1rem;*/
-	height: 					$base-row2-height *2;
-	line-height:  				$base-row2-height *2;	
-}
+/* segment modifiers */
+/*.fl--l { float: left; }
+.fl--r { float: right; }
+.fl--n { float: none; }*/
 
 
 

@@ -80,67 +80,6 @@ $footer-base-font-size:		1rem;
 		clear: left;
 		float: none;  
 	} 
-
-	&__top {
-
-		height:			4.5em;
-		line-height: 	4.5em;
-
-		display:		none;
-
-		@include narrow {
-			display:		none;
-		}
-
-		@include wide {
-			display:		none;
-		}
-
-		@include wider {
-			display:		none;
-		}
-
-		@include widest {
-			display:		none;
-		}
-		@include full {
-			display:		none;
-		}
-	}
-
-	&__middle {
-
-		padding-top: 140px;
-		padding-bottom: 140px;
-
-		display:		none;
-
-		@include narrow {
-			display:		none;
-		}
-
-		@include wide {
-			display:		none;
-		}
-
-		@include wider {
-			display:		none;
-		}
-
-		@include widest {
-			display:		none;
-		}
-		@include full {
-			display:		none;
-		}
-	}
-
-	&__bottom {
-
-		@include widest {
-			/*display: 		none;*/
-		}
-	}
 }
 
 

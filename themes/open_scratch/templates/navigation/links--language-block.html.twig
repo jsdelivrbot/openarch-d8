@@ -33,23 +33,23 @@
 #}
 
 {% if links -%}
-  <div{{ attributes.addClass('icon--container') }}>
+  {# <div{{ attributes.addClass('icon--container') }}> #}
     {%- for item in links -%}
       {# <div{{ item.attributes }}> #}
         {%- if item.link -%}
           {% if item.link['#title'] == "English" %}
             {% set a = item.link %}
             {% set a = a|merge({'#title': "EN" }) %}
-            <div class="icon icon--button-big language--icon english">{{a}}</div>
+            <div class="icon icon--button-bigr language--icon fz--en">{{a}}</div>
           {% elseif item.link['#title'] == "Chinese, Simplified" %}
             {% set a = item.link %}
             {% set a = a|merge({'#title': "中文" }) %}
-            <div class="icon icon--button-big language--icon chinese">{{a}}</div>
+            <div class="icon icon--button-bigr language--icon fz--cn">{{a}}</div>
           {% endif %}
         {%- else -%}
           {{ item.text }}
         {%- endif -%}
       {# </div> #}
     {%- endfor -%}
-  </div>
+  {# </div> #}
 {%- endif %}

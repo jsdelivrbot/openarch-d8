@@ -1,59 +1,33 @@
-{#
-/**
- * @file
- * Theme override for main view template.
- *
- * Available variables:
- * - attributes: Remaining HTML attributes for the element.
- * - css_name: A css-safe version of the view name.
- * - css_class: The user-specified classes names, if any.
- * - header: The optional header.
- * - footer: The optional footer.
- * - rows: The results of the view query, if any.
- * - empty: The content to display if there are no rows.
- * - pager: The optional pager next/prev links to display.
- * - exposed: Exposed widget form/info to display.
- * - feed_icons: Optional feed icons to display.
- * - more: An optional link to the next page of results.
- * - title: Title of the view, only used when displaying in the admin preview.
- * - title_prefix: Additional output populated by modules, intended to be
- *   displayed in front of the view title.
- * - title_suffix: Additional output populated by modules, intended to be
- *   displayed after the view title.
- * - attachment_before: An optional attachment view to be displayed before the
- *   view content.
- * - attachment_after: An optional attachment view to be displayed after the
- *   view content.
- * - dom_id: Unique id for every view being printed to give unique class for
- *   Javascript.
- *
- * @see template_preprocess_views_view()
- */
-#}
 {%
-  set classes = [
-    dom_id ? 'js-view-dom-id-' ~ dom_id,
-  ]
+	set classes = [
+		dom_id ? 'js-view-dom-id-' ~ dom_id,
+	]
 %}
+
 <div{{ attributes.addClass(classes) }}>
+
 	<div class="card peoples border--top">
 
-    <div class="card__item card__header spaced--less">
-      <div class="ribbon ribbon--med">
-        <div class="ribbon__segments">
-          <div class="ribbon__segment--left">
-            <h4 class="title title--secondary tt--u inline-block">People</h4>
-          </div>
-          {# <div class="ribbon__segment--left">
-            <a class="icon icon--mat" style="background:none"><i class="material-icons">accessibility</i></a>
-          </div> #}
-        </div>
-      </div>
-    </div>
+		<div class="card__item card__header spaced--less">
 
-    <div class="card__item card__body">
-    	{{ rows }}
-    </div>
+			<div class="ribbon med">
+				<div class="ribbon__segments">
+					<div class="ribbon__segment left">
 
-  {{ feed_icons }}
+						<h4 class="title title--secondary tt--u inline-block">People</h4>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="card__item card__body">
+
+			{{ rows }}
+
+		</div>
+
+	{{ feed_icons }}
+
 </div>

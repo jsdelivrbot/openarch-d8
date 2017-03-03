@@ -42,46 +42,33 @@
 
     <div class="card__header">
 
-      <div class="ribbon ribbon--big">
+      <div class="ribbon big">
         <div class="ribbon__segments">
-          <div class="ribbon__segment--left">
+          <div class="ribbon__segment left">
+
             <h4 class="title title--secondary inline-block">Books</h4>
+
           </div>
-          {# <div class="ribbon__segment"> #}
-            {# <div class="ribbon__segment"><a class="icon icon--ltgrey icon--sml icon--fa"><i class="fa fa-weixin" aria-hidden="true"></i></a></div>
-            <div class="ribbon__segment"><a class="icon icon--ltgrey icon--sml icon--fa"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
-            <div class="ribbon__segment"><a class="icon icon--ltgrey icon--sml icon--fa"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
-            <div class="ribbon__segment"><a class="icon icon--ltgrey icon--sml icon--fa"><i class="fa fa-rss" aria-hidden="true"></i></a></div> #}
-          {# </div> #}
         </div>
       </div>
 
     </div>
 
     <div class="card__item card__body">
+
       {{ rows }}
+
     </div>
 
     <div class="card__item card__footer">
 
-      {# <div class="ribbon ribbon--med">
-        <div class="ribbon__segments">
-          <div class="ribbon__segment">
-            
-            <a class="icon icon--bigr icon--fa icon--button-big" href="{{ events_path }}"><i class="fa fa-external-link" aria-hidden="true"></i></a> 
-          </div>
-          <div class="ribbon__segment">
-            
-            <div class="label">more News & Events</div>
-          </div> 
-        </div>
-      </div> #}
       {{ pager }}
       {{ more }}
+
     </div>
 
   </div>
 
   {{ feed_icons }}
-</div>
 
+</div>

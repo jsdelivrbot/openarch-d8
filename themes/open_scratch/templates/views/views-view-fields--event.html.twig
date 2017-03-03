@@ -64,69 +64,43 @@
 			<div class="slideshow__image">
 				<div class="thumb">{{ fields.field_image_files.content }}</div>
 			</div>
-
-			{# <div class="slideshow__caption">
-				<div class="ribbon ribbon--med">
-					<div class="ribbon__segments">
-						<span class="ribbon__segment--left">
-							<div class="label"><h4>3 / {{ fields.field_thumbnail.getvalue|length }}</h4></div>
-						</span>
-					</div>
-				</div>
-			</div> #}
 			
 		</div>
 
 	</div>
 
-	{# <div class="card__item card__item--spaced card__body">
-		{{ fields.body.content }}
-	</div> #}
 	<div class="card__item card__body spaced--most">
-			<div class="bd--smltext">{{ fields.body.content }}</div>
-			{# <ul class="list facts spaced">
 
-				<li class="facts__fact">
-					<h4>Date: {{ fields.field_event_date.content }} - {{ fields.field_event_date_to.content }}</h4>
-				</li>
+		<div class="bd--smltext">{{ fields.body.content }}</div>
 
-				<li class="facts__fact">
-					<h4>Time: {{ fields.field_time.content }}</h4>
-				</li>
-
-				<li class="facts__fact">
-					<h4>City: {{ fields.field_event_city.content }}</h4>
-				</li>
-
-				<li class="facts__fact">
-					<h4>Address:</h4>
-				</li>
-
-				<li class="facts__fact">
-					<h4>{{ fields.field_address.content }}</h4>
-				</li>
-
-			</ul> #}
-		</div>
+	</div>
 
 	<div class="card__item card__footer">
-		<div class="ribbon ribbon--med">
+
+		<div class="ribbon med">
 			<div class="ribbon__segments">
-				<span class="ribbon__segment--left">
-					{# <a class="icon"><i class="fa fa-tag" aria-hidden="true"></i></a> #}
-					<a class="icon icon--pull-left icon--mat"><i class="material-icons">label</i></a>
+
+				<span class="ribbon__segment left">
+					<a class="icon icon--pull-left icon--mat">
+						<i class="material-icons">label</i>
+					</a>
 				</span>
-				<span class="ribbon__segment--left">
+
+				<span class="ribbon__segment left">
 					<div class="tag">{{ fields.type.content }}</div> 
 				</span>
-				<span class="ribbon__segment--left">
+
+				<span class="ribbon__segment left">
 					<div class="tag">{{ fields.field_event_type.content }}</div>
 				</span>
-				<span class="ribbon__segment--left">
+
+				<span class="ribbon__segment left">
 					<div class="tag">{{ fields.field_event_city.content }}</div>
 				</span>
+
 			</div>
 		</div>
+
 	</div>
 
 </div>

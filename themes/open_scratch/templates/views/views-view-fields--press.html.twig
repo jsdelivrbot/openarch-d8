@@ -1,53 +1,20 @@
-{#
-/**
- * @file
- * Theme override to display all the fields in a row.
- *
- * Available variables:
- * - view: The view in use.
- * - fields: A list of fields, each one contains:
- *   - content: The output of the field.
- *   - raw: The raw data for the field, if it exists. This is NOT output safe.
- *   - class: The safe class ID to use.
- *   - handler: The Views field handler controlling this field.
- *   - inline: Whether or not the field should be inline.
- *   - wrapper_element: An HTML element for a wrapper.
- *   - wrapper_attributes: List of attributes for wrapper element.
- *   - separator: An optional separator that may appear before a field.
- *   - label: The field's label text.
- *   - label_element: An HTML element for a label wrapper.
- *   - label_attributes: List of attributes for label wrapper.
- *   - label_suffix: Colon after the label.
- *   - element_type: An HTML element for the field content.
- *   - element_attributes: List of attributes for HTML element for field content.
- *   - has_label_colon: A boolean indicating whether to display a colon after
- *     the label.
- *   - element_type: An HTML element for the field content.
- *   - element_attributes: List of attributes for HTML element for field content.
- * - row: The raw result from the query, with all data it fetched.
- *
- * @see template_preprocess_views_view_fields()
- */
-#}
-{# {{ dump(fields.field_press_file.content) }} #}
-{# {{ dump(fields.sticky ) }} #}
 <tr class="row--clickable focus__block">
+	
 	<td class="press-table__data-publication-date">
 		<span>{{ fields.field_press_publication_date.content }}</span>
 	</td>
+
 	<td class="press-table__data-publication">
 		<span>{{ fields.field_press_publication.content }} {{ fields.field_press_publication_issue.content }}</span>
 	</td>
+
 	<td class="press-table__data-name">
 		<span>{{ fields.title.content }}</span>
 	</td>
+
 	<td class="press-table__data-icon data--right">
 		<div class="icon--container">
 
-			{# {% if fields.sticky.content == "Yes" %}	
-				<a class="icon icon--button-sml icon--fa focus__btn" href="{{ fields.field_press_file.content|striptags }}">
-					<i class="fa fa-file" aria-hidden="true"></i>
-				</a> #}
 			{% if fields.field_press_file.content %}
 				<a class="icon icon--button-sml icon--fa focus__btn clickable-row-link" href="{{ fields.field_press_file.content|striptags }}">
 					<i class="fa fa-file-o" aria-hidden="true"></i>

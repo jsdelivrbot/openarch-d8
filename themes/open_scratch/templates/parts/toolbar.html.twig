@@ -1,0 +1,50 @@
+<div class="wrapper toolbar-wrapper">
+
+  <div class="toolbar peekable">
+
+    <input type="checkbox" id="toolbar" checked>
+
+    <div class="toolbar-contents peekable-contents">
+
+      <div class="ribbon">
+        <div class="ribbon__segments">
+
+          {% if page.toolbar_left %}
+            <div class="ribbon__segment left w--85p tt--u">
+              {{ page.toolbar_left }}
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+
+    </div>
+
+    <label for="toolbar">
+
+        <div class="toolbar-toggle peekable-toggle">
+
+          <div class="ribbon">
+            <div class="ribbon__segments">
+                <div class="ribbon__segment right">
+
+                  <a class="icon icon--pull-left icon--button-bigr icon--fa checked" style="background:none">
+                    <i class="fa fa-filter" aria-hidden="true"></i>
+                  </a>
+
+                  <a class="icon icon--pull-left icon--button-bigr icon--fa unchecked" style="background:none">
+                    <i class="fa fa-filter" aria-hidden="true"></i>
+                  </a>
+
+                </div>
+            </div>
+          </div>
+        </div>
+
+    </label>
+
+  </div>
+
+</div>
+
+  

@@ -1,42 +1,11 @@
-{#
-/**
- * @file
- * Theme override for main view template.
- *
- * Available variables:
- * - attributes: Remaining HTML attributes for the element.
- * - css_name: A css-safe version of the view name.
- * - css_class: The user-specified classes names, if any.
- * - header: The optional header.
- * - footer: The optional footer.
- * - rows: The results of the view query, if any.
- * - empty: The content to display if there are no rows.
- * - pager: The optional pager next/prev links to display.
- * - exposed: Exposed widget form/info to display.
- * - feed_icons: Optional feed icons to display.
- * - more: An optional link to the next page of results.
- * - title: Title of the view, only used when displaying in the admin preview.
- * - title_prefix: Additional output populated by modules, intended to be
- *   displayed in front of the view title.
- * - title_suffix: Additional output populated by modules, intended to be
- *   displayed after the view title.
- * - attachment_before: An optional attachment view to be displayed before the
- *   view content.
- * - attachment_after: An optional attachment view to be displayed after the
- *   view content.
- * - dom_id: Unique id for every view being printed to give unique class for
- *   Javascript.
- *
- * @see template_preprocess_views_view()
- */
-#}
 {%
   set classes = [
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
+
 <div{{ attributes.addClass(classes) }}>
-{# {{ dump(view) }} #}
+
 {% if view.total_rows > 0 %}
                
   <div class="card card--supercard relations border--top expandable">
@@ -49,20 +18,26 @@
         <div class="media mediaTitle">
 
           <div class="media__imgR">
+
             <div class="ribbon">
               <div class="ribbon__segments">
-                  <div class="ribbon__segment">
+                  <div class="ribbon__segment right">
+
                       <a class="icon icon--fa icon--button-big icon--big checked" style="background:none"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                    <a class="icon icon--fa icon--button-big icon--big unchecked" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                      <a class="icon icon--fa icon--button-big icon--big unchecked" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  
                   </div>
               </div>
             </div>
+
           </div>
 
           <div class="media__contents">
+
             <div class="title title--secondary">
               <h4>{{ view.display_handler.display.display_title }} ({{ view.total_rows }})</h4>
             </div>
+
           </div>
 
         </div>
@@ -72,23 +47,30 @@
     </label>
 
     <div class="card__item card__body expandable-body">
+
       <div class="gallery galleryRelations">
         <ul class="gallery__container">
           {{ rows }}
         </ul>
       </div>
+
     </div>
 
     <div class="card__item card__footer">
 
-        <div class="ribbon ribbon--med">
+        <div class="ribbon med">
           <div class="ribbon__segments">
-            <div class="ribbon__segment">
-              <a class="icon icon--bigr icon--mat icon--button-big icon--white" href="{{ events_path }}"><i class="material-icons">arrow_forward</i></a> 
+
+            <div class="ribbon__segment right">
+              <a class="icon icon--bigr icon--mat icon--button-big icon--white" href="{{ events_path }}">
+                <i class="material-icons">arrow_forward</i>
+              </a> 
             </div>
-            <div class="ribbon__segment">
+
+            <div class="ribbon__segment right">
               <div class="label">More Work</div>
             </div>
+
           </div>
         </div>
 

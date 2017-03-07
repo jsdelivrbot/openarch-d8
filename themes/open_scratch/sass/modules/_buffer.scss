@@ -52,7 +52,7 @@ $buffer-size-bottom:	11.25rem; */
 	}
 }*/
 .buffer-top 			{ height:	$base-row1-height * 3; }
-.buffer-bottom 			{ height:	$base-row1-height * 2 - $base-row2-height; }
+.buffer-bottom 			{ height:	$base-row1-height * 3 - $base-row2-height; }
 
 /*@include tiny {
 	.buffer-top 			{ height:	$base-row1-height *3; }

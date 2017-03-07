@@ -8,17 +8,15 @@
 
       <div class="ribbon">
         <div class="ribbon__segments">
+          <div class="ribbon__segment left w--85p tt--u">
 
-          {% if page.toolbar_left %}
-            <div class="ribbon__segment left w--85p tt--u">
-              {{ page.toolbar_left }}
-            </div>
-          {% endif %}
+            {{ page.toolbar_left }}
 
+          </div>
         </div>
       </div>
 
-    </div>
+    </div> {# end toolbar-contents #}
 
     <label for="toolbar">
 
@@ -26,25 +24,28 @@
 
           <div class="ribbon">
             <div class="ribbon__segments">
-                <div class="ribbon__segment right">
+              <div class="ribbon__segment right">
 
-                  <a class="icon icon--pull-left icon--button-bigr icon--fa checked" style="background:none">
-                    <i class="fa fa-filter" aria-hidden="true"></i>
-                  </a>
+                {# <a class="icon icon--fa sml btn-bigr pull-left checked" style="background:none"> #}
+                <a class="icon--filter checked" style="background:none">
+                  <i class="fa fa-filter" aria-hidden="true"></i>
+                </a>
 
-                  <a class="icon icon--pull-left icon--button-bigr icon--fa unchecked" style="background:none">
-                    <i class="fa fa-filter" aria-hidden="true"></i>
-                  </a>
+                {# <a class="icon icon--fa sml btn bigr pull-left unchecked" style="background:none"> #}
+                <a class="icon--filter unchecked" style="background:none">
+                  <i class="fa fa-filter" aria-hidden="true"></i>
+                </a>
 
-                </div>
+              </div>
             </div>
           </div>
-        </div>
+
+        </div> {# end toolbar-toggle #}
 
     </label>
 
-  </div>
+  </div> {# end toolbar #}
 
-</div>
+</div> {# end toolbar-wrapper #}
 
   

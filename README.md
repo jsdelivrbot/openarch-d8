@@ -557,6 +557,16 @@ change permissions on files directory to 777
 
 * refactor sidebar templates
 
+#### 0.7.24
+
+* refactor view templates
+* refactor ribbon class
+
+#### 0.7.25
+
+* refactor icon class
+* refactor front page template
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -698,6 +708,7 @@ x header vanising when resizing from fullpage
 * duplicated in coverage.
 * toolbar filters not quite vertically centered. 
 * grid broken on frontpage
+* strange spacing issue on language/menu icons in header now.
 
 ## Liscense
  

@@ -14,8 +14,8 @@
 			            <div class="ribbon__segments">
 			                <div class="ribbon__segment">
 
-			                  	<a class="icon icon--fa icon--button-big icon--big checked" style="background:none"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-				                <a class="icon icon--fa icon--button-big icon--big unchecked" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+			                  	<a class="icon--expand checked" style="background:none"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+				                <a class="icon--expand unchecked" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
 				                
 		                	</div>
 			            </div>
@@ -54,7 +54,7 @@
 				<div class="ribbon__segments">
 
 					<span class="ribbon__segment left">
-						<a class="icon icon--mat icon--pull-left"><i class="material-icons">label</i></a>
+						<a class="icon--tag"><i class="material-icons">label</i></a>
 					</span>
 
 					<span class="ribbon__segment left">
@@ -70,7 +70,7 @@
 					</span>
 
 					<div class="ribbon__segment">
-		              	<a class="icon icon--big icon--mat icon--button-big" href="{{ base_path }}event/{{ fields.nid.content|striptags }}"><i class="material-icons">arrow_forward</i></a> 
+		              	<a class="icon--internal" href="{{ base_path }}event/{{ fields.nid.content|striptags }}"><i class="material-icons">arrow_forward</i></a> 
 		            </div>
 
 				</div>

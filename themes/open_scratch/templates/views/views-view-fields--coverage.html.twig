@@ -3,11 +3,11 @@
 	{{ fields.field_press_publication_date.content }} | {{ fields.field_press_publication.content }} | {{ fields.title.content }}
 
 	{% if fields.field_press_link.content %}		
-		<a class="icon icon--sml icon--button-smlr icon--mat focus__btn" href="{{ fields.field_press_link.content|striptags }}">
+		<a class="icon--external-sml focus__btn" href="{{ fields.field_press_link.content|striptags }}">
 			<i class="material-icons">call_made</i>
 		</a>	    		
 	{% elseif fields.field_press_file.content %}
-		<a class="icon icon--smlr icon--button-smlr icon--fa focus__btn" href="{{ fields.field_press_file.content|striptags }}">
+		<a class="icon--file focus__btn" href="{{ fields.field_press_file.content|striptags }}">
 			<i class="fa fa-file-o" aria-hidden="true"></i>
 		</a>
 	{% endif %}

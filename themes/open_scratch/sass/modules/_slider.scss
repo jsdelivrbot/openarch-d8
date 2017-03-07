@@ -12,6 +12,11 @@
 
 .slider {
 
+	.slider-toggler {
+		
+		cursor:	pointer;
+	}
+
 	> .slider-screen {
 		z-index:			1500;
 		position: 			fixed;

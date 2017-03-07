@@ -33,7 +33,7 @@ $icon-hover-bg-color:			#e5e5e5;
 		}*/
 }
 
-			.icon { /*a*/
+			%icon { /*a*/
 
 				display: 				inline-block; /* height/width only work on a-link if inline-block */
 
@@ -44,266 +44,362 @@ $icon-hover-bg-color:			#e5e5e5;
 
 				text-align:				center; /* horiz align img */
 
-				/*background: 			$icon-bg-color;*/
-
 				i {	
 					color: 				$icon-color;
 				}
 
 				&:hover {
-					/*background: 		$icon-hover-bg-color;*/
 
 					> i { color: 		$icon-color-hover; }
 				}
-
-				/*&.active {
-
-					> i { color: 		black; }
-				}*/
-
-
-				/*a {
-					display: 				inline-block;
-
-					height:					$icon-size;
-					line-height: 			$icon-size;
-					width:					$icon-size;
-					margin-left: 			$icon-spacing;
-
-					text-align:				center; 
-					background: 			$icon-bg-color;
-					
-					&:hover {
-						background: 		$icon-hover-bg-color;
-					}
-				}*/
-				
-				
+						
 			}
 
-			.icon--pull-left {
-				margin-left: $icon-size*(-0.33);
-			}
-			.icon--pull-right {
-				margin-right: $icon-size*(-0.33);
-			}
-			.icon--pull-left-more {
-				margin-left: $base-button-height-big*(-0.33);
-			}
-			.icon--pull-right-more {
-				margin-right: $base-button-height-big*(-0.33);
-			}
-			
-			.icon.icon--inv {
+			/* icon types, require 1 */
+			%icon--img {
 
-				> i { color: 		white; }
-
-				&:hover {
-
-					> i { color: 	white; }
-				}
-			}
-
-			.icon.icon--white {
-
-				> i { color: 		#ddd; }
-
-				&:hover {
-
-					> i { color: 		white; }
-				}
-			}
-
-			.icon.icon--orange {
-
-				> i { color: 		$openorange-color; }
-
-				&:hover {
-
-					> i { color: 		$openorange-color; }
-				}
-			}
-
-			.icon.icon--ltgrey {
-
-				> i { color: 		#eee; }
-
-				&:hover {
-
-					> i { color: 		black; }
-				}
-			}
-
-			.icon.icon--white-on-orange {
-
-				background: 		$openorange-color;
-				> i { color: 		#ddd; }
-
-				&:hover {
-
-					background: 	$openorange-color;
-					> i { color: 	white; }
-				}
-			}
-
-			.icon.icon--overlay {
-
-				background: 		white;
-				opacity: .5;
-				> i { color: 		#555; }
-
-				&:hover {
-
-					background: 	white;
-					opacity: .6;
-					> i { color: 	#555; }
-				}
-			}
-
-			.icon.icon--inv-overlay {
-
-				/*background: 		#f5f5f5;*/
-				opacity: .7;
-				> i { color: 		white; }
-
-				&:hover {
-
-					/*background: 	white;*/
-					opacity: .8;
-					> i { color: 	white; }
-				}
-			}
-
-			.icon--img {
+				@extend %icon;
 
 				img {
-					vertical-align: 	middle; /* vertical align img */
-					/*height: 100%*/
+					vertical-align: middle; 
 					width: initial;
 					height: auto;
 				}
 			}
+			%icon--fa {
 
-			.icon--fa {
-
-				/*i {
-					color: #333;
-
-					&:hover{
-						color: black;
-					}
-				}*/
+				@extend %icon;
 			}
+			%icon--mat {
 
-			.icon--mat {
+				@extend %icon;
 
 				i {
-
-					/*font-size: 24px;*/
 					font-size: inherit;
 					vertical-align: middle;
 					line-height: inherit; /* override material-icons line-height that bumps vertical alignment down */
 				}
 			}
+			%icon--txt {
 
+				@extend %icon;
+			}
 
+			/* icon sizing */
+			%icon--fa-smlr { font-size: .8em; }
+			%icon--fa-sml { font-size: 1.0em; }
+			%icon--fa { font-size: 1.2em; } /* def */
+			%icon--fa-big { font-size: 1.4em; } 
+			%icon--fa-bigr { font-size: 1.8em; }
 
-			.icon--rss {
+			%icon--mat-smlr { font-size: .9em; }
+			%icon--mat-sml { font-size: 1.0em; }
+			%icon--mat { font-size: 1.2em; } /* def */
+			%icon--mat-big { font-size: 1.4em; } 
+			%icon--mat-bigr { font-size: 1.8em; }
 
+			/* icon sizing old */
+			/*.icon.smlr {
 				font-size: .8em;
 			}
+			.icon.sml {
+				font-size: .9em;
+			}
+			.icon.big {
+				font-size: 1.2em;
+			}
+			.icon.bigr {
+				font-size: 1.4em;
+			}
+			.icon.huge {
+				font-size: 1.8em;
+			}
+			.icon.huger {
+				font-size: 2.5em;
+			}*/
 
-			/*.icon--img {}
-			.icon--mat {}
-			.icon--fa {}*/
+			/* move icon left/right */
+			%btn--pull-left {
+				margin-left: $icon-size*(-0.33);
+			}
+			%btn--pull-right {
+				margin-right: $icon-size*(-0.33);
+			}
+			%btn--pull-left-more {
+				margin-left: $base-button-height-big*(-0.33);
+			}
+			%btn--pull-right-more {
+				margin-right: $base-button-height-big*(-0.33);
+			}
+			
+			/* icon colors */
+			/*.icon.inv {
 
-			.icon--collapsed {
+				> i { color: white; }
+				&:hover > i { color: white; }	
+			}*/
+			%icon--white {
 
-					height:					$icon-size--sml;
-					line-height: 			$icon-size--sml;
-					width:					$icon-size;	
+				> i { color: #ddd; }
+				&:hover > i { color: white; }
+			}
+			%icon--orange {
+
+				> i { color: $openorange-color; }
+				&:hover > i { color: $openorange-color; }
+			}
+			%icon--grey {
+
+				> i { color: #555; }
+				&:hover > i { color: #555; }
 			}
 
-			.icon--button-sml {
+			%btn--orange {
+
+				background: $openorange-color;
+			}
+			%btn--white {
+
+				background: white;
+			}
+			%btn--overlay { /* use .icon.grey.on-white.overlay for image overlay */
+
+				opacity: .5;
+				&:hover { opacity: .6; }
+			}
+			%btn--inverse-overlay { /* frontpage */
+
+				opacity: .7;
+				&:hover { opacity: .8; }
+			}
+
+			/* button sizing */
+			%btn--sml {
 				height:					$base-button-height-sml;
 				line-height: 			$base-button-height-sml;
-				/*width:					$base-button-height-sml;*/
 			}
-
-			.icon--button-smlr {
+			%btn--smlr {
 				height:					$base-button-height-smlr;
 				line-height: 			$base-button-height-smlr;
-				/*width:					$base-button-height-sml;*/
 			}
-
-			.icon--button-big {
+			%btn--big {
 				height:					$base-row2-height;
 				line-height: 			$base-row2-height;
-				/*width:					$base-button-height-big;*/
 			}
-
-			.icon--button-bigr {
-				height:					$base-row1-height;
-				line-height: 			$base-row1-height;
-				/*width:					$base-button-height-big;*/
-			}
-
-			.icon--button-big-sqr {
+			%btn--big-sqr {
 				height:					$base-row2-height;
 				line-height: 			$base-row2-height;
 				width:					$base-row2-height;
 			}
-
-			.icon--sml {
-				font-size: .9em;
-				/*height:					$base-button-height-sml;
-				line-height: 			$base-button-height-sml;
-				width:					$base-button-height-sml;*/
+			%btn--bigr {
+				height:					$base-row1-height;
+				line-height: 			$base-row1-height;
 			}
 
-			.icon--smlr {
-				font-size: .8em;
+			/* icon button sizing */
+			/* see */
+			/*%btn-sml.sqr  {
+				width:					$base-button-height-sml;
 			}
-
-			.icon--big {
-				font-size: 1.2em;
+			%btn-smlr.sqr  {
+				width:					$base-button-height-smlr;
 			}
-
-			.icon--bigr {
-				font-size: 1.4em;
+			%btn-big.sqr  {
+				width:					$base-row2-height;
 			}
+			%btn-bigr.sqr  {
+				width:					$base-row1-height;
+			}*/
 
-			.icon--huge {
-				font-size: 1.8em;
-			}
-
-			.icon--huger {
-				font-size: 2.5em;
-			}
-
-
-			/* titlebox icons use this for now */
-			.icon--fit {
+			%btn--sqr {
 				
-				img {
-					height: 100%;
-					width: auto;
+				background: red;
+				position: relative;
+				width: 100%;		/* desired width */
+
+				&:before{
+					content: "";
+					/*display: block;*/
+
+					padding-top: 100%; 	/* initial ratio of 1:1*/
 				}
 			}
 
-			.icon--dropdown {
 
-				position: absolute;
-				top:0;
-				left:0;
+			.icon--filter {
+				@extend %icon--fa;
+				@extend %icon--fa-sml;
+				@extend %btn--bigr;
+				@extend %btn--pull-left;			
 			}
 
+			/*icon fa btn-big icon--big*/
+			.icon--expand {
+				@extend %icon--fa;
+				@extend %icon--fa-sml;
+				@extend %btn--big;			
+			}
 
+			/*icon btn-big icon--big mat*/
+			.icon--internal {
+				@extend %icon--mat;
+				@extend %btn--big;
+			}
 
+			/*icon fa icon--bigr btn-sml focus__btn*/
+			.icon--internal-sml {
+				@extend %icon--fa;
+				@extend %icon--fa-big;
+				@extend %btn--sml;
+			}
 
-				
+			/*icon icon--bigr mat btn-big*/
+			.icon--internal-big {
+				@extend %icon--mat;
+				@extend %icon--mat-big;
+				@extend %btn--big;
+			}
 
-				
+			/*icon icon--big btn-sml mat*/
+			.icon--external {
+				@extend %icon--mat;
+				@extend %btn--sml;
+			}
+
+			/*icon sml btn-smlr mat*/
+			.icon--external-sml {
+				@extend %icon--mat;
+				@extend %icon--mat-smlr;
+				@extend %btn--smlr;
+			}
+
+			/*icon btn-sml fa*/
+			.icon--file {
+				@extend %icon--fa;
+				@extend %icon--fa-sml;
+				@extend %btn--sml;
+			}
+			
+			/*icon smlr btn-smlr fa*/
+			.icon--file-sml {
+				@extend %icon--fa;
+				@extend %icon--fa-smlr;
+				@extend %btn--smlr;
+			}
+
+			/*icon icon--mat inverse-overlay icon--big btn-big sqr*/
+			.icon--nextpage {
+				@extend %icon--mat;
+				@extend %icon--white;
+				@extend %btn--big-sqr;
+				/*@extend %btn--sqr;*/
+				@extend %btn--inverse-overlay;				
+			}
+
+			/*icon mat btn-bigr*/
+			.icon--menu {
+				@extend %icon--mat;
+				@extend %icon--mat-sml;
+				@extend %btn--bigr;
+
+				@include tiny {display: none;}
+				@include mobile {display: none;}
+				/*@include narrow {}*/
+				/*@include wide {}
+				@include wider {}*/
+				@include widest {display: none;}
+				@include full {display: none;}
+			}
+
+			.icon--lang-en {
+
+				@extend %icon--txt;
+				@extend %btn--bigr;
+
+				font-size: $lang-fz-en;
+			}
+
+			.icon--lang-cn {
+
+				@extend %icon--txt;
+				@extend %btn--bigr;
+
+				font-size: $lang-fz-cn;
+			}
+
+			/*icon mat white on-orange icon--bigr btn-big sqr*/
+			.icon--menu-mobile {
+
+				@extend %icon--mat;
+				@extend %icon--mat-big;
+				@extend %icon--white;
+				@extend %btn--big-sqr;
+				@extend %btn--orange;
+				/*@extend %btn--sqr;*/
+
+				position: 		fixed;
+			    bottom: 		1.25rem;
+			    right: 			1.25rem; /*gutter(13);*/
+
+				@include narrow {display: none;}
+			    @include wide {display: none;}
+				@include wider {display: none;}
+				@include widest {display: none;}
+				@include full {display: none;}
+			}
+
+			/*icon icon--mat icon--overlay icon--bigr btn-big sqr*/
+			.icon--menu-fullpage {
+
+				@extend %icon--mat;
+				@extend %icon--mat-big;
+				@extend %btn--big-sqr;
+				@extend %icon--grey;
+				@extend %btn--white;
+				@extend %btn--inverse-overlay;
+				/*@extend %btn--sqr;*/
+
+				/*position: 		fixed;
+			    bottom: 		0;
+			    right: 			0; */
+
+				/*@include narrow {display: none;}
+			    @include wide {display: none;}
+				@include wider {display: none;}
+				@include widest {display: none;}
+				@include full {display: none;}*/
+			}
+
+			/*icon mat overlay icon--huge btn-big sqr*/
+			.icon--fullscreen {
+				@extend %icon--mat;
+				@extend %icon--mat-bigr;
+				@extend %btn--big-sqr;
+				@extend %icon--grey;
+				@extend %btn--white;
+				@extend %btn--overlay;
+				/*@extend %btn--sqr;*/
+			}
+
+			/*icon mat pull-left*/
+			.icon--tag {
+				@extend %icon--mat;
+				@extend %icon--mat-sml;
+				@extend %btn--pull-left;
+			}
+
+			/*icon mat btn-big*/
+			.icon--invert {
+				@extend %icon--mat;
+				@extend %icon--mat-sml;
+				@extend %btn--big;
+			}
+
+			/* icongallery not implimented */
+			.icon--social {}
+
+			
+
 
 /* ==================================================================
 ## temp

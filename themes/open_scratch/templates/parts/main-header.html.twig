@@ -8,11 +8,15 @@
         </div> #}
 
       <div class="icons">
-        <a class="icon icon--mat icon--button-bigr z--front slider-toggler menu-toggler-1">
+        
+        <a href="{{ root_path }}{{ current_path }}" class="language-link icon--lang-en" hreflang="en" data-drupal-link-system-path="{{ current_path }}">EN</a>
+
+        <a href="{{ root_path }}cn/{{ current_path }}" class="language-link icon--lang-cn" hreflang="zh-hans" data-drupal-link-system-path="{{ current_path }}">中文</a>
+
+        <a class="icon--menu z--front slider-toggler">
           <i class="material-icons">menu</i>
         </a>
-        <a href="{{ root_path }}{{ current_path }}" class="language-link icon icon--button-bigr language--icon fz--en" hreflang="en" data-drupal-link-system-path="{{ current_path }}">EN</a>
-        <a href="{{ root_path }}cn/{{ current_path }}" class="language-link icon icon--button-bigr language--icon fz--cn" hreflang="zh-hans" data-drupal-link-system-path="{{ current_path }}">中文</a>
+
       </div>
 
     </aside>

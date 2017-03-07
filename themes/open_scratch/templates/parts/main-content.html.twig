@@ -2,7 +2,7 @@
 
   <div class="fullpage__hidden region main-content__buffer buffer-top"></div>
 
-  {% if (page.toolbar_right or page.toolbar_left) %}
+  {% if (page.toolbar_left) %}
     <div class="region main-content__header">
       {% include '@open_scratch/parts/toolbar.html.twig' %}
     </div>
@@ -18,11 +18,11 @@
 
           <div id="main-content-slideshow" class="region main-content__slideshow slideshow bg--dark pos--r"> {# border--top #}
 
-            {{ page.content_slideshow }}
-
-            <a class="icon icon--mat icon--overlay icon--huge icon--button-big-sqr z--front fullpage__toggler">
+            <a class="icon--fullscreen z--front fullpage__toggler">
               <i class="material-icons">fullscreen</i>
             </a>
+
+            {{ page.content_slideshow }}
 
           </div>
 

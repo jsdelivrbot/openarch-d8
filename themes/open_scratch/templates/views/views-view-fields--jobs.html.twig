@@ -1,8 +1,8 @@
 <div class="card job border--top">
 
-	<div class="card__item card__header">
+	<div class="card__item card__header spaced--most">
 
-		<div class="media mediaTitle mediaTitle--big">
+		{# <div class="media mediaTitle mediaTitle--big">
 
 	  		<div class="media__imgR">
 
@@ -10,7 +10,7 @@
 		            <div class="ribbon__segments">
 		                <div class="ribbon__segment right">
 
-		                	<a class="icon icon--fa icon--button-big icon--big" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+		                	<a class="icon fa btn-big icon--big" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
 
 		                </div>
 		            </div>
@@ -18,14 +18,14 @@
 
 	        </div>
 
-			<div class="media__contents">
+			<div class="media__contents"> #}
 
 		    	<h3 class="title">{{ fields.title.content }}</h3>
 		    	<h4>Starts: {{ fields.field_job_startdate.content }}</h4>
 
-			</div>
+			{# </div>
 
-		</div>
+		</div> #}
 
 	</div>
 
@@ -39,7 +39,7 @@
 			<div class="ribbon__segments">
 
 				<span class="ribbon__segment left">
-					<a class="icon icon--mat icon--pull-left"><i class="material-icons">label</i></a>
+					<a class="icon--tag"><i class="material-icons">label</i></a>
 				</span>
 
 				<span class="ribbon__segment left">

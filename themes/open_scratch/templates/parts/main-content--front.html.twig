@@ -1,0 +1,92 @@
+<div class="wrapper main-content-wrapper"> {# buffer--main-top buffer--main-bottom #}
+
+  <main class="main-content clearfix" role="main">  
+
+    <div id="fullpage" class="fullpage">
+
+      {# <div class="fullpage__section--hidden">
+        <div class="region main-content__buffer buffer-top bg--white">
+        </div>
+      </div> #}
+
+      <div class="fullpage__section bg--white"> {# ta--c text-align center to center nameplate #}
+        {% if page.content_slideshow %}
+
+          <div id="main-content-slideshow" class="region main-content__slideshow overflow-visible">
+            {{ page.content_slideshow }}
+          </div>
+
+          <div class="fullpage__asset nameplate z--front">
+
+            <div class="ribbon med">
+              <div class="ribbon__segments">
+                  <div class="ribbon__segment center">
+
+                      {{ page.header_left }}
+
+                  </div>
+              </div>
+            </div>  
+
+          </div>
+
+          <div class="fullpage__asset fullpage__pager--down z--fwd">
+
+            <div class="ribbon med">
+              <div class="ribbon__segments">
+
+                <div class="ribbon__segment right">
+                    <a class="icon--menu-fullpage z--front slider-toggler">
+                      <i class="material-icons">menu</i>
+                    </a>
+                </div>
+
+                <div class="ribbon__segment right">
+                    <a href="#secondPage" class="icon--nextpage" style="background:none">
+                      <i class="material-icons">arrow_downward</i>
+                    </a>
+                </div>
+
+                <div class="ribbon__segment right">
+                    <div class="label label--nopad c--white op--7">
+                      <h4 class="fw--b">News</h4></div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        {% endif %}
+      </div>
+      
+      <div class="fullpage__section bg--recent-news z--fwd">
+
+          <div class="region main-content__buffer buffer-top bg--white">
+          </div>
+
+          <div id="main-content-relations" class="region main-content__primary bg--white overflow-hidden">
+            {{ page.content_relations }}
+          </div>
+
+          <div class="region main-content__buffer buffer-bottom bg--white">
+          </div>
+
+         {#  <div class="fullpage__asset">
+            <a class="icon icon--mat icon--inv icon--bigr btn-big z--front slider-toggler menu-toggler-2">
+              <i class="material-icons">menu</i>
+            </a>
+          </div> #}
+
+      </div>
+
+      {# <div class="fullpage__section--hidden">
+        <div class="region main-content__buffer buffer-bottom bg--white">
+        </div>
+      </div> #}
+
+    </div>
+
+  </main>
+
+</div> {# end main-content-wrapper #}

@@ -3,249 +3,26 @@
 
 <div class="container slider bg preloaded-content">
 
-    <div class="layout sidebar-layout slider-drawer "> {# drop--right #}
+    <div class="layout sidebar-layout slider-drawer"> {# drop--right #}
 
-      <div class="wrapper sidebar-wrapper bg--white">
-
-        <div class="sidebar">
-
-            <div class="sidebar__top z--fwd">
-
-              <aside class="region sidebar-search" role="complementary">
-
-                {# {{ page.sidebar_search }} #}
-                <div class="searchbar-wrapper">
-                  <div class="searchbar">
-                    {# <span class="searchbar__icon"><i class="fa fa-search"></i></span> #}
-                    <span class="searchbar__input"><input type="search" id="search" placeholder="Search..." /><span>
-                  </div>
-                </div>  
-
-              </aside>
-
-            </div>
-
-            <div class="sidebar__middle buffer--side-top">
-
-              <aside class="region sidebar-nav" role="complementary">
-                {{ page.sidebar_nav }}
-              </aside>
-
-            </div>
-     
-            <div class="sidebar__bottom z--fwd">
-
-              <aside class="region sidebar-links" role="complementary">
-
-                {# {{ page.sidebar_links }} #} {# <span>CN | EN</span>  #} 
-                <div class="icongallery-wrapper">
-                  <div class="icongallery">
-                    <ul class="icongallery__container">
-                      <li class="icongallery__item"><a><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
-                      <li class="icongallery__item"><a><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                      <li class="icongallery__item"><a><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                      <li class="icongallery__item"><a><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                    </ul>
-                  </div>
-                </div> 
-
-              </aside>
-
-            </div>
-
-        </div> {# end sidebar #}
-
-      </div> {# end sidebar-wrapper #}
+      {% include '@open_scratch/parts/sidebar.html.twig' %}
       
     </div> {# end sidebar-layout #}
 
     <div class="slider-screen"></div>
-
     <div class="bg__screen grid-target"></div>
 
     <div class="layout main-header-layout slider-canvas visor bg--white">
 
-      <div class="overlay wrapper main-header-wrapper region" role="contentinfo">
-
-        <div class="overlay__under card main-header media">
-
-          <aside class="main-header__right media__imgR" role="contentinfo">
-            {{ page.header_right }} 
-          </aside>
-
-          <aside class="main-header__left media__contents" role="contentinfo">
-            {{ page.header_left }}
-          </aside>
-
-        </div>
-
-        <div class="overlay__over pe--n card main-header">
-
-          <aside class="main-header__center" role="contentinfo">
-            {{ page.header_middle }}
-          </aside>
-
-        </div>
-
-      </div>
+      {% include '@open_scratch/parts/main-header.html.twig' %}
 
     </div> 
     {# end header-wrapper #}
 
     <div class="layout main-content-layout slider-canvas">
 
-      <div class="wrapper main-content-wrapper"> {# buffer--main-top buffer--main-bottom #}
-
-        <main class="main-content clearfix" role="main">  
-
-          <div id="fullpage" class="fullpage">
-
-            {# <div class="fullpage__section--hidden">
-              <div class="region main-content__buffer buffer-top bg--white">
-              </div>
-            </div> #}
-
-            <div class="fullpage__section bg--white"> {# ta--c text-align center to center nameplate #}
-              {% if page.content_slideshow %}
-
-                <div id="main-content-slideshow" class="region main-content__slideshow overflow-visible">
-                  {{ page.content_slideshow }}
-                </div>
-
-                <div class="fullpage__asset nameplate z--front">
-                  <div class="ribbon ribbon--med">
-                    <div class="ribbon__segments">
-                        <div class="ribbon__segment--center">
-                            {{ page.header_left }}
-                        </div>
-                    </div>
-                  </div>                
-                </div>
-
-                <div class="fullpage__asset fullpage__pager--down op--9 z--fwd">
-                  <div class="ribbon ribbon--med">
-                    <div class="ribbon__segments">
-                        <div class="ribbon__segment--right">
-                            <a class="icon icon--mat icon--overlay icon--bigr icon--button-big-sqr z--front slider-toggler">
-                              <i class="material-icons">menu</i>
-                            </a>
-                        </div>
-                        <div class="ribbon__segment--right">
-                            <a href="#secondPage" class="icon icon--mat icon--inv-overlay icon--big icon--button-big-sqr" style="background:none">
-                              <i class="material-icons">arrow_downward</i>
-                            </a>
-                        </div>
-                        <div class="ribbon__segment--right">
-                            <div class="label label--nopad c--white op--7"><h4 class="fw--b">News</h4></div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-              {% endif %}
-            </div>
-
-            {# <div class="fullpage__section--hidden bg--manifesto z--fwd"> 
-
-              <div id="main-content-primary" class="region main-content__primary overflow-hidden">
-                {{ page.content_primary }}              
-              </div>
-
-              <div class="fullpage__asset fullpage__pager--down">
-                <div class="ribbon__segments">
-                    <div class="ribbon__segment--center">
-                        <a href="#thirdPage" class="icon icon--white icon--mat icon--bigr icon--button-big unchecked" style="background:none">
-                          <i class="material-icons">arrow_downward</i>
-                        </a>
-                    </div>
-                </div>
-              </div>
-
-            </div> #}
-            
-            <div class="fullpage__section bg--recent-news z--fwd">
-
-                <div class="region main-content__buffer buffer-top bg--white">
-                </div>
-
-                <div id="main-content-relations" class="region main-content__primary bg--white overflow-hidden">
-                  {{ page.content_relations }}
-                </div>
-
-                {# <div class="fullpage__asset fullpage__pager--down">
-                  <div class="ribbon__segments">
-                      <div class="ribbon__segment--center">
-                          <a href="#firstPage" class="icon icon--mat icon--bigr icon--button-big unchecked" style="background:none">
-                            <i class="material-icons">arrow_upward</i>
-                          </a>
-                      </div>
-                  </div>
-                </div> #}
-
-                <div class="region main-content__buffer buffer-bottom bg--white">
-                </div>
-
-               {#  <div class="fullpage__asset">
-                  <a class="icon icon--mat icon--inv icon--bigr icon--button-big z--front slider-toggler menu-toggler-2">
-                    <i class="material-icons">menu</i>
-                  </a>
-                </div> #}
-
-            </div>
-
-            {# <div class="fullpage__section--hidden">
-              <div class="region main-content__buffer buffer-bottom bg--white">
-              </div>
-            </div> #}
-
-            
-
-          </div>
-
-        </main>
-
-      </div> {# end main-content-wrapper #}
-
-      <div class="wrapper main-footer-wrapper region bg--white">
-
-        <footer class="footer main-footer" role="contentinfo">
-
-          {# <div class="fullpage__section--hidden"> #}
-            {# <div id="footer-content-bottom" class="main-footer__bottom"> #}
-
-
-                    {# <div class="ribbon ribbon--med">
-                      <div class="ribbon__segments">
-                        <span class="ribbon__segment">
-
-                          <div class="block menu-toggler-2 z--front">
-                            <div class="block-content icons">
-                              <div class="icon--container"> #}
-                                <a class="icon icon--mat icon--white-on-orange icon--bigr icon--button-big-sqr z--front slider-toggler menu-toggler-2">
-                                  <i class="material-icons">menu</i>
-                                </a>
-                              {# </div>
-                            </div>
-                          </div>
-                        </span>
-                        <span class="ribbon__segment">
-
-                          <a class="icon icon--mat icon--button-big inverter__toggler"><i class="material-icons">invert_colors</i></a> 
-                          </span>
-                          <span class="ribbon__segment--left">
-                            <h6 class="label label--nopad" style="text-transform:none;">Copyright © 2011, OPEN Architecture.</h6>
-                          </span>
-
-                      </div>
-                    </div> #}
-
-
-            {# </div> #}
-          {# </div> #}
-
-        </footer>
-        
-      </div>
+      {% include '@open_scratch/parts/main-content--front.html.twig' %}
+      {% include '@open_scratch/parts/main-footer.html.twig' %}
 
     </div> {# end main-wrapper #}
 

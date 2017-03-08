@@ -1,0 +1,45 @@
+.moreable {
+
+	input[type='checkbox'] {
+	 	display: none; 
+	}
+
+	input[type='checkbox'] ~ label {
+		background: white;
+	}
+
+	input[type='checkbox'] ~ label:hover i{
+		color: black;
+	}
+
+	.moreable-body {
+		overflow: hidden;
+		transition: max-height 0.5s;
+	}
+
+	.moreable-footer{
+		background:	white;
+	}
+
+	input[type='checkbox'] ~ .moreable-body {
+		/*display: none;*/
+		max-height: 900px;
+	}
+	input[type='checkbox']:checked ~ .moreable-body {
+		max-height: 0;
+	}
+
+	input[type='checkbox'] ~ label .icon.unchecked {
+		display: inline-block;
+	}
+	input[type='checkbox'] ~ label .icon.checked {
+		display: none;
+	}
+	input[type='checkbox']:checked ~ label .icon.checked {
+		display: inline-block;
+	}
+	input[type='checkbox']:checked ~ label .icon.unchecked {
+		display: none;
+	}
+	
+}

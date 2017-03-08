@@ -48,6 +48,7 @@
 
 		/*@include span(isolate 15 at 4 of 18);*/
 		> .card__header { 
+			display: none;
 			@include span(first 3 of 18);
 			/*padding: $base-spacing-sml 0;*/ /* align with people card to account for spaced-less applied to it */
 		}	

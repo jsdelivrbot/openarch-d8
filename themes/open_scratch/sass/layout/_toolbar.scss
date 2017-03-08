@@ -59,14 +59,28 @@
 	}
 
 	.toolbar-contents {
+
 		top: -$tbar-height;
+
+		border-top: 1px solid $tbar-bd-color;
+		border-bottom: 1px solid $tbar-bd-color;
 	}
 
 	.toolbar-toggle{
+
 		top: -$tbar-height;
+
+		border-bottom: 1px solid $tbar-bd-color;
 	}
 
+.toolbar.invert {
 
+	.toolbar-contents {
+
+		border-top: 1px solid $tbar-bd-color-inv;
+		border-bottom: 1px solid $tbar-bd-color-inv;
+	}
+}
 
 
 /* ==================================================================

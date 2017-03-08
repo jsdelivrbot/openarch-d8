@@ -84,6 +84,11 @@ $searchbar-input-font-size:     $h3-font-size;
       float:                  left;
       
       padding-left:           gutter(3.5 1);
+
+      @include full {
+        padding-left:         gutter(3.5 1) *.5;
+      }
+
       -webkit-border-radius:  5px;
       -moz-border-radius:     5px;
       border-radius:          5px;

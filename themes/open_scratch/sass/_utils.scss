@@ -6,16 +6,27 @@
 		border-top: 1px solid $def-bd-color;
 	}
 
+	.border-top-blk,
+	.border--top-blk {
+		border-top: 1px solid $blk-bd-color;
+	}
+
 	.border-bottom,
 	.border--bottom {
 		border-bottom: 1px solid $def-bd-color;
 	}
 
-	.border--tb,
-	.border--tb-blk {
+	.border--tb {
 		border-top: 1px solid $def-bd-color;
 		&:nth-last-child(1) {
 			border-bottom: 1px solid $def-bd-color;
+		}
+	}
+
+	.border--tb-blk {
+		border-top: 1px solid $blk-bd-color;
+		&:nth-last-child(1) {
+			border-bottom: 1px solid $blk-bd-color;
 		}
 	}
 

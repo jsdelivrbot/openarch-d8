@@ -9,8 +9,8 @@
 		/*@include narrow {}*/
 		/*@include wide {}
 		@include wider {}*/
-		@include widest {display: none;}
-		@include full {display: none;}
+		/*@include widest {display: none;}
+		@include full {display: none;}*/
 	}
 
 
@@ -26,7 +26,7 @@
 	    bottom: 		1.25rem;
 	    right: 			1.25rem; /*gutter(13);*/
 
-		@include narrow {display: none;}
+		/*@include narrow {display: none;}*/
 	    @include wide {display: none;}
 		@include wider {display: none;}
 		@include widest {display: none;}

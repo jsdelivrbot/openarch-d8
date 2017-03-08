@@ -6,7 +6,7 @@
 
 <div{{ attributes.addClass(classes) }}>
 
-<div class="card projects-table border--top">
+<div class="card projects-table">
 
 	<div class="card__item card__header projects-table__header">
 
@@ -36,7 +36,28 @@
 					<th class="projects-table__head-type"><span>Type</span></th>
 					<th class="projects-table__head-program"><span>Program</span></th>
 					{# <th class="projects-table__head-name data--right"><span>Name</span></th> #} 
-					<th class="projects-table__head-name data--right"><span>Project Name</span></th>
+					{# <th class="projects-table__head-name data--right"><span>Project Name</span></th> #}
+					<th class="projects-table__data-name data--right">
+
+						<div class="ribbon">
+							<div class="ribbon__segments">
+
+							<div class="ribbon__segment right">
+								<a class="icon--internal-sml">
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+							</div>
+
+							<div class="ribbon__segment right w--85p">
+								<div class="label label--fullwidth">
+									Project
+								</div>
+							</div>
+
+							</div>
+						</div>
+
+					</th>
 				</tr>
 			</thead>
 

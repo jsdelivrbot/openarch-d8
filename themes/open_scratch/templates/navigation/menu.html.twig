@@ -43,8 +43,9 @@
             <input type="checkbox" id="{{ item.title }}" />
             <label for="{{ item.title }}" >
               {{ link(item.title, item.url) }}
-              <span class="icon icon--button-big icon--sml unchecked"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
-              <span class="icon icon--button-big icon--sml checked"><i class="fa fa-angle-up" aria-hidden="true"></i></span>
+              <span class="icon--expand-menu unchecked"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+              <span class="icon--expand-menu checked"><i class="fa fa-angle-up" aria-hidden="true"></i></span>
+              
             </label>
           {% else %}
             {{ link(item.title, item.url) }}

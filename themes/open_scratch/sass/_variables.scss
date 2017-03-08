@@ -72,16 +72,23 @@ $base-bd-color: 			#ddd;
 $base-bd-color-inv:			#555;
 $lighter-bd-color:			#ddd;
 $lighter-bd-color-inv:		#333;
+$darker-bd-color:			#333;
+$darker-bd-color-inv:		#ddd;
+$hairline-bd-color:			whitesmoke;
 
 $def-bd-color: 				$base-bd-color;
 $def-bd-color-inv: 			$base-bd-color-inv;
+$blk-bd-color: 				$darker-bd-color;
+$blk-bd-color-inv: 			$darker-bd-color-inv;
 $sidebar-vbd-color: 		$lighter-bd-color;
 $sidebar-vbd-color-inv: 	$lighter-bd-color-inv;
-$sidebar-hbd-color:			none;
+$sidebar-hbd-color:			$hairline-bd-color;
 $header-bd-color: 			$lighter-bd-color;
 $header-bd-color-inv: 		$lighter-bd-color-inv;			
 $tbl-bd-color: 				$lighter-bd-color;
 $tbl-bd-color-inv: 			$lighter-bd-color-inv;
+$tbar-bd-color:				$lighter-bd-color;
+$tbar-bd-color-inv:			$lighter-bd-color-inv;
 
 /* ==================================================================
 ## Fonts Size

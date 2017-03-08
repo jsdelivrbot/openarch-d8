@@ -16,6 +16,7 @@ MyVisor = (function($) {
 	//cache dom
 	// var $container = $('.container');
 	var $visor = $('.visor');
+	var $content = $visor.find('.visor-content');
 	var $toggle = $visor.find('.visor-toggler');
 	var $nameplate = $('.nameplate');
 
@@ -77,6 +78,18 @@ MyVisor = (function($) {
 
 		isDown = false;
 	};
+
+	function hideContent() {
+
+		// $content.addClass('up');
+		$content.fadeOut(200);
+	}
+
+	function showContent() {
+
+		// $content.removeClass('up');
+		$content.fadeIn(200);
+	}
 
 	function addStyle() {
 
@@ -142,7 +155,7 @@ MyVisor = (function($) {
 				removeStyle();
 			}
 
-			if ($scroll > ($bufferSize * 5)) {
+			if ($scroll > ($bufferSize * 10)) {
 				up();
 			} else {
 				down();
@@ -151,7 +164,14 @@ MyVisor = (function($) {
 		} else {
 
 			//Let Fullpage.js handle this
+
 		}
+
+		if (($scroll > 0) || MySlider.isOpen()) {
+			hideContent();
+		} else {
+			showContent();
+		} 
 	};
 
 	// function getScroll() {
@@ -171,7 +191,8 @@ MyVisor = (function($) {
 		up: up,
 		down: down,
 		disable: disable,
-		enable: enable
+		enable: enable,
+		update: update
 	};
 
 	return public_API

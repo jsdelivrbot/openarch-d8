@@ -39,12 +39,11 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 
 .menu {
 
-	font-size: $h3-font-size; /*.75em;*/
-
-	@include widest { font-size: $h4-font-size;  }
-	@include full { font-size: $h4-font-size;  }
-
+	font-size: 1.1rem; /*$h3-font-size;*/ /*.75em;*/
 	font-weight: bold;
+
+	@include widest { font-size: 1.0rem;  }
+	@include full { font-size: 1.0rem; /*font-weight: normal;*/ }
 
 	pointer-events: visible;
 
@@ -52,18 +51,23 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 		/* */
 	}
 
-	.icon {
-		float: right;
-		margin-right: gutter(3.5 1) *.5;
+	.icon--expand-menu {
+		/*float: right;*/
+		/*margin-right: gutter(3.5 1) *.5;*/
 	}
 
 	li a {
 		display: block;
 		white-space: nowrap;
-		line-height: 	$base-row2-height;
-		height: 		$base-row2-height;
+		line-height: 	$base-row1-height;
+		height: 		$base-row1-height;
 		/*width:100%;*/
 		padding-left: 0;
+
+		/*@include full {
+			line-height: 	$base-row1-height;
+			height: 		$base-row1-height;
+		}*/
 	}
 
 	li a:hover {
@@ -90,6 +94,12 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 	li ul li a {padding-left: gutter(3.5 1) *1.5;}
 	li ul li ul li a {padding-left: gutter(3.5 1) *2;}
 
+	/*@include full {
+		li a {padding-left: gutter(3.5 1) *1.5;} 
+		li ul li a {padding-left: gutter(3.5 1) *2;}
+		li ul li ul li a {padding-left: gutter(3.5 1) *2.5;}
+	}*/
+
 	/*@include tiny   { li a {padding-left: 20px;} li ul li a {padding-left: 30px;} }
 	@include mobile { li a {padding-left: 20px;} li ul li a {padding-left: 30px;} }
 	@include narrow { li a {padding-left: 20px;} li ul li a {padding-left: 30px;} }
@@ -105,9 +115,14 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 
 	ul li label {
 		display: block;
-		line-height: 	$base-row2-height;
-		height: 		$base-row2-height;
+		line-height: 	$base-row1-height;
+		height: 		$base-row1-height;
 		cursor: pointer;
+
+		/*@include full {
+			line-height: 	$base-row1-height;
+			height: 		$base-row1-height;
+		}*/
 	}
 
 	ul li label:hover {
@@ -117,8 +132,13 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 	ul li label > a {
 		pointer-events: none; /* disable link */
 		display: initial;
-		line-height: 	$base-row2-height;
-		height: 		$base-row2-height;
+		line-height: 	$base-row1-height;
+		height: 		$base-row1-height;
+
+		/*@include full {
+			line-height: 	$base-row1-height;
+		}*/
+			height: 		$base-row1-height;
 	}
 
 	ul li input[type='checkbox'] ~ ul {
@@ -134,16 +154,16 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 		max-height:400px;*/
 	}
 
-	ul li input[type='checkbox'] ~ label .icon.unchecked {
+	ul li input[type='checkbox'] ~ label .unchecked {
 		display: inline-block;
 	}
-	ul li input[type='checkbox'] ~ label .icon.checked {
+	ul li input[type='checkbox'] ~ label .checked {
 		display: none;
 	}
-	ul li input[type='checkbox']:checked ~ label .icon.checked {
+	ul li input[type='checkbox']:checked ~ label .checked {
 		display: inline-block;
 	}
-	ul li input[type='checkbox']:checked ~ label .icon.unchecked {
+	ul li input[type='checkbox']:checked ~ label .unchecked {
 		display: none;
 	}
 }
@@ -153,10 +173,16 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 
 	&__center {
 	
+	font-size: $h3-font-size; /*.75em;*/
 	font-weight: bold;
+
+	@include widest { font-size: $h4-font-size;  }
+	@include full { font-weight: bold; }
+	
 
 	/*.menu {*/
 
+	
 
 
 		ul {
@@ -269,16 +295,16 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 			float:	left;
 		}
 
-		ul li input[type='checkbox'] ~ label .icon.unchecked {
+		ul li input[type='checkbox'] ~ label .unchecked {
 			display: none;
 		}
-		ul li input[type='checkbox'] ~ label .icon.checked {
+		ul li input[type='checkbox'] ~ label .checked {
 			display: none;
 		}
-		ul li input[type='checkbox']:checked ~ label .icon.checked {
+		ul li input[type='checkbox']:checked ~ label .checked {
 			display: none;
 		}
-		ul li input[type='checkbox']:checked ~ label .icon.unchecked {
+		ul li input[type='checkbox']:checked ~ label .unchecked {
 			display: none;
 		}
 
@@ -374,190 +400,7 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 
 
 
-.expandable {
 
-	/*.menu {*/
 
-		/* Dropdown */
 
-		/* hide checkbox */
-		input[type='checkbox'] {
-		 	display: none; 
-		}
 
-		/*ul li label {
-			position: relative;
-			display: 		block;
-			line-height: 	inherit;
-			height: 		inherit;
-			cursor: 		pointer;
-		}*/
-
-		/*ul li:hover label,
-		ul li label ~ ul {
-			background-color: red;
-		}
-
-		ul li label:hover > a,
-		ul li:hover > a {
-			color:	white;
-		}
-
-		ul li label a {
-			display: 		initial;
-			line-height: 	inherit;
-			height: 		inherit;
-		}
-
-		ul li label ~ ul {
-			position: absolute;
-			height: 0;
-			display: none;
-			overflow: hidden;
-		}
-
-		ul li label:hover ~ ul,
-		ul li label ~ ul:hover  {
-			height: auto;
-			display:block;
-		}
-
-		ul li label:hover ~ ul > li {
-			float:	left;
-		}*/
-
-		input[type='checkbox'] ~ label:hover i{
-			color: $openorange-color;
-		}
-
-		.expandable-body {
-			/*transition: max-height 1.5s;*/
-		}
-
-		input[type='checkbox'] ~ .expandable-body {
-			display: none;
-			/*max-height: 0;*/
-		}
-
-		input[type='checkbox']:checked ~ .expandable-body {
-			/*max-height: 750px;*/
-			display: block;
-		}
-
-		input[type='checkbox'] ~ label .unchecked {
-			display: inline-block;
-		}
-		input[type='checkbox'] ~ label .checked {
-			display: none;
-		}
-		input[type='checkbox']:checked ~ label .checked {
-			display: inline-block;
-		}
-		input[type='checkbox']:checked ~ label .unchecked {
-			display: none;
-		}
-
-	/*}*/
-	
-}
-
-.moreable {
-
-	input[type='checkbox'] {
-	 	display: none; 
-	}
-
-	input[type='checkbox'] ~ label {
-		background: white;
-	}
-
-	input[type='checkbox'] ~ label:hover i{
-		color: black;
-	}
-
-	.moreable-body {
-		overflow: hidden;
-		transition: max-height 0.5s;
-	}
-
-	.moreable-footer{
-		background:	white;
-	}
-
-	input[type='checkbox'] ~ .moreable-body {
-		/*display: none;*/
-		max-height: 900px;
-	}
-	input[type='checkbox']:checked ~ .moreable-body {
-		max-height: 0;
-	}
-
-	input[type='checkbox'] ~ label .icon.unchecked {
-		display: inline-block;
-	}
-	input[type='checkbox'] ~ label .icon.checked {
-		display: none;
-	}
-	input[type='checkbox']:checked ~ label .icon.checked {
-		display: inline-block;
-	}
-	input[type='checkbox']:checked ~ label .icon.unchecked {
-		display: none;
-	}
-	
-}
-
-.peekable { /* peekable-contents */
-
-	/* hide checkbox */
-	input[type='checkbox'] {
-	 	display: none; 
-	}
-
-	/*input[type='checkbox'] ~ label:hover i{
-		color: black;
-	}*/
-
-	/*.peekable-target {
-
-	}*/
-
-	.peekable-contents {
-		/*display: none;*/
-		transition: top 0.4s, opacity 0.4s;
-	}
-
-	input[type='checkbox'] ~ label > .peekable-toggle {
-		/*display: none;*/
-		/*max-height: 700px;*/
-	}
-	input[type='checkbox']:checked ~ label > .peekable-toggle {
-		/*max-height: 0;*/
-	}
-	input[type='checkbox'] ~ .peekable-contents{
-		/*display: none;*/
-		top: 0;
-		opacity: 0;
-		/*max-height: 700px;*/
-	}
-	input[type='checkbox']:checked ~ .peekable-contents{
-		/*max-height: 0;*/
-		/*display: inherit;*/
-		top: -$tbar-height;
-		opacity: 1;
-	}
-
-	input[type='checkbox'] ~ label .unchecked {
-		display: inline-block;
-	}
-	input[type='checkbox'] ~ label .checked {
-		display: none;
-	}
-	input[type='checkbox']:checked ~ label .checked {
-		display: inline-block;
-	}
-	input[type='checkbox']:checked ~ label .unchecked {
-		display: none;
-	}
-	
-}

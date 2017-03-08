@@ -49,6 +49,7 @@ $sidebar-footer-height: 	$base-row2-height;
 
 			@include tiny 	{ 	padding: 0 8%; }
 			@include mobile { 	padding: 0 8%; }
+			@include full 	{ 	padding: 0; }
 		}
 	}
 }

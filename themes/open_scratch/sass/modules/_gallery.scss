@@ -241,14 +241,16 @@
 
 	.gallery__container{ /*ul*/
 
+		/*margin-top: gutter(12);*/
+
 		/* overrides */
-		/*@include tiny {		margin-top: gutter(12); }
+		@include tiny {		margin-top: gutter(12); }
 		@include mobile {	margin-top: gutter(12); }
 		@include narrow {	margin-top: gutter(12); }
 		@include wide { 	margin-top: gutter(9); }
 		@include wider { 	margin-top: gutter(12); }
 		@include widest { 	margin-top: gutter(12); }
-		@include full { 	margin-top: gutter(18); }*/
+		@include full { 	margin-top: gutter(18); }
 
 	}
 
@@ -307,13 +309,13 @@
 	.gallery__container{ /*ul*/
 
 		/* overrides */
-		/*@include tiny {		margin-top: gutter(12); }
+		@include tiny {		margin-top: gutter(12); }
 		@include mobile {	margin-top: gutter(12); }
 		@include narrow {	margin-top: gutter(12); }
-		@include wide { 	margin-top: gutter(9); }*/
-		/*@include wider { 	margin-top: gutter(12); }
+		@include wide { 	margin-top: gutter(9); }
+		@include wider { 	margin-top: gutter(12); }
 		@include widest { 	margin-top: gutter(12); }
-		@include full { 	margin-top: gutter(18); }*/
+		@include full { 	margin-top: gutter(18); }
 
 	}
 

@@ -84,6 +84,7 @@ MySlider = (function($) {
 		$slider.removeClass('close');
 		$slider.addClass('open');
 		// isOpen = true;
+		// MyVisor.hideContent();
 	};
 
 	function close() { //safe
@@ -108,6 +109,7 @@ MySlider = (function($) {
 		// Resizer.reset();
 		MyFlexslider.reset(); 
         MyFlexslider.resize();
+        MyVisor.update();
 	};
 
 	function isOpen() {

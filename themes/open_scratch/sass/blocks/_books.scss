@@ -12,11 +12,11 @@
 		@include span(first 3 of 18); 
 	}	
 	> .card__body { 
-		@include span(last 15 of 18); 
+		@include span(last 12 of 18); 
 		float: right;  
 	}
 	> .card__footer { 
-		@include span(last 15 of 18); 
+		@include span(last 12 of 18); 
 		clear: right; 
 		float: right; 
 	}
@@ -37,8 +37,7 @@
 
 .card.book-item {
 
-	/*@include wider 	{ &:nth-child(1) {border-top: none;} }*/
-	/*@include widest { &:nth-child(1) {border-top: none;} }*/
+	/* remove top border from first item */
 	@include full 	{ &:nth-child(1) {border-top: none;} }
 
 }

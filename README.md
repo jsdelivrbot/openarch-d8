@@ -567,6 +567,20 @@ change permissions on files directory to 777
 * refactor icon class
 * refactor front page template
 
+#### 0.7.26
+
+* add sidebar menu for widest and full
+* adjust sizing
+
+#### 0.7.27
+
+* update menu text
+* fix pre-open page
+* delete pre-open view type (use ideas)
+* remove header from ideas/pre-open
+* adjust title font weight ideas/pre-open
+* delete unused content types
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -683,6 +697,7 @@ change permissions on files directory to 777
 * make sure all expandable headers are pspaced.
 * consider replacing or adding related events to event
 * clean up exposed form and dropdown
+* resize recent news (possibly events) thumbs to grid
 
 #### ISSUES:
 

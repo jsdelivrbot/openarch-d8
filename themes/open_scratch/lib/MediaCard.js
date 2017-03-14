@@ -7,30 +7,16 @@ MediaCard = (function($) {
     var $img = $el.find('.media__img');
     var $contents = $el.find('.media__contents');
 
-    //bind events 
-    // $(window).resize(function() {
-    //     if ($(window).width()>960) {
-    //         enableMedia();
-    //     }
-    //     if ($(window).width()<961) {
-    //         disableMedia();
-    //     }
-    // });
-
     $(document).ready(function() {
 
-        !(Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? disableMedia() : enableMedia();
+        !(Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? disableMedia() :
+        (Pg.isTask() && !(Breakpoint.isWide())) ? disableMedia() : enableMedia();
     });
 
     $(window).resize(function() {
 
-        (Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? enableMedia() : disableMedia();
-
-        // if ( Breakpoint.isWider() ) {
-        //     enableMedia();
-        // } else {
-        //     disableMedia();
-        // }
+        (Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? enableMedia() :
+        (Pg.isTask() && (Breakpoint.isWide())) ? enableMedia() : disableMedia();
 
     });
     
@@ -40,6 +26,10 @@ MediaCard = (function($) {
         $media.removeClass('media');
         $img.removeClass('media__img');
         $contents.removeClass('media__contents');
+
+        if (Pg.isIdeas() || Pg.isPreopen() || Pg.isTask()) {
+            $contents.addClass('hide');
+        }
     }
 
     function enableMedia() {
@@ -47,6 +37,10 @@ MediaCard = (function($) {
         $media.addClass('media');
         $img.addClass('media__img');
         $contents.addClass('media__contents');
+
+        if (Pg.isIdeas() || Pg.isPreopen() || Pg.isTask()) {
+            $contents.removeClass('hide');
+        }
     }
 
     //public API
@@ -58,66 +52,49 @@ MediaCard = (function($) {
     return public_API
 })(jQuery);
     
-MediaCard2 = (function($) {
+// MediaCard2 = (function($) {
 
-    //cache DOM
-    var $el = $('.relation');
-    var $media = $el;
-    var $img = $el.find('.media__img');
-    var $contents = $el.find('.media__contents');
+//     //cache DOM
+//     var $el = $('.relation');
+//     var $media = $el;
+//     var $img = $el.find('.media__img');
+//     var $contents = $el.find('.media__contents');
 
-    //bind events 
-    // $(window).resize(function() {
-    //     if ($(window).width()>960) {
-    //         enableMedia();
-    //     }
-    //     if ($(window).width()<961) {
-    //         disableMedia();
-    //     }
-    // });
+//     $(document).ready(function() {
 
-    $(document).ready(function() {
+//         !(Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? disableMedia() : enableMedia();
+//     });
 
-        !(Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? disableMedia() : enableMedia();
-    });
+//     $(window).resize(function() {
 
-    $(window).resize(function() {
+//         (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? enableMedia() : disableMedia();
 
-        (Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? enableMedia() : disableMedia();
-
-        // if ( Breakpoint.isWider() ) {
-        //     enableMedia();
-        // } else {
-        //     disableMedia();
-        // }
-    });
+//     });
     
-    //public methods
-    function disableMedia() {
+//     function disableMedia() {
 
-        $media.removeClass('media');
-        $img.removeClass('media__img');
-        $contents.removeClass('media__contents');
-        $contents.addClass('hide');
+//         $media.removeClass('media');
+//         $img.removeClass('media__img');
+//         $contents.removeClass('media__contents');
+//         $contents.addClass('hide');
         
-    }
+//     }
 
-    function enableMedia() {
+//     function enableMedia() {
 
-        $media.addClass('media');
-        $img.addClass('media__img');
-        $contents.addClass('media__contents');
-        $contents.removeClass('hide');
+//         $media.addClass('media');
+//         $img.addClass('media__img');
+//         $contents.addClass('media__contents');
+//         $contents.removeClass('hide');
         
-    }
+//     }
     
-    //public API
-    public_API = { 
-        disableMedia: disableMedia,
-        enableMedia: enableMedia
-    }
+//     public_API = { 
+//         disableMedia: disableMedia,
+//         enableMedia: enableMedia
+//     }
     
-    return public_API
-})(jQuery);
+//     return public_API
+// })(jQuery);
 
 

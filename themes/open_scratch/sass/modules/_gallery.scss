@@ -134,50 +134,36 @@
 
 	.gallery {
 
-		&__container{
+		&__container {
 
 			/* overrides */
 		}
 
-			&__item{
+			&__item {
 
 				/* overrides */
+				@include narrow	{ 
+
+					@include gallery-item-1-col;
+					clear: left !important;
+				}
 				@include wide	{ 
 
 					@include gallery-item-1-col;
 					clear: left !important;
-					/*margin: 0;
-					width: 100%;
-					float: none; */
-					/*margin-bottom: gutter(12);*/
 				}
-
 				@include wider	{ 
 
 					@include gallery-item-1-col;
 					clear: left !important;
-					/*margin: 0;
-					width: 100%;
-					float: none; */
-					/*margin-bottom: gutter(12);*/
 				}
-
 				@include widest	{ 
 
-					/*clear susy*/
-					/*margin: 0;
-					width: 100%;
-					float: none; */
 					@include gallery-item-1-col;
 					clear: left !important;
 				}
-
 				@include full	{ 
 
-					/*clear susy*/
-					/*margin: 0;
-					width: 100%;
-					float: none; */
 					@include gallery-item-1-col;
 					clear: left !important;
 				}
@@ -229,6 +215,44 @@
 
 
 	
+}
+
+/* ==================================================================
+ *
+ * Ideas/pre-open Gallery
+ *
+===================================================================== */
+
+.gallery--ideas.gallery {
+
+	.gallery {
+
+		&__container{
+
+			/* overrides */
+		}
+
+			&__item{
+
+				/* overrides */
+				@include wider	{ 
+
+					@include gallery-item-1-col;
+					clear: left !important;
+				}
+				@include widest	{ 
+
+					@include gallery-item-1-col;
+					clear: left !important;
+				}
+				@include full	{ 
+
+					@include gallery-item-1-col;
+					clear: left !important;
+				}
+					
+			}
+	}	
 }
 
 /* ==================================================================

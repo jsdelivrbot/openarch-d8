@@ -1,0 +1,154 @@
+/* ideas subclass */
+.card.ideas {
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  { 
+		/*margin-bottom: $base-spacing-sml;
+		margin-top: $base-spacing-sml; */
+	}
+	@include widest {
+		padding-left: gutter(13);
+		padding-right: gutter(13);
+		clear: left;
+		float: none; 
+		/*border-top: none;*/
+		/*margin-bottom: $base-spacing-sml;
+		margin-top: $base-spacing-sml; */
+	}
+	@include full   { 
+
+		@include span(full);
+	}
+
+	> .card {
+
+		&__header { 
+			@include span(full);
+			float: none; 
+		}	
+		&__body { 
+			@include span(full);
+			float: none; 
+		}
+		&__footer { 
+			display:none;
+			@include span(full);
+			float: none;
+		}
+	
+		@include tiny   {  }
+		@include mobile {  }
+		@include narrow {  }
+		@include wide   {  }
+		@include wider  {  
+			/*&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); 
+				clear: right; 
+				float: right; 
+			}*/
+		}
+		@include widest	{ 
+			/*&__header { 
+				@include span(first 3 of 12); 
+			}	
+			&__body { 
+				@include span(last 9 of 12); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 9 of 12); 
+				clear: right; 
+				float: right; 
+			}*/		
+		}
+		@include full 	{ 
+			
+			&__header { 
+				@include span(first 3 of 18);
+			}	
+			&__body { 
+				@include span(last 15 of 18); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 15 of 18); 
+				clear: right; 
+				float: right; 
+			}		
+		}
+	}
+}
+
+
+.card.idea {
+
+	@include tiny   {  }
+	@include mobile {  }
+	@include narrow {  }
+	@include wide   {  }
+	@include wider  {  }
+	@include widest {  }
+	@include full 	{  }
+
+	.card {
+
+		&__slide {
+
+			@include tiny   {  }
+			@include mobile {  }
+			@include narrow {  }
+			@include wide	{  }
+			@include wider	{ width: span(3 of 12); margin-right: gutter(12); }
+			@include widest	{ width: span(3 of 12); margin-right: gutter(12); }
+			@include full	{ width: span(3 of 12); margin-right: gutter(12); }
+		}
+
+		&__header {}
+
+		&__body { 
+			> .bd { width: span(6 of 9); }
+			/*padding-right: $base-button-height-big;*/
+		}
+		
+		&__footer { 
+			display: none; 
+			@include full	{ display: initial; }
+		}
+
+		@include tiny   {  }
+		@include mobile {  }
+		@include narrow {  }
+		@include wide	{  }
+		@include wider	{  }
+		@include widest	{  }
+
+		@include full	{
+
+			&__slide {
+
+				width: span(3 of 15); 
+				margin-right: gutter(15); 
+			}
+			&__header {
+
+			}
+			&__body { 
+
+				> .bd { width: span(9 of 12); }
+			}			
+			&__footer { 
+				display: initial; 
+			}
+		}
+	}
+}

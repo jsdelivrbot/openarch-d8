@@ -581,6 +581,13 @@ change permissions on files directory to 777
 * adjust title font weight ideas/pre-open
 * delete unused content types
 
+#### 0.7.28
+
+* refactor mediacard
+* remove mediacard2
+* adjust spacing on task, ideas, preopen
+* refactor gallery class
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -698,6 +705,11 @@ change permissions on files directory to 777
 * consider replacing or adding related events to event
 * clean up exposed form and dropdown
 * resize recent news (possibly events) thumbs to grid
+
+#### TBD2:
+
+* people, idea, relations, pre-open are basically same card type (lot of redundancy)
+* mediacard same as mediacard2
 
 #### ISSUES:
 

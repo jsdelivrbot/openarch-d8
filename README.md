@@ -588,6 +588,10 @@ change permissions on files directory to 777
 * adjust spacing on task, ideas, preopen
 * refactor gallery class
 
+#### 0.7.29
+
+* readd featured work view
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

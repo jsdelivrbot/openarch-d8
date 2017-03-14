@@ -30,7 +30,7 @@ Pg = (function($) {
 	return {
 		isFront: pathEquals(""),
 		isTask: pathBegins("task"),
-		isPress: pathEquals("press"),
+		isPress: pathBegins("press"),
 		isIdeas: pathBegins("ideas"),
 		isPreopen: pathBegins("pre_open")
 	}

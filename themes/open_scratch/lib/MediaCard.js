@@ -10,13 +10,13 @@ MediaCard = (function($) {
     $(document).ready(function() {
 
         !(Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? disableMedia() :
-        (Pg.isTask() && !(Breakpoint.isWide())) ? disableMedia() : enableMedia();
+        (Pg.isTask() && !(Breakpoint.isNarrow() || Breakpoint.isWide())) ? disableMedia() : enableMedia();
     });
 
     $(window).resize(function() {
 
         (Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? enableMedia() :
-        (Pg.isTask() && (Breakpoint.isWide())) ? enableMedia() : disableMedia();
+        (Pg.isTask() && (Breakpoint.isNarrow() || Breakpoint.isWide())) ? enableMedia() : disableMedia();
 
     });
     

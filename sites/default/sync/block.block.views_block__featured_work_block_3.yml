@@ -1,0 +1,30 @@
+uuid: e5b845c6-1f98-4548-9f41-a3fb83be256e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured_work
+  module:
+    - system
+    - views
+  theme:
+    - open_scratch
+id: views_block__featured_work_block_3
+theme: open_scratch
+region: content_slideshow
+weight: -32
+provider: null
+plugin: 'views_block:featured_work-block_3'
+settings:
+  id: 'views_block:featured_work-block_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /frontpage
+    negate: false
+    context_mapping: {  }

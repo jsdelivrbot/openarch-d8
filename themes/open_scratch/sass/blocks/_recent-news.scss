@@ -66,13 +66,13 @@
 
 		&__media {	
 
-			@include tiny   { width: 50% }
-			@include mobile { width: 50% }
-			@include narrow { width: 33% }
-			@include wide   { width: 33% }
-			@include wider  { width: 25% }
-			@include widest	{ width: 25% }
-			@include full	{ width: 33% }
+			@include tiny   { width: span(12 of 12); }
+			@include mobile { width: span(12 of 12);}
+			@include narrow { width: span(8 of 12); }
+			@include wide   { width: span(6 of 9); }
+			@include wider  { width: span(6 of 12); }
+			@include widest	{ width: span(6 of 12); }
+			@include full	{ width: span(6 of 9); }
 		}
 	
 		&__body {  }

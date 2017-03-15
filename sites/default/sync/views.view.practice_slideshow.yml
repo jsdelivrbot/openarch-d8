@@ -499,7 +499,7 @@ display:
         options:
           grouping: {  }
           flexslider: null
-          optionset: open_default
+          optionset: default
           captionfield: ''
           id: ''
       row:

@@ -379,7 +379,7 @@ display:
           click_sort_column: target_id
           type: flexslider_responsive
           settings:
-            optionset: carousel_with_max_three_slides
+            optionset: open_practice_slideshow
             responsive_image_style: task_image
             image_link: ''
             caption: '0'

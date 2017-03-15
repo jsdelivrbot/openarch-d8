@@ -35,8 +35,6 @@ $card-base-font-size:			1rem;
 
 }
 
-
-
 /* ==================================================================
 ## Typography
 ===================================================================== */
@@ -72,12 +70,12 @@ $card-base-font-size:			1rem;
 	&__item--spaced-dbl		{ margin: $base-spacing*2 0; }
 	&__item--spaced-most-top { margin: $base-spacing-huge 0 0 0; }
 
-	&__header 	{
+	&__header {
 		
 	}
 
 	&__slide,
-	&__media 	{
+	&__media {
 
 		width: 100%;	
 
@@ -88,11 +86,11 @@ $card-base-font-size:			1rem;
 		}
 	}
 
-	&__body  {
+	&__body {
 
 	}
 
-	&__footer 	{
+	&__footer {
 
 	}
 
@@ -254,7 +252,15 @@ $card-base-font-size:			1rem;
 	} 
 }
 
+/*.card.card--table {
 
+	@include widest	{ 
+		@include card-layout-vert; 
+	} 
+	@include full	{ 		
+		@include card-type-6col;
+	} 
+}*/
 
 .card.video-player {
 

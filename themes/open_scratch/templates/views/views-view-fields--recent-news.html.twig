@@ -1,12 +1,12 @@
-<div class="card news-item border--tb-blk expandable">
+<div class="card news-item border--tb-blk"> {# expandable #}
 	
-	<input type="checkbox" id="{{ fields.title.content|striptags }}" />
+	{# <input type="checkbox" id="{{ fields.title.content|striptags }}" />
 
-	<label for="{{ fields.title.content|striptags }}">
+	<label for="{{ fields.title.content|striptags }}"> #}
 
-		<div class="card__header expandable-head">
+		<div class="card__header spaced--most"> {# expandable-head #}
 
-			<div class="media mediaTitle">
+			{# <div class="media mediaTitle">
 
 		  		<div class="media__imgR">
 
@@ -23,29 +23,29 @@
 
 		        </div>
 
-				<div class="media__contents">
+				<div class="media__contents"> #}
 
-			    	<h3 class="title title--headline">
+			    	<h1 class="title title--headline">
 			    		<a href="{{ base_path }}event/{{ fields.nid.content|striptags }}">
 			    			{{ fields.field_event_date.content }} {{ fields.title.content }}
 			    		</a>
-			    	</h3>
+			    	</h1>
 			    	
-				</div>
+				{# </div>
 
-			</div>
+			</div> #}
 
 		</div>
 
-	</label>
+	{# </label> #}
 
-	<div class="expandable-body">
+	{# <div class="expandable-body"> #}
 
-		<div class="card__item card__media card__slide--small">
+		<div class="card__item spaced--dbl card__media card__slide--small">
 			{{ fields.field_image_files.content }}
 		</div>
 
-		<div class="card__item spaced card__body">
+		<div class="card__item spaced--less card__body">
 			<div class="bd lc--3">
 				{{ fields.body.content }}
 			</div>
@@ -96,6 +96,6 @@
 			</div>
 		</div>
 
-	</div>
+	{# </div> #}
 	
 </div>

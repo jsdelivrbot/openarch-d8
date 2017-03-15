@@ -37,7 +37,7 @@
 		@include widest {  }
 		@include full   {
 
-			&__header { 
+			/*&__header { 
 				@include span(first 3 of 12); 
 			}	
 			&__body { 
@@ -45,7 +45,7 @@
 			}
 			&__footer { 
 				@include span(last 9 of 12); float: right; 
-			}
+			}*/
 		}
 	}
 }
@@ -62,21 +62,58 @@
 
 	.card {
 
-		&__header {  }
+		&__header { 
+
+			/*@include full { display: none; }*/
+		}
 
 		&__media {	
 
 			@include tiny   { width: span(12 of 12); }
 			@include mobile { width: span(12 of 12);}
-			@include narrow { width: span(8 of 12); }
-			@include wide   { width: span(6 of 9); }
-			@include wider  { width: span(6 of 12); }
-			@include widest	{ width: span(6 of 12); }
-			@include full	{ width: span(6 of 9); }
+			@include narrow { width: span(12 of 12); }
+			@include wide   { width: span(9 of 9); }
+			@include wider  { width: span(12 of 12); }
+
+			@include widest	{
+
+				@include span(isolate 11 at 1.5 of 12); float: none;
+				width: span(11 of 12); 
+			}
+
+			@include full {
+
+				@include span(isolate 11 at 1.5 of 12); float: none;
+				width: span(11 of 12); 
+			}
 		}
 	
-		&__body {  }
+		&__body { 
 
-		&__footer {  }
+			@include widest {
+
+				clear: left;
+				float: left;
+			}
+
+			@include full {
+
+				clear: left;
+				float: left;
+			}
+		}
+
+		&__footer { 
+
+			@include widest {
+
+				clear: left;
+			}
+
+			@include full {
+
+				clear: left;
+			}
+		}
 	}
 }

@@ -11,12 +11,9 @@ regions:
   header_right: 'Header Right'
   sidebar_search: 'Sidebar search input'
   sidebar_nav: 'Sidebar navigation menu'
-  sidebar_links: 'Sidebar links'
   toolbar_left: "Left toolbar"
   toolbar_right: "Right toolbar"
   content_slideshow: 'Media slideshow'
   content_primary: 'Main content'
   content_relations: 'Relations content'
   content_facts: 'Facts content'
-  content_gallery: 'Gallery content'
-  footer: 'Page footer'

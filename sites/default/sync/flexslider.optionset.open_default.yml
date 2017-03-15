@@ -1,26 +1,26 @@
-uuid: 2011cf60-1437-4142-8bfd-48b970a555fa
+uuid: a7a040fb-d058-43ac-9115-bb9e457f91a1
 langcode: en
 status: true
 dependencies: {  }
-id: open_task_slideshow
-label: 'Open task slideshow'
+id: open_default
+label: 'Open default'
 options:
-  animation: slide
+  animation: fade
   animationSpeed: 600
   direction: horizontal
   slideshow: false
   easing: swing
-  smoothHeight: false
+  smoothHeight: true
   reverse: false
   slideshowSpeed: 7000
   animationLoop: true
   randomize: false
   startAt: 0
-  itemWidth: 960
-  itemMargin: 2
-  minItems: 1
-  maxItems: 1
-  move: 1
+  itemWidth: 0
+  itemMargin: 0
+  minItems: 0
+  maxItems: 0
+  move: 0
   directionNav: true
   controlNav: '1'
   thumbCaptions: false
@@ -42,6 +42,6 @@ options:
   pauseText: Pause
   playText: Play
   pauseOnAction: true
-  pauseOnHover: false
+  pauseOnHover: true
   controlsContainer: .flex-control-nav-container
   manualControls: ''

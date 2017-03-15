@@ -10,7 +10,7 @@ MyInverter = (function($) {
     //bindings
     $(document).ready(function() { init() });
     $(document).on('keydown', function (event) {          
-        if (event.keyCode == 73) {       
+        if (event.ctrlKey && event.keyCode == 73) {       
             toggle()
         }
     });

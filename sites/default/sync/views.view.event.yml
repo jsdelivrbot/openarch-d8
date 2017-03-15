@@ -506,7 +506,7 @@ display:
           click_sort_column: target_id
           type: flexslider_responsive
           settings:
-            optionset: default
+            optionset: open_default
             responsive_image_style: event_image
             image_link: ''
             caption: '0'

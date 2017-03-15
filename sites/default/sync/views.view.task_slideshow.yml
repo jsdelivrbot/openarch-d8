@@ -525,7 +525,7 @@ display:
         options:
           grouping: {  }
           flexslider: null
-          optionset: flexslider_carousel_with_min_and_max_ranges
+          optionset: open_task_slideshow
           captionfield: ''
           id: ''
       row:

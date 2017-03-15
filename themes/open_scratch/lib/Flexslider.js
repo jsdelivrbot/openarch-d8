@@ -3,7 +3,8 @@ MyFlexslider = (function($) {
 
     //cache dom
     var $fs = $('.flexslider'),
-        $taskSlider = $('.optionset-flexslider-carousel-with-min-and-max-ranges'),
+        // $taskSlider = $('.optionset-flexslider-carousel-with-min-and-max-ranges'),
+        $taskSlider = $('.optionset-open-task-slideshow'),
         $pressSlider = $('.optionset-open-press-carousel'),
         $frontSlider = $('.optionset-open-featured-work'),
         flexslider = { vars:{} };

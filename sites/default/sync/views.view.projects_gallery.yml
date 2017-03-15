@@ -931,30 +931,6 @@ display:
         - 'config:field.storage.node.field_task_type'
         - 'config:field.storage.node.field_task_year'
         - 'config:field.storage.node.field_thumbnail'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 2
-    display_options:
-      display_extenders: {  }
-      enabled: false
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_task_city'
-        - 'config:field.storage.node.field_task_program'
-        - 'config:field.storage.node.field_task_type'
-        - 'config:field.storage.node.field_task_year'
-        - 'config:field.storage.node.field_thumbnail'
   page_1:
     display_plugin: page
     id: page_1

@@ -16,7 +16,7 @@ $menu-top-child-bg: 			white; /*$whitesmoke-bg-color;*/ /*$darkgrey-bg-color;*/
 $menu-top-activechild-bg: 		white; /*$whitesmoke-bg-color;*/ /*$darkgrey-bg-color;*/
 $menu-top-child-color: 			$lighter-font-color-inv;
 
-
+$menu-row-height: 				$base-row2-height;
 
 .sidebar nav 	{ font-size: 1rem; }
 .footer nav 	{ font-size: 1rem; }
@@ -39,11 +39,10 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 
 .menu {
 
-	font-size: 1.1rem; /*$h3-font-size;*/ /*.75em;*/
-	font-weight: bold;
+	font-size: $h4-font-size; 
 
-	@include widest { font-size: 1.0rem;  }
-	@include full { font-size: 1.0rem; /*font-weight: normal;*/ }
+	@include widest { font-size: $h4-font-size;  }
+	@include full { font-size: $h3-font-size; font-weight: bold; }
 
 	pointer-events: visible;
 
@@ -53,20 +52,20 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 
 	.icon--expand-menu {
 		/*float: right;*/
-		/*margin-right: gutter(3.5 1) *.5;*/
+		margin-right: gutter(3.5 1) *.5;
 	}
 
 	li a {
 		display: block;
 		white-space: nowrap;
-		line-height: 	$base-row1-height;
-		height: 		$base-row1-height;
+		line-height: 	$menu-row-height;
+		height: 		$menu-row-height;
 		/*width:100%;*/
 		padding-left: 0;
 
 		/*@include full {
-			line-height: 	$base-row1-height;
-			height: 		$base-row1-height;
+			line-height: 	$menu-row-height;
+			height: 		$menu-row-height;
 		}*/
 	}
 
@@ -115,13 +114,13 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 
 	ul li label {
 		display: block;
-		line-height: 	$base-row1-height;
-		height: 		$base-row1-height;
+		line-height: 	$menu-row-height;
+		height: 		$menu-row-height;
 		cursor: pointer;
 
 		/*@include full {
-			line-height: 	$base-row1-height;
-			height: 		$base-row1-height;
+			line-height: 	$menu-row-height;
+			height: 		$menu-row-height;
 		}*/
 	}
 
@@ -132,13 +131,13 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 	ul li label > a {
 		pointer-events: none; /* disable link */
 		display: initial;
-		line-height: 	$base-row1-height;
-		height: 		$base-row1-height;
+		line-height: 	$menu-row-height;
+		height: 		$menu-row-height;
 
 		/*@include full {
-			line-height: 	$base-row1-height;
+			line-height: 	$menu-row-height;
 		}*/
-			height: 		$base-row1-height;
+			height: 		$menu-row-height;
 	}
 
 	ul li input[type='checkbox'] ~ ul {
@@ -320,6 +319,21 @@ $menu-top-child-color: 			$lighter-font-color-inv;
 
 	ul li label:hover {
 		background-color: $menu-focus-color-inv;
+	}
+}
+
+.sidebar .menu.invert {
+
+	/* borders */
+	li {
+		border-bottom: 1px solid $sidebar-hbd-color-inv;
+		&:nth-child(1) {
+			border-top: 1px solid $sidebar-hbd-color-inv;
+		}
+	}
+	li ul li {
+		border-bottom: none;
+		border-top: 1px solid $sidebar-hbd-color-inv;
 	}
 }
 

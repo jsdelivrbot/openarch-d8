@@ -178,7 +178,7 @@ $icon-hover-bg-color:			#e5e5e5;
 			}
 
 			/* button sizing */
-			%btn--sml {
+			%btn--sml { /* not used */
 				height:					$base-button-height-sml;
 				line-height: 			$base-button-height-sml;
 			}
@@ -252,7 +252,7 @@ $icon-hover-bg-color:			#e5e5e5;
 			.icon--expand-menu {
 				@extend %icon--fa;
 				/*@extend %icon--fa-sml;*/
-				@extend %btn--bigr-sqr;	
+				@extend %btn--big-sqr;	
 
 				float: right;		
 			}
@@ -266,8 +266,8 @@ $icon-hover-bg-color:			#e5e5e5;
 			/*icon fa icon--bigr btn-sml focus__btn*/
 			.icon--internal-sml {
 				@extend %icon--fa;
-				@extend %icon--fa-big;
-				@extend %btn--sml;
+				/*@extend %icon--fa-big;*/
+				/*@extend %btn--sml;*/
 			}
 
 			/*icon icon--bigr mat btn-big*/
@@ -281,7 +281,7 @@ $icon-hover-bg-color:			#e5e5e5;
 			.icon--external {
 				@extend %icon--mat;
 				@extend %icon--mat-sml;
-				@extend %btn--sml;
+				/*@extend %btn--sml;*/
 			}
 
 			/*icon sml btn-smlr mat*/
@@ -294,8 +294,8 @@ $icon-hover-bg-color:			#e5e5e5;
 			/*icon btn-sml fa*/
 			.icon--file {
 				@extend %icon--fa;
-				@extend %icon--fa-sml;
-				@extend %btn--sml;
+				@extend %icon--fa-smlr;
+				/*@extend %btn--sml;*/
 			}
 			
 			/*icon smlr btn-smlr fa*/

@@ -62,6 +62,7 @@ MyInverter = (function($) {
         $('.bg').addClass('invert');
         $('body').addClass('invert');
         $('.sidebar').addClass('invert');
+        $('.toolbar').addClass('invert');
         $('.c--black').addClass('c--white');
 
         // Save data to sessionStorage
@@ -78,6 +79,7 @@ MyInverter = (function($) {
         $('.bg').removeClass('invert');
         $('body').removeClass('invert');
         $('.sidebar').removeClass('invert');
+        $('.toolbar').removeClass('invert');
         $('.c--black').removeClass('c--white');
 
         // Save data to sessionStorage

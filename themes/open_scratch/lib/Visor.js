@@ -27,7 +27,7 @@ MyVisor = (function($) {
 	// $('.slider-toggler').click(function() { toggle() });
 
 	$(document).on('keydown', function (event) {          
-        if (event.keyCode == 72) { // "h" for header    
+        if (event.ctrlKey && event.keyCode == 72) { // "h" for header    
             toggle()
         }
     });

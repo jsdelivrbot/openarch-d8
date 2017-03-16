@@ -22,7 +22,7 @@ MyFullpage = (function($) {
     $toggle.click(function() { toggle() });
 
     $(document).on('keydown', function (event) {          
-        if (event.keyCode == 70) {       
+        if (event.ctrlKey && event.keyCode == 70) {       
             toggle()
         }
     });

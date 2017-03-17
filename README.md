@@ -607,6 +607,10 @@ change permissions on files directory to 777
 
 * update toolbar
 
+#### 0.7.32
+
+* remove slider canvas transition 
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

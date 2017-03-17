@@ -31,8 +31,8 @@
 
 	> .slider-drawer {
 
-		-webkit-transition: .3s ease all;
-		transition: .3s ease all;
+		-webkit-transition: width .3s, margin-left .3s, transform .3s;
+		transition: width .3s, margin-left .3s, transform .3s;
 
 		@include tiny {
 			width: span(9 of 13 wide);
@@ -73,8 +73,8 @@
 
 	> .slider-canvas {
 
-		-webkit-transition: .3s ease; 
-		transition: 		.3s ease;
+		-webkit-transition: width .3s, margin-left .3s, transform .3s;
+		transition: width .3s, margin-left .3s, transform .3s;
 
 		@include tiny {
 			margin-left: 0;

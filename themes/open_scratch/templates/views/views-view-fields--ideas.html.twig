@@ -4,7 +4,9 @@
 
     <div class="card__item card__slide relation__thumb media__img media__img--relation"> {# layout / width #}
 
+      <a href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
         {{ fields.field_thumbnail.content }} {# img element #}
+      </a>
 
     </div>
 
@@ -29,7 +31,11 @@
           </div>
 
           <div class="media__contents">
-              <h3 class="title title--secondary">{{ fields.title.content }} ({{ fields.field_task_year.content }})</h3>
+              <h3 class="title title--secondary">
+                <a href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
+                  {{ fields.title.content }} ({{ fields.field_task_year.content }})
+                </a>
+              </h3>
           </div>
 
         </div>

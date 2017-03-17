@@ -10,11 +10,10 @@
 
 MyVisor = (function($) {
 
-	//hold state
+	//state
 	var isDown = true; 
 
 	//cache dom
-	// var $container = $('.container');
 	var $visor = $('.visor');
 	var $content = $visor.find('.visor-content');
 	var $toggle = $visor.find('.visor-toggler');
@@ -24,130 +23,82 @@ MyVisor = (function($) {
 	$(document).ready(function() { init() });
 	$(window).resize(function() { init() });
     $(window).scroll(function() { update() });
-	// $('.slider-toggler').click(function() { toggle() });
 
-	$(document).on('keydown', function (event) {          
-        if (event.ctrlKey && event.keyCode == 72) { // "h" for header    
+	$(document).on('keydown', function (event) {   
+
+        if (event.ctrlKey && event.altKey && event.keyCode == 72) { // "h" for header    
             toggle()
         }
     });
 
 	function init() {
 
-		// $isFullpage = (
-		// 	Breakpoint.isWidest() || Breakpoint.isFull()) 
-	 //        && (window.location.pathname == "/" 
-  //           || window.location.pathname == "/openarch-d8/"
-  //           );
-
   		enable();
 		update();
-
-  //       $isFullpage = (window.location.pathname == "/" 
-  //           || window.location.pathname == "/openarch-d8/"
-  //           );
-
-		// if ($isFullpage) {
-	 //        disable();
-	 //    } else {
-	 //    	enable();
-		// 	update();
-		// }
 	}
 
 	function down() {
 
-		$isFullpage = (window.location.pathname == "/" 
-            || window.location.pathname == "/openarch-d8/"
-            );
-
 		$visor.removeClass('up');
-
-		if($isFullpage) {
-			$nameplate.fadeOut();
-		}
-
 		isDown = true;
+
+		if(Pg.isFront()) {
+			$nameplate.fadeOut();
+			// addStyle();
+		}	
 	};
 
 	function up() {
 
-
 		$visor.addClass('up'); 
-		// $nameplate.fadeIn();
-
 		isDown = false;
+
+		// if(Pg.isFront()) {
+		// 	removeStyle();
+		// } 
 	};
 
 	function hideContent() {
 
-		// $content.addClass('up');
 		$content.fadeOut(200);
 	}
 
 	function showContent() {
 
-		// $content.removeClass('up');
 		$content.fadeIn(200);
 	}
 
 	function addStyle() {
 
 		//if has open, then it is mobile breakpoint with drawer open
-		// $visor.addClass('border--b-lighter'); 
+		$visor.addClass('border--b-lighter'); 
 		$visor.addClass('bg--white'); 
-		$visor.addClass('drop--b'); 
+		// $visor.addClass('drop--b'); 
 	};
 
 	function removeStyle() {
 
 		//if has open, then it is mobile breakpoint with drawer open
-		// $visor.removeClass('border--b-lighter'); 
+		$visor.removeClass('border--b-lighter'); 
 		$visor.removeClass('bg--white');
-		$visor.removeClass('drop--b');
+		// $visor.removeClass('drop--b');
 	};
 
 	function disable() {
-
-		// if ($visor.hasClass('visor')) { 
-			$visor.removeClass('visor'); 
-		// } 
+		$visor.removeClass('visor'); 
 	}
 
 	function enable() {
-
-		// if (!$visor.hasClass('visor')) { 
-			$visor.addClass('visor'); 
-		// }	
+		$visor.addClass('visor'); 
 	}
 
 	function update() {
 
 		$scroll = $(window).scrollTop();
-
-
-		// $root-font-size-tiny: 		12;
-		// $root-font-size-mobile: 		13;
-		// $root-font-size-narrow: 		14;
-		// $root-font-size-wide: 		14;
-		// $root-font-size-wider: 		15;
-		// $root-font-size-widest: 		15;
-		// $root-font-size-full: 		17;
-
 		$rootFont = parseFloat($("html").css("font-size"));
 		$bufferSize =  5.0 * $rootFont * 2;
 
-		// if (Breakpoint.isTiny()) { 
-		// 	$bufferSize =  3.75 * $rootFont;
-		// } else { 
-		// 	$bufferSize =  5.0 * $rootFont * 2;
-		// }
-
-		$isFullpage = (window.location.pathname == "/" 
-            || window.location.pathname == "/openarch-d8/"
-            );
-
-		if (!$isFullpage) {
+		if (!Pg.isFront()) {
 
 			if ($scroll > $bufferSize) {
 				addStyle();
@@ -161,10 +112,9 @@ MyVisor = (function($) {
 				down();
 			}
 
-		} else {
+		} else { //Frontpage
 
-			//Let Fullpage.js handle this
-
+			// isDown ? addStyle() : removeStyle();
 		}
 
 		if (($scroll > 0) || MySlider.isOpen()) {
@@ -174,15 +124,9 @@ MyVisor = (function($) {
 		} 
 	};
 
-	// function getScroll() {
-	// 	$scroll = $container.scrollTop();
-	// };
-
 	//public methods
-	function toggle() {
-
+	function toggle() {	
 		isDown ? up() : down();
-
 	};
 
 	//public API
@@ -192,7 +136,9 @@ MyVisor = (function($) {
 		down: down,
 		disable: disable,
 		enable: enable,
-		update: update
+		update: update,
+		addStyle: addStyle,
+		removeStyle: removeStyle
 	};
 
 	return public_API

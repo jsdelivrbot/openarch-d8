@@ -176,6 +176,9 @@ $icon-hover-bg-color:			#e5e5e5;
 				opacity: .7;
 				&:hover { opacity: .8; }
 			}
+			%btn--whitesmoke {
+				background: #f9f9f9;
+			}
 
 			/* button sizing */
 			%btn--sml { /* not used */
@@ -261,6 +264,7 @@ $icon-hover-bg-color:			#e5e5e5;
 			.icon--internal {
 				@extend %icon--mat;
 				@extend %btn--big;
+				/*@extend %btn--whitesmoke;*/
 			}
 
 			/*icon fa icon--bigr btn-sml focus__btn*/

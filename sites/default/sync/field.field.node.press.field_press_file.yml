@@ -18,7 +18,7 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: press
+  file_directory: 'pdf/[current-date:html_month]'
   file_extensions: pdf
   max_filesize: ''
   description_field: false

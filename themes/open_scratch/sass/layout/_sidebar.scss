@@ -30,15 +30,17 @@ $sidebar-footer-height: 	$base-row2-height;
 		/*line-height: 			$sidebar-header-height;*/
 		border-right: 			1px solid $sidebar-vbd-color;
 
-		&__top {
+		.sidebar__top {
 
 			line-height: 		$sidebar-header-height;	
 			height: 			$sidebar-header-height;
 		}
 
-		&__middle {
+		.sidebar__middle {
 
-			padding-bottom:		$sidebar-footer-height;
+			/*padding-bottom:		$sidebar-footer-height;*/
+			padding-top:	$base-row1-height * 3;
+			padding-bottom:	$base-row1-height * 3; /* - $base-row2-height*/;
 		}
 
 		.sidebar__bottom {
@@ -73,7 +75,7 @@ $sidebar-footer-height: 	$base-row2-height;
 
 	&__middle{
 
-		height: 100%;
+		min-height: 100%;
 		overflow-y: auto;
 	}
 

@@ -12,8 +12,8 @@ third_party_settings:
   content_translation:
     translation_sync:
       alt: alt
-      title: title
       file: '0'
+      title: '0'
 id: node.task.field_featured_work
 field_name: field_featured_work
 entity_type: node
@@ -21,13 +21,13 @@ bundle: task
 label: 'Featured work'
 description: 'Upload optional image for slideshow on front page'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: frontslides
+  file_directory: 'raw_images/[current-date:html_month]'
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
+  max_filesize: '1 MB'
   max_resolution: ''
   min_resolution: ''
   alt_field: true

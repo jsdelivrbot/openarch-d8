@@ -592,6 +592,17 @@ change permissions on files directory to 777
 
 * readd featured work view
 
+#### 0.7.30
+
+* delete unused modules
+* fix no fullpage scroll issue
+* fix permissions on files folder
+* remove placeholder featured work images
+* fix readmore issue
+* fix sidebar scrolling issue
+* remove unwanted transitions on slider/visor
+* fix idea/pre-open links
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -714,6 +725,7 @@ change permissions on files directory to 777
 
 * people, idea, relations, pre-open are basically same card type (lot of redundancy)
 * mediacard same as mediacard2
+* generate image style on upload (see https://www.flocondetoile.fr/blog/generate-programmatically-image-styles-drupal-8)
 
 #### ISSUES:
 

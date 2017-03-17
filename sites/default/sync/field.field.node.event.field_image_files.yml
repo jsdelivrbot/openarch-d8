@@ -21,13 +21,13 @@ bundle: event
 label: Images
 description: 'One or more slideshow images of event.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: 'raw_images/[current-date:html_month]'
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: '1 MB'
+  max_filesize: '500 KB'
   max_resolution: ''
   min_resolution: ''
   alt_field: true

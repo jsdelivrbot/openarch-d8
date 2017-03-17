@@ -34,7 +34,7 @@ MySlider = (function($) {
 	$screen.click(function() { toggle() });
 
 	$(document).on('keydown', function (event) {          
-        if (event.ctrlKey && event.keyCode == 83) {       
+        if (event.ctrlKey && event.altKey && event.keyCode == 83) {       
             toggle()
         }
     });

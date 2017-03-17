@@ -1,41 +1,60 @@
 
 MyReadmore = (function($) {
 
-	// $(document).ready(function() {
+	//cache dom
+	var $bd = $('.bd--expandable');
+
+	$(document).ready(function() {
+		$bd.hide();
+	});	
+
 	$(window).load(function() {
 
 		init();
-		// $('.bd--expandable').readmore({
-	 //      	moreLink: '<a class="morelink" href="#">More...</a>',
-	 //      	lessLink: '<a class="morelink" href="#">Less</a>',
-	 //      	collapsedHeight: 257
-	 //    });
+		$bd.show();
+
+		// $bd.delay(1000).readmore('toggle');
 	});
 
 	//see options at https://github.com/jedfoster/Readmore.js
 	function init() {
 
-	    // $('.bd--expandable').readmore({
-	    // 	speed: 100 in milliseconds,
-	    //   	moreLink: '<a class="morelink" href="#">More...</a>',
-	    //   	lessLink: '<a class="morelink" href="#">Less</a>',
-	    //   	collapsedHeight: 257,
-	    //   	heightMargin: 16
-	    // });
+	    $bd.readmore({
 
-	    $('.bd--expandable').readmore({
-	    	speed: 200,
+	    	speed: 300,
 	      	moreLink: '<a class="morelink" href="#">More...</a>',
 	      	lessLink: '<a class="morelink" href="#">Less</a>'
+	      	// startOpen: true
+
+	    //   	beforeToggle: function(trigger, element, expanded) {
+			  //   if(! expanded) { 
+			  //     	close();
+			  //   } else { 
+			  //   	open();
+			  //   }
+		  	// }
+
 	    });
 
-	    // $('.bd--expandable').readmore();
+
 	}
 
-    function toggle() {
+	// function open() { 
 
-    	 $('.bd--expandable').readmore('toggle');
-    }
+	// 	console.log("open text");
+	// 	$bd.removeClass('close');
+	// };
+
+	// function close() { 
+
+	// 	console.log("close text");
+	// 	$bd.addClass('close');
+	// };
+
+	function toggle() {
+
+		$bd.readmore('toggle');
+	}
 
     //public API
     public_API = { 

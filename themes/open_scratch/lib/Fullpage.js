@@ -139,10 +139,12 @@ MyFullpage = (function($) {
                         }
 
                         if (index == 2){
-                            $footer.show();
-                            // $header.show(); 
+                            $footer.show(); 
                             MyVisor.down();
-                            // (Breakpoint.isWide() || Breakpoint.isWider()) ? MySlider.open() : MySlider.close();            
+                            (Breakpoint.isWide() || Breakpoint.isWider()) ? MySlider.open() : MySlider.close();  
+
+                            // Fix scroll issue (see http://stackoverflow.com/questions/26986136/fullpage-js-will-only-scrolloverflow-after-window-resize) 
+                            $.fn.fullpage.reBuild();         
                         }
                         
                     },
@@ -155,6 +157,8 @@ MyFullpage = (function($) {
                         //     $screen.removeClass('bg--white');
                         //     $screen.show();
                         // });
+
+                        
 
                     },
                     afterResize: function(){},
@@ -186,7 +190,7 @@ MyFullpage = (function($) {
                     autoScrolling: true,
                     fitToSection: false,
                     // fitToSectionDelay: 1000,
-                    scrollBar: false,
+                    scrollBar: true,
                     easing: 'easeInOutCubic',
                     easingcss3: 'ease',
                     loopBottom: false,

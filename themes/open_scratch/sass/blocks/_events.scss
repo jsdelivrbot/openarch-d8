@@ -1,5 +1,10 @@
 .card.events {
 
+	@include tiny   { > .card__header { display: none; } }
+	@include mobile { > .card__header { display: none; } }
+	@include narrow { > .card__header { display: none; } }
+	@include wide   { > .card__header { display: none; } }
+
 	@include wider  {  
 		> .card__header { 
 			@include span(first 3 of 12);
@@ -61,9 +66,15 @@
 	/*@include widest	{ @include card-type-12col; }
 	@include full { @include card-type-12col; }*/
 
+	&:nth-child(1) {border-top: none;} 
+
+	/*@include tiny 	{ &:nth-child(1) {border-top: none;} }
+	@include mobile { &:nth-child(1) {border-top: none;} }
+	@include narrow { &:nth-child(1) {border-top: none;} }
+	@include wide 	{ &:nth-child(1) {border-top: none;} }
 	@include wider 	{ &:nth-child(1) {border-top: none;} }
 	@include widest { &:nth-child(1) {border-top: none;} }
-	@include full 	{ &:nth-child(1) {border-top: none;} }
+	@include full 	{ &:nth-child(1) {border-top: none;} }*/
 
 	.card__slide	{
 

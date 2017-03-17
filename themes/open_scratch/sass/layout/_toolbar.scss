@@ -63,7 +63,7 @@
 		top: -$tbar-height;
 
 		border-top: 1px solid $tbar-bd-color;
-		border-bottom: 1px solid $tbar-bd-color;
+		/*border-bottom: 1px solid $tbar-bd-color;*/
 	}
 
 	.toolbar-toggle{
@@ -71,6 +71,12 @@
 		top: -$tbar-height;
 
 		border-bottom: 1px solid $tbar-bd-color;
+	}
+
+	.toolbar-toggle.below {
+		top: 0;
+		border-bottom: 0;
+		border-top: 1px solid $tbar-bd-color;
 	}
 
 .toolbar.invert {

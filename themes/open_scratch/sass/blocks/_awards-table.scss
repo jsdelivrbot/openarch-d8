@@ -24,11 +24,13 @@
 
 .card.awards {
 
+	.card__header { display: none; }
+
 	@include widest	{ 
 		@include card-layout-vert; 
 	} 
 	@include full	{ 		
-		@include card-type-6col;
+		/*@include card-type-6col;*/
 	} 
 }
 

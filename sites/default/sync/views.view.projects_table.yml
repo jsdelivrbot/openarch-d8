@@ -807,7 +807,7 @@ display:
           exposed: true
           expose:
             operator_id: field_task_type_value_op
-            label: 'By Type'
+            label: 'Projects By Type'
             description: ''
             use_operator: false
             operator: field_task_type_value_op

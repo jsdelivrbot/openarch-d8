@@ -153,8 +153,8 @@ table {
 		@include wide {}
 		@include wider {}
 		@include widest {
-			height: 			$base-row3-height;
-			line-height: 		$base-row3-height;
+			height: 			$base-row1-height;
+			line-height: 		$base-row1-height;
 		}
 		@include full {
 			height: 			$base-row1-height;
@@ -219,13 +219,15 @@ table {
 
 	tr {
 
-		@include widest { /*border: none !important;*/ }
+		@include widest { /*border: none !important; */}
 		@include full { /*border: none !important;*/ }
 	}
 
 	thead > tr {
 
-		@include full { border-top: none; }
+		border-top: none;
+
+		@include full { /*border-top: none;*/ }
 	}
 }
 

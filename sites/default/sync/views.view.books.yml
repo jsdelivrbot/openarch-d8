@@ -1861,7 +1861,7 @@ display:
           exposed: true
           expose:
             operator_id: field_book_type_value_op
-            label: 'Filter by Type'
+            label: 'BOOKS by Type'
             description: ''
             use_operator: false
             operator: field_book_type_value_op

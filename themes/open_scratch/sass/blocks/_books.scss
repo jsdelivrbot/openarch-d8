@@ -24,6 +24,8 @@
 
 .card.books {
 
+	> .card__header { display: none; }
+
 	@include widest	{ 
 		margin-left: gutter(13);
 		margin-right: gutter(13);
@@ -31,13 +33,14 @@
 		float: none;  
 	} 
 	@include full	{ 
-		@include card-type-6col;
+		/*@include card-type-6col;*/
 	} 
 }
 
 .card.book-item {
 
 	/* remove top border from first item */
-	@include full 	{ &:nth-child(1) {border-top: none;} }
+	&:nth-child(1) {border-top: none;}
+	/*@include full 	{ &:nth-child(1) {border-top: none;} }*/
 
 }

@@ -53,6 +53,10 @@ Pg = (function($) {
 		
 	return {
 		isFront: isFront(),
+		isProjTable: pathBegins("projects/table"),
+		isAwards: pathBegins("awards"),
+		isBooks: pathBegins("books"),
+		isEvents: pathBegins("events"),
 		isTask: pathBegins("task"),
 		isPress: pathBegins("press"),
 		isIdeas: pathBegins("ideas"),

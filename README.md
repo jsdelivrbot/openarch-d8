@@ -603,6 +603,10 @@ change permissions on files directory to 777
 * remove unwanted transitions on slider/visor
 * fix idea/pre-open links
 
+#### 0.7.31
+
+* update toolbar
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

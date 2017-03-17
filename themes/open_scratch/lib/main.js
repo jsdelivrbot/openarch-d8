@@ -89,7 +89,16 @@ jQuery(document).ready(function($){
         window.document.location = $link.attr('href');
     });
 
+    //drop toolbar-toggle icon for some pages
+    // if ((Pg.isAwards() && !Breakpoint.isFull()) ||
+    //     (Pg.isBooks() && !Breakpoint.isFull()) ||
+    //     (Pg.isEvents() && !(Breakpoint.isFull() || Breakpoint.isWidest() || Breakpoint.isWider())) ||
+    //     (Pg.isProjTable() && !Breakpoint.isFull())) {
 
+    //     $(".toolbar-toggle").addClass('below');
+    // }
+
+    
 });
 
 

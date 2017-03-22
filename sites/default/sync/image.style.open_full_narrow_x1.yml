@@ -1,0 +1,14 @@
+uuid: ec9ce6d1-bc13-458e-91dc-fd4e572136df
+langcode: en
+status: true
+dependencies: {  }
+name: open_full_narrow_x1
+label: OPEN_full_narrow_x1
+effects:
+  f53d81ae-2e15-4517-96ea-20689aca16db:
+    uuid: f53d81ae-2e15-4517-96ea-20689aca16db
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 1280

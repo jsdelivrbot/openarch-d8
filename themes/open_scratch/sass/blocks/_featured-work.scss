@@ -4,7 +4,8 @@
 	position: relative;
 	/*z-index: -1;*/ /* don't do this */
 
-	.slide__image img {
+
+	/*.slide__image img {
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -12,7 +13,45 @@
 			height: auto;	
 			min-width: 100%;
 			min-height: 100%;
-		}
+
+			@include landscape { width: 100%; }
+			@include portrait { height: 100%; }
+		}*/
+
+		
+
+	.slide__image {
+		position: fixed; 
+		top: -50%; 
+		left: -50%; 
+		width: 200%; 
+		height: 200%;
+	}
+	.slide__image img {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		right: 0; 
+		bottom: 0; 
+		margin: auto; 
+		/*min-width: 50%;
+		min-height: 50%;*/
+
+		/*@include landscape { width: 50%; height: auto; }
+		@include portrait { height: 50%; width: auto; }*/
+	}
+
+	.slide__image.fullwidth img {
+
+		width: 50%; 
+		height: auto;
+	}
+
+	.slide__image.fullheight img {
+
+		height: 50%; 
+		width: auto;
+	}
 
 		.slide__caption {
 			width: 100%;
@@ -21,40 +60,5 @@
 			left: 0;
 		}
 
-	/*@include widest	{ 
-		
-		.slide__image img {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: auto;
-			height: auto;	
-			min-width: 100%;
-			min-height: 100%;
-		}
-
-		.slide__caption {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-		}
-	}
-	@include full	{ 
-
-		.slide__image img {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: auto;
-			height: auto;	
-			min-width: 100%;
-			min-height: 100%;
-		}
-
-		.slide__caption {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-		}
-	}*/
 }
+

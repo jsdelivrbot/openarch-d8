@@ -611,6 +611,10 @@ change permissions on files directory to 777
 
 * remove slider canvas transition 
 
+#### 0.7.33
+
+* fix fullscreen slideshow
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

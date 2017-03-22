@@ -1,0 +1,14 @@
+uuid: ad0d2568-9b34-4118-a93e-14005ab03cfb
+langcode: en
+status: true
+dependencies: {  }
+name: open_full_tiny_x1
+label: OPEN_full_tiny_x1
+effects:
+  4c7cc68d-883e-4b66-8548-2158c7b3d119:
+    uuid: 4c7cc68d-883e-4b66-8548-2158c7b3d119
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 622

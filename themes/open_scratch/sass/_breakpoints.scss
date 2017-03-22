@@ -19,6 +19,7 @@
 */ 
 
 /* major breakpoints */
+/* browse to http://cssmediaqueries.com/ with device to check which breakpoints are firing */
 
 @mixin tiny{
     @media all and (max-width: 350px){ @content; }
@@ -42,9 +43,12 @@
     @media all and (min-width: 1441px){ @content; }
 }
 
-/*@mixin landscape {
-    @media
-}*/
+@mixin landscape {
+    @media all and (orientation:landscape) { @content; }
+}
+@mixin portrait {
+    @media all and (orientation: portrait) { @content; }
+}
 
 /* breakpoints for tables */
 

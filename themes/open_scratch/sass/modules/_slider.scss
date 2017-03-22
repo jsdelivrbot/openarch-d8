@@ -73,6 +73,9 @@
 
 	> .slider-canvas {
 
+		-webkit-transition: transform .3s;
+		transition: transform .3s;
+
 		@include full {
 			-webkit-transition: width .3s, margin-left .3s, transform .3s;
 			transition: width .3s, margin-left .3s, transform .3s;

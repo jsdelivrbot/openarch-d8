@@ -615,6 +615,10 @@ change permissions on files directory to 777
 
 * fix fullscreen slideshow
 
+#### 0.7.34
+
+* fix fullscreen slideshow again
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -4,21 +4,18 @@
 	position: relative;
 	/*z-index: -1;*/ /* don't do this */
 
-
 	/*.slide__image img {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: auto;
-			height: auto;	
-			min-width: 100%;
-			min-height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: auto;
+		height: auto;	
+		min-width: 100%;
+		min-height: 100%;
 
-			@include landscape { width: 100%; }
-			@include portrait { height: 100%; }
-		}*/
-
-		
+		@include landscape { width: 100%; }
+		@include portrait { height: 100%; }
+	}*/
 
 	.slide__image {
 		position: fixed; 
@@ -34,11 +31,10 @@
 		right: 0; 
 		bottom: 0; 
 		margin: auto; 
-		/*min-width: 50%;
-		min-height: 50%;*/
 
-		/*@include landscape { width: 50%; height: auto; }
-		@include portrait { height: 50%; width: auto; }*/
+		/*@include widest { height: 50%; width: auto; }
+		@include widest { height: 50%; width: auto; }*/
+
 	}
 
 	.slide__image.fullwidth img {

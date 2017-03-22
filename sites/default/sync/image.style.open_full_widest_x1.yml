@@ -5,11 +5,10 @@ dependencies: {  }
 name: open_full_widest_x1
 label: OPEN_full_widest_x1
 effects:
-  971cbbe4-0480-48da-8f04-c285e53ce67f:
-    uuid: 971cbbe4-0480-48da-8f04-c285e53ce67f
-    id: image_scale
-    weight: 1
+  ba79be71-1a6c-46fd-8fe7-65c8d887b520:
+    uuid: ba79be71-1a6c-46fd-8fe7-65c8d887b520
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 1920
       height: 1280
-      upscale: true

@@ -32,8 +32,8 @@
 		bottom: 0; 
 		margin: auto; 
 
-		/*@include widest { height: 50%; width: auto; }
-		@include widest { height: 50%; width: auto; }*/
+		height: 50%; 
+		width: auto;
 
 	}
 
@@ -43,11 +43,11 @@
 		height: auto;
 	}
 
-	.slide__image.fullheight img {
+	/*.slide__image.fullheight img {
 
 		height: 50%; 
 		width: auto;
-	}
+	}*/
 
 		.slide__caption {
 			width: 100%;

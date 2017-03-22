@@ -8,8 +8,9 @@
 	// });
 
 	$(document).ready(function() { 
-		console.log("doc ready")
-		setTimeout(function(){ update() }, 4000);
+		// console.log("doc ready")
+		update();
+		// setTimeout(function(){ update() }, 5000);
 	});
 
 	$(window).resize(function() { 
@@ -18,22 +19,22 @@
 
 	function update() {
 
-		var $wrapper = $('.featured-work .slide__image');
-		var $img = $wrapper.find('img');
-		var	$imgAspect = $img.width() / $img.height();
+		var $img = $('.featured-work .slide__image');
+		// var $img = $wrapper.find('img');
+		var	$imgAspect = 1.5; //$img.width() / $img.height();
 		var $winAspect = $(window).width() / $(window).height();
 		
 		if ( $winAspect < $imgAspect ) {
 
 			console.log("set fullheight");
-		    $wrapper.removeClass('fullwidth');
-		    $wrapper.addClass('fullheight');
+		    $img.removeClass('fullwidth');
+		    // $img.addClass('fullheight');
 
 		} else {
 
 			console.log("set fullwidth");
-		    $wrapper.removeClass('fullheight');
-		    $wrapper.addClass('fullwidth');
+		    // $img.removeClass('fullheight');
+		    $img.addClass('fullwidth');
 		}				
 	}
 

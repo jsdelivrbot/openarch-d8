@@ -8,7 +8,8 @@
 	// });
 
 	$(document).ready(function() { 
-		setTimeout(function(){ update() }, 500);
+		console.log("doc ready")
+		setTimeout(function(){ update() }, 4000);
 	});
 
 	$(window).resize(function() { 

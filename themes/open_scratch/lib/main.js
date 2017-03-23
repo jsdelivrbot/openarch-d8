@@ -68,6 +68,11 @@ jQuery(document).ready(function($){
     $(".event-teaser.expandable input:checkbox:lt(3)").attr('checked', true);
     $(".book-item.expandable input:checkbox:first").attr('checked', true);
 
+    // close toolbar by defualt on certain pages
+    if(Pg.isAwards()) {
+        $(".toolbar.peekable input:checkbox").attr('checked', false);
+    }
+
     // all <a> tags containing a certain rel=""
     $("a[rel~='keep-params']").click(function(e) {
         e.preventDefault();

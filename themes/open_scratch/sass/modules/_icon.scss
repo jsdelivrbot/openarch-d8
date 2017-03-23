@@ -241,7 +241,7 @@ $icon-hover-bg-color:			#e5e5e5;
 			.icon--filter {
 				@extend %icon--mat;
 				@extend %btn--bigr;
-				@extend %btn--pull-left;			
+				/*@extend %btn--pull-left;*/			
 			}
 
 			/*icon fa btn-big icon--big*/

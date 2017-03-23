@@ -148,7 +148,7 @@ $menubar-width:				100%;
 			@include narrow { display: none; }
 			@include wide { display: none; }
 			@include wider { display: none; }
-			@include widest {}
+			@include widest { display: none; }
 			@include full {}
 
 		/*}	*/

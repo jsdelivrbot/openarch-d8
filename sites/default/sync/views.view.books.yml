@@ -32,7 +32,6 @@ dependencies:
     - options
     - responsive_image
     - user
-    - views_infinite_scroll
 id: books
 label: Books
 module: views
@@ -74,15 +73,17 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: infinite_scroll
+        type: full
         options:
-          items_per_page: 15
+          items_per_page: 10
           offset: 0
           id: 0
           total_pages: null
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: ⟵
+            next: ⟶
+            first: ⇤
+            last: ⇥
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -91,9 +92,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          views_infinite_scroll:
-            button_text: 'Load More'
-            automatically_load_content: true
+          quantity: 9
       style:
         type: table
         options:

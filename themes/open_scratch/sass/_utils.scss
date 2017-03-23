@@ -12,9 +12,13 @@
 		border-top: 1px solid $blk-bd-color;
 	}
 
+	.border--b,
 	.border-bottom,
 	.border--bottom {
 		border-bottom: 1px solid $def-bd-color;
+	}
+	.border--b.invert {
+		border-color: $def-bd-color-inv;
 	}
 
 	.border--tb {
@@ -22,6 +26,9 @@
 		&:nth-last-child(1) {
 			border-bottom: 1px solid $def-bd-color;
 		}
+	}
+	.border--tb.invert {
+		border-color: $def-bd-color-inv;
 	}
 
 	.border--tb-blk {
@@ -31,11 +38,35 @@
 		}
 	}
 
+	/* visor */
 	.border--b-lighter {
 		border-bottom: 1px solid $lighter-bd-color;
 	}
+	.border--b-lighter.invert { /*.invertable*/
+		border-color: $lighter-bd-color-inv;
+	}
 
+	/* refactor invertable borders */
+	.bdt { border-top: 1px solid; }
+	.bdb { border-bottom: 1px solid; }
+	.bdy { 
+		border-top: 1px solid;
+		&:nth-last-child(1) {
+			border-bottom: 1px solid inherit;
+		}
+	}
 
+	.bdc--def { border-color: $def-bd-color; }
+	.bdc--hln { border-color: $hairline-bd-color; }
+	.bdc--ltr { border-color: $lighter-bd-color; }
+	.bdc--dkr { border-color: $darker-bd-color; }
+	.bdc--blk { border-color: $blk-bd-color; }
+
+	.bdc--def.invert { border-color: $def-bd-color-inv; }
+	.bdc--hln.invert { border-color: $hairline-bd-color-inv; }
+	.bdc--ltr.invert { border-color: $lighter-bd-color-inv; }
+	.bdc--dkr.invert { border-color: $darker-bd-color-inv; }
+	.bdc--blk.invert { border-color: $blk-bd-color-inv; }
 
 
 

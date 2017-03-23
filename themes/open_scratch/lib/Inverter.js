@@ -54,6 +54,7 @@ MyInverter = (function($) {
 
     function invert() {
 
+        $('.invertable').addClass('invert');
         $('table').addClass('invert');
         $('.title').addClass('invert');
         $('.tag').addClass('invert');
@@ -71,6 +72,7 @@ MyInverter = (function($) {
 
     function reset() {
 
+        $('.invertable').removeClass('invert');
         $('table').removeClass('invert');
         $('.title').removeClass('invert');
         $('.tag').removeClass('invert');

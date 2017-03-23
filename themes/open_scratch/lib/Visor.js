@@ -71,7 +71,9 @@ MyVisor = (function($) {
 	function addStyle() {
 
 		//if has open, then it is mobile breakpoint with drawer open
-		$visor.addClass('border--b-lighter'); 
+		// $visor.addClass('border--b-lighter'); 
+		$visor.addClass('bdb'); 
+		$visor.addClass('bdc--ltr'); 
 		$visor.addClass('bg--white'); 
 		// $visor.addClass('drop--b'); 
 	};
@@ -79,7 +81,9 @@ MyVisor = (function($) {
 	function removeStyle() {
 
 		//if has open, then it is mobile breakpoint with drawer open
-		$visor.removeClass('border--b-lighter'); 
+		$visor.removeClass('border--b-lighter');
+		$visor.removeClass('bdb'); 
+		$visor.removeClass('bdc--ltr'); 
 		$visor.removeClass('bg--white');
 		// $visor.removeClass('drop--b');
 	};

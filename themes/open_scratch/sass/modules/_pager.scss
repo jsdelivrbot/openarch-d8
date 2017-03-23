@@ -46,3 +46,9 @@
 		}
 	
 }
+
+.pager.invert {
+	.pager__item:hover {
+		background: $base-hover-color-inv;
+	}
+}

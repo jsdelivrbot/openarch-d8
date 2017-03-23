@@ -619,6 +619,11 @@ change permissions on files directory to 777
 
 * fix fullscreen slideshow again
 
+#### 0.7.35
+
+* refactor borders
+* remove header menu from widest
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -742,6 +747,7 @@ change permissions on files directory to 777
 * people, idea, relations, pre-open are basically same card type (lot of redundancy)
 * mediacard same as mediacard2
 * generate image style on upload (see https://www.flocondetoile.fr/blog/generate-programmatically-image-styles-drupal-8)
+* inverted scheme flash white on page load b/c loads white then inverts. 
 
 #### ISSUES:
 

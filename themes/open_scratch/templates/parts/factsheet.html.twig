@@ -1,12 +1,22 @@
-<div class="card factsheet border--top">
+<div class="card factsheet bdt bdb bdc--def invertable expandable">
 
-  <div class="card__item card__item--spaced-most card__header">
+  {# <div class="card__item card__item--spaced-most card__header">
     <div class="title title--secondary">
       <h3>Data</h3>
     </div>
+  </div> #}
+
+  <input type="checkbox" id="data" checked>
+  <label for="data">
+
+  <div class="card__item spaced card__header expandable-head">
+    {% include '@open_scratch/parts/card-header--expandable.html.twig' with {'title': 'Data'} only %}
   </div>
 
-  <div class="card__item card__item--spaced-most-top card__body">
+  </label>
+
+  {# <div class="card__item card__item--spaced-most-top card__body"> #}
+  <div class="card__item cr card__body expandable-body">
     <div class="gallery-container factsheet-gallery-container">
       {{ page.content_facts }}
     </div>

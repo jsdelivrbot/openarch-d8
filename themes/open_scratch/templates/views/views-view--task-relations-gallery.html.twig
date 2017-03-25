@@ -8,45 +8,19 @@
 
 {% if view.total_rows > 0 %}
                
-  <div class="card card--supercard relations border--top expandable">
+  <div class="card card--supercard relations bdt bdc--def invertable expandable">
 
     <input type="checkbox" id="related-work" checked>
     <label for="related-work">
     
-      <div class="card__item spaced--most card__header expandable-head">
-
-        <div class="media mediaTitle">
-
-          <div class="media__imgR">
-
-            <div class="ribbon">
-              <div class="ribbon__segments">
-                  <div class="ribbon__segment right">
-
-                      <a class="icon--expand checked" style="background:none"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                      <a class="icon--expand unchecked" style="background:none"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                  
-                  </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="media__contents">
-
-            <div class="title title--secondary">
-              <h4>{{ view.display_handler.display.display_title }} ({{ view.total_rows }})</h4>
-            </div>
-
-          </div>
-
-        </div>
-
+      <div class="card__item spaced card__header expandable-head">
+        {% set title = ( view.display_handler.display.display_title ) ~ ' (' ~ ( view.total_rows ) ~ ')' %}
+        {% include '@open_scratch/parts/card-header--expandable.html.twig' with {'title': title} only %}
       </div>
 
     </label>
 
-    <div class="card__item card__body expandable-body">
+    <div class="card__item cr card__body expandable-body">
 
       <div class="gallery galleryRelations">
         <ul class="gallery__container">

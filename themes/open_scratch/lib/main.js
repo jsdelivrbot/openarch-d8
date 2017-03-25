@@ -66,12 +66,13 @@ jQuery(document).ready(function($){
     // expand first few elements in expandable list
     $(".news-item.expandable input:checkbox:lt(3)").attr('checked', true);
     $(".event-teaser.expandable input:checkbox:lt(3)").attr('checked', true);
-    $(".book-item.expandable input:checkbox:first").attr('checked', true);
+    $(".book-item.expandable input:checkbox").attr('checked', true);
 
-    // close toolbar by defualt on certain pages
-    if(Pg.isAwards()) {
-        $(".toolbar.peekable input:checkbox").attr('checked', false);
-    }
+    // open toolbar by defualt on certain pages
+    $(".toolbar.peekable input:checkbox").attr('checked', false);
+    // if(Pg.isTask()) {
+    //     $(".toolbar.peekable input:checkbox").attr('checked', true);
+    // }
 
     // all <a> tags containing a certain rel=""
     $("a[rel~='keep-params']").click(function(e) {

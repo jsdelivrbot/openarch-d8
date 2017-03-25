@@ -30,14 +30,14 @@
 
 .card.peoples {
 	/* layout card */
-	@include tiny   { > .card__header { display: none; } }
+	/*@include tiny   { > .card__header { display: none; } }
 	@include mobile { > .card__header { display: none; } }
 	@include narrow { > .card__header { display: none; } }
 	@include wide   { > .card__header { display: none; } }
-	@include wider  { > .card__header { display: none; } }
+	@include wider  { > .card__header { display: none; } }*/
 	@include widest	{ 
 
-		> .card__header { display: none; }
+		/*> .card__header { display: none; }*/
 
 		margin-left: gutter(13);
 		margin-right: gutter(13);

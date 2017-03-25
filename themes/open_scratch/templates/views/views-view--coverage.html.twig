@@ -8,24 +8,21 @@
 
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="card coverage border--top expandable">
+  <div class="card coverage bdt bdc--def invertable expandable">
 
     <input type="checkbox" id="related-press">
 
     <label for="related-press">
 
-      <div class="card__item card__header spaced--most expandable-head">
-
-        {% include '@open_scratch/parts/view-header.html.twig' %}
-
+      <div class="card__item spaced card__header expandable-head">
+        {% set title = ( view.display_handler.display.display_title ) ~ ' (' ~ ( view.total_rows ) ~ ')' %}
+        {% include '@open_scratch/parts/card-header--expandable.html.twig' with {'title': title} only %}
       </div>
 
     </label>
 
-    <div class="card__item card__body spaced--most mt--0 expandable-body">
-
+    <div class="card__item cr card__body spaced--most mt--0 expandable-body">
       {{ rows }}
-
     </div>
 
   </div>

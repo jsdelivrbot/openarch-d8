@@ -9,15 +9,8 @@
 
     <div class="card__item card__header">
 
-      <div class="ribbon big">
-        <div class="ribbon__segments">
-          <div class="ribbon__segment left">
+      {% include '@open_scratch/parts/card-header.html.twig' with {'title': 'List of Awards'} only %}
 
-            <div class="label label--nopad"><span class="title tt--u ttitle projects-table__title inline-block">List of Awards</span></div>
-          
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="card__item card__body">
@@ -42,18 +35,7 @@
 
     <div class="card__item card__footer invertable bdb bdc--def">
 
-      <div class="ribbon big">
-        <div class="ribbon__segments">
-          <div class="ribbon__segment left">
-
-            <div>
-              {{more}}
-              {{pager}}
-            </div>
-
-          </div>
-        </div>
-      </div>
+      {% include '@open_scratch/parts/card-footer--pager.html.twig' %}
 
     </div>
 

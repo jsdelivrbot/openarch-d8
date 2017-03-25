@@ -4,13 +4,21 @@
 
 	<label for="{{ fields.title.content|striptags }}">
 
-		<div class="card__header expandable-head">
+		<div class="card__item spaced card__header expandable-head">
+
+	        {# {% set hey = ( fields.title.content ) ~ ' (' ~ ( fields.field_press_publication_date.content ) ~ ')' %} #}
+	        {% set title = ( fields.title.content ) %}
+	        {% include '@open_scratch/parts/card-header--expandable.html.twig' with {'title': title} only %}
+
+	    </div>
+
+		{# <div class="card__header expandable-head">
 
 			<div class="media mediaTitle mediaTitle--big">
 
 		  		<div class="media__imgR">
 
-		            <div class="ribbon ribbon--big">
+		            <div class="ribbon">
 		              <div class="ribbon__segments">
 		                <div class="ribbon__segment">
 		                  	<a class="icon--expand checked" style="background:none">
@@ -35,7 +43,7 @@
 
 			</div>
 
-		</div>
+		</div> #}
 
 	</label>
 
@@ -49,11 +57,31 @@
 
 		</div>
 
-		<div class="card__item card__item--spaced card__body">
+		<div class="card__item spaced card__body">
 
 			<div class="bd lc--3">{{ fields.body.content }}</div>
 
-			<ul class="list facts">
+			{% set facts = { 
+				Author: ( fields.field_press_pub_author.content ), 
+                Editor: ( fields.field_publication_editor.content ),
+                Design: ( fields.field_publication_designer.content ),
+                Publisher: ( fields.field_press_publisher.content),
+                'Date published': ( fields.field_press_publication_date.content ),
+                Format: ( fields.field_publication_format.content ),
+                Language: ( fields.field_publication_language.content ),
+                ISBN: ( fields.field_publication_isbn.content ),
+                Dimensions: ( fields.field_product_dimensions.content )
+                } 
+			%}
+			{% include '@open_scratch/parts/facts.html.twig' with facts %}
+			{# <ul class="list facts">
+			    {% for key, value in facts %}
+			        <li class="facts__fact">{{ key }}: {{ value }}</li>
+			    {% endfor %}
+			</ul> #}
+
+
+			{# <ul class="list facts">
 				<li class="facts__fact">
 					<h6>Author: {{ fields.field_press_pub_author.content }}</h6>
 				</li>
@@ -85,7 +113,7 @@
 				<li class="facts__fact">
 					<h6>Dimensions: {{ fields.field_product_dimensions.content }}</h6>
 				</li>
-			</ul>
+			</ul> #}
 
 		</div>
 

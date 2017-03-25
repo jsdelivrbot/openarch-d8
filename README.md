@@ -624,6 +624,10 @@ change permissions on files directory to 777
 * refactor borders
 * remove header menu from widest
 
+#### 0.7.36
+
+* refactor card footer/header 
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

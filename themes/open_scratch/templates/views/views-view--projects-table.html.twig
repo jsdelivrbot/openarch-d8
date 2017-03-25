@@ -10,17 +10,7 @@
 
 	<div class="card__item card__header projects-table__header">
 
-      <div class="ribbon big">
-        <div class="ribbon__segments">
-          <div class="ribbon__segment left">
-
-            <div class="label label--nopad">
-            	<span class="title ttitle projects-table__title inline-block">List of Works</span>
-            </div>
-
-          </div>
-        </div>
-      </div>
+		{% include '@open_scratch/parts/card-header.html.twig' with {'title': 'List of Works'} only %}
 
     </div>
 
@@ -69,20 +59,11 @@
 		
 	</div>
 
-	<div class="card__item border--bottom card__footer">
+	<div class="card__item card__footer invertable bdb bdc--def">
 
-		<div class="ribbon big">
-        	<div class="ribbon__segments">
-          		<div class="ribbon__segment left">
+      {% include '@open_scratch/parts/card-footer--pager.html.twig' %}
 
-            		{{more}}
-            		{{pager}}
-
-          		</div>
-        	</div>
-      	</div>
-
-	</div>
+    </div>
 
 </div>
 

@@ -8,26 +8,16 @@
 
 	<div class="card peoples">
 
-		<div class="card__item card__header spaced--less">
+		{# <div class="card__item card__header spaced--less">
 
-			<div class="ribbon med">
-				<div class="ribbon__segments">
-					<div class="ribbon__segment left">
+			{% include '@open_scratch/parts/card-header.html.twig' with {'title': 'People'} only %}
 
-						<h4 class="title title--secondary tt--u inline-block">People</h4>
-
-					</div>
-				</div>
-			</div>
-
-		</div>
+		</div> #}
 
 		<div class="card__item card__body">
-
 			{{ rows }}
-
 		</div>
 
-	{{ feed_icons }}
+		{{ feed_icons }}
 
 </div>

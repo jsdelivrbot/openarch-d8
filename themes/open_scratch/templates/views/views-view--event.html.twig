@@ -7,17 +7,9 @@
 
   <div class="card events border--top">
 
-    <div class="card__item spaced--less card__header">
+    <div class="card__item card__header">
 
-      <div class="ribbon med">
-        <div class="ribbon__segments">
-          <div class="ribbon__segment left">
-
-            <h4 class="title title--secondary tt-u inline-block">Event</h4>
-
-          </div>
-        </div>
-      </div>
+      {% include '@open_scratch/parts/card-header.html.twig' with {'title': 'Event'} only %}
 
     </div>
 

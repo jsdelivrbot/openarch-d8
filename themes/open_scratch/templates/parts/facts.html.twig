@@ -1,0 +1,5 @@
+<ul class="list facts">
+    {% for key, value in ( facts ) %}
+        <li class="facts__fact"><h6>{{ key }}: {{ value }}</h6></li>
+    {% endfor %}
+</ul>

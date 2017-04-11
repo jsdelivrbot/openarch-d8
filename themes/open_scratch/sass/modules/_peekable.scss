@@ -44,6 +44,13 @@
 		}*/
 	}
 
+	input[type='checkbox'] ~ .peekable-contents *{
+		pointer-events: none;		
+	}
+	input[type='checkbox']:checked ~ .peekable-contents *{
+		pointer-events: initial;		
+	}
+
 	input[type='checkbox'] ~ label .unchecked {
 		display: inline-block;
 	}

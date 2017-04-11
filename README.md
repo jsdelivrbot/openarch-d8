@@ -628,6 +628,10 @@ change permissions on files directory to 777
 
 * refactor card footer/header 
 
+#### 0.7.37
+
+* fix toolbar blocking event title issue
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -752,6 +756,7 @@ change permissions on files directory to 777
 * mediacard same as mediacard2
 * generate image style on upload (see https://www.flocondetoile.fr/blog/generate-programmatically-image-styles-drupal-8)
 * inverted scheme flash white on page load b/c loads white then inverts. 
+* widest/full bps show sidebar on load before closing it.
 
 #### ISSUES:
 

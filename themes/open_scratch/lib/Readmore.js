@@ -5,13 +5,14 @@ MyReadmore = (function($) {
 	var $bd = $('.bd--expandable');
 
 	$(document).ready(function() {
-		$bd.hide();
+		init();
+		// $bd.hide();
 	});	
 
 	$(window).load(function() {
 
-		init();
-		$bd.show();
+		// init();
+		// $bd.show();
 
 		// $bd.delay(1000).readmore('toggle');
 	});

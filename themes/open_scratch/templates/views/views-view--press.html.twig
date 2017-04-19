@@ -10,28 +10,13 @@
 
     <div class="card__item card__header">
 
-      {% include '@open_scratch/parts/card-header.html.twig' with {'title': 'List of Publications'} only %}
+      {% include '@open_scratch/parts/card-header.html.twig' with {'label': ( header )} only %}
 
     </div>
 
     <div class="card__item card__body">
 
-      <table class="table press-table__table inverter__target">
-
-      	<thead class="press-table__head">
-      		<tr>
-      			<th class="press-table__head-publication-date">Date</th>
-            <th class="press-table__head-publication">Publication</th>
-      			<th class="press-table__head-name">Title</th> 
-      			<th class="press-table__head-icon data--right">Link / PDF</th>
-      		</tr>
-      	</thead>
-
-      	<tbody class="focus">
-        	{{ rows }}
-        </tbody>
-        
-      </table>
+      {{ rows }}
 
     </div>
 

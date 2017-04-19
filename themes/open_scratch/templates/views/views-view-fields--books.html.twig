@@ -62,15 +62,15 @@
 			<div class="bd lc--3">{{ fields.body.content }}</div>
 
 			{% set facts = { 
-				Author: ( fields.field_press_pub_author.content ), 
-                Editor: ( fields.field_publication_editor.content ),
-                Design: ( fields.field_publication_designer.content ),
+				( fields.field_press_pub_author.label ): ( fields.field_press_pub_author.content ), 
+                ( fields.field_publication_editor.label ): ( fields.field_publication_editor.content ),
+                ( fields.field_publication_designer.label ): ( fields.field_publication_designer.content ),
                 ( fields.field_press_publisher.label ): ( fields.field_press_publisher.content),
-                'Date published': ( fields.field_press_publication_date.content ),
-                Format: ( fields.field_publication_format.content ),
-                Language: ( fields.field_publication_language.content ),
-                ISBN: ( fields.field_publication_isbn.content ),
-                Dimensions: ( fields.field_product_dimensions.content )
+                ( fields.field_press_publication_date.label ): ( fields.field_press_publication_date.content ),
+                ( fields.field_publication_format.label ): ( fields.field_publication_format.content ),
+                ( fields.field_publication_language.label ): ( fields.field_publication_language.content ),
+                ( fields.field_publication_isbn.label ): ( fields.field_publication_isbn.content ),
+                ( fields.field_product_dimensions.label ): ( fields.field_product_dimensions.content )
                 } 
 			%}
 			{% include '@open_scratch/parts/facts.html.twig' with facts %}

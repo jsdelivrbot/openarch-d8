@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{# {% set labels = { 
+	( rows[0].content['#view'].field.field_award_date.label ), 
+    ( rows[0].content['#view'].field.title.label ),
+    ( rows[0].content['#view'].field.field_award_link.label )
+    } 
+%} #}
+<table class="table awards-table__table inverter__target">
+
+  	<thead class="awards-table__head">
+  		<tr>
+  			<th class="awards-table__head-date"><span>{{ view.field.field_award_date.label }}</span></th>
+  			<th class="awards-table__head-name"><span>{{ view.field.title.label }}</span></th>
+  			<th class="awards-table__head-icon data--right"><span>{{ view.field.field_award_link.label }}</span></th>
+  		</tr>
+  	</thead>
+
+  	<tbody class="focus">
+    	{% for row in rows %}
+		    {{ row.content }}
+		{% endfor %}
+    </tbody>
+
+</table>
+

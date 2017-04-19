@@ -641,6 +641,14 @@ change permissions on files directory to 777
 
 * update social links 2
 
+#### 0.7.40
+
+* translate books list items
+* translate facts list items
+* translate press
+* translate jobs
+* translate awards
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

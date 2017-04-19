@@ -1,0 +1,10 @@
+settings:
+  allowed_values:
+    -
+      label: OPEN建筑事务所
+    -
+      label: 李虎作为斯蒂文·霍尔建筑事务所合伙人
+    -
+      label: 李虎作为斯蒂文·霍尔建筑事务所项目建筑师
+    -
+      label: ''

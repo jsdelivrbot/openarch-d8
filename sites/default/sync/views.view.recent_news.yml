@@ -645,21 +645,19 @@ display:
           entity_field: langcode
           plugin_id: language
       sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
+        field_event_date_value:
+          id: field_event_date_value
+          table: node__field_event_date
+          field: field_event_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: false
           expose:
             label: ''
-          granularity: second
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+          granularity: day
+          plugin_id: datetime
       title: 'Recent news'
       header:
         area_text_custom:
@@ -674,19 +672,17 @@ display:
           content: '<div class="title headlines__title"><h2>Recent News</h2></div>'
           plugin_id: text_custom
       footer:
-        entity_menu_link_content:
-          id: entity_menu_link_content
+        area_text_custom:
+          id: area_text_custom
           table: views
-          field: entity_menu_link_content
+          field: area_text_custom
           relationship: none
           group_type: group
           admin_label: ''
           empty: false
-          tokenize: true
-          target: /practice
-          view_mode: default
-          bypass_access: false
-          plugin_id: entity
+          tokenize: false
+          content: 'More News & Events'
+          plugin_id: text_custom
       empty: {  }
       relationships: {  }
       arguments: {  }

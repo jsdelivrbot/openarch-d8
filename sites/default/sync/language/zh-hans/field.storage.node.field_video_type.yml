@@ -1,0 +1,8 @@
+settings:
+  allowed_values:
+    -
+      label: 展览
+    -
+      label: 竞赛方案
+    -
+      label: 其它

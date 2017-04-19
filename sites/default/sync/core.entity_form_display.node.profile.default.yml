@@ -7,11 +7,13 @@ dependencies:
     - field.field.node.profile.field_profile_email
     - field.field.node.profile.field_profile_position
     - field.field.node.profile.field_thumbnail
+    - field.field.node.profile.field_weight
     - image.style.thumbnail
     - node.type.profile
   module:
     - image
     - text
+    - weight
 id: node.profile.default
 targetEntityType: node
 bundle: profile
@@ -51,6 +53,11 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  field_weight:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: weight_selector
   langcode:
     type: language_select
     weight: 0

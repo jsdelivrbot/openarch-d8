@@ -1,0 +1,18 @@
+settings:
+  allowed_values:
+    -
+      label: 建成
+    -
+      label: 施工中
+    -
+      label: 未建成
+    -
+      label: 进行中
+    -
+      label: 概念设计
+    -
+      label: 初步设计
+    -
+      label: 深化设计
+    -
+      label: 竞赛

@@ -559,7 +559,18 @@ display:
           entity_field: created
           plugin_id: date
       title: Press
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: 'List of Publications'
+          plugin_id: text_custom
       footer: {  }
       empty: {  }
       relationships: {  }
@@ -679,7 +690,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Item
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -808,7 +819,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Publication
           exclude: false
           alter:
             alter_text: false
@@ -871,7 +882,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Link / PDF'
           exclude: false
           alter:
             alter_text: true

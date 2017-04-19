@@ -1,0 +1,18 @@
+settings:
+  allowed_values:
+    -
+      label: '规划&策略'
+    -
+      label: 景观
+    -
+      label: 建筑
+    -
+      label: '室内&改造'
+    -
+      label: 家具
+    -
+      label: 装置
+    -
+      label: 研究
+    -
+      label: 其它

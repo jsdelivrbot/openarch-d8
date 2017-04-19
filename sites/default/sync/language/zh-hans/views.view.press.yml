@@ -1,0 +1,17 @@
+display:
+  page_1:
+    display_options:
+      fields:
+        field_press_publication_date:
+          label: 日期
+        title:
+          label: 文章标题
+        field_press_publication:
+          label: 出版物
+        field_press_link:
+          label: '链接或 PDF'
+  default:
+    display_options:
+      header:
+        area_text_custom:
+          content: 出版物列表

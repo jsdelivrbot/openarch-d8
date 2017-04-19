@@ -797,7 +797,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Date
           exclude: false
           alter:
             alter_text: false
@@ -861,7 +861,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Award | Project'
           exclude: false
           alter:
             alter_text: false
@@ -926,7 +926,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Link
           exclude: false
           alter:
             alter_text: false

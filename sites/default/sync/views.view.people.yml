@@ -447,10 +447,10 @@ display:
             operator: ''
           group: 1
       sorts:
-        sticky:
-          id: sticky
-          table: node_field_data
-          field: sticky
+        field_weight_value:
+          id: field_weight_value
+          table: node__field_weight
+          field: field_weight_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -458,22 +458,6 @@ display:
           exposed: false
           expose:
             label: ''
-          entity_type: node
-          entity_field: sticky
-          plugin_id: standard
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: node
-          entity_field: title
           plugin_id: standard
       title: People
       header: {  }

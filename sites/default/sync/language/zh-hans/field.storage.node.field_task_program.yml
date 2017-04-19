@@ -1,0 +1,36 @@
+settings:
+  allowed_values:
+    -
+      label: 文化
+    -
+      label: 公园
+    -
+      label: 教育
+    -
+      label: 机构
+    -
+      label: 展览
+    -
+      label: 酒店
+    -
+      label: 基础设施
+    -
+      label: 图书馆
+    -
+      label: 规划
+    -
+      label: 混合
+    -
+      label: 博物馆
+    -
+      label: 办公
+    -
+      label: 保护
+    -
+      label: 零售
+    -
+      label: 居住
+    -
+      label: 体育
+    -
+      label: 其它

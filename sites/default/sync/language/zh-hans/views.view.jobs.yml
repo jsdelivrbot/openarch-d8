@@ -4,3 +4,6 @@ display:
       footer:
         area_text_custom:
           content: '有意者请将简历及作品集 (PDF或JPG 格式) 发至 hr@openarch.com。敬请注明薪金要求及起始工作日期，文件大小限于10MB以内。恕不接受下载链接或压缩包。'
+      header:
+        area_text_custom:
+          content: 空缺职位

@@ -1,0 +1,22 @@
+display:
+  page_1:
+    display_options:
+      fields:
+        field_press_pub_author:
+          label: 作者
+        field_publication_editor:
+          label: 编辑
+        field_publication_designer:
+          label: 设计
+        field_press_publisher:
+          label: 发行
+        field_press_publication_date:
+          label: 出版时间
+        field_publication_language:
+          label: 语言
+        field_publication_format:
+          label: 格式
+        field_publication_pages:
+          label: 页码
+        field_product_dimensions:
+          label: 尺寸

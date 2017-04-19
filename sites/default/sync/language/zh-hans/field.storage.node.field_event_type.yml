@@ -2,3 +2,11 @@ settings:
   allowed_values:
     -
       label: 讲座
+    -
+      label: 展览
+    -
+      label: 落成
+    -
+      label: 出版
+    -
+      label: 其它

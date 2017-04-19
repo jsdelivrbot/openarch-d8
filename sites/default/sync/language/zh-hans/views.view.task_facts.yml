@@ -1,0 +1,18 @@
+display:
+  block_1:
+    display_options:
+      fields:
+        field_task_year:
+          label: 年份
+        field_task_city:
+          label: 城市
+        field_task_size:
+          label: 建筑面积
+        field_task_site:
+          label: 用地面积
+        field_task_type:
+          label: 类型
+        field_task_client:
+          label: 业主
+        field_task_status:
+          label: 状态

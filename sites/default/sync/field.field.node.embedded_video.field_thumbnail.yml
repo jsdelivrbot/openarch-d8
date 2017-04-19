@@ -7,6 +7,12 @@ dependencies:
     - node.type.embedded_video
   module:
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      file: '0'
+      title: '0'
 id: node.embedded_video.field_thumbnail
 field_name: field_thumbnail
 entity_type: node

@@ -825,14 +825,25 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: false
           expose:
             label: ''
           granularity: day
           plugin_id: datetime
       title: Events
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: 'News and Events'
+          plugin_id: text_custom
       footer: {  }
       empty: {  }
       relationships: {  }

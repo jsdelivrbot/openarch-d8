@@ -1,0 +1,6 @@
+display:
+  default:
+    display_options:
+      footer:
+        area_text_custom:
+          content: '更多新闻&事件'

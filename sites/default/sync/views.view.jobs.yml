@@ -592,7 +592,18 @@ display:
             label: ''
           granularity: second
       title: Jobs
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: 'Job Openings'
+          plugin_id: text_custom
       footer:
         area_text_custom:
           id: area_text_custom

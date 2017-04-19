@@ -684,7 +684,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -747,7 +747,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Editor
           exclude: false
           alter:
             alter_text: false
@@ -810,7 +810,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Design
           exclude: false
           alter:
             alter_text: false
@@ -873,7 +873,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Publisher
           exclude: false
           alter:
             alter_text: false
@@ -936,7 +936,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Date
+          label: 'Date Published'
           exclude: false
           alter:
             alter_text: false
@@ -1063,7 +1063,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: ISBN
           exclude: false
           alter:
             alter_text: false
@@ -1126,7 +1126,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Issue
           exclude: false
           alter:
             alter_text: false
@@ -1190,7 +1190,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Language
           exclude: false
           alter:
             alter_text: false
@@ -1252,7 +1252,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Format
           exclude: false
           alter:
             alter_text: false
@@ -1314,7 +1314,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Pages
           exclude: false
           alter:
             alter_text: false
@@ -1378,7 +1378,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Dimensions
           exclude: false
           alter:
             alter_text: false

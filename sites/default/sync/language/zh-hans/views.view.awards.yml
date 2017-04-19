@@ -1,0 +1,22 @@
+display:
+  default:
+    display_options:
+      filters:
+        field_award_group_value:
+          expose:
+            description: ''
+          group_info:
+            description: ''
+  page_1:
+    display_options:
+      filters:
+        field_award_group_value:
+          group_info:
+            description: ''
+      fields:
+        field_award_date:
+          label: 年份
+        title:
+          label: '奖项 | 项目'
+        field_award_link:
+          label: 链接

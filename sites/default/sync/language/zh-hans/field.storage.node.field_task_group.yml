@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    -
+      label: OPEN项目
+    -
+      label: OPEN构想

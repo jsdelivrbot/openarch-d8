@@ -103,9 +103,5 @@ jQuery(document).ready(function($){
 
     //     $(".toolbar-toggle").addClass('below');
     // }
-
     
 });
-
-
-

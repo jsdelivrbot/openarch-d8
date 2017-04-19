@@ -3,6 +3,7 @@ global-css:
     theme:
       css/style.css: {}
       css/jquery.fullPage.css: {}
+      css/ezmodal.min.css: {}
       
 global-js:
   js:
@@ -10,5 +11,6 @@ global-js:
     js/scrolloverflow.min.js: {}
     js/jquery.fullPage.min.js: {}
     node_modules/readmore-js/readmore.min.js: {}
+    js/ezmodal.min.js: {}
   dependencies:
     - core/jquery

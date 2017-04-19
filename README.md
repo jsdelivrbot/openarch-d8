@@ -632,6 +632,15 @@ change permissions on files directory to 777
 
 * fix toolbar blocking event title issue
 
+#### 0.7.38
+
+* update social links
+* add modal window for wechat qrc
+
+#### 0.7.39
+
+* update social links 2
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

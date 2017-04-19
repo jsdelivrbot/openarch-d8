@@ -14,7 +14,7 @@ bundle: task
 label: Type
 description: 'Select discipline.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

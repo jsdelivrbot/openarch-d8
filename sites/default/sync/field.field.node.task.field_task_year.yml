@@ -14,7 +14,7 @@ bundle: task
 label: Year
 description: 'Enter project year.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

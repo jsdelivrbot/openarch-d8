@@ -1,0 +1,18 @@
+uuid: b590cccd-06c8-4286-8aaf-981569796d8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.credit
+id: node.credit.changed
+field_name: changed
+entity_type: node
+bundle: credit
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

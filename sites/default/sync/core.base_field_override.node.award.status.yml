@@ -1,0 +1,22 @@
+uuid: 59ccc0e8-60bc-4c4d-80a2-e1e597d4cd08
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.award
+id: node.award.status
+field_name: status
+entity_type: node
+bundle: award
+label: 'Publishing status'
+description: 'A boolean indicating whether the node is published.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

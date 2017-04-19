@@ -6,14 +6,7 @@ dependencies:
     - field.storage.node.field_featured_work
     - node.type.task
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      file: '0'
-      title: '0'
 id: node.task.field_featured_work
 field_name: field_featured_work
 entity_type: node

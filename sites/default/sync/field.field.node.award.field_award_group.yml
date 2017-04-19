@@ -14,7 +14,7 @@ bundle: award
 label: 'Award group'
 description: 'Select Award group if nec. (not required)'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

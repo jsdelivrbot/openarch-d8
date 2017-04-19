@@ -1,0 +1,20 @@
+uuid: 7916be7a-42c1-4552-a86b-d6c7e3763245
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.collaborator
+  module:
+    - path
+id: node.collaborator.path
+field_name: path
+entity_type: node
+bundle: collaborator
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

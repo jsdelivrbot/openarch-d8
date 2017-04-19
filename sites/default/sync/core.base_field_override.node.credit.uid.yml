@@ -1,0 +1,20 @@
+uuid: 2c6effde-4f58-4011-bdb0-3bcb5fb61992
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.credit
+id: node.credit.uid
+field_name: uid
+entity_type: node
+bundle: credit
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

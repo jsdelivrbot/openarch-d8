@@ -14,7 +14,7 @@ bundle: idea
 label: Relation
 description: 'Enter related nodes. Click "add another item" for multiple nodes rather than a comma-separated list.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

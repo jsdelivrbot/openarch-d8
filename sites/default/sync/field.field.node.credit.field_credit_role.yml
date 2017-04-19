@@ -12,7 +12,7 @@ bundle: credit
 label: Role
 description: 'Enter role, eg. consultant, etc.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

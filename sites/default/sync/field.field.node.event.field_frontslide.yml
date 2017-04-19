@@ -6,14 +6,7 @@ dependencies:
     - field.storage.node.field_frontslide
     - node.type.event
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      file: '0'
-      title: '0'
 id: node.event.field_frontslide
 field_name: field_frontslide
 entity_type: node

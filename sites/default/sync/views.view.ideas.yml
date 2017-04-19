@@ -846,7 +846,7 @@ display:
             label: ''
           granularity: day
           plugin_id: datetime
-      title: Pre-open
+      title: Ideas
       header: {  }
       footer: {  }
       empty: {  }

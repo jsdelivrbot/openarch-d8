@@ -1,0 +1,22 @@
+uuid: 17557266-16da-45d5-9c15-4884b37cd77a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.idea
+id: node.idea.status
+field_name: status
+entity_type: node
+bundle: idea
+label: 'Publishing status'
+description: 'A boolean indicating whether the node is published.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

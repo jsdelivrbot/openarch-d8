@@ -1,0 +1,18 @@
+uuid: 6059e006-c776-4fea-9f73-ee96c14c6bf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.task
+id: node.task.created
+field_name: created
+entity_type: node
+bundle: task
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

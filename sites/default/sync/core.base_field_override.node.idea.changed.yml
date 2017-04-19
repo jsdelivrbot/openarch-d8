@@ -1,0 +1,18 @@
+uuid: c5be4ad7-4a72-4dee-9284-066b8ff92465
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.idea
+id: node.idea.changed
+field_name: changed
+entity_type: node
+bundle: idea
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

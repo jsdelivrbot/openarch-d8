@@ -1,0 +1,20 @@
+uuid: 4366e8f8-847f-498d-b7b0-a3fc0fee5392
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.manifesto
+  module:
+    - path
+id: node.manifesto.path
+field_name: path
+entity_type: node
+bundle: manifesto
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,18 @@
+uuid: fa1f1c62-b413-45e6-b1fc-9bb7bf274053
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.task
+id: node.task.changed
+field_name: changed
+entity_type: node
+bundle: task
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

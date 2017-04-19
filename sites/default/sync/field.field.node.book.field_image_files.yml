@@ -6,14 +6,7 @@ dependencies:
     - field.storage.node.field_image_files
     - node.type.book
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      file: '0'
-      title: '0'
 id: node.book.field_image_files
 field_name: field_image_files
 entity_type: node

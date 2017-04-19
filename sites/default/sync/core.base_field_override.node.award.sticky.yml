@@ -1,0 +1,22 @@
+uuid: dd67fcda-57d3-4f5a-8f38-7cd007c8d2f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.award
+id: node.award.sticky
+field_name: sticky
+entity_type: node
+bundle: award
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

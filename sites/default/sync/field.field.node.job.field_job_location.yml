@@ -14,7 +14,7 @@ bundle: job
 label: 'Job location'
 description: 'Select location of job.'
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     value: Beijing

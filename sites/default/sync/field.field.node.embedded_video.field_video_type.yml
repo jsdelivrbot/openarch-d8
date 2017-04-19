@@ -14,7 +14,7 @@ bundle: embedded_video
 label: Type
 description: 'Type of video work.'
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     value: Other

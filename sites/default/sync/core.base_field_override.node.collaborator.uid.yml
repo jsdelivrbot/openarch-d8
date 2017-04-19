@@ -1,0 +1,20 @@
+uuid: b16fe591-bff6-4621-b4d5-2581fb8702c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.collaborator
+id: node.collaborator.uid
+field_name: uid
+entity_type: node
+bundle: collaborator
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

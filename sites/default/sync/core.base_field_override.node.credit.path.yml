@@ -1,0 +1,20 @@
+uuid: 47cf21a5-ca99-45eb-8e41-9bb8595c13ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.credit
+  module:
+    - path
+id: node.credit.path
+field_name: path
+entity_type: node
+bundle: credit
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

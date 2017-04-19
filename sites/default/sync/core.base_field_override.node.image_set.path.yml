@@ -1,0 +1,20 @@
+uuid: bd0598fe-39fd-4e17-be13-8284568c8ba4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.image_set
+  module:
+    - path
+id: node.image_set.path
+field_name: path
+entity_type: node
+bundle: image_set
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

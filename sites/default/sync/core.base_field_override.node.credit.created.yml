@@ -1,0 +1,18 @@
+uuid: e3a94679-e7bd-4137-a918-6d0a1b100a5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.credit
+id: node.credit.created
+field_name: created
+entity_type: node
+bundle: credit
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,22 @@
+uuid: a6a33061-e617-44f3-af4d-0b298c123f33
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.embedded_video
+id: node.embedded_video.status
+field_name: status
+entity_type: node
+bundle: embedded_video
+label: 'Publishing status'
+description: 'A boolean indicating whether the node is published.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

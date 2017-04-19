@@ -1,0 +1,18 @@
+uuid: e1aba82d-a92a-4ea3-9428-c4fc0d5eae3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.manifesto
+id: node.manifesto.created
+field_name: created
+entity_type: node
+bundle: manifesto
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

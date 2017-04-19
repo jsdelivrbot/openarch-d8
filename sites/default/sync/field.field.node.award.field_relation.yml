@@ -13,7 +13,7 @@ bundle: award
 label: Relation
 description: 'Enter project given award.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

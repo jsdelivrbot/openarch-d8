@@ -1,0 +1,52 @@
+<table class="table projects-table__table inverter__target">
+
+	<thead>
+		<tr>
+			<th class="projects-table__head-year"><span>
+				{{ view.field.field_task_year.label }}
+			</span></th>
+			<th class="projects-table__head-size"><span>
+				{{ view.field.field_task_size.label }}
+			</span></th>
+			<th class="projects-table__head-city"><span>
+				{{ view.field.field_task_city.label }}
+			</span></th>
+			<th class="projects-table__head-type"><span>
+				{{ view.field.field_task_type.label }}
+			</span></th>
+			<th class="projects-table__head-program"><span>
+				{{ view.field.field_task_program.label }}
+			</span></th>
+			{# <th class="projects-table__head-name data--right"><span>Name</span></th> #} 
+			{# <th class="projects-table__head-name data--right"><span>Project Name</span></th> #}
+			<th class="projects-table__data-name data--right">
+
+				<div class="ribbon">
+					<div class="ribbon__segments">
+
+					<div class="ribbon__segment right">
+						<a class="icon--internal-sml">
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</div>
+
+					<div class="ribbon__segment right w--85p">
+						<div class="label label--fullwidth">
+							{{ view.field.title.label }}
+						</div>
+					</div>
+
+					</div>
+				</div>
+
+			</th>
+		</tr>
+	</thead>
+
+	<tbody class="focus">
+		{% for row in rows %}
+			{{ row.content }}
+		{% endfor %}
+	</tbody>
+
+</table>

@@ -649,6 +649,11 @@ change permissions on files directory to 777
 * translate jobs
 * translate awards
 
+#### 0.7.41
+
+* fix wechat modal
+* translate headers
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

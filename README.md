@@ -664,6 +664,10 @@ change permissions on files directory to 777
 
 * fix drawer slider at wide/wider
 
+#### 0.7.44
+
+* fix wechat modal on frontpage
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

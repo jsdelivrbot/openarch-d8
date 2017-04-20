@@ -1,0 +1,10 @@
+display:
+  default:
+    display_options:
+      fields:
+        nothing_1:
+          alter:
+            text: "<div class=\"statement\">\r\n<div class=\"statement__body\">{{ body }}</div>\r\n<div class=\"tags statement__tags\"><div class=\"tags__tag tags__tag--more\">{{ nothing }}</div></div>\r\n</div>"
+      header:
+        area_text_custom:
+          content: OPEN宣言

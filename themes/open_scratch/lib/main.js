@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
 
     $(document).on('keydown', function (event) {
 
-        if (event.keyCode == 71) {
+        if (event.ctrlKey && event.altKey && event.keyCode == 71) {
             $('.grid-target').hasClass('grid-on') 
                 ? $('.grid-target').removeClass('grid-on') 
                 : $('.grid-target').addClass('grid-on')
@@ -69,7 +69,7 @@ jQuery(document).ready(function($){
     $(".book-item.expandable input:checkbox").attr('checked', true);
 
     // open toolbar by defualt on certain pages
-    $(".toolbar.peekable input:checkbox").attr('checked', false);
+    // $(".toolbar.peekable input:checkbox").attr('checked', false);
     // if(Pg.isTask()) {
     //     $(".toolbar.peekable input:checkbox").attr('checked', true);
     // }

@@ -12,39 +12,6 @@
 
 	    </div>
 
-		{# <div class="card__header expandable-head">
-
-			<div class="media mediaTitle mediaTitle--big">
-
-		  		<div class="media__imgR">
-
-		            <div class="ribbon">
-		              <div class="ribbon__segments">
-		                <div class="ribbon__segment">
-		                  	<a class="icon--expand checked" style="background:none">
-		                  		<i class="fa fa-angle-up" aria-hidden="true"></i>
-		                  	</a>
-			                <a class="icon--expand unchecked" style="background:none">
-			                	<i class="fa fa-angle-down" aria-hidden="true"></i>
-			                </a>
-		                </div>
-		              </div>
-		            </div>
-
-		        </div>
-
-				<div class="media__contents">
-
-			    	<h4 class="title title--headline">
-			    		{{ fields.title.content }} ({{ fields.field_press_publication_date.content }})
-			    	</h4>
-			    	
-				</div>
-
-			</div>
-
-		</div> #}
-
 	</label>
 
 	<div class="expandable-body">
@@ -74,46 +41,6 @@
                 } 
 			%}
 			{% include '@open_scratch/parts/facts.html.twig' with facts %}
-			{# <ul class="list facts">
-			    {% for key, value in facts %}
-			        <li class="facts__fact">{{ key }}: {{ value }}</li>
-			    {% endfor %}
-			</ul> #}
-
-
-			{# <ul class="list facts">
-				<li class="facts__fact">
-					<h6>Author: {{ fields.field_press_pub_author.content }}</h6>
-				</li>
-
-				<li class="facts__fact">
-					<h6>Editor: {{ fields.field_publication_editor.content }}</h6>
-				</li>
-
-				<li class="facts__fact">
-					<h6>Design: {{ fields.field_publication_designer.content }}</h6>
-				</li>
-
-				<li class="facts__fact">
-					<h6>Publisher: {{ fields.field_press_publisher.content }} ({{ fields.field_press_publication_date.content }})</h6>
-				</li>
-
-				<li class="facts__fact">
-					<h6>Format: {{ fields.field_publication_format.content }} ({{ fields.field_publication_pages.content }})</h6>
-				</li>
-
-				<li class="facts__fact">
-					<h6>Language: {{ fields.field_publication_language.content }}</h6>
-				</li>
-
-				<li class="facts__fact">
-					<h6>ISBN: {{ fields.field_publication_isbn.content }}</h6>
-				</li>
-
-				<li class="facts__fact">
-					<h6>Dimensions: {{ fields.field_product_dimensions.content }}</h6>
-				</li>
-			</ul> #}
 
 		</div>
 

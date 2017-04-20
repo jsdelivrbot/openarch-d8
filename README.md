@@ -654,6 +654,12 @@ change permissions on files directory to 777
 * fix wechat modal
 * translate headers
 
+#### 0.7.42
+
+* fix slider issue
+* clean up templates
+* fix issue with frontpage
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

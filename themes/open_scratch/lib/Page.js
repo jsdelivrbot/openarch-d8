@@ -35,6 +35,8 @@ Pg = (function($) {
 		return function() {
 			return (curpath == ("")
 				|| curpath == ("/cn")
+				|| curpath == ("/frontpage")
+	            || curpath == ("/cn/frontpage")
 	            || curpath == ("/openarch-d8")
 	            || curpath == ("/openarch-d8/cn")
 	            || curpath == ("/openarch-d8/frontpage")

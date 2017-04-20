@@ -7,7 +7,28 @@
 <div{{ attributes.addClass(classes) }}>
 	
 	<div class="card manifesto spaced">
-		{{ rows }}
+
+		<div class="card__header">
+
+			<div class="ribbon med">
+				<div class="ribbon__segments">
+					<div class="ribbon__segment left">
+
+						<h2 class="title title--secondary inline-block">{{ header }}</h2>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="card__body card__body--big">
+
+			{{ rows }}
+		  
+		</div>
+
+		
 	</div>
 
 	{{ feed_icons }}

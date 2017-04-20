@@ -50,11 +50,15 @@
 			transform: translateX(-100%);
 		}
 		@include wide {
+			-webkit-transition: transform 0s;
+			transition: transform 0s;
 			width: span(3 of 13 wide);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
 		}
 		@include wider {
+			-webkit-transition: transform 0s;
+			transition: transform 0s;
 			width: span(3 of 16 wide);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);

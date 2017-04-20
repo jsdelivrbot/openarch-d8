@@ -660,6 +660,10 @@ change permissions on files directory to 777
 * clean up templates
 * fix issue with frontpage
 
+#### 0.7.43
+
+* fix drawer slider at wide/wider
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

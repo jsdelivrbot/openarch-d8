@@ -1051,7 +1051,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Year
           exclude: false
           alter:
             alter_text: false
@@ -1115,7 +1115,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: City
           exclude: false
           alter:
             alter_text: false
@@ -1178,7 +1178,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Size
           exclude: false
           alter:
             alter_text: false
@@ -1242,7 +1242,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Type
           exclude: false
           alter:
             alter_text: false
@@ -1304,7 +1304,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Program
           exclude: false
           alter:
             alter_text: false
@@ -1366,7 +1366,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Project
           exclude: false
           alter:
             alter_text: false
@@ -1489,55 +1489,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: field
-        nothing:
-          id: nothing
-          table: views
-          field: nothing
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: '<div class="icon"><a href="task/{{ nid }}"><img src="/openarch-d8/themes/open_scratch/images/arrow2-black-12px.png"></a></div>'
-            make_link: false
-            path: 'task/{{ nid }}'
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
-          plugin_id: custom
         field_task_group:
           id: field_task_group
           table: node__field_task_group

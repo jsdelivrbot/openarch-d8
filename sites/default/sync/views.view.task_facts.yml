@@ -757,7 +757,18 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: Facts
+          plugin_id: text_custom
       defaults:
         header: false
         style: false

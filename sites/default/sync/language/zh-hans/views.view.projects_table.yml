@@ -1,5 +1,5 @@
 display:
-  block_1:
+  page_1:
     display_options:
       fields:
         field_task_year:
@@ -8,14 +8,9 @@ display:
           label: 城市
         field_task_size:
           label: 建筑面积
-        field_task_site:
-          label: 用地面积
         field_task_type:
           label: 类型
-        field_task_client:
-          label: 业主
-        field_task_status:
-          label: 状态
-      header:
-        area_text_custom:
-          content: 概况
+        field_task_program:
+          label: 功能
+        title:
+          label: 项目

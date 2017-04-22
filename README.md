@@ -668,6 +668,10 @@ change permissions on files directory to 777
 
 * fix wechat modal on frontpage
 
+#### 0.7.46
+
+* disable fullpage on orienation change
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -102,7 +102,7 @@ MyVisor = (function($) {
 		$rootFont = parseFloat($("html").css("font-size"));
 		$bufferSize =  5.0 * $rootFont * 2;
 
-		if (!Pg.isFront()) {
+		if (!MyFullpage.isEnabled()) { //!Pg.isFront()
 
 			if ($scroll > $bufferSize) {
 				addStyle();
@@ -116,9 +116,9 @@ MyVisor = (function($) {
 				down();
 			}
 
-		} else { //Frontpage
+		} else { //Frontpage or Fullpage enabled
 
-			// isDown ? addStyle() : removeStyle();
+			//Let Fullpage.js handle this
 		}
 
 		if (($scroll > 0) || MySlider.isOpen()) {
@@ -126,6 +126,10 @@ MyVisor = (function($) {
 		} else {
 			showContent();
 		} 
+
+		// if (MyFullpage.isEnabled()) {
+		// 	up();
+		// } 
 	};
 
 	//public methods

@@ -263,6 +263,8 @@ MyFullpage = (function($) {
                     },
                     afterRender: function(){
 
+                        MySlider.close();
+                        MyVisor.up();
                         // MySlider.close();
                         $screen.delay(500).fadeOut(function() {
                             $screen.removeClass('bg--white');
@@ -329,11 +331,11 @@ MyFullpage = (function($) {
 
             if(Orient.isLandscape()) { //landscape
 
-                build();
+                // build();
 
             } else { //portrait
 
-                destroy();
+                // destroy();
             }
 
         } else { //other pages and task page when break is widest/full

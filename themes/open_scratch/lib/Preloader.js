@@ -5,21 +5,36 @@ var $screen = $('.preloader-screen');
 var $content = $('.preloaded-content');
 
 $(document).ready(function () {
-	$screen.addClass('bg--white');
+	hidePage();
+
+	MyFlexslider.reset(); 
+    // MyFlexslider.resize();
+	
+	MyFullpage.reset();
+	MySlider.reset(); //after fullpage
+	MyVisor.update(); //after fullpage and slider
+    
 });
 
 $(window).load(function(){
-	preload();
+	// preload();
+	showPage();
 });
 
-function preload() {
-    // myVar = setTimeout(showPage, 750);
-    showPage();
+// function preload() {
+//     myVar = setTimeout(showPage, 750);
+// }
+
+function hidePage() {
+
+	console.log('hide page');
+
+	$screen.addClass('bg--white');
 }
 
 function showPage() {
 
-	console.log('showPage');
+	console.log('show page');
 
 	$loader.css('display', 'none');
 	$content.css('display', 'block');

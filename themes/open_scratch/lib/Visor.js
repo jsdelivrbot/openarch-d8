@@ -1,61 +1,48 @@
-// var panelExample = $('#panel-example').scotchPanel({
-//     containerSelector: 'body', // Make this appear on the entire screen
-//     direction: 'left', // Make it toggle in from the left
-//     duration: 300, // Speed in ms how fast you want it to be
-//     transition: 'ease', // CSS3 transition type: linear, ease, ease-in, ease-out, ease-in-out, cubic-bezier(P1x,P1y,P2x,P2y)
-//     clickSelector: '.toggle-panel', // Enables toggling when clicking elements of this class
-//     distanceX: '70%', // Size fo the toggle
-//     enableEscapeKey: true // Clicking Esc will close the panel
-// });
-
 MyVisor = (function($) {
 
 	//state
-	var isDown = true; 
+	// var isDown = true; 
 
 	//cache dom
 	var $visor = $('.visor');
 	var $content = $visor.find('.visor-content');
 	var $toggle = $visor.find('.visor-toggler');
-	var $nameplate = $('.nameplate');
+	// var $nameplate = $('.nameplate');
 
 	//bindings
-	$(document).ready(function() { init() });
-	$(window).resize(function() { init() });
+	// $(document).ready(function() { init() });
+	// $(window).resize(function() { init() });
     $(window).scroll(function() { update() });
 
-	$(document).on('keydown', function (event) {   
+	// $(document).on('keydown', function (event) {   
+	//     if (event.ctrlKey && event.altKey && event.keyCode == 72) {    
+	//         toggle()
+	//     }
+	// });
 
-        if (event.ctrlKey && event.altKey && event.keyCode == 72) { // "h" for header    
-            toggle()
-        }
-    });
+	//private
 
 	function init() {
 
-  		enable();
+  		// enable();
 		update();
 	}
 
-	function down() {
+	function addStyle() {
 
-		$visor.removeClass('up');
-		isDown = true;
-
-		if(Pg.isFront()) {
-			$nameplate.fadeOut();
-			// addStyle();
-		}	
+		$visor.addClass('bdb'); 
+		$visor.addClass('bdc--ltr'); 
+		$visor.addClass('bg--white'); 
+		// $visor.addClass('drop--b'); 
 	};
 
-	function up() {
+	function removeStyle() {
 
-		$visor.addClass('up'); 
-		isDown = false;
-
-		// if(Pg.isFront()) {
-		// 	removeStyle();
-		// } 
+		$visor.removeClass('border--b-lighter');
+		$visor.removeClass('bdb'); 
+		$visor.removeClass('bdc--ltr'); 
+		$visor.removeClass('bg--white');
+		// $visor.removeClass('drop--b');
 	};
 
 	function hideContent() {
@@ -68,33 +55,35 @@ MyVisor = (function($) {
 		$content.fadeIn(200);
 	}
 
-	function addStyle() {
+	//public
 
-		//if has open, then it is mobile breakpoint with drawer open
-		// $visor.addClass('border--b-lighter'); 
-		$visor.addClass('bdb'); 
-		$visor.addClass('bdc--ltr'); 
-		$visor.addClass('bg--white'); 
-		// $visor.addClass('drop--b'); 
+	function down() {
+
+		$visor.removeClass('up');
+		// isDown = true;
+
+		// if(Pg.isFront()) {
+		// 	$nameplate.fadeOut();
+		// }	
 	};
 
-	function removeStyle() {
-
-		//if has open, then it is mobile breakpoint with drawer open
-		$visor.removeClass('border--b-lighter');
-		$visor.removeClass('bdb'); 
-		$visor.removeClass('bdc--ltr'); 
-		$visor.removeClass('bg--white');
-		// $visor.removeClass('drop--b');
+	function up() {
+		$visor.addClass('up'); 
+		// isDown = false;
 	};
 
-	function disable() {
-		$visor.removeClass('visor'); 
+	function isDown() {
+
+		return !$visor.hasClass('up');
 	}
 
-	function enable() {
-		$visor.addClass('visor'); 
-	}
+	// function disable() {
+	// 	$visor.removeClass('visor'); 
+	// }
+
+	// function enable() {
+	// 	$visor.addClass('visor'); 
+	// }
 
 	function update() {
 
@@ -102,7 +91,7 @@ MyVisor = (function($) {
 		$rootFont = parseFloat($("html").css("font-size"));
 		$bufferSize =  5.0 * $rootFont * 2;
 
-		if (!MyFullpage.isEnabled()) { //!Pg.isFront()
+		if (!MyFullpage.isEnabled()) { 
 
 			if ($scroll > $bufferSize) {
 				addStyle();
@@ -116,25 +105,20 @@ MyVisor = (function($) {
 				down();
 			}
 
-		} else { //Frontpage or Fullpage enabled
+		} //else let Fullpage.js handle it
 
-			//Let Fullpage.js handle this
-		}
-
+		// whether fullpage or not, this logic still applies
 		if (($scroll > 0) || MySlider.isOpen()) {
 			hideContent();
 		} else {
 			showContent();
 		} 
 
-		// if (MyFullpage.isEnabled()) {
-		// 	up();
-		// } 
 	};
 
 	//public methods
 	function toggle() {	
-		isDown ? up() : down();
+		isDown() ? up() : down();
 	};
 
 	//public API
@@ -142,11 +126,11 @@ MyVisor = (function($) {
 		toggle: toggle,
 		up: up,
 		down: down,
-		disable: disable,
-		enable: enable,
-		update: update,
-		addStyle: addStyle,
-		removeStyle: removeStyle
+		// disable: disable,
+		// enable: enable,
+		update: update
+		// addStyle: addStyle,
+		// removeStyle: removeStyle
 	};
 
 	return public_API

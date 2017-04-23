@@ -16,30 +16,15 @@ MyFlexslider = (function($) {
     });
 
     //bindings
-    $(document).ready(function() { init(); });
+    // $(document).ready(function() { init(); });
 
-    // check grid size on resize event
-    // $(window).resize(function() {
-    //     var numItems = (Breakpoint.isFull()) ? 2 : 1;
-    //     $fs.flexslider.vars.minItems = numItems;
-    //     $fs.flexslider.vars.maxItems = numItems;
-    // });
-
-    // function getGridSize() {
-    //     return (Breakpoint.isFull()) ? 2 : 1;
-    // }
-
-    // $(window).load(function() {
-    //     $fs.flexslider({
-    //         start: function(slider){
-    //             $(silder).resize;
-    //         }
-    //     });
-    // });
+    //private
 
     function init() {
         reset();
     }
+
+    //public
 
     function reset() {
 
@@ -64,13 +49,15 @@ MyFlexslider = (function($) {
             $pressSlider.data('flexslider').vars.maxItems = numPressItems;
 
         } else {}
+
+        resize();
     }
 
     var timer;
 
     function resize() {
 
-        console.log("resize flexslider");
+        console.log("_resize flexslider");
 
         // $fs.resize();
         // $fs.data('flexslider').resize(); 
@@ -78,7 +65,7 @@ MyFlexslider = (function($) {
         timer = setTimeout(function() { 
             $(window).resize();
             $(window).resize();
-        }, 500);
+        }, 1);
     }
 
     //api

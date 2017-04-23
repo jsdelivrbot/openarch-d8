@@ -1,10 +1,5 @@
 MyFullpage = (function($) {
 
-    //hold state
-    // var isWidest = (Breakpoint.isWidest());
-    // var isFull = (Breakpoint.isFull());
-    // var onTask = false;
-
     //cache DOM
     var $fp = $('.fullpage');
     var $hidden = $('.fullpage__hidden');
@@ -22,14 +17,13 @@ MyFullpage = (function($) {
     $toggle.click(function() { toggle() });
 
     $(document).on('keydown', function (event) {          
-        if (event.ctrlKey && event.keyCode == 70) {       
+        if (event.ctrlKey && event.keyCode == 70) {     
             toggle()
         }
     });
 
     $(document).ready(function() { 
-
-        init() 
+        // init() 
     });
 
     //private methods
@@ -42,7 +36,7 @@ MyFullpage = (function($) {
 
     function build() {
 
-        console.log('build fullpage');
+        console.log('_build fullpage');
 
         // $header.hide();
         $footer.hide();
@@ -141,6 +135,7 @@ MyFullpage = (function($) {
                         if (index == 2){
                             $footer.show(); 
                             MyVisor.down();
+                            $nameplate.fadeOut();
                             (Breakpoint.isWide() || Breakpoint.isWider()) ? MySlider.open() : MySlider.close();  
 
                             // Fix scroll issue (see http://stackoverflow.com/questions/26986136/fullpage-js-will-only-scrolloverflow-after-window-resize) 
@@ -265,7 +260,7 @@ MyFullpage = (function($) {
 
                         MySlider.close();
                         MyVisor.up();
-                        // MySlider.close();
+
                         $screen.delay(500).fadeOut(function() {
                             $screen.removeClass('bg--white');
                             $screen.show();
@@ -279,13 +274,11 @@ MyFullpage = (function($) {
                 });
             }
         }
-
-        // MyFlexslider.resize();
     } 
 
     function destroy() {
 
-        console.log('destroy fullpage');
+        console.log('_destroy fullpage');
    
         $header.show();
         $footer.show();
@@ -304,7 +297,7 @@ MyFullpage = (function($) {
 
     function toggle() {
 
-        console.log("on fullpage toggle");
+        console.log("toggle fullpage");
 
         isEnabled() ? destroy() : build();
 
@@ -314,45 +307,23 @@ MyFullpage = (function($) {
         // Resizer.reset();
         MySlider.reset();
         MyFlexslider.reset(); 
-        MyFlexslider.resize();
+        // MyFlexslider.resize();
+        MyVisor.update();
     };
 
     function reset() {
 
         console.log("reset fullpage");
 
-        if (Pg.isFront()) {
+        if (Pg.isFront()) { //only front page enables fullpage automatically
 
             build();
-
-        } else if (Pg.isTask() && (Breakpoint.isTiny() || Breakpoint.isMobile() || Breakpoint.isNarrow())) {
-
-            // console.log(screen.orientation.angle);
-
-            if(Orient.isLandscape()) { //landscape
-
-                // build();
-
-            } else { //portrait
-
-                // destroy();
-            }
 
         } else { //other pages and task page when break is widest/full
 
             destroy(); //ensure known state on reset
         }
     }
-
-    // function disable() {
-
-    //     $.fn.fullpage.setAutoScrolling(false);
-    // }
-
-    // function enable() {
-
-    //     $.fn.fullpage.setAutoScrolling(true);
-    // }
 
     function isEnabled() {
 

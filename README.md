@@ -676,6 +676,10 @@ change permissions on files directory to 777
 
 * reduce preload time
 
+#### 0.7.48
+
+* fix flexslider resize
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

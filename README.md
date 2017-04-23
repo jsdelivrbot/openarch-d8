@@ -672,6 +672,10 @@ change permissions on files directory to 777
 
 * disable fullpage on orienation change
 
+#### 0.7.47
+
+* reduce preload time
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -823,6 +827,7 @@ x header vanising when resizing from fullpage
 * toolbar filters not quite vertically centered. 
 * grid broken on frontpage
 * strange spacing issue on language/menu icons in header now.
+* Frontpage images not visible when i serve css/js files from cdn!?
 
 ## Liscense
  

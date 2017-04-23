@@ -13,7 +13,7 @@ $(window).load(function(){
 });
 
 function preload() {
-    myVar = setTimeout(showPage, 3000);
+    myVar = setTimeout(showPage, 750);
 }
 
 function showPage() {

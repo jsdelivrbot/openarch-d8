@@ -1,6 +1,10 @@
 (function($) {
 
-	$(document).ready(function() { 
+	// $(document).ready(function() { 
+	// 	if (Pg.isFront()) update()
+	// });
+
+	$(window).load(function(){
 		if (Pg.isFront()) update()
 	});
 
@@ -17,13 +21,15 @@
 		if ( $winAspect < $imgAspect ) {
 
 			console.log("set fullheight");
-		    $img.removeClass('fullwidth');
+			$img.removeClass('fullwidth');
 
 		} else {
 
 			console.log("set fullwidth");
-		    $img.addClass('fullwidth');
-		}				
+			$img.addClass('fullwidth');
+		}	
+
+		// MyFlexslider.reset();			
 	}
 
 })(jQuery);

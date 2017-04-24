@@ -688,6 +688,10 @@ change permissions on files directory to 777
 
 * remove nav from feature work slideshow
 
+#### 0.7.51
+
+* fix featured work positioning
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

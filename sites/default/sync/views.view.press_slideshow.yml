@@ -399,7 +399,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '{{ field_press_file }}'
             absolute: false
             external: false
@@ -430,7 +430,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -439,7 +439,7 @@ display:
           type: responsive_image
           settings:
             responsive_image_style: press_image
-            image_link: ''
+            image_link: file
           group_column: ''
           group_columns: {  }
           group_rows: false

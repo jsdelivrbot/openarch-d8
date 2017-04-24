@@ -692,6 +692,18 @@ change permissions on files directory to 777
 
 * fix featured work positioning
 
+#### 0.7.52
+
+* reduce featured work image size
+
+#### 0.7.53
+
+* optimize logo/wechat images
+
+#### 0.7.54
+
+* fix press slideshow linking
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

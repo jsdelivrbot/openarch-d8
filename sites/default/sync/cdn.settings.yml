@@ -1,9 +1,13 @@
 langcode: en
-status: false
+status: true
 mapping:
   type: simple
   domain: openzone-73fd.kxcdn.com
-  conditions: {  }
+  conditions:
+    not:
+      extensions:
+        - css
+        - js
 farfuture:
   status: true
 _core:

@@ -680,6 +680,14 @@ change permissions on files directory to 777
 
 * fix flexslider resize
 
+#### 0.7.49
+
+* fix search
+
+#### 0.7.50
+
+* remove nav from feature work slideshow
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

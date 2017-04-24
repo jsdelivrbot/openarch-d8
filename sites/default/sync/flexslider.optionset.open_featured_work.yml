@@ -21,7 +21,7 @@ options:
   minItems: 0
   maxItems: 0
   move: 0
-  directionNav: true
+  directionNav: false
   controlNav: '1'
   thumbCaptions: false
   thumbCaptionsBoth: false

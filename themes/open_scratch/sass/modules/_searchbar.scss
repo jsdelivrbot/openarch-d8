@@ -70,7 +70,12 @@ $searchbar-input-font-size:     $h3-font-size;
 
   }
 
-  &__input > input#search{
+  &__input input.form-submit{
+    display: none;
+  }
+
+  /*&__input input#search{*/
+  &__input input.form-search{
 
       font-family:            $base-font-family !important;
       font-size:              $searchbar-input-font-size !important;
@@ -101,29 +106,29 @@ $searchbar-input-font-size:     $h3-font-size;
   }
 
   /* remove glowing blue border on focus */
-  &__input > input:focus {
+  &__input input:focus {
     outline:none;
   }
 
   /* remove input "x" reset button */
-  &__input > input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
-  &__input > input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
-  &__input > input[type="search"]::-webkit-search-decoration,
-  &__input > input[type="search"]::-webkit-search-cancel-button,
-  &__input > input[type="search"]::-webkit-search-results-button,
-  &__input > input[type="search"]::-webkit-search-results-decoration { display: none; }
+  &__input input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+  &__input input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+  &__input input[type="search"]::-webkit-search-decoration,
+  &__input input[type="search"]::-webkit-search-cancel-button,
+  &__input input[type="search"]::-webkit-search-results-button,
+  &__input input[type="search"]::-webkit-search-results-decoration { display: none; }
 
   /* placeholder text color */
-  &__input > input#search::-webkit-input-placeholder {
+  &__input input.form-search::-webkit-input-placeholder {
      color: $searchbar-placeholder-color;
   }
-  &__input > input#search:-moz-placeholder { 
+  &__input input.form-search:-moz-placeholder { 
      color: $searchbar-placeholder-color;  
   }
-  &__input > input#search::-moz-placeholder {  
+  &__input input.form-search::-moz-placeholder {  
      color: $searchbar-placeholder-color;  
   }
-  &__input > input#search:-ms-input-placeholder {  
+  &__input input.form-search:-ms-input-placeholder {  
      color: $searchbar-placeholder-color;  
   }
 

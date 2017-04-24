@@ -56,7 +56,7 @@
  * @see template_preprocess_search_result()
  */
 #}
-{{ title_prefix }}
+{# {{ title_prefix }}
 <h3{{ title_attributes }}>
   <a href="{{ url }}">{{ title }}</a>
 </h3>
@@ -66,4 +66,29 @@
 {% endif %}
 {% if info %}
   <p>{{ info }}</p>
-{% endif %}
+{% endif %} #}
+
+{# {{ dump(result.type) }} #}
+{# {{ dump(result.node.nid.value) }}
+{{ dump(result.node.type.value[0].target_id) }}
+{{ dump(node_id) }} #}
+
+<div class="card job bdt bdc--def">
+
+	<div class="card__item card__header spaced">
+    	<h3 class="title"><a href="{{ url }}">{{ title }}</a></h3>
+	</div>
+
+	{% if snippet %}
+		<div class="card__item spaced card__body">
+			<div class="bd"><p{{ content_attributes }}>{{ snippet }}</p></div>
+		</div>
+	{% endif %}
+
+	{% if info %}
+		<div class="card__item spaced card__body">
+			<div class="bd"><p>{{ info }}</p></div>
+		</div>	  
+	{% endif %}
+
+</div>

@@ -702,7 +702,9 @@ change permissions on files directory to 777
 
 #### 0.7.54
 
+* fix linking issues
 * fix press slideshow linking
+* fix external/file links
 
 #### TBD
 

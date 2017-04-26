@@ -1,3 +1,5 @@
+{{ dump(fields.field_link.content.uri) }}
+
 <div class="card book-item invertable bdy bdc--def expandable focus__bg">
 	
 	<input type="checkbox" id="{{ fields.title.content|striptags }}" />
@@ -58,12 +60,17 @@
 					<span class="ribbon__segment left">
 						<div class="tag">{{ fields.field_book_type.content }}</div>
 					</span>
+
+					{% if fields.field_press_file.content %}
+
 					<div class="ribbon__segment right">
-		              	<a class="icon--external" href="{{ events_path }}"><i class="material-icons">call_made</i></a> 
+		              	<a class="icon--external"><i class="material-icons">call_made</i></a> 
 		            </div>
 		            <div class="ribbon__segment right">
 		              	<div class="label label--nopad"><h4>{{ fields.field_link.content }}</h4></div>
 		            </div>
+
+		            {% endif %}
 
 				</div>
 			</div>

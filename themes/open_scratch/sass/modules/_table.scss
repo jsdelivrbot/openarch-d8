@@ -96,7 +96,8 @@ table {
 		}*/
 	}
 
-	tr.row--clickable { 
+	tr.row--clickable,
+	tr.row--clickable-ext { 
 		cursor: pointer; 
 	}
 

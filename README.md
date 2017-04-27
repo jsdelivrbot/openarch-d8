@@ -705,6 +705,7 @@ change permissions on files directory to 777
 * fix linking issues
 * fix press slideshow linking
 * fix external/file links
+* stop propagation on clickable rows
 
 #### TBD
 

@@ -88,12 +88,22 @@ jQuery(document).ready(function($){
     });
 
     //make table rows clickable
+    $(".row--clickable a").click(function(e) {
+        e.stopPropagation();
+    });
     $(".row--clickable").click(function() {
 
-        var $row = $(this);
-        var $link = $row.find("a");
-        window.document.location = $link.attr('href');
+        var $link = $(this).find("a");
+        if($link.data('clicked')) {console.log('clickeroni')}
+        if ($link.length) {         
+            if ($link.attr('target') == '_blank') {
+                window.open($link.attr('href'),'_blank');
+            } else {
+                window.document.location = $link.attr('href');
+            }
+        }
     });
+    
 
     //drop toolbar-toggle icon for some pages
     // if ((Pg.isAwards() && !Breakpoint.isFull()) ||

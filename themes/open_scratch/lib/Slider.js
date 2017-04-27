@@ -34,7 +34,7 @@ MySlider = (function($) {
 
             close();
 
-        } else if(Breakpoint.isWide() || Breakpoint.isWider()) {
+        } else if(Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest()) {
 
         	open();
 

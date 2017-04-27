@@ -706,6 +706,8 @@ change permissions on files directory to 777
 * fix press slideshow linking
 * fix external/file links
 * stop propagation on clickable rows
+* remove city tag from events
+* open menu by default for widest bp
 
 #### TBD
 

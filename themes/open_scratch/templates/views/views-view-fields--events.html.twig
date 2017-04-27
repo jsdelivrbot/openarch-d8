@@ -62,12 +62,18 @@
 					</span>
 
 					<span class="ribbon__segment left">
-						<div class="tag">{{ fields.field_event_type.content }}</div>
+						{# <div class="tag">{{ fields.field_event_type.content }}</div> #}
+						<div class="tag"><a href="{{ base_path }}events?field_event_type_value={{ fields.field_event_type.content }}">
+						{% trans with {'context': 'translation to en', 'langcode': 'en'} %}
+						  {{ fields.field_event_type.content|striptags }}
+						{% endtrans %}
+						</a></div>
+
 					</span>
 
-					<span class="ribbon__segment left">
+					{# <span class="ribbon__segment left">
 						<div class="tag">{{ fields.field_event_city.content }}</div>
-					</span>
+					</span> #}
 
 					<div class="ribbon__segment right">
 		              	<a class="icon--internal" href="{{ base_path }}event/{{ fields.nid.content|striptags }}"><i class="material-icons">arrow_forward</i></a> 

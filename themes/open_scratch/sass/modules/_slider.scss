@@ -65,8 +65,8 @@
 		}
 		@include widest {
 			width: span(3 of 19 wide);
-			-webkit-transform: translateX(-100%);
-			transform: translateX(-100%);
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
 		}
 		@include full {
 			width: span(6 of 19 wide);

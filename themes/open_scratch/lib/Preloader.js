@@ -12,6 +12,7 @@ $(document).ready(function () {
 	
 	MyFullpage.reset();
 	MySlider.reset(); //after fullpage
+	MyMenu.reset(); //after slider
 	MyVisor.update(); //after fullpage and slider
     
 });

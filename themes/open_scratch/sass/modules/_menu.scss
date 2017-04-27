@@ -124,7 +124,8 @@ $menu-row-height: 				$base-row2-height;
 		}*/
 	}
 
-	ul li label:hover {
+	ul li label:hover,
+	li > .is-active {
 		background-color: $menu-focus-color;
 	}
 
@@ -165,6 +166,8 @@ $menu-row-height: 				$base-row2-height;
 	ul li input[type='checkbox']:checked ~ label .unchecked {
 		display: none;
 	}
+
+	.is-active {}
 }
 
 

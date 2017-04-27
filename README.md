@@ -709,6 +709,10 @@ change permissions on files directory to 777
 * remove city tag from events
 * open menu by default for widest bp
 
+#### 0.7.55
+
+* make menu state persistant.
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

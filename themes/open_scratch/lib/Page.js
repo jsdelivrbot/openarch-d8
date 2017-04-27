@@ -54,14 +54,22 @@ Pg = (function($) {
 	}
 		
 	return {
+
 		isFront: isFront(),
-		isProjTable: pathBegins("projects/table"),
+		isPractice: pathBegins("practice"),
+		isPeople: pathBegins("people"),
+		isManifesto: pathBegins("manifesto"),
 		isAwards: pathBegins("awards"),
-		isBooks: pathBegins("books"),
-		isEvents: pathBegins("events"),
-		isTask: pathBegins("task"),
-		isPress: pathBegins("press"),
+		isContact: pathBegins("contact"),
+		isProjTable: pathBegins("projects/table"),
+		isProjGallery: pathBegins("projects/gallery"),
 		isIdeas: pathBegins("ideas"),
+		isVideos: pathBegins("videos"),
+		isBooks: pathBegins("books"),
+		isPress: pathBegins("press"),
+		isEvents: pathBegins("events"),
+		isJobs: pathBegins("jobs"),
+		isTask: pathBegins("task"),
 		isPreopen: pathBegins("pre_open")
 	}
 

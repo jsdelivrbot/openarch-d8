@@ -719,6 +719,10 @@ change permissions on files directory to 777
 * fix spacing on press coverage
 * fix issue with press coverage missing from cn
 
+#### 0.7.57
+
+* update persistant menu behaivor
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

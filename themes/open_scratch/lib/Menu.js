@@ -18,7 +18,8 @@ MyMenu = (function($) {
 			expandWork()
 
 		} else if (Pg.isProjTable()
-			|| Pg.isProjGallery()) {
+			|| Pg.isProjGallery()
+			|| Pg.isTask()) {
 
 			expandWork()
 			expandProjects()
@@ -36,10 +37,10 @@ MyMenu = (function($) {
 	}
 
 	//private
-	function expandAboutUs() { $("input:checkbox[id='About Us']").attr('checked', true); }
-	function expandWork() { $("input:checkbox[id='Work']").attr('checked', true); }
-	function expandProjects() { $("input:checkbox[id='Projects']").attr('checked', true); }
-	function expandMedia() { $("input:checkbox[id='Media']").attr('checked', true); }
+	function expandAboutUs() { $(".sidebar input:checkbox[id='About Us']").attr('checked', true); }
+	function expandWork() { $(".sidebar input:checkbox[id='Work']").attr('checked', true); }
+	function expandProjects() { $(".sidebar input:checkbox[id='Projects']").attr('checked', true); }
+	function expandMedia() { $(".sidebar input:checkbox[id='Media']").attr('checked', true); }
 	
 	//api	
 	return {

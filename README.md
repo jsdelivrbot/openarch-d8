@@ -723,6 +723,10 @@ change permissions on files directory to 777
 
 * update persistant menu behaivor
 
+#### 0.7.58
+
+* fix error that occurs on task with no slideshow
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -34,8 +34,13 @@ MyFlexslider = (function($) {
 
             var numTaskItems = (Breakpoint.isFull()) ? 2 : 1;
             
-            $taskSlider.data('flexslider').vars.minItems = numTaskItems;
-            $taskSlider.data('flexslider').vars.maxItems = numTaskItems;
+            // check if slideshow exists for this node
+            if (typeof $taskSlider.data('flexslider') != 'undefined') { 
+
+                $taskSlider.data('flexslider').vars.minItems = numTaskItems;
+                $taskSlider.data('flexslider').vars.maxItems = numTaskItems;
+
+            }
 
         } else if(Pg.isPress()) {
 

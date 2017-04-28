@@ -19,17 +19,47 @@
         </a>
       </span>
 
-      <span class="ribbon__segment left">
+      {# <span class="ribbon__segment left">
         <div class="tag">{{ fields.field_task_group.content }}</div>
-      </span>
+      </span> #}
 
-      <span class="ribbon__segment left">
+      {# <span class="ribbon__segment left">
         <div class="tag">{{ fields.field_task_type.content }}</div>
-      </span>
+      </span> #}
 
-      <span class="ribbon__segment left">
+      {# <span class="ribbon__segment left">
         <div class="tag">{{ fields.field_task_program.content }}</div>
-      </span>
+      </span> #}
+
+      {% set group = (fields.field_task_group.content) %}
+
+      {% if group == 'OPEN Work' %}
+
+        <span class="ribbon__segment left">
+          <div class="tag"><a href="{{ base_path }}projects/gallery">{{ fields.field_task_group.content }}</a></div>
+        </span>
+
+        <span class="ribbon__segment left">
+          <div class="tag"><a href="{{ base_path }}projects/gallery?field_task_type_value={{ fields.field_task_type.content }}">{{ fields.field_task_type.content }}</a></div>
+        </span>
+        <span class="ribbon__segment left">
+          <div class="tag"><a href="{{ base_path }}projects/gallery?field_task_program_value={{ fields.field_task_program.content }}">{{ fields.field_task_program.content }}</a></div>
+        </span>
+
+      {% elseif group == 'OPEN Ideas' %}
+
+        <span class="ribbon__segment left">
+          <div class="tag"><a href="{{ base_path }}ideas">{{ fields.field_task_group.content }}</a></div>
+        </span>
+
+        <span class="ribbon__segment left">
+          <div class="tag"><a href="{{ base_path }}ideas?field_task_type_value={{ fields.field_task_type.content }}">{{ fields.field_task_type.content }}</a></div>
+        </span>
+        <span class="ribbon__segment left">
+          <div class="tag"><a href="{{ base_path }}ideas?field_task_program_value={{ fields.field_task_program.content }}">{{ fields.field_task_program.content }}</a></div>
+        </span>
+
+      {% endif %}
 
     </div>
   </div>

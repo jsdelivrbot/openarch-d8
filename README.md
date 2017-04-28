@@ -727,6 +727,10 @@ change permissions on files directory to 777
 
 * fix error that occurs on task with no slideshow
 
+#### 0.7.59
+
+* fix tag linking on task page
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

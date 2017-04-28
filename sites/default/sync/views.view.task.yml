@@ -1230,8 +1230,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
-            path: 'projects/gallery?field_task_type_value={{ field_task_type__value }}'
+            make_link: false
+            path: ''
             absolute: false
             external: false
             replace_spaces: false
@@ -1292,8 +1292,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
-            path: 'projects/gallery?field_task_program_value={{ field_task_program__value }}'
+            make_link: false
+            path: ''
             absolute: false
             external: false
             replace_spaces: false
@@ -1419,7 +1419,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: 'projects/gallery?field_task_group_value={{ field_task_group__value }}'
             absolute: false
             external: false

@@ -715,8 +715,9 @@ change permissions on files directory to 777
 
 #### 0.7.56
 
-* sdf
+* fix press coverage
 * fix spacing on press coverage
+* fix issue with press coverage missing from cn
 
 #### TBD
 
@@ -843,6 +844,7 @@ change permissions on files directory to 777
 * generate image style on upload (see https://www.flocondetoile.fr/blog/generate-programmatically-image-styles-drupal-8)
 * inverted scheme flash white on page load b/c loads white then inverts. 
 * widest/full bps show sidebar on load before closing it.
+* remove language dropdown from all content add forms!
 
 #### ISSUES:
 

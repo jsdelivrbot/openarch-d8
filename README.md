@@ -713,6 +713,11 @@ change permissions on files directory to 777
 
 * make menu state persistant.
 
+#### 0.7.56
+
+* sdf
+* fix spacing on press coverage
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

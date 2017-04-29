@@ -1,0 +1,7 @@
+{% for url, label in ( tags ) %}
+	<span class="ribbon__segment left">
+		<div class="tag">
+			<a href={{ url }}>{{ label }}</a>
+		</div>
+	</span>
+{% endfor %}

@@ -1,3 +1,72 @@
+{% set group = (fields.field_task_group.content) %}
+
+{% if (group == 'OPEN Work') or (group == 'OPEN项目') %}
+{% set group_path = "%sprojects/gallery"|format(base_path) %}
+{% elseif (group == 'OPEN Ideas') or (group == 'OPEN构想') %}
+{% set group_path = "%sideas"|format(base_path) %}
+{% else %}
+{# pre-open #}
+{% endif %}
+
+{% if (current_language_id) == 'en' %}
+
+  {% set type_en = '%s'|format( fields.field_task_type.content ) %}
+  {% set prog_en = '%s'|format( fields.field_task_program.content ) %} 
+  {% set type_query = "?field_task_type_value=%s"|format(type_en) %}
+  {% set prog_query = "?field_task_program_value=%s"|format(prog_en) %}
+
+{# {% elseif (current_language_id) == 'zh-hans' %} #}
+{% else %}
+
+  {% set type_trans = { 
+    '规划策略': 'Planning & Strategy',
+    '景观': 'Landscape',
+    '建筑': 'Architecture',
+    '室内&改造': 'Interior & Renovation',
+    '家具': 'Furniture',
+    '装置': 'Installation',
+    '研究': 'Research',
+    '其它': 'other'
+  } %}
+
+  {% set prog_trans = { 
+    '文化': 'Culture',
+    '公园': 'Park',
+    '教育': 'Education',
+    '机构': 'Institution',
+    '展览': 'Exhibition',
+    '酒店': 'Hotel',
+    '基础设施': 'Infrastructure',
+    '图书馆': 'Library',
+    '规划': 'Masterplan',
+    '混合': 'Mixed-Use',
+    '博物馆': 'Museum',
+    '办公': 'Office',
+    '保护': 'Preservation',
+    '零售': 'Retail',
+    '居住': 'Residential',
+    '体育': 'Sport',
+    '其它': 'other'
+  } %}
+  
+  {% set type_cn = '%s'|format( fields.field_task_type.content ) %}
+  {% set prog_cn = '%s'|format( fields.field_task_program.content ) %} 
+  {% set type_query = "?field_task_type_value=%s"|format(type_trans[type_cn]) %}
+  {% set prog_query = "?field_task_program_value=%s"|format(prog_trans[prog_cn]) %}
+
+{% endif %}
+
+{% set group_url = group_path %}
+{% set type_url = [group_path, type_query]|join %}
+{% set prog_url = [group_path, prog_query]|join %}
+
+{% set tags = { 
+  ( group_url ): ( fields.field_task_group.content ), 
+  ( type_url ): ( fields.field_task_type.content ),
+  ( prog_url ): ( fields.field_task_program.content ),
+  } 
+%}
+
 <div class="card__item card__item--spaced-most card__header"> 
 
 	<h1>{{ fields.title.content }}</h1>
@@ -10,7 +79,7 @@
 
 <div class="card__item card__footer">
 
-  <div class="ribbon med">
+  {# <div class="ribbon med">
     <div class="ribbon__segments">
 
       <span class="ribbon__segment left">
@@ -19,50 +88,12 @@
         </a>
       </span>
 
-      {# <span class="ribbon__segment left">
-        <div class="tag">{{ fields.field_task_group.content }}</div>
-      </span> #}
-
-      {# <span class="ribbon__segment left">
-        <div class="tag">{{ fields.field_task_type.content }}</div>
-      </span> #}
-
-      {# <span class="ribbon__segment left">
-        <div class="tag">{{ fields.field_task_program.content }}</div>
-      </span> #}
-
-      {% set group = (fields.field_task_group.content) %}
-
-      {% if group == 'OPEN Work' %}
-
-        <span class="ribbon__segment left">
-          <div class="tag"><a href="{{ base_path }}projects/gallery">{{ fields.field_task_group.content }}</a></div>
-        </span>
-
-        <span class="ribbon__segment left">
-          <div class="tag"><a href="{{ base_path }}projects/gallery?field_task_type_value={{ fields.field_task_type.content }}">{{ fields.field_task_type.content }}</a></div>
-        </span>
-        <span class="ribbon__segment left">
-          <div class="tag"><a href="{{ base_path }}projects/gallery?field_task_program_value={{ fields.field_task_program.content }}">{{ fields.field_task_program.content }}</a></div>
-        </span>
-
-      {% elseif group == 'OPEN Ideas' %}
-
-        <span class="ribbon__segment left">
-          <div class="tag"><a href="{{ base_path }}ideas">{{ fields.field_task_group.content }}</a></div>
-        </span>
-
-        <span class="ribbon__segment left">
-          <div class="tag"><a href="{{ base_path }}ideas?field_task_type_value={{ fields.field_task_type.content }}">{{ fields.field_task_type.content }}</a></div>
-        </span>
-        <span class="ribbon__segment left">
-          <div class="tag"><a href="{{ base_path }}ideas?field_task_program_value={{ fields.field_task_program.content }}">{{ fields.field_task_program.content }}</a></div>
-        </span>
-
-      {% endif %}
+      {% include '@open_scratch/parts/tags.html.twig' with tags %}
 
     </div>
-  </div>
+  </div> #}
+
+  {% include '@open_scratch/parts/card-footer--tags.html.twig' with tags %}
 
 </div>
 

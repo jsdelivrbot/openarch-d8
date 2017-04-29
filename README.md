@@ -731,6 +731,10 @@ change permissions on files directory to 777
 
 * fix tag linking on task page
 
+#### 0.7.60
+
+* fix multilingual links on task page
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -857,6 +861,7 @@ change permissions on files directory to 777
 * inverted scheme flash white on page load b/c loads white then inverts. 
 * widest/full bps show sidebar on load before closing it.
 * remove language dropdown from all content add forms!
+* refactor views-view-fields-task.html.twig
 
 #### ISSUES:
 

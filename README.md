@@ -748,6 +748,10 @@ change permissions on files directory to 777
 
 * fix inverter ajax issue
 
+#### 0.7.64
+
+* add project to allowable video types
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

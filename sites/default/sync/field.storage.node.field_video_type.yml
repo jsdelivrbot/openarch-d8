@@ -20,6 +20,9 @@ settings:
     -
       value: Other
       label: Other
+    -
+      value: Project
+      label: Project
   allowed_values_function: ''
 module: options
 locked: false

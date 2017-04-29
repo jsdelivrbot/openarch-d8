@@ -6,3 +6,5 @@ settings:
       label: 竞赛方案
     -
       label: 其它
+    -
+      label: 项目

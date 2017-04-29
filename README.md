@@ -740,7 +740,13 @@ change permissions on files directory to 777
 * fix tags on video pages
 * fix recent events more link
 
-#### 0.7.61
+#### 0.7.62
+
+* add missing translations
+
+#### 0.7.63
+
+* fix inverter ajax issue
 
 #### TBD
 

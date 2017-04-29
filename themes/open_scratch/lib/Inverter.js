@@ -14,6 +14,9 @@ MyInverter = (function($) {
             toggle()
         }
     });
+    $( document ).ajaxComplete(function() {
+        init()
+    });
 
     $toggler.click(function() { 
         toggle()

@@ -1,3 +1,4 @@
+ 
 {% set group = (fields.field_task_group.content) %}
 
 {% if (group == 'OPEN Work') or (group == 'OPEN项目') %}
@@ -5,7 +6,6 @@
 {% elseif (group == 'OPEN Ideas') or (group == 'OPEN构想') %}
 {% set group_path = "%sideas"|format(base_path) %}
 {% else %}
-{# pre-open #}
 {% endif %}
 
 {% if (current_language_id) == 'en' %}
@@ -15,7 +15,6 @@
   {% set type_query = "?field_task_type_value=%s"|format(type_en) %}
   {% set prog_query = "?field_task_program_value=%s"|format(prog_en) %}
 
-{# {% elseif (current_language_id) == 'zh-hans' %} #}
 {% else %}
 
   {% set type_trans = { 
@@ -65,7 +64,36 @@
   ( type_url ): ( fields.field_task_type.content ),
   ( prog_url ): ( fields.field_task_program.content ),
   } 
-%}
+%} 
+
+
+{# ------------------------------------------------------------ #}
+
+{# {% set group = (fields.field_task_group.content) %}
+{% if (group == 'OPEN Work') or (group == 'OPEN项目') %}
+{% set group_path = "%sprojects/gallery"|format(base_path) %}
+{% elseif (group == 'OPEN Ideas') or (group == 'OPEN构想') %}
+{% set group_path = "%sideas"|format(base_path) %}
+{% else %}
+{% endif %}
+
+{% set type_en = '%s'|format( fields.field_task_type.content ) %}
+{% set prog_en = '%s'|format( fields.field_task_program.content ) %} 
+{% set type_query = "?field_task_type_value=%s"|format(type_en) %}
+{% set prog_query = "?field_task_program_value=%s"|format(prog_en) %}
+
+{% set group_url = group_path %}
+{% set type_url = [group_path, type_query]|join %}
+{% set prog_url = [group_path, prog_query]|join %}
+
+{% set tags = { 
+  ( group_url ): ( fields.field_task_group.content ), 
+  ( type_url ): ( fields.field_task_type.content ),
+  ( prog_url ): ( fields.field_task_program.content ),
+  } 
+%} #}
+
+{# ------------------------------------------------------------ #}
 
 <div class="card__item card__item--spaced-most card__header"> 
 
@@ -88,7 +116,11 @@
         </a>
       </span>
 
-      {% include '@open_scratch/parts/tags.html.twig' with tags %}
+      <span class="ribbon__segment left">
+        <div class="tag">
+          <a href={{ url }}>{{ label }}</a>
+        </div>
+      </span>
 
     </div>
   </div> #}

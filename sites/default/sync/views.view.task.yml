@@ -1229,7 +1229,7 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: '{{ field_task_type__value }}'
             make_link: false
             path: ''
             absolute: false
@@ -1291,7 +1291,7 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: '{{ field_task_program__value }}'
             make_link: false
             path: ''
             absolute: false

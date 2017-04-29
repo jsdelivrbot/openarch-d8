@@ -733,7 +733,9 @@ change permissions on files directory to 777
 
 #### 0.7.60
 
-* fix multilingual links on task page
+* fix tags
+* fix multilingual tags on task page
+* fix multilingual tags on book page
 
 #### TBD
 
@@ -889,6 +891,7 @@ x header vanising when resizing from fullpage
 * grid broken on frontpage
 * strange spacing issue on language/menu icons in header now.
 * Frontpage images not visible when i serve css/js files from cdn!?
+* Books filter not working for cn (by open returns no results)
 
 ## Liscense
  

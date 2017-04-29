@@ -733,7 +733,7 @@ change permissions on files directory to 777
 
 #### 0.7.60
 
-* fix tags
+* fix linking
 * fix multilingual tags on task page
 * fix multilingual tags on book page
 * fix multilingual tags on videos page

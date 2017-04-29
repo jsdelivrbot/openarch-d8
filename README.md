@@ -736,6 +736,8 @@ change permissions on files directory to 777
 * fix tags
 * fix multilingual tags on task page
 * fix multilingual tags on book page
+* fix multilingual tags on videos page
+* fix tags on video pages
 
 #### TBD
 

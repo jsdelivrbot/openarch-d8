@@ -1180,8 +1180,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: 'videos?field_video_type_value={{ field_video_type__value }}'
             absolute: false
             external: false
             replace_spaces: false

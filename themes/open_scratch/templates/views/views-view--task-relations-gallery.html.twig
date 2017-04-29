@@ -14,7 +14,8 @@
     <label for="related-work">
     
       <div class="card__item spaced card__header expandable-head">
-        {% set title = ( view.display_handler.display.display_title ) ~ ' (' ~ ( view.total_rows ) ~ ')' %}
+        {# {% set title = ( view.display_handler.display.display_title ) ~ ' (' ~ ( view.total_rows ) ~ ')' %} #}
+        {% set title = ( 'Related'|t ) ~ ' (' ~ ( view.total_rows ) ~ ')' %}
         {% include '@open_scratch/parts/card-header--expandable.html.twig' with {'title': title} only %}
       </div>
 

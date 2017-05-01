@@ -760,6 +760,11 @@ change permissions on files directory to 777
 
 * fix fading thumb issue
 
+#### 0.7.67
+
+* make idea thumbs simple responsive images
+* 
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

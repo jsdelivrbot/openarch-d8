@@ -113,5 +113,27 @@ jQuery(document).ready(function($){
 
     //     $(".toolbar-toggle").addClass('below');
     // }
+
+    $(function() {
+        // alert(!(window.ActiveXObject) && "ActiveXObject" in window)
+        var ua = window.navigator.userAgent;
+        // if (ua.indexOf("Trident/7.0") > 0) {
+        if (!(window.ActiveXObject) && "ActiveXObject" in window) {
+            //return 11;
+            $('.notify').addClass('ie-not-supported')
+            $('.notify').append( "<p>IE11 not currently supported</p>" );
+        } else if (ua.indexOf("Trident/6.0") > 0) {
+            //return 10;
+            $('.notify').addClass('ie-not-supported')
+            $('.notify').append( "<p>IE10 not currently supported</p>" );
+        } else if (ua.indexOf("Trident/5.0") > 0) {
+            //return 9;
+            $('.notify').addClass('ie-not-supported')
+            $('.notify').append( "<p>IE9 not currently supported</p>" );
+        } else {
+            //return 0;  
+            // not IE9, 10 or 11
+        }
+    });
     
 });

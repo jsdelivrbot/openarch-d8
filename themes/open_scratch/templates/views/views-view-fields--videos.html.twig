@@ -12,13 +12,19 @@
 
 	            <div class="ribbon med">
 			      	<div class="ribbon__segments">
-				      	<div class="ribbon__segment right">
 
+				      	<div class="ribbon__segment right">
 			    			<a class="icon--internal-big" href="{{ base_path }}media/{{ fields.nid.content|striptags }}">
 			    				<i class="material-icons">arrow_forward</i>
 			    			</a>	
-
 					    </div>
+
+					    <div class="ribbon__segment right">
+				          	<a class="icon--external-big" href="{{ fields.field_link.content|striptags }}" target="_blank">
+				          		<i class="material-icons">call_made</i>
+				          	</a> 
+				        </div>
+
 					</div>
 			    </div>
 

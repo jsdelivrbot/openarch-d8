@@ -11,8 +11,8 @@ dependencies:
     - open_scratch
 id: exposedformprojects_gallerypage_1
 theme: open_scratch
-region: toolbar_left
-weight: -24
+region: toolbar_hidden
+weight: -9
 provider: null
 plugin: 'views_exposed_filter_block:projects_gallery-page_1'
 settings:

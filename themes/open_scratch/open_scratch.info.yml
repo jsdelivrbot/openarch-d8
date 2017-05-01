@@ -11,8 +11,8 @@ regions:
   header_right: 'Header Right'
   sidebar_search: 'Sidebar search input'
   sidebar_nav: 'Sidebar navigation menu'
-  toolbar_left: "Left toolbar"
-  toolbar_right: "Right toolbar"
+  infobar: 'Infobar'
+  toolbar_hidden: 'Hidden toolbar'
   content_slideshow: 'Media slideshow'
   content_primary: 'Main content'
   content_relations: 'Relations content'

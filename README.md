@@ -752,6 +752,10 @@ change permissions on files directory to 777
 
 * add project to allowable video types
 
+#### 0.7.65
+
+* add external links and info to videos pags
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

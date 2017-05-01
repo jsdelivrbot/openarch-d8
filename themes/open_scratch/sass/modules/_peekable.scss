@@ -13,9 +13,10 @@
 
 	}*/
 
-	.peekable-contents {
+	.peekable-contents,
+	.peekable-header {
 		/*display: none;*/
-		transition: top 0.3s, opacity 0.3s;
+		transition: top 0.25s, opacity 0.25s;
 	}
 
 	input[type='checkbox'] ~ label > .peekable-toggle {
@@ -25,25 +26,38 @@
 	input[type='checkbox']:checked ~ label > .peekable-toggle {
 		/*max-height: 0;*/
 	}
+
+	input[type='checkbox'] ~ .peekable-header{
+		/*display: none;*/
+		top: $tbar-height *-1;
+		opacity: 1;
+		/*max-height: 700px;*/		
+	}
+	input[type='checkbox']:checked ~ .peekable-header{
+		/*max-height: 0;*/
+		/*display: inherit;*/
+		top: $tbar-height *-2;
+		opacity: 0;
+	}
+	input[type='checkbox'] ~ .peekable-header *{
+		pointer-events: none;		
+	}
+	input[type='checkbox']:checked ~ .peekable-header *{
+		pointer-events: initial;		
+	}
+
 	input[type='checkbox'] ~ .peekable-contents{
 		/*display: none;*/
 		top: 0;
 		opacity: 0;
-		/*max-height: 700px;*/
-		
+		/*max-height: 700px;*/		
 	}
 	input[type='checkbox']:checked ~ .peekable-contents{
 		/*max-height: 0;*/
 		/*display: inherit;*/
-		top: -$tbar-height;
+		top: $tbar-height *-1;
 		opacity: 1;
-
-		/*@include full {
-			top: $tbar-height;
-			opacity: 1;
-		}*/
 	}
-
 	input[type='checkbox'] ~ .peekable-contents *{
 		pointer-events: none;		
 	}

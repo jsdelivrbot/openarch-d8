@@ -11,8 +11,8 @@ dependencies:
     - open_scratch
 id: exposedformawardspage_1
 theme: open_scratch
-region: toolbar_left
-weight: -26
+region: toolbar_hidden
+weight: -11
 provider: null
 plugin: 'views_exposed_filter_block:awards-page_1'
 settings:

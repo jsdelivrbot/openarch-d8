@@ -11,8 +11,8 @@ dependencies:
     - open_scratch
 id: exposedformbookspage_1
 theme: open_scratch
-region: toolbar_left
-weight: -29
+region: toolbar_hidden
+weight: -14
 provider: null
 plugin: 'views_exposed_filter_block:books-page_1'
 settings:

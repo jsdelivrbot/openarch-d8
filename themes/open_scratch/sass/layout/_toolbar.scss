@@ -45,7 +45,8 @@
 }
 
 	.toolbar-contents,
-	.toolbar-toggle {
+	.toolbar-toggle,
+	.toolbar-header {
 
 		/* clearfix to prevent header region collapse w/out overflow hidden b/c that would clip dropdown menu */
 		@include clearfix;
@@ -56,6 +57,14 @@
 		height: 			$tbar-height;
 		line-height: 		$tbar-height;
 
+	}
+
+	.toolbar-header {
+
+		top: -$tbar-height;
+
+		/*border-top: 1px solid $tbar-bd-color;*/
+		/*border-bottom: 1px solid $tbar-bd-color;*/
 	}
 
 	.toolbar-contents {

@@ -288,6 +288,13 @@ $icon-hover-bg-color:			#e5e5e5;
 				/*@extend %btn--sml;*/
 			}
 
+			.icon--external-big {
+				@extend %icon--mat;
+				@extend %icon--mat-big;
+				@extend %btn--big;
+				/*@extend %btn--sml;*/
+			}
+
 			/*icon sml btn-smlr mat*/
 			.icon--external-sml {
 				@extend %icon--mat;

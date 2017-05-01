@@ -9,7 +9,7 @@ dependencies:
 id: searchform
 theme: open_scratch
 region: sidebar_search
-weight: null
+weight: -15
 provider: null
 plugin: search_form_block
 settings:

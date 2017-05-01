@@ -4,13 +4,27 @@
 
     <input type="checkbox" id="toolbar">
 
+    <div class="toolbar-header peekable-header">
+
+      <div class="ribbon">
+        <div class="ribbon__segments">
+          <div class="ribbon__segment left w--85p tt--u">
+            {{ page.infobar }}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
     <div class="toolbar-contents peekable-contents">
 
       <div class="ribbon">
         <div class="ribbon__segments">
           <div class="ribbon__segment left w--85p tt--u">
 
-            {{ page.toolbar_left }}
+            <div class="d--ib">
+              {{ page.toolbar_hidden }}
+            </div>
 
           </div>
         </div>
@@ -24,6 +38,13 @@
 
           <div class="ribbon">
             <div class="ribbon__segments">
+
+              {# <div class="ribbon__segment left w--85p tt--u">
+
+                {{ page.infobar }}
+
+              </div> #}
+
 
               <div class="ribbon__segment right">
 

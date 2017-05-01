@@ -1,0 +1,31 @@
+uuid: 76e5a2e0-2d4e-4838-b0ae-5cdd7898150b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e617e093-080d-4eaa-9b15-1592d7ca7115'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_scratch
+id: videosinfo
+theme: open_scratch
+region: infobar
+weight: -16
+provider: null
+plugin: 'block_content:e617e093-080d-4eaa-9b15-1592d7ca7115'
+settings:
+  id: 'block_content:e617e093-080d-4eaa-9b15-1592d7ca7115'
+  label: 'Videos info'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /videos
+    negate: false
+    context_mapping: {  }

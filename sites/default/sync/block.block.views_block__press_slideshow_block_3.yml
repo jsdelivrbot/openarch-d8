@@ -12,7 +12,7 @@ dependencies:
 id: views_block__press_slideshow_block_3
 theme: open_scratch
 region: content_slideshow
-weight: -32
+weight: -15
 provider: null
 plugin: 'views_block:press_slideshow-block_3'
 settings:

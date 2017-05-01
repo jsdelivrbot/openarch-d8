@@ -37,7 +37,7 @@
 	}
 	@include full   { 
 
-		@include span(isolate 15 at 4 of 18);
+		@include span(isolate 12 at 4 of 18);
 		margin-top: $base-spacing-huge; 
 	}
 
@@ -87,14 +87,14 @@
 		@include full { 
 
 			&__header { 
-				@include span(first 3 of 15); 
+				@include span(first 3 of 12); 
 			}	
 			&__body { 
-				@include span(last 12 of 15); float: right; 
-				> .bd { width: span(9 of 12); } 
+				@include span(last 9 of 12); float: right; 
+				/*> .bd { width: span(9 of 12); }*/ 
 			}
 			&__footer { 
-				@include span(isolate 12 of 15); float: right; /*clear: right;*/ 
+				@include span(last 9 of 12); float: right;/*clear: right;*/
 			}			
 		}
 	}

@@ -756,6 +756,10 @@ change permissions on files directory to 777
 
 * add external links and info to videos pags
 
+#### 0.7.66
+
+* fix fading thumb issue
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

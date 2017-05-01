@@ -5,7 +5,7 @@ dependencies: {  }
 id: open_thumbnail
 label: 'Open thumbnail'
 options:
-  animation: fade
+  animation: slide
   animationSpeed: 600
   direction: horizontal
   slideshow: true
@@ -36,7 +36,7 @@ options:
   sync: ''
   asNavFor: ''
   initDelay: 0
-  useCSS: true
+  useCSS: false
   video: false
   pausePlay: false
   pauseText: Pause

@@ -119,8 +119,9 @@
 	.main-content__header {
 
 		@include full {
-			margin-left: span(6 of 19 wide);
-			width: span(13 of 19);
+
+			margin-left: 0;
+			width:	100%;
 		}
 	}
 
@@ -218,6 +219,15 @@
 		@include full {
 			margin-left: 0;
 			width: 100%;
+		}
+	}
+
+	> .slider-canvas.main-header-layout,
+	.main-content__header {
+
+		@include full {
+			margin-left: span(6 of 19 wide);
+			width: span(13 of 19);
 		}
 	}
 }

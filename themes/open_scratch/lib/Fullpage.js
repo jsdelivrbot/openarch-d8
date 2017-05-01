@@ -318,6 +318,7 @@ MyFullpage = (function($) {
         if (Pg.isFront()) { //only front page enables fullpage automatically
 
             build();
+            // destroy();
 
         } else { //other pages and task page when break is widest/full
 

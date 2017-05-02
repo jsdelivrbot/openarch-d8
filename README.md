@@ -775,6 +775,10 @@ change permissions on files directory to 777
 * add xternal video links to related media items
 * fix relation mediacard on media pages
 
+#### 0.7.70
+
+* translate config
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

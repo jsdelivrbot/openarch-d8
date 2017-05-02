@@ -1,0 +1,7 @@
+display:
+  block_3:
+    display_options:
+      fields:
+        type_1:
+          alter:
+            text: 项目

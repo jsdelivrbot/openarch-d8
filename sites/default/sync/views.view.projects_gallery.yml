@@ -16,6 +16,7 @@ dependencies:
     - flexslider_fields
     - node
     - options
+    - responsive_image
     - text
     - user
     - views_infinite_scroll
@@ -1085,12 +1086,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: flexslider_responsive
+          type: responsive_image
           settings:
-            optionset: open_thumbnail
             responsive_image_style: thumbnail
             image_link: ''
-            caption: '0'
           group_column: ''
           group_columns: {  }
           group_rows: true

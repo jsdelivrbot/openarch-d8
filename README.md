@@ -763,7 +763,7 @@ change permissions on files directory to 777
 #### 0.7.67
 
 * make idea thumbs simple responsive images
-* 
+* make projects gallery thumbs responsive imgs
 
 #### TBD
 

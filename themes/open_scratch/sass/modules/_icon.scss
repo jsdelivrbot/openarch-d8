@@ -269,9 +269,9 @@ $icon-hover-bg-color:			#e5e5e5;
 
 			/*icon fa icon--bigr btn-sml focus__btn*/
 			.icon--internal-sml {
-				@extend %icon--fa;
-				/*@extend %icon--fa-big;*/
-				/*@extend %btn--sml;*/
+				@extend %icon--mat;
+				@extend %icon--mat-sml;
+				@extend %btn--big;
 			}
 
 			/*icon icon--bigr mat btn-big*/

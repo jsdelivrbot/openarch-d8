@@ -70,6 +70,7 @@ Pg = (function($) {
 		isEvents: pathBegins("events"),
 		isJobs: pathBegins("jobs"),
 		isTask: pathBegins("task"),
+		isMedia: pathBegins("media"),
 		isPreopen: pathBegins("pre_open")
 	}
 

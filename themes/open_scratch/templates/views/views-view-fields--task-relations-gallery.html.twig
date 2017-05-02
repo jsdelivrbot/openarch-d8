@@ -4,8 +4,10 @@
 
     <div class="card__item card__slide relation__thumb media__img media__img--relation"> {# layout / width #}
 
+      <a href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
         {{ fields.field_thumbnail.content }} {# img element #}
-        {{ fields.field_video_embed.content }}
+        {# {{ fields.field_video_embed.content }} #}
+      </a>
 
     </div>
 
@@ -21,7 +23,7 @@
               <div class="ribbon__segments">
                 <div class="ribbon__segment right">
 
-                  <a class="icon--internal" href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
+                  <a class="icon--internal-sml" href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
                     <i class="material-icons">arrow_forward</i>
                   </a>
 

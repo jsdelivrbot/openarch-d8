@@ -49,6 +49,7 @@
 	/* refactor invertable borders */
 	.bdt { border-top: 1px solid; }
 	.bdb { border-bottom: 1px solid; }
+	.bdr { border-right: 1px solid; }
 	.bdy { 
 		border-top: 1px solid;
 		&:nth-last-child(1) {

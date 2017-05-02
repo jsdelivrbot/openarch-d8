@@ -12,7 +12,7 @@ dependencies:
 id: views_block__task_relations_gallery_block_3
 theme: open_scratch
 region: content_relations
-weight: -15
+weight: -13
 provider: null
 plugin: 'views_block:task_relations_gallery-block_3'
 settings:

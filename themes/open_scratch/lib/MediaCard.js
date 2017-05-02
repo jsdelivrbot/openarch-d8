@@ -10,13 +10,13 @@ MediaCard = (function($) {
     $(document).ready(function() {
 
         !(Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? disableMedia() :
-        (Pg.isTask() && !(Breakpoint.isNarrow() || Breakpoint.isWide())) ? disableMedia() : enableMedia();
+        ((Pg.isTask() || Pg.isMedia()) && !(Breakpoint.isNarrow() || Breakpoint.isWide())) ? disableMedia() : enableMedia();
     });
 
     $(window).resize(function() {
 
         (Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? enableMedia() :
-        (Pg.isTask() && (Breakpoint.isNarrow() || Breakpoint.isWide())) ? enableMedia() : disableMedia();
+        ((Pg.isTask() || Pg.isMedia()) && (Breakpoint.isNarrow() || Breakpoint.isWide())) ? enableMedia() : disableMedia();
 
     });
     
@@ -27,7 +27,7 @@ MediaCard = (function($) {
         $img.removeClass('media__img');
         $contents.removeClass('media__contents');
 
-        if (Pg.isIdeas() || Pg.isPreopen() || Pg.isTask()) {
+        if (Pg.isIdeas() || Pg.isPreopen() || Pg.isTask() || Pg.isMedia()) {
             $contents.addClass('hide');
         }
     }
@@ -38,7 +38,7 @@ MediaCard = (function($) {
         $img.addClass('media__img');
         $contents.addClass('media__contents');
 
-        if (Pg.isIdeas() || Pg.isPreopen() || Pg.isTask()) {
+        if (Pg.isIdeas() || Pg.isPreopen() || Pg.isTask() || Pg.isMedia()) {
             $contents.removeClass('hide');
         }
     }

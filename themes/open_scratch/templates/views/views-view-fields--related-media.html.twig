@@ -16,13 +16,19 @@
 
             <div class="ribbon med">
               <div class="ribbon__segments">
-                <div class="ribbon__segment right">
 
-                  <a class="icon--internal" href="{{ base_path }}media/{{ fields.nid.content|striptags }}">
+                <div class="ribbon__segment right">
+                  <a class="icon--internal-sml" href="{{ base_path }}media/{{ fields.nid.content|striptags }}">
                     <i class="material-icons">arrow_forward</i>
                   </a>  
-
                 </div>
+
+                <div class="ribbon__segment right">
+                  <a class="icon--external bdr bdc--ltr invertable" href="{{ fields.field_link.content|striptags }}" target="_blank">
+                    <i class="material-icons">call_made</i>
+                  </a> 
+                </div>
+
               </div>
             </div>
           
@@ -31,7 +37,7 @@
         <div class="media__contents">
 
             <h3 class="title title--bold">{{ fields.title.content }}</h3>
-            <h6>{{ fields.type.content }}{{ fields.field_video_type.content }}</h6>
+            <h6>{{ fields.type.content }}, {{ fields.field_video_type.content }}</h6>
 
         </div>
 

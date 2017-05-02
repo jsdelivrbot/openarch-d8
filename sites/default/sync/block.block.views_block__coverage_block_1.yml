@@ -12,7 +12,7 @@ dependencies:
 id: views_block__coverage_block_1
 theme: open_scratch
 region: content_relations
-weight: -15
+weight: -12
 provider: null
 plugin: 'views_block:coverage-block_1'
 settings:

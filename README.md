@@ -769,6 +769,12 @@ change permissions on files directory to 777
 
 * remove city tag from events
 
+#### 0.7.69
+
+* make relation gallery thumbs clickable
+* add xternal video links to related media items
+* fix relation mediacard on media pages
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -1,7 +1,5 @@
 jQuery(document).ready(function($){
 
-    
-
     // alert("main ready");
 
 	// $('#fullpage').fullpage({
@@ -120,16 +118,16 @@ jQuery(document).ready(function($){
         // if (ua.indexOf("Trident/7.0") > 0) {
         if (!(window.ActiveXObject) && "ActiveXObject" in window) {
             //return 11;
-            $('.notify').addClass('ie-not-supported')
-            $('.notify').append( "<p>IE11 not currently supported</p>" );
+            $('.notice').addClass('ie-not-supported')
+            $('.notice__content').append( "<p>openarch.com目前正在测试中，暂不支持用IE浏览器访问。请选用chrome, firefox或其它浏览器。</p><p></p><p>openarch.com does not currently support Internet Explorer. Please view site with chrome, firefox, or other browser of your choice.</p>" );
         } else if (ua.indexOf("Trident/6.0") > 0) {
             //return 10;
-            $('.notify').addClass('ie-not-supported')
-            $('.notify').append( "<p>IE10 not currently supported</p>" );
+            $('.notice').addClass('ie-not-supported')
+            $('.notice__content').append( "<p>Openarch.com does not currently support Internet Explorer. Please view site with chrome, firefox, or other browser of your choice.</p>" );
         } else if (ua.indexOf("Trident/5.0") > 0) {
             //return 9;
-            $('.notify').addClass('ie-not-supported')
-            $('.notify').append( "<p>IE9 not currently supported</p>" );
+            $('.notice').addClass('ie-not-supported')
+            $('.notice__content').append( "<p>Openarch.com does not currently support Internet Explorer. Please view site with chrome, firefox, or other browser of your choice.</p>" );
         } else {
             //return 0;  
             // not IE9, 10 or 11

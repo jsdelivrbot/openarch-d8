@@ -779,6 +779,10 @@ change permissions on files directory to 777
 
 * translate config
 
+#### 0.7.71
+
+* add no ie support notification
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

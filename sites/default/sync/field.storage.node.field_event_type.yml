@@ -24,6 +24,9 @@ settings:
       value: Publication
       label: Publication
     -
+      value: Award
+      label: Award
+    -
       value: other
       label: other
   allowed_values_function: ''

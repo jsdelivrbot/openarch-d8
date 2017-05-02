@@ -765,6 +765,10 @@ change permissions on files directory to 777
 * make idea thumbs simple responsive images
 * make projects gallery thumbs responsive imgs
 
+#### 0.7.68
+
+* remove city tag from events
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -11,11 +11,11 @@
 ===================================================================== */
 
 $searchbar-base-font-size:      1.1rem; /*$base-h3-font-size;*//*1rem;*/
-$searchbar-input-height:        $base-row1-height; /*40px;*/
+$searchbar-input-height:        2.5rem; /*$base-row1-height;*/ /*40px;*/
 $searchbar-width:               100%;
 
-$searchbar-input-bg-color:      #f7f7f7;
-$searchbar-input-bg-color-inv:  #333;
+$searchbar-input-bg-color:      $whitesmoke-bg-color;
+$searchbar-input-bg-color-inv:  $darksmoke-bg-color;
 $searchbar-hover-bg-color:      #e5e5e5;
 $searchbar-icon-color:          inherit;
 $searchbar-input-color:         inherit;
@@ -34,23 +34,29 @@ $searchbar-input-font-size:     $h3-font-size;
  
 .searchbar{              
 
-  display:                  inline-block;
-  height:                   $searchbar-input-height;
-  line-height:              $searchbar-input-height;
-  width:                    100%;
-  vertical-align:           middle;
-  white-space:              nowrap;
+  /*display:                  inline-block;*/
   position:                 relative;
+  height:                   $base-row1-height;
+  line-height:              $base-row1-height;
+  background:               $searchbar-input-bg-color;
 
-  &__icon{
+  @include full {
+    background:             $base-bg-color;      
+  }
+
+  /*width:                    100%;
+  vertical-align:           middle;
+  white-space:              nowrap;*/
+  
+
+  /*&__icon{
     
     display:                inline-block;
     position:               absolute;
     height:                 $searchbar-input-height;
     line-height:            $searchbar-input-height;
-    margin-left:            12px;     /* nudge icon off edge */
+    margin-left:            12px;  
     z-index:                1;
-    /*color:                  $searchbar-icon-color;*/
     float:                  left;
   }
 
@@ -58,9 +64,9 @@ $searchbar-input-font-size:     $h3-font-size;
 
     font-size:              .75rem;
     vertical-align:         middle;
-  }
+  }*/
 
-  &__input {
+  /*&__input {
 
     width:                  100%;
     display:                inline-block;
@@ -68,6 +74,13 @@ $searchbar-input-font-size:     $h3-font-size;
     line-height:            $searchbar-input-height;
     vertical-align:         middle;
 
+  }*/
+
+  &__input form {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &__input input.form-submit{
@@ -83,16 +96,13 @@ $searchbar-input-font-size:     $h3-font-size;
       /*font-weight:           bold !important;*/
       border:                 none !important;
       
-      width:                  100%;
       line-height:            $searchbar-input-height;
-      background:             inherit; 
-      float:                  left;
-      
-      padding-left:           gutter(3.5 1);
-
-      @include full {
-        padding-left:         gutter(3.5 1) *.5;
-      }
+      height:                 $searchbar-input-height;
+      background:             $searchbar-input-bg-color;
+   
+      margin:                 0 gutter(3.5 1) * 0.5;
+      padding:                0 gutter(3.5 1) * 0.5;
+      width:                  span(3 of 3.5);
 
       -webkit-border-radius:  5px;
       -moz-border-radius:     5px;
@@ -134,17 +144,14 @@ $searchbar-input-font-size:     $h3-font-size;
 
 }
 
-.searchbarSidebar.searchbar {
+.searchbar.invert{ 
 
-    &__icon{
-    
-    }
+  background:             $searchbar-input-bg-color-inv;
+  @include full {
+    background:           $base-bg-color-inv;      
+  }
 
-    &__input {
-
-    }
-
-    &__input > input#search{
-
-    }
+  input.form-search{
+    background:             $searchbar-input-bg-color-inv;
+  }
 }

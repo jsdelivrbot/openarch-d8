@@ -1,5 +1,11 @@
 .peekable { /* peekable-contents */
 
+	pointer-events: 	none;
+
+	.peekable-toggle {
+		a { pointer-events: visible; }
+	}
+
 	/* hide checkbox */
 	input[type='checkbox'] {
 	 	display: none; 
@@ -74,13 +80,14 @@
 
 
 @include ie-10-11-only {
+	.peekable {
+		.peekable-toggle {
 
-	.peekable-toggle {
+			a { pointer-events: none; }
 
-		a { pointer-events: none; }
-
-		.ribbon__segment.right { 		
-			pointer-events: auto; 
+			.ribbon__segment.right { 		
+				pointer-events: auto; 
+			}
 		}
 	}
 }

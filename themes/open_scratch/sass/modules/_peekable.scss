@@ -5,14 +5,6 @@
 	 	display: none; 
 	}
 
-	/*input[type='checkbox'] ~ label:hover i{
-		color: black;
-	}*/
-
-	/*.peekable-target {
-
-	}*/
-
 	.peekable-contents,
 	.peekable-header {
 		/*display: none;*/
@@ -78,4 +70,17 @@
 		display: none;
 	}
 	
+}
+
+
+@include ie-10-11-only {
+
+	.peekable-toggle {
+
+		a { pointer-events: none; }
+
+		.ribbon__segment.right { 		
+			pointer-events: auto; 
+		}
+	}
 }

@@ -72,6 +72,16 @@ jQuery(document).ready(function($){
     //     $(".toolbar.peekable input:checkbox").attr('checked', true);
     // }
 
+    // ie toolbar fix -> not quite working
+    // $("a.icon--filter.checked").click(function() {
+    //     console.log('click');
+    //     $(".toolbar.peekable input:checkbox").attr('checked', false);
+    // })
+    // $("a.icon--filter.unchecked").click(function() {
+    //     console.log('click');
+    //     $(".toolbar.peekable input:checkbox").attr('checked', true);
+    // })
+
     // all <a> tags containing a certain rel=""
     $("a[rel~='keep-params']").click(function(e) {
         e.preventDefault();

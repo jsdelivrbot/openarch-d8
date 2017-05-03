@@ -783,6 +783,13 @@ change permissions on files directory to 777
 
 * add no ie support notification
 
+#### 0.7.72
+
+* fix for IE11
+* add pollyfill for js endsWith
+* fix fullpage slideshows fir IE11
+* fix sidebar menu for IE11
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -938,7 +945,7 @@ x header vanising when resizing from fullpage
 * strange spacing issue on language/menu icons in header now.
 * Frontpage images not visible when i serve css/js files from cdn!?
 * Books filter not working for cn (by open returns no results)
-* 
+* relationship between peekable and toolbar is messy
 
 ## Liscense
  

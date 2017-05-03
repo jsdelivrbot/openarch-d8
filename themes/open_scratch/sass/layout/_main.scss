@@ -57,7 +57,17 @@ $susy-grid-12col: (
 
 	font-size: 				$main-base-font-size;
 
-	> * { clear: left; overflow: hidden;}
+	> * { 
+		clear: left; 
+		overflow: hidden; /* is this necessary ???? */
+	}
+
+	/*@include ie-10-11-only {
+		> * {
+			overflow: visible;
+		}
+	}*/
+
 
 	&__buffer { padding: 0 gutter(13); }
 	&__header { padding: 0 gutter(13); }

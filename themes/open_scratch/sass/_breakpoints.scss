@@ -68,3 +68,8 @@
     @media all and (min-width: 1441px) { @content; }
 }
 
+/* ie 10/11 only */
+@mixin ie-10-11-only {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { @content; }
+}
+

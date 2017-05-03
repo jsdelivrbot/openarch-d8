@@ -1,5 +1,7 @@
 .fullpage {
 
+	overflow: visible !important; /* ie11 doesn't work if overflow hidden */
+
 	&__asset { /* hide this when not in fullpage mode */
 		/*display: none;*/
 

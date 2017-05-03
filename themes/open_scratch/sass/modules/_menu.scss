@@ -69,6 +69,17 @@ $menu-row-height: 				$base-row2-height;
 		}*/
 	}
 
+	/* ie fix j*/
+	@include ie-10-11-only {
+		li a {
+			display: inline-block;
+			/*width: 100%;*/
+		}
+		li>a{
+			width: 100%;
+		}
+	}
+
 	li a:hover {
 		background-color: $menu-focus-color;
 	}

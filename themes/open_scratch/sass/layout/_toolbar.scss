@@ -23,11 +23,19 @@
  	
 	pointer-events: 	none;
 
-	a,
-	.ribbon__segment  { 
-		
+	/*.ribbon__segment,*/
+	a { 		
 		pointer-events: visible; 
 	}
+
+	/*@include ie-10-11-only {
+
+		a { pointer-events: none; }
+
+		.ribbon__segment.right { 		
+			pointer-events: auto; 
+		}
+	}*/
 
 	@include widest	{ 
 		padding-left: gutter(13);

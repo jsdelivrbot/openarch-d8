@@ -1,86 +1,50 @@
 .expandable {
 
-	/*.menu {*/
+	/* Dropdown */
 
-		/* Dropdown */
-
-		/* hide checkbox */
-		input[type='checkbox'] {
-		 	display: none; 
-		}
-
-		/*ul li label {
-			position: relative;
-			display: 		block;
-			line-height: 	inherit;
-			height: 		inherit;
-			cursor: 		pointer;
-		}*/
-
-		/*ul li:hover label,
-		ul li label ~ ul {
-			background-color: red;
-		}
-
-		ul li label:hover > a,
-		ul li:hover > a {
-			color:	white;
-		}
-
-		ul li label a {
-			display: 		initial;
-			line-height: 	inherit;
-			height: 		inherit;
-		}
-
-		ul li label ~ ul {
-			position: absolute;
-			height: 0;
-			display: none;
-			overflow: hidden;
-		}
-
-		ul li label:hover ~ ul,
-		ul li label ~ ul:hover  {
-			height: auto;
-			display:block;
-		}
-
-		ul li label:hover ~ ul > li {
-			float:	left;
-		}*/
-
-		input[type='checkbox'] ~ label:hover i{
-			color: $openorange-color;
-		}
-
-		.expandable-body {
-			/*transition: max-height 1.5s;*/
-		}
-
-		input[type='checkbox'] ~ .expandable-body {
-			display: none;
-			/*max-height: 0;*/
-		}
-
-		input[type='checkbox']:checked ~ .expandable-body {
-			/*max-height: 750px;*/
-			display: block;
-		}
-
-		input[type='checkbox'] ~ label .unchecked {
-			display: inline-block;
-		}
-		input[type='checkbox'] ~ label .checked {
-			display: none;
-		}
-		input[type='checkbox']:checked ~ label .checked {
-			display: inline-block;
-		}
-		input[type='checkbox']:checked ~ label .unchecked {
-			display: none;
-		}
-
-	/*}*/
+	/* hide checkbox */
+	input[type='checkbox'] {
+	 	display: none; 
+	}
 	
+	input[type='checkbox'] ~ label:hover i{
+		color: $openorange-color;
+	}
+
+	.expandable-body {
+		/*transition: max-height 1.5s;*/
+	}
+
+	input[type='checkbox'] ~ .expandable-body {
+		display: none;
+	}
+
+	input[type='checkbox']:checked ~ .expandable-body {
+		display: block;
+	}
+
+	input[type='checkbox'] ~ label .unchecked {
+		display: inline-block;
+	}
+	input[type='checkbox'] ~ label .checked {
+		display: none;
+	}
+	input[type='checkbox']:checked ~ label .checked {
+		display: inline-block;
+	}
+	input[type='checkbox']:checked ~ label .unchecked {
+		display: none;
+	}
+	
+}
+
+@include ie-10-11-only {
+
+	.expandable-head {
+
+		/* with ie link doesn't work and gets in the way of label the real target */
+		.icon--expand {
+			pointer-events: none;
+		}
+	}
 }

@@ -36,6 +36,7 @@ $icon-hover-bg-color:			#e5e5e5;
 			%icon { /*a*/
 
 				display: 				inline-block; /* height/width only work on a-link if inline-block */
+				cursor: 				pointer;
 
 				height:					$icon-size;
 				line-height: 			$icon-size;

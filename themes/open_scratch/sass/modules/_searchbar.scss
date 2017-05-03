@@ -28,7 +28,7 @@ $searchbar-input-font-size:     $h3-font-size;
 ===================================================================== */
  
 .searchbar-wrapper{ 
-  /*vertical-align:   middle;*/
+
   width: 100%;
 }
  
@@ -43,11 +43,6 @@ $searchbar-input-font-size:     $h3-font-size;
   @include full {
     background:             $base-bg-color;      
   }
-
-  /*width:                    100%;
-  vertical-align:           middle;
-  white-space:              nowrap;*/
-  
 
   /*&__icon{
     
@@ -66,15 +61,7 @@ $searchbar-input-font-size:     $h3-font-size;
     vertical-align:         middle;
   }*/
 
-  /*&__input {
-
-    width:                  100%;
-    display:                inline-block;
-    height:                 $searchbar-input-height;
-    line-height:            $searchbar-input-height;
-    vertical-align:         middle;
-
-  }*/
+  &__input {}
 
   &__input form {
     width: 100%;
@@ -108,11 +95,6 @@ $searchbar-input-font-size:     $h3-font-size;
       -moz-border-radius:     5px;
       border-radius:          5px;
 
-      /*@include tiny   { background: $searchbar-input-bg-color-inv; }
-      @include mobile { background: $searchbar-input-bg-color-inv; }
-      @include narrow { background: $searchbar-input-bg-color-inv; }
-      @include wide   {}
-      @include wider  {}*/
   }
 
   /* remove glowing blue border on focus */

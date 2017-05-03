@@ -1,12 +1,12 @@
 {#
 /**
  * @file
- * Theme override for displaying a single search result.
+ * Default theme implementation for displaying a single search result.
  *
  * This template renders a single search result. The list of results is
  * rendered using '#theme' => 'item_list', with suggestions of:
- * - item_list__search_results__(plugin_id)
- * - item_list__search_results
+ * - item_list__custom_search_results__(plugin_id)
+ * - item_list__custom_search_results
  *
  * Available variables:
  * - url: URL of the result.
@@ -54,43 +54,20 @@
  * @endcode
  *
  * @see template_preprocess_search_result()
+ *
+ * @ingroup themeable
  */
 #}
-{# {{ title_prefix }}
-<h3{{ title_attributes }}>
+{{ title_prefix }}
+<h3 class="title"{{ title_attributes }}>
   <a href="{{ url }}">{{ title }}</a>
 </h3>
 {{ title_suffix }}
-{% if snippet %}
-  <p{{ content_attributes }}>{{ snippet }}</p>
-{% endif %}
-{% if info %}
-  <p>{{ info }}</p>
-{% endif %} #}
-
-{# {{ dump(result.type) }} #}
-{# {{ dump(result.node.nid.value) }}
-{{ dump(result.node.type.value[0].target_id) }}
-{{ dump(node_id) }} #}
-
-<div class="card job bdt bdc--def">
-
-	{% set nid = (url)|split('/')|last %}
-	<div class="card__item card__header spaced">
-    	{# <h3 class="title"><a href="{{ url }}">{{ title }}</a></h3> #}
-    	<h3 class="title"><a href="{{ base_path }}task/{{ nid }}">{{ title }}</a></h3>
-	</div>
-
-	{% if snippet %}
-		<div class="card__item spaced card__body">
-			<div class="bd"><p{{ content_attributes }}>{{ snippet }}</p></div>
-		</div>
-	{% endif %}
-
-	{% if info %}
-		<div class="card__item spaced card__body">
-			<div class="bd"><p>{{ info }}</p></div>
-		</div>	  
-	{% endif %}
-
+<div class="search-snippet-info">
+  {% if snippet %}
+    <p class="search-snippet"{{ content_attributes }}>{{ snippet }}</p>
+  {% endif %}
+  {% if info %}
+    <p class="search-info">{{ info }}</p>
+  {% endif %}
 </div>

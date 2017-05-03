@@ -790,6 +790,9 @@ change permissions on files directory to 777
 * fix fullpage slideshows fir IE11
 * fix sidebar menu for IE11
 * fix searchbar for IE11
+* clean up searchbar
+* tmp redirect of search results
+* install custom search module
 
 #### TBD
 

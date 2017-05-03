@@ -4,8 +4,8 @@ package: Entity
 type: module
 # core: 8.x
 
-# Information added by Drupal.org packaging script on 2016-04-15
+# Information added by Drupal.org packaging script on 2017-04-18
 version: '8.x-1.x-dev'
 core: '8.x'
 project: 'auto_entitylabel'
-datestamp: 1460718299
+datestamp: 1492531461

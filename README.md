@@ -794,6 +794,14 @@ change permissions on files directory to 777
 * tmp redirect of search results
 * install custom search module
 
+#### 0.7.73
+
+* update ctools
+* update token and autoentity_label
+* update libraries
+* update core
+* uninstall custom search module
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

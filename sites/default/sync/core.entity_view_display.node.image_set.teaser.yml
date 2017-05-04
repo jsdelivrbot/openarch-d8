@@ -16,6 +16,7 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_image_files: true
   field_image_target: true

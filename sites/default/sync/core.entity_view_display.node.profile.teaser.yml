@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.profile.field_profile_email
     - field.field.node.profile.field_profile_position
     - field.field.node.profile.field_thumbnail
+    - field.field.node.profile.field_weight
     - node.type.profile
   module:
     - text
@@ -24,10 +25,13 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
+    region: content
 hidden:
   field_profile_email: true
   field_profile_position: true
   field_thumbnail: true
+  field_weight: true
   langcode: true

@@ -19,6 +19,7 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_award_country: true
   field_award_date: true

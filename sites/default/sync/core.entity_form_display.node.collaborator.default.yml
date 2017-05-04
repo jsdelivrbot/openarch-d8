@@ -17,6 +17,7 @@ content:
     weight: 7
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_credit_collaborators:
     weight: 5
     settings:
@@ -24,6 +25,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_credit_role:
     weight: 4
     settings:
@@ -31,6 +33,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_credit_task:
     weight: 3
     settings:
@@ -39,11 +42,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -51,10 +56,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   translation:
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 6
@@ -63,6 +70,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
   path: true
   promote: true

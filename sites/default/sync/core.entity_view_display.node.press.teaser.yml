@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.press.field_frontslide
     - field.field.node.press.field_image_files
     - field.field.node.press.field_press_file
     - field.field.node.press.field_press_id
@@ -25,7 +26,9 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
+  field_frontslide: true
   field_image_files: true
   field_press_file: true
   field_press_id: true

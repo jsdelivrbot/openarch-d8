@@ -32,6 +32,7 @@ content:
     weight: 15
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_frontslide:
     weight: 10
     settings:
@@ -39,6 +40,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_image_files:
     weight: 11
     settings:
@@ -46,12 +48,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_press_file:
     weight: 12
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
   field_press_id:
     weight: 4
     settings:
@@ -59,6 +63,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_press_link:
     weight: 13
     settings:
@@ -66,6 +71,7 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
   field_press_pub_author:
     weight: 5
     settings:
@@ -73,6 +79,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_press_publication:
     weight: 6
     settings:
@@ -80,17 +87,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_press_publication_date:
     weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
   field_press_publication_issue:
     weight: 9
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
   field_press_publisher:
     weight: 7
     settings:
@@ -98,11 +108,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_press_type:
     weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_relation:
     weight: 14
     settings:
@@ -111,16 +123,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
   sticky:
     type: options_buttons
     weight: 17
     settings: {  }
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 2
@@ -128,10 +143,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   translation:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 16
@@ -140,6 +157,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
   path: true
   promote: true

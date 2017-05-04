@@ -6,11 +6,15 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.task.body
     - field.field.node.task.field_featured_work
+    - field.field.node.task.field_related_media
     - field.field.node.task.field_relation
     - field.field.node.task.field_task_address
     - field.field.node.task.field_task_city
     - field.field.node.task.field_task_client
+    - field.field.node.task.field_task_collabs
     - field.field.node.task.field_task_country
+    - field.field.node.task.field_task_credits
+    - field.field.node.task.field_task_group
     - field.field.node.task.field_task_principal
     - field.field.node.task.field_task_program
     - field.field.node.task.field_task_region
@@ -37,15 +41,21 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
+    region: content
 hidden:
   field_featured_work: true
+  field_related_media: true
   field_relation: true
   field_task_address: true
   field_task_city: true
   field_task_client: true
+  field_task_collabs: true
   field_task_country: true
+  field_task_credits: true
+  field_task_group: true
   field_task_principal: true
   field_task_program: true
   field_task_region: true

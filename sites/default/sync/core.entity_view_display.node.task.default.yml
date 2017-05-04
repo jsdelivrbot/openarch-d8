@@ -43,6 +43,7 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_featured_work:
     weight: 2
     label: above
@@ -51,6 +52,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: responsive_image
+    region: content
   field_related_media:
     weight: 23
     label: above
@@ -58,6 +60,7 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   field_relation:
     weight: 17
     label: above
@@ -65,6 +68,7 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   field_task_address:
     weight: 6
     label: above
@@ -72,6 +76,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_task_city:
     weight: 5
     label: above
@@ -79,6 +84,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_task_client:
     weight: 14
     label: above
@@ -86,12 +92,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_task_collabs:
     weight: 20
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
   field_task_country:
     weight: 8
     label: above
@@ -99,30 +107,35 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_task_credits:
     weight: 21
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
   field_task_group:
     weight: 22
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_task_principal:
     weight: 15
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_task_program:
     weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_task_region:
     weight: 7
     label: above
@@ -130,6 +143,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_task_site:
     weight: 10
     label: above
@@ -138,6 +152,7 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   field_task_size:
     weight: 9
     label: above
@@ -146,24 +161,28 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   field_task_status:
     weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_task_team:
     weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_task_type:
     weight: 11
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_task_year:
     weight: 4
     label: above
@@ -172,6 +191,7 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+    region: content
   field_thumbnail:
     weight: 1
     label: above
@@ -180,6 +200,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: responsive_image
+    region: content
   langcode:
     type: language
     weight: 0
@@ -188,8 +209,10 @@ content:
       link_to_entity: false
       native_language: false
     third_party_settings: {  }
+    region: content
   links:
     weight: 18
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

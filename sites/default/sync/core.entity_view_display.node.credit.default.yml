@@ -21,6 +21,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_credit_role:
     weight: 106
     label: above
@@ -28,6 +29,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_credit_task:
     weight: 103
     label: above
@@ -35,7 +37,9 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   links:
     weight: 100
+    region: content
 hidden:
   langcode: true

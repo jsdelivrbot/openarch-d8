@@ -30,11 +30,13 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 12
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_event_city:
     weight: 8
     settings:
@@ -42,21 +44,25 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_event_date:
     weight: 6
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
   field_event_date_to:
     weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
   field_event_type:
     weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_frontslide:
     weight: 5
     settings:
@@ -64,6 +70,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_image_files:
     weight: 4
     settings:
@@ -71,6 +78,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_relation:
     weight: 10
     settings:
@@ -79,11 +87,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 1
@@ -91,6 +101,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 11
@@ -99,6 +110,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
   path: true
   promote: true

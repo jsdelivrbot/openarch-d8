@@ -5,6 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.embedded_video.body
+    - field.field.node.embedded_video.field_link
+    - field.field.node.embedded_video.field_relation
+    - field.field.node.embedded_video.field_thumbnail
+    - field.field.node.embedded_video.field_video_embed
+    - field.field.node.embedded_video.field_video_type
     - node.type.embedded_video
   module:
     - text
@@ -21,7 +26,14 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
+    region: content
 hidden:
+  field_link: true
+  field_relation: true
+  field_thumbnail: true
+  field_video_embed: true
+  field_video_type: true
   langcode: true

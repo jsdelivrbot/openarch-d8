@@ -25,6 +25,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: flexslider_responsive
+    region: content
 hidden:
   field_image_target: true
   langcode: true

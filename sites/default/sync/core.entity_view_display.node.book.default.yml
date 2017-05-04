@@ -36,6 +36,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: responsive_image
+    region: content
 hidden:
   body: true
   field_book_type: true

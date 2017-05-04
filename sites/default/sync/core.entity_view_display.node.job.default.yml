@@ -23,12 +23,14 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_job_location:
     weight: 103
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_job_startdate:
     weight: 102
     label: above
@@ -37,7 +39,9 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+    region: content
   links:
     weight: 100
+    region: content
 hidden:
   langcode: true

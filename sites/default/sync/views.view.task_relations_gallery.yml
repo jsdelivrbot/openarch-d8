@@ -643,7 +643,7 @@ display:
           plugin_id: custom
       filters:
         status:
-          value: true
+          value: '1'
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -1419,7 +1419,7 @@ display:
       display_description: ''
       filters:
         status:
-          value: true
+          value: '1'
           table: node_field_data
           field: status
           plugin_id: boolean

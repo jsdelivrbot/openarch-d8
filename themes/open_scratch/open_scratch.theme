@@ -63,7 +63,12 @@ function open_scratch_preprocess(&$variables, $hook)
  * the query string, you could do so as demonstrated.
  */
 function open_scratch_preprocess_video_embed_iframe__vimeo(&$variables) {
-  // Remove the YouTube logo from youtube embeds.
+  $variables['query']['title'] = '0';
+  $variables['query']['byline'] = '0';
+  $variables['query']['portrait'] = '0';
+  $variables['query']['color'] = 'ffffff';
+}
+function open_scratch_preprocess_video_embed_iframe__youku(&$variables) {
   $variables['query']['title'] = '0';
   $variables['query']['byline'] = '0';
   $variables['query']['portrait'] = '0';

@@ -1,5 +1,0 @@
-selectors: .node
-custom_vendors: "https://v.qq.com\r\nhttp://baidu.ku6.com\r\nhttp://v.youku.com"
-ignore_selectors: ''
-_core:
-  default_config_hash: 2VIFfYIzLIphEpkJSH9KfhEE0P66ieHfusDj6QMJIzY

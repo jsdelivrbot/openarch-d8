@@ -806,6 +806,12 @@ change permissions on files directory to 777
 
 * fix modal on mobil
 
+#### 0.7.xx
+
+* uninstall fitvids
+* add event type translation
+* add support for youku videos
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

@@ -4,7 +4,7 @@
 
 $icongal_base_font_size:	.65rem;
 $icongal_button_height:		$base_row_height;
-$icongal_icon_size:			1.2em;
+$icongal_icon_size:			0.9rem;
 
 .icongallery-wrapper {
 	display: inline-block;
@@ -29,12 +29,16 @@ $icongal_icon_size:			1.2em;
 	&__item {
 
 		@include 		gallery(1 of 4);
+		@include full {
+			@include gallery(1 of 8);
+		}
 		line-height: 	$icongal_button_height;
 
-		> a {	
+		> a,
+		> button {	
 
 			display: 				inline-block;
-			height:					100%;
+			height:					$icongal_button_height; /*100%;*/
 			width:					100%;
 			text-align:				center; /* horiz align img */
 			background: 			$icon-bg-color;
@@ -50,9 +54,11 @@ $icongal_icon_size:			1.2em;
 
 			> i {
 				font-size:			$icongal_icon_size;
-				color: 				$icon-color;
+				color: 				#444; /*$icon-color;*/
 				vertical-align:  	middle;
 			}
 		} 
+
+		> button { border: none; }
 	}
 }

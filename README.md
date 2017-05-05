@@ -802,6 +802,10 @@ change permissions on files directory to 777
 * update core
 * uninstall custom search module
 
+#### 0.7.74
+
+* fix modal on mobil
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width

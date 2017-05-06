@@ -1,0 +1,33 @@
+{# {{ dump(fields) }} #}
+<div class="card job bdt bdc--def">
+
+	<div class="card__item card__header spaced--most">
+
+    	<h3 class="title">{{ fields.title.content }}</h3>
+    	<h4>{{ 'Starts'|t }}: {{ fields.field_job_startdate.content }}</h4>
+
+	</div>
+
+	<div class="card__item card__item--spaced-less card__body">
+		<div class="bd"><p>{{ fields.search_api_excerpt.content }}</p></div>
+	</div>
+
+	<div class="card__item card__footer">
+
+		<div class="ribbon med">
+			<div class="ribbon__segments">
+
+				<span class="ribbon__segment left">
+					<a class="icon--tag"><i class="material-icons">label</i></a>
+				</span>
+
+				<span class="ribbon__segment left">
+					<div class="tag">{{ fields.type.content }}</div> 
+				</span>
+
+
+			</div>
+		</div>
+	</div>
+
+</div>

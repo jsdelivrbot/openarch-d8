@@ -6,39 +6,3 @@
  *
 ===================================================================== */	
 
-.views-exposed-form {
-
-	font-size: inherit; /* inherit from toolbar */ /*$tbar-font-size;*/
-
-	display: inline-block; 
-	vertical-align: middle;
-
-	/*margin: $base-row-pad 0;*/
-
-	.form-item {
-		line-height: 1.95rem; /*$base-button-height;*/
-		float: left;
-	}
-
-	label {
-		/*display: none;*/
-		vertical-align: middle;
-	}
-
-	.form-select {
-		border: none;
-
-		&:option {
-			text-transform: uppercase;
-		}
-	}
-
-	input {
-		display: none;
-	}
-
-	option {
-		height: $base-button-height;
-		line-height: $base-button-height;
-	}
-}

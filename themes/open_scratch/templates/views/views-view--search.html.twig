@@ -1,0 +1,31 @@
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+
+  <div class="card jobs bdt bdc--def">
+
+    <div class="card__header">
+
+      {% include '@open_scratch/parts/card-header.html.twig' with {'label': ( header )} only %}
+
+    </div>
+
+    <div class="card__item card__body">
+      {{ rows }}
+    </div>
+
+    <div class="card__item pspaced card__footer bdt bdc--def">
+
+      <div class="bd--smltext">
+        <p>{{ footer }}</p>
+      </div>
+
+    </div>
+    
+  </div>
+
+  {{ feed_icons }}
+</div>

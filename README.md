@@ -806,11 +806,21 @@ change permissions on files directory to 777
 
 * fix modal on mobil
 
-#### 0.7.xx
+#### 0.7.75*
 
 * uninstall fitvids
 * add event type translation
 * add support for youku videos
+
+#### 0.7.76
+
+* add search api 
+* broke drupal console on update
+* add placeholder test to search form
+
+#### 0.7.xx
+
+
 
 #### TBD
 

@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * Initial example of alter functions.
+ */
+
+ /**
+ * Implements hook_form_alter().
+ */
+function search_form_form_alter(&$form, &$form_state, $form_id) {
+	// dump($form_id);
+	if($form_id == 'views_exposed_form'){
+		// dump($form);
+	    $form['search_api_fulltext']['#attributes']['placeholder'] = t('Search...');
+  	}
+}

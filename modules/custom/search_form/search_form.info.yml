@@ -1,0 +1,6 @@
+name: Search Form
+description: Alter search form for search api fulltext search
+package: Custom
+
+type: module
+core: 8.x

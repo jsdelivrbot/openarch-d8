@@ -1,0 +1,23 @@
+uuid: a5fb0305-6de4-4f9f-9fef-f414b02e80b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search
+  module:
+    - views
+  theme:
+    - open_scratch
+id: exposedformsearchpage_1
+theme: open_scratch
+region: sidebar_search
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:search-page_1'
+settings:
+  id: 'views_exposed_filter_block:search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

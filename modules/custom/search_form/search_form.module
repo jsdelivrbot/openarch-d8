@@ -11,6 +11,6 @@ function search_form_form_alter(&$form, &$form_state, $form_id) {
 	// dump($form_id);
 	if($form_id == 'views_exposed_form'){
 		// dump($form);
-	    $form['search_api_fulltext']['#attributes']['placeholder'] = t('Search...');
+	    $form['search_api_fulltext']['#attributes']['placeholder'] = t('Type to search...');
   	}
 }

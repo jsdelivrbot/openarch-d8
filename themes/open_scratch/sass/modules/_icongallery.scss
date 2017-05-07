@@ -3,7 +3,7 @@
 ===================================================================== */
 
 $icongal_base_font_size:	.65rem;
-$icongal_button_height:		$base_row_height;
+$icongal_button_height:		$base_row2_height;
 $icongal_icon_size:			0.85rem;
 
 .icongallery-wrapper {
@@ -28,10 +28,10 @@ $icongal_icon_size:			0.85rem;
 
 	&__item {
 
-		@include 		gallery(1 of 4);
-		@include full {
-			@include gallery(1 of 8);
-		}
+		@include 		gallery(1 of 3);
+		/*@include full {
+			@include gallery(1 of 5);
+		}*/
 		line-height: 	$icongal_button_height;
 
 		> a,
@@ -45,6 +45,8 @@ $icongal_icon_size:			0.85rem;
 			
 			&:hover {
 
+				background:			$btn-hover-color;
+
 				> i { color: 		$icon-color-hover; }
 			}
 
@@ -54,11 +56,28 @@ $icongal_icon_size:			0.85rem;
 
 			> i {
 				font-size:			$icongal_icon_size;
-				color: 				#444; /*$icon-color;*/
+				color: 				$icon-color;
 				vertical-align:  	middle;
 			}
 		} 
+	}
+}
 
-		> button { border: none; }
+.icongallery.invert {
+
+	.icongallery {
+
+		&__item {
+
+			> a,
+			> button {	
+				
+				&:hover {
+
+					background:		$btn-hover-color-inv;
+
+				}
+			} 
+		}
 	}
 }

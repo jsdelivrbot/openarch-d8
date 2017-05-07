@@ -812,15 +812,17 @@ change permissions on files directory to 777
 * add event type translation
 * add support for youku videos
 
-#### 0.7.76
+#### 0.7.76*
 
 * add search api 
 * broke drupal console on update
 * add placeholder test to search form
 
-#### 0.7.xx
+#### 0.7.77
 
-
+* style seach bar
+* style icon gallery
+* add vimeo link
 
 #### TBD
 

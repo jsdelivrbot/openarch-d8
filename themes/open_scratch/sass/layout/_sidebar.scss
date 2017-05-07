@@ -47,11 +47,11 @@ $sidebar-footer-height: 	$base-row2-height;
 
 			height: 			$sidebar-footer-height;
 			line-height: 		$sidebar-footer-height;
-			padding:			0 10%;
+			/*padding:			0 10%;*/
 
-			@include tiny 	{ 	padding: 0 8%; }
+			/*@include tiny 	{ 	padding: 0 8%; }
 			@include mobile { 	padding: 0 8%; }
-			@include full 	{ 	padding: 0; }
+			@include full 	{ 	padding: 0 gutter(3.5 1) * 0.5; }*/
 		}
 	}
 }

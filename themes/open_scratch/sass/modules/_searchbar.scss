@@ -77,7 +77,7 @@ $searchbar-input-font-size:     $h3-font-size;
   /*&__input input#search{*/
   &__input input.form-text{
 
-      font-family:            $base-font-family !important;
+      font-family:            $searchbar-font-family !important;
       font-size:              $searchbar-input-font-size !important;
       color:                  $searchbar-input-color !important;
       /*font-weight:           bold !important;*/
@@ -86,6 +86,10 @@ $searchbar-input-font-size:     $h3-font-size;
       line-height:            $searchbar-input-height;
       height:                 $searchbar-input-height;
       background:             $searchbar-input-bg-color;
+
+      @include full {
+        background:           $base-bg-color;      
+      }
    
       margin:                 0 gutter(3.5 1) * 0.5;
       padding:                0 gutter(3.5 1) * 0.5;
@@ -135,5 +139,8 @@ $searchbar-input-font-size:     $h3-font-size;
 
   input.form-text{
     background:             $searchbar-input-bg-color-inv;
+    @include full {
+      background:           $base-bg-color-inv;      
+    }
   }
 }

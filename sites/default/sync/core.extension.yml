@@ -38,6 +38,7 @@ module:
   search: 0
   search_api: 0
   search_api_db: 0
+  search_form: 0
   shortcut: 0
   system: 0
   taxonomy: 0

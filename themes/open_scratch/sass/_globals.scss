@@ -102,6 +102,11 @@ a:hover{
 	color:				$link-hover-color;
 }
 
+button {
+    border: none;
+    color: inherit;
+}
+
 /* responsive images */
 img {
 	/*display: block;*/ /* remove gap at bottom of image but causes problems so commented out */

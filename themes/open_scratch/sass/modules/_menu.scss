@@ -21,20 +21,7 @@ $menu-row-height: 				$base-row2-height;
 .sidebar nav 	{ font-size: 1rem; }
 .footer nav 	{ font-size: 1rem; }
 
-.sidebar .menu {
 
-	/* borders */
-	li {
-		border-bottom: 1px solid $sidebar-hbd-color;
-		&:nth-child(1) {
-			border-top: 1px solid $sidebar-hbd-color;
-		}
-	}
-	li ul li {
-		border-bottom: none;
-		border-top: 1px solid $sidebar-hbd-color;
-	}
-}
 
 
 .menu {
@@ -135,8 +122,8 @@ $menu-row-height: 				$base-row2-height;
 		}*/
 	}
 
-	ul li label:hover,
-	li > .is-active {
+	/*li > .is-active,*/
+	ul li label:hover {	
 		background-color: $menu-focus-color;
 	}
 
@@ -181,6 +168,25 @@ $menu-row-height: 				$base-row2-height;
 	.is-active {}
 }
 
+.sidebar .menu {
+
+	/* borders */
+	li {
+		border-bottom: 1px solid $sidebar-hbd-color;
+		&:nth-child(1) {
+			border-top: 1px solid $sidebar-hbd-color;
+		}
+	}
+	li ul li {
+		border-bottom: none;
+		border-top: 1px solid $sidebar-hbd-color;
+	}
+	li > .is-active {
+		/*background-color: $menu-focus-color;*/
+		color: $link-hover-color;
+	}
+}
+
 
 .main-header {
 
@@ -194,9 +200,6 @@ $menu-row-height: 				$base-row2-height;
 	
 
 	/*.menu {*/
-
-	
-
 
 		ul {
 			/* */
@@ -224,6 +227,10 @@ $menu-row-height: 				$base-row2-height;
 
 		li a:hover {
 			background-color: white; /*$menu-top-activeparent-bg;*/
+		}
+
+		li > .is-active {
+			color: $link-hover-color;
 		}
 
 		li ul li a:hover {

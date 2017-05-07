@@ -823,6 +823,7 @@ change permissions on files directory to 777
 * style seach bar
 * style icon gallery
 * add vimeo link
+* remove bg color on active menu items
 
 #### TBD
 

@@ -842,6 +842,7 @@ change permissions on files directory to 777
 
 * fix event type tag link for cn
 * auto collapse relations and data on mobile
+* fix menu expand to active for cn
 
 #### TBD
 
@@ -973,7 +974,7 @@ change permissions on files directory to 777
 * vertical center manifesto and contact info
 * refactor mediaCard.js
 * on mobile don't hide mediacard contents of relations(task, media, event). instead just disable and make thumb full width!
-* close related and data on tasks by default for mobile
+
 
 #### ISSUES:
 
@@ -1003,7 +1004,6 @@ x header vanising when resizing from fullpage
 * Frontpage images not visible when i serve css/js files from cdn!?
 * Books filter not working for cn (by open returns no results)
 * relationship between peekable and toolbar is messy
-* auto expand menu not working for cn.
 
 ## Liscense
  

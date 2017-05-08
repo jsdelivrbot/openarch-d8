@@ -841,6 +841,7 @@ change permissions on files directory to 777
 #### 0.7.80
 
 * fix event type tag link for cn
+* auto collapse relations and data on mobile
 
 #### TBD
 

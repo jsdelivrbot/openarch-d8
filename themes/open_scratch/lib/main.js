@@ -61,9 +61,17 @@ jQuery(document).ready(function($){
         })
     });
 
+    // collapse some things on task for mobile
+    if (Breakpoint.isMobile() || Breakpoint.isTiny()) {
+
+        // $("input#related-media").attr('checked', false);
+        $("input#related-work").attr('checked', false);
+        $("input#data").attr('checked', false);
+    }
+
     // expand first few elements in expandable list
     $(".news-item.expandable input:checkbox:lt(3)").attr('checked', true);
-    $(".event-teaser.expandable input:checkbox:lt(3)").attr('checked', true);
+    $(".event-teaser.expandable input:checkbox:lt(5)").attr('checked', true);
     $(".book-item.expandable input:checkbox").attr('checked', true);
 
     // open toolbar by defualt on certain pages

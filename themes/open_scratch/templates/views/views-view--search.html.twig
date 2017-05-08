@@ -3,11 +3,12 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
+{{ dump(view) }}
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="card pad-widest shift-full search-results bdt bdc--def">
+  <div class="card pad-widest shift-full search-results">
 
-    <div class="card__header">
+    <div class="card__header bdt bdb bdc--def invertable">
 
       {% include '@open_scratch/parts/card-header.html.twig' with {'title': ( header )} only %}
 
@@ -17,11 +18,9 @@
       {{ rows }}
     </div>
 
-    <div class="card__item pspaced card__footer bdt bdc--def">
+    <div class="card__item card__footer invertable bdb bdc--def">
 
-      <div class="bd--smltext">
-        <p>{{ footer }}</p>
-      </div>
+      {% include '@open_scratch/parts/card-footer--pager.html.twig' %}
 
     </div>
     

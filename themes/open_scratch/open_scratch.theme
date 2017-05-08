@@ -68,4 +68,3 @@ function open_scratch_preprocess_video_embed_iframe__vimeo(&$variables) {
   $variables['query']['portrait'] = '0';
   $variables['query']['color'] = 'ffffff';
 }
-

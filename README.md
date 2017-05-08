@@ -833,6 +833,10 @@ change permissions on files directory to 777
 * add background to video player.
 * fix event relations mediacard.
 
+#### 0.7.79
+
+* fix search
+* style search results more
 
 #### TBD
 

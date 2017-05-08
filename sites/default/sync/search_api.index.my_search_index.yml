@@ -53,9 +53,7 @@ datasource_settings:
     bundles:
       default: false
       selected:
-        - book
         - event
-        - idea
         - task
     languages:
       default: true
@@ -88,7 +86,7 @@ processor_settings:
     fields: {  }
     spaces: ''
     overlap_cjk: 1
-    minimum_word_size: '3'
+    minimum_word_size: '2'
     weights:
       preprocess_index: -6
       preprocess_query: -6

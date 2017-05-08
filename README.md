@@ -843,6 +843,8 @@ change permissions on files directory to 777
 * fix event type tag link for cn
 * auto collapse relations and data on mobile
 * fix menu expand to active for cn
+* uninstall adminimal theme
+* uninstall search module
 
 #### TBD
 

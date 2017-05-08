@@ -838,6 +838,10 @@ change permissions on files directory to 777
 * fix search
 * style search results more
 
+#### 0.7.80
+
+* fix event type tag link for cn
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -968,6 +972,7 @@ change permissions on files directory to 777
 * vertical center manifesto and contact info
 * refactor mediaCard.js
 * on mobile don't hide mediacard contents of relations(task, media, event). instead just disable and make thumb full width!
+* close related and data on tasks by default for mobile
 
 #### ISSUES:
 

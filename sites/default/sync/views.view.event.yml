@@ -212,7 +212,7 @@ display:
             alter_text: false
             text: ''
             make_link: true
-            path: 'events?field_event_type_value={{ field_event_type }}'
+            path: 'events?field_event_type_value={{ field_event_type__value }}'
             absolute: false
             external: false
             replace_spaces: false

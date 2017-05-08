@@ -14,7 +14,6 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 sites/*/services*.yml
-sites/default/sync/cdn.settings.yml
 
 # Ignore paths that contain user-generated content.
 sites/*/files

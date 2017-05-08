@@ -83,6 +83,7 @@ Pg = (function($) {
 		isBooks: pathBegins("books"),
 		isPress: pathBegins("press"),
 		isEvents: pathBegins("events"),
+		isEvent: pathBegins("event"),
 		isJobs: pathBegins("jobs"),
 		isTask: pathBegins("task"),
 		isMedia: pathBegins("media"),

@@ -133,7 +133,27 @@
 	}*/
 }
 
-.close {
+/*.slider {
+	.card.jobs {
+
+	}
+}
+.slider.close {
+	.card.jobs {
+		@include full {
+
+		}
+	}
+}
+.slider.open {
+	.card.jobs {
+		@include full {
+
+		}
+	}
+}*/
+
+.slider.close {
 
 	> .slider-screen {
 		
@@ -173,7 +193,7 @@
 	}*/
 }
 
-.open {
+.slider.open {
 
 	> .slider-screen {
 

@@ -1,4 +1,4 @@
-@mixin card-layout-vert { 
+/*@mixin card-layout-vert { 
 
 	margin-left: gutter(13);
 	margin-right: gutter(13);
@@ -20,17 +20,17 @@
 		clear: right; 
 		float: right; 
 	}
-}
+}*/
 
 .card.books {
 
 	> .card__header { display: none; }
 
 	@include widest	{ 
-		margin-left: gutter(13);
+		/*margin-left: gutter(13);
 		margin-right: gutter(13);
 		clear: left;
-		float: none;  
+		float: none; */ 
 	} 
 	@include full	{ 
 		/*@include card-type-6col;*/

@@ -131,11 +131,11 @@ $menubar-width:				100%;
 	&__center { 
 
 		> nav {
-			/*width: 100%;
-			text-align: 				center;*/
-			@include span(last 12 of 18); 
+			width: 100%;
+			text-align: 				center;
+			/*@include span(last 12 of 18); 
 			clear: right; 
-			float: right;
+			float: right;*/
 		}
 
 		> nav > .block {

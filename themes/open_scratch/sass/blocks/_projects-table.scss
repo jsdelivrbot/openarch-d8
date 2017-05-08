@@ -1,50 +1,8 @@
-@mixin card-layout-vert { 
-
-	padding-left: gutter(13);
-	padding-right: gutter(13);
-	clear: left;
-	float: none;
-}
-
-@mixin card-type-6col { 
-
-	> .card__header { 
-		@include span(first 3 of 18); 
-	}	
-	> .card__body { 
-		@include span(last 12 of 18); 
-		float: right;  
-	}
-	> .card__footer { 
-		@include span(last 12 of 18); 
-		clear: right; 
-		float: right; 
-	}
-}
 
 .card.projects-table {
 
 	.card__header { display: none; }
 	
-	/*.card__header { display: initial; }*/
-
-	/*@include tiny {
-		.card__header { display: none; }
-	}
-	@include mobile {
-		.card__header { display: none; }
-	}*/
-	/*@include widest	{ 
-		@include card-layout-vert;  
-		float: none;
-	} */
-	@include widest	{ 
-		@include card-layout-vert; 
-	} 
-	@include full	{ 	
-		/*.card__header { display: none; }*/	
-		/*@include card-type-6col;*/
-	} 
 }
 
 /* ==================================================================

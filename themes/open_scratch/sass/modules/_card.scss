@@ -242,15 +242,64 @@ $card-base-font-size:			1rem;
 	}
 }
 
-.card.card--basic { /* videos, projects-gallery */
+/* ==================================================================
+## card type: pad-widest
+===================================================================== */
+
+.card.pad-widest { /* videos, projects-gallery */
 
 	@include widest	{ 
 		@include card-layout-vert;  
-	} 
-	@include full	{ 
-		
-	} 
+	}  
 }
+
+/* ==================================================================
+## card type: shift-full
+===================================================================== */
+
+.slider {}
+	.card.shift-full {
+		/* maybe clear transitions here */
+		/*@include widest	{ @include card-layout-vert;  }*/ 
+		@include full { @include span(isolate 12 at 4 of 18);  } 
+	}
+
+.slider.close {
+	.card.shift-full {
+		@include full { @include span(isolate 12 at 4 of 18);  } 
+	}
+}
+.slider.open {
+	.card.shift-full {
+		@include full { @include span(isolate 12 at 7 of 18);  }
+	}
+}
+
+/* ==================================================================
+## card type: squish-full
+===================================================================== */
+
+.slider {}
+	.card.squish-full {
+		/* maybe clear transitions here */
+		/*@include widest	{ @include card-layout-vert;  }*/ 
+		@include full { /*@include span(isolate 12 at 4 of 18);*/  } 
+	}
+
+.slider.close {
+	.card.squish-full {
+		@include full { /*@include span(isolate 12 at 4 of 18);*/  } 
+	}
+}
+.slider.open {
+	.card.squish-full {
+		@include full { @include span(isolate 12 at 7 of 18);  }
+	}
+}
+
+/* ==================================================================
+## card types
+===================================================================== */
 
 /*.card.card--table {
 
@@ -262,32 +311,7 @@ $card-base-font-size:			1rem;
 	} 
 }*/
 
-.card.video-player {
 
-	/*overflow: hidden;*/
-    /*background: #333;*/
-	@include widest	{ /* @include card-layout-vert;*/  } 
-	@include full	{ @include span(isolate 11 at 4.5 of 19 wider); } 
-}
-
-.card.toolbar {
-
-	
-}
-
-.card.main-header,
-.card.main-footer {
-
-	
-}
-
-.card.task-slideshow,
-.card.press-slideshow {
-
-	@include widest	{ /*@include card-layout-vert;*/ }
-	@include full { 
-	}	
-}
 
 .card.contact-info {
 
@@ -296,15 +320,3 @@ $card-base-font-size:			1rem;
 	}
 }
 
-
-
-/* ==================================================================
-## card types (ie. subclasses) - CARD--XXX
-===================================================================== */
-
-/*.card.profile--card { 
-	border: none;
-}
-*/
-
-/*.card.relation {}*/

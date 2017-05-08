@@ -1,0 +1,30 @@
+
+.slider {}
+	.card.video-player {
+		/* maybe clear transitions here */
+		width: 100%;
+		background: $base-bg-color-inv;
+		.video-embed-field-responsive-video {
+			/*@include full { @include span(isolate 12 at 4 of 19 wider);  } */
+			@include full	{ @include span(isolate 11 at 4.5 of 19 wider); }
+		}
+	}
+
+.slider.close {
+	.card.video-player {
+		background: $base-bg-color-inv;
+		.video-embed-field-responsive-video {
+			/*@include full { @include span(isolate 12 at 4 of 19 wider);  } */
+			@include full	{ @include span(isolate 11 at 4.5 of 19 wider); } 
+		}
+	}
+}
+.slider.open {
+	.card.video-player {
+		background: none;
+		.video-embed-field-responsive-video {
+			/*@include full { @include span(isolate 12 at 7 of 19 wider);  }*/
+			@include full	{ @include span(isolate 11 at 7.5 of 19 wider); }
+		}
+	}
+}

@@ -272,7 +272,7 @@ $icon-hover-bg-color:			#e5e5e5;
 			.icon--internal-sml {
 				@extend %icon--mat;
 				@extend %icon--mat-sml;
-				@extend %btn--big;
+				/*@extend %btn--big;*/
 			}
 
 			/*icon icon--bigr mat btn-big*/

@@ -46,11 +46,10 @@
 	} 
 	@include full	{ 
 
-		/*@include span(isolate 15 at 4 of 18);*/
-		> .card__header { 
+		@include span(isolate 12 at 4 of 18);
+		/*> .card__header { 
 			display: none;
 			@include span(first 3 of 18);
-			/*padding: $base-spacing-sml 0;*/ /* align with people card to account for spaced-less applied to it */
 		}	
 		> .card__body { 
 			@include span(last 15 of 18); 
@@ -61,14 +60,14 @@
 			clear: right; 
 			float: right; 
 		}  
-		float: none;
+		float: none;*/
 	} 
 }
 
 .card.people {
 
 	/* remove overlapping line */
-	@include full 	{ &:nth-child(1) {border-top: none;} }
+	/*@include full 	{ &:nth-child(1) {border-top: none;} }*/
 
 	/* layout card items */
 	.card {
@@ -77,14 +76,14 @@
 		&__slide {}
 		&__body {
 
-			width: 100%;
+			/*width: 100%;*/
 			@include tiny   {  }
 			@include mobile {  }
 			@include narrow {  }
 			@include wide   {  }
 			@include wider  { /*width: span(8 of 9);*/ }
 			@include widest	{ /*width: span(8 of 9);*/ }
-			@include full 	{ width: span(9 of 12); }
+			@include full 	{ /*width: span(9 of 12);*/ }
 		}
 		&__footer {}
 	}

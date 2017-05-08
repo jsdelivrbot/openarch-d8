@@ -335,8 +335,7 @@ $menu-row-height: 				$base-row2-height;
 .menu.invert {
 
 	li a:hover,
-	ul li label:hover,
-	li > .is-active {
+	ul li label:hover {
 		background-color: $menu-focus-color-inv;
 	}
 }

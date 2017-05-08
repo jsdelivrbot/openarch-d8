@@ -1,12 +1,12 @@
-@mixin card-layout-vert { 
+/*@mixin card-layout-vert { 
 
 	padding-left: gutter(13);
 	padding-right: gutter(13);
 	clear: left;
 	float: none;
-}
+}*/
 
-@mixin card-type-6col { 
+/*@mixin card-type-6col { 
 
 	> .card__header { 
 		@include span(first 3 of 18); 
@@ -20,14 +20,14 @@
 		clear: right; 
 		float: right; 
 	}
-}
+}*/
 
 .card.awards {
 
 	.card__header { display: none; }
 
 	@include widest	{ 
-		@include card-layout-vert; 
+		/*@include card-layout-vert; */
 	} 
 	@include full	{ 		
 		/*@include card-type-6col;*/

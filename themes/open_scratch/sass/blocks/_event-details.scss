@@ -1,4 +1,4 @@
-.card.events {
+.card.event-details-wrapper {
 
 	@include tiny   { > .card__header { display: none; } }
 	@include mobile { > .card__header { display: none; } }
@@ -42,53 +42,21 @@
 	@include full	{ 
 
 		> .card__header { 
-			@include span(first 3 of 18);
+			@include span(first 3 of 12);
 		}	
 		> .card__body { 
-			@include span(last 12 of 18); 
+			@include span(last 9 of 12); 
 			float: right;  
 		}
 		> .card__footer { 
-			@include span(last 12 of 18); 
+			@include span(last 9 of 12); 
 			clear: right; 
 			float: right; 
 		} 
 	} 
 }
 
-.card.event-teaser {
-	/*@include widest	{ @include card-type-12col; }
-	@include full { @include card-type-12col; }*/
-
-	&:nth-child(1) {border-top: none;} 
-
-	/*@include tiny 	{ &:nth-child(1) {border-top: none;} }
-	@include mobile { &:nth-child(1) {border-top: none;} }
-	@include narrow { &:nth-child(1) {border-top: none;} }
-	@include wide 	{ &:nth-child(1) {border-top: none;} }
-	@include wider 	{ &:nth-child(1) {border-top: none;} }
-	@include widest { &:nth-child(1) {border-top: none;} }
-	@include full 	{ &:nth-child(1) {border-top: none;} }*/
-
-	.card__slide	{
-
-		/*overflow: visible;*/ /* so slideshow works with varying height slides */
-
-		@include tiny   { width: 100% }
-		@include mobile { width: 100% }
-		@include narrow { width: span(8 of 12); }
-		@include wide   { width: span(6 of 9); }
-		@include wider  { width: span(6 of 9); }
-		@include widest	{ width: span(6 of 9); }
-		@include full	{ width: span(6 of 12); }
-	}
-
-	.card__body {
-		@include full { width: span(9 of 12); }
-	}
-}
-
-.card.event {
+.card.event-details {
 	/*@include widest	{ @include card-type-12col; }
 	@include full { @include card-type-12col; }*/
 
@@ -106,10 +74,10 @@
 		@include wide   { width: span(6 of 9); }
 		@include wider  { width: span(6 of 9); }
 		@include widest	{ width: span(6 of 9); }
-		@include full	{ width: span(6 of 12); }
+		@include full	{ width: span(6 of 9); }
 	}
 
 	.card__body {
-		@include full { width: span(9 of 12); }
+		/*@include full { width: span(9 of 12); }*/
 	}
 }

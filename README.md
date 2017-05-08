@@ -825,6 +825,15 @@ change permissions on files directory to 777
 * add vimeo link
 * remove bg color on active menu items
 
+#### 0.7.78
+
+* add basic card type
+* center header menu.
+* make layouts responsive to fullpage slider events
+* add background to video player.
+* fix event relations mediacard.
+
+
 #### TBD
 
 * people thumbs should size to grid so width = sidebar width
@@ -952,6 +961,9 @@ change permissions on files directory to 777
 * widest/full bps show sidebar on load before closing it.
 * remove language dropdown from all content add forms!
 * refactor views-view-fields-task.html.twig
+* vertical center manifesto and contact info
+* refactor mediaCard.js
+* on mobile don't hide mediacard contents of relations(task, media, event). instead just disable and make thumb full width!
 
 #### ISSUES:
 
@@ -981,6 +993,7 @@ x header vanising when resizing from fullpage
 * Frontpage images not visible when i serve css/js files from cdn!?
 * Books filter not working for cn (by open returns no results)
 * relationship between peekable and toolbar is messy
+* auto expand menu not working for cn.
 
 ## Liscense
  

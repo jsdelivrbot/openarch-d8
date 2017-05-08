@@ -1,8 +1,20 @@
-.card.jobs {
+/* extends basic card */
 
-	/* base type */
-	@include widest	{ @include card-layout-vert;  } 
-	@include full	{ @include span(isolate 12 at 4 of 18);  } 
+/*.slider {}
+	.card.jobs {
+		@include widest	{ @include card-layout-vert;  } 
+		@include full	{ @include span(isolate 12 at 4 of 18);  } 
+	}
+
+.slider.close {
+	.card.jobs {
+		@include full	{ @include span(isolate 12 at 4 of 18);  } 
+	}
+}
+.slider.open {
+	.card.jobs {
+		@include full	{ @include span(isolate 12 at 7 of 18);  }
+	}
 }
 
-.card.job {}
+.card.job {}*/

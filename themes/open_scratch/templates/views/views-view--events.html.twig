@@ -5,11 +5,11 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="card events">
+  <div class="card pad-widest events">
 
     <div class="card__item card__header">
 
-      {% include '@open_scratch/parts/card-header.html.twig' with {'label': ( header )} only %}
+      {% include '@open_scratch/parts/card-header.html.twig' with {'title': ( header )} only %}
 
     </div>
 

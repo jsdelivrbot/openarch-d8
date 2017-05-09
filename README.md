@@ -849,6 +849,7 @@ change permissions on files directory to 777
 * translate config more
 * fix readmore
 * adjust layout for ideas on full
+* fix featured work slideshow for cn
 
 #### TBD
 

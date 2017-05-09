@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_featured_work
     - field.storage.node.field_image_files
-    - node.type.image_set
     - node.type.task
     - responsive_image.styles.feature_work_image
   module:
@@ -590,7 +589,6 @@ display:
           admin_label: ''
           operator: in
           value:
-            image_set: image_set
             task: task
           group: 1
           exposed: false
@@ -622,46 +620,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        langcode:
-          id: langcode
-          table: node_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
         field_featured_work_target_id:
           id: field_featured_work_target_id
           table: node__field_featured_work
@@ -722,11 +680,10 @@ display:
           inline: {  }
           separator: ''
           hide_empty: false
-      rendering_language: '***LANGUAGE_entity_translation***'
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: 0
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions

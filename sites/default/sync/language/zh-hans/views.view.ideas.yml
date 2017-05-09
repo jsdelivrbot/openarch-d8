@@ -1,0 +1,10 @@
+display:
+  default:
+    display_options:
+      filters:
+        field_task_type_value:
+          expose:
+            label: 按类型检索
+        field_task_program_value:
+          expose:
+            label: 按功能

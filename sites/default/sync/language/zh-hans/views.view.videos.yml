@@ -5,3 +5,7 @@ display:
         type:
           alter:
             text: 视频
+      filters:
+        field_video_type_value:
+          expose:
+            label: 按类型检索

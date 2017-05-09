@@ -20,3 +20,7 @@ display:
           label: 页码
         field_product_dimensions:
           label: 尺寸
+      filters:
+        field_book_type_value:
+          expose:
+            label: 按书籍类型检索

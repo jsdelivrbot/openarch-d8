@@ -14,3 +14,12 @@ display:
           label: 功能
         title:
           label: 项目
+  default:
+    display_options:
+      filters:
+        field_task_type_value:
+          expose:
+            label: 按项目类型检索
+        field_task_program_value:
+          expose:
+            label: 按功能

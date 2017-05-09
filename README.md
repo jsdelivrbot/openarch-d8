@@ -845,6 +845,7 @@ change permissions on files directory to 777
 * fix menu expand to active for cn
 * uninstall adminimal theme
 * uninstall search module
+* translate config
 
 #### TBD
 

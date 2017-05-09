@@ -848,6 +848,7 @@ change permissions on files directory to 777
 * translate config
 * translate config more
 * fix readmore
+* adjust layout for ideas on full
 
 #### TBD
 

@@ -1,6 +1,6 @@
 <li class="gallery__item focus">
 
-  <div class="card idea media mediaCard"> {# class wrappers #}
+  <div class="card idea media mediaCard focus__block bda bdc--def invertable"> {# class wrappers #}
 
     <div class="card__item card__slide relation__thumb media__img media__img--relation"> {# layout / width #}
 
@@ -21,7 +21,7 @@
               <div class="ribbon__segments">
                 <div class="ribbon__segment right">
 
-                  <a class="icon--internal focus__btn" href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
+                  <a class="icon--internal-sqr focus__btn" href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
                     <i class="material-icons">arrow_forward</i>
                   </a>
 
@@ -44,7 +44,7 @@
 
       <div class="card__item card__body relation__body">
 
-        <div class="bd bd--smltext lc--4"><p>{{ fields.body.content|striptags }}</p></div>
+        <div class="bd bd--smltext lc--3"><p>{{ fields.body.content|striptags }}</p></div>
 
       </div>
 
@@ -56,9 +56,9 @@
 
               <div class="label label--nopad">
                 <h6>
-                  <a href="{{ base_path }}ideas/">{{ 'Idea'|t }}</a>
-                  , {{ fields.field_task_type.content }}    
-                  , {{ fields.field_task_program.content }}
+                  {# <a href="{{ base_path }}ideas/">{{ 'Idea'|t }}</a> #}
+                  {{ fields.field_task_type.content }},     
+                  {{ fields.field_task_program.content }}
                 </h6>
               </div>
 

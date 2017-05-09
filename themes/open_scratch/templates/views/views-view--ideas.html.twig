@@ -7,9 +7,15 @@
 
 {% if view.total_rows > 0 %}
                
-  <div class="card ideas">
+  <div class="card pad-widest ideas">
 
-    <div class="card__item spaced--most card__body">
+    <div class="card__item card__header">
+
+      {% include '@open_scratch/parts/card-header.html.twig' with {'title': ('Ideas'|t)} only %}
+
+    </div>
+
+    <div class="card__item spaced--dbl card__body">
 
       <div class="gallery gallery--ideas">
         <ul class="gallery__container">

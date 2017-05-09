@@ -247,8 +247,8 @@
 				}
 				@include full	{ 
 
-					@include gallery-item-1-col;
-					clear: left !important;
+					@include gallery(9 of 18);
+					margin-bottom: gutter(18);
 				}
 					
 			}

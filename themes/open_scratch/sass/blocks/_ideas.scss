@@ -5,19 +5,8 @@
 	@include mobile {  }
 	@include narrow {  }
 	@include wide   {  }
-	@include wider  { 
-		/*margin-bottom: $base-spacing-sml;
-		margin-top: $base-spacing-sml; */
-	}
-	@include widest {
-		padding-left: gutter(13);
-		padding-right: gutter(13);
-		clear: left;
-		float: none; 
-		/*border-top: none;*/
-		/*margin-bottom: $base-spacing-sml;
-		margin-top: $base-spacing-sml; */
-	}
+	@include wider  {  }
+	@include widest {  }
 	@include full   { 
 
 		@include span(full);
@@ -39,12 +28,12 @@
 			float: none;
 		}
 	
-		@include tiny   {  }
-		@include mobile {  }
-		@include narrow {  }
-		@include wide   {  }
+		@include tiny   { &__header { display: none; } }
+		@include mobile { &__header { display: none; } }
+		@include narrow { &__header { display: none; } }
+		@include wide   { &__header { display: none; } }
 		@include wider  {  
-			/*&__header { 
+			&__header { 
 				@include span(first 3 of 12); 
 			}	
 			&__body { 
@@ -55,10 +44,11 @@
 				@include span(last 9 of 12); 
 				clear: right; 
 				float: right; 
-			}*/
+			}
 		}
 		@include widest	{ 
-			/*&__header { 
+
+			&__header { 
 				@include span(first 3 of 12); 
 			}	
 			&__body { 
@@ -67,24 +57,28 @@
 			}
 			&__footer { 
 				@include span(last 9 of 12); 
-				clear: right; 
-				float: right; 
-			}*/		
-		}
-		@include full 	{ 
-			
-			&__header { 
-				@include span(first 3 of 18);
-			}	
-			&__body { 
-				@include span(last 15 of 18); 
-				float: right;  
-			}
-			&__footer { 
-				@include span(last 15 of 18); 
 				clear: right; 
 				float: right; 
 			}		
+		}
+		@include full 	{ 
+
+			&__header { 
+				display: none; 
+			}
+			
+			/*&__header { 
+				@include span(first 3 of 18);
+			}	
+			&__body { 
+				@include span(last 12 of 18); 
+				float: right;  
+			}
+			&__footer { 
+				@include span(last 12 of 18); 
+				clear: right; 
+				float: right; 
+			}*/		
 		}
 	}
 }
@@ -96,9 +90,9 @@
 	@include mobile {  }
 	@include narrow {  }
 	@include wide   {  }
-	@include wider  {  }
-	@include widest {  }
-	@include full 	{  }
+	/*@include wider  { border: 1px solid $lighter-bd-color; }
+	@include widest { border: 1px solid $lighter-bd-color; }
+	@include full 	{ border: 1px solid $lighter-bd-color; }*/
 
 	.card {
 
@@ -108,15 +102,15 @@
 			@include mobile {  }
 			@include narrow {  }
 			@include wide	{  }
-			@include wider	{ width: span(3 of 12); margin-right: gutter(12); }
-			@include widest	{ width: span(3 of 12); margin-right: gutter(12); }
-			@include full	{ width: span(3 of 12); margin-right: gutter(12); }
+			@include wider	{ width: span(3 of 9); margin-right: gutter(9); }
+			@include widest	{ width: span(3 of 9); margin-right: gutter(9); }
+			@include full	{ width: span(3 of 9); margin-right: gutter(9); }
 		}
 
 		&__header {}
 
 		&__body { 
-			> .bd { width: span(6 of 9); }
+			> .bd { width: span(5 of 6); }
 			/*padding-right: $base-button-height-big;*/
 		}
 		
@@ -130,21 +124,40 @@
 		@include narrow {  }
 		@include wide	{  }
 		@include wider	{  }
-		@include widest	{  }
-
-		@include full	{
-
+		@include widest	{  
 			&__slide {
 
-				width: span(3 of 15); 
-				margin-right: gutter(15); 
+				width: span(3 of 9); 
+				margin-right: gutter(9); 
 			}
 			&__header {
 
 			}
 			&__body { 
 
-				> .bd { width: span(9 of 12); }
+				> .bd { width: span(5 of 6); }
+			}			
+			&__footer { 
+				display: initial; 
+			}
+		}
+
+		@include full	{
+
+			
+
+			&__slide {
+
+				width: span(3 of 9); 
+				/*padding: gutter(9) *0.5;*/
+				margin-right: gutter(9); 
+			}
+			&__header {
+
+			}
+			&__body { 
+
+				> .bd { width: span(5 of 6); }
 			}			
 			&__footer { 
 				display: initial; 

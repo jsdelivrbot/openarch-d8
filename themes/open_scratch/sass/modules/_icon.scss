@@ -268,6 +268,12 @@ $icon-hover-bg-color:			#e5e5e5;
 				/*@extend %btn--whitesmoke;*/
 			}
 
+			.icon--internal-sqr {
+				@extend %icon--mat;
+				@extend %btn--big-sqr;
+				/*@extend %btn--whitesmoke;*/
+			}
+
 			/*icon fa icon--bigr btn-sml focus__btn*/
 			.icon--internal-sml {
 				@extend %icon--mat;

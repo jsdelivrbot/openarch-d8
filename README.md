@@ -847,6 +847,7 @@ change permissions on files directory to 777
 * uninstall search module
 * translate config
 * translate config more
+* fix readmore
 
 #### TBD
 

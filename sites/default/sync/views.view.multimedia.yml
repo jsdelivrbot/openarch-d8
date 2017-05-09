@@ -1047,7 +1047,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: Project
+            text: Video
             make_link: true
             path: /projects/thumbs
             absolute: false

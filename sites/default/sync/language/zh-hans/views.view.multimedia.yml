@@ -1,0 +1,7 @@
+display:
+  page_1:
+    display_options:
+      fields:
+        type:
+          alter:
+            text: 视频

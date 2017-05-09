@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      header:
+        result:
+          content: '显示 @total 条中的 @start - @end'
+      empty:
+        area:
+          content:
+            value: "<p>Search returned no results.</p>\r\n"
+            format: basic_html

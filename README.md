@@ -846,6 +846,7 @@ change permissions on files directory to 777
 * uninstall adminimal theme
 * uninstall search module
 * translate config
+* translate config more
 
 #### TBD
 

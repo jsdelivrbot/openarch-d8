@@ -850,6 +850,7 @@ change permissions on files directory to 777
 * fix readmore
 * adjust layout for ideas on full
 * fix featured work slideshow for cn
+* fix frontpage on invert
 
 #### TBD
 

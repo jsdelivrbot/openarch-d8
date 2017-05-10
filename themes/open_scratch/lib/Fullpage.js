@@ -97,7 +97,7 @@ MyFullpage = (function($) {
                     controlArrows: true,
                     verticalCentered: true,
                     // sectionsColor : [ 'rgba(255,255,255,.1)', 'rgba(235, 97, 0, 0.9)', 'rgb(255,255,255)'],
-                    sectionsColor: [ , 'rgb(255,255,255)'],
+                    // sectionsColor: [ , 'rgb(255,255,255)'],
                     paddingTop: '0',
                     paddingBottom: '0',
                     // fixedElements: '.section__header, .section__footer',

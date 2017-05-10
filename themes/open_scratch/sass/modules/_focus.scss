@@ -28,6 +28,8 @@ $button-color-inv: 		$btn-focus-color-inv;
 $hover-color: 			$btn-hover-color;
 $hover-color-inv: 		$btn-hover-color-inv;
 
+/*$link-focus-color*/
+
 /* ==================================================================
 ## Def Focus
 ===================================================================== */
@@ -44,12 +46,14 @@ $hover-color-inv: 		$btn-hover-color-inv;
 		&__block:hover .focus__btn {
 
 			background: $btn-focus-color;
+			> i {color: $link-focus-color;}
 		}
 
 		&__block .focus__btn:hover {
 
-			background: $btn-hover-color;
-			/*> i {color: white;}*/
+			background: $btn-focus-hover-color;
+			> i {color: white;}
+			/*> i {color: $link-hover-color;}*/
 		}
 	}
 
@@ -65,12 +69,13 @@ $hover-color-inv: 		$btn-hover-color-inv;
 		&__block:hover .focus__btn {
 
 			background: $btn-focus-color-inv;
+			> i {color: $link-focus-color-inv;}
 		}
 
 		&__block .focus__btn:hover {
 
 			background: $btn-hover-color-inv;
-			/*> i {color: white;}*/
+			> i {color: $link-hover-color;}
 		}
 	}
 }

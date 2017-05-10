@@ -1,12 +1,12 @@
 <li class="gallery__item">
 
-	<div class="overlay overlay--onhover">
+	<div class="thumb overlay overlay--onhover">
 
-		<div class="thumb overlay__under">
+		<div class="thumb__media overlay__under">
 			{{ fields.field_thumbnail.content }}
 		</div>
 
-		<a href="../task/{{ fields.nid.content|striptags }}" class="overlay__over thumb__caption thumb__caption--middle">
+		<a href="../task/{{ fields.nid.content|striptags }}" class="overlay__over thumb__caption--middle">
 			<p>
 	    		<span class="tt--u td--u">{{ fields.title.content }}</span>
 	    		{% if fields.field_task_city.content is not empty %}

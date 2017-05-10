@@ -145,7 +145,7 @@ $icon-hover-bg-color:			#e5e5e5;
 			}*/
 			%icon--white {
 
-				> i { color: #ddd; }
+				> i { color: #eee; }
 				&:hover > i { color: white; }
 			}
 			%icon--orange {
@@ -167,6 +167,10 @@ $icon-hover-bg-color:			#e5e5e5;
 
 				background: white;
 			}
+			%btn--inverse {
+
+				background: $btn-hover-color-inv;
+			}
 			%btn--overlay { /* use .icon.grey.on-white.overlay for image overlay */
 
 				opacity: .5;
@@ -178,7 +182,10 @@ $icon-hover-bg-color:			#e5e5e5;
 				&:hover { opacity: .8; }
 			}
 			%btn--whitesmoke {
-				background: #f9f9f9;
+				background: $btn-hover-color;
+			}
+			%btn--darksmoke {
+				background: $btn-hover-color-inv;
 			}
 
 			/* button sizing */
@@ -261,11 +268,29 @@ $icon-hover-bg-color:			#e5e5e5;
 				float: right;		
 			}
 
-			/*icon btn-big icon--big mat*/
+			/*type2 - grey, inverse on hover*/
+			.icon--type2 {
+				@extend %btn--whitesmoke;
+			}
+			.icon--type2:hover {
+				@extend %btn--inverse;
+				@extend %icon--white;
+			}
+			.icon--type2.invert {
+				@extend %btn--darksmoke;
+			}
+			.icon--type2.invert:hover {				
+			}
+
+			/* type3 - inverse */
+			.icon--type3 {
+				@extend %btn--inverse;
+				@extend %icon--white;
+			}
+
 			.icon--internal {
 				@extend %icon--mat;
 				@extend %btn--big;
-				/*@extend %btn--whitesmoke;*/
 			}
 
 			.icon--internal-sqr {
@@ -337,15 +362,33 @@ $icon-hover-bg-color:			#e5e5e5;
 				@extend %icon--mat;
 				@extend %icon--mat-sml;
 				@extend %btn--bigr;
+				/*@extend %btn--orange;
+				@extend %icon--white;*/
 
 				@include tiny {display: none;}
 				@include mobile {display: none;}
-				/*@include narrow {}*/
-				/*@include wide {}
-				@include wider {}*/
-				/*@include widest {display: none;}
-				@include full {display: none;}*/
+				@include widest { }
+				/*@include full {
+					background: none;
+					> i {color: inherit;}
+				}*/
 			}
+
+			.frontpage .icon--menu {
+				@extend %btn--orange;
+				@extend %icon--white;
+			}
+			.frontpage .icon--menu:hover {
+				@extend %icon--white;
+			}
+
+			/*.icon--type3 {
+				@extend %btn--orange;
+				@extend %icon--white;
+			}
+			.icon--type3:hover {
+				@extend %icon--white;
+			}*/
 
 			.icon--lang-en {
 

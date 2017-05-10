@@ -40,6 +40,11 @@ $hover-color-inv: 		$btn-hover-color-inv;
 
 		&__block:hover {
 
+			/*background: $blk-focus-color;*/
+		}
+
+		&__block:hover.focus__row {
+
 			background: $blk-focus-color;
 		}
 
@@ -62,6 +67,11 @@ $hover-color-inv: 		$btn-hover-color-inv;
 	.focus {
 
 		&__block:hover {
+
+			/*background: $blk-focus-color-inv;*/
+		}
+
+		&__block:hover.focus__row {
 
 			background: $blk-focus-color-inv;
 		}

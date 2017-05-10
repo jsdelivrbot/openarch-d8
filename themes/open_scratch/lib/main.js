@@ -80,6 +80,7 @@ jQuery(document).ready(function($){
     //     $(".toolbar.peekable input:checkbox").attr('checked', true);
     // }
 
+
     // query string exists open toolbar
     if(document.location.search.length) {      
         $(".toolbar.peekable input:checkbox").attr('checked', true);

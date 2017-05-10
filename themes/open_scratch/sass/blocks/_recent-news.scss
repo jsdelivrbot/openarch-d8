@@ -90,13 +90,21 @@
 	
 		&__body { 
 
+			> .bd { width: span(8 of 9); }
+
+			@include wider {
+				> .bd { width: span(11 of 12); }
+			}
+
 			@include widest {
+				> .bd { width: span(11 of 12); }
 
 				clear: left;
 				float: left;
 			}
 
 			@include full {
+				> .bd { width: span(11 of 12); }
 
 				clear: left;
 				float: left;

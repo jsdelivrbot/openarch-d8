@@ -860,6 +860,10 @@ change permissions on files directory to 777
 * refactor thumb class
 * update focus behaivor
 
+#### 0.7.82
+
+* make menu link orange on frontpage
+
 #### TBD
 
 * deal with errors on status page
@@ -875,6 +879,7 @@ change permissions on files directory to 777
 * make tables sortable
 * update responsive image sizes for events wider/widest/full
 * external links (text + icon) in video/books should be wrapped
+* tag icon should not have pointer or hover event.
 
 
 * people thumbs should size to grid so width = sidebar width

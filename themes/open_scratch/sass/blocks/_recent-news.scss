@@ -16,14 +16,14 @@
 	@include wider  {  }
 	@include widest { 
 
-		padding-left: gutter(13);
+		/*padding-left: gutter(13);
 		padding-right: gutter(13);
 		clear: left;
-		float: none;
+		float: none;*/
 	}
 	@include full   { 
 
-		@include span(isolate 12 at 4 of 18);
+		/*@include span(isolate 12 at 4 of 18);*/
 	}
 
 	> .card {

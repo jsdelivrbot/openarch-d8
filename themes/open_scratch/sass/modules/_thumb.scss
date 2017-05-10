@@ -1,21 +1,44 @@
+/* ==================================================================
+ *
+ * Thumb class
+ *
+ * Adds caption overlay to thumb.
+ *
+ * Used by: 
+ * views-view-field--projects-gallery.html.twig;
+ *
+===================================================================== */
+
+$thumb-bg-color: 		$openorange-color;
+$thumb-font-color: 		white;
+$thumb-font-size: 		$h4-font-size;
+
 .thumb {
 
-	&__caption {
+	position: relative;
+
+	
+}
+
+	.thumb__media {  }
+
+	%thumb__caption {
 
 		> * { 
-			width: 100%;
-			padding: 10px 15px;
-	    	font-size: $h4-font-size;
-	    	background: $openorange-color;
-	    	color: white; /*white;*/
-	    	opacity: .8;
-	    	justify-content: center;
-			text-align: center;
+			width: 				100%;
+			padding: 			10px 15px;
+	    	font-size: 			$thumb-font-size;
+	    	background: 		$thumb-bg-color;
+	    	color: 				$thumb-font-color;
+	    	opacity: 			0.8;
+	    	justify-content: 	center;
+			text-align: 		center;
 		}
-
 	}
 
-	&__caption--top {
+	.thumb__caption--top {
+
+		@extend %thumb__caption;
 
 		> * {
 			position: absolute;
@@ -23,22 +46,25 @@
   		}
 	}
 
-	&__caption--middle {
+	.thumb__caption--middle {
+
+		@extend %thumb__caption;
 
 		> * {    	
 	    	height: 100%;
   		}
 	}
 
-	&__caption--bottom {
+	.thumb__caption--bottom {
+
+		@extend %thumb__caption;
 
 		> * {
 			position: absolute;
 			bottom: 0;
-  		}
+		}
 	}
 
-}
 
-.thumb--medium {}
-.thumb--small {}
+/*.thumb--medium {}
+.thumb--small {}*/

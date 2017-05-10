@@ -850,9 +850,32 @@ change permissions on files directory to 777
 * fix readmore
 * adjust layout for ideas on full
 * fix featured work slideshow for cn
+* fix grid on frontpage
 * fix frontpage on invert
 
+#### 0.7.81
+
+* make recent news respond to slider event
+* delete exposed_form.scss
+* refactor thumb class
+* update focus behaivor
+
 #### TBD
+
+* deal with errors on status page
+* set up trusted hosts (https://www.drupal.org/node/1992030)
+* bring back recent news thumbnails as mediacards
+* on mobile don't hide mediacard contents of relations(task, media, event). instead just disable and make thumb full width!
+* vertical center manifesto and contact info
+* remove language dropdown from all content add forms!
+* add related events to event
+* add related videos to multimedia
+* add info/titles blocks (eg block/block-videoinfo.html.twig)
+* comment css classes to list places its used.
+* make tables sortable
+* update responsive image sizes for events wider/widest/full
+* external links (text + icon) in video/books should be wrapped
+
 
 * people thumbs should size to grid so width = sidebar width
 * events thumbs should be one grid so widht = full width for mobile, and 2 or 3 x sidebar depending on breakpoint
@@ -937,81 +960,35 @@ change permissions on files directory to 777
 * change all link fields to field_link.
 * event node page relations duplicates.
 * delete fields from page content type, or prob should just delete content type.
-* update responsive image sizes for events wider/widest/full
-* consider fullpage slideshow at node page? then smaller responsive images sizes...
-* fix 
-* thumbnails in expandable rows (events, etc) should be height contrained b/c need to set max-height for expanded row.
-* views should only return plain text and let twig do rest.
-* remove inline-block class from header elements inside ribbon. instead wrap in label.
-* .custom-dropdown > select font is sizing weird. currently using magic .95rem to match font-size with everything else.
-* sortable tables
-* header__center only works for nav
-* thumb class should be list w/ li and h5 elments.
-* thumb should have thumb thumb__image and thumb__caption classes.
-* pad bottom of related media
-* remove language selector from all content forms!
-* flexslider slideshow transition not working on frontpage while fullpage.js enabled for widest/full breakpoints.
-* re-order work images
-* create flexslider optionsets for thumb, frontpage, other and delete unused
-* remove css class from views facts collabs, facts, credits
-* set up trusted hosts (https://www.drupal.org/node/1992030)
-* border colors.
-* make readmorejs bodies use breakpoints so not cropping text.
-* scroll responsive header 
-* optimize core twig templates by deleted unused conditionals/variables/etc..?
-* change press image style from scale to h to resize, where w = h*.8
-* add youku video embed submodule (https://www.drupal.org/node/2329571)
-* optimize javascript (use find() for caching dom)
-* handle how filters collapse and stack!
-* remove table breakpoints, just use global bps.
-* fix spacing btw event title and body when no images
-* make sure all expandable headers are pspaced.
-* consider replacing or adding related events to event
-* clean up exposed form and dropdown
-* resize recent news (possibly events) thumbs to grid
 
-#### TBD2:
 
-* people, idea, relations, pre-open are basically same card type (lot of redundancy)
-* mediacard same as mediacard2
-* generate image style on upload (see https://www.flocondetoile.fr/blog/generate-programmatically-image-styles-drupal-8)
-* inverted scheme flash white on page load b/c loads white then inverts. 
-* widest/full bps show sidebar on load before closing it.
-* remove language dropdown from all content add forms!
-* refactor views-view-fields-task.html.twig
-* vertical center manifesto and contact info
+
+#### TBD Refactor
+
+* refactor html redundancies into partials
+* replace all title--prim, title--sec, etc with atomic classes.
+* relationship between peekable and toolbar is messy
 * refactor mediaCard.js
-* on mobile don't hide mediacard contents of relations(task, media, event). instead just disable and make thumb full width!
-
+* refactor views-view-fields-task.html.twig
+* clean up views
+* clean up dropdown.scss
+* optimize javascript (use find() for caching dom)
 
 #### ISSUES:
 
-* need to resolve issue with titlebar and titlebar--multiline inconsistant heights and icon misalignment
-* custom icons  break on chinese pages (presumable has to do with img src not accounting for "cn" in address) 
-* accordian menu not working (see https://www.drupal.org/node/1543750)
-* people mediaCard.js calls update on page load but not working as expected
-* slider getting stuck in undefined state when drawer is open and window dragged from narrow to wide breakpoint.
-* slider stuck in undef state when load page on wider, then drag to widest.
-* awards icon is not displaying for cn 
-* awards language filter not working, all translations show up
-* views infite scroll not working with flexslider ( temp fix -> added flexslider function to infinite-scroll.js as suggested here -> https://www.drupal.org/node/2317319) but need to make this more robust so update doesn't break it again.
-* Should filter for translation language = interface, then render language = row content!! This is causing issue with projects table/gallery when task group list field is exposed filters AND same list field is NOT translatable. Changing to translatable solve (but then task group discrep can arrise and shouldn't be translatable anyway). Removing translation language filter from view and instead setting rendering language to interface language also solves (but this SHOULD create duplicates in thumb gallery). WRONG Again, correct behavior SHOULD ACTUALLY be to NOT filter by translation AND render by interface BECAUSE, then if you having translated a node, it will STILL show up in listing!!! So real issue seems to be exposed list field causing duplicates. For now, can 
-* frontpage not working in chinese
-* can't uninstall comment core module!
-* table pagers not inverting
-* table pagers should have bigr buttons for mobile
-* bd class should be responsible for text color.
-* replace all title--prim, title--sec, etc with atomic classes.
-* sometimes invert gets in bad state when using ajax when inverted. eg events next page.
-* event flex slideshow not working with variable heights again...
-x header vanising when resizing from fullpage 
-* duplicated in coverage.
-* toolbar filters not quite vertically centered. 
-* grid broken on frontpage
-* strange spacing issue on language/menu icons in header now.
-* Frontpage images not visible when i serve css/js files from cdn!?
-* Books filter not working for cn (by open returns no results)
-* relationship between peekable and toolbar is messy
+* [critical] Books filter not working for cn (by open returns no results)
+* [low] toolbar filters not quite vertically centered.
+* [low] strange spacing issue on language/menu icons in header now.
+* [push] Frontpage images not visible when i serve css/js files from cdn!?
+* [cancel - non-issue] views infite scroll not working with flexslider ( temp fix -> added flexslider function to infinite-scroll.js as suggested here -> https://www.drupal.org/node/2317319) but need to make this more robust so update doesn't break it again.
+* [cancel - can't fix] inverted scheme flash white on page load b/c loads white then inverts.
+* [cancel] generate image style on upload (see https://www.flocondetoile.fr/blog/generate-programmatically-image-styles-drupal-8)
+
+#### Questions
+
+* Should filter for translation language = interface, then render language = row content!! This is causing issue with projects table/gallery when task group list field is exposed filters AND same list field is NOT translatable. Changing to translatable solve (but then task group discrep can arrise and shouldn't be translatable anyway). Removing translation language filter from view and instead setting rendering language to interface language also solves (but this SHOULD create duplicates in thumb gallery). WRONG Again, correct behavior SHOULD ACTUALLY be to NOT filter by translation AND render by interface BECAUSE, then if you having translated a node, it will STILL show up in listing!!! So real issue seems to be exposed list field causing duplicates. For now, can
+* shoule use material icon/font awesome cdn or download?
+* performance gain by optimize core twig templates by deleted unused conditionals/variables/etc..?
 
 ## Liscense
  

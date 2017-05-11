@@ -98,7 +98,7 @@ $susy: (
 /* wrapper for menubar regions */
 .sidebar-layout {
 
-	z-index:		2000;
+	z-index:		100000;
 	position:		fixed;
 	top:			0;
 	left:			0;
@@ -115,7 +115,7 @@ $susy: (
 /* wrapper for menubar regions */
 .main-header-layout {
 
-	z-index:			1000;
+	z-index:			10000;
 	position: 			fixed;
 	top:				0;
 	left:				0;

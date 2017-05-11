@@ -10,18 +10,29 @@
 
 {% if (current_language_id) == 'en' %}
 
+  {% set type_encode = { 
+    'Planning &amp; Strategy': 'Planning+%26+Strategy',
+    'Landscape': 'Landscape',
+    'Architecture': 'Architecture',
+    'Interior &amp; Renovation': 'Interior+%26+Renovation',
+    'Furniture': 'Furniture',
+    'Installation': 'Installation',
+    'Research': 'Research',
+    'other': 'other'
+  } %}
+
   {% set type_en = '%s'|format( fields.field_task_type.content ) %}
-  {% set prog_en = '%s'|format( fields.field_task_program.content ) %} 
-  {% set type_query = "?field_task_type_value=%s"|format(type_en) %}
+  {% set prog_en = '%s'|format( fields.field_task_program.content) %} 
+  {% set type_query = "?field_task_type_value=%s"|format(type_encode[type_en]) %}
   {% set prog_query = "?field_task_program_value=%s"|format(prog_en) %}
 
 {% else %}
 
   {% set type_trans = { 
-    '规划策略': 'Planning & Strategy',
+    '规划&amp;策略': 'Planning+%26+Strategy',
     '景观': 'Landscape',
     '建筑': 'Architecture',
-    '室内&改造': 'Interior & Renovation',
+    '室内&amp;改造': 'Interior+%26+Renovation',
     '家具': 'Furniture',
     '装置': 'Installation',
     '研究': 'Research',
@@ -94,7 +105,7 @@
 %} #}
 
 {# ------------------------------------------------------------ #}
-
+{# {{ dump(fields.field_task_type.content) }} #}
 <div class="card__item card__item--spaced-most card__header"> 
 
 	<h1>{{ fields.title.content }}</h1>

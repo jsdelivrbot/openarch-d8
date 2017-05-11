@@ -1,6 +1,6 @@
-<li class="gallery__item">
+<li class="gallery__item focus invertable">
 
-  <div class="card card--flag relation media mediaCard"> {# class wrappers #}
+  <div class="card card--flag relation media mediaCard focus__block clickable"> {# class wrappers #}
 
     <div class="card__item card__slide relation__thumb media__img media__img--relation"> {# layout / width #}
 
@@ -23,7 +23,7 @@
               <div class="ribbon__segments">
                 <div class="ribbon__segment right">
 
-                  <a class="icon--internal-sml" href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
+                  <a class="icon--internal focus__btn clickable__target" href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
                     <i class="material-icons">arrow_forward</i>
                   </a>
 
@@ -43,7 +43,7 @@
 
       <div class="card__item card__body relation__body">
 
-        <div class="bd bd--smltext lc--4">{{ fields.body.content }}</div>
+        <div class="bd bd--smltext lc--3">{{ fields.body.content }}</div>
 
       </div>
 

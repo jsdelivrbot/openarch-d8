@@ -865,6 +865,9 @@ change permissions on files directory to 777
 * make menu link orange on frontpage
 * update focus class
 * clean up main.js
+* fix task tag link url encoding
+* override icon height on tables
+* fix slideshow toggle issues
 
 #### TBD
 

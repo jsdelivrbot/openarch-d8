@@ -40,13 +40,19 @@ $hover-color-inv: 		$btn-hover-color-inv;
 
 		&__block:hover {
 
-			/*background: $blk-focus-color;*/
-		}
-
-		&__block:hover.focus__row {
-
 			background: $blk-focus-color;
 		}
+
+		&__block.card:hover {
+			border:none;
+
+			box-shadow: 0px 8px 8px -9px #555;
+		}
+
+		/*&__block:hover.focus__region {
+
+			background: $blk-focus-color;
+		}*/
 
 		&__block:hover .focus__btn {
 
@@ -68,13 +74,19 @@ $hover-color-inv: 		$btn-hover-color-inv;
 
 		&__block:hover {
 
-			/*background: $blk-focus-color-inv;*/
-		}
-
-		&__block:hover.focus__row {
-
 			background: $blk-focus-color-inv;
 		}
+
+		&__block.card:hover {
+			border:none;
+
+			box-shadow: 0px 8px 8px -9px black;
+		}
+
+		/*&__block:hover.focus__row {
+
+			background: $blk-focus-color-inv;
+		}*/
 
 		&__block:hover .focus__btn {
 

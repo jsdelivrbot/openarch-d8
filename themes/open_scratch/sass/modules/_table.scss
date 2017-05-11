@@ -96,9 +96,13 @@ table {
 		}*/
 	}
 
-	tr.row--clickable,
+	/*tr.row--clickable,
 	tr.row--clickable-ext { 
 		cursor: pointer; 
+	}*/
+
+	.clickable {
+		cursor: pointer;
 	}
 
 /*%tbl {}*/
@@ -168,7 +172,7 @@ table {
 		height: 				$base-row2-height;
 		line-height: 			$base-row2-height;
 
-		.icon {
+		a {
 			height:					$base-row2-height;
 			line-height: 			$base-row2-height;
 			width:					$base-row2-height *.75;
@@ -184,7 +188,7 @@ table {
 			height: 			$base-row3-height;
 			line-height: 		$base-row3-height;
 
-			.icon {
+			a {
 				height:					$base-row3-height;
 				line-height: 			$base-row3-height;
 				width:					$base-row3-height;
@@ -195,7 +199,7 @@ table {
 			height: 			$base-row3-height;
 			line-height: 		$base-row3-height;
 
-			.icon {
+			a {
 				height:					$base-row3-height;
 				line-height: 			$base-row3-height;
 				width:					$base-row3-height;

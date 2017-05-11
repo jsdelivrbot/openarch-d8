@@ -1,4 +1,4 @@
-<tr class="row--clickable focus__block focus__row">
+<tr class="clickable focus__block">
 	
 	<td class="press-table__data-publication-date">
 		<span>{{ fields.field_press_publication_date.content }}</span>
@@ -16,11 +16,11 @@
 		<div class="icon--container">
 
 			{% if fields.field_press_file.content %}
-				<a class="icon--file focus__btn clickable-row-link" href="{{ fields.field_press_file.content|striptags }}" target="_blank">
+				<a class="icon--file focus__btn clickable__target clickable-row-link" href="{{ fields.field_press_file.content|striptags }}" target="_blank">
 					<i class="fa fa-file-o" aria-hidden="true"></i>
 				</a>	    		
 			{% elseif fields.field_press_link.content %}
-				<a class="icon--external focus__btn clickable-row-link" href="{{ fields.field_press_link.content|striptags }}" target="_blank">
+				<a class="icon--external focus__btn clickable__target clickable-row-link" href="{{ fields.field_press_link.content|striptags }}" target="_blank">
 	    			<i class="material-icons">call_made</i>
 	    		</a>
 			{% endif %}

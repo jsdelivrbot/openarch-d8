@@ -11,16 +11,16 @@
   <main class="main-content" role="main"> 
 
     <div id="fullpage" class="fullpage">
-
+      {# {{ dump(page.content_slideshow) }} #}
       {% if page.content_slideshow %}
 
         <div class="fullpage__section">
 
           <div id="main-content-slideshow" class="region main-content__slideshow slideshow bg--dark pos--r"> {# border--top #}
 
-            <a class="icon--fullscreen z--front fullpage__toggler">
+            {# <a class="icon--fullscreen z--front fullpage__toggler">
               <i class="material-icons">fullscreen</i>
-            </a>
+            </a> #}
 
             {{ page.content_slideshow }}
 

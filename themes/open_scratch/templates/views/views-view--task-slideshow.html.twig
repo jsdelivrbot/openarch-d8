@@ -3,14 +3,22 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
-
+{# {{ dump(view.result|length)}} #}
+{% if view.result|length > 0 %}
 <div{{ attributes.addClass(classes) }}>
 
   <div class="card task-slideshow">
     <div class="card__media slideshow">
-      {{ rows }}
+
+    	<a class="icon--fullscreen z--front fullpage__toggler">
+	    	<i class="material-icons">fullscreen</i>
+	    </a>
+
+		{{ rows }}
+
     </div>
   </div>
 
   {{ feed_icons }}
 </div>
+{% endif %}

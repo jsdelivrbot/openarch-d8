@@ -863,6 +863,7 @@ change permissions on files directory to 777
 #### 0.7.82
 
 * make menu link orange on frontpage
+* update focus class
 
 #### TBD
 

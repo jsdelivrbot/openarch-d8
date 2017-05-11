@@ -25,9 +25,11 @@ $base-bg-color-inv: 		#151515;
 $white-bg-color:			$base-bg-color;
 $dark-bg-color:				$base-bg-color-inv;
 $whitesmoke-bg-color: 		#f7f7f7;
-$darksmoke-bg-color:		#222;
+$darksmoke-bg-color:		#1a1a1a;
+$vltgrey-bg-color: 			#eee;
+$vdarkgrey-bg-color: 		#252525;
 $ltgrey-bg-color: 			#ddd;
-$darkgrey-bg-color: 		#252525;
+$darkgrey-bg-color: 		#333;
 
 /* bg colors */
 $viewport-bg-color:			$ltgrey-bg-color;
@@ -48,10 +50,10 @@ $blk-focus-color:			$base-focus-color;
 $blk-focus-color-inv:		$base-focus-color-inv;
 $table-row-focus-color:		$base-focus-color;
 $table-row-focus-color-inv:	$base-focus-color-inv;
-$btn-focus-color:			$base-hover-color-inv;
-$btn-focus-color-inv:		$base-focus-color-inv;
-$btn-focus-hover-color:		$base-bg-color-inv;
-$btn-focus-hover-color-inv:	$base-focus-color-inv;
+$btn-focus-color:			$vltgrey-bg-color;
+$btn-focus-color-inv:		$vdarkgrey-bg-color;
+$btn-focus-hover-color:		$vltgrey-bg-color;
+$btn-focus-hover-color-inv:	$vdarkgrey-bg-color;
 $link-focus-color:			#ccc;
 $link-focus-color-inv:		inherit;
 
@@ -59,7 +61,7 @@ $link-focus-color-inv:		inherit;
 $base-font-color: 			#333;
 $base-font-color-inv: 		#f5f5f5; 
 $lighter-font-color:		#555;
-$lighter-font-color-inv:	#ddd;
+$lighter-font-color-inv:	#ccc;
 $darker-font-color:			#111;
 $darker-font-color-inv:		#f9f9f9;
 

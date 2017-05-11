@@ -51,13 +51,13 @@ $hover-color-inv: 		$btn-hover-color-inv;
 		&__block:hover .focus__btn {
 
 			background: $btn-focus-color;
-			> i {color: $link-focus-color;}
+			/*> i {color: $link-focus-color;}*/
 		}
 
 		&__block .focus__btn:hover {
 
 			background: $btn-focus-hover-color;
-			> i {color: white;}
+			> i {color: black;}
 			/*> i {color: $link-hover-color;}*/
 		}
 	}
@@ -79,13 +79,15 @@ $hover-color-inv: 		$btn-hover-color-inv;
 		&__block:hover .focus__btn {
 
 			background: $btn-focus-color-inv;
-			> i {color: $link-focus-color-inv;}
+			/*> i {color: $link-focus-color-inv;}*/
 		}
 
 		&__block .focus__btn:hover {
 
-			background: $btn-hover-color-inv;
-			> i {color: $link-hover-color;}
+			/*background: $btn-hover-color-inv;
+			> i {color: $link-hover-color;}*/
+			background: $btn-focus-hover-color-inv;
+			> i {color: white;}
 		}
 	}
 }

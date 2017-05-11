@@ -24,9 +24,6 @@ MyInverter = (function($) {
 
     function init() {
 
-        // Get saved data from sessionStorage
-        //var data = sessionStorage.getItem('isInverted');
-  
         if (sessionStorage.getItem('isInverted') == "true") {
 
             invert();
@@ -36,11 +33,6 @@ MyInverter = (function($) {
             reset();
         }
 
-        // Remove saved data from sessionStorage
-        //sessionStorage.removeItem('key');
-
-        // Remove all saved data from sessionStorage
-        //sessionStorage.clear();
     }
 
     function toggle() {

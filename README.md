@@ -864,6 +864,7 @@ change permissions on files directory to 777
 
 * make menu link orange on frontpage
 * update focus class
+* clean up main.js
 
 #### TBD
 
@@ -881,7 +882,7 @@ change permissions on files directory to 777
 * update responsive image sizes for events wider/widest/full
 * external links (text + icon) in video/books should be wrapped
 * tag icon should not have pointer or hover event.
-
+* generalize clickable class and add click target
 
 * people thumbs should size to grid so width = sidebar width
 * events thumbs should be one grid so widht = full width for mobile, and 2 or 3 x sidebar depending on breakpoint

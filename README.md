@@ -874,6 +874,7 @@ change permissions on files directory to 777
 * fix line clamping for ie
 * modify events style on full
 * increase event slideshow size
+* change sidebar color
 
 #### TBD
 

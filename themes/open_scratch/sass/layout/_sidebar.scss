@@ -67,7 +67,7 @@ $sidebar-footer-height: 	$base-row2-height;
 	border-right: 			1px solid $sidebar-vbd-color;
 
 	@include full {
-		background: #f5f5f5;
+		background: #f3f3f3;
 		border-right: none;
 	}
 
@@ -98,6 +98,11 @@ $sidebar-footer-height: 	$base-row2-height;
 		left:			0;
 		bottom:			0;
 		width:			100%;
+
+		background: $base-bg-color;
+		@include full {
+			background: #f3f3f3;
+		}
 	}
 	
 }
@@ -108,6 +113,14 @@ $sidebar-footer-height: 	$base-row2-height;
 
 	@include full {
 		background: none;
+	}
+
+	.sidebar__bottom{
+
+		background: $base-bg-color-inv;
+		/*@include full {
+			background: $base-bg-color-inv;
+		}*/
 	}
 }
 

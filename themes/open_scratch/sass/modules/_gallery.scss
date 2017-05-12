@@ -242,6 +242,7 @@
 				}
 				@include widest	{ 
 
+					/*height: span(3 of 9);*/
 					@include gallery-item-1-col;
 					clear: left !important;
 				}

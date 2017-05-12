@@ -1,7 +1,5 @@
 jQuery(document).ready(function($){
 
-    
-
     // remove top border from a few pages
     // $(function() {
     //     var parsed_path = window.location.pathname.split('/');

@@ -32,9 +32,9 @@
 
           <div class="media__contents">
               <h3 class="title title--secondary">
-                <a href="{{ base_path }}task/{{ fields.nid.content|striptags }}">
+                {# <a href="{{ base_path }}task/{{ fields.nid.content|striptags }}"> #}
                   {{ fields.title.content }} ({{ fields.field_task_year.content }})
-                </a>
+                {# </a> #}
               </h3>
           </div>
 
@@ -48,7 +48,7 @@
 
       </div>
 
-      <div class="card__item card__footer relation__footer "> {# position--bottom #}
+      <div class="card__item card__footer relation__footer ">
 
         <div class="ribbon med">
           <div class="ribbon__segments">
@@ -56,7 +56,6 @@
 
               <div class="label label--nopad">
                 <h6>
-                  {# <a href="{{ base_path }}ideas/">{{ 'Idea'|t }}</a> #}
                   {{ fields.field_task_type.content }},     
                   {{ fields.field_task_program.content }}
                 </h6>

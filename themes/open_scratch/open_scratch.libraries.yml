@@ -12,5 +12,6 @@ global-js:
     js/jquery.fullPage.min.js: {}
     node_modules/readmore-js/readmore.min.js: {}
     js/ezmodal.min.js: {}
+    js/clamp.min.js: {}
   dependencies:
     - core/jquery

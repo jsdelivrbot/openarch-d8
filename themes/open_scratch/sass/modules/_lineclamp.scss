@@ -1,0 +1,33 @@
+/*bd*/.lc--4 > p {
+
+	display: block; /* Fallback for non-webkit */
+	display: -webkit-box;
+	/*max-width: 400px;*/
+	/*height: $font-size*$line-height*$lines-to-show;*/ /* Fallback for non-webkit */
+	/*margin: 0 auto;*/
+	/*font-size: $font-size;
+	line-height: $line-height;*/
+	width: 100%;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+
+/*bd*/.lc--3 > p {
+
+	display: block; /* Fallback for non-webkit */
+	display: -webkit-box;
+	/*max-width: 400px;*/
+	/*height: $font-size*$line-height*$lines-to-show;*/ /* Fallback for non-webkit */
+	/*margin: 0 auto;*/
+	/*font-size: $font-size;
+	line-height: $line-height;*/
+	width: 100%;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}

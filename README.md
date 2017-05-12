@@ -869,6 +869,10 @@ change permissions on files directory to 777
 * override icon height on tables
 * fix slideshow toggle issues
 
+#### 0.7.83
+
+* fix line clamping for ie
+
 #### TBD
 
 * deal with errors on status page

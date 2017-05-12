@@ -52,7 +52,11 @@
 			@include span(last 12 of 18); 
 			clear: right; 
 			float: right; 
-		} 
+		}
+
+		/* shamefull styling for fullpage events pager */
+		> .card__footer { border: none; }
+		> .card__footer > .focus__block--onfull {padding: 0 gutter(12)*0.25 0 gutter(12)*0.25; } 
 	} 
 }
 
@@ -62,13 +66,18 @@
 
 	&:nth-child(1) {border-top: none;} 
 
-	/*@include tiny 	{ &:nth-child(1) {border-top: none;} }
-	@include mobile { &:nth-child(1) {border-top: none;} }
-	@include narrow { &:nth-child(1) {border-top: none;} }
-	@include wide 	{ &:nth-child(1) {border-top: none;} }
-	@include wider 	{ &:nth-child(1) {border-top: none;} }
-	@include widest { &:nth-child(1) {border-top: none;} }
-	@include full 	{ &:nth-child(1) {border-top: none;} }*/
+	/*@include tiny 	{ padding: 0 gutter(12)*0.25 0 gutter(12)*0.75; }
+	@include mobile { padding: 0 gutter(12)*0.25 0 gutter(12)*0.75; }
+	@include narrow { padding: 0 gutter(12)*0.25 0 gutter(12)*0.75; }
+	@include wide 	{ padding: 0 gutter(9)*0.25 0 gutter(9)*0.75; }
+	@include wider 	{ padding: 0 gutter(9)*0.25 0 gutter(9)*0.75; }
+	@include widest { padding: 0 gutter(9)*0.25 0 gutter(9)*0.75; }*/
+	@include full 	{ 
+		padding:  0 gutter(12)*0.25 0 gutter(12)*0.75;
+		margin-bottom: gutter(12)*.75;
+		&:nth-child(1) {margin-top: gutter(12)} 
+		border: none;
+	}
 
 	.card__slide	{
 

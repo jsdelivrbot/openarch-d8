@@ -872,6 +872,8 @@ change permissions on files directory to 777
 #### 0.7.83
 
 * fix line clamping for ie
+* modify events style on full
+* increase event slideshow size
 
 #### TBD
 

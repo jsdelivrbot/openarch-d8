@@ -40,9 +40,9 @@ $searchbar-input-font-size:     $h4-font-size;
   line-height:              $base-row1-height;
   background:               $searchbar-input-bg-color;
 
-  @include full {
+  /*@include full {
     background:             $base-bg-color;      
-  }
+  }*/
 
   /*&__icon{
     
@@ -87,9 +87,9 @@ $searchbar-input-font-size:     $h4-font-size;
       height:                 $searchbar-input-height;
       background:             $searchbar-input-bg-color;
 
-      @include full {
+      /*@include full {
         background:           $base-bg-color;      
-      }
+      }*/
    
       margin:                 0 gutter(3.5 1) * 0.5;
       padding:                0 gutter(3.5 1) * 0.5;

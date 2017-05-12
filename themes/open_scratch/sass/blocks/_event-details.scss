@@ -68,13 +68,17 @@
 
 		/*overflow: visible;*/ /* so slideshow works with varying height slides */
 
+		width: 100% ;
+
+		/*
 		@include tiny   { width: 100% }
 		@include mobile { width: 100% }
 		@include narrow { width: span(8 of 12); }
 		@include wide   { width: span(6 of 9); }
 		@include wider  { width: span(6 of 9); }
-		@include widest	{ width: span(6 of 9); }
+		@include widest	{ width: span(6 of 9); }*/
 		@include full	{ width: span(6 of 9); }
+		
 	}
 
 	.card__body {

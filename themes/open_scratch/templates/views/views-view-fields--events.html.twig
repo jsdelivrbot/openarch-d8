@@ -1,6 +1,6 @@
-<div class="card event-teaser border--tb invertable expandable">
+<div class="card event-teaser border--tb invertable expandable focus__block--onfull">
 
-	<input type="checkbox" id="{{ fields.title.content|striptags }}" />
+	<input type="checkbox" id="{{ fields.title.content|striptags }}" checked>
 
 	<label for="{{ fields.title.content|striptags }}">
 
@@ -35,7 +35,7 @@
 
 	</label>
 
-	<div class="expandable-body">
+	<div class="expandable-body clickable">
 
 		<div class="card__item card__slide card__slide--small">
 
@@ -71,7 +71,7 @@
 					</span>
 
 					<div class="ribbon__segment right">
-		              	<a class="icon--internal" href="{{ base_path }}event/{{ fields.nid.content|striptags }}"><i class="material-icons">arrow_forward</i></a> 
+		              	<a class="icon--internal clickable__target" href="{{ base_path }}event/{{ fields.nid.content|striptags }}"><i class="material-icons">arrow_forward</i></a> 
 		            </div>
 
 				</div>

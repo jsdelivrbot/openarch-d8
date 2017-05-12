@@ -38,14 +38,15 @@ $hover-color-inv: 		$btn-hover-color-inv;
 
 	.focus {
 
-		&__block:hover {
+		&__block:hover,
+		&__block.isfocused {
 
 			background: $blk-focus-color;
 		}
 
 		&__block.card:hover {
-			border:none;
 
+			border:none;
 			box-shadow: 0px 8px 8px -9px #555;
 		}
 
@@ -66,20 +67,36 @@ $hover-color-inv: 		$btn-hover-color-inv;
 			> i {color: black;}
 			/*> i {color: $link-hover-color;}*/
 		}
+
+		&__block--onfull {
+
+			@include full {
+				background: $blk-focus-color;
+			}
+		}
+
+		&__block--onfull:hover {
+
+			@include full {
+				border:none;
+				box-shadow: 0px 8px 8px -9px #555;
+			}
+		}
 	}
 
 .focus.invert {
 
 	.focus {
 
-		&__block:hover {
+		&__block:hover,
+		&__block.isfocused {
 
 			background: $blk-focus-color-inv;
 		}
 
 		&__block.card:hover {
-			border:none;
 
+			border:none;
 			box-shadow: 0px 8px 8px -9px black;
 		}
 
@@ -100,6 +117,21 @@ $hover-color-inv: 		$btn-hover-color-inv;
 			> i {color: $link-hover-color;}*/
 			background: $btn-focus-hover-color-inv;
 			> i {color: white;}
+		}
+
+		&__block--onfull {
+
+			@include full {
+				background: $blk-focus-color-inv;
+			}
+		}
+
+		&__block--onfull:hover {
+
+			@include full {
+				border:none;
+				box-shadow: 0px 8px 8px -9px black;
+			}
 		}
 	}
 }

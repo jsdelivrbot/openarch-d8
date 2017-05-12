@@ -28,7 +28,7 @@ $sidebar-footer-height: 	$base-row2-height;
 
 		/*font-size: 				$sidebar-base-font-size;*/
 		/*line-height: 			$sidebar-header-height;*/
-		border-right: 			1px solid $sidebar-vbd-color;
+		/*border-right: 			1px solid $sidebar-vbd-color;*/
 
 		.sidebar__top {
 
@@ -64,6 +64,13 @@ $sidebar-footer-height: 	$base-row2-height;
 	height:					100%;
 	position:				relative;
 
+	border-right: 			1px solid $sidebar-vbd-color;
+
+	@include full {
+		background: #f5f5f5;
+		border-right: none;
+	}
+
 	&__top{
 		
 		font-size:		1rem;		/* need this to control searchbar region height */
@@ -98,6 +105,10 @@ $sidebar-footer-height: 	$base-row2-height;
 .sidebar-wrapper > .sidebar.invert {
 
 	border-right: 1px solid $sidebar-vbd-color-inv;
+
+	@include full {
+		background: none;
+	}
 }
 
 	

@@ -5,7 +5,7 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-  <div class="card pad-widest events">
+  <div class="card pad-widest events focus invertable">
 
     <div class="card__item card__header">
 
@@ -20,9 +20,13 @@
     </div>
   
 
-    <div class="card__item card__footer invertable bdb bdc--def">
+    <div class="card__item card__footer bdb bdc--def">
 
-      {% include '@open_scratch/parts/card-footer--pager.html.twig' %}
+      <div class="focus__block--onfull">
+
+        {% include '@open_scratch/parts/card-footer--pager.html.twig' %}
+
+      </div>
 
     </div>
 

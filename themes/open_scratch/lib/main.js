@@ -21,6 +21,8 @@ jQuery(document).ready(function($){
     //     })
     // });
 
+    
+
     // preserver query string on links
     $("a[rel~='keep-params']").click(function(e) {
         e.preventDefault();

@@ -198,8 +198,8 @@
 
 		&__slide {
 
-			@include tiny   {  }
-			@include mobile {  }
+			@include tiny   { width: span(6 of 12); margin-right: gutter(12); }
+			@include mobile { width: span(6 of 12); margin-right: gutter(12); }
 			@include narrow { width: span(3 of 9); margin-right: gutter(9); }
 			@include wide	{ width: span(3 of 9); margin-right: gutter(9); }
 			@include wider	{ width: span(3 of 9); margin-right: gutter(9); }

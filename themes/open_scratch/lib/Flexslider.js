@@ -1,22 +1,17 @@
-
 MyFlexslider = (function($) {
 
     //cache dom
     var $fs = $('.flexslider'),
-        // $taskSlider = $('.optionset-flexslider-carousel-with-min-and-max-ranges'),
         $taskSlider = $('.optionset-open-task-slideshow'),
         $pressSlider = $('.optionset-open-press-carousel'),
         $frontSlider = $('.optionset-open-featured-work'),
         flexslider = { vars:{} };
 
-    // stop loop
+    // stop propagation loop
     // (see http://stackoverflow.com/questions/22313398/prevent-an-infinite-loop-on-window-resize)
     $fs.on('resize',function(event){
         event.stopPropagation();
     });
-
-    //bindings
-    // $(document).ready(function() { init(); });
 
     //private
 
@@ -64,8 +59,6 @@ MyFlexslider = (function($) {
 
         console.log("_resize flexslider");
 
-        // $fs.resize();
-        // $fs.data('flexslider').resize(); 
         clearTimeout(timer);
         timer = setTimeout(function() { 
             $(window).resize();
@@ -78,6 +71,5 @@ MyFlexslider = (function($) {
         resize: resize,
         reset: reset
     }
-
 
 })(jQuery);

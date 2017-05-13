@@ -87,7 +87,6 @@ $base-media-spacing: 1.5em;
 
 }
 
-
 /* ==================================================================
 ## .mediaCard subclass overrides .media base class 
 ===================================================================== */
@@ -102,7 +101,7 @@ $mediaCard-spacing: 1.5em;
 }
 
 /* subclass overrides */
-.mediaCard.media {
+.media.mediaCard {
 
 	/*clear: both;
 	overflow: auto;*/
@@ -111,12 +110,9 @@ $mediaCard-spacing: 1.5em;
 	.media__img	{
 
     	/*margin-right: 	$mediaCard-spacing;*/  
-	
 	}
-
 }
 
-/* behavior - media*/
 
 /* ==================================================================
 ## .mediaTitle subclass overrides .media base class 

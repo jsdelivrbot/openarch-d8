@@ -1,24 +1,47 @@
 //mediaCard
 MediaCard = (function($) {
 
-    //cache DOM
+    // cache DOM
     var $el = $('.mediaCard');
     var $media = $el;
     var $img = $el.find('.media__img');
     var $contents = $el.find('.media__contents');
 
-    $(document).ready(function() {
+    // bindings
+    $(document).ready(function() { reset(); });
+    $(window).resize(function() { reset(); });
 
-        !(Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? disableMedia() :
-        ((Pg.isTask() || Pg.isMedia() || Pg.isEvent()) && !(Breakpoint.isNarrow() || Breakpoint.isWide())) ? disableMedia() : enableMedia();
-    });
+    function reset() {
 
-    $(window).resize(function() {
+        if ($el.hasClass('onNarrow')) { 
 
-        (Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull()) ? enableMedia() :
-        ((Pg.isTask() || Pg.isMedia() || Pg.isEvent()) && (Breakpoint.isNarrow() || Breakpoint.isWide())) ? enableMedia() : disableMedia();
+            if (!(Breakpoint.isTiny() || Breakpoint.isMobile())) { // is on narrow or greater
+                enableMedia();
+            } else {
+                disableMedia(); 
+            }
 
-    });
+        } else if ($el.hasClass('onWide')) {
+
+            if (!(Breakpoint.isTiny() || Breakpoint.isMobile() || Breakpoint.isNarrow())) { // is on wide or greater
+                enableMedia();
+            } else {
+                disableMedia(); 
+            }
+
+        } else if ($el.hasClass('onWider')) {
+
+            if ((Breakpoint.isWider() || Breakpoint.isWidest() || Breakpoint.isFull())) { // is on wider or greater
+                enableMedia();
+            } else {
+                disableMedia(); 
+            }
+
+        } else {
+
+            //do nothing media is enabled by default css
+        }
+    }
     
     //public methods
     function disableMedia() {
@@ -26,10 +49,6 @@ MediaCard = (function($) {
         $media.removeClass('media');
         $img.removeClass('media__img');
         $contents.removeClass('media__contents');
-
-        if (Pg.isIdeas() || Pg.isPreopen() || Pg.isTask() || Pg.isMedia() || Pg.isEvent()) {
-            $contents.addClass('hide');
-        }
     }
 
     function enableMedia() {
@@ -37,10 +56,6 @@ MediaCard = (function($) {
         $media.addClass('media');
         $img.addClass('media__img');
         $contents.addClass('media__contents');
-
-        if (Pg.isIdeas() || Pg.isPreopen() || Pg.isTask() || Pg.isMedia() || Pg.isEvent()) {
-            $contents.removeClass('hide');
-        }
     }
 
     //public API

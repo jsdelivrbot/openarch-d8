@@ -3,10 +3,8 @@
 	$(document).ready(function() { 
 
 	    // make table rows clickable
-	    // $(".row--clickable").click(function() {
 	    $(".clickable").click(function() {
 
-	        // var $link = $(this).find("a");
 	        var $link = $(this).find(".clickable__target");
 	        
 	        if ($link.length) {
@@ -20,7 +18,6 @@
 	    });
 
 	    // prevent multiple windows from opening
-	    // $(".row--clickable a").click(function(e) {
 	    $(".clickable__target").click(function(e) {
 	        e.stopPropagation();
 	    });

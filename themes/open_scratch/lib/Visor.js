@@ -1,8 +1,5 @@
 MyVisor = (function($) {
 
-	//state
-	// var isDown = true; 
-
 	//cache dom
 	var $visor = $('.visor');
 	var $content = $visor.find('.visor-content');
@@ -23,8 +20,6 @@ MyVisor = (function($) {
 	//private
 
 	function init() {
-
-  		// enable();
 		update();
 	}
 
@@ -38,7 +33,6 @@ MyVisor = (function($) {
 
 	function removeStyle() {
 
-		$visor.removeClass('border--b-lighter');
 		$visor.removeClass('bdb'); 
 		$visor.removeClass('bdc--ltr'); 
 		$visor.removeClass('bg--white');
@@ -46,44 +40,26 @@ MyVisor = (function($) {
 	};
 
 	function hideContent() {
-
 		$content.fadeOut(200);
 	}
 
 	function showContent() {
-
 		$content.fadeIn(200);
 	}
 
 	//public
 
 	function down() {
-
-		$visor.removeClass('up');
-		// isDown = true;
-
-		// if(Pg.isFront()) {
-		// 	$nameplate.fadeOut();
-		// }	
+		$visor.removeClass('up');	
 	};
 
 	function up() {
 		$visor.addClass('up'); 
-		// isDown = false;
 	};
 
 	function isDown() {
-
 		return !$visor.hasClass('up');
 	}
-
-	// function disable() {
-	// 	$visor.removeClass('visor'); 
-	// }
-
-	// function enable() {
-	// 	$visor.addClass('visor'); 
-	// }
 
 	function update() {
 
@@ -126,11 +102,7 @@ MyVisor = (function($) {
 		toggle: toggle,
 		up: up,
 		down: down,
-		// disable: disable,
-		// enable: enable,
 		update: update
-		// addStyle: addStyle,
-		// removeStyle: removeStyle
 	};
 
 	return public_API

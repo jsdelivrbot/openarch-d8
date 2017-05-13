@@ -4,27 +4,19 @@ MyFullpage = (function($) {
     var $fp = $('.fullpage');
     var $hidden = $('.fullpage__hidden');
     var $asset = $('.fullpage__asset');
+    var $toggle = $('.fullpage__toggler');
     var $header = $('.main-header-layout');
     var $footer = $('.main-footer-wrapper');
-    var $nameplate = $('.nameplate');
-    var $manifesto = $('.manifesto');
-    var $news = $('.recent-news');
-    var $toggle = $('.fullpage__toggler');
-    var $screen = $('.bg__screen');
-
+    
     //bindings
 
     $toggle.click(function() { toggle() });
 
-    $(document).on('keydown', function (event) {          
-        if (event.ctrlKey && event.keyCode == 70) {     
-            toggle()
-        }
-    });
-
-    $(document).ready(function() { 
-        // init() 
-    });
+    // $(document).on('keydown', function (event) {          
+    //     if (event.ctrlKey && event.keyCode == 70) {     
+    //         toggle()
+    //     }
+    // });
 
     //private methods
 
@@ -35,6 +27,11 @@ MyFullpage = (function($) {
     }
 
     function build() {
+      
+        var $nameplate = $('.nameplate');
+        var $manifesto = $('.manifesto');
+        var $news = $('.recent-news');
+        var $screen = $('.bg__screen');
 
         console.log('_build fullpage');
 
@@ -148,13 +145,6 @@ MyFullpage = (function($) {
                         MySlider.close();
                         MyVisor.up();
                         
-                        // $screen.delay(500).fadeOut(function() {
-                        //     $screen.removeClass('bg--white');
-                        //     $screen.show();
-                        // });
-
-                        
-
                     },
                     afterResize: function(){},
                     afterResponsive: function(isResponsive){},
@@ -230,32 +220,8 @@ MyFullpage = (function($) {
                     lazyLoading: false,
 
                     //events
-                    onLeave: function(index, nextIndex, direction){
-
-                        // if (index == 1){
-                        //     $nameplate.fadeOut();
-                        // }
-
-                        // if (index == 2){
-                        //     $footer.hide();
-                        //     $header.fadeOut();
-                        // }
-                        
-                    },
-                    afterLoad: function(anchorLink, index){
-
-                        // if (index == 1){
-                        //     $nameplate.fadeIn();
-                        //     MySlider.close();
-                        // }
-
-                        // if (index == 2){
-                        //     $footer.show();
-                        //     $header.show(); 
-                        //     MySlider.open();            
-                        // }
-                        
-                    },
+                    onLeave: function(index, nextIndex, direction){},
+                    afterLoad: function(anchorLink, index){},
                     afterRender: function(){
 
                         MySlider.close();
@@ -288,9 +254,6 @@ MyFullpage = (function($) {
 
         if (isEnabled()) $.fn.fullpage.destroy('all');
 
-        // MySlider.reset();
-        // MyFlexslider.reset(); 
-        // MyFlexslider.resize();
     }
     
     //public methods
@@ -302,12 +265,8 @@ MyFullpage = (function($) {
         isEnabled() ? destroy() : build();
 
         //reset
-        // MySlider.reset();
-        // MyFlexslider.resize();
-        // Resizer.reset();
         MySlider.reset();
         MyFlexslider.reset(); 
-        // MyFlexslider.resize();
         MyVisor.update();
     };
 
@@ -318,7 +277,6 @@ MyFullpage = (function($) {
         if (Pg.isFront()) { //only front page enables fullpage automatically
 
             build();
-            // destroy();
 
         } else { //other pages and task page when break is widest/full
 
@@ -332,7 +290,6 @@ MyFullpage = (function($) {
     }
     
     //public API
-
     public_API = { 
 
         reset: reset,

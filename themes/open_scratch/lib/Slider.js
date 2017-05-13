@@ -12,11 +12,11 @@ MySlider = (function($) {
 	$toggle.click(function() { toggle() });
 	$screen.click(function() { toggle() });
 
-	$(document).on('keydown', function (event) {          
-        if (event.ctrlKey && event.altKey && event.keyCode == 83) {       
-            toggle()
-        }
-    });
+	// $(document).on('keydown', function (event) {          
+	// 	if (event.ctrlKey && event.altKey && event.keyCode == 83) {       
+	// 		toggle()
+	// 	}
+	// });
 
     //private methods
 
@@ -30,9 +30,9 @@ MySlider = (function($) {
 
 		console.log("_reset sidebar");
 
-		if (Pg.isFront() || MyFullpage.isEnabled()) {
+		if (MyFullpage.isEnabled()) {
 
-            close();
+			close();
 
         } else if(Breakpoint.isWide() || Breakpoint.isWider() || Breakpoint.isWidest()) {
 
@@ -42,6 +42,12 @@ MySlider = (function($) {
 
         	close();
         }
+
+        // let fullpage close slide if it wants to. no need to close it here.
+        // if (Pg.isFront() || MyFullpage.isEnabled()) {
+		// if ($('.featured-work').length || MyFullpage.isEnabled()) {
+		// 	close();
+		// } 
 	};
 
 	function toggle() { //event 3
@@ -51,9 +57,6 @@ MySlider = (function($) {
 		isOpen() ? close() : open();
 
 		//reset
-		// MyFlexslider.resize();
-		// Resizer.reset();
-		// MyFlexslider.reset(); 
         MyFlexslider.resize();
         MyVisor.update();
 	};
@@ -64,7 +67,6 @@ MySlider = (function($) {
 
 		$slider.removeClass('close');
 		$slider.addClass('open');
-
 	};
 
 	function close() { //safe
@@ -73,7 +75,6 @@ MySlider = (function($) {
 
 		$slider.removeClass('open');
 		$slider.addClass('close'); 
-
 	};
 
 	function isOpen() {

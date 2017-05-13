@@ -1,0 +1,10 @@
+.hide { display: none !important; }
+.show { display: initial !important; }
+
+.hide--tiny 	{ @include tiny 	{ display: none !important; } }
+.hide--mobile 	{ @include mobile 	{ display: none !important; } }
+.hide--narrow 	{ @include narrow 	{ display: none !important; } }
+.hide--wide 	{ @include wide 	{ display: none !important; } }
+.hide--wider 	{ @include wider 	{ display: none !important; } }
+.hide--widest 	{ @include widest 	{ display: none !important; } }
+.hide--full 	{ @include full 	{ display: none !important; } }

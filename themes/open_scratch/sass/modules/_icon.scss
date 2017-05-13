@@ -56,6 +56,16 @@ $icon-hover-bg-color:			#e5e5e5;
 						
 			}
 
+			%icon--noclick {
+
+				pointer-events: none;
+
+				&:hover {
+
+					> i { color: 		$icon-color; }
+				}
+			}
+
 			/* icon types, require 1 */
 			%icon--img {
 
@@ -465,6 +475,7 @@ $icon-hover-bg-color:			#e5e5e5;
 				@extend %icon--mat;
 				@extend %icon--mat-sml;
 				@extend %btn--pull-left;
+				@extend %icon--noclick;
 			}
 
 			/*icon mat btn-big*/
@@ -477,8 +488,13 @@ $icon-hover-bg-color:			#e5e5e5;
 			/* icongallery not implimented */
 			.icon--social {}
 
-			
+/* ==================================================================
+## modifiers
+===================================================================== */
 
+.noclick {
+	@extend %icon--noclick;
+}
 
 /* ==================================================================
 ## temp

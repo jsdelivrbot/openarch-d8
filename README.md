@@ -877,6 +877,12 @@ change permissions on files directory to 777
 * change sidebar color
 * adjust border weights
 
+#### 0.7.84
+
+* remove city tag from recent news.
+* remove pointer/hover behaivor from tag icon.
+* remove pointer/hover from media/book external links.
+
 #### TBD
 
 * deal with errors on status page
@@ -892,9 +898,7 @@ change permissions on files directory to 777
 * make tables sortable
 * update responsive image sizes for events wider/widest/full
 * external links (text + icon) in video/books should be wrapped
-* tag icon should not have pointer or hover event.
-* generalize clickable class and add click target
-* remove city tag from recent news.
+
 
 * people thumbs should size to grid so width = sidebar width
 * events thumbs should be one grid so widht = full width for mobile, and 2 or 3 x sidebar depending on breakpoint

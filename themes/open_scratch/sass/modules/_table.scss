@@ -230,9 +230,8 @@ table {
 
 	thead > tr {
 
+		/* toolbar provides top border */
 		border-top: none;
-
-		@include full { /*border-top: none;*/ }
 	}
 }
 
@@ -248,6 +247,12 @@ table {
 		&:nth-last-child(1) {
 			border-bottom: 1px solid $tbl-bd-color-inv;
 		}
+	}
+
+	thead > tr {
+
+		/* this invert override shouldn't be necessary, but it is! */
+		border-top: none;
 	}
 }
 

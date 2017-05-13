@@ -875,6 +875,7 @@ change permissions on files directory to 777
 * modify events style on full
 * increase event slideshow size
 * change sidebar color
+* adjust border weights
 
 #### TBD
 
@@ -893,6 +894,7 @@ change permissions on files directory to 777
 * external links (text + icon) in video/books should be wrapped
 * tag icon should not have pointer or hover event.
 * generalize clickable class and add click target
+* remove city tag from recent news.
 
 * people thumbs should size to grid so width = sidebar width
 * events thumbs should be one grid so widht = full width for mobile, and 2 or 3 x sidebar depending on breakpoint

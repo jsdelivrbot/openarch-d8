@@ -1,15 +1,5 @@
 Resizer = (function($) {
 
-    // var timer;
-
-    // $(window).on("orientationchange",function(){
-
-    //     console.log("on reorientation");
-
-    //     MyFullpage.reset(); 
-
-    // });
-
     $(window).resize(function() { 
 
         console.log("try resize");
@@ -23,26 +13,11 @@ Resizer = (function($) {
             console.log("_do resize");
 
             MyFlexslider.reset();
-            // MyFlexslider.resize();
             MySlider.reset();
             MyVisor.update();
              
             $(document).data('resize-width', newWidth);
         };
     });
-
-    // function reset() {
-
-    //     console.log("reset");
-
-    //     MySlider.reset();
-    //     MyFlexslider.reset(); 
-    //     MyFlexslider.resize();
-    // }
-
-    // return { 
-
-    //     reset: reset
-    // }
 
 })(jQuery);

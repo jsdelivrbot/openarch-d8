@@ -5,11 +5,11 @@ var $screen = $('.preloader-screen');
 var $content = $('.preloaded-content');
 
 $(document).ready(function () {
+
 	hidePage();
 
-	MyFlexslider.reset(); 
-    // MyFlexslider.resize();
-	
+	//reset
+	MyFlexslider.reset(); 	
 	MyFullpage.reset();
 	MySlider.reset(); //after fullpage
 	MyMenu.reset(); //after slider
@@ -18,13 +18,8 @@ $(document).ready(function () {
 });
 
 $(window).load(function(){
-	// preload();
 	showPage();
 });
-
-// function preload() {
-//     myVar = setTimeout(showPage, 750);
-// }
 
 function hidePage() {
 

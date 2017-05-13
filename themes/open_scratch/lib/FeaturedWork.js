@@ -1,16 +1,12 @@
 (function($) {
 
-	// $(document).ready(function() { 
-	// 	if (Pg.isFront()) update()
-	// });
+	$(window).load(function(){ reset() });
+	$(window).resize(function() { reset() });
 
-	$(window).load(function(){
-		if (Pg.isFront()) update()
-	});
+	function reset() {
 
-	$(window).resize(function() { 
-		if (Pg.isFront()) update()
-	});
+		if ( $('.featured-work').length ) { update() }
+	}
 
 	function update() {
 
@@ -28,8 +24,7 @@
 			console.log("set fullwidth");
 			$img.addClass('fullwidth');
 		}	
-
-		// MyFlexslider.reset();			
+			
 	}
 
 })(jQuery);

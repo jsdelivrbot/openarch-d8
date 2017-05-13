@@ -882,23 +882,30 @@ change permissions on files directory to 777
 * remove city tag from recent news.
 * remove pointer/hover behaivor from tag icon.
 * remove pointer/hover from media/book external links.
+* hide tobuy book link if no link
+* refactor media
+* refactor expandable
+* refactor FeaturedWork.js
+* refactor Fullpage.js
+* refactor Slider.js
 
 #### TBD
 
+* remove link from task relations gallery title
+* [critical] event image size/res too low narrow - wider breakpoints
+* [high] ideas thumbs should have title overlay on hover!
 * deal with errors on status page
 * set up trusted hosts (https://www.drupal.org/node/1992030)
 * bring back recent news thumbnails as mediacards
 * on mobile don't hide mediacard contents of relations(task, media, event). instead just disable and make thumb full width!
-* vertical center manifesto and contact info
-* remove language dropdown from all content add forms!
-* add related events to event
-* add related videos to multimedia
-* add info/titles blocks (eg block/block-videoinfo.html.twig)
-* comment css classes to list places its used.
-* make tables sortable
-* update responsive image sizes for events wider/widest/full
-* external links (text + icon) in video/books should be wrapped
-
+* [low] vertical center manifesto and contact info
+* [low] remove language dropdown from all content add forms!
+* [low] add related events to event
+* [low] add related videos to multimedia
+* [high] add info/titles blocks (eg block/block-videoinfo.html.twig)
+* [low] comment css classes to list places its used.
+* [low] make tables sortable
+* [low] update responsive image sizes for events wider/widest/full
 
 * people thumbs should size to grid so width = sidebar width
 * events thumbs should be one grid so widht = full width for mobile, and 2 or 3 x sidebar depending on breakpoint

@@ -142,6 +142,16 @@
 			&__item {
 
 				/* overrides */
+				@include tiny{ 
+
+					@include gallery-item-1-col;
+					clear: left !important;
+				}
+				@include mobile{ 
+
+					@include gallery-item-1-col;
+					clear: left !important;
+				}
 				@include narrow	{ 
 
 					@include gallery-item-1-col;

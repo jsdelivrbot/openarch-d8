@@ -54,12 +54,12 @@ MyInverter = (function($) {
         $('.title').addClass('invert');
         $('.tag').addClass('invert');
         $('.focus').addClass('invert');
-        $('.menu').addClass('invert');
-        $('.bg').addClass('invert');
-        $('body').addClass('invert');
-        $('.sidebar').addClass('invert');
-        $('.toolbar').addClass('invert');
-        $('.c--black').addClass('c--white');
+        // $('.menu').addClass('invert');
+        // $('.bg').addClass('invert');
+        // $('body').addClass('invert');
+        // $('.sidebar').addClass('invert');
+        // $('.toolbar').addClass('invert');
+        // $('.c--black').addClass('c--white');
 
         // Save data to sessionStorage
         sessionStorage.setItem('isInverted', 'true');
@@ -72,12 +72,12 @@ MyInverter = (function($) {
         $('.title').removeClass('invert');
         $('.tag').removeClass('invert');
         $('.focus').removeClass('invert');
-        $('.menu').removeClass('invert');
-        $('.bg').removeClass('invert');
-        $('body').removeClass('invert');
-        $('.sidebar').removeClass('invert');
-        $('.toolbar').removeClass('invert');
-        $('.c--black').removeClass('c--white');
+        // $('.menu').removeClass('invert');
+        // $('.bg').removeClass('invert');
+        // $('body').removeClass('invert');
+        // $('.sidebar').removeClass('invert');
+        // $('.toolbar').removeClass('invert');
+        // $('.c--black').removeClass('c--white');
 
         // Save data to sessionStorage
         sessionStorage.setItem('isInverted', 'false');

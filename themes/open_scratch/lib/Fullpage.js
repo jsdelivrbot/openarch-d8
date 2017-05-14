@@ -2,9 +2,9 @@ MyFullpage = (function($) {
 
     //cache DOM
     var $fp = $('.fullpage');
-    var $hidden = $('.fullpage__hidden');
-    var $asset = $('.fullpage__asset');
-    var $toggle = $('.fullpage__toggler');
+    var $hidden = $fp.find('.fullpage__hidden');
+    var $asset = $fp.find('.fullpage__asset');
+    var $toggle = $fp.find('.fullpage__toggler');
     var $header = $('.main-header-layout');
     var $footer = $('.main-footer-wrapper');
     

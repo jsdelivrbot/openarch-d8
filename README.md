@@ -889,6 +889,11 @@ change permissions on files directory to 777
 * refactor Fullpage.js
 * refactor Slider.js
 
+#### 0.7.85
+
+* add favicon
+* refactor books
+
 #### TBD
 
 * remove link from task relations gallery title
@@ -996,7 +1001,6 @@ change permissions on files directory to 777
 * refactor html redundancies into partials
 * replace all title--prim, title--sec, etc with atomic classes.
 * relationship between peekable and toolbar is messy
-* refactor mediaCard.js
 * refactor views-view-fields-task.html.twig
 * clean up views
 * clean up dropdown.scss

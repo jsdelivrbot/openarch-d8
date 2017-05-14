@@ -1,0 +1,7 @@
+{% for i in range( 0, ( tags|length )-1 ) %}
+	<span class="ribbon__segment left">
+		<div class="tag">
+			{{ tags[i] }}
+		</div>
+	</span>
+{% endfor %}

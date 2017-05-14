@@ -1,4 +1,18 @@
-<div class="card book-item invertable bdt bdc--def expandable focus__bg">
+{% set facts = { 
+		( fields.field_press_pub_author.label ): ( fields.field_press_pub_author.content ), 
+	    ( fields.field_publication_editor.label ): ( fields.field_publication_editor.content ),
+	    ( fields.field_publication_designer.label ): ( fields.field_publication_designer.content ),
+	    ( fields.field_press_publisher.label ): ( fields.field_press_publisher.content),
+	    ( fields.field_press_publication_date.label ): ( fields.field_press_publication_date.content ),
+	    ( fields.field_publication_format.label ): ( fields.field_publication_format.content ),
+	    ( fields.field_publication_language.label ): ( fields.field_publication_language.content ),
+	    ( fields.field_publication_isbn.label ): ( fields.field_publication_isbn.content ),
+	    ( fields.field_product_dimensions.label ): ( fields.field_product_dimensions.content )
+    } 
+%}
+
+{# ------------------------------------------------------------ #}
+<div class="card book-item invertable bdt bdc--def expandable">
 	
 	<input type="checkbox" id="{{ fields.title.content|striptags }}" checked>
 
@@ -26,51 +40,30 @@
 
 		<div class="card__item spaced card__body">
 
-			<div class="bd lc--3">{{ fields.body.content }}</div>
-
-			{% set facts = { 
-				( fields.field_press_pub_author.label ): ( fields.field_press_pub_author.content ), 
-                ( fields.field_publication_editor.label ): ( fields.field_publication_editor.content ),
-                ( fields.field_publication_designer.label ): ( fields.field_publication_designer.content ),
-                ( fields.field_press_publisher.label ): ( fields.field_press_publisher.content),
-                ( fields.field_press_publication_date.label ): ( fields.field_press_publication_date.content ),
-                ( fields.field_publication_format.label ): ( fields.field_publication_format.content ),
-                ( fields.field_publication_language.label ): ( fields.field_publication_language.content ),
-                ( fields.field_publication_isbn.label ): ( fields.field_publication_isbn.content ),
-                ( fields.field_product_dimensions.label ): ( fields.field_product_dimensions.content )
-                } 
-			%}
+			<div class="bd">{{ fields.body.content }}</div>
+		
 			{% include '@open_scratch/parts/facts.html.twig' with facts %}
 
 		</div>
 
 		<div class="card__item card__footer">
 
-			<div class="ribbon med">
-				<div class="ribbon__segments">
+			<div class="overlay">
 
-					<span class="ribbon__segment left">
-						<a class="icon--tag"><i class="material-icons">label</i></a>
-					</span>
-					<span class="ribbon__segment left">
-						<div class="tag">{{ fields.type.content }}</div> 
-					</span>
-					<span class="ribbon__segment left">
-						<div class="tag">{{ fields.field_book_type.content }}</div>
-					</span>
+				<div class="overlay__under">
 
-					{% if fields.field_link.content %}
-
-					<div class="ribbon__segment right">
-		              	<a class="icon--external noclick"><i class="material-icons">call_made</i></a> 
-		            </div>
-		            <div class="ribbon__segment right">
-		              	<div class="label label--nopad"><h4>{{ fields.field_link.content }}</h4></div>
-		            </div>
-
-		            {% endif %}
+					{% set tags = [ ( fields.type.content ), ( fields.field_book_type.content ) ] %}
+					{% include '@open_scratch/parts/card-footer--html-tags.html.twig' with tags %}
 
 				</div>
+
+				<div class="overlay__over">
+
+					{% set link = (fields.field_link.content) %}
+					{% include '@open_scratch/parts/card-footer--external-link.html.twig' with {'link': link} %}
+
+				</div>
+
 			</div>
 
 		</div>

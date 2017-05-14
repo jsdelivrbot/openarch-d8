@@ -8,3 +8,5 @@ logo:
   path: themes/open_scratch/images/logo.png
 favicon:
   use_default: 1
+  path: themes/open_scratch/favicon.ico
+  mimetype: image/vnd.microsoft.icon

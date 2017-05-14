@@ -1704,7 +1704,7 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: 'books?field_book_type_value={{ field_book_type__value }},{{ field_book_type }}'
             make_link: true
             path: 'books?field_book_type_value={{ field_book_type__value }}'
             absolute: false

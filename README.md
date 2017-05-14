@@ -894,6 +894,10 @@ change permissions on files directory to 777
 * add favicon
 * refactor books
 
+#### 0.7.86
+
+* adjust expandable body height for tiny and mobile
+
 #### TBD
 
 * remove link from task relations gallery title

@@ -95,8 +95,8 @@ $big-font-size-full: 	$bd-big-font-size-plus;
 
 	/* 1.33 * numLines */
 
-	@include tiny 	{ max-height: 6.75em; }
-	@include mobile { max-height: 8.0em; }
+	@include tiny 	{ max-height: 8.0em; } /*6.75em;*/ 
+	@include mobile { max-height: 10.55em; } /*8.0em;*/
 	@include narrow { max-height: 10.55em; }
 	@include wide 	{ max-height: 9.25em; }
 	@include wider 	{ max-height: 9.55em; }

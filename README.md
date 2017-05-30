@@ -898,6 +898,10 @@ change permissions on files directory to 777
 
 * adjust expandable body height for tiny and mobile
 
+#### 0.7.87
+
+* fix no point event on overlay issue
+
 #### TBD
 
 * remove link from task relations gallery title

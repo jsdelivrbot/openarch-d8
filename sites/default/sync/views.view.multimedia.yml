@@ -1114,7 +1114,7 @@ display:
             alter_text: false
             text: ''
             make_link: false
-            path: ''
+            path: '{{ field_link__uri }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -1125,7 +1125,7 @@ display:
             link_class: ''
             prefix: ''
             suffix: ''
-            target: ''
+            target: _blank
             nl2br: false
             max_length: 0
             word_boundary: true
@@ -1144,7 +1144,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -1156,7 +1156,7 @@ display:
             url_only: false
             url_plain: false
             rel: '0'
-            target: '0'
+            target: _blank
           group_column: ''
           group_columns: {  }
           group_rows: true

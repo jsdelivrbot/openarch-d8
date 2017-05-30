@@ -902,6 +902,10 @@ change permissions on files directory to 777
 
 * fix no point event on overlay issue
 
+#### 0.7.89
+
+* media alternate link open in new tab
+
 #### TBD
 
 * remove link from task relations gallery title

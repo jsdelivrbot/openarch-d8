@@ -17,7 +17,6 @@ $thumb-font-size: 		$h4-font-size;
 
 	position: relative;
 
-	
 }
 
 	.thumb__media {  }
@@ -64,6 +63,11 @@ $thumb-font-size: 		$h4-font-size;
 			bottom: 0;
 		}
 	}
+
+	/*.thumb__caption--type1 {
+		@extend %thumb__caption--middle;
+		@extend %thumb__caption--orange;
+	}*/
 
 
 /*.thumb--medium {}

@@ -1,0 +1,14 @@
+uuid: e6583d5c-dcab-4591-bd08-362591251499
+langcode: en
+status: true
+dependencies: {  }
+name: open_videos_thumb_tiny_x1
+label: OPEN_videos_thumb_tiny_x1
+effects:
+  afdfe1bc-4947-4af9-8fae-d2881c1dc2ec:
+    uuid: afdfe1bc-4947-4af9-8fae-d2881c1dc2ec
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 352
+      height: 198

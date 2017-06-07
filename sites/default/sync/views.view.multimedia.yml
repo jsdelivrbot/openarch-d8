@@ -1049,7 +1049,7 @@ display:
             alter_text: true
             text: Video
             make_link: true
-            path: /projects/thumbs
+            path: /videos
             absolute: false
             external: false
             replace_spaces: false

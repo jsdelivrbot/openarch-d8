@@ -1,0 +1,14 @@
+uuid: 5fc5cd3f-2ca1-4432-abe2-381b23e29b3c
+langcode: en
+status: true
+dependencies: {  }
+name: open_videos_thumb_mobile_x1
+label: OPEN_videos_thumb_mobile_x1
+effects:
+  24ccd2bd-d53d-40e3-a2f6-b10641d926b3:
+    uuid: 24ccd2bd-d53d-40e3-a2f6-b10641d926b3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 560
+      height: 315

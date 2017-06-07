@@ -63,3 +63,22 @@
 		}
 	}
 }
+
+.overlay--persistant {
+
+	.overlay {
+
+		&__under {
+
+		}
+
+		&__over {
+		    
+		    > * {
+
+		    	display: flex;
+	  			flex-direction: column;
+	  		}
+		}
+	}
+}

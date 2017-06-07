@@ -1,14 +1,30 @@
 <li class="gallery__item">
 
 	<div class="card__item card__slide">
-		{{ fields.field_video_embed.content }} {# img element #}
+
+		{# {{ fields.field_video_embed.content }} #} {# img element #}
+
+		<div class="thumb overlay overlay--persistant">
+
+			<div class="thumb__media overlay__under">
+				{{ fields.field_thumbnail.content }}
+			</div>
+
+			<a href="{{ base_path }}media/{{ fields.nid.content|striptags }}" class="overlay__over thumb__caption--middle">
+				<p style="background: none; font-size: 1.5rem">
+		    		<i class="fa fa-play" aria-hidden="true"></i>
+		    	</p>
+			</a>
+
+		</div>
+
 	</div>
 
 	<div class="card__item card__header">
 
 		<div class="media mediaTitle">
 
-	  		<div class="media__imgR">
+	  		{# <div class="media__imgR">
 
 	            <div class="ribbon med">
 			      	<div class="ribbon__segments">
@@ -28,7 +44,7 @@
 					</div>
 			    </div>
 
-	        </div>
+	        </div> #}
 
 			<div class="media__contents">
 

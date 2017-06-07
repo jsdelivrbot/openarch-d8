@@ -1,0 +1,14 @@
+uuid: dc530742-2aa9-44c2-b29d-59612b1c2ee6
+langcode: en
+status: true
+dependencies: {  }
+name: open_videos_thumb_widest_x1
+label: OPEN_videos_thumb_widest_x1
+effects:
+  a23295fa-2d93-42a9-ac51-0589ba21e05d:
+    uuid: a23295fa-2d93-42a9-ac51-0589ba21e05d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 428
+      height: 241

@@ -1,0 +1,31 @@
+uuid: c74a8951-eaa9-43fc-94e7-324f5364e4b7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a56b1c72-416c-4e5c-8997-ed76482ef5c3'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_scratch
+id: hexsysstaticvideoembed
+theme: open_scratch
+region: content_primary
+weight: 0
+provider: null
+plugin: 'block_content:a56b1c72-416c-4e5c-8997-ed76482ef5c3'
+settings:
+  id: 'block_content:a56b1c72-416c-4e5c-8997-ed76482ef5c3'
+  label: 'Hex-sys Static Video Embed'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /video/hex-sys
+    negate: false
+    context_mapping: {  }

@@ -11,14 +11,18 @@ $button-base-font-size:		.8em;
 $button-pad-horiz:			$base-button-pad-horiz;
 $button-height:				$base-button-height;
 
-$button-bg-color:			#f5f5f5; /*#f9f9f9;*/
+$button-bg-color:			$btn-focus-color;
 $button-hover-bg-color:		#e5e5e5;
+
+$button-bg-color-inv:		$btn-focus-color-inv;
 
 /* ==================================================================
 ## Main Content
 ===================================================================== */
 
 .button{ /* button */
+
+	display: inline-block;
 
 	/*font-size: 				$button-base-font-size;*/
 
@@ -33,4 +37,45 @@ $button-hover-bg-color:		#e5e5e5;
 	/*&:hover{
 		background:			$button-hover-bg-color;
 	}*/
+
+	cursor: pointer;
+}
+
+.radio-button{
+
+	height: 				2rem;
+	line-height:			2rem;
+
+	font-weight:			bold;
+
+	background:				$button-bg-color;
+	&:hover{
+		background:			$button-bg-color;
+		color:				inherit;
+	}
+
+}
+
+.radio-button.active{
+
+	background:				#ccc;
+	&:hover{
+		background:			#ccc;
+	}
+}
+
+.radio-button.invert{
+
+	background:				$button-bg-color-inv;
+	&:hover{
+		background:			$button-bg-color-inv;
+	}
+}
+
+.radio-button.active.invert{
+
+	background:				#555;
+	&:hover{
+		background:			#555;
+	}
 }

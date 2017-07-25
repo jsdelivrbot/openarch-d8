@@ -4,7 +4,21 @@
 
     <div class="card__item card__slide relation__thumb">
 
-        {{ fields.field_video_embed.content }}
+        {# {{ fields.field_video_embed.content }} #}
+
+        <div class="thumb overlay overlay--persistant">
+
+          <div class="thumb__media overlay__under">
+            {{ fields.field_thumbnail.content }}
+          </div>
+
+          <a href="{{ base_path }}media/{{ fields.nid.content|striptags }}" class="overlay__over thumb__caption--middle">
+            <p style="background: none; font-size: 1.5rem">
+                <i class="fa fa-play" aria-hidden="true"></i>
+              </p>
+          </a>
+
+        </div>
 
     </div>
 
@@ -23,11 +37,11 @@
                   </a>  
                 </div>
 
-                <div class="ribbon__segment right">
+                {# <div class="ribbon__segment right">
                   <a class="icon--external bdr bdc--ltr invertable" href="{{ fields.field_link.content|striptags }}" target="_blank">
                     <i class="material-icons">call_made</i>
                   </a> 
-                </div>
+                </div> #}
 
               </div>
             </div>

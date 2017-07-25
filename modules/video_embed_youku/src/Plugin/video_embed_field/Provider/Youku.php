@@ -24,6 +24,7 @@ class Youku extends ProviderPluginBase {
     return [
       '#type' => 'html_tag',
       '#tag' => 'iframe',
+      // '#tag' => 'embed',
       // '#query' => [
       //   'client_id' => '17ef1892ecbd1f6e',
       // ],

@@ -36,8 +36,10 @@ class Youku extends ProviderPluginBase {
         'allowfullscreen' => 'allowfullscreen',
         //'src' => sprintf('http://player.youku.com/embed/%s&autoplay=%d', $this->getVideoId(), $autoplay),
         //'src' => sprintf('http://player.youku.com/embed/%s&autoplay=%d/partnerid/17ef1892ecbd1f6e', $this->getVideoId(), $autoplay),
-        'src' => sprintf('http://player.youku.com/embed/%s?client_id=17ef1892ecbd1f6e', $this->getVideoId()),
         //http://player.youku.com/player.php/sid/XMjc4NDkyNDE4NA==/isAutoPlay/false/newPlayer/true/partnerid/17ef1892ecbd1f6e/v.swf
+        // 'src' => sprintf('http://player.youku.com/embed/%s?client_id=17ef1892ecbd1f6e', $this->getVideoId()),
+        // 'src' => sprintf('http://player.youku.com/embed/%s?client_id=17ef1892ecbd1f6e', $this->getVideoId()),
+        'src' => sprintf('http://player.youku.com/player.php/sid/%s/isShowRelatedVideo/false/partnerid/17ef1892ecbd1f6e/newPlayer/true/v.swf', $this->getVideoId()),
       ],
     ];
   }

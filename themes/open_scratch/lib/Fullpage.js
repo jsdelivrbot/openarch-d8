@@ -2,7 +2,7 @@ MyFullpage = (function($) {
 
     //cache DOM
     var $fp = $('.fullpage');
-    var $hidden = $fp.find('.fullpage__hidden');
+    var $hidden = $('.fullpage__hidden');
     var $asset = $fp.find('.fullpage__asset');
     var $toggle = $fp.find('.fullpage__toggler');
     var $header = $('.main-header-layout');
@@ -33,7 +33,7 @@ MyFullpage = (function($) {
         var $news = $('.recent-news');
         var $screen = $('.bg__screen');
 
-        console.log('_build fullpage');
+        //console.log('_build fullpage');
 
         // $header.hide();
         $footer.hide();
@@ -175,7 +175,7 @@ MyFullpage = (function($) {
                     autoScrolling: true,
                     fitToSection: false,
                     // fitToSectionDelay: 1000,
-                    scrollBar: true,
+                    scrollBar: false,
                     easing: 'easeInOutCubic',
                     easingcss3: 'ease',
                     loopBottom: false,
@@ -190,7 +190,7 @@ MyFullpage = (function($) {
                     resetSliders: false,
                     fadingEffect: false,
                     normalScrollElements: '#element1, .element2',
-                    scrollOverflow: true,
+                    scrollOverflow: false,
                     scrollOverflowOptions: null,
                     touchSensitivity: 15,
                     normalScrollElementTouchThreshold: 5,

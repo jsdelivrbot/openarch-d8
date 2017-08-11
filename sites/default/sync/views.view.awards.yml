@@ -637,50 +637,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_award_group_value:
-          id: field_award_group_value
-          table: node__field_award_group
-          field: field_award_group_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            'OPEN Architecture': 'OPEN Architecture'
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_award_group_value_op
-            label: 'AWARDS By recipient'
-            description: ''
-            use_operator: false
-            operator: field_award_group_value_op
-            identifier: field_award_group_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: 'Award group (field_award_group)'
-            description: null
-            identifier: field_award_group_value
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1: {  }
-              2: {  }
-              3: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
         langcode:
           id: langcode
           table: node_field_data
@@ -721,6 +677,47 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
+        field_award_group_value:
+          id: field_award_group_value
+          table: node__field_award_group
+          field: field_award_group_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_award_group_value_op
+            label: 'AWARDS By recipient'
+            description: ''
+            use_operator: false
+            operator: field_award_group_value_op
+            identifier: field_award_group_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       filter_groups:
         operator: AND
         groups:

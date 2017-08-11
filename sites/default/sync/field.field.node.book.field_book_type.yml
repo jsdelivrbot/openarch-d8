@@ -14,7 +14,7 @@ bundle: book
 label: 'Book type'
 description: 'Is this book on OPEN or by OPEN?'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

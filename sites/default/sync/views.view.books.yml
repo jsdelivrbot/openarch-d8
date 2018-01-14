@@ -748,7 +748,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Editor
+          label: Contributors
           exclude: false
           alter:
             alter_text: false

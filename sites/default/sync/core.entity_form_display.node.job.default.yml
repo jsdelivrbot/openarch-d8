@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.job.body
     - field.field.node.job.field_job_location
     - field.field.node.job.field_job_startdate
+    - field.field.node.job.field_weight
     - node.type.job
   module:
     - datetime
     - path
     - text
+    - weight
 id: node.job.default
 targetEntityType: node
 bundle: job
@@ -42,6 +44,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_weight:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: weight_selector
     region: content
   langcode:
     type: language_select

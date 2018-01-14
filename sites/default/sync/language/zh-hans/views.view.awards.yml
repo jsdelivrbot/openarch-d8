@@ -8,17 +8,3 @@ display:
           label: '奖项 | 项目'
         field_award_link:
           label: 链接
-      filters:
-        field_award_group_value:
-          expose:
-            label: 按获奖者检索
-          group_info:
-            description: ''
-  default:
-    display_options:
-      filters:
-        field_award_group_value:
-          expose:
-            description: ''
-          group_info:
-            description: ''

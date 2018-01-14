@@ -9,8 +9,8 @@ id: node.book.field_publication_editor
 field_name: field_publication_editor
 entity_type: node
 bundle: book
-label: Editor
-description: 'Publication editor.'
+label: Contributors
+description: 'Publication contributors'
 required: false
 translatable: true
 default_value: {  }

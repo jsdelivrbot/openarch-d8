@@ -61,7 +61,7 @@ MyFullpage = (function($) {
                     //Scrolling
                     css3: false,
                     scrollingSpeed: 700,
-                    autoScrolling: true,
+                    autoScrolling: false,
                     fitToSection: false,
                     // fitToSectionDelay: 1000,
                     scrollBar: false,

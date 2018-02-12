@@ -5,7 +5,7 @@ display:
         field_press_pub_author:
           label: 作者
         field_publication_editor:
-          label: 编辑
+          label: 供稿
         field_publication_designer:
           label: 设计
         field_press_publisher:

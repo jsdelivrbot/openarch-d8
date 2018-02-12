@@ -2,7 +2,7 @@ MyFullpage = (function($) {
 
     //cache DOM
     var $fp = $('.fullpage');
-    var $hidden = $fp.find('.fullpage__hidden');
+    var $hidden = $('.fullpage__hidden');
     var $asset = $fp.find('.fullpage__asset');
     var $toggle = $fp.find('.fullpage__toggler');
     var $header = $('.main-header-layout');
@@ -61,7 +61,7 @@ MyFullpage = (function($) {
                     //Scrolling
                     css3: false,
                     scrollingSpeed: 700,
-                    autoScrolling: false,
+                    autoScrolling: true,
                     fitToSection: false,
                     // fitToSectionDelay: 1000,
                     scrollBar: false,
